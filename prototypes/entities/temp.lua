@@ -1,0 +1,20 @@
+ENTITY {
+    type = "furnace",
+    name = "dummy-furnace",
+    icon = "__base__/graphics/icons/stone-furnace.png",
+    icon_size = 64, icon_mipmaps = 4,
+    flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    minable = {mining_time = 0.2, result = "stone-furnace"},
+    max_health = 200,
+    corpse = "stone-furnace-remnants",
+    dying_explosion = "stone-furnace-explosion",
+    mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg",volume = 0.8},
+    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
+    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    crafting_categories = {"smelting"},
+    result_inventory_size = 1,
+    energy_usage = "90kW",
+    crafting_speed = 1,
+    source_inventory_size = 1,
+    energy_source = {type = "void"}
+  }

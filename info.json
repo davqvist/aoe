@@ -1,0 +1,8 @@
+{
+  "name": "aoe",
+  "version": "0.0.1",
+  "title": "Age of Engineering",
+  "author": "davqvist",
+  "factorio_version": "1.1",
+  "dependencies": ["stdlib >= 1.4.0", "PowerOverload >= 1.4.4"]
+}
