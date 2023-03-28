@@ -71,6 +71,21 @@ RECIPE {
 }
 
 RECIPE {
+	name = 'aoe-smelting-steel-coke-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'iron-plate', amount = 2},
+		{type = 'item', name = 'aoe-coke', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'steel-plate', amount = 1}
+    },
+	energy_required = 2.4,
+	category = 'smelting'
+}
+
+RECIPE {
 	name = 'aoe-crafting-steel-gear-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1264,7 +1279,8 @@ RECIPE {
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'coal', amount = 1}
+		{type = 'item', name = 'coal', amount = 1},
+		{type = 'fluid', name = 'aoe-warm-air', amount = 20}
 	},
 	results = {
         {type = 'item', name = 'aoe-coke', amount = 1},

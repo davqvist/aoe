@@ -102,7 +102,7 @@ TECHNOLOGY {
 
 TECHNOLOGY {
     type = "technology",
-    name = "aoe-steel-tech",
+    name = "aoe-steel-tech-1",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/steel-processing.png",
     prerequisites = {"aoe-electric-age-tech"},
@@ -132,10 +132,36 @@ TECHNOLOGY {
 
 TECHNOLOGY {
     type = "technology",
+    name = "aoe-steel-tech-2",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/steel-processing.png",
+    prerequisites = {"aoe-pressure-tech"},
+	effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-kiln-coke-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-smelting-steel-coke-recipe"
+      }
+    },
+    unit = {
+        count = 40,
+        ingredients = {
+            {"aoe-science-01", 2},
+			{"aoe-science-02", 1}
+        },
+        time = 25
+    }
+}
+
+TECHNOLOGY {
+    type = "technology",
     name = "aoe-improved-axe-tech-1",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/steel-axe.png",
-    prerequisites = {"aoe-steel-tech"},
+    prerequisites = {"aoe-steel-tech-1"},
 	effects = {
       {
         type = "character-mining-speed",
@@ -157,7 +183,7 @@ TECHNOLOGY {
     name = "aoe-longer-arms-tech-1",
     icon_size = 256,
     icon = "__aoe__/img/techs/reach.png",
-    prerequisites = {"aoe-steel-tech"},
+    prerequisites = {"aoe-steel-tech-1"},
 	effects = {
       {
         type = "character-build-distance",
@@ -191,7 +217,7 @@ TECHNOLOGY {
     name = "aoe-bigger-toolbelt-tech-1",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/toolbelt.png",
-    prerequisites = {"aoe-steel-tech"},
+    prerequisites = {"aoe-steel-tech-1"},
 	effects = {
       {
         type = "character-inventory-slots-bonus",
@@ -213,7 +239,7 @@ TECHNOLOGY {
     name = "aoe-faster-legs-tech-1",
     icon_size = 256,
     icon = "__aoe__/img/techs/running-speed.png",
-    prerequisites = {"aoe-steel-tech"},
+    prerequisites = {"aoe-steel-tech-1"},
 	effects = {
       {
         type = "character-running-speed",
@@ -235,7 +261,7 @@ TECHNOLOGY {
     name = "aoe-improved-tools-tech-1",
     icon_size = 256,
     icon = "__aoe__/img/techs/crafting-speed.png",
-    prerequisites = {"aoe-steel-tech"},
+    prerequisites = {"aoe-steel-tech-1"},
 	effects = {
       {
         type = "character-crafting-speed",
@@ -257,7 +283,7 @@ TECHNOLOGY {
     name = "aoe-increased-knowledge-tech-1",
     icon_size = 256,
     icon = "__aoe__/img/techs/research-speed.png",
-    prerequisites = {"aoe-steel-tech"},
+    prerequisites = {"aoe-steel-tech-1"},
 	effects = {
       {
         type = "laboratory-speed",
@@ -279,7 +305,7 @@ TECHNOLOGY {
     name = "aoe-electric-machines-tech",
 	icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/engine.png",
-    prerequisites = {"aoe-steel-tech", "aoe-electronics-tech", "aoe-steam-power-tech", "aoe-basic-automation-tech", "aoe-basic-genetics-tech", "aoe-digging-tech"},
+    prerequisites = {"aoe-steel-tech-1", "aoe-electronics-tech", "aoe-steam-power-tech", "aoe-basic-automation-tech", "aoe-basic-genetics-tech", "aoe-digging-tech"},
 	effects = {
       {
         type = "unlock-recipe",
@@ -493,7 +519,7 @@ TECHNOLOGY {
     name = "aoe-advanced-storage-tech-2",
     icon_size = 64, icon_mipmaps = 4,
     icon = "__base__/graphics/icons/steel-chest.png",
-    prerequisites = {"aoe-advanced-storage-tech-1", "aoe-steel-tech"},
+    prerequisites = {"aoe-advanced-storage-tech-1", "aoe-steel-tech-1"},
 	effects = {
       {
         type = "unlock-recipe",
