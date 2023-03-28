@@ -632,13 +632,9 @@ RECIPE {
 		{type = 'item', name = 'aoe-stones-sedimentary', amount = 1},
 		{type = 'item', name = 'aoe-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.98}
     },
-	icons = {
-	  {
-		icon = "__base__/graphics/icons/stone.png",
-		icon_size = 64,
-		icon_mipmaps = 4
-	  }
-	},
+	icon = data.raw.item["stone"].icon,
+	icon_size = data.raw.item["stone"].icon_size,
+	icon_mipmaps = data.raw.item["stone"].icon_mipmaps,
 	subgroup = 'aoe-stone',
 	energy_required = 2,
 	category = 'aoe-category-straining'
@@ -1171,12 +1167,8 @@ RECIPE {
 	},
 	results = {
     },
-	icons = {
-	  {
-		icon = "__aoe__/img/items/steel-rotor.png",
-		icon_size = 64
-	  }
-	},
+	icon = data.raw.item["aoe-rotor-steel"].icon,
+	icon_size = data.raw.item["aoe-rotor-steel"].icon_size,
 	energy_required = 800,
 	subgroup = 'aoe-power-buildings',
 	order = 'c1',
@@ -1239,13 +1231,9 @@ RECIPE {
         {type = 'fluid', name = 'aoe-hydrogen', amount = 10},
         {type = 'fluid', name = 'aoe-oxygen', amount = 20}
     },
-	icons = {
-		{
-		  icon = data.raw.fluid["water"].icon,
-		  icon_size = data.raw.fluid["water"].icon_size,
-		  icon_mipmaps = data.raw.fluid["water"].icon_mipmaps
-		}
-	},
+	icon = data.raw.fluid["water"].icon,
+	icon_size = data.raw.fluid["water"].icon_size,
+    icon_mipmaps = data.raw.fluid["water"].icon_mipmaps,
 	subgroup = 'aoe-fluids',
 	order = 'a1',
 	energy_required = 1,
@@ -1263,12 +1251,8 @@ RECIPE {
         {type = 'item', name = 'aoe-caustic-soda', amount = 1},
         {type = 'fluid', name = 'aoe-chlorine', amount = 10}
     },
-	icons = {
-		{
-			icon = data.raw.fluid["aoe-brine"].icon,
-			icon_size = data.raw.fluid["aoe-brine"].icon_size
-		}		
-	},
+	icon = data.raw.fluid["aoe-brine"].icon,
+	icon_size = data.raw.fluid["aoe-brine"].icon_size,
 	subgroup = 'aoe-fluids',
 	order = 'e1',
 	energy_required = 1,

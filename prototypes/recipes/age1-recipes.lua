@@ -304,8 +304,8 @@ RECIPE {
         {type = 'item', name = 'aoe-rubber-tree', amount = 1, probability = 0}
     },
 	energy_required = 10,
-	icon = "__aoe__/img/entities/rubber-tree.png",
-    icon_size = 256,
+	icon = data.raw.item["aoe-rubber-tree"].icon,
+    icon_size = data.raw.item["aoe-rubber-tree"].icon_size,
 	main_product = "",
 	category = 'aoe-category-growing',
 	subgroup = 'aoe-other'
@@ -322,8 +322,8 @@ RECIPE {
         {type = 'fluid', name = 'aoe-latex', amount = 10}
     },
 	energy_required = 5,
-	icon = "__aoe__/img/fluids/latex.png",
-    icon_size = 64,
+	icon = data.raw.fluid["aoe-latex"].icon,
+	icon_size = data.raw.fluid["aoe-latex"].icon_size,
 	main_product = "",
 	category = 'aoe-category-harvesting',
 	subgroup = 'aoe-other'
@@ -340,8 +340,8 @@ RECIPE {
         {type = 'item', name = 'aoe-resin', amount = 1}
     },
 	energy_required = 5,
-	icon = "__aoe__/img/items/resin.png",
-    icon_size = 64,
+	icon = data.raw.item["aoe-resin"].icon,
+	icon_size = data.raw.item["aoe-resin"].icon_size,
 	main_product = "",
 	category = 'aoe-category-harvesting',
 	subgroup = 'aoe-other'
@@ -638,16 +638,8 @@ RECIPE {
         {type = 'item', name = 'aoe-flax-module-3a', amount=1, probability = 0.01},
         {type = 'item', name = 'aoe-flax-module-3b', amount=1, probability = 0.01}
     },
-	icons = {
-	  {
-		icon = "__aoe__/img/items/flax.png",
-		icon_size = 64
-	  },
-	  {
-		icon = "__aoe__/img/items/rarity/common.png",
-		icon_size = 64
-	  }
-	},
+	icons = data.raw.module["aoe-flax-module-1a"].icons,
+	icon_size = data.raw.module["aoe-flax-module-1a"].icon_size,
 	subgroup = "aoe-plants-flax",
     order = "b1a",
     energy_required = 90,

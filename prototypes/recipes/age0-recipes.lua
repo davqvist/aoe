@@ -208,8 +208,8 @@ RECIPE {
         {type = 'item', name = 'aoe-tree-farm', amount = 1, probability = 0}
     },
 	energy_required = 10,
-	icon = "__aoe__/img/entities/tree-farm.png",
-    icon_size = 96,
+	icon = data.raw.item["aoe-tree-farm"].icon,
+    icon_size = data.raw.item["aoe-tree-farm"].icon_size,
 	main_product = "",
 	category = 'aoe-category-growing',
 	subgroup = 'aoe-other'
@@ -239,8 +239,8 @@ RECIPE {
         {type = 'item', name = 'aoe-leaves', amount = 6}
     },
 	energy_required = 5,
-	icon = "__aoe__/img/items/log.png",
-    icon_size = 64,
+	icon = data.raw.item["aoe-log"].icon,
+    icon_size = data.raw.item["aoe-log"].icon_size,
 	main_product = "",
 	category = 'aoe-category-harvesting',
 	subgroup = 'aoe-other'
