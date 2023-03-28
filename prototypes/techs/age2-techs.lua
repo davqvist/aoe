@@ -436,7 +436,6 @@ TECHNOLOGY {
     }
 }
 
-
 TECHNOLOGY {
     type = "technology",
     name = "aoe-advanced-smelting-tech",
@@ -455,6 +454,32 @@ TECHNOLOGY {
     },
     unit = {
         count = 35,
+        ingredients = {
+            {"aoe-science-01", 2},
+			{"aoe-science-02", 1}
+        },
+        time = 25
+    }
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "aoe-salt-tech",
+    icon_size = 64,
+    icon = "__aoe__/img/items/salt.png",
+    prerequisites = {"aoe-advanced-smelting-tech"},
+	effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-smelting-salt-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-mixing-brine-recipe"
+      }
+    },
+    unit = {
+        count = 20,
         ingredients = {
             {"aoe-science-01", 2},
 			{"aoe-science-02", 1}
@@ -641,6 +666,10 @@ TECHNOLOGY {
 	  {
         type = "unlock-recipe",
         recipe = "aoe-crushing-coal-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-graphite-rod-recipe"
       }
     },
     unit = {
@@ -787,6 +816,36 @@ TECHNOLOGY {
     },
     unit = {
         count = 25,
+         ingredients = {
+            {"aoe-science-01", 2},
+			{"aoe-science-02", 1}
+        },
+        time = 25
+    }
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "aoe-electrolysis-tech",
+    icon_size = 256,
+    icon = "__aoe__/img/entities/electrolyzer.png",
+    prerequisites = {"aoe-sedimentary-stones-tech", "aoe-tin-tech", "aoe-salt-tech"},
+	effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-electrolyzer-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-electrolyzing-water-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-electrolyzing-brine-recipe"
+      },
+    },
+    unit = {
+        count = 45,
          ingredients = {
             {"aoe-science-01", 2},
 			{"aoe-science-02", 1}

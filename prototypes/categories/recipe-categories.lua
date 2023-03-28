@@ -13,6 +13,10 @@ data:extend({
   },
   {
     type = "recipe-category",
+    name = "aoe-category-electrolyzing",
+  },
+  {
+    type = "recipe-category",
     name = "aoe-category-farm-plot-flax",
 	modules = { "aoe-module-flax" }
   },

@@ -27,13 +27,49 @@ FLUID {
 
 FLUID {
     type = "fluid",
+    name = "aoe-hydrogen",
+    icon = "__aoe__/img/fluids/hydrogen.png",
+    icon_size = 64,
+    subgroup = "aoe-gasses",
+    order = "a",
+	base_color = {r=1.0, g=1.0, b=1.0},
+	flow_color = {r=1.0, g=1.0, b=1.0},
+	default_temperature = 20
+}
+
+FLUID {
+    type = "fluid",
+    name = "aoe-oxygen",
+    icon = "__aoe__/img/fluids/oxygen.png",
+    icon_size = 64,
+    subgroup = "aoe-gasses",
+    order = "b",
+	base_color = {r=1.0, g=0.0, b=0.0},
+	flow_color = {r=1.0, g=0.0, b=0.0},
+	default_temperature = 20
+}
+
+FLUID {
+    type = "fluid",
     name = "aoe-chlorine",
     icon = "__aoe__/img/fluids/chlorine.png",
     icon_size = 64,
     subgroup = "aoe-gasses",
-    order = "a",
+    order = "c",
 	base_color = {r=0.0, g=1.0, b=0.0},
 	flow_color = {r=0.0, g=1.0, b=0.0},
+	default_temperature = 20
+}
+
+FLUID {
+    type = "fluid",
+    name = "aoe-carbon-dioxide",
+    icon = "__aoe__/img/fluids/co2.png",
+    icon_size = 64,
+    subgroup = "aoe-gasses",
+    order = "d",
+	base_color = {r=0.0, g=0.0, b=0.0},
+	flow_color = {r=0.0, g=0.0, b=0.0},
 	default_temperature = 20
 }
 

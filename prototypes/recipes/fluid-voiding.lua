@@ -10,7 +10,10 @@ end
 
 local gasses = {
 	"steam",
-	"aoe-chlorine"
+	"aoe-hydrogen",
+	"aoe-oxygen",
+	"aoe-chlorine",
+	"aoe-carbon-dioxide"
 }
 
 for _, fluid in pairs(data.raw.fluid) do

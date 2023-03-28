@@ -947,6 +947,19 @@ RECIPE {
 }
 
 RECIPE {
+	name = 'aoe-crafting-graphite-rod-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-coal-dust', amount = 4}
+	},
+	results = {
+		{type = 'item', name = 'aoe-graphite-rod', amount = 1}
+    },
+	energy_required = 1
+}
+
+RECIPE {
 	name = 'aoe-crushing-quartz-ore-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1185,7 +1198,7 @@ RECIPE {
 }
 
 RECIPE {
-	name = 'aoe-mixer-brine-recipe',
+	name = 'aoe-mixing-brine-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
@@ -1197,4 +1210,67 @@ RECIPE {
     },
 	energy_required = 4.8,
 	category = 'aoe-category-mixing'
+}
+
+RECIPE {
+	name = 'aoe-crafting-electrolyzer-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-steel-machine-hull', amount = 8},
+		{type = 'item', name = 'aoe-tin-plate', amount = 10},
+		{type = 'item', name = 'aoe-graphite-rod', amount = 4},
+		{type = 'item', name = 'iron-stick', amount = 4}
+	},
+	results = {
+        {type = 'item', name = 'aoe-electrolyzer', amount = 1}
+    },
+	energy_required = 5
+}
+
+RECIPE {
+	name = 'aoe-electrolyzing-water-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'water', amount = 10}
+	},
+	results = {
+        {type = 'fluid', name = 'aoe-hydrogen', amount = 10},
+        {type = 'fluid', name = 'aoe-oxygen', amount = 20}
+    },
+	icons = {
+		{
+		  icon = data.raw.fluid["water"].icon,
+		  icon_size = data.raw.fluid["water"].icon_size,
+		  icon_mipmaps = data.raw.fluid["water"].icon_mipmaps
+		}
+	},
+	subgroup = 'aoe-fluids',
+	order = 'a1',
+	energy_required = 1,
+	category = 'aoe-category-electrolyzing'
+}
+
+RECIPE {
+	name = 'aoe-electrolyzing-brine-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-brine', amount = 10}
+	},
+	results = {
+        {type = 'item', name = 'aoe-caustic-soda', amount = 1},
+        {type = 'fluid', name = 'aoe-chlorine', amount = 10}
+    },
+	icons = {
+		{
+			icon = data.raw.fluid["aoe-brine"].icon,
+			icon_size = data.raw.fluid["aoe-brine"].icon_size
+		}		
+	},
+	subgroup = 'aoe-fluids',
+	order = 'e1',
+	energy_required = 1,
+	category = 'aoe-category-electrolyzing'
 }
