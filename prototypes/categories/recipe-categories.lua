@@ -77,6 +77,10 @@ data:extend({
   },
   {
     type = "recipe-category",
+    name = "aoe-category-pumping",
+  },
+  {
+    type = "recipe-category",
     name = "aoe-category-recycling",
   },
   {

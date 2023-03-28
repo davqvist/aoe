@@ -51,11 +51,23 @@ FLUID {
 
 FLUID {
     type = "fluid",
+    name = "aoe-nitrogen",
+    icon = "__aoe__/img/fluids/nitrogen.png",
+    icon_size = 64,
+    subgroup = "aoe-gasses",
+    order = "c",
+	base_color = {r=0.25, g=0.37, b=0.45},
+	flow_color = {r=0.25, g=0.37, b=0.45},
+	default_temperature = 20
+}
+
+FLUID {
+    type = "fluid",
     name = "aoe-chlorine",
     icon = "__aoe__/img/fluids/chlorine.png",
     icon_size = 64,
     subgroup = "aoe-gasses",
-    order = "c",
+    order = "d",
 	base_color = {r=0.0, g=1.0, b=0.0},
 	flow_color = {r=0.0, g=1.0, b=0.0},
 	default_temperature = 20
@@ -67,9 +79,69 @@ FLUID {
     icon = "__aoe__/img/fluids/co2.png",
     icon_size = 64,
     subgroup = "aoe-gasses",
-    order = "d",
+    order = "e",
 	base_color = {r=0.0, g=0.0, b=0.0},
 	flow_color = {r=0.0, g=0.0, b=0.0},
+	default_temperature = 20
+}
+
+FLUID {
+    type = "fluid",
+    name = "aoe-air",
+    icon = "__aoe__/img/fluids/air.png",
+    icon_size = 64,
+    subgroup = "aoe-air-gasses",
+    order = "a",
+	base_color = {r=0.08, g=0.45, b=0.58},
+	flow_color = {r=0.08, g=0.45, b=0.58},
+	default_temperature = 20
+}
+
+FLUID {
+    type = "fluid",
+    name = "aoe-cold-air",
+    icon = "__aoe__/img/fluids/cold-air.png",
+    icon_size = 64,
+    subgroup = "aoe-air-gasses",
+    order = "b",
+	base_color = {r=0.15, g=0.7, b=0.83},
+	flow_color = {r=0.15, g=0.7, b=0.83},
+	default_temperature = 0
+}
+
+FLUID {
+    type = "fluid",
+    name = "aoe-warm-air",
+    icon = "__aoe__/img/fluids/warm-air.png",
+    icon_size = 64,
+    subgroup = "aoe-air-gasses",
+    order = "c",
+	base_color = {r=0.45, g=0.05, b=0.11},
+	flow_color = {r=0.45, g=0.05, b=0.11},
+	default_temperature = 50
+}
+
+FLUID {
+    type = "fluid",
+    name = "aoe-pressure",
+    icon = "__aoe__/img/fluids/pressure.png",
+    icon_size = 64,
+    subgroup = "aoe-air-gasses",
+    order = "c",
+	base_color = {r=0.34, g=0.34, b=0.34},
+	flow_color = {r=0.34, g=0.34, b=0.34},
+	default_temperature = 20
+}
+
+FLUID {
+    type = "fluid",
+    name = "aoe-vacuum",
+    icon = "__aoe__/img/fluids/vacuum.png",
+    icon_size = 64,
+    subgroup = "aoe-air-gasses",
+    order = "c",
+	base_color = {r=0.09, g=0.09, b=0.09},
+	flow_color = {r=0.09, g=0.09, b=0.09},
 	default_temperature = 20
 }
 

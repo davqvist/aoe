@@ -853,3 +853,57 @@ TECHNOLOGY {
         time = 25
     }
 }
+
+TECHNOLOGY {
+    type = "technology",
+    name = "aoe-pressure-tech",
+    icon_size = 256,
+    icon = "__aoe__/img/entities/pressure-pump.png",
+    prerequisites = {"aoe-rock-cycle-tech"},
+	effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-pump-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-pressure-pump-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-pumping-air-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-pumping-cold-air-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-pumping-warm-air-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-pumping-pressure-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-pumping-vacuum-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-pumping-oxygen-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-pumping-nitrogen-recipe"
+      }
+    },
+    unit = {
+        count = 30,
+         ingredients = {
+            {"aoe-science-01", 2},
+			{"aoe-science-02", 1}
+        },
+        time = 25
+    }
+}

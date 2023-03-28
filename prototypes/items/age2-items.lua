@@ -167,6 +167,18 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "aoe-coke",
+    icon = "__aoe__/img/items/coke.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-rest",
+    order = "d",
+    stack_size = 200,
+	fuel_value = "6MJ",
+	fuel_category = "chemical"
+}
+
+ITEM {
+    type = "item",
     name = "aoe-quartz-ore",
     icon = "__aoe__/img/items/quartz-ore.png",
     icon_size = 64,
@@ -241,7 +253,7 @@ ITEM {
     icon = "__aoe__/img/items/manganese-ore.png",
     icon_size = 64,
     subgroup = "aoe-metals-rest",
-    order = "d",
+    order = "e",
     stack_size = 200
 }
 
@@ -251,7 +263,7 @@ ITEM {
     icon = "__aoe__/img/items/manganese-dust.png",
     icon_size = 64,
     subgroup = "aoe-metals-rest",
-    order = "e",
+    order = "f",
     stack_size = 200
 }
 
@@ -261,7 +273,7 @@ ITEM {
     icon = "__aoe__/img/items/mica.png",
     icon_size = 64,
     subgroup = "aoe-metals-rest",
-    order = "f",
+    order = "g",
     stack_size = 200
 }
 
@@ -311,7 +323,7 @@ ITEM {
     icon = "__aoe__/img/items/magnesium-ore.png",
     icon_size = 64,
     subgroup = "aoe-metals-rest",
-    order = "g",
+    order = "h",
     stack_size = 200
 }
 
@@ -321,7 +333,7 @@ ITEM {
     icon = "__aoe__/img/items/magnesium-dust.png",
     icon_size = 64,
     subgroup = "aoe-metals-rest",
-    order = "h",
+    order = "i",
     stack_size = 200
 }
 

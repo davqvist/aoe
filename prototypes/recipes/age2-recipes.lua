@@ -1258,3 +1258,133 @@ RECIPE {
 	energy_required = 1,
 	category = 'aoe-category-electrolyzing'
 }
+
+RECIPE {
+	name = 'aoe-kiln-coke-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'coal', amount = 1}
+	},
+	results = {
+        {type = 'item', name = 'aoe-coke', amount = 1},
+        {type = 'fluid', name = 'aoe-carbon-dioxide', amount = 20}
+    },
+	main_product = 'aoe-coke',
+	energy_required = 2.4,
+	category = 'aoe-category-kiln-smelting'
+}
+
+RECIPE {
+	name = 'aoe-crafting-pump-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'engine-unit', amount = 1},
+		{type = 'item', name = 'pipe', amount = 4}
+	},
+	results = {
+        {type = 'item', name = 'pump', amount = 1}
+    },
+	energy_required = 2
+}
+
+RECIPE {
+	name = 'aoe-crafting-pressure-pump-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-steel-machine-hull', amount = 2},
+		{type = 'item', name = 'aoe-cooling-coil', amount = 2},
+		{type = 'item', name = 'aoe-heating-coil', amount = 2},
+		{type = 'item', name = 'pump', amount = 2}
+	},
+	results = {
+        {type = 'item', name = 'aoe-pressure-pump', amount = 1}
+    },
+	energy_required = 5
+}
+
+RECIPE {
+	name = 'aoe-pumping-air-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {},
+	results = {
+        {type = 'fluid', name = 'aoe-air', amount = 100}
+    },
+	energy_required = 1,
+	category = 'aoe-category-pumping'
+}
+
+RECIPE {
+	name = 'aoe-pumping-cold-air-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {},
+	results = {
+        {type = 'fluid', name = 'aoe-cold-air', amount = 25}
+    },
+	energy_required = 1,
+	category = 'aoe-category-pumping'
+}
+
+RECIPE {
+	name = 'aoe-pumping-warm-air-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {},
+	results = {
+        {type = 'fluid', name = 'aoe-warm-air', amount = 25}
+    },
+	energy_required = 1,
+	category = 'aoe-category-pumping'
+}
+
+RECIPE {
+	name = 'aoe-pumping-pressure-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {},
+	results = {
+        {type = 'fluid', name = 'aoe-pressure', amount = 20}
+    },
+	energy_required = 1,
+	category = 'aoe-category-pumping'
+}
+
+RECIPE {
+	name = 'aoe-pumping-vacuum-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {},
+	results = {
+        {type = 'fluid', name = 'aoe-vacuum', amount = 10}
+    },
+	energy_required = 1,
+	category = 'aoe-category-pumping'
+}
+
+RECIPE {
+	name = 'aoe-pumping-oxygen-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {},
+	results = {
+        {type = 'fluid', name = 'aoe-oxygen', amount = 40}
+    },
+	energy_required = 1,
+	category = 'aoe-category-pumping'
+}
+
+RECIPE {
+	name = 'aoe-pumping-nitrogen-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {},
+	results = {
+        {type = 'fluid', name = 'aoe-nitrogen', amount = 5}
+    },
+	energy_required = 1,
+	category = 'aoe-category-pumping'
+}

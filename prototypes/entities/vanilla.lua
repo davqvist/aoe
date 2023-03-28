@@ -107,6 +107,8 @@ data.raw['pipe-to-ground']['pipe-to-ground'].fluid_box = {
 data.raw['item']['offshore-pump'].subgroup = "aoe-fluid-logistics"
 data.raw['item']['offshore-pump'].order = "c"
 data.raw['item']['offshore-pump'].pumping_speed = 16.6666666666
+data.raw['item']['pump'].subgroup = "aoe-fluid-logistics"
+data.raw['item']['pump'].order = "d"
 
 data.raw['item']['small-electric-pole'].subgroup = "aoe-poles"
 data.raw['item']['small-electric-pole'].order = "a"

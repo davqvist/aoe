@@ -212,6 +212,12 @@ data:extend({
   },
   {
 	type = "item-subgroup",
+    name = "aoe-air-gasses",
+    group = "fluids",
+    order = "c"
+  },
+  {
+	type = "item-subgroup",
     name = "aoe-other",
     group = "other",
     order = "z"
