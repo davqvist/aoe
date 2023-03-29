@@ -933,3 +933,33 @@ TECHNOLOGY {
         time = 25
     }
 }
+
+TECHNOLOGY {
+    type = "technology",
+    name = "aoe-concrete-tech",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/concrete.png",
+    prerequisites = {"aoe-igneous-stones-tech", "aoe-metamorphic-stones-tech"},
+	effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-kiln-cement-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-mixing-concrete-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-hazard-concrete-recipe"
+      }
+    },
+    unit = {
+        count = 30,
+         ingredients = {
+            {"aoe-science-01", 2},
+			{"aoe-science-02", 1}
+        },
+        time = 25
+    }
+}

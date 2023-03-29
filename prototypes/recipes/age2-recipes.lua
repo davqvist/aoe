@@ -1404,3 +1404,52 @@ RECIPE {
 	energy_required = 1,
 	category = 'aoe-category-pumping'
 }
+
+RECIPE {
+	name = 'aoe-kiln-cement-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-quartz-ore', amount = 2},
+		{type = 'item', name = 'stone', amount = 2},
+		{type = 'item', name = 'aoe-aluminium-ore', amount = 1},
+		{type = 'item', name = 'iron-ore', amount = 1}
+	},
+	results = {
+        {type = 'item', name = 'aoe-cement', amount = 4},
+        {type = 'fluid', name = 'aoe-carbon-dioxide', amount = 15}
+    },
+	main_product = 'aoe-cement',
+	energy_required = 2.4,
+	category = 'aoe-category-kiln-smelting'
+}
+
+RECIPE {
+	name = 'aoe-mixing-concrete-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-cement', amount = 1},
+		{type = 'fluid', name = 'water', amount = 20},
+		{type = 'item', name = 'aoe-sand', amount = 3},
+		{type = 'item', name = 'aoe-gravel', amount = 4}
+	},
+	results = {
+        {type = 'item', name = 'concrete', amount = 8}
+    },
+	energy_required = 2.4,
+	category = 'aoe-category-mixing'
+}
+
+RECIPE {
+	name = 'aoe-crafting-hazard-concrete-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'concrete', amount = 5}
+	},
+	results = {
+        {type = 'item', name = 'hazard-concrete', amount = 5}
+    },
+	energy_required = 0.1
+}

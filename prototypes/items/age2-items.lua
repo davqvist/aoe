@@ -366,3 +366,20 @@ ITEM {
     order = "b",
     stack_size = 200
 }
+
+ITEM {
+    type = "item",
+    name = "aoe-cement",
+    icon = "__aoe__/img/items/cement.png",
+    icon_size = 64,
+    subgroup = "aoe-construction",
+    order = "d",
+    stack_size = 200
+}
+
+data.raw['item']['concrete'].subgroup = "aoe-construction"
+data.raw['item']['concrete'].order = "e"
+data.raw['item']['concrete'].stack_size = 500
+data.raw['item']['hazard-concrete'].subgroup = "aoe-construction"
+data.raw['item']['hazard-concrete'].order = "f"
+data.raw['item']['hazard-concrete'].stack_size = 500
