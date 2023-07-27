@@ -10,3 +10,23 @@ ITEM {
     durability_description_key = "description.science-pack-remaining-amount-key",
     durability_description_value = "description.science-pack-remaining-amount-value"
 }
+
+ITEM {
+    type = "item",
+    name = "aoe-egg",
+    icon = "__aoe__/img/items/egg.png",
+    icon_size = 64,
+    subgroup = "aoe-fauna-chicken",
+    order = "a",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "aoe-chicken",
+    icon = "__aoe__/img/items/chicken.png",
+    icon_size = 64,
+    subgroup = "aoe-fauna-chicken",
+    order = "b",
+    stack_size = 200
+}

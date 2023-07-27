@@ -1146,6 +1146,53 @@ RECIPE {
 }
 
 RECIPE {
+	name = 'aoe-kiln-quicklime-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-stones-sedimentary', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoe-quicklime', amount = 2},
+		{type = 'fluid', name = 'aoe-carbon-dioxide', amount = 20}
+    },
+	main_product = 'aoe-quicklime',
+	energy_required = 2.4,
+	category = 'aoe-category-kiln-smelting'
+}
+
+RECIPE {
+	name = 'aoe-kiln-quicklime-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-stones-sedimentary', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoe-quicklime', amount = 2},
+		{type = 'fluid', name = 'aoe-carbon-dioxide', amount = 20}
+    },
+	main_product = 'aoe-quicklime',
+	energy_required = 2.4,
+	category = 'aoe-category-kiln-smelting'
+}
+
+RECIPE {
+	name = 'aoe-mixing-slaked-lime-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-quicklime', amount = 4},
+		{type = 'fluid', name = 'water', amount = 100}
+	},
+	results = {
+		{type = 'item', name = 'aoe-slaked-lime', amount = 4}
+    },
+	energy_required = 4.8,
+	category = 'aoe-category-mixing'
+}
+
+RECIPE {
 	name = 'aoe-crafting-wind-turbine-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1410,8 +1457,8 @@ RECIPE {
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
+		{type = 'item', name = 'aoe-slaked-lime', amount = 3},
 		{type = 'item', name = 'aoe-quartz-ore', amount = 2},
-		{type = 'item', name = 'stone', amount = 2},
 		{type = 'item', name = 'aoe-aluminium-ore', amount = 1},
 		{type = 'item', name = 'iron-ore', amount = 1}
 	},

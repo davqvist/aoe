@@ -852,6 +852,32 @@ TECHNOLOGY {
 
 TECHNOLOGY {
     type = "technology",
+    name = "aoe-lime-tech",
+    icon_size = 64,
+    icon = "__aoe__/img/items/quicklime.png",
+    prerequisites = {"aoe-sedimentary-stones-tech"},
+	effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-kiln-quicklime-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-mixing-slaked-lime-recipe"
+      }
+    },
+    unit = {
+        count = 25,
+         ingredients = {
+            {"aoe-science-01", 2},
+			{"aoe-science-02", 1}
+        },
+        time = 25
+    }
+}
+
+TECHNOLOGY {
+    type = "technology",
     name = "aoe-electrolysis-tech",
     icon_size = 256,
     icon = "__aoe__/img/entities/electrolyzer.png",
@@ -939,7 +965,7 @@ TECHNOLOGY {
     name = "aoe-concrete-tech",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/concrete.png",
-    prerequisites = {"aoe-igneous-stones-tech", "aoe-metamorphic-stones-tech"},
+    prerequisites = {"aoe-igneous-stones-tech", "aoe-metamorphic-stones-tech", "aoe-sedimentary-stones-tech"},
 	effects = {
       {
         type = "unlock-recipe",

@@ -63,9 +63,21 @@ data:extend({
   },
   {
 	type = "item-subgroup",
-    name = "aoe-fauna-fish",
+    name = "aoe-fauna-farms",
     group = "aoe-fauna",
     order = "b"
+  },
+  {
+	type = "item-subgroup",
+    name = "aoe-fauna-fish",
+    group = "aoe-fauna",
+    order = "c"
+  },
+  {
+	type = "item-subgroup",
+    name = "aoe-fauna-chicken",
+    group = "aoe-fauna",
+    order = "d"
   },
   {
 	type = "item-subgroup",

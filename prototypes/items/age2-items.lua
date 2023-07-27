@@ -339,6 +339,26 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "aoe-quicklime",
+    icon = "__aoe__/img/items/quicklime.png",
+    icon_size = 64,
+    subgroup = "aoe-stone",
+    order = "g",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "aoe-slaked-lime",
+    icon = "__aoe__/img/items/slaked-lime.png",
+    icon_size = 64,
+    subgroup = "aoe-stone",
+    order = "h",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
     name = "aoe-rotor-steel",
     icon = "__aoe__/img/items/steel-rotor.png",
     icon_size = 64,

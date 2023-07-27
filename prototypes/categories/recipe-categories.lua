@@ -42,6 +42,11 @@ data:extend({
   },
   {
     type = "recipe-category",
+    name = "aoe-category-farm-chicken-coop",
+	modules = { "aoe-module-chicken" }
+  },
+  {
+    type = "recipe-category",
     name = "aoe-category-freezing",
   },
   {
