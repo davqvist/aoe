@@ -383,3 +383,27 @@ data.raw['item']['concrete'].stack_size = 500
 data.raw['item']['hazard-concrete'].subgroup = "aoe-construction"
 data.raw['item']['hazard-concrete'].order = "f"
 data.raw['item']['hazard-concrete'].stack_size = 500
+
+data.raw['capsule']['raw-fish'].subgroup = "aoe-fauna-fish"
+data.raw['capsule']['raw-fish'].order = "a"
+data.raw['capsule']['raw-fish'].stack_size = 200
+
+ITEM {
+    type = "item",
+    name = "aoe-fish-eggs",
+    icon = "__aoe__/img/items/fish-eggs.png",
+    icon_size = 64,
+    subgroup = "aoe-fauna-fish",
+    order = "b",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "aoe-fish-meat",
+    icon = "__aoe__/img/items/fish-meat.png",
+    icon_size = 64,
+    subgroup = "aoe-fauna-fish",
+    order = "c",
+    stack_size = 200
+}

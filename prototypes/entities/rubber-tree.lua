@@ -5,7 +5,7 @@ ITEM {
     name = "aoe-rubber-tree",
     icon = "__aoe__/img/entities/rubber-tree.png",
     icon_size = 256,
-    subgroup = "aoe-plants-rubber",
+    subgroup = "aoe-flora-rubber",
     order = "b",
     place_result = "aoe-rubber-tree",
     stack_size = 100,

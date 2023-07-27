@@ -3,7 +3,7 @@ ITEM {
     name = "aoe-farm-plot",
     icon = "__aoe__/img/entities/farm-plot.png",
     icon_size = 192,
-    subgroup = "aoe-farms",
+    subgroup = "aoe-flora-farms",
     order = "b",
     place_result = "aoe-farm-plot",
     stack_size = 25,

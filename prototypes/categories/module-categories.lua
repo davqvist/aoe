@@ -1,6 +1,10 @@
 data:extend({
   {
     type = "module-category",
+    name = "aoe-module-fish"
+  },
+  {
+    type = "module-category",
     name = "aoe-module-flax"
   },
   {

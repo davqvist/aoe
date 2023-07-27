@@ -26,8 +26,8 @@ ENTITY {
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoe-recycler" },
 	max_health = 50,
-	selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-	collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
+	selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+	collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
 	source_inventory_size = 1,
     result_inventory_size = 1,
 	animation = {
@@ -37,7 +37,7 @@ ENTITY {
           width = 192,
           height = 192,
           frame_count = 1,
-		  scale = 1.167
+		  scale = 0.833333
         }
       }
     }

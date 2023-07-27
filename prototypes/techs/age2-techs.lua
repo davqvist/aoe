@@ -963,3 +963,81 @@ TECHNOLOGY {
         time = 25
     }
 }
+
+TECHNOLOGY {
+    type = "technology",
+    name = "aoe-paper-tech-2",
+    icon_size = 64,
+    icon = "__aoe__/img/items/paper.png",
+    prerequisites = {"aoe-electrolysis-tech"},
+	effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-smelting-caustic-soda-paper-recipe"
+      }
+    },
+    unit = {
+        count = 40,
+         ingredients = {
+            {"aoe-science-01", 2},
+			{"aoe-science-02", 1}
+        },
+        time = 25
+    }
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "aoe-fish-tech",
+    icon_size = 64, icon_mipmaps = 4,
+    icon = "__base__/graphics/icons/fish.png",
+    prerequisites = {"aoe-salt-tech", "aoe-concrete-tech"},
+	effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-slaughterhouse-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-slaughterhouse-fish-meat-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-farm-reservoir-fish-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-farm-reservoir-fish-eggs-recipe"
+      }
+    },
+    unit = {
+        count = 45,
+         ingredients = {
+            {"aoe-science-01", 2},
+			{"aoe-science-02", 1}
+        },
+        time = 25
+    }
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "aoe-agriculture-age-tech",
+    icon_size = 64,
+    icon = "__aoe__/img/items/science-pack-3.png",
+    prerequisites = {"aoe-fish-tech"},
+	effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-science-03-recipe"
+      }
+    },
+    unit = {
+        count = 50,
+        ingredients = {
+            {"aoe-science-01", 2},
+			{"aoe-science-02", 1}
+        },
+        time = 30
+    }
+}

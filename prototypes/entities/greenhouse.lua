@@ -3,7 +3,7 @@ ITEM {
     name = "aoe-greenhouse",
     icon = "__aoe__/img/entities/greenhouse.png",
     icon_size = 192,
-    subgroup = "aoe-ff-buildings",
+    subgroup = "aoe-flora-buildings",
     order = "a",
     place_result = "aoe-greenhouse",
     stack_size = 25,

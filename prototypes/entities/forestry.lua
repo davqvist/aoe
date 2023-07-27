@@ -3,7 +3,7 @@ ITEM {
     name = "aoe-forestry",
     icon = "__aoe__/img/entities/forestry.png",
     icon_size = 192,
-    subgroup = "aoe-ff-buildings",
+    subgroup = "aoe-flora-buildings",
     order = "c",
     place_result = "aoe-forestry",
     stack_size = 25,

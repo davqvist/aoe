@@ -112,10 +112,10 @@ data.raw['item']['pump'].order = "d"
 
 data.raw['item']['small-electric-pole'].subgroup = "aoe-poles"
 data.raw['item']['small-electric-pole'].order = "a"
-data.raw['electric-pole']['small-electric-pole'].supply_area_distance = 7
+data.raw['electric-pole']['small-electric-pole'].supply_area_distance = 3.5
 data.raw['item']['medium-electric-pole'].subgroup = "aoe-poles"
 data.raw['item']['medium-electric-pole'].order = "b"
-data.raw['electric-pole']['medium-electric-pole'].supply_area_distance = 9
+data.raw['electric-pole']['medium-electric-pole'].supply_area_distance = 4.5
 data.raw['item']['big-electric-pole'].subgroup = "aoe-poles"
 data.raw['item']['big-electric-pole'].order = "c"
 data.raw['item']['po-huge-electric-pole'].subgroup = "aoe-poles"

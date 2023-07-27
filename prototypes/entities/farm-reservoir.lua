@@ -3,7 +3,7 @@ ITEM {
     name = "aoe-farm-reservoir",
     icon = "__aoe__/img/entities/reservoir.png",
     icon_size = 128,
-    subgroup = "aoe-farms",
+    subgroup = "aoe-flora-farms",
     order = "a",
     place_result = "aoe-farm-reservoir",
     stack_size = 25,
@@ -12,7 +12,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "aoe-farm-reservoir",
-	crafting_categories = {"aoe-category-farm-reservoir"},
+	crafting_categories = {"aoe-category-farm-reservoir-kelp", "aoe-category-farm-reservoir-fish"},
 	crafting_speed = 0.5,
 	energy_source = { type = "void" },
 	energy_usage = "1kW",

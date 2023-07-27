@@ -1,4 +1,4 @@
-data.raw['item']['wood'].subgroup = "aoe-plants-wood"
+data.raw['item']['wood'].subgroup = "aoe-flora-wood"
 data.raw['item']['wood'].order = "a"
 data.raw['item']['wood'].stack_size = 200
 
@@ -7,7 +7,7 @@ ITEM {
     name = "aoe-charcoal",
     icon = "__aoe__/img/items/charcoal.png",
     icon_size = 64,
-    subgroup = "aoe-plants-wood",
+    subgroup = "aoe-flora-wood",
     order = "b",
     stack_size = 200,
 	fuel_value = "4MJ",
@@ -19,7 +19,7 @@ ITEM {
     name = "aoe-tree-seedling",
     icon = "__aoe__/img/items/tree-seedling.png",
     icon_size = 64,
-    subgroup = "aoe-plants-wood",
+    subgroup = "aoe-flora-wood",
     order = "c",
     stack_size = 100
 }
@@ -29,7 +29,7 @@ ITEM {
     name = "aoe-log",
     icon = "__aoe__/img/items/log.png",
     icon_size = 64,
-    subgroup = "aoe-plants-wood",
+    subgroup = "aoe-flora-wood",
     order = "d",
     stack_size = 100
 }
@@ -39,7 +39,7 @@ ITEM {
     name = "aoe-leaves",
     icon = "__aoe__/img/items/leaves.png",
     icon_size = 64,
-    subgroup = "aoe-plants-wood",
+    subgroup = "aoe-flora-wood",
     order = "e",
     stack_size = 500
 }
@@ -49,7 +49,7 @@ ITEM {
     name = "aoe-wood-pulp",
     icon = "__aoe__/img/items/wood-pulp.png",
     icon_size = 64,
-    subgroup = "aoe-plants-wood",
+    subgroup = "aoe-flora-wood",
     order = "f",
     stack_size = 500
 }
@@ -59,7 +59,7 @@ ITEM {
     name = "aoe-resin",
     icon = "__aoe__/img/items/resin.png",
     icon_size = 64,
-    subgroup = "aoe-plants-wood",
+    subgroup = "aoe-flora-wood",
     order = "g",
     stack_size = 200
 }

@@ -3,7 +3,7 @@ ITEM {
     name = "aoe-tree-farm",
     icon = "__aoe__/img/entities/tree-farm.png",
     icon_size = 96,
-    subgroup = "aoe-ff-buildings",
+    subgroup = "aoe-flora-buildings",
     order = "b",
     place_result = "aoe-tree-farm",
     stack_size = 25,

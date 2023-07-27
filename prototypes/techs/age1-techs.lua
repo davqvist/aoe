@@ -165,7 +165,7 @@ TECHNOLOGY {
     name = "aoe-water-filtering-tech",
     icon_size = 96,
     icon = "__aoe__/img/entities/strainer.png",
-    prerequisites = {"aoe-paper-tech"},
+    prerequisites = {"aoe-paper-tech-1"},
 	effects = {
 	  {
         type = "unlock-recipe",
@@ -327,7 +327,7 @@ TECHNOLOGY {
 
 TECHNOLOGY {
     type = "technology",
-    name = "aoe-paper-tech",
+    name = "aoe-paper-tech-1",
     icon_size = 64,
     icon = "__aoe__/img/items/paper.png",
     prerequisites = {"aoe-kelp-tech"},
@@ -363,7 +363,7 @@ TECHNOLOGY {
     name = "aoe-flax-tech",
     icon_size = 64,
     icon = "__aoe__/img/items/flax.png",
-    prerequisites = {"aoe-paper-tech", "aoe-basic-genetics-tech"},
+    prerequisites = {"aoe-paper-tech-1", "aoe-basic-genetics-tech"},
 	effects = {
       {
         type = "unlock-recipe",
@@ -456,7 +456,7 @@ TECHNOLOGY {
       }
     },
     unit = {
-        count = 50,
+        count = 25,
         ingredients = {
             {"aoe-science-01", 1}
         },
@@ -543,6 +543,6 @@ TECHNOLOGY {
         ingredients = {
             {"aoe-science-01", 1}
         },
-        time = 20
+        time = 25
     }
 }

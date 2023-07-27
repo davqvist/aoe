@@ -1,52 +1,71 @@
 data:extend({
   {
     type = "item-group",
-    name = "aoe-flora-fauna",
-	order = "z",
+    name = "aoe-flora",
+	order = "y",
 	icon = "__base__/graphics/icons/wood.png",
 	icon_size = 64
   },
   {
+    type = "item-group",
+    name = "aoe-fauna",
+	order = "z",
+	icon = "__base__/graphics/icons/fish.png",
+	icon_size = 64
+  },
+  {
 	type = "item-subgroup",
-    name = "aoe-ff-buildings",
-    group = "aoe-flora-fauna",
+    name = "aoe-flora-buildings",
+    group = "aoe-flora",
     order = "a"
   },
   {
 	type = "item-subgroup",
-    name = "aoe-farms",
-    group = "aoe-flora-fauna",
+    name = "aoe-flora-farms",
+    group = "aoe-flora",
     order = "b"
   },
   {
 	type = "item-subgroup",
-    name = "aoe-plants-wood",
-    group = "aoe-flora-fauna",
+    name = "aoe-flora-wood",
+    group = "aoe-flora",
     order = "c1"
   },
   {
 	type = "item-subgroup",
-    name = "aoe-plants-kelp",
-    group = "aoe-flora-fauna",
+    name = "aoe-flora-kelp",
+    group = "aoe-flora",
     order = "c2"
   },
   {
 	type = "item-subgroup",
-    name = "aoe-plants-rubber",
-    group = "aoe-flora-fauna",
+    name = "aoe-flora-rubber",
+    group = "aoe-flora",
     order = "c3"
   },
   {
 	type = "item-subgroup",
-    name = "aoe-plants-flax",
-    group = "aoe-flora-fauna",
+    name = "aoe-flora-flax",
+    group = "aoe-flora",
     order = "c4"
   },
   {
 	type = "item-subgroup",
-    name = "aoe-plants-drinks",
-    group = "aoe-flora-fauna",
+    name = "aoe-flora-drinks",
+    group = "aoe-flora",
     order = "c5"
+  },
+  {
+	type = "item-subgroup",
+    name = "aoe-fauna-buildings",
+    group = "aoe-fauna",
+    order = "a"
+  },
+  {
+	type = "item-subgroup",
+    name = "aoe-fauna-fish",
+    group = "aoe-fauna",
+    order = "b"
   },
   {
 	type = "item-subgroup",

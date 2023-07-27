@@ -32,8 +32,13 @@ data:extend({
   },
   {
     type = "recipe-category",
-    name = "aoe-category-farm-reservoir",
+    name = "aoe-category-farm-reservoir-kelp",
 	modules = { "aoe-module-kelp" }
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-farm-reservoir-fish",
+	modules = { "aoe-module-fish" }
   },
   {
     type = "recipe-category",
@@ -98,6 +103,10 @@ data:extend({
   {
     type = "recipe-category",
     name = "aoe-category-sinking",
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-slaughtering",
   },
   {
     type = "recipe-category",

@@ -193,7 +193,7 @@ RECIPE {
         {type = 'item', name = 'aoe-kelp', amount = 1}
     },
     energy_required = 20,
-	category = 'aoe-category-farm-reservoir'
+	category = 'aoe-category-farm-reservoir-kelp'
 }
 
 RECIPE {
@@ -213,7 +213,7 @@ RECIPE {
     },
 	main_product = 'aoe-kelp-module-1',
     energy_required = 120,
-	category = 'aoe-category-farm-reservoir'
+	category = 'aoe-category-farm-reservoir-kelp'
 }
 
 RECIPE {
@@ -446,12 +446,12 @@ RECIPE {
     },
 	icons = {
 	  {
-		icon = "__aoe__/img/items/paper.png",
-		icon_size = 64
+		icon = data.raw.item["aoe-paper"].icon,
+		icon_size = data.raw.item["aoe-paper"].icon_size
 	  },
 	  {
-		icon = "__aoe__/img/items/wood-pulp.png",
-		icon_size = 64,
+		icon = data.raw.item["aoe-wood-pulp"].icon,
+		icon_size = data.raw.item["aoe-wood-pulp"].icon_size,
 		scale = 0.4,
 		shift = {8,8}
 	  }
@@ -473,12 +473,12 @@ RECIPE {
     },
 	icons = {
 	  {
-		icon = "__aoe__/img/items/paper.png",
-		icon_size = 64
+		icon = data.raw.item["aoe-paper"].icon,
+		icon_size = data.raw.item["aoe-paper"].icon_size
 	  },
 	  {
-		icon = "__aoe__/img/items/kelp.png",
-		icon_size = 64,
+		icon = data.raw.item["aoe-kelp"].icon,
+		icon_size = data.raw.item["aoe-kelp"].icon_size,
 		scale = 0.4,
 		shift = {8,8}
 	  }
@@ -499,12 +499,12 @@ RECIPE {
     },
 	icons = {
 	  {
-		icon = "__aoe__/img/items/fiber.png",
-		icon_size = 64
+		icon = data.raw.item["aoe-fiber"].icon,
+		icon_size = data.raw.item["aoe-fiber"].icon_size
 	  },
 	  {
-		icon = "__aoe__/img/items/wood-pulp.png",
-		icon_size = 64,
+		icon = data.raw.item["aoe-wood-pulp"].icon,
+		icon_size = data.raw.item["aoe-wood-pulp"].icon_size,
 		scale = 0.4,
 		shift = {8,8}
 	  }
@@ -524,12 +524,12 @@ RECIPE {
     },
 	icons = {
 	  {
-		icon = "__aoe__/img/items/fiber.png",
-		icon_size = 64
+		icon = data.raw.item["aoe-fiber"].icon,
+		icon_size = data.raw.item["aoe-fiber"].icon_size
 	  },
 	  {
-		icon = "__aoe__/img/items/leaves.png",
-		icon_size = 64,
+		icon = data.raw.item["aoe-leaves"].icon,
+		icon_size = data.raw.item["aoe-leaves"].icon_size,
 		scale = 0.4,
 		shift = {8,8}
 	  }
@@ -608,12 +608,12 @@ RECIPE {
     },
 	icons = {
 	  {
-		icon = "__aoe__/img/items/fiber.png",
-		icon_size = 64
+		icon = data.raw.item["aoe-fiber"].icon,
+		icon_size = data.raw.item["aoe-fiber"].icon_size
 	  },
 	  {
-		icon = "__aoe__/img/items/flax.png",
-		icon_size = 64,
+		icon = data.raw.item["aoe-flax"].icon,
+		icon_size = data.raw.item["aoe-flax"].icon_size,
 		scale = 0.4,
 		shift = {8,8}
 	  }
@@ -638,10 +638,7 @@ RECIPE {
         {type = 'item', name = 'aoe-flax-module-3a', amount=1, probability = 0.01},
         {type = 'item', name = 'aoe-flax-module-3b', amount=1, probability = 0.01}
     },
-	icons = data.raw.module["aoe-flax-module-1a"].icons,
-	icon_size = data.raw.module["aoe-flax-module-1a"].icon_size,
-	subgroup = "aoe-plants-flax",
-    order = "b1a",
+	main_product = "aoe-flax-module-1a",
     energy_required = 90,
 	category = 'aoe-category-farm-plot-flax'
 }
@@ -710,18 +707,7 @@ RECIPE {
         {type = 'item', name = 'aoe-tea-leaves-module-2', amount=1, probability = 0.1},
         {type = 'item', name = 'aoe-tea-leaves-module-3', amount=1, probability = 0.02}
 	},
-	icons = {
-	  {
-		icon = "__aoe__/img/items/tea-leaves.png",
-		icon_size = 64
-	  },
-	  {
-		icon = "__aoe__/img/items/rarity/common.png",
-		icon_size = 64
-	  }
-	},
-	subgroup = "aoe-plants-drinks",
-    order = "b1a",
+	main_product = 'aoe-tea-leaves-module-1',
     energy_required = 120,
 	category = 'aoe-category-farm-plot-tea'
 }
@@ -758,18 +744,7 @@ RECIPE {
         {type = 'item', name = 'aoe-coffee-plant-module-2', amount=1, probability = 0.1},
         {type = 'item', name = 'aoe-coffee-plant-module-3', amount=1, probability = 0.02}
 	},
-	icons = {
-	  {
-		icon = "__aoe__/img/items/coffee-plant.png",
-		icon_size = 64
-	  },
-	  {
-		icon = "__aoe__/img/items/rarity/common.png",
-		icon_size = 64
-	  }
-	},
-	subgroup = "aoe-plants-drinks",
-    order = "f1a",
+	main_product = 'aoe-coffee-plant-module-1',
     energy_required = 120,
 	category = 'aoe-category-farm-plot-coffee'
 }

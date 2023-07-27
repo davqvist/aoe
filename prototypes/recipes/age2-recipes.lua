@@ -667,13 +667,13 @@ RECIPE {
     },
 	icons = {
 	  {
-		icon = "__aoe__/img/fluids/lava.png",
-		icon_size = 64
+		icon = data.raw.fluid["aoe-lava"].icon,
+		icon_size = data.raw.fluid["aoe-lava"].icon_size
 	  },
 	  {
-		icon = "__base__/graphics/icons/stone.png",
-		icon_size = 64,
-		icon_mipmaps = 4,
+		icon = data.raw.item["stone"].icon,
+		icon_size = data.raw.item["stone"].icon_size,
+		icon_mipmaps = data.raw.item["stone"].icon_mipmaps,
 		scale = 0.4,
 		shift = {8,8}
 	  }
@@ -694,12 +694,12 @@ RECIPE {
     },
 	icons = {
 	  {
-		icon = "__aoe__/img/fluids/lava.png",
-		icon_size = 64
+		icon = data.raw.fluid["aoe-lava"].icon,
+		icon_size = data.raw.fluid["aoe-lava"].icon_size
 	  },
 	  {
-		icon = "__aoe__/img/items/sedimentary-stones.png",
-		icon_size = 64,
+		icon = data.raw.item["aoe-stones-sedimentary"].icon,
+		icon_size = data.raw.item["aoe-stones-sedimentary"].icon_size,
 		scale = 0.4,
 		shift = {8,8}
 	  }
@@ -720,12 +720,12 @@ RECIPE {
     },
 	icons = {
 	  {
-		icon = "__aoe__/img/fluids/lava.png",
-		icon_size = 64
+		icon = data.raw.fluid["aoe-lava"].icon,
+		icon_size = data.raw.fluid["aoe-lava"].icon_size
 	  },
 	  {
-		icon = "__aoe__/img/items/metamorphic-stones.png",
-		icon_size = 64,
+		icon = data.raw.item["aoe-stones-metamorphic"].icon,
+		icon_size = data.raw.item["aoe-stones-metamorphic"].icon_size,
 		scale = 0.4,
 		shift = {8,8}
 	  }
@@ -746,12 +746,12 @@ RECIPE {
     },
 	icons = {
 	  {
-		icon = "__aoe__/img/items/metamorphic-stones.png",
-		icon_size = 64
+		icon = data.raw.item["aoe-stones-metamorphic"].icon,
+		icon_size = data.raw.item["aoe-stones-metamorphic"].icon_size
 	  },
 	  {
-		icon = "__aoe__/img/items/sedimentary-stones.png",
-		icon_size = 64,
+		icon = data.raw.item["aoe-stones-sedimentary"].icon,
+		icon_size = data.raw.item["aoe-stones-sedimentary"].icon_size,
 		scale = 0.4,
 		shift = {8,8}
 	  }
@@ -772,12 +772,12 @@ RECIPE {
     },
 	icons = {
 	  {
-		icon = "__aoe__/img/items/metamorphic-stones.png",
-		icon_size = 64
+		icon = data.raw.item["aoe-stones-metamorphic"].icon,
+		icon_size = data.raw.item["aoe-stones-metamorphic"].icon_size
 	  },
 	  {
-		icon = "__aoe__/img/items/igneous-stones.png",
-		icon_size = 64,
+		icon = data.raw.item["aoe-stones-igneous"].icon,
+		icon_size = data.raw.item["aoe-stones-igneous"].icon_size,
 		scale = 0.4,
 		shift = {8,8}
 	  }
@@ -798,12 +798,12 @@ RECIPE {
     },
 	icons = {
 	  {
-		icon = "__aoe__/img/items/sedimentary-stones.png",
-		icon_size = 64
+		icon = data.raw.item["aoe-stones-sedimentary"].icon,
+		icon_size = data.raw.item["aoe-stones-sedimentary"].icon_size
 	  },
 	  {
-		icon = "__aoe__/img/items/metamorphic-stones.png",
-		icon_size = 64,
+		icon = data.raw.item["aoe-stones-metamorphic"].icon,
+		icon_size = data.raw.item["aoe-stones-metamorphic"].icon_size,
 		scale = 0.4,
 		shift = {8,8}
 	  }
@@ -824,12 +824,12 @@ RECIPE {
     },
 	icons = {
 	  {
-		icon = "__aoe__/img/items/sedimentary-stones.png",
-		icon_size = 64
+		icon = data.raw.item["aoe-stones-sedimentary"].icon,
+		icon_size = data.raw.item["aoe-stones-sedimentary"].icon_size
 	  },
 	  {
-		icon = "__aoe__/img/items/igneous-stones.png",
-		icon_size = 64,
+		icon = data.raw.item["aoe-stones-igneous"].icon,
+		icon_size = data.raw.item["aoe-stones-igneous"].icon_size,
 		scale = 0.4,
 		shift = {8,8}
 	  }
@@ -1062,7 +1062,7 @@ RECIPE {
 RECIPE {
 	name = 'aoe-smelting-glass-2-recipe',
 	type = 'recipe',
-	enabled = true,
+	enabled = false,
 	ingredients = {
 		{type = 'item', name = 'aoe-quartz-dust', amount = 2}
 	},
@@ -1071,12 +1071,12 @@ RECIPE {
     },
 	icons = {
 	  {
-		icon = "__aoe__/img/items/glass.png",
-		icon_size = 64
+		icon = data.raw.item["aoe-glass"].icon,
+		icon_size = data.raw.item["aoe-glass"].icon_size
 	  },
 	  {
-		icon = "__aoe__/img/items/quartz-dust.png",
-		icon_size = 64,
+		icon = data.raw.item["aoe-quartz-dust"].icon,
+		icon_size = data.raw.item["aoe-quartz-dust"].icon_size,
 		scale = 0.4,
 		shift = {8,8}
 	  }
@@ -1452,4 +1452,107 @@ RECIPE {
         {type = 'item', name = 'hazard-concrete', amount = 5}
     },
 	energy_required = 0.1
+}
+
+RECIPE {
+	name = 'aoe-smelting-caustic-soda-paper-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'water', amount = 50},
+		{type = 'item', name = 'aoe-kelp', amount = 2},
+		{type = 'item', name = 'aoe-caustic-soda', amount = 2}
+	},
+	results = {
+        {type = 'item', name = 'aoe-paper', amount = 1}
+    },
+	icons = {
+	  {
+		icon = data.raw.item["aoe-paper"].icon,
+		icon_size = data.raw.item["aoe-paper"].icon_size
+	  },
+	  {
+		icon = data.raw.item["aoe-caustic-soda"].icon,
+		icon_size = data.raw.item["aoe-caustic-soda"].icon_size,
+		scale = 0.4,
+		shift = {8,8}
+	  }
+	},
+	energy_required = 2.4,
+	category = 'smelting'
+}
+
+RECIPE {
+    name = 'aoe-crafting-slaughterhouse-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoe-steel-machine-hull', amount = 4},
+		{type = 'item', name = 'concrete', amount = 24},
+		{type = 'item', name = 'aoe-steel-gear', amount = 4}
+    },
+    results = {
+        {type = 'item', name = 'aoe-slaughterhouse', amount = 4}
+    },
+    energy_required = 2
+}
+
+RECIPE {
+    name = 'aoe-slaughterhouse-fish-meat-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'raw-fish', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoe-fish-meat', amount = 4}
+    },
+    energy_required = 4,
+	category = 'aoe-category-slaughtering'
+}
+
+RECIPE {
+    name = 'aoe-farm-reservoir-fish-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoe-fish-eggs', amount = 5},
+		{type = 'fluid', name = 'aoe-brine', amount = 200}
+    },
+    results = {
+        {type = 'item', name = 'raw-fish', amount = 2}
+    },
+    energy_required = 60,
+	category = 'aoe-category-farm-reservoir-fish'
+}
+
+RECIPE {
+    name = 'aoe-farm-reservoir-fish-eggs-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'raw-fish', amount = 2},
+		{type = 'item', name = 'aoe-fish-meat', amount = 3},
+		{type = 'item', name = 'aoe-kelp', amount = 3},
+		{type = 'fluid', name = 'aoe-brine', amount = 80}
+    },
+    results = {
+        {type = 'item', name = 'aoe-fish-eggs', amount = 12}
+    },
+    energy_required = 25,
+	category = 'aoe-category-farm-reservoir-fish'
+}
+
+RECIPE {
+	name = 'aoe-crafting-science-03-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-science-01', amount = 3},
+		{type = 'item', name = 'raw-fish', amount = 3}
+	},
+	results = {
+        {type = 'item', name = 'aoe-science-03', amount = 1}
+    },
+	energy_required = 4
 }
