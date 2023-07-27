@@ -1544,6 +1544,24 @@ RECIPE {
 }
 
 RECIPE {
+    name = 'aoe-farm-reservoir-fish-module-1-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoe-fish-eggs', amount = 4},
+		{type = 'item', name = 'aoe-kelp', amount = 1},
+		{type = 'fluid', name = 'aoe-brine', amount = 400}
+    },
+    results = {
+        {type = 'item', name = 'aoe-fish-module-1', amount=1, probability = 0.5},
+        {type = 'item', name = 'aoe-fish-module-2', amount=1, probability = 0.05}
+    },
+	main_product = 'aoe-fish-module-1',
+    energy_required = 150,
+	category = 'aoe-category-farm-reservoir-fish'
+}
+
+RECIPE {
 	name = 'aoe-crafting-science-03-recipe',
 	type = 'recipe',
 	enabled = false,

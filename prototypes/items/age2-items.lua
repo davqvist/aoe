@@ -389,6 +389,86 @@ data.raw['capsule']['raw-fish'].order = "a"
 data.raw['capsule']['raw-fish'].stack_size = 200
 
 ITEM {
+    type = "module",
+    name = "aoe-fish-module-1",
+    icons = { { icon = data.raw.capsule["raw-fish"].icon }, { icon = "__aoe__/img/items/rarity/common.png" } },
+    icon_size = 64,
+	icon_mipmaps = data.raw.capsule["raw-fish"].icon_mipmaps,
+    subgroup = "aoe-fauna-fish",
+    order = "a1",
+    stack_size = 20,
+	category = "aoe-module-fish",
+	tier = 1,
+    effect = { productivity = {bonus = 0.2}, speed = {bonus = 0.2} },
+	limitation = {},
+	limitation_message_key = "fish"
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-fish-module-2",
+    icons = { { icon = data.raw.capsule["raw-fish"].icon }, { icon = "__aoe__/img/items/rarity/uncommon.png" } },
+    icon_size = 64,
+	icon_mipmaps = data.raw.capsule["raw-fish"].icon_mipmaps,
+    subgroup = "aoe-fauna-fish",
+    order = "a2",
+    stack_size = 20,
+	category = "aoe-module-fish",
+	tier = 2,
+    effect = { productivity = {bonus = 0.3}, speed = {bonus = 0.3} },
+	limitation = {},
+	limitation_message_key = "fish"
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-fish-module-3",
+    icons = { { icon = data.raw.capsule["raw-fish"].icon }, { icon = "__aoe__/img/items/rarity/rare.png" } },
+    icon_size = 64,
+	icon_mipmaps = data.raw.capsule["raw-fish"].icon_mipmaps,
+    subgroup = "aoe-fauna-fish",
+    order = "a3",
+    stack_size = 20,
+	category = "aoe-module-fish",
+	tier = 3,
+    effect = { productivity = {bonus = 0.4}, speed = {bonus = 0.4} },
+	limitation = {},
+	limitation_message_key = "fish"
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-fish-module-4",
+    icons = { { icon = data.raw.capsule["raw-fish"].icon }, { icon = "__aoe__/img/items/rarity/epic.png" } },
+    icon_size = 64,
+	icon_mipmaps = data.raw.capsule["raw-fish"].icon_mipmaps,
+    subgroup = "aoe-fauna-fish",
+    order = "a4",
+    stack_size = 20,
+	category = "aoe-module-fish",
+	tier = 4,
+    effect = { productivity = {bonus = 0.5}, speed = {bonus = 0.5} },
+	limitation = {},
+	limitation_message_key = "fish"
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-fish-module-5",
+    icons = { { icon = data.raw.capsule["raw-fish"].icon }, { icon = "__aoe__/img/items/rarity/legendary.png" } },
+    icon_size = 64,
+	icon_mipmaps = data.raw.capsule["raw-fish"].icon_mipmaps,
+    subgroup = "aoe-fauna-fish",
+    order = "a5",
+    stack_size = 20,
+	category = "aoe-module-fish",
+	tier = 5,
+    effect = { productivity = {bonus = 0.6}, speed = {bonus = 0.6} },
+	limitation = {},
+	limitation_message_key = "fish"
+}
+
+ITEM {
     type = "item",
     name = "aoe-fish-eggs",
     icon = "__aoe__/img/items/fish-eggs.png",

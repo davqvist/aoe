@@ -30,6 +30,9 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 	if(entity.name == "aoe-wind-turbine") then 
 		handleWindTurbineBuilt(event)
 	end
+	if(entity.name == "aoe-farm-reservoir") then 
+		handleFarmBuilt(event)
+	end
 	if(entity.name == "inserter" or entity.name == "long-handed-inserter") then 
 	    if( entity.get_control_behavior() or next(entity.circuit_connected_entities.red) or next(entity.circuit_connected_entities.green) or entity.get_filter(1) ) then
 			return
@@ -89,6 +92,20 @@ script.on_event(defines.events.on_tick,
 		end
 	  end
     end
+	if global.farms then
+      for _,farm in pairs(global.farms) do
+  		if farm.valid and farm.name == "aoe-farm-reservoir" then
+		  if farm.crafting_progress == 1 and farm.get_recipe().name == "aoe-farm-reservoir-fish-eggs-recipe" then
+		    if( math.random()<=0.05 ) then
+				local inv = farm.get_module_inventory()
+				local k, v = next( inv.get_contents() )
+				if k ~= nil then inv.remove( {name=k, count=1} ) end
+			end
+		  end 
+		else global.farms[_]=nil
+		end
+	  end
+    end
 	if global.wind_turbines and game.tick % 100 == 0 then
 	  for unit,wind_turbine in pairs(global.wind_turbines) do
 	    if wind_turbine.valid and wind_turbine.name == "aoe-wind-turbine" then
@@ -126,15 +143,8 @@ end
 
 function handleFarmBuilt(event)
   if not global.farms then global.farms={} end
-  if not global.farmcontrols then global.farmcontrols={} end
   local farm = event.created_entity
-  local control = game.surfaces[farm.surface.name].create_entity{
-		name = 'aoe-farmcontrol',
-		position = {farm.selection_box.left_top.x + 0.5, farm.selection_box.left_top.y + 0.5},
-		force = farm.force
-	}
   global.farms[farm.unit_number] = farm
-  global.farmcontrols[farm.unit_number] = control
 end
 
 function handleWindTurbineBuilt(event)

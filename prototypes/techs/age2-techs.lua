@@ -1007,6 +1007,10 @@ TECHNOLOGY {
       },
 	  {
         type = "unlock-recipe",
+        recipe = "aoe-farm-reservoir-fish-module-1-recipe"
+      },
+	  {
+        type = "unlock-recipe",
         recipe = "aoe-farm-reservoir-fish-eggs-recipe"
       }
     },
