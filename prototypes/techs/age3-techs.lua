@@ -3,7 +3,7 @@ TECHNOLOGY {
     name = "aoe-chickens-tech",
     icon_size = 64,
     icon = "__aoe__/img/items/chicken.png",
-    prerequisites = {"aoe-agriculture-age-tech"},
+    prerequisites = {"aoe-agriculture-age-tech", "aoe-lime-tech"},
 	effects = {
       {
         type = "unlock-recipe",

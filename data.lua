@@ -4,6 +4,7 @@ require("__base__/prototypes/entity/pipecovers")
 require("__base__/prototypes/entity/assemblerpipes")
 
 require("__aoe__/prototypes/changes")
+require("__aoe__/prototypes/tips-and-tricks")
 
 require("__aoe__/prototypes/categories/item-subgroups")
 require("__aoe__/prototypes/categories/ammo-categories")
