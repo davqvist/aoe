@@ -419,7 +419,7 @@ ITEM {
     stack_size = 20,
 	category = "aoe-module-fish",
 	tier = 1,
-    effect = { productivity = {bonus = 0.2}, speed = {bonus = 0.2} },
+    effect = { productivity = {bonus = 0.05}, speed = {bonus = 0.2} },
 	limitation = {},
 	limitation_message_key = "fish"
 }
@@ -435,7 +435,7 @@ ITEM {
     stack_size = 20,
 	category = "aoe-module-fish",
 	tier = 2,
-    effect = { productivity = {bonus = 0.3}, speed = {bonus = 0.3} },
+    effect = { productivity = {bonus = 0.075}, speed = {bonus = 0.3} },
 	limitation = {},
 	limitation_message_key = "fish"
 }
@@ -451,7 +451,7 @@ ITEM {
     stack_size = 20,
 	category = "aoe-module-fish",
 	tier = 3,
-    effect = { productivity = {bonus = 0.4}, speed = {bonus = 0.4} },
+    effect = { productivity = {bonus = 0.1}, speed = {bonus = 0.4} },
 	limitation = {},
 	limitation_message_key = "fish"
 }
@@ -467,7 +467,7 @@ ITEM {
     stack_size = 20,
 	category = "aoe-module-fish",
 	tier = 4,
-    effect = { productivity = {bonus = 0.5}, speed = {bonus = 0.5} },
+    effect = { productivity = {bonus = 0.125}, speed = {bonus = 0.5} },
 	limitation = {},
 	limitation_message_key = "fish"
 }
@@ -483,7 +483,7 @@ ITEM {
     stack_size = 20,
 	category = "aoe-module-fish",
 	tier = 5,
-    effect = { productivity = {bonus = 0.6}, speed = {bonus = 0.6} },
+    effect = { productivity = {bonus = 0.15}, speed = {bonus = 0.6} },
 	limitation = {},
 	limitation_message_key = "fish"
 }

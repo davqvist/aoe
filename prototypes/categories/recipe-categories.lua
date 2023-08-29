@@ -32,6 +32,11 @@ data:extend({
   },
   {
     type = "recipe-category",
+    name = "aoe-category-farm-plot-maize",
+	modules = { "aoe-module-maize" }
+  },
+  {
+    type = "recipe-category",
     name = "aoe-category-farm-reservoir-kelp",
 	modules = { "aoe-module-kelp" }
   },

@@ -51,9 +51,15 @@ data:extend({
   },
   {
 	type = "item-subgroup",
-    name = "aoe-flora-drinks",
+    name = "aoe-flora-maize",
     group = "aoe-flora",
     order = "c5"
+  },
+  {
+	type = "item-subgroup",
+    name = "aoe-flora-drinks",
+    group = "aoe-flora",
+    order = "c6"
   },
   {
 	type = "item-subgroup",

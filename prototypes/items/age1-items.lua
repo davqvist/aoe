@@ -473,7 +473,7 @@ ITEM {
     stack_size = 20,
 	category = "aoe-module-flax",
 	tier = 1,
-    effect = { speed = {bonus = 0.4} },
+    effect = { speed = {bonus = 0.5} },
 	limitation = {},
 	limitation_message_key = "flax"
 }
@@ -488,7 +488,7 @@ ITEM {
     stack_size = 20,
 	category = "aoe-module-flax",
 	tier = 1,
-    effect = { productivity = {bonus = 0.25} },
+    effect = { productivity = {bonus = 0.09} },
 	limitation = {},
 	limitation_message_key = "flax"
 }
@@ -503,7 +503,7 @@ ITEM {
     stack_size = 20,
 	category = "aoe-module-flax",
 	tier = 2,
-    effect = { speed = {bonus = 0.7} },
+    effect = { speed = {bonus = 0.9} },
 	limitation = {},
 	limitation_message_key = "flax"
 }
@@ -518,7 +518,7 @@ ITEM {
     stack_size = 20,
 	category = "aoe-module-flax",
 	tier = 2,
-    effect = { productivity = {bonus = 0.45} },
+    effect = { productivity = {bonus = 0.13} },
 	limitation = {},
 	limitation_message_key = "flax"
 }
@@ -533,7 +533,7 @@ ITEM {
     stack_size = 20,
 	category = "aoe-module-flax",
 	tier = 3,
-    effect = { speed = {bonus = 0.95} },
+    effect = { speed = {bonus = 1.25} },
 	limitation = {},
 	limitation_message_key = "flax"
 }
@@ -548,7 +548,7 @@ ITEM {
     stack_size = 20,
 	category = "aoe-module-flax",
 	tier = 3,
-    effect = { productivity = {bonus = 0.62} },
+    effect = { productivity = {bonus = 0.17} },
 	limitation = {},
 	limitation_message_key = "flax"
 }
@@ -563,7 +563,7 @@ ITEM {
     stack_size = 20,
 	category = "aoe-module-flax",
 	tier = 4,
-    effect = { speed = {bonus = 1.17} },
+    effect = { speed = {bonus = 1.57} },
 	limitation = {},
 	limitation_message_key = "flax"
 }
@@ -578,7 +578,7 @@ ITEM {
     stack_size = 20,
 	category = "aoe-module-flax",
 	tier = 4,
-    effect = { productivity = {bonus = 0.77} },
+    effect = { productivity = {bonus = 0.21} },
 	limitation = {},
 	limitation_message_key = "flax"
 }
@@ -593,7 +593,7 @@ ITEM {
     stack_size = 20,
 	category = "aoe-module-flax",
 	tier = 5,
-    effect = { speed = {bonus = 1.37} },
+    effect = { speed = {bonus = 1.87} },
 	limitation = {},
 	limitation_message_key = "flax"
 }
@@ -608,7 +608,7 @@ ITEM {
     stack_size = 20,
 	category = "aoe-module-flax",
 	tier = 5,
-    effect = { productivity = {bonus = 0.9} },
+    effect = { productivity = {bonus = 0.25} },
 	limitation = {},
 	limitation_message_key = "flax"
 }

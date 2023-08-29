@@ -13,6 +13,10 @@ data:extend({
   },
   {
     type = "module-category",
+    name = "aoe-module-maize"
+  },
+  {
+    type = "module-category",
     name = "aoe-module-tea"
   },
   {
