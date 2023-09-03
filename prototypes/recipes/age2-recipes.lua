@@ -739,7 +739,8 @@ RECIPE {
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-stones-sedimentary', amount = 6}
+		{type = 'item', name = 'aoe-stones-sedimentary', amount = 6},
+		{type = 'fluid', name = 'aoe-pressure', amount = 50}
 	},
 	results = {
 		{type = 'item', name = 'aoe-stones-metamorphic', amount = 6}
@@ -765,7 +766,8 @@ RECIPE {
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-stones-igneous', amount = 6}
+		{type = 'item', name = 'aoe-stones-igneous', amount = 6},
+		{type = 'fluid', name = 'aoe-pressure', amount = 50}
 	},
 	results = {
 		{type = 'item', name = 'aoe-stones-metamorphic', amount = 6}

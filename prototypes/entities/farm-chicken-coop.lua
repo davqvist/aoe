@@ -4,7 +4,7 @@ ITEM {
     icon = "__aoe__/img/entities/chicken-coop.png",
     icon_size = 192,
     subgroup = "aoe-fauna-farms",
-    order = "a",
+    order = "b",
     place_result = "aoe-farm-chicken-coop",
     stack_size = 25,
 }

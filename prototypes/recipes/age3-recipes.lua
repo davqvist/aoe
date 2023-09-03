@@ -101,23 +101,36 @@ RECIPE {
 	category = 'aoe-category-gene-lab'
 }
 
---[[RECIPE {
+RECIPE {
+    name = 'aoe-crafting-bedding-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-latex-rubber', amount = 2},
+		{type = 'item', name = 'aoe-hay-bale', amount = 2},
+		{type = 'item', name = 'aoe-wood-pulp', amount = 5},
+		{type = 'item', name = 'aoe-sand', amount = 5}
+    },
+    results = {
+        {type = 'item', name = 'aoe-bedding', amount = 1}
+    },
+    energy_required = 1
+}
+
+RECIPE {
     name = 'aoe-crafting-chicken-coop-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-clay', amount = 30},
-		{type = 'item', name = 'aoe-fish-meat', amount = 8},
-		{type = 'item', name = 'aoe-resin', amount = 10},
-		{type = 'item', name = 'aoe-slaked-lime', amount = 12},
-		{type = 'fluid', name = 'aoe-bacteria', amount = 200}
+		{type = 'item', name = 'wood', amount = 36},
+		{type = 'item', name = 'aoe-aluminium-plate', amount = 8},
+		{type = 'item', name = 'aoe-bedding', amount = 1}
     },
     results = {
         {type = 'item', name = 'aoe-farm-chicken-coop', amount = 1}
     },
     energy_required = 2
 }
-]]--
 
 RECIPE {
     name = 'aoe-gene-lab-trees-recipe',
@@ -380,6 +393,61 @@ RECIPE {
 	main_product = "aoe-olive-tree-module-1",
     energy_required = 100,
 	category = 'aoe-category-farm-plot-olive-tree'
+}
+
+RECIPE {
+    name = 'aoe-farm-plot-grass-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoe-soil', amount = 10},
+        {type = 'fluid', name = 'water', amount = 200}
+    },
+    results = {
+        {type = 'item', name = 'aoe-grass', amount = 1}
+    },
+    energy_required = 10,
+	category = 'aoe-category-farm-plot-rest'
+}
+
+RECIPE {
+	name = 'aoe-high-pressure-hay-bale-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-grass', amount = 6},
+		{type = 'fluid', name = 'aoe-warm-air', amount = 50}
+	},
+	results = {
+		{type = 'item', name = 'aoe-hay-bale', amount = 3}
+    },
+	energy_required = 2,
+	category = 'aoe-category-high-pressure-heating'
+}
+
+RECIPE {
+	name = 'aoe-crafting-grass-fiber-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-grass', amount = 1}
+	},
+	results = {
+        {type = 'item', name = 'aoe-fiber', amount = 1}
+    },
+	icons = {
+	  {
+		icon = data.raw.item["aoe-fiber"].icon,
+		icon_size = data.raw.item["aoe-fiber"].icon_size
+	  },
+	  {
+		icon = data.raw.item["aoe-grass"].icon,
+		icon_size = data.raw.item["aoe-grass"].icon_size,
+		scale = 0.4,
+		shift = {8,8}
+	  }
+	},
+	energy_required = 1.5
 }
 
 RECIPE {

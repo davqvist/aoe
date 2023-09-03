@@ -597,19 +597,11 @@ TECHNOLOGY {
     name = "aoe-rock-cycle-tech",
     icon_size = 256,
     icon = "__aoe__/img/techs/rock-cycle.png",
-    prerequisites = {"aoe-advanced-smelting-tech", "aoe-optics-tech"},
+    prerequisites = {"aoe-advanced-smelting-tech", "aoe-optics-tech", "aoe-pressure-tech"},
 	effects = {
       {
         type = "unlock-recipe",
         recipe = "aoe-straining-stone-recipe"
-      },
-	  {
-        type = "unlock-recipe",
-        recipe = "aoe-crafting-heating-coil-recipe"
-      },
-	  {
-        type = "unlock-recipe",
-        recipe = "aoe-crafting-cooling-coil-recipe"
       },
 	  {
         type = "unlock-recipe",
@@ -911,7 +903,7 @@ TECHNOLOGY {
     name = "aoe-pressure-tech",
     icon_size = 256,
     icon = "__aoe__/img/entities/pressure-pump.png",
-    prerequisites = {"aoe-rock-cycle-tech"},
+    prerequisites = {"aoe-electric-machines-tech"},
 	effects = {
       {
         type = "unlock-recipe",
@@ -920,6 +912,14 @@ TECHNOLOGY {
 	  {
         type = "unlock-recipe",
         recipe = "aoe-crafting-pressure-pump-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-heating-coil-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-cooling-coil-recipe"
       },
 	  {
         type = "unlock-recipe",

@@ -52,6 +52,10 @@ data:extend({
   },
   {
     type = "recipe-category",
+    name = "aoe-category-farm-plot-rest"
+  },
+  {
+    type = "recipe-category",
     name = "aoe-category-farm-reservoir-kelp",
 	modules = { "aoe-module-kelp" }
   },

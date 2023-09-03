@@ -429,7 +429,7 @@ ITEM {
     icon = "__aoe__/img/items/fiber.png",
     icon_size = 64,
     subgroup = "aoe-flora-wood",
-    order = "i",
+    order = "k",
     stack_size = 200
 }
 
@@ -439,7 +439,7 @@ ITEM {
     icon = "__aoe__/img/items/paper.png",
     icon_size = 64,
     subgroup = "aoe-flora-wood",
-    order = "j",
+    order = "l",
     stack_size = 200
 }
 

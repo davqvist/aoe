@@ -478,6 +478,26 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "aoe-grass",
+    icon = "__aoe__/img/items/grass.png",
+    icon_size = 64,
+    subgroup = "aoe-flora-wood",
+    order = "i",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "aoe-hay-bale",
+    icon = "__aoe__/img/items/hay-bale.png",
+    icon_size = 64,
+    subgroup = "aoe-flora-wood",
+    order = "j",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
     name = "aoe-saw-blade-iron",
     icon = "__aoe__/img/items/iron-saw-blade.png",
     icon_size = 64,
@@ -502,6 +522,16 @@ ITEM {
     icon = "__aoe__/img/items/egg.png",
     icon_size = 64,
     subgroup = "aoe-fauna-chicken",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
+    name = "aoe-bedding",
+    icon = "__aoe__/img/items/bedding.png",
+    icon_size = 64,
+    subgroup = "aoe-fauna-farms",
     order = "a",
     stack_size = 100
 }
