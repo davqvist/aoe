@@ -33,33 +33,45 @@ data:extend({
   },
   {
 	type = "item-subgroup",
-    name = "aoe-flora-kelp",
+    name = "aoe-flora-apple",
     group = "aoe-flora",
     order = "c2"
   },
   {
 	type = "item-subgroup",
-    name = "aoe-flora-rubber",
+    name = "aoe-flora-olive",
     group = "aoe-flora",
     order = "c3"
   },
   {
 	type = "item-subgroup",
-    name = "aoe-flora-flax",
+    name = "aoe-flora-kelp",
     group = "aoe-flora",
     order = "c4"
   },
   {
 	type = "item-subgroup",
-    name = "aoe-flora-maize",
+    name = "aoe-flora-rubber",
     group = "aoe-flora",
     order = "c5"
   },
   {
 	type = "item-subgroup",
-    name = "aoe-flora-drinks",
+    name = "aoe-flora-flax",
     group = "aoe-flora",
     order = "c6"
+  },
+  {
+	type = "item-subgroup",
+    name = "aoe-flora-maize",
+    group = "aoe-flora",
+    order = "c7"
+  },
+  {
+	type = "item-subgroup",
+    name = "aoe-flora-drinks",
+    group = "aoe-flora",
+    order = "c8"
   },
   {
 	type = "item-subgroup",

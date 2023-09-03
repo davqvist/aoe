@@ -37,6 +37,21 @@ data:extend({
   },
   {
     type = "recipe-category",
+    name = "aoe-category-farm-plot-spruce-tree",
+	modules = { "aoe-module-spruce-tree" }
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-farm-plot-apple-tree",
+	modules = { "aoe-module-apple-tree" }
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-farm-plot-olive-tree",
+	modules = { "aoe-module-olive-tree" }
+  },
+  {
+    type = "recipe-category",
     name = "aoe-category-farm-reservoir-kelp",
 	modules = { "aoe-module-kelp" }
   },

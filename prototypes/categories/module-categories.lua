@@ -1,6 +1,14 @@
 data:extend({
   {
     type = "module-category",
+    name = "aoe-module-apple-tree"
+  },
+  {
+    type = "module-category",
+    name = "aoe-module-coffee"
+  },
+  {
+    type = "module-category",
     name = "aoe-module-fish"
   },
   {
@@ -17,10 +25,14 @@ data:extend({
   },
   {
     type = "module-category",
-    name = "aoe-module-tea"
+    name = "aoe-module-olive-tree"
   },
   {
     type = "module-category",
-    name = "aoe-module-coffee"
+    name = "aoe-module-spruce-tree"
+  },
+  {
+    type = "module-category",
+    name = "aoe-module-tea"
   }
 })

@@ -363,7 +363,7 @@ ITEM {
     icon = "__aoe__/img/items/steel-rotor.png",
     icon_size = 64,
     subgroup = "aoe-metals-steel",
-    order = "d",
+    order = "e",
     stack_size = 10
 }
 
@@ -495,7 +495,7 @@ ITEM {
     icon_size = 64,
     subgroup = "aoe-fauna-fish",
     order = "b",
-    stack_size = 200
+    stack_size = 100
 }
 
 ITEM {

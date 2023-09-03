@@ -103,7 +103,7 @@ ITEM {
     icon_size = 64,
     subgroup = "aoe-flora-drinks",
     order = "a",
-    stack_size = 200
+    stack_size = 100
 }
 
 ITEM {
@@ -237,7 +237,7 @@ ITEM {
     icon_size = 64,
     subgroup = "aoe-flora-drinks",
     order = "d",
-    stack_size = 200
+    stack_size = 100
 }
 
 ITEM {
@@ -429,7 +429,7 @@ ITEM {
     icon = "__aoe__/img/items/fiber.png",
     icon_size = 64,
     subgroup = "aoe-flora-wood",
-    order = "h",
+    order = "i",
     stack_size = 200
 }
 
@@ -439,7 +439,7 @@ ITEM {
     icon = "__aoe__/img/items/paper.png",
     icon_size = 64,
     subgroup = "aoe-flora-wood",
-    order = "i",
+    order = "j",
     stack_size = 200
 }
 
