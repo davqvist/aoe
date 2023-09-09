@@ -118,6 +118,42 @@ RECIPE {
 }
 
 RECIPE {
+    name = 'aoe-farm-chicken-coop-chicken-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-egg', amount = 1},
+		{type = 'item', name = 'aoe-bedding', amount = 1},
+		{type = 'fluid', name = 'aoe-warm-air', amount = 100}
+    },
+    results = {
+        {type = 'item', name = 'aoe-chicken', amount = 1, probability = 0.4},
+		{type = 'item', name = 'aoe-bedding', amount = 1, probability = 0.975}
+    },
+    energy_required = 15,
+	main_product = 'aoe-chicken',
+	category = 'aoe-category-farm-chicken-coop'
+}
+
+RECIPE {
+    name = 'aoe-farm-chicken-coop-egg-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-chicken', amount = 2},
+		{type = 'item', name = 'aoe-fish-meat', amount = 2},
+		{type = 'item', name = 'aoe-maize-kernels', amount = 2}
+    },
+    results = {
+        {type = 'item', name = 'aoe-egg', amount = 7},
+		{type = 'item', name = 'aoe-chicken', amount = 2, probability = 0.85}
+    },
+    energy_required = 15,
+	main_product = 'aoe-egg',
+	category = 'aoe-category-farm-chicken-coop'
+}
+
+RECIPE {
     name = 'aoe-crafting-chicken-coop-recipe',
     type = 'recipe',
     enabled = false,
@@ -130,6 +166,40 @@ RECIPE {
         {type = 'item', name = 'aoe-farm-chicken-coop', amount = 1}
     },
     energy_required = 2
+}
+
+RECIPE {
+    name = 'aoe-slaughterhouse-poultry-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoe-chicken', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoe-poultry', amount = 6}
+    },
+    energy_required = 4,
+	category = 'aoe-category-slaughtering'
+}
+
+RECIPE {
+    name = 'aoe-farm-chicken-coop-chicken-module-1-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoe-egg', amount = 1},
+		{type = 'item', name = 'aoe-bedding', amount = 1},
+		{type = 'item', name = 'aoe-maize-kernels', amount = 1},
+		{type = 'fluid', name = 'aoe-warm-air', amount = 200}
+    },
+    results = {
+        {type = 'item', name = 'aoe-chicken-module-1', amount=1, probability = 0.2},
+        {type = 'item', name = 'aoe-chicken-module-2', amount=1, probability = 0.05},
+		{type = 'item', name = 'aoe-bedding', amount=1, probability = 0.95}
+    },
+	main_product = 'aoe-chicken-module-1',
+    energy_required = 45,
+	category = 'aoe-category-farm-chicken-coop'
 }
 
 RECIPE {
@@ -536,4 +606,48 @@ RECIPE {
 	},
 	energy_required = 2,
 	category = 'aoe-category-sawing'
+}
+
+RECIPE {
+	name = 'aoe-smelting-glass-3-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-quartz-dust', amount = 4},
+		{type = 'item', name = 'aoe-soda-ash', amount = 2},
+		{type = 'item', name = 'aoe-quicklime', amount = 1},
+		{type = 'item', name = 'aoe-aluminium-dust', amount = 1},
+	},
+	results = {
+		{type = 'item', name = 'aoe-glass', amount = 8}
+    },
+	icons = {
+	  {
+		icon = data.raw.item["aoe-glass"].icon,
+		icon_size = data.raw.item["aoe-glass"].icon_size
+	  },
+	  {
+		icon = data.raw.item["aoe-soda-ash"].icon,
+		icon_size = data.raw.item["aoe-soda-ash"].icon_size,
+		scale = 0.4,
+		shift = {8,8}
+	  }
+	},
+	energy_required = 4.8,
+	category = 'smelting'
+}
+
+RECIPE {
+	name = 'aoe-smelting-soda-ash-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'water', amount = 50},
+		{type = 'item', name = 'aoe-kelp', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoe-soda-ash', amount = 1}
+    },
+	energy_required = 2.4,
+	category = 'smelting'
 }

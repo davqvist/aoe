@@ -380,7 +380,7 @@ ITEM {
     icon_size = 64,
     subgroup = "aoe-flora-kelp",
     order = "b",
-    stack_size = 100
+    stack_size = 200
 }
 
 ITEM {

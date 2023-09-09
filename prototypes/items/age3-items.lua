@@ -545,3 +545,113 @@ ITEM {
     order = "b",
     stack_size = 200
 }
+
+ITEM {
+    type = "module",
+    name = "aoe-chicken-module-1",
+    icons = { { icon = "__aoe__/img/items/chicken.png" }, { icon = "__aoe__/img/items/rarity/common.png" } },
+    icon_size = 64,
+    subgroup = "aoe-fauna-chicken",
+    order = "b1",
+    stack_size = 20,
+	category = "aoe-module-chicken",
+	tier = 1,
+    effect = { productivity = {bonus = 0.04} },
+	limitation = {},
+	limitation_message_key = "chicken"
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-chicken-module-1",
+    icons = { { icon = "__aoe__/img/items/chicken.png" }, { icon = "__aoe__/img/items/rarity/common.png" } },
+    icon_size = 64,
+    subgroup = "aoe-fauna-chicken",
+    order = "b1",
+    stack_size = 20,
+	category = "aoe-module-chicken",
+	tier = 1,
+    effect = { productivity = {bonus = 0.04} },
+	limitation = {},
+	limitation_message_key = "chicken"
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-chicken-module-2",
+    icons = { { icon = "__aoe__/img/items/chicken.png" }, { icon = "__aoe__/img/items/rarity/uncommon.png" } },
+    icon_size = 64,
+    subgroup = "aoe-fauna-chicken",
+    order = "b2",
+    stack_size = 20,
+	category = "aoe-module-chicken",
+	tier = 2,
+    effect = { productivity = {bonus = 0.06} },
+	limitation = {},
+	limitation_message_key = "chicken"
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-chicken-module-3",
+    icons = { { icon = "__aoe__/img/items/chicken.png" }, { icon = "__aoe__/img/items/rarity/rare.png" } },
+    icon_size = 64,
+    subgroup = "aoe-fauna-chicken",
+    order = "b3",
+    stack_size = 20,
+	category = "aoe-module-chicken",
+	tier = 3,
+    effect = { productivity = {bonus = 0.08} },
+	limitation = {},
+	limitation_message_key = "chicken"
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-chicken-module-4",
+    icons = { { icon = "__aoe__/img/items/chicken.png" }, { icon = "__aoe__/img/items/rarity/epic.png" } },
+    icon_size = 64,
+    subgroup = "aoe-fauna-chicken",
+    order = "b4",
+    stack_size = 20,
+	category = "aoe-module-chicken",
+	tier = 4,
+    effect = { productivity = {bonus = 0.10} },
+	limitation = {},
+	limitation_message_key = "chicken"
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-chicken-module-5",
+    icons = { { icon = "__aoe__/img/items/chicken.png" }, { icon = "__aoe__/img/items/rarity/legendary.png" } },
+    icon_size = 64,
+    subgroup = "aoe-fauna-chicken",
+    order = "b5",
+    stack_size = 20,
+	category = "aoe-module-chicken",
+	tier = 5,
+    effect = { productivity = {bonus = 0.12} },
+	limitation = {},
+	limitation_message_key = "chicken"
+}
+
+ITEM {
+    type = "item",
+    name = "aoe-poultry",
+    icon = "__aoe__/img/items/poultry.png",
+    icon_size = 64,
+    subgroup = "aoe-fauna-chicken",
+    order = "c",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "aoe-soda-ash",
+    icon = "__aoe__/img/items/soda-ash.png",
+    icon_size = 64,
+    subgroup = "aoe-flora-kelp",
+    order = "c",
+    stack_size = 200
+}

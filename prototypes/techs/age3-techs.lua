@@ -340,10 +340,52 @@ TECHNOLOGY {
 	  {
         type = "unlock-recipe",
         recipe = "aoe-crafting-chicken-coop-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-farm-chicken-coop-chicken-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-farm-chicken-coop-egg-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-slaughterhouse-poultry-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-farm-chicken-coop-chicken-module-1-recipe"
       }
     },
     unit = {
         count = 25,
+        ingredients = {
+            {"aoe-science-02", 2},
+			{"aoe-science-03", 1}
+        },
+        time = 30
+    }
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "aoe-better-glass-tech-2",
+    icon_size = 64,
+    icon = "__aoe__/img/items/glass.png",
+    prerequisites = {"aoe-agriculture-age-tech", "aoe-better-glass-tech-1"},
+	effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-smelting-soda-ash-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-smelting-glass-3-recipe"
+      }
+    },
+    unit = {
+        count = 35,
         ingredients = {
             {"aoe-science-02", 2},
 			{"aoe-science-03", 1}

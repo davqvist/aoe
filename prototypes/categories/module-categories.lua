@@ -5,6 +5,10 @@ data:extend({
   },
   {
     type = "module-category",
+    name = "aoe-module-chicken"
+  },
+  {
+    type = "module-category",
     name = "aoe-module-coffee"
   },
   {

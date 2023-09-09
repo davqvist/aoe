@@ -35,10 +35,14 @@ for _, recipe in pairs(data.raw.recipe) do
 end
 
 local modules = {
-	"aoe-kelp",
+	"aoe-apple-tree",
+	"aoe-coffee-plant",
 	"aoe-flax",
-	"aoe-tea-leaves",
-	"aoe-coffee-plant"
+	"aoe-kelp",
+	"aoe-maize",
+	"aoe-olive-tree",
+	"aoe-spruce-tree",
+	"aoe-tea-leaves"
 }
 
 for _, m in pairs(data.raw.module) do
@@ -64,4 +68,24 @@ for _, m in pairs(data.raw.module) do
 	  break
 	end
   end
+end
+
+for nr=1,5 do
+	RECIPE {
+		name = 'aoe-recycling-aoe-fish-module-' .. nr .. '-recipe',
+		type = 'recipe',
+		enabled = true,
+		hide_from_player_crafting = true,
+		allow_as_intermediate = false,
+		allow_intermediates = false,
+		always_show_products = true,
+		ingredients = {
+			{type = 'item', name = 'aoe-fish-module-' .. nr, amount = 1}
+		},
+		results = {
+			{type = 'item', name = 'raw-fish', amount=1}
+		},
+		energy_required = 0.2,
+		category = 'aoe-category-recycling'
+	  }
 end
