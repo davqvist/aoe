@@ -1,5 +1,27 @@
 TECHNOLOGY {
     type = "technology",
+    name = "aoe-water-drilling-tech",
+    icon_size = 64, icon_mipmaps = 4,
+    icon = "__base__/graphics/icons/fluid/water.png",
+    prerequisites = {"aoe-agriculture-age-tech"},
+	effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-ground-bore-water-recipe"
+      }
+    },
+    unit = {
+        count = 20,
+        ingredients = {
+            {"aoe-science-02", 2},
+			{"aoe-science-03", 1}
+        },
+        time = 30
+    }
+}
+
+TECHNOLOGY {
+    type = "technology",
     name = "aoe-maize-tech",
     icon_size = 64,
     icon = "__aoe__/img/items/maize.png",
@@ -41,7 +63,7 @@ TECHNOLOGY {
     name = "aoe-tree-cultivation-tech",
     icon = data.raw.tree["tree-01"].icon,
     icon_size = data.raw.tree["tree-01"].icon_size,
-    prerequisites = {"aoe-agriculture-age-tech"},
+    prerequisites = {"aoe-agriculture-age-tech", "aoe-lime-tech"},
 	effects = {
       {
         type = "unlock-recipe",
@@ -62,6 +84,18 @@ TECHNOLOGY {
 	  {
         type = "unlock-recipe",
         recipe = "aoe-forestry-log-spruce-tree-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-farm-plot-rubber-tree-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-farm-plot-rubber-tree-module-1-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-forestry-rubber-tree-recipe"
       },
 	  {
         type = "unlock-recipe",
@@ -328,7 +362,7 @@ TECHNOLOGY {
 
 TECHNOLOGY {
     type = "technology",
-    name = "aoe-chickens-tech",
+    name = "aoe-chicken-tech",
     icon_size = 64,
     icon = "__aoe__/img/items/chicken.png",
     prerequisites = {"aoe-maize-tech", "aoe-lime-tech", "aoe-hay-tech"},
@@ -351,7 +385,7 @@ TECHNOLOGY {
       },
 	  {
         type = "unlock-recipe",
-        recipe = "aoe-slaughterhouse-poultry-recipe"
+        recipe = "aoe-slaughterhouse-chicken-recipe"
       },
 	  {
         type = "unlock-recipe",
@@ -359,7 +393,53 @@ TECHNOLOGY {
       }
     },
     unit = {
-        count = 25,
+        count = 30,
+        ingredients = {
+            {"aoe-science-02", 2},
+			{"aoe-science-03", 1}
+        },
+        time = 30
+    }
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "aoe-sheep-tech",
+    icon_size = 64,
+    icon = "__aoe__/img/items/sheep.png",
+    prerequisites = {"aoe-chicken-tech"},
+	effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-gene-lab-lamb-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-barn-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-farm-barn-sheep-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-farm-barn-wool-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-farm-barn-lamb-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-slaughterhouse-sheep-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-farm-barn-sheep-module-1-recipe"
+      }
+    },
+    unit = {
+        count = 40,
         ingredients = {
             {"aoe-science-02", 2},
 			{"aoe-science-03", 1}

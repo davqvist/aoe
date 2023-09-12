@@ -267,6 +267,76 @@ ITEM {
 }
 
 ITEM {
+    type = "module",
+    name = "aoe-rubber-tree-module-1",
+    icons = { { icon = "__aoe__/img/entities/rubber-tree.png", icon_size = 256 }, { icon = "__aoe__/img/items/rarity/common.png", icon_size = 64 } },
+    subgroup = "aoe-flora-rubber",
+    order = "b1",
+    stack_size = 20,
+	category = "aoe-module-rubber-tree",
+	tier = 1,
+    effect = { speed = {bonus = 0.03}, productivity = {bonus = 0.03} },
+	limitation = {},
+	limitation_message_key = "rubber-tree"
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-rubber-tree-module-2",
+    icons = { { icon = "__aoe__/img/entities/rubber-tree.png", icon_size = 256 }, { icon = "__aoe__/img/items/rarity/uncommon.png", icon_size = 64 } },
+    subgroup = "aoe-flora-rubber",
+    order = "b2",
+    stack_size = 20,
+	category = "aoe-module-rubber-tree",
+	tier = 2,
+    effect = { speed = {bonus = 0.06}, productivity = {bonus = 0.06} },
+	limitation = {},
+	limitation_message_key = "rubber-tree"
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-rubber-tree-module-3",
+    icons = { { icon = "__aoe__/img/entities/rubber-tree.png", icon_size = 256 }, { icon = "__aoe__/img/items/rarity/rare.png", icon_size = 64 } },
+    subgroup = "aoe-flora-rubber",
+    order = "b3",
+    stack_size = 20,
+	category = "aoe-module-rubber-tree",
+	tier = 3,
+    effect = { speed = {bonus = 0.09}, productivity = {bonus = 0.09} },
+	limitation = {},
+	limitation_message_key = "rubber-tree"
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-rubber-tree-module-4",
+    icons = { { icon = "__aoe__/img/entities/rubber-tree.png", icon_size = 256 }, { icon = "__aoe__/img/items/rarity/epic.png", icon_size = 64 } },
+    subgroup = "aoe-flora-rubber",
+    order = "b4",
+    stack_size = 20,
+	category = "aoe-module-rubber-tree",
+	tier = 4,
+    effect = { speed = {bonus = 0.12}, productivity = {bonus = 0.12} },
+	limitation = {},
+	limitation_message_key = "rubber-tree"
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-rubber-tree-module-5",
+    icons = { { icon = "__aoe__/img/entities/rubber-tree.png", icon_size = 256 }, { icon = "__aoe__/img/items/rarity/legendary.png", icon_size = 64 } },
+    subgroup = "aoe-flora-rubber",
+    order = "b5",
+    stack_size = 20,
+	category = "aoe-module-rubber-tree",
+	tier = 5,
+    effect = { speed = {bonus = 0.15}, productivity = {bonus = 0.15} },
+	limitation = {},
+	limitation_message_key = "rubber-tree"
+}
+
+ITEM {
     type = "item",
     name = "aoe-apple-tree-seeds",
     icon = "__aoe__/img/items/apple-tree-seeds.png",
@@ -643,6 +713,131 @@ ITEM {
     icon_size = 64,
     subgroup = "aoe-fauna-chicken",
     order = "c",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "aoe-bones",
+    icon = "__aoe__/img/items/bones.png",
+    icon_size = 64,
+    subgroup = "aoe-fauna-chicken",
+    order = "d",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "aoe-lamb",
+    icon = "__aoe__/img/items/lamb.png",
+    icon_size = 64,
+    subgroup = "aoe-fauna-sheep",
+    order = "a",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "aoe-sheep",
+    icon = "__aoe__/img/items/sheep.png",
+    icon_size = 64,
+    subgroup = "aoe-fauna-sheep",
+    order = "b",
+    stack_size = 200
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-sheep-module-1",
+    icons = { { icon = "__aoe__/img/items/sheep.png" }, { icon = "__aoe__/img/items/rarity/common.png" } },
+    icon_size = 64,
+    subgroup = "aoe-fauna-sheep",
+    order = "b1",
+    stack_size = 20,
+	category = "aoe-module-sheep",
+	tier = 1,
+    effect = { speed = {bonus = -0.04}, productivity = {bonus = 0.06} },
+	limitation = {},
+	limitation_message_key = "sheep"
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-sheep-module-2",
+    icons = { { icon = "__aoe__/img/items/sheep.png" }, { icon = "__aoe__/img/items/rarity/uncommon.png" } },
+    icon_size = 64,
+    subgroup = "aoe-fauna-sheep",
+    order = "b2",
+    stack_size = 20,
+	category = "aoe-module-sheep",
+	tier = 2,
+    effect = { speed = {bonus = -0.06}, productivity = {bonus = 0.09} },
+	limitation = {},
+	limitation_message_key = "sheep"
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-sheep-module-3",
+    icons = { { icon = "__aoe__/img/items/sheep.png" }, { icon = "__aoe__/img/items/rarity/rare.png" } },
+    icon_size = 64,
+    subgroup = "aoe-fauna-sheep",
+    order = "b3",
+    stack_size = 20,
+	category = "aoe-module-sheep",
+	tier = 3,
+    effect = { speed = {bonus = -0.08}, productivity = {bonus = 0.12} },
+	limitation = {},
+	limitation_message_key = "sheep"
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-sheep-module-4",
+    icons = { { icon = "__aoe__/img/items/sheep.png" }, { icon = "__aoe__/img/items/rarity/epic.png" } },
+    icon_size = 64,
+    subgroup = "aoe-fauna-sheep",
+    order = "b4",
+    stack_size = 20,
+	category = "aoe-module-sheep",
+	tier = 4,
+    effect = { speed = {bonus = -0.1}, productivity = {bonus = 0.15} },
+	limitation = {},
+	limitation_message_key = "sheep"
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-sheep-module-5",
+    icons = { { icon = "__aoe__/img/items/sheep.png" }, { icon = "__aoe__/img/items/rarity/legendary.png" } },
+    icon_size = 64,
+    subgroup = "aoe-fauna-sheep",
+    order = "b5",
+    stack_size = 20,
+	category = "aoe-module-sheep",
+	tier = 5,
+    effect = { speed = {bonus = -0.12}, productivity = {bonus = 0.18} },
+	limitation = {},
+	limitation_message_key = "sheep"
+}
+
+ITEM {
+    type = "item",
+    name = "aoe-meat",
+    icon = "__aoe__/img/items/meat.png",
+    icon_size = 64,
+    subgroup = "aoe-fauna-sheep",
+    order = "c",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "aoe-wool",
+    icon = "__aoe__/img/items/wool.png",
+    icon_size = 64,
+    subgroup = "aoe-fauna-sheep",
+    order = "d",
     stack_size = 200
 }
 

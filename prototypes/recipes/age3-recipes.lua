@@ -1,12 +1,26 @@
 RECIPE {
+    name = 'aoe-ground-bore-water-recipe',
+    type = 'recipe',
+    enabled = false,
+    ingredients = {
+        {type = 'fluid', name = 'aoe-pressure', amount = 20}
+    },
+    results = {
+        {type = 'fluid', name = 'water', amount = 1000}
+    },
+    energy_required = 1,
+	category = 'aoe-category-digging'
+}
+
+RECIPE {
 	name = 'aoe-gene-lab-maize-kernels-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
 		{type = 'item', name = 'aoe-loam', amount = 100},
-		{type = 'item', name = 'aoe-leaves', amount = 50},
-		{type = 'item', name = 'aoe-magnesium-dust', amount = 10},
-		{type = 'fluid', name = 'aoe-bacteria', amount = 200}
+		{type = 'item', name = 'aoe-leaves', amount = 100},
+		{type = 'item', name = 'aoe-magnesium-dust', amount = 20},
+		{type = 'fluid', name = 'aoe-bacteria', amount = 400}
     },
     results = {
         {type = 'item', name = 'aoe-maize-kernels', amount = 1}
@@ -88,11 +102,11 @@ RECIPE {
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-clay', amount = 30},
-		{type = 'item', name = 'aoe-fish-meat', amount = 8},
-		{type = 'item', name = 'aoe-resin', amount = 10},
-		{type = 'item', name = 'aoe-slaked-lime', amount = 12},
-		{type = 'fluid', name = 'aoe-bacteria', amount = 200}
+		{type = 'item', name = 'aoe-clay', amount = 50},
+		{type = 'item', name = 'aoe-fish-meat', amount = 20},
+		{type = 'item', name = 'aoe-resin', amount = 20},
+		{type = 'item', name = 'aoe-slaked-lime', amount = 40},
+		{type = 'fluid', name = 'aoe-bacteria', amount = 500}
     },
     results = {
         {type = 'item', name = 'aoe-egg', amount = 1}
@@ -159,7 +173,7 @@ RECIPE {
     enabled = false,
 	ingredients = {
 		{type = 'item', name = 'wood', amount = 36},
-		{type = 'item', name = 'aoe-aluminium-plate', amount = 8},
+		{type = 'item', name = 'aoe-aluminium-plate', amount = 24},
 		{type = 'item', name = 'aoe-bedding', amount = 1}
     },
     results = {
@@ -169,16 +183,18 @@ RECIPE {
 }
 
 RECIPE {
-    name = 'aoe-slaughterhouse-poultry-recipe',
+    name = 'aoe-slaughterhouse-chicken-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
         {type = 'item', name = 'aoe-chicken', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoe-poultry', amount = 6}
+        {type = 'item', name = 'aoe-poultry', amount = 6},
+		{type = 'item', name = 'aoe-bones', amount = 2}
     },
     energy_required = 4,
+	main_product = 'aoe-poultry',
 	category = 'aoe-category-slaughtering'
 }
 
@@ -200,6 +216,133 @@ RECIPE {
 	main_product = 'aoe-chicken-module-1',
     energy_required = 45,
 	category = 'aoe-category-farm-chicken-coop'
+}
+
+RECIPE {
+    name = 'aoe-gene-lab-lamb-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-egg', amount = 50},
+		{type = 'item', name = 'aoe-fiber', amount = 50},
+		{type = 'item', name = 'aoe-poultry', amount = 50},
+		{type = 'item', name = 'aoe-bones', amount = 20},
+		{type = 'fluid', name = 'aoe-bacteria', amount = 1000}
+    },
+    results = {
+        {type = 'item', name = 'aoe-lamb', amount = 1}
+    },
+    energy_required = 120,
+	category = 'aoe-category-gene-lab'
+}
+
+RECIPE {
+    name = 'aoe-farm-barn-sheep-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-lamb', amount = 1},
+		{type = 'item', name = 'aoe-maize-kernels', amount = 4},
+		{type = 'item', name = 'aoe-hay-bale', amount = 4},
+		{type = 'item', name = 'aoe-salt', amount = 1},
+		{type = 'fluid', name = 'water', amount = 250}
+    },
+    results = {
+        {type = 'item', name = 'aoe-sheep', amount = 1, probability = 0.9}
+    },
+    energy_required = 70,
+	category = 'aoe-category-farm-barn'
+}
+
+RECIPE {
+    name = 'aoe-farm-barn-wool-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-sheep', amount = 4},
+		{type = 'item', name = 'aoe-maize-kernels', amount = 2},
+		{type = 'item', name = 'aoe-hay-bale', amount = 2},
+		{type = 'item', name = 'aoe-salt', amount = 1},
+		{type = 'fluid', name = 'water', amount = 100}
+    },
+    results = {
+        {type = 'item', name = 'aoe-wool', amount = 2},
+		{type = 'item', name = 'aoe-sheep', amount = 3},
+		{type = 'item', name = 'aoe-sheep', amount = 1, probability = 0.9}
+    },
+    energy_required = 10,
+	main_product = 'aoe-wool',
+	category = 'aoe-category-farm-barn'
+}
+
+RECIPE {
+    name = 'aoe-farm-barn-lamb-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-sheep', amount = 2},
+		{type = 'item', name = 'aoe-maize-kernels', amount = 3},
+		{type = 'item', name = 'aoe-hay-bale', amount = 3}
+    },
+    results = {
+        {type = 'item', name = 'aoe-lamb', amount = 1},
+		{type = 'item', name = 'aoe-sheep', amount = 2, probability = 0.85}
+    },
+    energy_required = 35,
+	main_product = 'aoe-lamb',
+	category = 'aoe-category-farm-barn'
+}
+
+RECIPE {
+    name = 'aoe-crafting-barn-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'wood', amount = 48},
+		{type = 'item', name = 'aoe-log', amount = 16},
+		{type = 'item', name = 'aoe-hay-bale', amount = 8},
+		{type = 'item', name = 'aoe-aluminium-plate', amount = 24}
+    },
+    results = {
+        {type = 'item', name = 'aoe-farm-barn', amount = 1}
+    },
+    energy_required = 2
+}
+
+RECIPE {
+    name = 'aoe-slaughterhouse-sheep-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoe-sheep', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoe-wool', amount = 4},
+		{type = 'item', name = 'aoe-meat', amount = 8},
+		{type = 'item', name = 'aoe-bones', amount = 3}
+    },
+    energy_required = 4,
+	main_product = 'aoe-wool',
+	category = 'aoe-category-slaughtering'
+}
+
+RECIPE {
+    name = 'aoe-farm-barn-sheep-module-1-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoe-lamb', amount = 1},
+		{type = 'item', name = 'aoe-maize-kernels', amount = 6},
+		{type = 'item', name = 'aoe-hay-bale', amount = 6},
+		{type = 'fluid', name = 'aoe-brine', amount = 100}
+    },
+    results = {
+        {type = 'item', name = 'aoe-sheep-module-1', amount=1, probability = 0.75},
+        {type = 'item', name = 'aoe-sheep-module-2', amount=1, probability = 0.075}
+    },
+	main_product = 'aoe-sheep-module-1',
+    energy_required = 100,
+	category = 'aoe-category-farm-barn'
 }
 
 RECIPE {
@@ -298,6 +441,61 @@ RECIPE {
 	main_product = "aoe-spruce-tree-module-1",
     energy_required = 40,
 	category = 'aoe-category-farm-plot-spruce-tree'
+}
+
+RECIPE {
+    name = 'aoe-farm-plot-rubber-tree-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoe-rubber-tree-seedling', amount = 1},
+        {type = 'item', name = 'aoe-loam', amount = 2},
+        {type = 'item', name = 'aoe-slaked-lime', amount = 1},
+        {type = 'fluid', name = 'water', amount = 200}
+    },
+    results = {
+        {type = 'item', name = 'aoe-rubber-tree', amount = 1}
+    },
+    energy_required = 12,
+	category = 'aoe-category-farm-plot-rubber-tree'
+}
+
+RECIPE {
+	name = 'aoe-forestry-rubber-tree-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoe-rubber-tree', amount = 1},
+		{type = 'item', name = 'iron-stick', amount = 1}
+    },
+	results = {
+        {type = 'item', name = 'aoe-log', amount = 1},	
+		{type = 'item', name = 'aoe-rubber-tree-seedling', amount = 2},	
+        {type = 'fluid', name = 'aoe-latex', amount = 50}
+    },
+	energy_required = 5,
+	main_product = 'aoe-latex',
+	category = 'aoe-category-harvesting',
+}
+
+RECIPE {
+    name = 'aoe-farm-plot-rubber-tree-module-1-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'item', name = 'aoe-rubber-tree', amount = 1},
+        {type = 'item', name = 'aoe-rubber-tree-seedling', amount = 1},
+        {type = 'item', name = 'aoe-slaked-lime', amount = 2},
+        {type = 'item', name = 'aoe-loam', amount = 4}
+    },
+    results = {
+        {type = 'item', name = 'aoe-rubber-tree-module-1', amount=1, probability = 0.66},
+        {type = 'item', name = 'aoe-rubber-tree-module-2', amount=1, probability = 0.06}
+    },
+	main_product = "aoe-rubber-tree-module-1",
+    energy_required = 60,
+	category = 'aoe-category-farm-plot-rubber-tree'
 }
 
 RECIPE {

@@ -507,3 +507,13 @@ ITEM {
     order = "c",
     stack_size = 200
 }
+
+ITEM {
+    type = "item",
+    name = "aoe-sensor",
+    icon = "__aoe__/img/items/sensor.png",
+    icon_size = 64,
+    subgroup = "aoe-parts",
+    order = "g",
+    stack_size = 100
+}

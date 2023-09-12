@@ -1274,7 +1274,7 @@ RECIPE {
 	enabled = false,
 	ingredients = {
 		{type = 'item', name = 'aoe-steel-machine-hull', amount = 8},
-		{type = 'item', name = 'aoe-tin-plate', amount = 10},
+		{type = 'item', name = 'aoe-tin-plate', amount = 20},
 		{type = 'item', name = 'aoe-graphite-rod', amount = 4},
 		{type = 'item', name = 'iron-stick', amount = 4}
 	},
@@ -1547,7 +1547,7 @@ RECIPE {
 }
 
 RECIPE {
-    name = 'aoe-slaughterhouse-fish-meat-recipe',
+    name = 'aoe-slaughterhouse-fish-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -1608,6 +1608,37 @@ RECIPE {
 	main_product = 'aoe-fish-module-1',
     energy_required = 150,
 	category = 'aoe-category-farm-reservoir-fish'
+}
+
+RECIPE {
+	name = 'aoe-crafting-sensor-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-tin-rod', amount = 4},
+		{type = 'item', name = 'aoe-glass', amount = 2},
+		{type = 'item', name = 'electronic-circuit', amount = 1}
+	},
+	results = {
+        {type = 'item', name = 'aoe-sensor', amount = 1}
+    },
+	energy_required = 1
+}
+
+RECIPE {
+	name = 'aoe-crafting-radar-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-sensor', amount = 4},
+		{type = 'item', name = 'aoe-steel-machine-hull', amount = 2},
+		{type = 'item', name = 'aoe-small-motor', amount = 4},
+		{type = 'item', name = 'iron-plate', amount = 8}
+	},
+	results = {
+        {type = 'item', name = 'radar', amount = 1}
+    },
+	energy_required = 2
 }
 
 RECIPE {

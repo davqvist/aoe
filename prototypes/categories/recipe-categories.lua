@@ -42,6 +42,11 @@ data:extend({
   },
   {
     type = "recipe-category",
+    name = "aoe-category-farm-plot-rubber-tree",
+	modules = { "aoe-module-rubber-tree" }
+  },
+  {
+    type = "recipe-category",
     name = "aoe-category-farm-plot-apple-tree",
 	modules = { "aoe-module-apple-tree" }
   },
@@ -68,6 +73,11 @@ data:extend({
     type = "recipe-category",
     name = "aoe-category-farm-chicken-coop",
 	modules = { "aoe-module-chicken" }
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-farm-barn",
+	modules = { "aoe-module-sheep" }
   },
   {
     type = "recipe-category",

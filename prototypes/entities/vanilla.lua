@@ -39,6 +39,8 @@ data.raw['assembling-machine']['assembling-machine-2'].module_specification = {
 }
 data.raw['item']['lab'].subgroup = "aoe-processing-buildings"
 data.raw['item']['lab'].order = "l"
+data.raw['item']['radar'].subgroup = "aoe-processing-buildings"
+data.raw['item']['radar'].order = "m"
 
 data.raw['item']['burner-inserter'].subgroup = "aoe-inserter"
 data.raw['item']['burner-inserter'].order = "a"

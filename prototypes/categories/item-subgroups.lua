@@ -33,25 +33,25 @@ data:extend({
   },
   {
 	type = "item-subgroup",
-    name = "aoe-flora-apple",
+    name = "aoe-flora-rubber",
     group = "aoe-flora",
     order = "c2"
   },
   {
 	type = "item-subgroup",
-    name = "aoe-flora-olive",
+    name = "aoe-flora-apple",
     group = "aoe-flora",
     order = "c3"
   },
   {
 	type = "item-subgroup",
-    name = "aoe-flora-kelp",
+    name = "aoe-flora-olive",
     group = "aoe-flora",
     order = "c4"
   },
   {
 	type = "item-subgroup",
-    name = "aoe-flora-rubber",
+    name = "aoe-flora-kelp",
     group = "aoe-flora",
     order = "c5"
   },
@@ -96,6 +96,12 @@ data:extend({
     name = "aoe-fauna-chicken",
     group = "aoe-fauna",
     order = "d"
+  },
+  {
+	type = "item-subgroup",
+    name = "aoe-fauna-sheep",
+    group = "aoe-fauna",
+    order = "e"
   },
   {
 	type = "item-subgroup",

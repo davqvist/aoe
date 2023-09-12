@@ -12,7 +12,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "aoe-farm-plot",
-	crafting_categories = {"aoe-category-farm-plot-flax","aoe-category-farm-plot-tea","aoe-category-farm-plot-maize","aoe-category-farm-plot-coffee","aoe-category-farm-plot-spruce-tree","aoe-category-farm-plot-apple-tree","aoe-category-farm-plot-olive-tree","aoe-category-farm-plot-rest"},
+	crafting_categories = {"aoe-category-farm-plot-flax","aoe-category-farm-plot-tea","aoe-category-farm-plot-maize","aoe-category-farm-plot-coffee","aoe-category-farm-plot-spruce-tree","aoe-category-farm-plot-rubber-tree","aoe-category-farm-plot-apple-tree","aoe-category-farm-plot-olive-tree","aoe-category-farm-plot-rest"},
 	crafting_speed = 0.5,
 	energy_source = { type = "void" },
 	energy_usage = "1kW",

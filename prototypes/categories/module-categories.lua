@@ -33,6 +33,14 @@ data:extend({
   },
   {
     type = "module-category",
+    name = "aoe-module-rubber-tree"
+  },
+  {
+    type = "module-category",
+    name = "aoe-module-sheep"
+  },
+  {
+    type = "module-category",
     name = "aoe-module-spruce-tree"
   },
   {

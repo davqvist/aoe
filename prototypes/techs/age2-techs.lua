@@ -822,6 +822,32 @@ TECHNOLOGY {
 
 TECHNOLOGY {
     type = "technology",
+    name = "aoe-radar-tech",
+    icon_size = 64, icon_mipmaps = 4,
+    icon = "__base__/graphics/icons/radar.png",
+    prerequisites = {"aoe-tin-tech"},
+	effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-sensor-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-radar-recipe"
+      }
+    },
+    unit = {
+        count = 35,
+         ingredients = {
+            {"aoe-science-01", 2},
+			{"aoe-science-02", 1}
+        },
+        time = 25
+    }
+}
+
+TECHNOLOGY {
+    type = "technology",
     name = "aoe-better-glass-tech-1",
     icon_size = 64,
     icon = "__aoe__/img/items/glass.png",
@@ -1025,7 +1051,7 @@ TECHNOLOGY {
       },
 	  {
         type = "unlock-recipe",
-        recipe = "aoe-slaughterhouse-fish-meat-recipe"
+        recipe = "aoe-slaughterhouse-fish-recipe"
       },
 	  {
         type = "unlock-recipe",

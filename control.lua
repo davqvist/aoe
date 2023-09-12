@@ -30,7 +30,7 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 	if(entity.name == "aoe-wind-turbine") then 
 		handleWindTurbineBuilt(event)
 	end
-	if(entity.name == "aoe-farm-reservoir") then 
+	if(string.sub(entity.name,1,string.len("aoe-farm"))=="aoe-farm") then 
 		handleFarmBuilt(event)
 	end
 	if(entity.name == "inserter" or entity.name == "long-handed-inserter") then 
@@ -102,7 +102,23 @@ script.on_event(defines.events.on_tick,
 				if k ~= nil then inv.remove( {name=k, count=1} ) end
 			end
 		  end 
-		else global.farms[_]=nil
+		elseif farm.valid and farm.name == "aoe-farm-chicken-coop" then
+		  if farm.crafting_progress == 1 and farm.get_recipe().name == "aoe-farm-chicken-coop-egg-recipe" then
+		    if( math.random()<=0.08 ) then
+				local inv = farm.get_module_inventory()
+				local k, v = next( inv.get_contents() )
+				if k ~= nil then inv.remove( {name=k, count=1} ) end
+			end
+		  end 
+		elseif farm.valid and farm.name == "aoe-farm-barn" then
+		  if farm.crafting_progress == 1 and farm.get_recipe().name == "aoe-farm-barn-lamb-recipe" then
+		    if( math.random()<=0.1 ) then
+				local inv = farm.get_module_inventory()
+				local k, v = next( inv.get_contents() )
+				if k ~= nil then inv.remove( {name=k, count=1} ) end
+			end
+		  end 
+		else global.farms[_]=nil 
 		end
 	  end
     end
