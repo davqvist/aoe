@@ -33,7 +33,7 @@ ITEM {
 	tier = 1,
     effect = { speed = {bonus = 0.5} },
 	limitation = {},
-	limitation_message_key = "kelp"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -48,7 +48,7 @@ ITEM {
 	tier = 2,
     effect = { speed = {bonus = 1.0} },
 	limitation = {},
-	limitation_message_key = "kelp"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -63,7 +63,7 @@ ITEM {
 	tier = 3,
     effect = { speed = {bonus = 1.5} },
 	limitation = {},
-	limitation_message_key = "kelp"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -78,7 +78,7 @@ ITEM {
 	tier = 4,
     effect = { speed = {bonus = 2.0} },
 	limitation = {},
-	limitation_message_key = "kelp"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -93,7 +93,7 @@ ITEM {
 	tier = 5,
     effect = { speed = {bonus = 2.5} },
 	limitation = {},
-	limitation_message_key = "kelp"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -128,7 +128,7 @@ ITEM {
 	tier = 1,
     effect = { speed = {bonus = 0.3333} },
 	limitation = {},
-	limitation_message_key = "tea"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -143,7 +143,7 @@ ITEM {
 	tier = 2,
     effect = { speed = {bonus = 0.5} },
 	limitation = {},
-	limitation_message_key = "tea"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -158,7 +158,7 @@ ITEM {
 	tier = 3,
     effect = { speed = {bonus = 0.6667} },
 	limitation = {},
-	limitation_message_key = "tea"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -173,7 +173,7 @@ ITEM {
 	tier = 4,
     effect = { speed = {bonus = 0.8333} },
 	limitation = {},
-	limitation_message_key = "tea"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -188,7 +188,7 @@ ITEM {
 	tier = 5,
     effect = { speed = {bonus = 1} },
 	limitation = {},
-	limitation_message_key = "tea"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -271,7 +271,7 @@ ITEM {
 	tier = 1,
     effect = { speed = {bonus = 0.3333} },
 	limitation = {},
-	limitation_message_key = "coffee"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -286,7 +286,7 @@ ITEM {
 	tier = 2,
     effect = { speed = {bonus = 0.5} },
 	limitation = {},
-	limitation_message_key = "coffee"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -301,7 +301,7 @@ ITEM {
 	tier = 3,
     effect = { speed = {bonus = 0.6667} },
 	limitation = {},
-	limitation_message_key = "coffee"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -316,7 +316,7 @@ ITEM {
 	tier = 4,
     effect = { speed = {bonus = 0.8333} },
 	limitation = {},
-	limitation_message_key = "coffee"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -331,7 +331,7 @@ ITEM {
 	tier = 5,
     effect = { speed = {bonus = 1} },
 	limitation = {},
-	limitation_message_key = "coffee"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -475,7 +475,7 @@ ITEM {
 	tier = 1,
     effect = { speed = {bonus = 0.5} },
 	limitation = {},
-	limitation_message_key = "flax"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -490,7 +490,7 @@ ITEM {
 	tier = 1,
     effect = { productivity = {bonus = 0.09} },
 	limitation = {},
-	limitation_message_key = "flax"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -505,7 +505,7 @@ ITEM {
 	tier = 2,
     effect = { speed = {bonus = 0.9} },
 	limitation = {},
-	limitation_message_key = "flax"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -520,7 +520,7 @@ ITEM {
 	tier = 2,
     effect = { productivity = {bonus = 0.13} },
 	limitation = {},
-	limitation_message_key = "flax"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -535,7 +535,7 @@ ITEM {
 	tier = 3,
     effect = { speed = {bonus = 1.25} },
 	limitation = {},
-	limitation_message_key = "flax"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -550,7 +550,7 @@ ITEM {
 	tier = 3,
     effect = { productivity = {bonus = 0.17} },
 	limitation = {},
-	limitation_message_key = "flax"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -565,7 +565,7 @@ ITEM {
 	tier = 4,
     effect = { speed = {bonus = 1.57} },
 	limitation = {},
-	limitation_message_key = "flax"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -580,7 +580,7 @@ ITEM {
 	tier = 4,
     effect = { productivity = {bonus = 0.21} },
 	limitation = {},
-	limitation_message_key = "flax"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -595,7 +595,7 @@ ITEM {
 	tier = 5,
     effect = { speed = {bonus = 1.87} },
 	limitation = {},
-	limitation_message_key = "flax"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -610,7 +610,7 @@ ITEM {
 	tier = 5,
     effect = { productivity = {bonus = 0.25} },
 	limitation = {},
-	limitation_message_key = "flax"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {

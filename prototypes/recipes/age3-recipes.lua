@@ -98,6 +98,146 @@ RECIPE {
 }
 
 RECIPE {
+	name = 'aoe-gene-lab-soybean-seeds-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-loam', amount = 100},
+		{type = 'item', name = 'aoe-coffee-beans', amount = 40},
+		{type = 'item', name = 'aoe-maize-kernels', amount = 40},
+		{type = 'fluid', name = 'aoe-latex', amount = 200},
+		{type = 'fluid', name = 'aoe-bacteria', amount = 700}
+    },
+    results = {
+        {type = 'item', name = 'aoe-soybean-seeds', amount = 1}
+    },
+    energy_required = 90,
+	category = 'aoe-category-gene-lab'
+}
+
+RECIPE {
+	name = 'aoe-greenhouse-soybean-seeds-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-soybeans', amount = 3}
+    },
+    results = {
+        {type = 'item', name = 'aoe-soybean-seeds', amount = 8}
+    },
+    energy_required = 2,
+	category = 'aoe-category-greenhouse'
+}
+
+RECIPE {
+    name = 'aoe-farm-plot-soybeans-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoe-soybean-seeds', amount = 3},
+		{type = 'item', name = 'aoe-quicklime', amount = 2},
+        {type = 'item', name = 'aoe-loam', amount = 5}
+    },
+    results = {
+        {type = 'item', name = 'aoe-soybeans', amount = 5}
+    },
+    energy_required = 60,
+	category = 'aoe-category-farm-plot-soybean'
+}
+
+RECIPE {
+    name = 'aoe-farm-plot-soybeans-module-1-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoe-soybeans', amount = 2},
+		{type = 'item', name = 'aoe-quicklime', amount = 4},
+        {type = 'item', name = 'aoe-loam', amount = 7}
+    },
+    results = {
+        {type = 'item', name = 'aoe-soybeans-module-1', amount=1},
+        {type = 'item', name = 'aoe-soybeans-module-2', amount=1, probability = 0.1},
+        {type = 'item', name = 'aoe-soybeans-module-3', amount=1, probability = 0.01}
+    },
+	main_product = "aoe-soybeans-module-1",
+    energy_required = 150,
+	category = 'aoe-category-farm-plot-soybean'
+}
+
+RECIPE {
+	name = 'aoe-crushing-soy-flour-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-soybean-seeds', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoe-soy-flour', amount = 1}
+    },
+	energy_required = 1,
+	category = 'aoe-category-crushing'
+}
+
+RECIPE {
+	name = 'aoe-mixing-soy-milk-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'water', amount = 100},
+		{type = 'item', name = 'aoe-soy-flour', amount = 10}
+	},
+	results = {
+		{type = 'fluid', name = 'aoe-milk', amount = 100}
+    },
+	energy_required = 2.4,
+	category = 'aoe-category-mixing'
+}
+
+RECIPE {
+	name = 'aoe-mixing-soy-meat-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-soybean-seeds', amount = 3},
+		{type = 'item', name = 'aoe-caustic-soda', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoe-meat', amount = 1}
+    },
+	energy_required = 1,
+	category = 'aoe-category-mixing'
+}
+
+RECIPE {
+	name = 'aoe-squeezer-soybean-seeds-plant-oil-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-soybean-seeds', amount = 10},
+		{type = 'fluid', name = 'aoe-pressure', amount = 80}
+	},
+	results = {
+		{type = 'fluid', name = 'aoe-plant-oil', amount = 100}
+    },
+	energy_required = 4,
+	category = 'aoe-category-squeezing'
+}
+
+RECIPE {
+	name = 'aoe-crushing-soy-flour-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-soybean-seeds', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoe-soy-flour', amount = 1}
+    },
+	energy_required = 1,
+	category = 'aoe-category-crushing'
+}
+
+RECIPE {
     name = 'aoe-gene-lab-egg-recipe',
     type = 'recipe',
     enabled = false,
@@ -142,7 +282,7 @@ RECIPE {
     },
     results = {
         {type = 'item', name = 'aoe-chicken', amount = 1, probability = 0.4},
-		{type = 'item', name = 'aoe-bedding', amount = 1, probability = 0.975}
+		{type = 'item', name = 'aoe-bedding', amount = 1, catalyst_amount = 1, probability = 0.975}
     },
     energy_required = 15,
 	main_product = 'aoe-chicken',
@@ -160,7 +300,7 @@ RECIPE {
     },
     results = {
         {type = 'item', name = 'aoe-egg', amount = 7},
-		{type = 'item', name = 'aoe-chicken', amount = 2, probability = 0.85}
+		{type = 'item', name = 'aoe-chicken', amount = 2, catalyst_amount = 2, probability = 0.85}
     },
     energy_required = 15,
 	main_product = 'aoe-egg',
@@ -224,7 +364,7 @@ RECIPE {
     enabled = false,
 	ingredients = {
 		{type = 'item', name = 'aoe-egg', amount = 50},
-		{type = 'item', name = 'aoe-fiber', amount = 50},
+		{type = 'item', name = 'aoe-resin', amount = 50},
 		{type = 'item', name = 'aoe-poultry', amount = 50},
 		{type = 'item', name = 'aoe-bones', amount = 20},
 		{type = 'fluid', name = 'aoe-bacteria', amount = 1000}
@@ -251,7 +391,7 @@ RECIPE {
         {type = 'item', name = 'aoe-sheep', amount = 1, probability = 0.9}
     },
     energy_required = 70,
-	category = 'aoe-category-farm-barn'
+	category = 'aoe-category-farm-barn-sheep'
 }
 
 RECIPE {
@@ -267,12 +407,12 @@ RECIPE {
     },
     results = {
         {type = 'item', name = 'aoe-wool', amount = 2},
-		{type = 'item', name = 'aoe-sheep', amount = 3},
-		{type = 'item', name = 'aoe-sheep', amount = 1, probability = 0.9}
+		{type = 'item', name = 'aoe-sheep', amount = 3, catalyst_amount = 3},
+		{type = 'item', name = 'aoe-sheep', amount = 1, catalyst_amount = 1, probability = 0.9}
     },
     energy_required = 10,
 	main_product = 'aoe-wool',
-	category = 'aoe-category-farm-barn'
+	category = 'aoe-category-farm-barn-sheep'
 }
 
 RECIPE {
@@ -286,11 +426,11 @@ RECIPE {
     },
     results = {
         {type = 'item', name = 'aoe-lamb', amount = 1},
-		{type = 'item', name = 'aoe-sheep', amount = 2, probability = 0.85}
+		{type = 'item', name = 'aoe-sheep', amount = 2, catalyst_amount = 2, probability = 0.85}
     },
     energy_required = 35,
 	main_product = 'aoe-lamb',
-	category = 'aoe-category-farm-barn'
+	category = 'aoe-category-farm-barn-sheep'
 }
 
 RECIPE {
@@ -342,7 +482,186 @@ RECIPE {
     },
 	main_product = 'aoe-sheep-module-1',
     energy_required = 100,
-	category = 'aoe-category-farm-barn'
+	category = 'aoe-category-farm-barn-sheep'
+}
+
+RECIPE {
+    name = 'aoe-gene-lab-calf-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-egg', amount = 50},
+		{type = 'item', name = 'aoe-fiber', amount = 50},
+		{type = 'item', name = 'aoe-meat', amount = 50},
+		{type = 'item', name = 'aoe-bones', amount = 20},
+		{type = 'fluid', name = 'aoe-bacteria', amount = 1200}
+    },
+    results = {
+        {type = 'item', name = 'aoe-calf', amount = 1}
+    },
+    energy_required = 150,
+	category = 'aoe-category-gene-lab'
+}
+
+RECIPE {
+    name = 'aoe-farm-barn-cow-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-calf', amount = 1},
+		{type = 'item', name = 'aoe-maize-kernels', amount = 5},
+		{type = 'item', name = 'aoe-hay-bale', amount = 3},
+		{type = 'item', name = 'aoe-grass', amount = 4},
+		{type = 'fluid', name = 'aoe-milk', amount = 50}
+    },
+    results = {
+        {type = 'item', name = 'aoe-cow', amount = 1, probability = 0.5},
+		{type = 'item', name = 'aoe-ox', amount = 1, probability = 0.4}
+    },
+	main_product = 'aoe-cow',
+    energy_required = 90,
+	category = 'aoe-category-farm-barn-cow'
+}
+
+RECIPE {
+    name = 'aoe-farm-barn-milk-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-cow', amount = 4},
+		{type = 'item', name = 'aoe-maize-kernels', amount = 2},
+		{type = 'item', name = 'aoe-hay-bale', amount = 1},
+		{type = 'item', name = 'aoe-grass', amount = 1},
+		{type = 'item', name = 'aoe-magnesium-dust', amount = 1},
+		{type = 'fluid', name = 'water', amount = 250}
+    },
+    results = {
+        {type = 'fluid', name = 'aoe-milk', amount = 250},
+		{type = 'item', name = 'aoe-cow', amount = 3, catalyst_amount = 3},
+		{type = 'item', name = 'aoe-cow', amount = 1, catalyst_amount = 1, probability = 0.9}
+    },
+    energy_required = 16,
+	main_product = 'aoe-milk',
+	category = 'aoe-category-farm-barn-cow'
+}
+
+RECIPE {
+    name = 'aoe-farm-barn-calf-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-ox', amount = 1},
+		{type = 'item', name = 'aoe-cow', amount = 1},
+		{type = 'item', name = 'aoe-maize-kernels', amount = 4},
+		{type = 'item', name = 'aoe-hay-bale', amount = 2},
+		{type = 'item', name = 'aoe-grass', amount = 3}
+    },
+    results = {
+        {type = 'item', name = 'aoe-calf', amount = 1},
+		{type = 'item', name = 'aoe-ox', amount = 1, catalyst_amount = 1, probability = 0.9},
+		{type = 'item', name = 'aoe-cow', amount = 1, catalyst_amount = 1, probability = 0.85}
+    },
+    energy_required = 40,
+	main_product = 'aoe-calf',
+	category = 'aoe-category-farm-barn-cow'
+}
+
+RECIPE {
+    name = 'aoe-slaughterhouse-cow-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoe-cow', amount = 1}
+    },
+    results = {
+		{type = 'item', name = 'aoe-hide', amount = 1},
+		{type = 'item', name = 'aoe-meat', amount = 12},
+		{type = 'item', name = 'aoe-bones', amount = 5}
+    },
+    energy_required = 4,
+	main_product = 'aoe-hide',
+	icons = {
+	  {
+		icon = data.raw.item["aoe-hide"].icon,
+		icon_size = data.raw.item["aoe-hide"].icon_size
+	  },
+	  {
+		icon = data.raw.item["aoe-cow"].icon,
+		icon_size = data.raw.item["aoe-cow"].icon_size,
+		scale = 0.4,
+		shift = {8,8}
+	  }
+	},
+	category = 'aoe-category-slaughtering'
+}
+
+RECIPE {
+    name = 'aoe-slaughterhouse-ox-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoe-ox', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoe-hide', amount = 1},
+		{type = 'item', name = 'aoe-meat', amount = 12},
+		{type = 'item', name = 'aoe-bones', amount = 5}
+    },
+    energy_required = 4,
+	main_product = 'aoe-hide',
+	icons = {
+	  {
+		icon = data.raw.item["aoe-hide"].icon,
+		icon_size = data.raw.item["aoe-hide"].icon_size
+	  },
+	  {
+		icon = data.raw.item["aoe-ox"].icon,
+		icon_size = data.raw.item["aoe-ox"].icon_size,
+		scale = 0.4,
+		shift = {8,8}
+	  }
+	},
+	category = 'aoe-category-slaughtering'
+}
+
+RECIPE {
+    name = 'aoe-farm-barn-cow-module-1-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoe-calf', amount = 1},
+		{type = 'item', name = 'aoe-maize-kernels', amount = 7},
+		{type = 'item', name = 'aoe-hay-bale', amount = 4},
+		{type = 'item', name = 'aoe-grass', amount = 6},
+		{type = 'item', name = 'aoe-magnesium-dust', amount = 1},
+		{type = 'fluid', name = 'water', amount = 150}
+    },
+    results = {
+        {type = 'item', name = 'aoe-cow-module-1', amount=1, probability = 0.35},
+        {type = 'item', name = 'aoe-cow-module-2', amount=1, probability = 0.035},
+		{type = 'item', name = 'aoe-ox-module-1', amount=1, probability = 0.35},
+        {type = 'item', name = 'aoe-ox-module-2', amount=1, probability = 0.035}
+    },
+	main_product = 'aoe-cow-module-1',
+    energy_required = 120,
+	category = 'aoe-category-farm-barn-cow'
+}
+
+RECIPE {
+	name = 'aoe-high-pressure-leather-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-hide', amount = 1},
+		{type = 'item', name = 'aoe-slaked-lime', amount = 4},
+		{type = 'item', name = 'aoe-wood-pulp', amount = 4},
+		{type = 'fluid', name = 'aoe-brine', amount = 100}
+	},
+	results = {
+		{type = 'item', name = 'aoe-leather', amount = 8}
+    },
+	energy_required = 6,
+	category = 'aoe-category-high-pressure-heating'
 }
 
 RECIPE {
@@ -668,13 +987,13 @@ RECIPE {
     type = 'recipe',
     enabled = false,
 	ingredients = {
-        {type = 'item', name = 'aoe-soil', amount = 10},
+        {type = 'item', name = 'aoe-soil', amount = 4},
         {type = 'fluid', name = 'water', amount = 200}
     },
     results = {
-        {type = 'item', name = 'aoe-grass', amount = 1}
+        {type = 'item', name = 'aoe-grass', amount = 2}
     },
-    energy_required = 10,
+    energy_required = 12,
 	category = 'aoe-category-farm-plot-rest'
 }
 
@@ -756,7 +1075,7 @@ RECIPE {
 	results = {
         {type = 'item', name = 'wood', amount = 8},
         {type = 'item', name = 'aoe-wood-pulp', amount = 1},
-		{type = 'item', name = 'aoe-saw-blade-iron', amount = 1, probability = 0.94}
+		{type = 'item', name = 'aoe-saw-blade-iron', amount = 1, catalyst_amount = 1, probability = 0.94}
     },
 	main_product = 'wood',
 	icons = {
@@ -787,7 +1106,7 @@ RECIPE {
 	results = {
         {type = 'item', name = 'wood', amount = 8},
         {type = 'item', name = 'aoe-wood-pulp', amount = 1},
-		{type = 'item', name = 'aoe-saw-blade-steel', amount = 1, probability = 0.97}
+		{type = 'item', name = 'aoe-saw-blade-steel', amount = 1, catalyst_amount = 1, probability = 0.97}
     },
 	main_product = 'wood',
 	icons = {
@@ -848,4 +1167,20 @@ RECIPE {
     },
 	energy_required = 2.4,
 	category = 'smelting'
+}
+
+RECIPE {
+	name = 'aoe-crafting-science-03-alternate-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-science-01', amount = 3},
+		{type = 'item', name = 'aoe-egg', amount = 2},
+		{type = 'item', name = 'aoe-wool', amount = 1},
+		{type = 'item', name = 'aoe-leather', amount = 1}
+	},
+	results = {
+        {type = 'item', name = 'aoe-science-03', amount = 1}
+    },
+	energy_required = 4
 }

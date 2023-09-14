@@ -60,6 +60,56 @@ TECHNOLOGY {
 
 TECHNOLOGY {
     type = "technology",
+    name = "aoe-soybeans-tech",
+    icon_size = 64,
+    icon = "__aoe__/img/items/soybeans.png",
+    prerequisites = {"aoe-maize-tech","aoe-lime-tech","aoe-drinks-tech"},
+	effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-gene-lab-soybean-seeds-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-greenhouse-soybean-seeds-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-farm-plot-soybeans-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-farm-plot-soybeans-module-1-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-crushing-soy-flour-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-mixing-soy-milk-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-mixing-soy-meat-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-squeezer-soybean-seeds-plant-oil-recipe"
+      }
+    },
+    unit = {
+        count = 25,
+        ingredients = {
+            {"aoe-science-02", 2},
+			{"aoe-science-03", 1}
+        },
+        time = 30
+    }
+}
+
+TECHNOLOGY {
+    type = "technology",
     name = "aoe-tree-cultivation-tech",
     icon = data.raw.tree["tree-01"].icon,
     icon_size = data.raw.tree["tree-01"].icon_size,
@@ -450,6 +500,56 @@ TECHNOLOGY {
 
 TECHNOLOGY {
     type = "technology",
+    name = "aoe-cow-tech",
+    icon_size = 64,
+    icon = "__aoe__/img/items/cow.png",
+    prerequisites = {"aoe-sheep-tech","aoe-soybeans-tech"},
+	effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-gene-lab-calf-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-farm-barn-cow-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-farm-barn-milk-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-farm-barn-calf-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-slaughterhouse-cow-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-slaughterhouse-ox-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-farm-barn-cow-module-1-recipe"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "aoe-high-pressure-leather-recipe"
+      }
+    },
+    unit = {
+        count = 45,
+        ingredients = {
+            {"aoe-science-02", 2},
+			{"aoe-science-03", 1}
+        },
+        time = 30
+    }
+}
+
+TECHNOLOGY {
+    type = "technology",
     name = "aoe-better-glass-tech-2",
     icon_size = 64,
     icon = "__aoe__/img/items/glass.png",
@@ -466,6 +566,28 @@ TECHNOLOGY {
     },
     unit = {
         count = 35,
+        ingredients = {
+            {"aoe-science-02", 2},
+			{"aoe-science-03", 1}
+        },
+        time = 30
+    }
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "aoe-agriculture-science-alternate-tech",
+    icon_size = 64,
+    icon = "__aoe__/img/items/science-pack-3.png",
+    prerequisites = {"aoe-cow-tech"},
+	effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-science-03-alternate-recipe"
+      }
+    },
+    unit = {
+        count = 50,
         ingredients = {
             {"aoe-science-02", 2},
 			{"aoe-science-03", 1}

@@ -37,6 +37,11 @@ data:extend({
   },
   {
     type = "recipe-category",
+    name = "aoe-category-farm-plot-soybean",
+	modules = { "aoe-module-soybean" }
+  },
+  {
+    type = "recipe-category",
     name = "aoe-category-farm-plot-spruce-tree",
 	modules = { "aoe-module-spruce-tree" }
   },
@@ -76,8 +81,13 @@ data:extend({
   },
   {
     type = "recipe-category",
-    name = "aoe-category-farm-barn",
+    name = "aoe-category-farm-barn-sheep",
 	modules = { "aoe-module-sheep" }
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-farm-barn-cow",
+	modules = { "aoe-module-cow", "aoe-module-ox" }
   },
   {
     type = "recipe-category",

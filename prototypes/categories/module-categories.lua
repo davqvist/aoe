@@ -13,6 +13,10 @@ data:extend({
   },
   {
     type = "module-category",
+    name = "aoe-module-cow"
+  },
+  {
+    type = "module-category",
     name = "aoe-module-fish"
   },
   {
@@ -29,7 +33,15 @@ data:extend({
   },
   {
     type = "module-category",
+    name = "aoe-module-soybean"
+  },
+  {
+    type = "module-category",
     name = "aoe-module-olive-tree"
+  },
+  {
+    type = "module-category",
+    name = "aoe-module-ox"
   },
   {
     type = "module-category",

@@ -12,7 +12,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "aoe-farm-barn",
-	crafting_categories = {"aoe-category-farm-barn"},
+	crafting_categories = {"aoe-category-farm-barn-sheep","aoe-category-farm-barn-cow"},
 	crafting_speed = 0.5,
 	energy_source = { type = "void" },
 	energy_usage = "1kW",
@@ -45,6 +45,13 @@ ENTITY {
         base_area = 10,
         base_level = 1,
         pipe_connections = {{ type="input", position = {-4.5, 0} }}
+      },{
+        production_type = "output",
+        pipe_picture = assembler2pipepictures(),
+        pipe_covers = pipecoverspictures(),
+        base_area = 10,
+        base_level = 1,
+        pipe_connections = {{ type="output", position = {4.5, 0} }}
       },
       off_when_no_fluid_recipe = true
     }

@@ -69,9 +69,15 @@ data:extend({
   },
   {
 	type = "item-subgroup",
-    name = "aoe-flora-drinks",
+    name = "aoe-flora-soybean",
     group = "aoe-flora",
     order = "c8"
+  },
+  {
+	type = "item-subgroup",
+    name = "aoe-flora-drinks",
+    group = "aoe-flora",
+    order = "c9"
   },
   {
 	type = "item-subgroup",
@@ -102,6 +108,12 @@ data:extend({
     name = "aoe-fauna-sheep",
     group = "aoe-fauna",
     order = "e"
+  },
+  {
+	type = "item-subgroup",
+    name = "aoe-fauna-cow",
+    group = "aoe-fauna",
+    order = "f"
   },
   {
 	type = "item-subgroup",
@@ -255,21 +267,27 @@ data:extend({
   },
   {
 	type = "item-subgroup",
-    name = "aoe-fluids",
+    name = "aoe-fluids-general",
     group = "fluids",
     order = "a"
   },
   {
 	type = "item-subgroup",
-    name = "aoe-gasses",
+    name = "aoe-fluids-flora-fauna",
     group = "fluids",
     order = "b"
   },
   {
 	type = "item-subgroup",
-    name = "aoe-air-gasses",
+    name = "aoe-gasses",
     group = "fluids",
     order = "c"
+  },
+  {
+	type = "item-subgroup",
+    name = "aoe-air-gasses",
+    group = "fluids",
+    order = "d"
   },
   {
 	type = "item-subgroup",

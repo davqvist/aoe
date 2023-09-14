@@ -1,4 +1,4 @@
-data.raw['fluid']['water'].subgroup = "aoe-fluids"
+data.raw['fluid']['water'].subgroup = "aoe-fluids-general"
 data.raw['fluid']['water'].order = "a"
 
 FLUID {
@@ -6,7 +6,7 @@ FLUID {
     name = "aoe-bacteria",
     icon = "__aoe__/img/fluids/bacteria.png",
     icon_size = 64,
-    subgroup = "aoe-fluids",
+    subgroup = "aoe-fluids-general",
     order = "b",
 	base_color = {r=0.33, g=0.8, b=0.09},
 	flow_color = {r=0.33, g=0.8, b=0.09},
@@ -18,8 +18,8 @@ FLUID {
     name = "aoe-brine",
     icon = "__aoe__/img/fluids/brine.png",
     icon_size = 64,
-    subgroup = "aoe-fluids",
-    order = "e",
+    subgroup = "aoe-fluids-general",
+    order = "d",
 	base_color = {r=0.0, g=0.22, b=0.3},
 	flow_color = {r=0.0, g=0.22, b=0.3},
 	default_temperature = 20
@@ -150,8 +150,8 @@ FLUID {
     name = "aoe-lava",
     icon = "__aoe__/img/fluids/lava.png",
     icon_size = 64,
-    subgroup = "aoe-fluids",
-    order = "d",
+    subgroup = "aoe-fluids-general",
+    order = "c",
     heat_capacity = "15KJ",
     base_color = {r=0.8, g=0.4, b=0.25},
     flow_color = {r=0.8, g=0.6, b=0.25},
@@ -163,7 +163,31 @@ FLUID {
     name = "aoe-latex",
     icon = "__aoe__/img/fluids/latex.png",
     icon_size = 64,
-    subgroup = "aoe-fluids",
+    subgroup = "aoe-fluids-flora-fauna",
+    order = "a",
+	base_color = {r=0.9, g=0.9, b=0.9},
+	flow_color = {r=0.9, g=0.9, b=0.9},
+	default_temperature = 20
+}
+
+FLUID {
+    type = "fluid",
+    name = "aoe-plant-oil",
+    icon = "__aoe__/img/fluids/plant-oil.png",
+    icon_size = 64,
+    subgroup = "aoe-fluids-flora-fauna",
+    order = "b",
+	base_color = {r=0.8, g=0.8, b=0.45},
+	flow_color = {r=0.8, g=0.8, b=0.45},
+	default_temperature = 20
+}
+
+FLUID {
+    type = "fluid",
+    name = "aoe-milk",
+    icon = "__aoe__/img/fluids/milk.png",
+    icon_size = 64,
+    subgroup = "aoe-fluids-flora-fauna",
     order = "c",
 	base_color = {r=1.0, g=1.0, b=1.0},
 	flow_color = {r=1.0, g=1.0, b=1.0},

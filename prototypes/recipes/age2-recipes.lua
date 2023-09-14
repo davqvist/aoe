@@ -400,9 +400,9 @@ RECIPE {
 		{type = 'item', name = 'aoe-clay', amount = 1}
 	},
 	results = {
-        {type = 'item', name = 'aoe-loam', amount = 5}
+        {type = 'item', name = 'aoe-loam', amount = 4}
     },
-	energy_required = 2.5,
+	energy_required = 2,
 	category = 'aoe-category-mixing'
 }
 
@@ -1298,7 +1298,7 @@ RECIPE {
 	icon = data.raw.fluid["water"].icon,
 	icon_size = data.raw.fluid["water"].icon_size,
     icon_mipmaps = data.raw.fluid["water"].icon_mipmaps,
-	subgroup = 'aoe-fluids',
+	subgroup = 'aoe-fluids-general',
 	order = 'a1',
 	energy_required = 1,
 	category = 'aoe-category-electrolyzing'
@@ -1317,8 +1317,8 @@ RECIPE {
     },
 	icon = data.raw.fluid["aoe-brine"].icon,
 	icon_size = data.raw.fluid["aoe-brine"].icon_size,
-	subgroup = 'aoe-fluids',
-	order = 'e1',
+	subgroup = 'aoe-fluids-general',
+	order = 'd1',
 	energy_required = 1,
 	category = 'aoe-category-electrolyzing'
 }

@@ -13,11 +13,21 @@ ITEM {
 
 ITEM {
     type = "item",
+    name = "aoe-maize-kernels",
+    icon = "__aoe__/img/items/maize-kernels.png",
+    icon_size = 64,
+    subgroup = "aoe-flora-maize",
+    order = "a",
+    stack_size = 100
+}
+
+ITEM {
+    type = "item",
     name = "aoe-maize",
     icon = "__aoe__/img/items/maize.png",
     icon_size = 64,
     subgroup = "aoe-flora-maize",
-    order = "a",
+    order = "b",
     stack_size = 200
 }
 
@@ -33,7 +43,7 @@ ITEM {
 	tier = 1,
     effect = { speed = {bonus = 0.25} },
 	limitation = {},
-	limitation_message_key = "maize"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -48,7 +58,7 @@ ITEM {
 	tier = 1,
     effect = { speed = {bonus = -0.12}, productivity = {bonus = 0.15} },
 	limitation = {},
-	limitation_message_key = "maize"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -63,7 +73,7 @@ ITEM {
 	tier = 2,
     effect = { speed = {bonus = 0.45} },
 	limitation = {},
-	limitation_message_key = "maize"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -78,7 +88,7 @@ ITEM {
 	tier = 2,
     effect = { speed = {bonus = -0.12}, productivity = {bonus = 0.3} },
 	limitation = {},
-	limitation_message_key = "maize"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -93,7 +103,7 @@ ITEM {
 	tier = 3,
     effect = { speed = {bonus = 0.65} },
 	limitation = {},
-	limitation_message_key = "maize"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -108,7 +118,7 @@ ITEM {
 	tier = 3,
     effect = { speed = {bonus = -0.12}, productivity = {bonus = 0.45} },
 	limitation = {},
-	limitation_message_key = "maize"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -123,7 +133,7 @@ ITEM {
 	tier = 4,
     effect = { speed = {bonus = 0.85} },
 	limitation = {},
-	limitation_message_key = "maize"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -138,7 +148,7 @@ ITEM {
 	tier = 4,
     effect = { speed = {bonus = -0.12}, productivity = {bonus = 0.6} },
 	limitation = {},
-	limitation_message_key = "maize"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -153,7 +163,7 @@ ITEM {
 	tier = 5,
     effect = { speed = {bonus = 1.05} },
 	limitation = {},
-	limitation_message_key = "maize"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -168,17 +178,112 @@ ITEM {
 	tier = 5,
     effect = { speed = {bonus = -0.12}, productivity = {bonus = 0.75} },
 	limitation = {},
-	limitation_message_key = "maize"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
     type = "item",
-    name = "aoe-maize-kernels",
-    icon = "__aoe__/img/items/maize-kernels.png",
+    name = "aoe-soybean-seeds",
+    icon = "__aoe__/img/items/soybean-seeds.png",
     icon_size = 64,
-    subgroup = "aoe-flora-maize",
+    subgroup = "aoe-flora-soybean",
+    order = "a",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "aoe-soybeans",
+    icon = "__aoe__/img/items/soybeans.png",
+    icon_size = 64,
+    subgroup = "aoe-flora-soybean",
+    order = "b",
+    stack_size = 200
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-soybeans-module-1",
+    icons = { { icon = "__aoe__/img/items/soybeans.png" }, { icon = "__aoe__/img/items/rarity/common.png" } },
+    icon_size = 64,
+    subgroup = "aoe-flora-soybean",
+    order = "b1",
+    stack_size = 20,
+	category = "aoe-module-soybean",
+	tier = 1,
+    effect = { speed = {bonus = 0.15}, productivity = {bonus = 0.03} },
+	limitation = {},
+	limitation_message_key = "item-not-allowed-in-this-container-item"
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-soybeans-module-2",
+    icons = { { icon = "__aoe__/img/items/soybeans.png" }, { icon = "__aoe__/img/items/rarity/uncommon.png" } },
+    icon_size = 64,
+    subgroup = "aoe-flora-soybean",
+    order = "b2",
+    stack_size = 20,
+	category = "aoe-module-soybean",
+	tier = 2,
+    effect = { speed = {bonus = 0.25}, productivity = {bonus = 0.06} },
+	limitation = {},
+	limitation_message_key = "item-not-allowed-in-this-container-item"
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-soybeans-module-3",
+    icons = { { icon = "__aoe__/img/items/soybeans.png" }, { icon = "__aoe__/img/items/rarity/rare.png" } },
+    icon_size = 64,
+    subgroup = "aoe-flora-soybean",
+    order = "b3",
+    stack_size = 20,
+	category = "aoe-module-soybean",
+	tier = 3,
+    effect = { speed = {bonus = 0.35}, productivity = {bonus = 0.09} },
+	limitation = {},
+	limitation_message_key = "item-not-allowed-in-this-container-item"
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-soybeans-module-4",
+    icons = { { icon = "__aoe__/img/items/soybeans.png" }, { icon = "__aoe__/img/items/rarity/epic.png" } },
+    icon_size = 64,
+    subgroup = "aoe-flora-soybean",
+    order = "b4",
+    stack_size = 20,
+	category = "aoe-module-soybean",
+	tier = 4,
+    effect = { speed = {bonus = 0.45}, productivity = {bonus = 0.12} },
+	limitation = {},
+	limitation_message_key = "item-not-allowed-in-this-container-item"
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-soybeans-module-5",
+    icons = { { icon = "__aoe__/img/items/soybeans.png" }, { icon = "__aoe__/img/items/rarity/legendary.png" } },
+    icon_size = 64,
+    subgroup = "aoe-flora-soybean",
+    order = "b5",
+    stack_size = 20,
+	category = "aoe-module-soybean",
+	tier = 5,
+    effect = { speed = {bonus = 0.55}, productivity = {bonus = 0.15} },
+	limitation = {},
+	limitation_message_key = "item-not-allowed-in-this-container-item"
+}
+
+ITEM {
+    type = "item",
+    name = "aoe-soy-flour",
+    icon = "__aoe__/img/items/soy-flour.png",
+    icon_size = 64,
+    subgroup = "aoe-flora-soybean",
     order = "c",
-    stack_size = 100
+    stack_size = 200
 }
 
 ITEM {
@@ -203,7 +308,7 @@ ITEM {
 	tier = 1,
     effect = { speed = {bonus = 0.03}, productivity = {bonus = 0.03} },
 	limitation = {},
-	limitation_message_key = "spruce-tree"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -218,7 +323,7 @@ ITEM {
 	tier = 2,
     effect = { speed = {bonus = 0.06}, productivity = {bonus = 0.06} },
 	limitation = {},
-	limitation_message_key = "spruce-tree"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -233,7 +338,7 @@ ITEM {
 	tier = 3,
     effect = { speed = {bonus = 0.09}, productivity = {bonus = 0.09} },
 	limitation = {},
-	limitation_message_key = "spruce-tree"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -248,7 +353,7 @@ ITEM {
 	tier = 4,
     effect = { speed = {bonus = 0.12}, productivity = {bonus = 0.12} },
 	limitation = {},
-	limitation_message_key = "spruce-tree"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -263,7 +368,7 @@ ITEM {
 	tier = 5,
     effect = { speed = {bonus = 0.15}, productivity = {bonus = 0.15} },
 	limitation = {},
-	limitation_message_key = "spruce-tree"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -277,7 +382,7 @@ ITEM {
 	tier = 1,
     effect = { speed = {bonus = 0.03}, productivity = {bonus = 0.03} },
 	limitation = {},
-	limitation_message_key = "rubber-tree"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -291,7 +396,7 @@ ITEM {
 	tier = 2,
     effect = { speed = {bonus = 0.06}, productivity = {bonus = 0.06} },
 	limitation = {},
-	limitation_message_key = "rubber-tree"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -305,7 +410,7 @@ ITEM {
 	tier = 3,
     effect = { speed = {bonus = 0.09}, productivity = {bonus = 0.09} },
 	limitation = {},
-	limitation_message_key = "rubber-tree"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -319,7 +424,7 @@ ITEM {
 	tier = 4,
     effect = { speed = {bonus = 0.12}, productivity = {bonus = 0.12} },
 	limitation = {},
-	limitation_message_key = "rubber-tree"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -333,7 +438,7 @@ ITEM {
 	tier = 5,
     effect = { speed = {bonus = 0.15}, productivity = {bonus = 0.15} },
 	limitation = {},
-	limitation_message_key = "rubber-tree"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -368,7 +473,7 @@ ITEM {
 	tier = 1,
     effect = { speed = {bonus = 0.03}, productivity = {bonus = 0.03} },
 	limitation = {},
-	limitation_message_key = "apple-tree"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -383,7 +488,7 @@ ITEM {
 	tier = 2,
     effect = { speed = {bonus = 0.06}, productivity = {bonus = 0.06} },
 	limitation = {},
-	limitation_message_key = "apple-tree"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -398,7 +503,7 @@ ITEM {
 	tier = 3,
     effect = { speed = {bonus = 0.09}, productivity = {bonus = 0.09} },
 	limitation = {},
-	limitation_message_key = "apple-tree"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -413,7 +518,7 @@ ITEM {
 	tier = 4,
     effect = { speed = {bonus = 0.12}, productivity = {bonus = 0.12} },
 	limitation = {},
-	limitation_message_key = "apple-tree"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -428,7 +533,7 @@ ITEM {
 	tier = 5,
     effect = { speed = {bonus = 0.15}, productivity = {bonus = 0.15} },
 	limitation = {},
-	limitation_message_key = "apple-tree"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -473,7 +578,7 @@ ITEM {
 	tier = 1,
     effect = { speed = {bonus = 0.03}, productivity = {bonus = 0.03} },
 	limitation = {},
-	limitation_message_key = "olive-tree"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -488,7 +593,7 @@ ITEM {
 	tier = 2,
     effect = { speed = {bonus = 0.06}, productivity = {bonus = 0.06} },
 	limitation = {},
-	limitation_message_key = "olive-tree"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -503,7 +608,7 @@ ITEM {
 	tier = 3,
     effect = { speed = {bonus = 0.09}, productivity = {bonus = 0.09} },
 	limitation = {},
-	limitation_message_key = "olive-tree"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -518,7 +623,7 @@ ITEM {
 	tier = 4,
     effect = { speed = {bonus = 0.12}, productivity = {bonus = 0.12} },
 	limitation = {},
-	limitation_message_key = "olive-tree"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -533,7 +638,7 @@ ITEM {
 	tier = 5,
     effect = { speed = {bonus = 0.15}, productivity = {bonus = 0.15} },
 	limitation = {},
-	limitation_message_key = "olive-tree"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -628,7 +733,7 @@ ITEM {
 	tier = 1,
     effect = { productivity = {bonus = 0.04} },
 	limitation = {},
-	limitation_message_key = "chicken"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -643,7 +748,7 @@ ITEM {
 	tier = 1,
     effect = { productivity = {bonus = 0.04} },
 	limitation = {},
-	limitation_message_key = "chicken"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -658,7 +763,7 @@ ITEM {
 	tier = 2,
     effect = { productivity = {bonus = 0.06} },
 	limitation = {},
-	limitation_message_key = "chicken"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -673,7 +778,7 @@ ITEM {
 	tier = 3,
     effect = { productivity = {bonus = 0.08} },
 	limitation = {},
-	limitation_message_key = "chicken"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -688,7 +793,7 @@ ITEM {
 	tier = 4,
     effect = { productivity = {bonus = 0.10} },
 	limitation = {},
-	limitation_message_key = "chicken"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -703,7 +808,7 @@ ITEM {
 	tier = 5,
     effect = { productivity = {bonus = 0.12} },
 	limitation = {},
-	limitation_message_key = "chicken"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -758,7 +863,7 @@ ITEM {
 	tier = 1,
     effect = { speed = {bonus = -0.04}, productivity = {bonus = 0.06} },
 	limitation = {},
-	limitation_message_key = "sheep"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -773,7 +878,7 @@ ITEM {
 	tier = 2,
     effect = { speed = {bonus = -0.06}, productivity = {bonus = 0.09} },
 	limitation = {},
-	limitation_message_key = "sheep"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -788,7 +893,7 @@ ITEM {
 	tier = 3,
     effect = { speed = {bonus = -0.08}, productivity = {bonus = 0.12} },
 	limitation = {},
-	limitation_message_key = "sheep"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -803,7 +908,7 @@ ITEM {
 	tier = 4,
     effect = { speed = {bonus = -0.1}, productivity = {bonus = 0.15} },
 	limitation = {},
-	limitation_message_key = "sheep"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -818,7 +923,7 @@ ITEM {
 	tier = 5,
     effect = { speed = {bonus = -0.12}, productivity = {bonus = 0.18} },
 	limitation = {},
-	limitation_message_key = "sheep"
+	limitation_message_key = "item-not-allowed-in-this-container-item"
 }
 
 ITEM {
@@ -838,6 +943,206 @@ ITEM {
     icon_size = 64,
     subgroup = "aoe-fauna-sheep",
     order = "d",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "aoe-calf",
+    icon = "__aoe__/img/items/calf.png",
+    icon_size = 64,
+    subgroup = "aoe-fauna-cow",
+    order = "a",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "aoe-ox",
+    icon = "__aoe__/img/items/ox.png",
+    icon_size = 64,
+    subgroup = "aoe-fauna-cow",
+    order = "b",
+    stack_size = 200
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-ox-module-1",
+    icons = { { icon = "__aoe__/img/items/ox.png" }, { icon = "__aoe__/img/items/rarity/common.png" } },
+    icon_size = 64,
+    subgroup = "aoe-fauna-cow",
+    order = "b1",
+    stack_size = 20,
+	category = "aoe-module-ox",
+	tier = 1,
+    effect = { speed = {bonus = 0.2} },
+	limitation = {},
+	limitation_message_key = "item-not-allowed-in-this-container-item"
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-ox-module-2",
+    icons = { { icon = "__aoe__/img/items/ox.png" }, { icon = "__aoe__/img/items/rarity/uncommon.png" } },
+    icon_size = 64,
+    subgroup = "aoe-fauna-cow",
+    order = "b2",
+    stack_size = 20,
+	category = "aoe-module-ox",
+	tier = 2,
+    effect = { speed = {bonus = 0.35} },
+	limitation = {},
+	limitation_message_key = "item-not-allowed-in-this-container-item"
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-ox-module-3",
+    icons = { { icon = "__aoe__/img/items/ox.png" }, { icon = "__aoe__/img/items/rarity/rare.png" } },
+    icon_size = 64,
+    subgroup = "aoe-fauna-cow",
+    order = "b3",
+    stack_size = 20,
+	category = "aoe-module-ox",
+	tier = 3,
+    effect = { speed = {bonus = 0.5} },
+	limitation = {},
+	limitation_message_key = "item-not-allowed-in-this-container-item"
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-ox-module-4",
+    icons = { { icon = "__aoe__/img/items/ox.png" }, { icon = "__aoe__/img/items/rarity/epic.png" } },
+    icon_size = 64,
+    subgroup = "aoe-fauna-cow",
+    order = "b4",
+    stack_size = 20,
+	category = "aoe-module-ox",
+	tier = 4,
+    effect = { speed = {bonus = 0.65} },
+	limitation = {},
+	limitation_message_key = "item-not-allowed-in-this-container-item"
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-ox-module-5",
+    icons = { { icon = "__aoe__/img/items/ox.png" }, { icon = "__aoe__/img/items/rarity/legendary.png" } },
+    icon_size = 64,
+    subgroup = "aoe-fauna-cow",
+    order = "b5",
+    stack_size = 20,
+	category = "aoe-module-ox",
+	tier = 5,
+    effect = { speed = {bonus = 0.8} },
+	limitation = {},
+	limitation_message_key = "item-not-allowed-in-this-container-item"
+}
+
+ITEM {
+    type = "item",
+    name = "aoe-cow",
+    icon = "__aoe__/img/items/cow.png",
+    icon_size = 64,
+    subgroup = "aoe-fauna-cow",
+    order = "c",
+    stack_size = 200
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-cow-module-1",
+    icons = { { icon = "__aoe__/img/items/cow.png" }, { icon = "__aoe__/img/items/rarity/common.png" } },
+    icon_size = 64,
+    subgroup = "aoe-fauna-cow",
+    order = "c1",
+    stack_size = 20,
+	category = "aoe-module-cow",
+	tier = 1,
+    effect = { speed = {bonus = -0.04}, productivity = {bonus = 0.03} },
+	limitation = {},
+	limitation_message_key = "item-not-allowed-in-this-container-item"
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-cow-module-2",
+    icons = { { icon = "__aoe__/img/items/cow.png" }, { icon = "__aoe__/img/items/rarity/uncommon.png" } },
+    icon_size = 64,
+    subgroup = "aoe-fauna-cow",
+    order = "c2",
+    stack_size = 20,
+	category = "aoe-module-cow",
+	tier = 2,
+    effect = { speed = {bonus = -0.08}, productivity = {bonus = 0.06} },
+	limitation = {},
+	limitation_message_key = "item-not-allowed-in-this-container-item"
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-cow-module-3",
+    icons = { { icon = "__aoe__/img/items/cow.png" }, { icon = "__aoe__/img/items/rarity/rare.png" } },
+    icon_size = 64,
+    subgroup = "aoe-fauna-cow",
+    order = "c3",
+    stack_size = 20,
+	category = "aoe-module-cow",
+	tier = 3,
+    effect = { speed = {bonus = -0.12}, productivity = {bonus = 0.09} },
+	limitation = {},
+	limitation_message_key = "item-not-allowed-in-this-container-item"
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-cow-module-4",
+    icons = { { icon = "__aoe__/img/items/cow.png" }, { icon = "__aoe__/img/items/rarity/epic.png" } },
+    icon_size = 64,
+    subgroup = "aoe-fauna-cow",
+    order = "c4",
+    stack_size = 20,
+	category = "aoe-module-cow",
+	tier = 4,
+    effect = { speed = {bonus = -0.16}, productivity = {bonus = 0.12} },
+	limitation = {},
+	limitation_message_key = "item-not-allowed-in-this-container-item"
+}
+
+ITEM {
+    type = "module",
+    name = "aoe-cow-module-5",
+    icons = { { icon = "__aoe__/img/items/cow.png" }, { icon = "__aoe__/img/items/rarity/legendary.png" } },
+    icon_size = 64,
+    subgroup = "aoe-fauna-cow",
+    order = "c5",
+    stack_size = 20,
+	category = "aoe-module-cow",
+	tier = 5,
+    effect = { speed = {bonus = -0.2}, productivity = {bonus = 0.15} },
+	limitation = {},
+	limitation_message_key = "item-not-allowed-in-this-container-item"
+}
+
+ITEM {
+    type = "item",
+    name = "aoe-hide",
+    icon = "__aoe__/img/items/hide.png",
+    icon_size = 64,
+    subgroup = "aoe-fauna-cow",
+    order = "d",
+    stack_size = 200
+}
+
+ITEM {
+    type = "item",
+    name = "aoe-leather",
+    icon = "__aoe__/img/items/leather.png",
+    icon_size = 64,
+    subgroup = "aoe-fauna-cow",
+    order = "e",
     stack_size = 200
 }
 
