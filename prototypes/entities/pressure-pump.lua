@@ -1,4 +1,4 @@
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-pressure-pump",
     icon = "__aoe__/img/entities/pressure-pump.png",
@@ -7,9 +7,9 @@ ITEM {
     order = "n",
     place_result = "aoe-pressure-pump",
     stack_size = 25,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "assembling-machine",
     name = "aoe-pressure-pump",
 	crafting_categories = {"aoe-category-pumping"},
@@ -56,4 +56,4 @@ ENTITY {
       },
       off_when_no_fluid_recipe = true
     }
-}
+}})

@@ -1,4 +1,4 @@
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-freezer",
     icon = "__aoe__/img/entities/freezer.png",
@@ -7,9 +7,9 @@ ITEM {
     order = "l",
     place_result = "aoe-freezer",
     stack_size = 25,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "assembling-machine",
     name = "aoe-freezer",
 	crafting_categories = {"aoe-category-freezing"},
@@ -56,4 +56,4 @@ ENTITY {
       },
       off_when_no_fluid_recipe = true
     }
-}
+}})

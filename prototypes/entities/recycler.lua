@@ -1,4 +1,4 @@
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-recycler",
     icon = "__aoe__/img/entities/recycler.png",
@@ -7,9 +7,9 @@ ITEM {
     order = "a",
     place_result = "aoe-recycler",
     stack_size = 25,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "furnace",
     name = "aoe-recycler",
 	crafting_categories = {"aoe-category-recycling"},
@@ -41,4 +41,4 @@ ENTITY {
         }
       }
     }
-}
+}})

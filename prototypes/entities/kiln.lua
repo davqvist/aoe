@@ -1,7 +1,7 @@
 require ("__base__/prototypes/entity/pipecovers")
 local sounds = require("__base__/prototypes/entity/sounds")
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-kiln",
     icon = "__aoe__/img/entities/kiln.png",
@@ -10,9 +10,9 @@ ITEM {
     order = "c",
     place_result = "aoe-kiln",
     stack_size = 25,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "assembling-machine",
     name = "aoe-kiln",
     icon = "__aoe__/img/entities/kiln.png",
@@ -114,4 +114,4 @@ ENTITY {
       },
       off_when_no_fluid_recipe = true
     }
-}
+}})

@@ -1,4 +1,4 @@
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-wind-turbine",
     icon = "__aoe__/img/entities/wind-turbine.png",
@@ -7,9 +7,9 @@ ITEM {
     order = "c",
     place_result = "aoe-wind-turbine",
     stack_size = 25,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "assembling-machine",
     name = "aoe-wind-turbine",
 	crafting_categories = {"aoe-category-rotor"},
@@ -39,9 +39,9 @@ ENTITY {
         }
       }
     }
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "electric-energy-interface",
     name = "aoe-wind-turbine-kinetic-generator",
 	energy_source = {
@@ -76,4 +76,4 @@ ENTITY {
         }
       }
     }
-}
+}})

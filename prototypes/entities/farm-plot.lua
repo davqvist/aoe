@@ -1,4 +1,4 @@
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-farm-plot",
     icon = "__aoe__/img/entities/farm-plot.png",
@@ -7,9 +7,9 @@ ITEM {
     order = "b",
     place_result = "aoe-farm-plot",
     stack_size = 25,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "assembling-machine",
     name = "aoe-farm-plot",
 	crafting_categories = {"aoe-category-farm-plot-flax","aoe-category-farm-plot-tea","aoe-category-farm-plot-maize","aoe-category-farm-plot-soybean","aoe-category-farm-plot-coffee","aoe-category-farm-plot-spruce-tree","aoe-category-farm-plot-rubber-tree","aoe-category-farm-plot-apple-tree","aoe-category-farm-plot-olive-tree","aoe-category-farm-plot-rest"},
@@ -48,4 +48,4 @@ ENTITY {
       },
       off_when_no_fluid_recipe = true
     }
-}
+}})

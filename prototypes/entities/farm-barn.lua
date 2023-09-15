@@ -1,17 +1,17 @@
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-farm-barn",
     icon = "__aoe__/img/entities/barn.png",
     icon_size = 256,
-    subgroup = "aoe-fauna-farms",
-    order = "c",
+    subgroup = "aoe-fauna-buildings",
+    order = "b",
     place_result = "aoe-farm-barn",
     stack_size = 25,
-}
+}})
 
-ENTITY {
-    type = "assembling-machine",
-    name = "aoe-farm-barn",
+data:extend({{
+  type = "assembling-machine",
+  name = "aoe-farm-barn",
 	crafting_categories = {"aoe-category-farm-barn-sheep","aoe-category-farm-barn-cow"},
 	crafting_speed = 0.5,
 	energy_source = { type = "void" },
@@ -55,4 +55,4 @@ ENTITY {
       },
       off_when_no_fluid_recipe = true
     }
-}
+}})

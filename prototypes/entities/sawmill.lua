@@ -1,4 +1,4 @@
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-burner-sawmill",
     icon = "__aoe__/img/entities/sawmill.png",
@@ -7,9 +7,9 @@ ITEM {
     order = "d",
     place_result = "aoe-burner-sawmill",
     stack_size = 25,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "assembling-machine",
     name = "aoe-burner-sawmill",
 	crafting_categories = {"aoe-category-sawing"},
@@ -50,9 +50,9 @@ ENTITY {
         }
       }
     }
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-sawmill",
     icon = "__aoe__/img/entities/sawmill.png",
@@ -61,9 +61,9 @@ ITEM {
     order = "e",
     place_result = "aoe-sawmill",
     stack_size = 25,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "assembling-machine",
     name = "aoe-sawmill",
 	crafting_categories = {"aoe-category-sawing"},
@@ -98,4 +98,4 @@ ENTITY {
         }
       }
     }
-}
+}})

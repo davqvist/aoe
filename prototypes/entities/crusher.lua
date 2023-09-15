@@ -1,4 +1,4 @@
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-burner-crusher",
     icon = "__aoe__/img/entities/crusher.png",
@@ -7,9 +7,9 @@ ITEM {
     order = "g",
     place_result = "aoe-burner-crusher",
     stack_size = 25,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "assembling-machine",
     name = "aoe-burner-crusher",
 	crafting_categories = {"aoe-category-crushing"},
@@ -50,9 +50,9 @@ ENTITY {
         }
       }
     }
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-crusher",
     icon = "__aoe__/img/entities/crusher.png",
@@ -61,9 +61,9 @@ ITEM {
     order = "h",
     place_result = "aoe-crusher",
     stack_size = 25,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "assembling-machine",
     name = "aoe-crusher",
 	crafting_categories = {"aoe-category-crushing"},
@@ -98,4 +98,4 @@ ENTITY {
         }
       }
     }
-}
+}})

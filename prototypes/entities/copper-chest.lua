@@ -2,7 +2,7 @@ require ("__base__/prototypes/entity/pipecovers")
 require ("circuit-connector-sprites")
 local sounds = require("__base__/prototypes/entity/sounds")
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-copper-chest",
     icon = "__aoe__/img/entities/copper-chest.png",
@@ -11,9 +11,9 @@ ITEM {
     order = "e",
     place_result = "aoe-copper-chest",
     stack_size = 50,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "container",
     name = "aoe-copper-chest",
 	icon = "__aoe__/img/entities/copper-chest.png",
@@ -43,4 +43,4 @@ ENTITY {
     circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
     circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance
-}
+}})

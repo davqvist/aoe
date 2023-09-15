@@ -1,4 +1,4 @@
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-sedimenter",
     icon = "__aoe__/img/entities/sedimenter.png",
@@ -7,9 +7,9 @@ ITEM {
     order = "k",
     place_result = "aoe-sedimenter",
     stack_size = 25,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "assembling-machine",
     name = "aoe-sedimenter",
 	crafting_categories = {"aoe-category-sedimenting"},
@@ -44,4 +44,4 @@ ENTITY {
         }
       }
     }
-}
+}})

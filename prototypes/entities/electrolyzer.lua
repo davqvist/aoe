@@ -1,4 +1,4 @@
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-electrolyzer",
     icon = "__aoe__/img/entities/electrolyzer.png",
@@ -7,9 +7,9 @@ ITEM {
     order = "m",
     place_result = "aoe-electrolyzer",
     stack_size = 25,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "assembling-machine",
     name = "aoe-electrolyzer",
 	crafting_categories = {"aoe-category-electrolyzing"},
@@ -70,4 +70,4 @@ ENTITY {
       },
       off_when_no_fluid_recipe = true
     }
-}
+}})

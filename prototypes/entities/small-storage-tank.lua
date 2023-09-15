@@ -2,7 +2,7 @@ require ("__base__/prototypes/entity/pipecovers")
 require ("circuit-connector-sprites")
 local sounds = require("__base__/prototypes/entity/sounds")
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-small-storage-tank",
     icon = "__aoe__/img/entities/small-storage-tank.png",
@@ -11,9 +11,9 @@ ITEM {
     order = "g",
     place_result = "aoe-small-storage-tank",
     stack_size = 50
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "storage-tank",
     name = "aoe-small-storage-tank",
     icon = "__aoe__/img/entities/small-storage-tank.png",
@@ -49,10 +49,34 @@ ENTITY {
             scale = 0.5
         }
       },
-      fluid_background = ENTITY.Sprites.empty_sprite(),
-	  window_background = ENTITY.Sprites.empty_sprite(),
-	  flow_sprite = ENTITY.Sprites.empty_sprite(),
-	  gas_flow = ENTITY.Sprites.empty_animation()
+      fluid_background = {
+        filename = '__core__/graphics/empty.png',
+        priority = 'extra-high',
+        width = 1,
+        height = 1
+      },
+	    window_background = {
+        filename = '__core__/graphics/empty.png',
+        priority = 'extra-high',
+        width = 1,
+        height = 1
+      },
+	    flow_sprite = {
+        filename = '__core__/graphics/empty.png',
+        priority = 'extra-high',
+        width = 1,
+        height = 1
+      },
+	    gas_flow = {
+        filename = '__core__/graphics/empty.png',
+        width = 1,
+        height = 1,
+        line_length = 1,
+        frame_count = 1,
+        shift = { 0, 0 },
+        animation_speed = 1,
+        direction_count = 1
+      }
     },
     flow_length_in_ticks = 360,
     vehicle_impact_sound = sounds.generic_impact,
@@ -73,4 +97,4 @@ ENTITY {
     circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
     circuit_wire_max_distance = 9,
 	window_bounding_box = {{-0.0, 0.0}, {0.0, 0.0}}
-  }
+}})

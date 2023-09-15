@@ -1,4 +1,4 @@
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-melter",
     icon = "__aoe__/img/entities/melter.png",
@@ -7,9 +7,9 @@ ITEM {
     order = "i",
     place_result = "aoe-melter",
     stack_size = 25,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "assembling-machine",
     name = "aoe-melter",
 	crafting_categories = {"aoe-category-melting"},
@@ -56,4 +56,4 @@ ENTITY {
       },
       off_when_no_fluid_recipe = true
     }
-}
+}})

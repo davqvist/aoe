@@ -1,4 +1,4 @@
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-slaughterhouse",
     icon = "__aoe__/img/entities/slaughterhouse.png",
@@ -7,9 +7,9 @@ ITEM {
     order = "a",
     place_result = "aoe-slaughterhouse",
     stack_size = 25,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "assembling-machine",
     name = "aoe-slaughterhouse",
 	crafting_categories = {"aoe-category-slaughtering"},
@@ -55,4 +55,4 @@ ENTITY {
       },
       off_when_no_fluid_recipe = true
     }
-}
+}})

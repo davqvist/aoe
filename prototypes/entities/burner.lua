@@ -1,4 +1,4 @@
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-burner",
     icon = "__aoe__/img/entities/burner.png",
@@ -7,9 +7,9 @@ ITEM {
     order = "b",
     place_result = "aoe-burner",
     stack_size = 25,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "furnace",
     name = "aoe-burner",
 	crafting_categories = {"aoe-category-burning"},
@@ -32,7 +32,6 @@ ENTITY {
     },
 	energy_usage = "90kW",
 	allowed_effects = nil,
-	allowed_effects = nil,
 	icon = "__aoe__/img/entities/burner.png",
 	icon_size = 256,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -53,4 +52,4 @@ ENTITY {
         }
       }
     }
-}
+}})

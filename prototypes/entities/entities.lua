@@ -1,5 +1,4 @@
 require("__aoe__/prototypes/entities/vanilla")
-require("__aoe__/prototypes/entities/temp")
 require("__aoe__/prototypes/entities/big-wooden-chest")
 require("__aoe__/prototypes/entities/burner")
 require("__aoe__/prototypes/entities/burner-lab")

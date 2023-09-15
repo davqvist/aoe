@@ -1,7 +1,7 @@
 local sounds = require("__base__/prototypes/entity/sounds")
 local hit_effects = require ("__base__/prototypes/entity/hit-effects")
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-burner-lab",
     icon = "__aoe__/img/entities/burner-lab-icon.png",
@@ -10,9 +10,9 @@ ITEM {
     order = "k",
     place_result = "aoe-burner-lab",
     stack_size = 25,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "lab",
     name = "aoe-burner-lab",
     icon = "__aoe__/img/entities/burner-lab-icon.png",
@@ -135,4 +135,4 @@ ENTITY {
     energy_usage = "60kW",
     researching_speed = 0.5,
     inputs = {"aoe-science-01","aoe-science-02"}
-  }
+}})

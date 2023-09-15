@@ -17,7 +17,7 @@ local groups = {
 
 for _, type in pairs(groups) do
     for _, item in pairs(data.raw[type]) do
-		RECIPE {
+		data:extend({{
 			name = 'aoe-burning-' .. item.name .. '-recipe',
 			type = 'recipe',
 			enabled = true,
@@ -34,6 +34,6 @@ for _, type in pairs(groups) do
 			subgroup = 'aoe-other',
 			icons = get_icon( item ),
 			icon_size = 64
-		}
+}})
 	end
 end

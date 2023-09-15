@@ -9,7 +9,7 @@ for _, recipe in pairs(data.raw.recipe) do
 	  for _, part in pairs(parts) do 
 	    if ingredient.name == part then
 		  if recipe.results and recipe.results[1] then
-			  RECIPE {
+			  data:extend({{
 				name = 'aoe-recycling-' .. recipe.results[1].name .. '-recipe',
 				type = 'recipe',
 				enabled = true,
@@ -25,7 +25,7 @@ for _, recipe in pairs(data.raw.recipe) do
 				},
 				energy_required = 0.2,
 				category = 'aoe-category-recycling'
-			  }
+}})
 		     break
 		  end
 		end
@@ -34,21 +34,11 @@ for _, recipe in pairs(data.raw.recipe) do
   end
 end
 
-local modules = {
-	"aoe-apple-tree",
-	"aoe-coffee-plant",
-	"aoe-flax",
-	"aoe-kelp",
-	"aoe-maize",
-	"aoe-olive-tree",
-	"aoe-spruce-tree",
-	"aoe-tea-leaves"
-}
-
 for _, m in pairs(data.raw.module) do
-  for _, mod in pairs(modules) do 
-    if m.name:find("^" .. mod:gsub('%-', '%%-')) ~= nil then 
-	  RECIPE {
+  if string.sub(m.name,1,string.len("aoe-"))=="aoe-" then 
+	local res = m.name:gsub('%-module.*', '')
+	if res == 'aoe-fish' then res = 'raw-fish' end
+	  data:extend({{
 		name = 'aoe-recycling-' .. m.name .. '-recipe',
 		type = 'recipe',
 		enabled = true,
@@ -60,32 +50,10 @@ for _, m in pairs(data.raw.module) do
 			{type = 'item', name = m.name, amount = 1}
 		},
 		results = {
-			{type = 'item', name = mod, amount=1}
+			{type = 'item', name = res, amount=1}
 		},
 		energy_required = 0.2,
 		category = 'aoe-category-recycling'
-	  }
-	  break
-	end
+}})
   end
-end
-
-for nr=1,5 do
-	RECIPE {
-		name = 'aoe-recycling-aoe-fish-module-' .. nr .. '-recipe',
-		type = 'recipe',
-		enabled = true,
-		hide_from_player_crafting = true,
-		allow_as_intermediate = false,
-		allow_intermediates = false,
-		always_show_products = true,
-		ingredients = {
-			{type = 'item', name = 'aoe-fish-module-' .. nr, amount = 1}
-		},
-		results = {
-			{type = 'item', name = 'raw-fish', amount=1}
-		},
-		energy_required = 0.2,
-		category = 'aoe-category-recycling'
-	  }
 end

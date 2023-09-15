@@ -1,4 +1,4 @@
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-farm-reservoir",
     icon = "__aoe__/img/entities/reservoir.png",
@@ -7,9 +7,9 @@ ITEM {
     order = "a",
     place_result = "aoe-farm-reservoir",
     stack_size = 25,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "assembling-machine",
     name = "aoe-farm-reservoir",
 	crafting_categories = {"aoe-category-farm-reservoir-kelp", "aoe-category-farm-reservoir-fish"},
@@ -48,4 +48,4 @@ ENTITY {
       },
       off_when_no_fluid_recipe = true
     }
-}
+}})

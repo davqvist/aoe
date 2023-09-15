@@ -1,4 +1,22 @@
-local table = require('__stdlib__/stdlib/utils/table')
+function deep_copy(object)
+    local lookup_table = {}
+
+    local function _copy(inner)
+        if type(inner) ~= 'table' then
+            return inner
+        elseif inner.__self then
+            return inner
+        elseif lookup_table[inner] then
+            return lookup_table[inner]
+        end
+        local new_table = {}
+        lookup_table[inner] = new_table
+        for index, value in pairs(inner) do new_table[_copy(index)] = _copy(value) end
+        return setmetatable(new_table, getmetatable(inner))
+    end
+
+    return _copy(object)
+end
 
 local small_furnaces = {
 	"stone-furnace",
@@ -46,7 +64,7 @@ local furnaces_to_change = {
 }
 
 for _, furnace in pairs(furnaces_to_change) do
-	local furnacecopy = table.deep_copy( data.raw.furnace[furnace] )
+	local furnacecopy = deep_copy( data.raw.furnace[furnace] )
 	furnacecopy.type = "assembling-machine"
     furnacecopy.source_inventory_size = nil
 	furnacecopy.selection_box = {{-1.5, -1.5}, {1.5, 1.5}}

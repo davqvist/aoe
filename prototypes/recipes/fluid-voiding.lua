@@ -8,23 +8,9 @@ local function has_value (tab, val)
     return false
 end
 
-local gasses = {
-	"steam",
-	"aoe-air",
-	"aoe-carbon-dioxide",
-	"aoe-chlorine",
-	"aoe-cold-air",
-	"aoe-hydrogen",
-	"aoe-nitrogen",
-	"aoe-oxygen",
-	"aoe-pressure",
-	"aoe-vacuum",
-	"aoe-warm-air"
-}
-
 for _, fluid in pairs(data.raw.fluid) do
-	if has_value( gasses, fluid.name ) then
-		RECIPE {
+	if fluid.gas ~= nil and fluid.gas then
+		data:extend({{
 			name = 'aoe-venting-' .. fluid.name .. '-recipe',
 			type = 'recipe',
 			enabled = true,
@@ -41,9 +27,9 @@ for _, fluid in pairs(data.raw.fluid) do
 			subgroup = 'aoe-other',
 			icons = get_icon( fluid ),
 			icon_size = 64
-		}
+}})
 	else
-		RECIPE {
+		data:extend({{
 			name = 'aoe-sinking-' .. fluid.name .. '-recipe',
 			type = 'recipe',
 			enabled = true,
@@ -60,6 +46,6 @@ for _, fluid in pairs(data.raw.fluid) do
 			subgroup = 'aoe-other',
 			icons = get_icon( fluid ),
 			icon_size = 64
-		}
+}})
 	end
 end

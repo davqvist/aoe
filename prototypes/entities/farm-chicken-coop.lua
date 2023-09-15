@@ -1,17 +1,17 @@
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-farm-chicken-coop",
     icon = "__aoe__/img/entities/chicken-coop.png",
     icon_size = 192,
-    subgroup = "aoe-fauna-farms",
+    subgroup = "aoe-fauna-buildings",
     order = "b",
     place_result = "aoe-farm-chicken-coop",
     stack_size = 25,
-}
+}})
 
-ENTITY {
-    type = "assembling-machine",
-    name = "aoe-farm-chicken-coop",
+data:extend({{
+  type = "assembling-machine",
+  name = "aoe-farm-chicken-coop",
 	crafting_categories = {"aoe-category-farm-chicken-coop"},
 	crafting_speed = 0.5,
 	energy_source = { type = "void" },
@@ -48,4 +48,4 @@ ENTITY {
       },
       off_when_no_fluid_recipe = true
     }
-}
+}})

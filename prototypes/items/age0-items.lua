@@ -1,4 +1,4 @@
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-tree-seedling",
     icon = "__aoe__/img/items/tree-seedling.png",
@@ -6,9 +6,9 @@ ITEM {
     subgroup = "aoe-flora-wood",
     order = "a",
     stack_size = 100
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-log",
     icon = "__aoe__/img/items/log.png",
@@ -16,9 +16,9 @@ ITEM {
     subgroup = "aoe-flora-wood",
     order = "c",
     stack_size = 200
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-leaves",
     icon = "__aoe__/img/items/leaves.png",
@@ -26,13 +26,13 @@ ITEM {
     subgroup = "aoe-flora-wood",
     order = "d",
     stack_size = 500
-}
+}})
 
 data.raw['item']['wood'].subgroup = "aoe-flora-wood"
 data.raw['item']['wood'].order = "e"
 data.raw['item']['wood'].stack_size = 200
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-charcoal",
     icon = "__aoe__/img/items/charcoal.png",
@@ -42,9 +42,9 @@ ITEM {
     stack_size = 200,
 	fuel_value = "4MJ",
 	fuel_category = "chemical"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-wood-pulp",
     icon = "__aoe__/img/items/wood-pulp.png",
@@ -52,9 +52,9 @@ ITEM {
     subgroup = "aoe-flora-wood",
     order = "g",
     stack_size = 500
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-resin",
     icon = "__aoe__/img/items/resin.png",
@@ -62,13 +62,13 @@ ITEM {
     subgroup = "aoe-flora-wood",
     order = "h",
     stack_size = 200
-}
+}})
 
 data.raw['item']['iron-ore'].subgroup = "aoe-metals-iron"
 data.raw['item']['iron-ore'].order = "a"
 data.raw['item']['iron-ore'].stack_size = 200
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-iron-dust",
     icon = "__aoe__/img/items/iron-dust.png",
@@ -76,7 +76,7 @@ ITEM {
     subgroup = "aoe-metals-iron",
     order = "b",
     stack_size = 200
-}
+}})
 
 data.raw['item']['iron-plate'].subgroup = "aoe-metals-iron"
 data.raw['item']['iron-plate'].order = "c"
@@ -102,7 +102,7 @@ data.raw['item']['stone-wall'].subgroup = "aoe-construction"
 data.raw['item']['stone-wall'].order = "c"
 data.raw['item']['stone-wall'].stack_size = 200
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-gravel",
     icon = "__aoe__/img/items/gravel.png",
@@ -110,9 +110,9 @@ ITEM {
     subgroup = "aoe-stone",
     order = "e",
     stack_size = 200
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-sand",
     icon = "__aoe__/img/items/sand.png",
@@ -120,9 +120,9 @@ ITEM {
     subgroup = "aoe-stone",
     order = "f",
     stack_size = 200
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-glass",
     icon = "__aoe__/img/items/glass.png",
@@ -130,9 +130,9 @@ ITEM {
     subgroup = "aoe-glass",
     order = "c",
     stack_size = 200
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-soil",
     icon = "__aoe__/img/items/soil.png",
@@ -140,9 +140,9 @@ ITEM {
     subgroup = "aoe-dirt",
     order = "a",
     stack_size = 500
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-flask",
     icon = "__base__/graphics/icons/space-science-pack.png",
@@ -150,9 +150,9 @@ ITEM {
     subgroup = "aoe-science-packs",
     order = "a",
     stack_size = 200
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-small-motor",
     icon = "__aoe__/img/items/small-motor.png",
@@ -160,4 +160,4 @@ ITEM {
     subgroup = "aoe-parts",
     order = "a",
     stack_size = 200
-}
+}})

@@ -1,4 +1,4 @@
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-burner-squeezer",
     icon = "__aoe__/img/entities/squeezer.png",
@@ -7,9 +7,9 @@ ITEM {
     order = "a",
     place_result = "aoe-burner-squeezer",
     stack_size = 25,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "assembling-machine",
     name = "aoe-burner-squeezer",
 	crafting_categories = {"aoe-category-squeezing"},
@@ -49,10 +49,22 @@ ENTITY {
 		  scale = 0.8333333
         }
       }
+    },
+	fluid_boxes =
+    {
+      {
+        production_type = "output",
+        pipe_picture = assembler2pipepictures(),
+        pipe_covers = pipecoverspictures(),
+        base_area = 10,
+        base_level = 1,
+        pipe_connections = {{ type="output", position = {0, -3} }}
+      },
+      off_when_no_fluid_recipe = true
     }
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-squeezer",
     icon = "__aoe__/img/entities/squeezer.png",
@@ -61,9 +73,9 @@ ITEM {
     order = "b",
     place_result = "aoe-squeezer",
     stack_size = 25,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "assembling-machine",
     name = "aoe-squeezer",
 	crafting_categories = {"aoe-category-squeezing"},
@@ -110,4 +122,4 @@ ENTITY {
       },
       off_when_no_fluid_recipe = true
     }
-}
+}})

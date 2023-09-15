@@ -1,4 +1,4 @@
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-gas-vent",
     icon = "__aoe__/img/entities/gas-vent.png",
@@ -7,9 +7,9 @@ ITEM {
     order = "c",
     place_result = "aoe-gas-vent",
     stack_size = 25,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "furnace",
     name = "aoe-gas-vent",
 	crafting_categories = {"aoe-category-venting"},
@@ -49,4 +49,4 @@ ENTITY {
       },
       off_when_no_fluid_recipe = false
     }
-}
+}})

@@ -1,5 +1,3 @@
-require('__stdlib__/stdlib/data/data').Util.create_data_globals()
-
 require("__base__/prototypes/entity/pipecovers")
 require("__base__/prototypes/entity/assemblerpipes")
 

@@ -1,4 +1,4 @@
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-torch",
     icon = "__aoe__/img/entities/torch.png",
@@ -7,9 +7,9 @@ ITEM {
     order = "a",
     place_result = "aoe-torch",
     stack_size = 100,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "lamp",
     name = "aoe-torch",
 	icon = "__aoe__/img/entities/torch.png",
@@ -43,4 +43,4 @@ ENTITY {
       frame_count = 1,
       scale = 0.25
     }
-  }
+}})

@@ -1,4 +1,4 @@
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-high-pressure-heater",
     icon = "__aoe__/img/entities/high-pressure-heater.png",
@@ -7,9 +7,9 @@ ITEM {
     order = "j",
     place_result = "aoe-high-pressure-heater",
     stack_size = 25,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "assembling-machine",
     name = "aoe-high-pressure-heater",
 	crafting_categories = {"aoe-category-high-pressure-heating"},
@@ -56,4 +56,4 @@ ENTITY {
       },
       off_when_no_fluid_recipe = true
     }
-}
+}})

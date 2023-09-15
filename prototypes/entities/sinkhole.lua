@@ -1,4 +1,4 @@
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-sinkhole",
     icon = "__aoe__/img/entities/sinkhole.png",
@@ -7,9 +7,9 @@ ITEM {
     order = "d",
     place_result = "aoe-sinkhole",
     stack_size = 25,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "furnace",
     name = "aoe-sinkhole",
 	crafting_categories = {"aoe-category-sinking"},
@@ -49,4 +49,4 @@ ENTITY {
       },
       off_when_no_fluid_recipe = false
     }
-}
+}})

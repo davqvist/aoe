@@ -1,4 +1,4 @@
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-forestry",
     icon = "__aoe__/img/entities/forestry.png",
@@ -7,9 +7,9 @@ ITEM {
     order = "c",
     place_result = "aoe-forestry",
     stack_size = 25,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "assembling-machine",
     name = "aoe-forestry",
 	crafting_categories = {"aoe-category-harvesting"},
@@ -59,4 +59,4 @@ ENTITY {
       },
       off_when_no_fluid_recipe = true
     }
-}
+}})

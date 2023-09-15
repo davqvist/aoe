@@ -1,4 +1,4 @@
-ITEM {
+data:extend({{
     type = "tool",
     name = "aoe-science-03",
     icon = "__aoe__/img/items/science-pack-3.png",
@@ -9,9 +9,9 @@ ITEM {
     durability = 1,
     durability_description_key = "description.science-pack-remaining-amount-key",
     durability_description_value = "description.science-pack-remaining-amount-value"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-maize-kernels",
     icon = "__aoe__/img/items/maize-kernels.png",
@@ -19,9 +19,9 @@ ITEM {
     subgroup = "aoe-flora-maize",
     order = "a",
     stack_size = 100
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-maize",
     icon = "__aoe__/img/items/maize.png",
@@ -29,9 +29,9 @@ ITEM {
     subgroup = "aoe-flora-maize",
     order = "b",
     stack_size = 200
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-maize-module-1a",
     icons = { { icon = "__aoe__/img/items/maize.png" }, { icon = "__aoe__/img/items/rarity/common.png" }, { icon = "__aoe__/img/items/rarity/speed.png" } },
@@ -44,9 +44,9 @@ ITEM {
     effect = { speed = {bonus = 0.25} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-maize-module-1b",
     icons = { { icon = "__aoe__/img/items/maize.png" }, { icon = "__aoe__/img/items/rarity/common.png" }, { icon = "__aoe__/img/items/rarity/production.png" } },
@@ -59,9 +59,9 @@ ITEM {
     effect = { speed = {bonus = -0.12}, productivity = {bonus = 0.15} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-maize-module-2a",
     icons = { { icon = "__aoe__/img/items/maize.png" }, { icon = "__aoe__/img/items/rarity/uncommon.png" }, { icon = "__aoe__/img/items/rarity/speed.png" } },
@@ -74,9 +74,9 @@ ITEM {
     effect = { speed = {bonus = 0.45} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-maize-module-2b",
     icons = { { icon = "__aoe__/img/items/maize.png" }, { icon = "__aoe__/img/items/rarity/uncommon.png" }, { icon = "__aoe__/img/items/rarity/production.png" } },
@@ -89,9 +89,9 @@ ITEM {
     effect = { speed = {bonus = -0.12}, productivity = {bonus = 0.3} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-maize-module-3a",
     icons = { { icon = "__aoe__/img/items/maize.png" }, { icon = "__aoe__/img/items/rarity/rare.png" }, { icon = "__aoe__/img/items/rarity/speed.png" } },
@@ -104,9 +104,9 @@ ITEM {
     effect = { speed = {bonus = 0.65} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-maize-module-3b",
     icons = { { icon = "__aoe__/img/items/maize.png" }, { icon = "__aoe__/img/items/rarity/rare.png" }, { icon = "__aoe__/img/items/rarity/production.png" } },
@@ -119,9 +119,9 @@ ITEM {
     effect = { speed = {bonus = -0.12}, productivity = {bonus = 0.45} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-maize-module-4a",
     icons = { { icon = "__aoe__/img/items/maize.png" }, { icon = "__aoe__/img/items/rarity/epic.png" }, { icon = "__aoe__/img/items/rarity/speed.png" } },
@@ -134,9 +134,9 @@ ITEM {
     effect = { speed = {bonus = 0.85} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-maize-module-4b",
     icons = { { icon = "__aoe__/img/items/maize.png" }, { icon = "__aoe__/img/items/rarity/epic.png" }, { icon = "__aoe__/img/items/rarity/production.png" } },
@@ -149,9 +149,9 @@ ITEM {
     effect = { speed = {bonus = -0.12}, productivity = {bonus = 0.6} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-maize-module-5a",
     icons = { { icon = "__aoe__/img/items/maize.png" }, { icon = "__aoe__/img/items/rarity/legendary.png" }, { icon = "__aoe__/img/items/rarity/speed.png" } },
@@ -164,9 +164,9 @@ ITEM {
     effect = { speed = {bonus = 1.05} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-maize-module-5b",
     icons = { { icon = "__aoe__/img/items/maize.png" }, { icon = "__aoe__/img/items/rarity/legendary.png" }, { icon = "__aoe__/img/items/rarity/production.png" } },
@@ -179,9 +179,9 @@ ITEM {
     effect = { speed = {bonus = -0.12}, productivity = {bonus = 0.75} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-soybean-seeds",
     icon = "__aoe__/img/items/soybean-seeds.png",
@@ -189,9 +189,9 @@ ITEM {
     subgroup = "aoe-flora-soybean",
     order = "a",
     stack_size = 200
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-soybeans",
     icon = "__aoe__/img/items/soybeans.png",
@@ -199,9 +199,9 @@ ITEM {
     subgroup = "aoe-flora-soybean",
     order = "b",
     stack_size = 200
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-soybeans-module-1",
     icons = { { icon = "__aoe__/img/items/soybeans.png" }, { icon = "__aoe__/img/items/rarity/common.png" } },
@@ -214,9 +214,9 @@ ITEM {
     effect = { speed = {bonus = 0.15}, productivity = {bonus = 0.03} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-soybeans-module-2",
     icons = { { icon = "__aoe__/img/items/soybeans.png" }, { icon = "__aoe__/img/items/rarity/uncommon.png" } },
@@ -229,9 +229,9 @@ ITEM {
     effect = { speed = {bonus = 0.25}, productivity = {bonus = 0.06} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-soybeans-module-3",
     icons = { { icon = "__aoe__/img/items/soybeans.png" }, { icon = "__aoe__/img/items/rarity/rare.png" } },
@@ -244,9 +244,9 @@ ITEM {
     effect = { speed = {bonus = 0.35}, productivity = {bonus = 0.09} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-soybeans-module-4",
     icons = { { icon = "__aoe__/img/items/soybeans.png" }, { icon = "__aoe__/img/items/rarity/epic.png" } },
@@ -259,9 +259,9 @@ ITEM {
     effect = { speed = {bonus = 0.45}, productivity = {bonus = 0.12} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-soybeans-module-5",
     icons = { { icon = "__aoe__/img/items/soybeans.png" }, { icon = "__aoe__/img/items/rarity/legendary.png" } },
@@ -274,9 +274,9 @@ ITEM {
     effect = { speed = {bonus = 0.55}, productivity = {bonus = 0.15} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-soy-flour",
     icon = "__aoe__/img/items/soy-flour.png",
@@ -284,9 +284,9 @@ ITEM {
     subgroup = "aoe-flora-soybean",
     order = "c",
     stack_size = 200
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-spruce-tree",
     icon = data.raw.tree["tree-01"].icon,
@@ -294,9 +294,9 @@ ITEM {
     subgroup = "aoe-flora-wood",
     order = "b",
     stack_size = 200
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-spruce-tree-module-1",
     icons = { { icon = data.raw.tree["tree-01"].icon }, { icon = "__aoe__/img/items/rarity/common.png" } },
@@ -309,9 +309,9 @@ ITEM {
     effect = { speed = {bonus = 0.03}, productivity = {bonus = 0.03} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-spruce-tree-module-2",
     icons = { { icon = data.raw.tree["tree-01"].icon }, { icon = "__aoe__/img/items/rarity/uncommon.png" } },
@@ -324,9 +324,9 @@ ITEM {
     effect = { speed = {bonus = 0.06}, productivity = {bonus = 0.06} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-spruce-tree-module-3",
     icons = { { icon = data.raw.tree["tree-01"].icon }, { icon = "__aoe__/img/items/rarity/rare.png" } },
@@ -339,9 +339,9 @@ ITEM {
     effect = { speed = {bonus = 0.09}, productivity = {bonus = 0.09} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-spruce-tree-module-4",
     icons = { { icon = data.raw.tree["tree-01"].icon }, { icon = "__aoe__/img/items/rarity/epic.png" } },
@@ -354,9 +354,9 @@ ITEM {
     effect = { speed = {bonus = 0.12}, productivity = {bonus = 0.12} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-spruce-tree-module-5",
     icons = { { icon = data.raw.tree["tree-01"].icon }, { icon = "__aoe__/img/items/rarity/legendary.png" } },
@@ -369,9 +369,9 @@ ITEM {
     effect = { speed = {bonus = 0.15}, productivity = {bonus = 0.15} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-rubber-tree-module-1",
     icons = { { icon = "__aoe__/img/entities/rubber-tree.png", icon_size = 256 }, { icon = "__aoe__/img/items/rarity/common.png", icon_size = 64 } },
@@ -383,9 +383,9 @@ ITEM {
     effect = { speed = {bonus = 0.03}, productivity = {bonus = 0.03} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-rubber-tree-module-2",
     icons = { { icon = "__aoe__/img/entities/rubber-tree.png", icon_size = 256 }, { icon = "__aoe__/img/items/rarity/uncommon.png", icon_size = 64 } },
@@ -397,9 +397,9 @@ ITEM {
     effect = { speed = {bonus = 0.06}, productivity = {bonus = 0.06} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-rubber-tree-module-3",
     icons = { { icon = "__aoe__/img/entities/rubber-tree.png", icon_size = 256 }, { icon = "__aoe__/img/items/rarity/rare.png", icon_size = 64 } },
@@ -411,9 +411,9 @@ ITEM {
     effect = { speed = {bonus = 0.09}, productivity = {bonus = 0.09} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-rubber-tree-module-4",
     icons = { { icon = "__aoe__/img/entities/rubber-tree.png", icon_size = 256 }, { icon = "__aoe__/img/items/rarity/epic.png", icon_size = 64 } },
@@ -425,9 +425,9 @@ ITEM {
     effect = { speed = {bonus = 0.12}, productivity = {bonus = 0.12} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-rubber-tree-module-5",
     icons = { { icon = "__aoe__/img/entities/rubber-tree.png", icon_size = 256 }, { icon = "__aoe__/img/items/rarity/legendary.png", icon_size = 64 } },
@@ -439,9 +439,9 @@ ITEM {
     effect = { speed = {bonus = 0.15}, productivity = {bonus = 0.15} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-apple-tree-seeds",
     icon = "__aoe__/img/items/apple-tree-seeds.png",
@@ -449,9 +449,9 @@ ITEM {
     subgroup = "aoe-flora-apple",
     order = "1",
     stack_size = 100
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-apple-tree",
     icon = data.raw.tree["tree-05"].icon,
@@ -459,9 +459,9 @@ ITEM {
     subgroup = "aoe-flora-apple",
     order = "b",
     stack_size = 200
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-apple-tree-module-1",
     icons = { { icon = data.raw.tree["tree-05"].icon }, { icon = "__aoe__/img/items/rarity/common.png" } },
@@ -474,9 +474,9 @@ ITEM {
     effect = { speed = {bonus = 0.03}, productivity = {bonus = 0.03} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-apple-tree-module-2",
     icons = { { icon = data.raw.tree["tree-05"].icon }, { icon = "__aoe__/img/items/rarity/uncommon.png" } },
@@ -489,9 +489,9 @@ ITEM {
     effect = { speed = {bonus = 0.06}, productivity = {bonus = 0.06} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-apple-tree-module-3",
     icons = { { icon = data.raw.tree["tree-05"].icon }, { icon = "__aoe__/img/items/rarity/rare.png" } },
@@ -504,9 +504,9 @@ ITEM {
     effect = { speed = {bonus = 0.09}, productivity = {bonus = 0.09} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-apple-tree-module-4",
     icons = { { icon = data.raw.tree["tree-05"].icon }, { icon = "__aoe__/img/items/rarity/epic.png" } },
@@ -519,9 +519,9 @@ ITEM {
     effect = { speed = {bonus = 0.12}, productivity = {bonus = 0.12} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-apple-tree-module-5",
     icons = { { icon = data.raw.tree["tree-05"].icon }, { icon = "__aoe__/img/items/rarity/legendary.png" } },
@@ -534,9 +534,9 @@ ITEM {
     effect = { speed = {bonus = 0.15}, productivity = {bonus = 0.15} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-apple",
     icon = "__aoe__/img/items/apple.png",
@@ -544,9 +544,9 @@ ITEM {
     subgroup = "aoe-flora-apple",
     order = "c",
     stack_size = 200
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-olive-tree-seeds",
     icon = "__aoe__/img/items/olive-tree-seeds.png",
@@ -554,9 +554,9 @@ ITEM {
     subgroup = "aoe-flora-olive",
     order = "a",
     stack_size = 100
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-olive-tree",
     icon = data.raw.tree["tree-08"].icon,
@@ -564,9 +564,9 @@ ITEM {
     subgroup = "aoe-flora-olive",
     order = "b",
     stack_size = 200
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-olive-tree-module-1",
     icons = { { icon = data.raw.tree["tree-08"].icon }, { icon = "__aoe__/img/items/rarity/common.png" } },
@@ -579,9 +579,9 @@ ITEM {
     effect = { speed = {bonus = 0.03}, productivity = {bonus = 0.03} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-olive-tree-module-2",
     icons = { { icon = data.raw.tree["tree-08"].icon }, { icon = "__aoe__/img/items/rarity/uncommon.png" } },
@@ -594,9 +594,9 @@ ITEM {
     effect = { speed = {bonus = 0.06}, productivity = {bonus = 0.06} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-olive-tree-module-3",
     icons = { { icon = data.raw.tree["tree-08"].icon }, { icon = "__aoe__/img/items/rarity/rare.png" } },
@@ -609,9 +609,9 @@ ITEM {
     effect = { speed = {bonus = 0.09}, productivity = {bonus = 0.09} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-olive-tree-module-4",
     icons = { { icon = data.raw.tree["tree-08"].icon }, { icon = "__aoe__/img/items/rarity/epic.png" } },
@@ -624,9 +624,9 @@ ITEM {
     effect = { speed = {bonus = 0.12}, productivity = {bonus = 0.12} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-olive-tree-module-5",
     icons = { { icon = data.raw.tree["tree-08"].icon }, { icon = "__aoe__/img/items/rarity/legendary.png" } },
@@ -639,9 +639,9 @@ ITEM {
     effect = { speed = {bonus = 0.15}, productivity = {bonus = 0.15} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-olive",
     icon = "__aoe__/img/items/olive.png",
@@ -649,9 +649,9 @@ ITEM {
     subgroup = "aoe-flora-olive",
     order = "c",
     stack_size = 200
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-grass",
     icon = "__aoe__/img/items/grass.png",
@@ -659,9 +659,9 @@ ITEM {
     subgroup = "aoe-flora-wood",
     order = "i",
     stack_size = 200
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-hay-bale",
     icon = "__aoe__/img/items/hay-bale.png",
@@ -669,9 +669,9 @@ ITEM {
     subgroup = "aoe-flora-wood",
     order = "j",
     stack_size = 200
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-saw-blade-iron",
     icon = "__aoe__/img/items/iron-saw-blade.png",
@@ -679,9 +679,9 @@ ITEM {
     subgroup = "aoe-metals-iron",
     order = "f",
     stack_size = 100
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-saw-blade-steel",
     icon = "__aoe__/img/items/steel-saw-blade.png",
@@ -689,9 +689,9 @@ ITEM {
     subgroup = "aoe-metals-steel",
     order = "d",
     stack_size = 100
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-egg",
     icon = "__aoe__/img/items/egg.png",
@@ -699,19 +699,19 @@ ITEM {
     subgroup = "aoe-fauna-chicken",
     order = "a",
     stack_size = 100
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-bedding",
     icon = "__aoe__/img/items/bedding.png",
     icon_size = 64,
-    subgroup = "aoe-fauna-farms",
+    subgroup = "aoe-fauna-items",
     order = "a",
     stack_size = 100
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-chicken",
     icon = "__aoe__/img/items/chicken.png",
@@ -719,9 +719,9 @@ ITEM {
     subgroup = "aoe-fauna-chicken",
     order = "b",
     stack_size = 200
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-chicken-module-1",
     icons = { { icon = "__aoe__/img/items/chicken.png" }, { icon = "__aoe__/img/items/rarity/common.png" } },
@@ -734,9 +734,9 @@ ITEM {
     effect = { productivity = {bonus = 0.04} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-chicken-module-1",
     icons = { { icon = "__aoe__/img/items/chicken.png" }, { icon = "__aoe__/img/items/rarity/common.png" } },
@@ -749,9 +749,9 @@ ITEM {
     effect = { productivity = {bonus = 0.04} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-chicken-module-2",
     icons = { { icon = "__aoe__/img/items/chicken.png" }, { icon = "__aoe__/img/items/rarity/uncommon.png" } },
@@ -764,9 +764,9 @@ ITEM {
     effect = { productivity = {bonus = 0.06} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-chicken-module-3",
     icons = { { icon = "__aoe__/img/items/chicken.png" }, { icon = "__aoe__/img/items/rarity/rare.png" } },
@@ -779,9 +779,9 @@ ITEM {
     effect = { productivity = {bonus = 0.08} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-chicken-module-4",
     icons = { { icon = "__aoe__/img/items/chicken.png" }, { icon = "__aoe__/img/items/rarity/epic.png" } },
@@ -794,9 +794,9 @@ ITEM {
     effect = { productivity = {bonus = 0.10} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-chicken-module-5",
     icons = { { icon = "__aoe__/img/items/chicken.png" }, { icon = "__aoe__/img/items/rarity/legendary.png" } },
@@ -809,9 +809,9 @@ ITEM {
     effect = { productivity = {bonus = 0.12} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-poultry",
     icon = "__aoe__/img/items/poultry.png",
@@ -819,9 +819,9 @@ ITEM {
     subgroup = "aoe-fauna-chicken",
     order = "c",
     stack_size = 200
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-bones",
     icon = "__aoe__/img/items/bones.png",
@@ -829,9 +829,9 @@ ITEM {
     subgroup = "aoe-fauna-chicken",
     order = "d",
     stack_size = 200
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-lamb",
     icon = "__aoe__/img/items/lamb.png",
@@ -839,9 +839,9 @@ ITEM {
     subgroup = "aoe-fauna-sheep",
     order = "a",
     stack_size = 200
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-sheep",
     icon = "__aoe__/img/items/sheep.png",
@@ -849,9 +849,9 @@ ITEM {
     subgroup = "aoe-fauna-sheep",
     order = "b",
     stack_size = 200
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-sheep-module-1",
     icons = { { icon = "__aoe__/img/items/sheep.png" }, { icon = "__aoe__/img/items/rarity/common.png" } },
@@ -864,9 +864,9 @@ ITEM {
     effect = { speed = {bonus = -0.04}, productivity = {bonus = 0.06} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-sheep-module-2",
     icons = { { icon = "__aoe__/img/items/sheep.png" }, { icon = "__aoe__/img/items/rarity/uncommon.png" } },
@@ -879,9 +879,9 @@ ITEM {
     effect = { speed = {bonus = -0.06}, productivity = {bonus = 0.09} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-sheep-module-3",
     icons = { { icon = "__aoe__/img/items/sheep.png" }, { icon = "__aoe__/img/items/rarity/rare.png" } },
@@ -894,9 +894,9 @@ ITEM {
     effect = { speed = {bonus = -0.08}, productivity = {bonus = 0.12} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-sheep-module-4",
     icons = { { icon = "__aoe__/img/items/sheep.png" }, { icon = "__aoe__/img/items/rarity/epic.png" } },
@@ -909,9 +909,9 @@ ITEM {
     effect = { speed = {bonus = -0.1}, productivity = {bonus = 0.15} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-sheep-module-5",
     icons = { { icon = "__aoe__/img/items/sheep.png" }, { icon = "__aoe__/img/items/rarity/legendary.png" } },
@@ -924,9 +924,9 @@ ITEM {
     effect = { speed = {bonus = -0.12}, productivity = {bonus = 0.18} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-meat",
     icon = "__aoe__/img/items/meat.png",
@@ -934,9 +934,9 @@ ITEM {
     subgroup = "aoe-fauna-sheep",
     order = "c",
     stack_size = 200
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-wool",
     icon = "__aoe__/img/items/wool.png",
@@ -944,9 +944,9 @@ ITEM {
     subgroup = "aoe-fauna-sheep",
     order = "d",
     stack_size = 200
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-calf",
     icon = "__aoe__/img/items/calf.png",
@@ -954,9 +954,9 @@ ITEM {
     subgroup = "aoe-fauna-cow",
     order = "a",
     stack_size = 200
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-ox",
     icon = "__aoe__/img/items/ox.png",
@@ -964,9 +964,9 @@ ITEM {
     subgroup = "aoe-fauna-cow",
     order = "b",
     stack_size = 200
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-ox-module-1",
     icons = { { icon = "__aoe__/img/items/ox.png" }, { icon = "__aoe__/img/items/rarity/common.png" } },
@@ -979,9 +979,9 @@ ITEM {
     effect = { speed = {bonus = 0.2} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-ox-module-2",
     icons = { { icon = "__aoe__/img/items/ox.png" }, { icon = "__aoe__/img/items/rarity/uncommon.png" } },
@@ -994,9 +994,9 @@ ITEM {
     effect = { speed = {bonus = 0.35} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-ox-module-3",
     icons = { { icon = "__aoe__/img/items/ox.png" }, { icon = "__aoe__/img/items/rarity/rare.png" } },
@@ -1009,9 +1009,9 @@ ITEM {
     effect = { speed = {bonus = 0.5} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-ox-module-4",
     icons = { { icon = "__aoe__/img/items/ox.png" }, { icon = "__aoe__/img/items/rarity/epic.png" } },
@@ -1024,9 +1024,9 @@ ITEM {
     effect = { speed = {bonus = 0.65} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-ox-module-5",
     icons = { { icon = "__aoe__/img/items/ox.png" }, { icon = "__aoe__/img/items/rarity/legendary.png" } },
@@ -1039,9 +1039,9 @@ ITEM {
     effect = { speed = {bonus = 0.8} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-cow",
     icon = "__aoe__/img/items/cow.png",
@@ -1049,9 +1049,9 @@ ITEM {
     subgroup = "aoe-fauna-cow",
     order = "c",
     stack_size = 200
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-cow-module-1",
     icons = { { icon = "__aoe__/img/items/cow.png" }, { icon = "__aoe__/img/items/rarity/common.png" } },
@@ -1064,9 +1064,9 @@ ITEM {
     effect = { speed = {bonus = -0.04}, productivity = {bonus = 0.03} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-cow-module-2",
     icons = { { icon = "__aoe__/img/items/cow.png" }, { icon = "__aoe__/img/items/rarity/uncommon.png" } },
@@ -1079,9 +1079,9 @@ ITEM {
     effect = { speed = {bonus = -0.08}, productivity = {bonus = 0.06} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-cow-module-3",
     icons = { { icon = "__aoe__/img/items/cow.png" }, { icon = "__aoe__/img/items/rarity/rare.png" } },
@@ -1094,9 +1094,9 @@ ITEM {
     effect = { speed = {bonus = -0.12}, productivity = {bonus = 0.09} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-cow-module-4",
     icons = { { icon = "__aoe__/img/items/cow.png" }, { icon = "__aoe__/img/items/rarity/epic.png" } },
@@ -1109,9 +1109,9 @@ ITEM {
     effect = { speed = {bonus = -0.16}, productivity = {bonus = 0.12} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "module",
     name = "aoe-cow-module-5",
     icons = { { icon = "__aoe__/img/items/cow.png" }, { icon = "__aoe__/img/items/rarity/legendary.png" } },
@@ -1124,9 +1124,9 @@ ITEM {
     effect = { speed = {bonus = -0.2}, productivity = {bonus = 0.15} },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-hide",
     icon = "__aoe__/img/items/hide.png",
@@ -1134,9 +1134,9 @@ ITEM {
     subgroup = "aoe-fauna-cow",
     order = "d",
     stack_size = 200
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-leather",
     icon = "__aoe__/img/items/leather.png",
@@ -1144,9 +1144,19 @@ ITEM {
     subgroup = "aoe-fauna-cow",
     order = "e",
     stack_size = 200
-}
+}})
 
-ITEM {
+data:extend({{
+    type = "item",
+    name = "aoe-fertilzer",
+    icon = "__aoe__/img/items/fertilizer.png",
+    icon_size = 64,
+    subgroup = "aoe-fauna-items",
+    order = "b",
+    stack_size = 200
+}})
+
+data:extend({{
     type = "item",
     name = "aoe-soda-ash",
     icon = "__aoe__/img/items/soda-ash.png",
@@ -1154,4 +1164,4 @@ ITEM {
     subgroup = "aoe-flora-kelp",
     order = "c",
     stack_size = 200
-}
+}})

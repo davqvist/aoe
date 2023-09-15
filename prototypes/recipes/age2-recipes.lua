@@ -1,4 +1,4 @@
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-steam-engine-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -11,9 +11,9 @@ RECIPE {
 		{type = 'item', name = 'steam-engine', amount = 1}
     },
 	energy_required = 1
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-boiler-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -25,9 +25,9 @@ RECIPE {
 		{type = 'item', name = 'boiler', amount = 1}
     },
 	energy_required = 1
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-small-electric-pole-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -39,9 +39,9 @@ RECIPE {
 		{type = 'item', name = 'small-electric-pole', amount = 1}
     },
 	energy_required = 1
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-small-electric-fuse-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -53,9 +53,9 @@ RECIPE {
 		{type = 'item', name = 'po-small-electric-fuse', amount = 1}
     },
 	energy_required = 1
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-smelting-steel-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -68,9 +68,9 @@ RECIPE {
     },
 	energy_required = 2.4,
 	category = 'smelting'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-smelting-steel-coke-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -83,9 +83,9 @@ RECIPE {
     },
 	energy_required = 2.4,
 	category = 'smelting'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-steel-gear-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -96,9 +96,9 @@ RECIPE {
         {type = 'item', name = 'aoe-steel-gear', amount = 1}
     },
 	energy_required = 0.2
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-steel-rod-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -109,9 +109,9 @@ RECIPE {
         {type = 'item', name = 'aoe-steel-rod', amount = 2}
     },
 	energy_required = 0.2
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-engine-unit-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -124,9 +124,9 @@ RECIPE {
         {type = 'item', name = 'engine-unit', amount = 1}
     },
 	energy_required = 4
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-steel-machine-hull-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -138,9 +138,9 @@ RECIPE {
         {type = 'item', name = 'aoe-steel-machine-hull', amount = 1}
     },
 	energy_required = 2
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-lamp-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -152,9 +152,9 @@ RECIPE {
         {type = 'item', name = 'small-lamp', amount = 1}
     },
 	energy_required = 0.4
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-inserter-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -167,9 +167,9 @@ RECIPE {
         {type = 'item', name = 'inserter', amount = 1}
     },
 	energy_required = 0.5
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-long-handed-inserter-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -182,9 +182,9 @@ RECIPE {
         {type = 'item', name = 'long-handed-inserter', amount = 1}
     },
 	energy_required = 0.5
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-iron-chest-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -195,9 +195,9 @@ RECIPE {
         {type = 'item', name = 'iron-chest', amount = 1}
     },
 	energy_required = 0.5
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-copper-chest-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -209,9 +209,9 @@ RECIPE {
         {type = 'item', name = 'aoe-copper-chest', amount = 1}
     },
 	energy_required = 0.5
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-steel-chest-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -224,9 +224,9 @@ RECIPE {
         {type = 'item', name = 'steel-chest', amount = 1}
     },
 	energy_required = 0.5
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-steel-furnace-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -238,9 +238,9 @@ RECIPE {
         {type = 'item', name = 'steel-furnace', amount = 1}
     },
 	energy_required = 5
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-kiln-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -251,9 +251,9 @@ RECIPE {
         {type = 'item', name = 'aoe-kiln', amount = 1}
     },
 	energy_required = 5
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-mixer-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -266,9 +266,9 @@ RECIPE {
         {type = 'item', name = 'aoe-mixer', amount = 1}
     },
 	energy_required = 5
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-electric-mining-drill-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -282,9 +282,9 @@ RECIPE {
         {type = 'item', name = 'electric-mining-drill', amount = 1}
     },
 	energy_required = 5
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-assembling-machine-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -297,9 +297,9 @@ RECIPE {
         {type = 'item', name = 'assembling-machine-2', amount = 1}
     },
 	energy_required = 5
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-lab-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -312,9 +312,9 @@ RECIPE {
         {type = 'item', name = 'lab', amount = 1}
     },
 	energy_required = 5
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-crusher-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -327,9 +327,9 @@ RECIPE {
         {type = 'item', name = 'aoe-crusher', amount = 1}
     },
 	energy_required = 5
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-sawmill-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -342,9 +342,9 @@ RECIPE {
         {type = 'item', name = 'aoe-sawmill', amount = 1}
     },
 	energy_required = 5
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-squeezer-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -357,9 +357,9 @@ RECIPE {
         {type = 'item', name = 'aoe-squeezer', amount = 1}
     },
 	energy_required = 5
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-ground-bore-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -372,9 +372,9 @@ RECIPE {
         {type = 'item', name = 'aoe-ground-bore', amount = 1}
     },
 	energy_required = 5
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-gene-lab-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -388,9 +388,9 @@ RECIPE {
         {type = 'item', name = 'aoe-gene-lab', amount = 1}
     },
 	energy_required = 5
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-mixing-loam-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -404,9 +404,9 @@ RECIPE {
     },
 	energy_required = 2,
 	category = 'aoe-category-mixing'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-smelting-brick-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -419,9 +419,9 @@ RECIPE {
     },
 	energy_required = 2.4,
 	category = 'smelting'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-brick-wall-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -432,9 +432,9 @@ RECIPE {
         {type = 'item', name = 'stone-wall', amount = 1}
     },
 	energy_required = 2
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-red-wire-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -446,9 +446,9 @@ RECIPE {
         {type = 'item', name = 'red-wire', amount = 8}
     },
 	energy_required = 1
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-green-wire-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -460,9 +460,9 @@ RECIPE {
         {type = 'item', name = 'green-wire', amount = 8}
     },
 	energy_required = 1
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-arithmetic-combinator-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -474,9 +474,9 @@ RECIPE {
         {type = 'item', name = 'arithmetic-combinator', amount = 1}
     },
 	energy_required = 0.5
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-decider-combinator-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -488,9 +488,9 @@ RECIPE {
         {type = 'item', name = 'decider-combinator', amount = 1}
     },
 	energy_required = 0.5
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-constant-combinator-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -502,9 +502,9 @@ RECIPE {
         {type = 'item', name = 'constant-combinator', amount = 1}
     },
 	energy_required = 0.5
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-power-switch-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -516,9 +516,9 @@ RECIPE {
         {type = 'item', name = 'power-switch', amount = 1}
     },
 	energy_required = 0.5
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-programmable-speaker-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -531,9 +531,9 @@ RECIPE {
         {type = 'item', name = 'programmable-speaker', amount = 1}
     },
 	energy_required = 0.5
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-car-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -545,9 +545,9 @@ RECIPE {
         {type = 'item', name = 'car', amount = 1}
     },
 	energy_required = 10
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-heating-coil-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -558,9 +558,9 @@ RECIPE {
 		{type = 'item', name = 'aoe-heating-coil', amount = 1}
     },
 	energy_required = 1
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-cooling-coil-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -571,9 +571,9 @@ RECIPE {
 		{type = 'item', name = 'aoe-cooling-coil', amount = 1}
     },
 	energy_required = 1
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-melter-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -586,9 +586,9 @@ RECIPE {
 		{type = 'item', name = 'aoe-melter', amount = 1}
     },
 	energy_required = 5
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-high-pressure-heater-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -601,9 +601,9 @@ RECIPE {
 		{type = 'item', name = 'aoe-high-pressure-heater', amount = 1}
     },
 	energy_required = 5
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-sedimenter-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -616,9 +616,9 @@ RECIPE {
 		{type = 'item', name = 'aoe-sedimenter', amount = 1}
     },
 	energy_required = 5
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-freezer-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -631,9 +631,9 @@ RECIPE {
 		{type = 'item', name = 'aoe-freezer', amount = 1}
     },
 	energy_required = 5
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-straining-stone-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -653,9 +653,9 @@ RECIPE {
 	subgroup = 'aoe-stone',
 	energy_required = 2,
 	category = 'aoe-category-straining'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-melting-stone-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -680,9 +680,9 @@ RECIPE {
 	},
 	energy_required = 2,
 	category = 'aoe-category-melting'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-melting-sedimentary-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -706,9 +706,9 @@ RECIPE {
 	},
 	energy_required = 2,
 	category = 'aoe-category-melting'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-melting-metamorphic-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -732,9 +732,9 @@ RECIPE {
 	},
 	energy_required = 2,
 	category = 'aoe-category-melting'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-high-pressure-heating-sedimentary-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -759,9 +759,9 @@ RECIPE {
 	},
 	energy_required = 2,
 	category = 'aoe-category-high-pressure-heating'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-high-pressure-heating-igneous-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -786,9 +786,9 @@ RECIPE {
 	},
 	energy_required = 2,
 	category = 'aoe-category-high-pressure-heating'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-sedimenting-metamorphic-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -812,9 +812,9 @@ RECIPE {
 	},
 	energy_required = 2,
 	category = 'aoe-category-sedimenting'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-sedimenting-igneous-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -838,9 +838,9 @@ RECIPE {
 	},
 	energy_required = 2,
 	category = 'aoe-category-sedimenting'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-freezing-lava-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -852,9 +852,9 @@ RECIPE {
     },
 	energy_required = 2,
 	category = 'aoe-category-freezing'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-straining-sedimentary-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -871,9 +871,9 @@ RECIPE {
 	main_product = 'coal',
 	energy_required = 8,
 	category = 'aoe-category-straining'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-straining-igneous-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -890,9 +890,9 @@ RECIPE {
 	main_product = 'aoe-quartz-ore',
 	energy_required = 8,
 	category = 'aoe-category-straining'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-straining-metamorphic-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -909,9 +909,9 @@ RECIPE {
 	main_product = 'aoe-mica',
 	energy_required = 8,
 	category = 'aoe-category-straining'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crushing-iron-ore-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -925,9 +925,9 @@ RECIPE {
 	main_product = 'aoe-iron-dust',
 	energy_required = 1,
 	category = 'aoe-category-crushing'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crushing-copper-ore-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -941,9 +941,9 @@ RECIPE {
 	main_product = 'aoe-copper-dust',
 	energy_required = 1,
 	category = 'aoe-category-crushing'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crushing-coal-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -957,9 +957,9 @@ RECIPE {
 	main_product = 'aoe-coal-dust',
 	energy_required = 1,
 	category = 'aoe-category-crushing'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-graphite-rod-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -970,9 +970,9 @@ RECIPE {
 		{type = 'item', name = 'aoe-graphite-rod', amount = 1}
     },
 	energy_required = 1
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crushing-quartz-ore-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -986,9 +986,9 @@ RECIPE {
 	main_product = 'aoe-quartz-dust',
 	energy_required = 1,
 	category = 'aoe-category-crushing'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crushing-tin-ore-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1002,9 +1002,9 @@ RECIPE {
 	main_product = 'aoe-tin-dust',
 	energy_required = 1,
 	category = 'aoe-category-crushing'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-smelting-tin-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1017,9 +1017,9 @@ RECIPE {
     },
 	energy_required = 2.4,
 	category = 'smelting'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-tin-gear-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1030,9 +1030,9 @@ RECIPE {
         {type = 'item', name = 'aoe-tin-gear', amount = 1}
     },
 	energy_required = 0.2
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-tin-rod-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1043,9 +1043,9 @@ RECIPE {
         {type = 'item', name = 'aoe-tin-rod', amount = 2}
     },
 	energy_required = 0.2
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crushing-manganese-ore-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1059,9 +1059,9 @@ RECIPE {
 	main_product = 'aoe-manganese-dust',
 	energy_required = 1,
 	category = 'aoe-category-crushing'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-smelting-glass-2-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1085,9 +1085,9 @@ RECIPE {
 	},
 	energy_required = 2.4,
 	category = 'smelting'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crushing-aluminium-ore-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1101,9 +1101,9 @@ RECIPE {
 	main_product = 'aoe-aluminium-dust',
 	energy_required = 1,
 	category = 'aoe-category-crushing'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-smelting-aluminium-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1116,9 +1116,9 @@ RECIPE {
     },
 	energy_required = 2.4,
 	category = 'smelting'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-aluminium-rod-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1129,9 +1129,9 @@ RECIPE {
         {type = 'item', name = 'aoe-aluminium-rod', amount = 2}
     },
 	energy_required = 0.2
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crushing-magnesium-ore-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1145,9 +1145,9 @@ RECIPE {
 	main_product = 'aoe-magnesium-dust',
 	energy_required = 1,
 	category = 'aoe-category-crushing'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-kiln-quicklime-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1161,9 +1161,9 @@ RECIPE {
 	main_product = 'aoe-quicklime',
 	energy_required = 2.4,
 	category = 'aoe-category-kiln-smelting'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-kiln-quicklime-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1177,9 +1177,9 @@ RECIPE {
 	main_product = 'aoe-quicklime',
 	energy_required = 2.4,
 	category = 'aoe-category-kiln-smelting'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-mixing-slaked-lime-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1192,9 +1192,9 @@ RECIPE {
     },
 	energy_required = 4.8,
 	category = 'aoe-category-mixing'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-wind-turbine-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1206,9 +1206,9 @@ RECIPE {
         {type = 'item', name = 'aoe-wind-turbine', amount = 1}
     },
 	energy_required = 5
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-steel-rotor-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1220,9 +1220,9 @@ RECIPE {
         {type = 'item', name = 'aoe-rotor-steel', amount = 1}
     },
 	energy_required = 10
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-rotor-steel-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1237,9 +1237,9 @@ RECIPE {
 	subgroup = 'aoe-power-buildings',
 	order = 'c1',
 	category = 'aoe-category-rotor'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-smelting-salt-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1251,9 +1251,9 @@ RECIPE {
     },
 	energy_required = 2.4,
 	category = 'smelting'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-mixing-brine-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1266,9 +1266,9 @@ RECIPE {
     },
 	energy_required = 4.8,
 	category = 'aoe-category-mixing'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-electrolyzer-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1282,9 +1282,9 @@ RECIPE {
         {type = 'item', name = 'aoe-electrolyzer', amount = 1}
     },
 	energy_required = 5
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-electrolyzing-water-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1302,9 +1302,9 @@ RECIPE {
 	order = 'a1',
 	energy_required = 1,
 	category = 'aoe-category-electrolyzing'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-electrolyzing-brine-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1321,9 +1321,9 @@ RECIPE {
 	order = 'd1',
 	energy_required = 1,
 	category = 'aoe-category-electrolyzing'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-kiln-coke-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1338,9 +1338,9 @@ RECIPE {
 	main_product = 'aoe-coke',
 	energy_required = 2.4,
 	category = 'aoe-category-kiln-smelting'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-pump-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1352,9 +1352,9 @@ RECIPE {
         {type = 'item', name = 'pump', amount = 1}
     },
 	energy_required = 2
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-pressure-pump-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1368,9 +1368,9 @@ RECIPE {
         {type = 'item', name = 'aoe-pressure-pump', amount = 1}
     },
 	energy_required = 5
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-pumping-air-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1380,9 +1380,9 @@ RECIPE {
     },
 	energy_required = 1,
 	category = 'aoe-category-pumping'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-pumping-cold-air-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1392,9 +1392,9 @@ RECIPE {
     },
 	energy_required = 1,
 	category = 'aoe-category-pumping'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-pumping-warm-air-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1404,9 +1404,9 @@ RECIPE {
     },
 	energy_required = 1,
 	category = 'aoe-category-pumping'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-pumping-pressure-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1416,9 +1416,9 @@ RECIPE {
     },
 	energy_required = 1,
 	category = 'aoe-category-pumping'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-pumping-vacuum-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1428,9 +1428,9 @@ RECIPE {
     },
 	energy_required = 1,
 	category = 'aoe-category-pumping'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-pumping-oxygen-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1440,9 +1440,9 @@ RECIPE {
     },
 	energy_required = 1,
 	category = 'aoe-category-pumping'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-pumping-nitrogen-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1452,9 +1452,9 @@ RECIPE {
     },
 	energy_required = 1,
 	category = 'aoe-category-pumping'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-kiln-cement-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1471,9 +1471,9 @@ RECIPE {
 	main_product = 'aoe-cement',
 	energy_required = 2.4,
 	category = 'aoe-category-kiln-smelting'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-mixing-concrete-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1488,9 +1488,9 @@ RECIPE {
     },
 	energy_required = 2.4,
 	category = 'aoe-category-mixing'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-hazard-concrete-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1501,9 +1501,9 @@ RECIPE {
         {type = 'item', name = 'hazard-concrete', amount = 5}
     },
 	energy_required = 0.1
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-smelting-caustic-soda-paper-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1529,9 +1529,9 @@ RECIPE {
 	},
 	energy_required = 2.4,
 	category = 'smelting'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-crafting-slaughterhouse-recipe',
     type = 'recipe',
     enabled = false,
@@ -1544,9 +1544,9 @@ RECIPE {
         {type = 'item', name = 'aoe-slaughterhouse', amount = 4}
     },
     energy_required = 2
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-slaughterhouse-fish-recipe',
     type = 'recipe',
     enabled = false,
@@ -1558,9 +1558,9 @@ RECIPE {
     },
     energy_required = 4,
 	category = 'aoe-category-slaughtering'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-reservoir-fish-recipe',
     type = 'recipe',
     enabled = false,
@@ -1573,9 +1573,9 @@ RECIPE {
     },
     energy_required = 60,
 	category = 'aoe-category-farm-reservoir-fish'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-reservoir-fish-eggs-recipe',
     type = 'recipe',
     enabled = false,
@@ -1590,9 +1590,9 @@ RECIPE {
     },
     energy_required = 25,
 	category = 'aoe-category-farm-reservoir-fish'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-reservoir-fish-module-1-recipe',
     type = 'recipe',
     enabled = false,
@@ -1608,9 +1608,9 @@ RECIPE {
 	main_product = 'aoe-fish-module-1',
     energy_required = 150,
 	category = 'aoe-category-farm-reservoir-fish'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-sensor-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1623,9 +1623,9 @@ RECIPE {
         {type = 'item', name = 'aoe-sensor', amount = 1}
     },
 	energy_required = 1
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-radar-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1639,9 +1639,9 @@ RECIPE {
         {type = 'item', name = 'radar', amount = 1}
     },
 	energy_required = 2
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-science-03-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1653,4 +1653,4 @@ RECIPE {
         {type = 'item', name = 'aoe-science-03', amount = 1}
     },
 	energy_required = 4
-}
+}})

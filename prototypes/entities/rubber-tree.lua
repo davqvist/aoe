@@ -1,6 +1,6 @@
 local sounds = require("__base__/prototypes/entity/sounds")
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-rubber-tree",
     icon = "__aoe__/img/entities/rubber-tree.png",
@@ -9,9 +9,9 @@ ITEM {
     order = "b",
     place_result = "aoe-rubber-tree",
     stack_size = 100,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "simple-entity",
     name = "aoe-rubber-tree",
 	icon = "__aoe__/img/entities/rubber-tree.png",
@@ -33,4 +33,4 @@ ENTITY {
 	  shift = util.by_pixel(0, -70),
       scale = 0.75
     }
-  }
+}})

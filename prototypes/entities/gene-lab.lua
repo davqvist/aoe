@@ -1,4 +1,4 @@
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-burner-gene-lab",
     icon = "__aoe__/img/entities/gene-lab.png",
@@ -7,9 +7,9 @@ ITEM {
     order = "f",
     place_result = "aoe-burner-gene-lab",
     stack_size = 25,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "assembling-machine",
     name = "aoe-burner-gene-lab",
 	crafting_categories = {"aoe-category-gene-lab"},
@@ -76,9 +76,9 @@ ENTITY {
       },
       off_when_no_fluid_recipe = true
     }
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-gene-lab",
     icon = "__aoe__/img/entities/gene-lab.png",
@@ -87,9 +87,9 @@ ITEM {
     order = "g",
     place_result = "aoe-gene-lab",
     stack_size = 25,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "assembling-machine",
     name = "aoe-gene-lab",
 	crafting_categories = {"aoe-category-gene-lab"},
@@ -150,4 +150,4 @@ ENTITY {
       },
       off_when_no_fluid_recipe = true
     }
-}
+}})

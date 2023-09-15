@@ -1,7 +1,7 @@
 require ("__base__/prototypes/entity/pipecovers")
 require ("__base__/prototypes/entity/assemblerpipes")
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-burner-ground-bore",
     icon = "__aoe__/img/entities/ground-bore.png",
@@ -10,9 +10,9 @@ ITEM {
     order = "c",
     place_result = "aoe-burner-ground-bore",
     stack_size = 25,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "assembling-machine",
     name = "aoe-burner-ground-bore",
 	crafting_categories = {"aoe-category-digging"},
@@ -73,9 +73,9 @@ ENTITY {
       },
       off_when_no_fluid_recipe = true
     }
-}
+}})
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-ground-bore",
     icon = "__aoe__/img/entities/ground-bore.png",
@@ -84,9 +84,9 @@ ITEM {
     order = "d",
     place_result = "aoe-ground-bore",
     stack_size = 25,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "assembling-machine",
     name = "aoe-ground-bore",
 	crafting_categories = {"aoe-category-digging"},
@@ -141,4 +141,4 @@ ENTITY {
       },
       off_when_no_fluid_recipe = true
     }
-}
+}})

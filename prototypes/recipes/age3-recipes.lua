@@ -1,4 +1,4 @@
-RECIPE {
+data:extend({{
     name = 'aoe-ground-bore-water-recipe',
     type = 'recipe',
     enabled = false,
@@ -10,9 +10,9 @@ RECIPE {
     },
     energy_required = 1,
 	category = 'aoe-category-digging'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-gene-lab-maize-kernels-recipe',
     type = 'recipe',
     enabled = false,
@@ -27,9 +27,9 @@ RECIPE {
     },
     energy_required = 60,
 	category = 'aoe-category-gene-lab'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-greenhouse-maize-kernels-recipe',
     type = 'recipe',
     enabled = false,
@@ -41,9 +41,9 @@ RECIPE {
     },
     energy_required = 2,
 	category = 'aoe-category-greenhouse'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-plot-maize-recipe',
     type = 'recipe',
     enabled = false,
@@ -56,9 +56,9 @@ RECIPE {
     },
     energy_required = 45,
 	category = 'aoe-category-farm-plot-maize'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-plot-maize-magnesium-recipe',
     type = 'recipe',
     enabled = false,
@@ -72,9 +72,9 @@ RECIPE {
     },
     energy_required = 35,
 	category = 'aoe-category-farm-plot-maize'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-plot-maize-module-1-recipe',
     type = 'recipe',
     enabled = false,
@@ -95,9 +95,35 @@ RECIPE {
 	main_product = "aoe-maize-module-1a",
     energy_required = 130,
 	category = 'aoe-category-farm-plot-maize'
-}
+}})
 
-RECIPE {
+data:extend({{
+	name = 'aoe-squeezer-maize-kernels-plant-oil-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-maize-kernels', amount = 10}
+	},
+	results = {
+		{type = 'fluid', name = 'aoe-plant-oil', amount = 100}
+    },
+	icons = {
+	  {
+		icon = data.raw.fluid["aoe-plant-oil"].icon,
+		icon_size = data.raw.fluid["aoe-plant-oil"].icon_size
+	  },
+	  {
+		icon = data.raw.item["aoe-maize-kernels"].icon,
+		icon_size = data.raw.item["aoe-maize-kernels"].icon_size,
+		scale = 0.4,
+		shift = {8,8}
+	  }
+	},
+	energy_required = 4,
+	category = 'aoe-category-squeezing'
+}})
+
+data:extend({{
 	name = 'aoe-gene-lab-soybean-seeds-recipe',
     type = 'recipe',
     enabled = false,
@@ -113,9 +139,9 @@ RECIPE {
     },
     energy_required = 90,
 	category = 'aoe-category-gene-lab'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-greenhouse-soybean-seeds-recipe',
     type = 'recipe',
     enabled = false,
@@ -127,9 +153,9 @@ RECIPE {
     },
     energy_required = 2,
 	category = 'aoe-category-greenhouse'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-plot-soybeans-recipe',
     type = 'recipe',
     enabled = false,
@@ -143,9 +169,9 @@ RECIPE {
     },
     energy_required = 60,
 	category = 'aoe-category-farm-plot-soybean'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-plot-soybeans-module-1-recipe',
     type = 'recipe',
     enabled = false,
@@ -162,9 +188,9 @@ RECIPE {
 	main_product = "aoe-soybeans-module-1",
     energy_required = 150,
 	category = 'aoe-category-farm-plot-soybean'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crushing-soy-flour-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -176,9 +202,9 @@ RECIPE {
     },
 	energy_required = 1,
 	category = 'aoe-category-crushing'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-mixing-soy-milk-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -191,9 +217,9 @@ RECIPE {
     },
 	energy_required = 2.4,
 	category = 'aoe-category-mixing'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-mixing-soy-meat-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -206,24 +232,35 @@ RECIPE {
     },
 	energy_required = 1,
 	category = 'aoe-category-mixing'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-squeezer-soybean-seeds-plant-oil-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-soybean-seeds', amount = 10},
-		{type = 'fluid', name = 'aoe-pressure', amount = 80}
+		{type = 'item', name = 'aoe-soybean-seeds', amount = 10}
 	},
 	results = {
 		{type = 'fluid', name = 'aoe-plant-oil', amount = 100}
     },
+	icons = {
+	  {
+		icon = data.raw.fluid["aoe-plant-oil"].icon,
+		icon_size = data.raw.fluid["aoe-plant-oil"].icon_size
+	  },
+	  {
+		icon = data.raw.item["aoe-soybean-seeds"].icon,
+		icon_size = data.raw.item["aoe-soybean-seeds"].icon_size,
+		scale = 0.4,
+		shift = {8,8}
+	  }
+	},
 	energy_required = 4,
 	category = 'aoe-category-squeezing'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crushing-soy-flour-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -235,9 +272,9 @@ RECIPE {
     },
 	energy_required = 1,
 	category = 'aoe-category-crushing'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-gene-lab-egg-recipe',
     type = 'recipe',
     enabled = false,
@@ -253,9 +290,9 @@ RECIPE {
     },
     energy_required = 60,
 	category = 'aoe-category-gene-lab'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-crafting-bedding-recipe',
     type = 'recipe',
     enabled = false,
@@ -269,9 +306,9 @@ RECIPE {
         {type = 'item', name = 'aoe-bedding', amount = 1}
     },
     energy_required = 1
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-chicken-coop-chicken-recipe',
     type = 'recipe',
     enabled = false,
@@ -287,9 +324,9 @@ RECIPE {
     energy_required = 15,
 	main_product = 'aoe-chicken',
 	category = 'aoe-category-farm-chicken-coop'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-chicken-coop-egg-recipe',
     type = 'recipe',
     enabled = false,
@@ -305,9 +342,9 @@ RECIPE {
     energy_required = 15,
 	main_product = 'aoe-egg',
 	category = 'aoe-category-farm-chicken-coop'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-crafting-chicken-coop-recipe',
     type = 'recipe',
     enabled = false,
@@ -320,9 +357,9 @@ RECIPE {
         {type = 'item', name = 'aoe-farm-chicken-coop', amount = 1}
     },
     energy_required = 2
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-slaughterhouse-chicken-recipe',
     type = 'recipe',
     enabled = false,
@@ -336,9 +373,9 @@ RECIPE {
     energy_required = 4,
 	main_product = 'aoe-poultry',
 	category = 'aoe-category-slaughtering'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-chicken-coop-chicken-module-1-recipe',
     type = 'recipe',
     enabled = false,
@@ -356,9 +393,9 @@ RECIPE {
 	main_product = 'aoe-chicken-module-1',
     energy_required = 45,
 	category = 'aoe-category-farm-chicken-coop'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-gene-lab-lamb-recipe',
     type = 'recipe',
     enabled = false,
@@ -374,9 +411,9 @@ RECIPE {
     },
     energy_required = 120,
 	category = 'aoe-category-gene-lab'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-barn-sheep-recipe',
     type = 'recipe',
     enabled = false,
@@ -392,9 +429,9 @@ RECIPE {
     },
     energy_required = 70,
 	category = 'aoe-category-farm-barn-sheep'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-barn-wool-recipe',
     type = 'recipe',
     enabled = false,
@@ -413,9 +450,9 @@ RECIPE {
     energy_required = 10,
 	main_product = 'aoe-wool',
 	category = 'aoe-category-farm-barn-sheep'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-barn-lamb-recipe',
     type = 'recipe',
     enabled = false,
@@ -431,9 +468,9 @@ RECIPE {
     energy_required = 35,
 	main_product = 'aoe-lamb',
 	category = 'aoe-category-farm-barn-sheep'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-crafting-barn-recipe',
     type = 'recipe',
     enabled = false,
@@ -447,9 +484,9 @@ RECIPE {
         {type = 'item', name = 'aoe-farm-barn', amount = 1}
     },
     energy_required = 2
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-slaughterhouse-sheep-recipe',
     type = 'recipe',
     enabled = false,
@@ -464,9 +501,9 @@ RECIPE {
     energy_required = 4,
 	main_product = 'aoe-wool',
 	category = 'aoe-category-slaughtering'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-barn-sheep-module-1-recipe',
     type = 'recipe',
     enabled = false,
@@ -483,9 +520,9 @@ RECIPE {
 	main_product = 'aoe-sheep-module-1',
     energy_required = 100,
 	category = 'aoe-category-farm-barn-sheep'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-gene-lab-calf-recipe',
     type = 'recipe',
     enabled = false,
@@ -501,9 +538,9 @@ RECIPE {
     },
     energy_required = 150,
 	category = 'aoe-category-gene-lab'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-barn-cow-recipe',
     type = 'recipe',
     enabled = false,
@@ -521,9 +558,9 @@ RECIPE {
 	main_product = 'aoe-cow',
     energy_required = 90,
 	category = 'aoe-category-farm-barn-cow'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-barn-milk-recipe',
     type = 'recipe',
     enabled = false,
@@ -543,9 +580,9 @@ RECIPE {
     energy_required = 16,
 	main_product = 'aoe-milk',
 	category = 'aoe-category-farm-barn-cow'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-barn-calf-recipe',
     type = 'recipe',
     enabled = false,
@@ -564,9 +601,9 @@ RECIPE {
     energy_required = 40,
 	main_product = 'aoe-calf',
 	category = 'aoe-category-farm-barn-cow'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-slaughterhouse-cow-recipe',
     type = 'recipe',
     enabled = false,
@@ -593,9 +630,9 @@ RECIPE {
 	  }
 	},
 	category = 'aoe-category-slaughtering'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-slaughterhouse-ox-recipe',
     type = 'recipe',
     enabled = false,
@@ -622,9 +659,9 @@ RECIPE {
 	  }
 	},
 	category = 'aoe-category-slaughtering'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-barn-cow-module-1-recipe',
     type = 'recipe',
     enabled = false,
@@ -645,9 +682,9 @@ RECIPE {
 	main_product = 'aoe-cow-module-1',
     energy_required = 120,
 	category = 'aoe-category-farm-barn-cow'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-high-pressure-leather-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -662,9 +699,9 @@ RECIPE {
     },
 	energy_required = 6,
 	category = 'aoe-category-high-pressure-heating'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-gene-lab-trees-recipe',
     type = 'recipe',
     enabled = false,
@@ -682,9 +719,9 @@ RECIPE {
 	main_product = 'aoe-apple-tree-seeds',
     energy_required = 40,
 	category = 'aoe-category-gene-lab'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-plot-spruce-tree-recipe',
     type = 'recipe',
     enabled = false,
@@ -697,9 +734,9 @@ RECIPE {
     },
     energy_required = 10,
 	category = 'aoe-category-farm-plot-spruce-tree'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-plot-spruce-tree-loam-recipe',
     type = 'recipe',
     enabled = false,
@@ -725,9 +762,9 @@ RECIPE {
 	},
     energy_required = 6,
 	category = 'aoe-category-farm-plot-spruce-tree'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-forestry-log-spruce-tree-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -741,9 +778,9 @@ RECIPE {
 	energy_required = 5,
 	main_product = 'aoe-log',
 	category = 'aoe-category-harvesting',
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-plot-spruce-tree-module-1-recipe',
     type = 'recipe',
     enabled = false,
@@ -760,9 +797,9 @@ RECIPE {
 	main_product = "aoe-spruce-tree-module-1",
     energy_required = 40,
 	category = 'aoe-category-farm-plot-spruce-tree'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-plot-rubber-tree-recipe',
     type = 'recipe',
     enabled = false,
@@ -777,9 +814,9 @@ RECIPE {
     },
     energy_required = 12,
 	category = 'aoe-category-farm-plot-rubber-tree'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-forestry-rubber-tree-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -795,9 +832,9 @@ RECIPE {
 	energy_required = 5,
 	main_product = 'aoe-latex',
 	category = 'aoe-category-harvesting',
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-plot-rubber-tree-module-1-recipe',
     type = 'recipe',
     enabled = false,
@@ -815,9 +852,9 @@ RECIPE {
 	main_product = "aoe-rubber-tree-module-1",
     energy_required = 60,
 	category = 'aoe-category-farm-plot-rubber-tree'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-plot-apple-tree-recipe',
     type = 'recipe',
     enabled = false,
@@ -831,9 +868,9 @@ RECIPE {
     },
     energy_required = 15,
 	category = 'aoe-category-farm-plot-apple-tree'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-plot-apple-recipe',
     type = 'recipe',
     enabled = false,
@@ -847,9 +884,9 @@ RECIPE {
     },
     energy_required = 15,
 	category = 'aoe-category-farm-plot-apple-tree'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-forestry-apple-tree-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -863,9 +900,9 @@ RECIPE {
 	energy_required = 5,
 	main_product = 'aoe-apple',
 	category = 'aoe-category-harvesting',
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-greenhouse-apple-tree-seeds-recipe',
 	type = 'recipe',
 	enabled = true,
@@ -877,9 +914,9 @@ RECIPE {
     },
 	energy_required = 3,
 	category = 'aoe-category-greenhouse'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-plot-apple-tree-module-1-recipe',
     type = 'recipe',
     enabled = false,
@@ -896,9 +933,9 @@ RECIPE {
 	main_product = "aoe-apple-tree-module-1",
     energy_required = 80,
 	category = 'aoe-category-farm-plot-apple-tree'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-plot-olive-tree-recipe',
     type = 'recipe',
     enabled = false,
@@ -913,9 +950,9 @@ RECIPE {
     },
     energy_required = 15,
 	category = 'aoe-category-farm-plot-olive-tree'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-plot-olive-recipe',
     type = 'recipe',
     enabled = false,
@@ -930,9 +967,9 @@ RECIPE {
     },
     energy_required = 15,
 	category = 'aoe-category-farm-plot-olive-tree'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-forestry-olive-tree-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -946,9 +983,9 @@ RECIPE {
 	energy_required = 5,
 	main_product = 'aoe-olive',
 	category = 'aoe-category-harvesting',
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-greenhouse-olive-tree-seeds-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -960,9 +997,9 @@ RECIPE {
     },
 	energy_required = 3,
 	category = 'aoe-category-greenhouse'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-plot-olive-tree-module-1-recipe',
     type = 'recipe',
     enabled = false,
@@ -980,9 +1017,9 @@ RECIPE {
 	main_product = "aoe-olive-tree-module-1",
     energy_required = 100,
 	category = 'aoe-category-farm-plot-olive-tree'
-}
+}})
 
-RECIPE {
+data:extend({{
     name = 'aoe-farm-plot-grass-recipe',
     type = 'recipe',
     enabled = false,
@@ -995,9 +1032,9 @@ RECIPE {
     },
     energy_required = 12,
 	category = 'aoe-category-farm-plot-rest'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-high-pressure-hay-bale-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1010,9 +1047,9 @@ RECIPE {
     },
 	energy_required = 2,
 	category = 'aoe-category-high-pressure-heating'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-grass-fiber-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1035,9 +1072,9 @@ RECIPE {
 	  }
 	},
 	energy_required = 1.5
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-saw-blade-iron-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1048,9 +1085,9 @@ RECIPE {
         {type = 'item', name = 'aoe-saw-blade-iron', amount = 1}
     },
 	energy_required = 2
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-saw-blade-steel-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1061,9 +1098,9 @@ RECIPE {
         {type = 'item', name = 'aoe-saw-blade-steel', amount = 1}
     },
 	energy_required = 2
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-sawmill-wood-iron-saw-blade-recipe',
 	type = 'recipe',
 	enabled = true,
@@ -1092,9 +1129,9 @@ RECIPE {
 	},
 	energy_required = 2,
 	category = 'aoe-category-sawing'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-sawmill-wood-steel-saw-blade-recipe',
 	type = 'recipe',
 	enabled = true,
@@ -1123,9 +1160,9 @@ RECIPE {
 	},
 	energy_required = 2,
 	category = 'aoe-category-sawing'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-smelting-glass-3-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1152,9 +1189,9 @@ RECIPE {
 	},
 	energy_required = 4.8,
 	category = 'smelting'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-smelting-soda-ash-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1167,9 +1204,9 @@ RECIPE {
     },
 	energy_required = 2.4,
 	category = 'smelting'
-}
+}})
 
-RECIPE {
+data:extend({{
 	name = 'aoe-crafting-science-03-alternate-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1183,4 +1220,4 @@ RECIPE {
         {type = 'item', name = 'aoe-science-03', amount = 1}
     },
 	energy_required = 4
-}
+}})

@@ -1,4 +1,4 @@
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-tree-farm",
     icon = "__aoe__/img/entities/tree-farm.png",
@@ -7,9 +7,9 @@ ITEM {
     order = "b",
     place_result = "aoe-tree-farm",
     stack_size = 25,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "assembling-machine",
     name = "aoe-tree-farm",
 	crafting_categories = {"aoe-category-growing"},
@@ -43,4 +43,4 @@ ENTITY {
         }
       }
     }
-}
+}})

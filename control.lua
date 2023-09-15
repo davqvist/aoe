@@ -260,12 +260,12 @@ script.on_event(defines.events.on_script_trigger_effect,
 			p.character_mining_speed_modifier = p.character_mining_speed_modifier+1
 			p.character_crafting_speed_modifier = p.character_crafting_speed_modifier+1
 			p.remove_item{name="aoe-tea", count=1}
-		end	
+		end
 		if event.effect_id == "aoe-trigger-coffee" then
 			if global.coffeetick == nil then global.coffeetick = {} end
 			global.coffeetick[game.tick+3600] = p.index
 			p.character_running_speed_modifier = p.character_running_speed_modifier+1
 			p.remove_item{name="aoe-coffee", count=1}
-		end		
+		end
 	end
 )

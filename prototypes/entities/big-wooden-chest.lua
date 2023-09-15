@@ -2,7 +2,7 @@ require ("__base__/prototypes/entity/pipecovers")
 require ("circuit-connector-sprites")
 local sounds = require("__base__/prototypes/entity/sounds")
 
-ITEM {
+data:extend({{
     type = "item",
     name = "aoe-big-wooden-chest",
     icon = "__aoe__/img/entities/big-wooden-chest.png",
@@ -11,12 +11,12 @@ ITEM {
     order = "c",
     place_result = "aoe-big-wooden-chest",
     stack_size = 50,
-}
+}})
 
-ENTITY {
+data:extend({{
     type = "container",
     name = "aoe-big-wooden-chest",
-	icon = "__aoe__/img/entities/big-wooden-chest.png",
+    icon = "__aoe__/img/entities/big-wooden-chest.png",
     icon_size = 192,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.1, result = "aoe-big-wooden-chest"},
@@ -43,4 +43,4 @@ ENTITY {
     circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
     circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance
-}
+}})
