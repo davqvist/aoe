@@ -68,8 +68,20 @@ data:extend({{
         {type = 'item', name = 'aoe-magnesium-dust', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoe-maize', amount = 4}
+        {type = 'item', name = 'aoe-maize', amount = 5}
     },
+	icons = {
+	  {
+		icon = data.raw.item["aoe-maize"].icon,
+		icon_size = data.raw.item["aoe-maize"].icon_size
+	  },
+	  {
+		icon = data.raw.item["aoe-magnesium-dust"].icon,
+		icon_size = data.raw.item["aoe-magnesium-dust"].icon_size,
+		scale = 0.4,
+		shift = {8,8}
+	  }
+	},
     energy_required = 35,
 	category = 'aoe-category-farm-plot-maize'
 }})
@@ -496,7 +508,7 @@ data:extend({{
     results = {
         {type = 'item', name = 'aoe-wool', amount = 4},
 		{type = 'item', name = 'aoe-meat', amount = 8},
-		{type = 'item', name = 'aoe-bones', amount = 3}
+		{type = 'item', name = 'aoe-bones', amount = 4}
     },
     energy_required = 4,
 	main_product = 'aoe-wool',
@@ -761,6 +773,24 @@ data:extend({{
 	  }
 	},
     energy_required = 6,
+	category = 'aoe-category-farm-plot-spruce-tree'
+}})
+
+data:extend({{
+    name = 'aoe-farm-plot-resin-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoe-spruce-tree', amount = 1},
+        {type = 'item', name = 'iron-stick', amount = 1},
+        {type = 'fluid', name = 'water', amount = 100}
+    },
+    results = {
+        {type = 'item', name = 'aoe-resin', amount = 2},
+		{type = 'item', name = 'aoe-spruce-tree', amount = 1, probability = 0.8, catalyst_amount = 1 }
+    },
+	main_product = 'aoe-resin',
+    energy_required = 8,
 	category = 'aoe-category-farm-plot-spruce-tree'
 }})
 
@@ -1163,6 +1193,21 @@ data:extend({{
 }})
 
 data:extend({{
+	name = 'aoe-smelting-soda-ash-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'water', amount = 50},
+		{type = 'item', name = 'aoe-kelp', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoe-soda-ash', amount = 1}
+    },
+	energy_required = 2.4,
+	category = 'smelting'
+}})
+
+data:extend({{
 	name = 'aoe-smelting-glass-3-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1192,18 +1237,261 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoe-smelting-soda-ash-recipe',
+	name = 'aoe-mixing-fertilizer-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'water', amount = 50},
-		{type = 'item', name = 'aoe-kelp', amount = 1}
+		{type = 'item', name = 'aoe-quicklime', amount = 6},
+		{type = 'item', name = 'aoe-soda-ash', amount = 5},
+		{type = 'item', name = 'aoe-bones', amount = 2},
+		{type = 'item', name = 'aoe-magnesium-dust', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-soda-ash', amount = 1}
+		{type = 'item', name = 'aoe-fertilizer', amount = 7}
     },
-	energy_required = 2.4,
-	category = 'smelting'
+	energy_required = 3.5,
+	category = 'aoe-category-mixing'
+}})
+
+data:extend({{
+	name = 'aoe-mixing-fish-water-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-quicklime', amount = 2},
+		{type = 'fluid', name = 'aoe-brine', amount = 100}
+	},
+	results = {
+		{type = 'fluid', name = 'aoe-fish-water', amount = 100}
+    },
+	energy_required = 4.8,
+	category = 'aoe-category-mixing'
+}})
+
+data:extend({{
+    name = 'aoe-farm-reservoir-kelp-2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'aoe-fish-water', amount = 120}
+    },
+    results = {
+        {type = 'item', name = 'aoe-kelp', amount = 1}
+    },
+    energy_required = 16,
+	category = 'aoe-category-farm-reservoir-kelp'
+}})
+
+data:extend({{
+    name = 'aoe-farm-reservoir-kelp-module-2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'aoe-fish-water', amount = 1000},
+        {type = 'item', name = 'aoe-kelp-module-1', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoe-kelp-module-1', amount=1, probability = 0.512, catalyst_amount = 1},
+        {type = 'item', name = 'aoe-kelp-module-2', amount=1, probability = 0.256},
+        {type = 'item', name = 'aoe-kelp-module-3', amount=1, probability = 0.064},
+        {type = 'item', name = 'aoe-kelp-module-4', amount=1, probability = 0.016},
+        {type = 'item', name = 'aoe-kelp-module-5', amount=1, probability = 0.004}
+    },
+	main_product = 'aoe-kelp-module-2',
+    energy_required = 120,
+	category = 'aoe-category-farm-reservoir-kelp'
+}})
+
+data:extend({{
+    name = 'aoe-farm-reservoir-fish-2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoe-fish-eggs', amount = 7},
+		{type = 'fluid', name = 'aoe-fish-water', amount = 300}
+    },
+    results = {
+        {type = 'item', name = 'raw-fish', amount = 3}
+    },
+    energy_required = 60,
+	category = 'aoe-category-farm-reservoir-fish'
+}})
+
+data:extend({{
+    name = 'aoe-farm-reservoir-fish-eggs-2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'raw-fish', amount = 2},
+		{type = 'item', name = 'aoe-fish-meat', amount = 2},
+		{type = 'item', name = 'aoe-soy-flour', amount = 2},
+		{type = 'item', name = 'aoe-kelp', amount = 2},
+		{type = 'fluid', name = 'aoe-fish-water', amount = 80}
+    },
+    results = {
+        {type = 'item', name = 'aoe-fish-eggs', amount = 14}
+    },
+    energy_required = 20,
+	category = 'aoe-category-farm-reservoir-fish'
+}})
+
+data:extend({{
+    name = 'aoe-farm-reservoir-fish-module-2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoe-fish-module-1', amount = 1},
+		{type = 'item', name = 'aoe-kelp', amount = 1},
+		{type = 'item', name = 'aoe-soy-flour', amount = 1},
+		{type = 'fluid', name = 'aoe-fish-water', amount = 400}
+    },
+    results = {
+        {type = 'item', name = 'aoe-fish-module-1', amount=1, probability = 0.25, catalyst_amount=1},
+		{type = 'item', name = 'aoe-fish-module-2', amount=1, probability = 0.5},
+        {type = 'item', name = 'aoe-fish-module-3', amount=1, probability = 0.05}
+    },
+	main_product = 'aoe-fish-module-2',
+    energy_required = 150,
+	category = 'aoe-category-farm-reservoir-fish'
+}})
+
+data:extend({{
+    name = 'aoe-farm-plot-flax-2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoe-flax-seed', amount = 3},
+        {type = 'item', name = 'aoe-wood-pulp', amount = 2},
+        {type = 'item', name = 'aoe-fertilizer', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoe-flax', amount = 4}
+    },
+    energy_required = 42,
+	category = 'aoe-category-farm-plot-flax'
+}})
+
+data:extend({{
+    name = 'aoe-farm-plot-flax-module-2a-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'item', name = 'aoe-flax-module-1a', amount = 2},
+		{type = 'item', name = 'aoe-wood-pulp', amount = 8},
+        {type = 'item', name = 'aoe-fertilizer', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoe-flax-module-2a', amount=1, probability = 0.6},
+        {type = 'item', name = 'aoe-flax-module-2b', amount=1, probability = 0.4},
+        {type = 'item', name = 'aoe-flax-module-3a', amount=1, probability = 0.12},
+        {type = 'item', name = 'aoe-flax-module-3b', amount=1, probability = 0.08},
+        {type = 'item', name = 'aoe-flax-module-4a', amount=1, probability = 0.03},
+        {type = 'item', name = 'aoe-flax-module-4b', amount=1, probability = 0.01}
+    },
+	main_product = "aoe-flax-module-2a",
+    energy_required = 150,
+	category = 'aoe-category-farm-plot-flax'
+}})
+
+data:extend({{
+    name = 'aoe-farm-plot-flax-module-2b-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'item', name = 'aoe-flax-module-1b', amount = 2},
+		{type = 'item', name = 'aoe-wood-pulp', amount = 8},
+        {type = 'item', name = 'aoe-fertilizer', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoe-flax-module-2a', amount=1, probability = 0.4},
+        {type = 'item', name = 'aoe-flax-module-2b', amount=1, probability = 0.6},
+        {type = 'item', name = 'aoe-flax-module-3a', amount=1, probability = 0.08},
+        {type = 'item', name = 'aoe-flax-module-3b', amount=1, probability = 0.12},
+        {type = 'item', name = 'aoe-flax-module-4a', amount=1, probability = 0.01},
+        {type = 'item', name = 'aoe-flax-module-4b', amount=1, probability = 0.03}
+    },
+	main_product = "aoe-flax-module-2b",
+    energy_required = 150,
+	category = 'aoe-category-farm-plot-flax'
+}})
+
+data:extend({{
+    name = 'aoe-farm-plot-tea-leaves-2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoe-tea-seed', amount = 2},
+        {type = 'item', name = 'aoe-soil', amount = 6},
+        {type = 'item', name = 'aoe-leaves', amount = 2},
+		{type = 'item', name = 'aoe-fertilizer', amount = 1},
+        {type = 'fluid', name = 'water', amount = 100}
+		
+    },
+    results = {
+        {type = 'item', name = 'aoe-tea-leaves', amount = 3}
+    },
+    energy_required = 20,
+	category = 'aoe-category-farm-plot-tea'
+}})
+
+data:extend({{
+    name = 'aoe-farm-plot-tea-leaves-module-2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'item', name = 'aoe-tea-leaves-module-1', amount = 1},
+		{type = 'item', name = 'aoe-leaves', amount = 8},
+		{type = 'item', name = 'aoe-fertilizer', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoe-tea-leaves-module-2', amount=1, probability = 0.5},
+        {type = 'item', name = 'aoe-tea-leaves-module-3', amount=1, probability = 0.1},
+        {type = 'item', name = 'aoe-tea-leaves-module-4', amount=1, probability = 0.02}
+	},
+	main_product = 'aoe-tea-leaves-module-2',
+    energy_required = 120,
+	category = 'aoe-category-farm-plot-tea'
+}})
+
+data:extend({{
+    name = 'aoe-farm-plot-coffee-plant-2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoe-coffee-beans', amount = 2},
+        {type = 'item', name = 'aoe-soil', amount = 6},
+        {type = 'item', name = 'aoe-charcoal', amount = 1},
+		{type = 'item', name = 'aoe-fertilizer', amount = 1},
+        {type = 'fluid', name = 'water', amount = 100}
+    },
+    results = {
+        {type = 'item', name = 'aoe-coffee-plant', amount = 3}
+    },
+    energy_required = 20,
+	category = 'aoe-category-farm-plot-coffee'
+}})
+
+data:extend({{
+    name = 'aoe-farm-plot-coffee-plant-module-2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'item', name = 'aoe-coffee-plant-module-1', amount = 1},
+		{type = 'item', name = 'aoe-charcoal', amount = 4},
+		{type = 'item', name = 'aoe-fertilizer', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoe-coffee-plant-module-2', amount=1, probability = 0.5},
+        {type = 'item', name = 'aoe-coffee-plant-module-3', amount=1, probability = 0.1},
+        {type = 'item', name = 'aoe-coffee-plant-module-4', amount=1, probability = 0.02}
+	},
+	main_product = 'aoe-coffee-plant-module-2',
+    energy_required = 120,
+	category = 'aoe-category-farm-plot-coffee'
 }})
 
 data:extend({{
@@ -1220,4 +1508,134 @@ data:extend({{
         {type = 'item', name = 'aoe-science-03', amount = 1}
     },
 	energy_required = 4
+}})
+
+data:extend({{
+    name = 'aoe-farm-plot-maize-2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoe-maize-kernels', amount = 4},
+        {type = 'item', name = 'aoe-loam', amount = 5},
+        {type = 'item', name = 'aoe-fertilizer', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoe-maize', amount = 7}
+    },
+    energy_required = 80,
+	category = 'aoe-category-farm-plot-maize'
+}})
+
+data:extend({{
+    name = 'aoe-farm-plot-maize-magnesium-2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoe-maize-kernels', amount = 3},
+        {type = 'item', name = 'aoe-loam', amount = 5},
+        {type = 'item', name = 'aoe-magnesium-dust', amount = 1},
+        {type = 'item', name = 'aoe-fertilizer', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoe-maize', amount = 8}
+    },
+	icons = {
+	  {
+		icon = data.raw.item["aoe-maize"].icon,
+		icon_size = data.raw.item["aoe-maize"].icon_size
+	  },
+	  {
+		icon = data.raw.item["aoe-magnesium-dust"].icon,
+		icon_size = data.raw.item["aoe-magnesium-dust"].icon_size,
+		scale = 0.4,
+		shift = {8,8}
+	  }
+	},
+    energy_required = 55,
+	category = 'aoe-category-farm-plot-maize'
+}})
+
+data:extend({{
+    name = 'aoe-farm-plot-maize-module-2a-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'item', name = 'aoe-maize-module-1a', amount = 2},
+        {type = 'item', name = 'aoe-loam', amount = 8},
+        {type = 'item', name = 'aoe-magnesium-dust', amount = 2},
+        {type = 'item', name = 'aoe-fertilizer', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoe-maize-module-2a', amount=1, probability = 0.6},
+        {type = 'item', name = 'aoe-maize-module-2b', amount=1, probability = 0.4},
+        {type = 'item', name = 'aoe-maize-module-3a', amount=1, probability = 0.12},
+        {type = 'item', name = 'aoe-maize-module-3b', amount=1, probability = 0.08},
+        {type = 'item', name = 'aoe-maize-module-4a', amount=1, probability = 0.03},
+        {type = 'item', name = 'aoe-maize-module-4b', amount=1, probability = 0.01}
+    },
+	main_product = "aoe-maize-module-2a",
+    energy_required = 130,
+	category = 'aoe-category-farm-plot-maize'
+}})
+
+data:extend({{
+    name = 'aoe-farm-plot-maize-module-2b-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'item', name = 'aoe-maize-module-1b', amount = 2},
+        {type = 'item', name = 'aoe-loam', amount = 8},
+        {type = 'item', name = 'aoe-magnesium-dust', amount = 2},
+        {type = 'item', name = 'aoe-fertilizer', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoe-maize-module-2a', amount=1, probability = 0.4},
+        {type = 'item', name = 'aoe-maize-module-2b', amount=1, probability = 0.6},
+        {type = 'item', name = 'aoe-maize-module-3a', amount=1, probability = 0.08},
+        {type = 'item', name = 'aoe-maize-module-3b', amount=1, probability = 0.12},
+        {type = 'item', name = 'aoe-maize-module-4a', amount=1, probability = 0.01},
+        {type = 'item', name = 'aoe-maize-module-4b', amount=1, probability = 0.03}
+    },
+	main_product = "aoe-maize-module-2b",
+    energy_required = 200,
+	category = 'aoe-category-farm-plot-maize'
+}})
+
+data:extend({{
+    name = 'aoe-farm-plot-soybeans-2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoe-soybean-seeds', amount = 3},
+		{type = 'item', name = 'aoe-quicklime', amount = 2},
+        {type = 'item', name = 'aoe-loam', amount = 3},
+        {type = 'item', name = 'aoe-fertilizer', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoe-soybeans', amount = 6}
+    },
+    energy_required = 60,
+	category = 'aoe-category-farm-plot-soybean'
+}})
+
+data:extend({{
+    name = 'aoe-farm-plot-soybeans-module-2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoe-soybeans-module-1', amount = 2},
+		{type = 'item', name = 'aoe-quicklime', amount = 4},
+        {type = 'item', name = 'aoe-loam', amount = 5},
+        {type = 'item', name = 'aoe-fertilizer', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoe-soybeans-module-2', amount=1},
+        {type = 'item', name = 'aoe-soybeans-module-3', amount=1, probability = 0.1},
+        {type = 'item', name = 'aoe-soybeans-module-4', amount=1, probability = 0.01}
+    },
+	main_product = "aoe-soybeans-module-2",
+    energy_required = 150,
+	category = 'aoe-category-farm-plot-soybean'
 }})

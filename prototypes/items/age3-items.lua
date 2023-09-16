@@ -1148,7 +1148,7 @@ data:extend({{
 
 data:extend({{
     type = "item",
-    name = "aoe-fertilzer",
+    name = "aoe-fertilizer",
     icon = "__aoe__/img/items/fertilizer.png",
     icon_size = 64,
     subgroup = "aoe-fauna-items",

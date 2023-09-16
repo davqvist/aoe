@@ -191,7 +191,7 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-kelp-tech",
+    name = "aoe-kelp-tech-1",
     icon_size = 64,
     icon = "__aoe__/img/items/kelp.png",
     prerequisites = {"aoe-fluid-handling-tech"},
@@ -223,7 +223,7 @@ data:extend({{
     name = "aoe-basic-genetics-tech",
     icon_size = 64,
     icon = "__aoe__/img/fluids/bacteria.png",
-    prerequisites = {"aoe-kelp-tech"},
+    prerequisites = {"aoe-kelp-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -330,7 +330,7 @@ data:extend({{
     name = "aoe-paper-tech-1",
     icon_size = 64,
     icon = "__aoe__/img/items/paper.png",
-    prerequisites = {"aoe-kelp-tech"},
+    prerequisites = {"aoe-kelp-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -360,7 +360,7 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-flax-tech",
+    name = "aoe-flax-tech-1",
     icon_size = 64,
     icon = "__aoe__/img/items/flax.png",
     prerequisites = {"aoe-paper-tech-1", "aoe-basic-genetics-tech"},
@@ -401,7 +401,7 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-drinks-tech",
+    name = "aoe-drinks-tech-1",
     icon_size = 64,
     icon = "__aoe__/img/items/tea.png",
     prerequisites = {"aoe-basic-genetics-tech"},

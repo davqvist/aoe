@@ -1040,7 +1040,7 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-fish-tech",
+    name = "aoe-fish-tech-1",
     icon_size = 64, icon_mipmaps = 4,
     icon = "__base__/graphics/icons/fish.png",
     prerequisites = {"aoe-salt-tech", "aoe-concrete-tech"},
@@ -1081,7 +1081,7 @@ data:extend({{
     name = "aoe-agriculture-age-tech",
     icon_size = 64,
     icon = "__aoe__/img/items/science-pack-3.png",
-    prerequisites = {"aoe-fish-tech"},
+    prerequisites = {"aoe-fish-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",

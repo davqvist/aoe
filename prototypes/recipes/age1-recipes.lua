@@ -681,7 +681,7 @@ data:extend({{
     enabled = false,
 	ingredients = {
         {type = 'item', name = 'aoe-tea-seed', amount = 2},
-        {type = 'item', name = 'aoe-soil', amount = 12},
+        {type = 'item', name = 'aoe-soil', amount = 10},
         {type = 'item', name = 'aoe-leaves', amount = 4},
         {type = 'fluid', name = 'water', amount = 100}
 		
@@ -718,7 +718,7 @@ data:extend({{
     enabled = false,
 	ingredients = {
         {type = 'item', name = 'aoe-coffee-beans', amount = 2},
-        {type = 'item', name = 'aoe-soil', amount = 12},
+        {type = 'item', name = 'aoe-soil', amount = 10},
         {type = 'item', name = 'aoe-charcoal', amount = 2},
         {type = 'fluid', name = 'water', amount = 100}
     },

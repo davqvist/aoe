@@ -21,8 +21,20 @@ data:extend({{
     icon_size = 64,
     subgroup = "aoe-fluids-general",
     order = "d",
-	base_color = {r=0.0, g=0.22, b=0.3},
-	flow_color = {r=0.0, g=0.22, b=0.3},
+	base_color = {r=0.0, g=0.2, b=0.3},
+	flow_color = {r=0.0, g=0.2, b=0.3},
+	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoe-fish-water",
+    icon = "__aoe__/img/fluids/fish-water.png",
+    icon_size = 64,
+    subgroup = "aoe-fluids-general",
+    order = "e",
+	base_color = {r=0, g=0.4, b=0.5},
+    flow_color = {r=0, g=0.4, b=0.5},
 	default_temperature = 20
 }})
 
