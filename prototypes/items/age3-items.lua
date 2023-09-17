@@ -1165,3 +1165,63 @@ data:extend({{
     order = "c",
     stack_size = 200
 }})
+
+data:extend({{
+    type = "item",
+    name = "aoe-puree",
+    icon = "__aoe__/img/items/puree.png",
+    icon_size = 64,
+    subgroup = "aoe-flora-fermentation",
+    order = "a",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-sugar",
+    icon = "__aoe__/img/items/sugar.png",
+    icon_size = 64,
+    subgroup = "aoe-flora-fermentation",
+    order = "b",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-yeast",
+    icon = "__aoe__/img/items/yeast.png",
+    icon_size = 64,
+    subgroup = "aoe-flora-fermentation",
+    order = "c",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-bronze-plate",
+    icon = "__aoe__/img/items/bronze-plate.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-alloys",
+    order = "a",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-bronze-rod",
+    icon = "__aoe__/img/items/bronze-rod.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-alloys",
+    order = "b",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-bronze-gear",
+    icon = "__aoe__/img/items/bronze-gear.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-alloys",
+    order = "c",
+    stack_size = 200
+}})

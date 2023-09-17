@@ -270,10 +270,8 @@ data:extend({{
 		{type = 'item', name = 'aoe-agar', amount = 1}
     },
     results = {
-        {type = 'fluid', name = 'aoe-bacteria', amount = 10},
-		{type = 'item', name = 'aoe-petri-dish', amount = 1, catalyst_amount = 1}
+        {type = 'fluid', name = 'aoe-bacteria', amount = 10}
     },
-	main_product = 'aoe-bacteria',
     energy_required = 60,
 	category = 'aoe-category-gene-lab'
 }})
@@ -961,20 +959,6 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoe-crafting-science-02-recipe',
-	type = 'recipe',
-	enabled = false,
-	ingredients = {
-		{type = 'item', name = 'aoe-flask', amount = 1},
-		{type = 'item', name = 'copper-cable', amount = 8}
-	},
-	results = {
-        {type = 'item', name = 'aoe-science-02', amount = 1}
-    },
-	energy_required = 4
-}})
-
-data:extend({{
 	name = 'aoe-crafting-gas-vent-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1054,4 +1038,18 @@ data:extend({{
 	main_product = 'aoe-soil',
     energy_required = 16,
 	category = 'aoe-category-straining'
+}})
+
+data:extend({{
+	name = 'aoe-crafting-science-02-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-flask', amount = 1},
+		{type = 'item', name = 'copper-cable', amount = 8}
+	},
+	results = {
+        {type = 'item', name = 'aoe-science-02', amount = 1}
+    },
+	energy_required = 4
 }})

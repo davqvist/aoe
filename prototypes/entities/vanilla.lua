@@ -39,8 +39,11 @@ data.raw['assembling-machine']['assembling-machine-2'].module_specification = {
 }
 data.raw['item']['lab'].subgroup = "aoe-processing-buildings"
 data.raw['item']['lab'].order = "l"
-data.raw['item']['radar'].subgroup = "aoe-processing-buildings"
-data.raw['item']['radar'].order = "m"
+data.raw['item']['radar'].subgroup = "aoe-other-buildings"
+data.raw['item']['radar'].order = "a"
+data.raw['item']['chemical-plant'].subgroup = "aoe-specific-buildings"
+data.raw['item']['chemical-plant'].order = "o"
+data.raw['assembling-machine']['chemical-plant'].energy_usage = "420kW"
 
 data.raw['item']['burner-inserter'].subgroup = "aoe-inserter"
 data.raw['item']['burner-inserter'].order = "a"
@@ -72,7 +75,9 @@ data.raw['container']['steel-chest'].inventory_size = 300
 data.raw['container']['steel-chest'].collision_box = {{-1.4, -1.4}, {1.4, 1.4}}
 data.raw['container']['steel-chest'].selection_box = {{-1.5, -1.5}, {1.5, 1.5}}
 data.raw['container']['steel-chest'].fast_replaceable_group = "big-container"
-	
+data.raw['item']['storage-tank'].subgroup = "aoe-storage"
+data.raw['item']['storage-tank'].order = "h"
+
 data.raw['lab']['lab'].fast_replaceable_group = "lab"
 
 

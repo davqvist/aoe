@@ -441,7 +441,7 @@ data:extend({{
     name = "aoe-chicken-tech",
     icon_size = 64,
     icon = "__aoe__/img/items/chicken.png",
-    prerequisites = {"aoe-maize-tech-1", "aoe-lime-tech", "aoe-hay-tech"},
+    prerequisites = {"aoe-maize-tech-1", "aoe-lime-tech", "aoe-hay-tech", "aoe-aluminium-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -820,6 +820,130 @@ data:extend({{
     },
     unit = {
         count = 50,
+        ingredients = {
+          {"aoe-science-02", 2},
+			    {"aoe-science-03", 1}
+        },
+        time = 30
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoe-sugar-tech",
+    icon_size = 64,
+    icon = "__aoe__/img/items/sugar.png",
+    prerequisites = {"aoe-fruit-tree-cultivation-tech","aoe-maize-tech-2"},
+	  effects = {
+	    {
+        type = "unlock-recipe",
+        recipe = "aoe-mixing-puree-apples-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoe-mixing-puree-maize-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoe-smelting-syrup-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoe-sedimenting-sugar-recipe"
+      }
+    },
+    unit = {
+        count = 60,
+        ingredients = {
+          {"aoe-science-02", 2},
+			    {"aoe-science-03", 1}
+        },
+        time = 30
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoe-bronze-tech",
+    icon_size = 64,
+    icon = "__aoe__/img/items/bronze-plate.png",
+    prerequisites = {"aoe-agriculture-science-alternate-tech","aoe-tin-tech"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-alloy-furnace-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-alloying-bronze-plate-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-bronze-gear-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-bronze-rod-recipe"
+      }
+    },
+    unit = {
+        count = 70,
+        ingredients = {
+          {"aoe-science-02", 2},
+			    {"aoe-science-03", 1}
+        },
+        time = 30
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoe-fermentation-tech",
+    icon_size = 64,
+    icon = "__aoe__/img/items/yeast.png",
+    prerequisites = {"aoe-bronze-tech","aoe-sugar-tech"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-chemical-plant-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-gene-lab-yeast-1-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoe-gene-lab-yeast-2-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoe-chemistry-ethanol-recipe"
+      }
+    },
+    unit = {
+        count = 70,
+        ingredients = {
+          {"aoe-science-02", 2},
+			    {"aoe-science-03", 1}
+        },
+        time = 30
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoe-metallurgy-age-tech",
+    icon_size = 64,
+    icon = "__aoe__/img/items/science-pack-4.png",
+    prerequisites = {"aoe-bronze-tech"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-science-04-recipe"
+      }
+    },
+    unit = {
+        count = 75,
         ingredients = {
           {"aoe-science-02", 2},
 			    {"aoe-science-03", 1}

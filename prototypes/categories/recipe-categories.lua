@@ -1,6 +1,10 @@
 data:extend({
   {
     type = "recipe-category",
+    name = "aoe-category-alloying",
+  },
+  {
+    type = "recipe-category",
     name = "aoe-category-burning",
   },
   {

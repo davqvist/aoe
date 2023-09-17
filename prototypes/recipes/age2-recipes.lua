@@ -1046,6 +1046,20 @@ data:extend({{
 }})
 
 data:extend({{
+    name = 'aoe-crafting-storage-tank-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-tin-plate', amount = 20},
+		{type = 'item', name = 'pipe', amount = 20}
+    },
+    results = {
+        {type = 'item', name = 'storage-tank', amount = 1}
+    },
+    energy_required = 2
+}})
+
+data:extend({{
 	name = 'aoe-crushing-manganese-ore-recipe',
 	type = 'recipe',
 	enabled = false,

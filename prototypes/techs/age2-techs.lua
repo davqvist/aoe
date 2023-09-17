@@ -782,6 +782,10 @@ data:extend({{
 	    {
         type = "unlock-recipe",
         recipe = "aoe-crafting-tin-rod-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-storage-tank-recipe"
       }
     },
     unit = {

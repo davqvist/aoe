@@ -77,6 +77,13 @@ for _, furnace in pairs(furnaces_to_change) do
         base_area = 10,
         base_level = -1,
         pipe_connections = {{ type="input", position = {-2, 0} }}
+      },{
+        production_type = "output",
+        pipe_picture = assembler2pipepictures(),
+        pipe_covers = pipecoverspictures(),
+        base_area = 10,
+        base_level = 1,
+        pipe_connections = {{ type="output", position = {2, 0} }}
       },
       off_when_no_fluid_recipe = true
     }

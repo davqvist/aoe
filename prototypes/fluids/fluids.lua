@@ -216,3 +216,27 @@ data:extend({{
 	flow_color = {r=1.0, g=1.0, b=1.0},
 	default_temperature = 20
 }})
+
+data:extend({{
+    type = "fluid",
+    name = "aoe-syrup",
+    icon = "__aoe__/img/fluids/syrup.png",
+    icon_size = 64,
+    subgroup = "aoe-fluids-flora-fauna",
+    order = "d",
+	base_color = {r=0.3, g=0.13, b=0.0},
+	flow_color = {r=0.3, g=0.13, b=0.0},
+	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoe-ethanol",
+    icon = "__aoe__/img/fluids/ethanol.png",
+    icon_size = 64,
+    subgroup = "aoe-fluids-flora-fauna",
+    order = "e",
+	base_color = {r=0.27, g=0.4, b=0.43},
+	flow_color = {r=0.27, g=0.4, b=0.43},
+	default_temperature = 20
+}})

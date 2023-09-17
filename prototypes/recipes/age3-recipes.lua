@@ -1639,3 +1639,223 @@ data:extend({{
     energy_required = 150,
 	category = 'aoe-category-farm-plot-soybean'
 }})
+
+data:extend({{
+    name = 'aoe-mixing-puree-apples-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'water', amount = 100},
+		{type = 'item', name = 'aoe-apple', amount = 2}
+    },
+    results = {
+        {type = 'item', name = 'aoe-puree', amount = 1}
+    },
+	icons = {
+	  {
+		icon = data.raw.item["aoe-puree"].icon,
+		icon_size = data.raw.item["aoe-puree"].icon_size
+	  },
+	  {
+		icon = data.raw.item["aoe-apple"].icon,
+		icon_size = data.raw.item["aoe-apple"].icon_size,
+		scale = 0.4,
+		shift = {8,8}
+	  }
+	},
+    energy_required = 3,
+	category = 'aoe-category-mixing'
+}})
+
+data:extend({{
+    name = 'aoe-mixing-puree-maize-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'water', amount = 100},
+		{type = 'item', name = 'aoe-maize-kernels', amount = 3}
+    },
+    results = {
+        {type = 'item', name = 'aoe-puree', amount = 1}
+    },
+	icons = {
+	  {
+		icon = data.raw.item["aoe-puree"].icon,
+		icon_size = data.raw.item["aoe-puree"].icon_size
+	  },
+	  {
+		icon = data.raw.item["aoe-maize-kernels"].icon,
+		icon_size = data.raw.item["aoe-maize-kernels"].icon_size,
+		scale = 0.4,
+		shift = {8,8}
+	  }
+	},
+    energy_required = 3,
+	category = 'aoe-category-mixing'
+}})
+
+data:extend({{
+    name = 'aoe-smelting-syrup-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-puree', amount = 1}
+    },
+    results = {
+        {type = 'fluid', name = 'aoe-syrup', amount = 50}
+    },
+    energy_required = 2.4,
+	category = 'smelting'
+}})
+
+data:extend({{
+    name = 'aoe-sedimenting-sugar-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-syrup', amount = 100}
+    },
+    results = {
+        {type = 'item', name = 'aoe-sugar', amount = 1}
+    },
+    energy_required = 4.8,
+	category = 'aoe-category-sedimenting'
+}})
+
+data:extend({{
+    name = 'aoe-crafting-alloy-furnace-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-steel-machine-hull', amount = 12},
+		{type = 'item', name = 'aoe-heating-coil', amount = 8},
+		{type = 'item', name = 'steel-furnace', amount = 2},
+		{type = 'item', name = 'concrete', amount = 16}
+    },
+    results = {
+        {type = 'item', name = 'aoe-alloy-furnace', amount = 1}
+    },
+    energy_required = 2
+}})
+
+data:extend({{
+    name = 'aoe-alloying-bronze-plate-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-copper-dust', amount = 3},
+		{type = 'item', name = 'aoe-tin-dust', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoe-bronze-plate', amount = 2}
+    },
+    energy_required = 2.4,
+	category = 'aoe-category-alloying'
+}})
+
+data:extend({{
+	name = 'aoe-crafting-bronze-gear-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-bronze-plate', amount = 2}
+	},
+	results = {
+        {type = 'item', name = 'aoe-bronze-gear', amount = 1}
+    },
+	energy_required = 0.2
+}})
+
+data:extend({{
+	name = 'aoe-crafting-bronze-rod-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-bronze-plate', amount = 1}
+	},
+	results = {
+        {type = 'item', name = 'aoe-bronze-rod', amount = 2}
+    },
+	energy_required = 0.2
+}})
+
+data:extend({{
+    name = 'aoe-crafting-chemical-plant-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-steel-machine-hull', amount = 8},
+		{type = 'item', name = 'aoe-bronze-plate', amount = 12},
+		{type = 'item', name = 'pipe', amount = 10},
+		{type = 'item', name = 'storage-tank', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'chemical-plant', amount = 1}
+    },
+    energy_required = 2
+}})
+
+data:extend({{
+    name = 'aoe-gene-lab-yeast-1-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-bacteria', amount = 100},
+		{type = 'item', name = 'aoe-petri-dish', amount = 1},
+		{type = 'item', name = 'aoe-agar', amount = 1},
+		{type = 'item', name = 'aoe-soil', amount = 10},
+		{type = 'item', name = 'aoe-leaves', amount = 10}
+    },
+    results = {
+        {type = 'item', name = 'aoe-yeast', amount = 1, probability = 0.1}
+    },
+    energy_required = 120,
+	category = 'aoe-category-gene-lab'
+}})
+
+data:extend({{
+    name = 'aoe-gene-lab-yeast-2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-bacteria', amount = 50},
+		{type = 'item', name = 'aoe-yeast', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoe-yeast', amount = 2, catalyst_amount = 1}
+    },
+    energy_required = 30,
+	category = 'aoe-category-gene-lab'
+}})
+
+data:extend({{
+    name = 'aoe-chemistry-ethanol-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-sugar', amount = 4},
+		{type = 'item', name = 'aoe-yeast', amount = 1},
+		{type = 'fluid', name = 'water', amount = 100}
+    },
+    results = {
+        {type = 'fluid', name = 'aoe-ethanol', amount = 50},
+		{type = 'fluid', name = 'aoe-carbon-dioxide', amount = 50}
+    },
+	main_product = 'aoe-ethanol',
+    energy_required = 5,
+	category = 'chemistry'
+}})
+
+data:extend({{
+	name = 'aoe-crafting-science-04-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-flask', amount = 1},
+		{type = 'item', name = 'aoe-bronze-gear', amount = 3}
+	},
+	results = {
+        {type = 'item', name = 'aoe-science-04', amount = 1}
+    },
+	energy_required = 4
+}})

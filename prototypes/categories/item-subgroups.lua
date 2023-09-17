@@ -29,55 +29,61 @@ data:extend({
 	  type = "item-subgroup",
     name = "aoe-flora-wood",
     group = "aoe-flora",
-    order = "c1"
+    order = "c01"
   },
   {
 	  type = "item-subgroup",
     name = "aoe-flora-rubber",
     group = "aoe-flora",
-    order = "c2"
+    order = "c02"
   },
   {
 	  type = "item-subgroup",
     name = "aoe-flora-apple",
     group = "aoe-flora",
-    order = "c3"
+    order = "c03"
   },
   {
 	  type = "item-subgroup",
     name = "aoe-flora-olive",
     group = "aoe-flora",
-    order = "c4"
+    order = "c04"
   },
   {
 	  type = "item-subgroup",
     name = "aoe-flora-kelp",
     group = "aoe-flora",
-    order = "c5"
+    order = "c05"
   },
   {
 	  type = "item-subgroup",
     name = "aoe-flora-flax",
     group = "aoe-flora",
-    order = "c6"
+    order = "c06"
   },
   {
 	  type = "item-subgroup",
     name = "aoe-flora-maize",
     group = "aoe-flora",
-    order = "c7"
+    order = "c07"
   },
   {
 	  type = "item-subgroup",
     name = "aoe-flora-soybean",
     group = "aoe-flora",
-    order = "c8"
+    order = "c08"
   },
   {
 	  type = "item-subgroup",
     name = "aoe-flora-drinks",
     group = "aoe-flora",
-    order = "c9"
+    order = "c09"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-flora-fermentation",
+    group = "aoe-flora",
+    order = "d"
   },
   {
 	  type = "item-subgroup",
@@ -138,6 +144,12 @@ data:extend({
     name = "aoe-voiding-buildings",
     group = "production",
     order = "d"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-other-buildings",
+    group = "production",
+    order = "e"
   },
   {
 	  type = "item-subgroup",
@@ -246,6 +258,12 @@ data:extend({
     name = "aoe-metals-rest",
     group = "intermediate-products",
     order = "e6"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-metals-alloys",
+    group = "intermediate-products",
+    order = "e7"
   },
   {
 	  type = "item-subgroup",
