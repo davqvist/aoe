@@ -631,7 +631,7 @@ data.raw['item']['copper-ore'].stack_size = 200
 data:extend({{
     type = "item",
     name = "aoe-copper-dust",
-    icon = "__aoe__/img/items/copper-dust.png",
+    icon = "__angelssmelting__/graphics/icons/powder-copper.png",
     icon_size = 64,
     subgroup = "aoe-metals-copper",
     order = "b",

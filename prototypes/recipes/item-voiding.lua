@@ -19,7 +19,7 @@ for _, type in pairs(groups) do
     for _, item in pairs(data.raw[type]) do
 		data:extend({{
 			name = 'aoe-burning-' .. item.name .. '-recipe',
-			type = 'recipe',
+			type = 'recipe',	
 			enabled = true,
 			hide_from_player_crafting = true,
 			allow_as_intermediate = false,
@@ -32,8 +32,9 @@ for _, type in pairs(groups) do
 			energy_required = 0.5,
 			category = 'aoe-category-burning',
 			subgroup = 'aoe-other',
-			icons = get_icon( item ),
-			icon_size = 64
-}})
+			icons = item.icons or { { icon = item.icon } },
+			icon_size = item.icon_size,
+			icon_mipmaps = item.icon_mipmaps or 1,
+		}})
 	end
 end

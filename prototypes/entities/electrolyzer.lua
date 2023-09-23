@@ -1,8 +1,9 @@
 data:extend({{
     type = "item",
     name = "aoe-electrolyzer",
-    icon = "__aoe__/img/entities/electrolyzer.png",
-    icon_size = 256,
+    icon = "__angelspetrochem__/graphics/icons/electrolyser.png",
+    icon_size = 32,
+    icon_mipmaps = 1,
     subgroup = "aoe-specific-buildings",
     order = "m",
     place_result = "aoe-electrolyzer",
@@ -10,64 +11,97 @@ data:extend({{
 }})
 
 data:extend({{
-    type = "assembling-machine",
-    name = "aoe-electrolyzer",
+  type = "assembling-machine",
+  name = "aoe-electrolyzer",
 	crafting_categories = {"aoe-category-electrolyzing"},
 	crafting_speed = 1,
 	energy_source = {
-      type = "electric",
-      emissions_per_minute = 10,
-      usage_priority = "secondary-input",
+    type = "electric",
+    emissions_per_minute = 10,
+    usage_priority = "secondary-input",
 	  drain = "60kW"
-    },
+  },
 	energy_usage = "1.2MW",
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-	module_specification =
-    {
-      module_slots = 3
-    },
-	icon = "__aoe__/img/entities/electrolyzer.png",
-	icon_size = 256,
+	module_specification = {
+    module_slots = 3
+  },
+  icon = "__angelspetrochem__/graphics/icons/electrolyser.png",
+  icon_size = 32,
+  icon_mipmaps = 1,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoe-electrolyzer" },
 	max_health = 50,
 	selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
 	collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
 	animation = {
-      layers = {
-        {
-          filename = "__aoe__/img/entities/electrolyzer.png",
-          width = 256,
-          height = 256,
-          frame_count = 1,
-		  scale = 0.875
-        }
-      }
+    north = {
+      filename = "__angelspetrochem__/graphics/entity/electrolyser/electrolyser-north.png",
+      width = 224,
+      height = 224,
+      frame_count = 36,
+      line_length = 6,
+      shift = { 0, 0 },
+      animation_speed = 0.5,
+      scale = 1.4
     },
-	fluid_boxes =
-    {
-      {
-        production_type = "input",
-        pipe_picture = assembler2pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = {{ type="input", position = {-4, 0} }}
-      },{
-        production_type = "output",
-        pipe_picture = assembler2pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = 1,
-        pipe_connections = {{ type="output", position = {4, -2} }}
-      },{
-        production_type = "output",
-        pipe_picture = assembler2pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = 1,
-        pipe_connections = {{ type="output", position = {4, 2} }}
-      },
-      off_when_no_fluid_recipe = true
+    east = {
+      filename = "__angelspetrochem__/graphics/entity/electrolyser/electrolyser-east.png",
+      width = 224,
+      height = 224,
+      frame_count = 36,
+      line_length = 6,
+      shift = { 0, 0 },
+      animation_speed = 0.5,
+      scale = 1.4
+    },
+    south = {
+      filename = "__angelspetrochem__/graphics/entity/electrolyser/electrolyser-north.png",
+      width = 224,
+      height = 224,
+      frame_count = 36,
+      line_length = 6,
+      shift = { 0, 0 },
+      animation_speed = 0.5,
+      scale = 1.4
+    },
+    west = {
+      filename = "__angelspetrochem__/graphics/entity/electrolyser/electrolyser-east.png",
+      width = 224,
+      height = 224,
+      frame_count = 36,
+      line_length = 6,
+      shift = { 0, 0 },
+      animation_speed = 0.5,
+      scale = 1.4
     }
+  },
+	fluid_boxes = {
+    {
+      production_type = "input",
+      base_area = 10,
+      base_level = -1,
+      pipe_connections = {{ type="input", position = {-3, 4} }}
+    },{
+      production_type = "input",
+      base_area = 10,
+      base_level = -1,
+      pipe_connections = {{ type="input", position = {3, 4} }}
+    },{
+      production_type = "output",
+      base_level = 1,
+      pipe_connections = {{ type="output", position = {-3, -4} }}
+    },{ 
+      production_type = "output",
+      base_level = 1,
+      pipe_connections = {{ type="output", position = {3, -4} }}
+    },
+    off_when_no_fluid_recipe = true
+  },
+  working_sound = {
+    sound = { filename = "__angelspetrochem__/sound/electrolyser.ogg", volume = 0.65 },
+    idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+    audible_distance_modifier = 0.5,
+    apparent_volume = 2.5,
+  }
 }})

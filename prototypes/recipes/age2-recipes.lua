@@ -859,7 +859,7 @@ data:extend({{
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-stones-sedimentary', amount = 15},		
+		{type = 'item', name = 'aoe-stones-sedimentary', amount = 15},
 		{type = 'item', name = 'aoe-fiber-mesh', amount = 1}
 	},
 	results = {
@@ -878,7 +878,7 @@ data:extend({{
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-stones-igneous', amount = 15},		
+		{type = 'item', name = 'aoe-stones-igneous', amount = 15},
 		{type = 'item', name = 'aoe-fiber-mesh', amount = 1}
 	},
 	results = {
@@ -897,16 +897,16 @@ data:extend({{
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-stones-metamorphic', amount = 15},		
+		{type = 'item', name = 'aoe-stones-metamorphic', amount = 15},
 		{type = 'item', name = 'aoe-fiber-mesh', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-mica', amount = 3},
-		{type = 'item', name = 'aoe-aluminium-ore', amount = 2},
-		{type = 'item', name = 'aoe-magnesium-ore', amount = 1},
+		{type = 'item', name = 'aoe-aluminium-ore', amount = 3},
+		{type = 'item', name = 'aoe-magnesium-ore', amount = 2},
+		{type = 'item', name = 'aoe-mica', amount = 1},
 		{type = 'item', name = 'aoe-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.85}
     },
-	main_product = 'aoe-mica',
+	main_product = 'aoe-aluminium-ore',
 	energy_required = 8,
 	category = 'aoe-category-straining'
 }})
@@ -1172,6 +1172,18 @@ data:extend({{
 		{type = 'item', name = 'aoe-quicklime', amount = 2},
 		{type = 'fluid', name = 'aoe-carbon-dioxide', amount = 20}
     },
+	icons = {
+	  {
+		icon = data.raw.item["aoe-quicklime"].icon,
+		icon_size = data.raw.item["aoe-quicklime"].icon_size
+	  },
+	  {
+		icon = data.raw.item["aoe-stones-sedimentary"].icon,
+		icon_size = data.raw.item["aoe-stones-sedimentary"].icon_size,
+		scale = 0.4,
+		shift = {8,8}
+	  }
+	},
 	main_product = 'aoe-quicklime',
 	energy_required = 2.4,
 	category = 'aoe-category-kiln-smelting'
@@ -1329,8 +1341,7 @@ data:extend({{
         {type = 'item', name = 'aoe-caustic-soda', amount = 1},
         {type = 'fluid', name = 'aoe-chlorine', amount = 10}
     },
-	icon = data.raw.fluid["aoe-brine"].icon,
-	icon_size = data.raw.fluid["aoe-brine"].icon_size,
+	icons = data.raw.fluid["aoe-brine"].icons,
 	subgroup = 'aoe-fluids-general',
 	order = 'd1',
 	energy_required = 1,
@@ -1571,6 +1582,9 @@ data:extend({{
         {type = 'item', name = 'aoe-fish-meat', amount = 4}
     },
     energy_required = 4,
+	subgroup = 'aoe-fauna-fish',
+	icon = data.raw.capsule["raw-fish"].icon,
+	icon_size = data.raw.capsule["raw-fish"].icon_size,
 	category = 'aoe-category-slaughtering'
 }})
 

@@ -10,9 +10,15 @@ require("__aoe__/prototypes/categories/module-categories")
 require("__aoe__/prototypes/categories/recipe-categories")
 require("__aoe__/prototypes/items/items")
 require("__aoe__/prototypes/fluids/fluids")
-require("__aoe__/prototypes/entities/entities")
+require("__aoe__/prototypes/entities/_entities")
 require("__aoe__/prototypes/recipes/recipes")
 require("__aoe__/prototypes/techs/techs")
+
+angelsmods.refining.disable_ore_override = true
+function angelsmods.functions.move_item(i_name, i_subgroup, i_order, i_type) end
+angelsmods.trigger.disable_vanilla_chemical_plants = nil
+-- TEMP --
+angelsmods.trigger.smelting_products["enable-all"] = true
 
 for _, tree in pairs(data.raw.tree) do
 	if tree.minable ~= nil then

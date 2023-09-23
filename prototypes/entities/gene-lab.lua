@@ -70,7 +70,6 @@ data:extend({{
         production_type = "output",
         pipe_picture = assembler2pipepictures(),
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
         base_level = 1,
         pipe_connections = {{ type="output", position = {3, 0} }}
       },
@@ -90,22 +89,21 @@ data:extend({{
 }})
 
 data:extend({{
-    type = "assembling-machine",
-    name = "aoe-gene-lab",
+  type = "assembling-machine",
+  name = "aoe-gene-lab",
 	crafting_categories = {"aoe-category-gene-lab"},
 	crafting_speed = 1,
 	energy_source = {
-      type = "electric",
-      emissions_per_minute = 10,
-      usage_priority = "secondary-input",
+    type = "electric",
+    emissions_per_minute = 10,
+    usage_priority = "secondary-input",
 	  drain = "11kW"
-    },
+  },
 	energy_usage = "220kW",
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-	module_specification =
-    {
-      module_slots = 3
-    },
+	module_specification = {
+    module_slots = 3
+  },
 	icon = "__aoe__/img/entities/gene-lab.png",
 	icon_size = 256,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -120,7 +118,7 @@ data:extend({{
           width = 256,
           height = 256,
           frame_count = 1,
-		  scale = 0.625
+		      scale = 0.625
         }
       }
     },
@@ -144,7 +142,6 @@ data:extend({{
         production_type = "output",
         pipe_picture = assembler2pipepictures(),
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
         base_level = 1,
         pipe_connections = {{ type="output", position = {3, 0} }}
       },

@@ -320,8 +320,7 @@ data:extend({{
         {type = 'fluid', name = 'aoe-latex', amount = 10}
     },
 	energy_required = 5,
-	icon = data.raw.fluid["aoe-latex"].icon,
-	icon_size = data.raw.fluid["aoe-latex"].icon_size,
+	icons = data.raw.fluid["aoe-latex"].icons,
 	main_product = "",
 	category = 'aoe-category-harvesting',
 	subgroup = 'aoe-other'

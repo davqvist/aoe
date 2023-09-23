@@ -5,8 +5,8 @@ local sounds = require("__base__/prototypes/entity/sounds")
 data:extend({{
     type = "item",
     name = "aoe-small-storage-tank",
-    icon = "__aoe__/img/entities/small-storage-tank.png",
-    icon_size = 128,
+    icon = "__angelspetrochem__/graphics/icons/petrochem-inline-tank.png",
+    icon_size = 64,
     subgroup = "aoe-storage",
     order = "g",
     place_result = "aoe-small-storage-tank",
@@ -16,37 +16,42 @@ data:extend({{
 data:extend({{
     type = "storage-tank",
     name = "aoe-small-storage-tank",
-    icon = "__aoe__/img/entities/small-storage-tank.png",
-    icon_size = 128,
+    icon = "__angelspetrochem__/graphics/icons/petrochem-inline-tank.png",
+    icon_size = 64,
     flags = {"placeable-player", "player-creation"},
     minable = {mining_time = 0.5, result = "aoe-small-storage-tank"},
     max_health = 500,
     collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
     selection_box = {{-1.0, -1.0}, {1.0, 1.0}},
-    fluid_box =
-    {
+    fluid_box = {
       base_area = 100,
       pipe_covers = pipecoverspictures(),
-      pipe_connections =
-      {
-        {position = {-1.5, -0.5}},
-		{position = {-1.5, 0.5}},
-		{position = {1.5, -0.5}},
-		{position = {1.5, 0.5}}
-      }
+      pipe_connections = {
+        { position = { 0.5, -1.5 } },
+        { position = { 0.5, 1.5 } },
+      },
     },
     two_direction_only = true,
-    pictures =
-    {
-      picture =
-      {
-        sheet =
-        {
-            filename = "__aoe__/img/entities/small-storage-tank.png",
-            frames = 1,
-            width = 128,
-            height = 128,
-            scale = 0.5
+    pictures = {
+      picture = {
+        sheets = {
+          {
+            filename = "__angelspetrochem__/graphics/entity/petrochem-inline-tank/petrochem-inline-tank.png",
+            priority = "extra-high",
+            frames = 4,
+            width = 71,
+            height = 102,
+            shift = util.by_pixel(-0.5, -8)
+          },
+          {
+            filename = "__angelspetrochem__/graphics/entity/petrochem-inline-tank/petrochem-inline-tank-shadow.png",
+            priority = "extra-high",
+            frames = 4,
+            width = 106,
+            height = 101,
+            shift = util.by_pixel(17, 8),
+            draw_as_shadow = true
+          }
         }
       },
       fluid_background = {
@@ -82,12 +87,10 @@ data:extend({{
     vehicle_impact_sound = sounds.generic_impact,
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
-    working_sound =
-    {
-      sound =
-      {
-          filename = "__base__/sound/storage-tank.ogg",
-          volume = 0.6
+    working_sound = {
+      sound = {
+        filename = "__base__/sound/storage-tank.ogg",
+        volume = 0.6
       },
       match_volume_to_activity = true,
       audible_distance_modifier = 0.5,

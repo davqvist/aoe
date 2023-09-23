@@ -68,7 +68,7 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-steam-power-tech",
+    name = "aoe-low-voltage-tech",
     icon_size = 64, icon_mipmaps = 4,
     icon = "__base__/graphics/icons/steam-engine.png",
     prerequisites = {"aoe-electric-age-tech"},
@@ -305,7 +305,7 @@ data:extend({{
     name = "aoe-electric-machines-tech",
 	  icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/engine.png",
-    prerequisites = {"aoe-steel-tech-1", "aoe-electronics-tech", "aoe-steam-power-tech", "aoe-basic-automation-tech", "aoe-basic-genetics-tech", "aoe-digging-tech"},
+    prerequisites = {"aoe-steel-tech-1", "aoe-electronics-tech", "aoe-low-voltage-tech", "aoe-basic-automation-tech", "aoe-basic-genetics-tech", "aoe-digging-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -549,7 +549,7 @@ data:extend({{
     name = "aoe-optics-tech",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/optics.png",
-    prerequisites = {"aoe-steam-power-tech"},
+    prerequisites = {"aoe-low-voltage-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -571,7 +571,7 @@ data:extend({{
     name = "aoe-electric-inserters-tech",
     icon_size = 64, icon_mipmaps = 4,
     icon = "__base__/graphics/icons/inserter.png",
-    prerequisites = {"aoe-electronics-tech", "aoe-steam-power-tech"},
+    prerequisites = {"aoe-electronics-tech", "aoe-low-voltage-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -664,7 +664,7 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-sedimentary-stones-tech",
+    name = "aoe-sedimentary-stones-tech-1",
     icon_size = 64,
     icon = "__aoe__/img/items/sedimentary-stones.png",
     prerequisites = {"aoe-rock-cycle-tech"},
@@ -702,7 +702,7 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-igneous-stones-tech",
+    name = "aoe-igneous-stones-tech-1",
     icon_size = 64,
     icon = "__aoe__/img/items/igneous-stones.png",
     prerequisites = {"aoe-rock-cycle-tech"},
@@ -736,7 +736,7 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-metamorphic-stones-tech",
+    name = "aoe-metamorphic-stones-tech-1",
     icon_size = 64,
     icon = "__aoe__/img/items/metamorphic-stones.png",
     prerequisites = {"aoe-rock-cycle-tech"},
@@ -769,7 +769,7 @@ data:extend({{
     name = "aoe-tin-tech",
     icon_size = 64,
     icon = "__aoe__/img/items/tin-plate.png",
-    prerequisites = {"aoe-igneous-stones-tech"},
+    prerequisites = {"aoe-igneous-stones-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -803,7 +803,7 @@ data:extend({{
     name = "aoe-aluminium-tech",
     icon_size = 64,
     icon = "__aoe__/img/items/aluminium-plate.png",
-    prerequisites = {"aoe-metamorphic-stones-tech"},
+    prerequisites = {"aoe-metamorphic-stones-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -855,7 +855,7 @@ data:extend({{
     name = "aoe-better-glass-tech-1",
     icon_size = 64,
     icon = "__aoe__/img/items/glass.png",
-    prerequisites = {"aoe-igneous-stones-tech"},
+    prerequisites = {"aoe-igneous-stones-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -877,7 +877,7 @@ data:extend({{
     name = "aoe-lime-tech",
     icon_size = 64,
     icon = "__aoe__/img/items/quicklime.png",
-    prerequisites = {"aoe-sedimentary-stones-tech"},
+    prerequisites = {"aoe-sedimentary-stones-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -901,9 +901,9 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "aoe-electrolysis-tech",
-    icon_size = 256,
-    icon = "__aoe__/img/entities/electrolyzer.png",
-    prerequisites = {"aoe-sedimentary-stones-tech", "aoe-tin-tech", "aoe-salt-tech"},
+    icon_size = 224,
+    icon = "__angelspetrochem__/graphics/entity/electrolyser/electrolyser-north.png",
+    prerequisites = {"aoe-sedimentary-stones-tech-1", "aoe-tin-tech", "aoe-salt-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -932,7 +932,7 @@ data:extend({{
     type = "technology",
     name = "aoe-pressure-tech",
     icon_size = 256,
-    icon = "__aoe__/img/entities/pressure-pump.png",
+    icon = "__angelspetrochem__/graphics/entity/air-filter/air-filter.png",
     prerequisites = {"aoe-electric-machines-tech"},
 	  effects = {
       {
@@ -995,7 +995,7 @@ data:extend({{
     name = "aoe-concrete-tech",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/concrete.png",
-    prerequisites = {"aoe-igneous-stones-tech", "aoe-metamorphic-stones-tech", "aoe-sedimentary-stones-tech"},
+    prerequisites = {"aoe-igneous-stones-tech-1", "aoe-metamorphic-stones-tech-1", "aoe-sedimentary-stones-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",

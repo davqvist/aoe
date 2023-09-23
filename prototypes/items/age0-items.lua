@@ -71,7 +71,7 @@ data.raw['item']['iron-ore'].stack_size = 200
 data:extend({{
     type = "item",
     name = "aoe-iron-dust",
-    icon = "__aoe__/img/items/iron-dust.png",
+    icon = "__angelssmelting__/graphics/icons/powder-iron.png",
     icon_size = 64,
     subgroup = "aoe-metals-iron",
     order = "b",
@@ -108,7 +108,7 @@ data:extend({{
     icon = "__aoe__/img/items/gravel.png",
     icon_size = 64,
     subgroup = "aoe-stone",
-    order = "e",
+    order = "b",
     stack_size = 200
 }})
 
@@ -118,7 +118,7 @@ data:extend({{
     icon = "__aoe__/img/items/sand.png",
     icon_size = 64,
     subgroup = "aoe-stone",
-    order = "f",
+    order = "c",
     stack_size = 200
 }})
 

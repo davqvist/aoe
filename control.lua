@@ -15,6 +15,7 @@ script.on_event(defines.events.on_player_created,
 	player.remove_item{name = "wood", count = 1}
 	player.remove_item{name = "stone-furnace", count = 1}
 	player.remove_item{name = "iron-plate", count = 8}
+	player.remove_item{name = "burner-ore-crusher", count = 1}
   end
 )
 

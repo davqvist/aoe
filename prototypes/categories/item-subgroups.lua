@@ -227,61 +227,109 @@ data:extend({
 	  type = "item-subgroup",
     name = "aoe-metals-iron",
     group = "intermediate-products",
-    order = "e1"
+    order = "e01"
   },
   {
 	  type = "item-subgroup",
     name = "aoe-metals-steel",
     group = "intermediate-products",
-    order = "e2"
+    order = "e02"
   },
   {
 	  type = "item-subgroup",
     name = "aoe-metals-copper",
     group = "intermediate-products",
-    order = "e3"
+    order = "e03"
   },
   {
 	  type = "item-subgroup",
     name = "aoe-metals-tin",
     group = "intermediate-products",
-    order = "e4"
+    order = "e04"
   },
   {
 	  type = "item-subgroup",
     name = "aoe-metals-aluminium",
     group = "intermediate-products",
-    order = "e5"
+    order = "e05"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-metals-lead",
+    group = "intermediate-products",
+    order = "e06"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-metals-silver",
+    group = "intermediate-products",
+    order = "e07"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-metals-nickel",
+    group = "intermediate-products",
+    order = "e08"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-metals-gold",
+    group = "intermediate-products",
+    order = "e09"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-metals-zinc",
+    group = "intermediate-products",
+    order = "e10"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-metals-chromium",
+    group = "intermediate-products",
+    order = "e11"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-metals-tungsten",
+    group = "intermediate-products",
+    order = "e12"
   },
   {
 	  type = "item-subgroup",
     name = "aoe-metals-rest",
     group = "intermediate-products",
-    order = "e6"
+    order = "e13"
   },
   {
 	  type = "item-subgroup",
     name = "aoe-metals-alloys",
     group = "intermediate-products",
-    order = "e7"
+    order = "e14"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-gems",
+    group = "intermediate-products",
+    order = "e15"
   },
   {
 	  type = "item-subgroup",
     name = "aoe-parts",
     group = "intermediate-products",
-    order = "e"
+    order = "f"
   },
   {
 	  type = "item-subgroup",
     name = "aoe-chemicals",
     group = "intermediate-products",
-    order = "f"
+    order = "g"
   },
   {
 	  type = "item-subgroup",
     name = "aoe-science-packs",
     group = "intermediate-products",
-    order = "g"
+    order = "h"
   },
   {
 	  type = "item-subgroup",

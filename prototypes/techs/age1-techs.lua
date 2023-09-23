@@ -131,7 +131,7 @@ data:extend({{
     type = "technology",
     name = "aoe-digging-tech",
     icon_size = 160,
-    icon = "__aoe__/img/entities/ground-bore.png",
+    icon = "__angelsrefining__/graphics/entity/liquifier/liquifier.png",
     prerequisites = {"aoe-fluid-handling-tech"},
 	  effects = {
 	    {

@@ -119,18 +119,14 @@ data:extend({{
 	results = {
 		{type = 'fluid', name = 'aoe-plant-oil', amount = 100}
     },
-	icons = {
-	  {
-		icon = data.raw.fluid["aoe-plant-oil"].icon,
-		icon_size = data.raw.fluid["aoe-plant-oil"].icon_size
-	  },
+	icons = table.insert(table.deepcopy(data.raw.fluid["aoe-plant-oil"].icons),
 	  {
 		icon = data.raw.item["aoe-maize-kernels"].icon,
 		icon_size = data.raw.item["aoe-maize-kernels"].icon_size,
 		scale = 0.4,
 		shift = {8,8}
 	  }
-	},
+    ),
 	energy_required = 4,
 	category = 'aoe-category-squeezing'
 }})
@@ -256,18 +252,14 @@ data:extend({{
 	results = {
 		{type = 'fluid', name = 'aoe-plant-oil', amount = 100}
     },
-	icons = {
-	  {
-		icon = data.raw.fluid["aoe-plant-oil"].icon,
-		icon_size = data.raw.fluid["aoe-plant-oil"].icon_size
-	  },
+	icons = table.insert(table.deepcopy(data.raw.fluid["aoe-plant-oil"].icons),
 	  {
 		icon = data.raw.item["aoe-soybean-seeds"].icon,
 		icon_size = data.raw.item["aoe-soybean-seeds"].icon_size,
 		scale = 0.4,
 		shift = {8,8}
 	  }
-	},
+    ),
 	energy_required = 4,
 	category = 'aoe-category-squeezing'
 }})
@@ -383,7 +375,9 @@ data:extend({{
 		{type = 'item', name = 'aoe-bones', amount = 2}
     },
     energy_required = 4,
-	main_product = 'aoe-poultry',
+	subgroup = 'aoe-fauna-chicken',
+	icon = data.raw.item["aoe-chicken"].icon,
+	icon_size = data.raw.item["aoe-chicken"].icon_size,
 	category = 'aoe-category-slaughtering'
 }})
 
@@ -511,7 +505,9 @@ data:extend({{
 		{type = 'item', name = 'aoe-bones', amount = 4}
     },
     energy_required = 4,
-	main_product = 'aoe-wool',
+	subgroup = 'aoe-fauna-sheep',
+	icon = data.raw.item["aoe-sheep"].icon,
+	icon_size = data.raw.item["aoe-sheep"].icon_size,
 	category = 'aoe-category-slaughtering'
 }})
 
@@ -628,19 +624,9 @@ data:extend({{
 		{type = 'item', name = 'aoe-bones', amount = 5}
     },
     energy_required = 4,
-	main_product = 'aoe-hide',
-	icons = {
-	  {
-		icon = data.raw.item["aoe-hide"].icon,
-		icon_size = data.raw.item["aoe-hide"].icon_size
-	  },
-	  {
-		icon = data.raw.item["aoe-cow"].icon,
-		icon_size = data.raw.item["aoe-cow"].icon_size,
-		scale = 0.4,
-		shift = {8,8}
-	  }
-	},
+	subgroup = 'aoe-fauna-cow',
+	icon = data.raw.item["aoe-cow"].icon,
+	icon_size = data.raw.item["aoe-cow"].icon_size,
 	category = 'aoe-category-slaughtering'
 }})
 
@@ -657,19 +643,9 @@ data:extend({{
 		{type = 'item', name = 'aoe-bones', amount = 5}
     },
     energy_required = 4,
-	main_product = 'aoe-hide',
-	icons = {
-	  {
-		icon = data.raw.item["aoe-hide"].icon,
-		icon_size = data.raw.item["aoe-hide"].icon_size
-	  },
-	  {
-		icon = data.raw.item["aoe-ox"].icon,
-		icon_size = data.raw.item["aoe-ox"].icon_size,
-		scale = 0.4,
-		shift = {8,8}
-	  }
-	},
+	subgroup = 'aoe-fauna-cow',
+	icon = data.raw.item["aoe-ox"].icon,
+	icon_size = data.raw.item["aoe-ox"].icon_size,
 	category = 'aoe-category-slaughtering'
 }})
 
@@ -1704,7 +1680,7 @@ data:extend({{
     results = {
         {type = 'fluid', name = 'aoe-syrup', amount = 50}
     },
-    energy_required = 2.4,
+    energy_required = 4.8,
 	category = 'smelting'
 }})
 
@@ -1780,6 +1756,19 @@ data:extend({{
 }})
 
 data:extend({{
+	name = 'aoe-crafting-bronze-cable-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-bronze-plate', amount = 1}
+	},
+	results = {
+        {type = 'item', name = 'aoe-bronze-cable', amount = 3}
+    },
+	energy_required = 0.2
+}})
+
+data:extend({{
     name = 'aoe-crafting-chemical-plant-recipe',
     type = 'recipe',
     enabled = false,
@@ -1835,10 +1824,10 @@ data:extend({{
 	ingredients = {
 		{type = 'item', name = 'aoe-sugar', amount = 4},
 		{type = 'item', name = 'aoe-yeast', amount = 1},
-		{type = 'fluid', name = 'water', amount = 100}
+		{type = 'fluid', name = 'water', amount = 200}
     },
     results = {
-        {type = 'fluid', name = 'aoe-ethanol', amount = 50},
+        {type = 'fluid', name = 'aoe-ethanol', amount = 200},
 		{type = 'fluid', name = 'aoe-carbon-dioxide', amount = 50}
     },
 	main_product = 'aoe-ethanol',

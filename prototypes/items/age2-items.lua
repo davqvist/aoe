@@ -26,8 +26,8 @@ data.raw['item']['steel-plate'].stack_size = 200
 data:extend({{
     type = "item",
     name = "aoe-steel-rod",
-    icon = "__aoe__/img/items/steel-rod.png",
-    icon_size = 64,
+    icon = "__angelssmelting__/graphics/icons/rod-steel.png",
+    icon_size = 32,
     subgroup = "aoe-metals-steel",
     order = "b",
     stack_size = 200
@@ -117,7 +117,7 @@ data:extend({{
     icon = "__aoe__/img/items/igneous-stones.png",
     icon_size = 64,
     subgroup = "aoe-stone",
-    order = "b",
+    order = "d",
     stack_size = 200
 }})  
 
@@ -127,7 +127,7 @@ data:extend({{
     icon = "__aoe__/img/items/metamorphic-stones.png",
     icon_size = 64,
     subgroup = "aoe-stone",
-    order = "c",
+    order = "e",
     stack_size = 200
 }})
 
@@ -137,7 +137,7 @@ data:extend({{
     icon = "__aoe__/img/items/sedimentary-stones.png",
     icon_size = 64,
     subgroup = "aoe-stone",
-    order = "d",
+    order = "f",
     stack_size = 200
 }})
 
@@ -200,8 +200,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoe-tin-ore",
-    icon = "__aoe__/img/items/tin-ore.png",
-    icon_size = 64,
+    icon = "__angelssmelting__/graphics/icons/ore-tin.png",
+    icon_size = 32,
     subgroup = "aoe-metals-tin",
     order = "a",
     stack_size = 200
@@ -210,7 +210,7 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoe-tin-dust",
-    icon = "__aoe__/img/items/tin-dust.png",
+    icon = "__angelssmelting__/graphics/icons/powder-tin.png",
     icon_size = 64,
     subgroup = "aoe-metals-tin",
     order = "b",
@@ -220,8 +220,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoe-tin-plate",
-    icon = "__aoe__/img/items/tin-plate.png",
-    icon_size = 64,
+    icon = "__angelssmelting__/graphics/icons/plate-tin.png",
+    icon_size = 32,
     subgroup = "aoe-metals-tin",
     order = "c",
     stack_size = 200
@@ -250,8 +250,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoe-manganese-ore",
-    icon = "__aoe__/img/items/manganese-ore.png",
-    icon_size = 64,
+    icon = "__angelssmelting__/graphics/icons/ore-manganese.png",
+    icon_size = 32,
     subgroup = "aoe-metals-rest",
     order = "e",
     stack_size = 200
@@ -260,7 +260,7 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoe-manganese-dust",
-    icon = "__aoe__/img/items/manganese-dust.png",
+    icon = "__angelssmelting__/graphics/icons/powder-manganese.png",
     icon_size = 64,
     subgroup = "aoe-metals-rest",
     order = "f",
@@ -280,8 +280,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoe-aluminium-ore",
-    icon = "__aoe__/img/items/aluminium-ore.png",
-    icon_size = 64,
+    icon = "__angelssmelting__/graphics/icons/ore-bauxite.png",
+    icon_size = 32,
     subgroup = "aoe-metals-aluminium",
     order = "a",
     stack_size = 200
@@ -290,7 +290,7 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoe-aluminium-dust",
-    icon = "__aoe__/img/items/aluminium-dust.png",
+    icon = "__angelssmelting__/graphics/icons/powder-aluminium.png",
     icon_size = 64,
     subgroup = "aoe-metals-aluminium",
     order = "b",
@@ -300,8 +300,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoe-aluminium-plate",
-    icon = "__aoe__/img/items/aluminium-plate.png",
-    icon_size = 64,
+    icon = "__angelssmelting__/graphics/icons/plate-aluminium.png",
+    icon_size = 32,
     subgroup = "aoe-metals-aluminium",
     order = "c",
     stack_size = 200
@@ -310,8 +310,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoe-aluminium-rod",
-    icon = "__aoe__/img/items/aluminium-rod.png",
-    icon_size = 64,
+    icon = "__angelssmelting__/graphics/icons/rod-aluminium.png",
+    icon_size = 32,
     subgroup = "aoe-metals-aluminium",
     order = "d",
     stack_size = 200
@@ -343,7 +343,7 @@ data:extend({{
     icon = "__aoe__/img/items/quicklime.png",
     icon_size = 64,
     subgroup = "aoe-stone",
-    order = "g",
+    order = "p",
     stack_size = 200
 }})
 
@@ -353,7 +353,7 @@ data:extend({{
     icon = "__aoe__/img/items/slaked-lime.png",
     icon_size = 64,
     subgroup = "aoe-stone",
-    order = "h",
+    order = "q",
     stack_size = 200
 }})
 

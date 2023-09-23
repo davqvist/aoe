@@ -43,7 +43,7 @@ data:extend({{
         pipe_picture = assembler2pipepictures(),
         pipe_covers = pipecoverspictures(),
         base_area = 10,
-        base_level = 1,
+        base_level = -1,
         pipe_connections = {{ type="input", position = {-3, 0} }}
       },
       off_when_no_fluid_recipe = true

@@ -1199,8 +1199,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoe-bronze-plate",
-    icon = "__aoe__/img/items/bronze-plate.png",
-    icon_size = 64,
+    icon = "__angelssmelting__/graphics/icons/plate-bronze.png",
+    icon_size = 32,
     subgroup = "aoe-metals-alloys",
     order = "a",
     stack_size = 200
@@ -1223,5 +1223,15 @@ data:extend({{
     icon_size = 64,
     subgroup = "aoe-metals-alloys",
     order = "c",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-bronze-cable",
+    icon = "__aoe__/img/items/bronze-cable.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-alloys",
+    order = "d",
     stack_size = 200
 }})

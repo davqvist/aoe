@@ -27,7 +27,7 @@ for _, fluid in pairs(data.raw.fluid) do
 			subgroup = 'aoe-other',
 			icons = get_icon( fluid ),
 			icon_size = 64
-}})
+		}})
 	else
 		data:extend({{
 			name = 'aoe-sinking-' .. fluid.name .. '-recipe',
@@ -46,6 +46,6 @@ for _, fluid in pairs(data.raw.fluid) do
 			subgroup = 'aoe-other',
 			icons = get_icon( fluid ),
 			icon_size = 64
-}})
+		}})
 	end
 end

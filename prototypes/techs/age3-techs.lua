@@ -884,6 +884,10 @@ data:extend({{
 	    {
         type = "unlock-recipe",
         recipe = "aoe-crafting-bronze-rod-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-bronze-cable-recipe"
       }
     },
     unit = {

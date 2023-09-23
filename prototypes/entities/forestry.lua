@@ -1,8 +1,8 @@
 data:extend({{
     type = "item",
     name = "aoe-forestry",
-    icon = "__aoe__/img/entities/forestry.png",
-    icon_size = 192,
+    icon = "__angelsbioprocessing__/graphics/icons/bio-arboretum.png",
+    icon_size = 32,
     subgroup = "aoe-flora-buildings",
     order = "c",
     place_result = "aoe-forestry",
@@ -10,53 +10,98 @@ data:extend({{
 }})
 
 data:extend({{
-    type = "assembling-machine",
-    name = "aoe-forestry",
+  type = "assembling-machine",
+  name = "aoe-forestry",
 	crafting_categories = {"aoe-category-harvesting"},
 	crafting_speed = 1,
 	energy_source = { type = "void" },
 	energy_usage = "1kW",
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-	module_specification =
-    {
-      module_slots = 3
-    },
-	icon = "__aoe__/img/entities/forestry.png",
-	icon_size = 192,
+	module_specification = {
+    module_slots = 3
+  },
+  icon = "__angelsbioprocessing__/graphics/icons/bio-arboretum.png",
+  icon_size = 32,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoe-forestry" },
 	max_health = 50,
 	selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-	radius_visualisation_specification =
-    {
-      sprite = { 
-		filename = "__base__/graphics/entity/pumpjack/pumpjack-radius-visualization.png", 
-		size = 12
+	radius_visualisation_specification = {
+    sprite = {
+		  filename = "__base__/graphics/entity/pumpjack/pumpjack-radius-visualization.png", 
+		  size = 12
 	  },
-      distance = 10
-    },
-	animation = {
-      layers = {
-        {
-          filename = "__aoe__/img/entities/forestry.png",
-          width = 192,
-          height = 192,
-          frame_count = 1,
-		  scale = 0.5
-        }
-      }
-    },
-	fluid_boxes =
-    {
+    distance = 10
+  },
+  animation = {
+    layers = {
       {
-        production_type = "output",
-        pipe_picture = assembler2pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = 1,
-        pipe_connections = {{ type="output", position = {2, 0} }}
+        filename = "__angelsbioprocessing__/graphics/entity/trees/bio-arboretum-shadow.png",
+        width = 224,
+        height = 256,
+        line_length = 1,
+        frame_count = 1,
+        shift = { 0, -0.30 },
+        scale = 0.6
       },
-      off_when_no_fluid_recipe = true
+      {
+        filename = "__angelsbioprocessing__/graphics/entity/trees/bio-arboretum-base.png",
+        width = 224,
+        height = 256,
+        line_length = 1,
+        frame_count = 1,
+        shift = { 0, -0.30 },
+        scale = 0.6
+      },
+      {
+        filename = "__angelsbioprocessing__/graphics/entity/trees/bio-arboretum-pipes.png",
+        width = 224,
+        height = 256,
+        line_length = 1,
+        frame_count = 1,
+        shift = { 0, -0.30 },
+        scale = 0.6
+      },
+      {
+        filename = "__angelsbioprocessing__/graphics/entity/trees/bio-arboretum-off.png",
+        width = 224,
+        height = 256,
+        line_length = 1,
+        frame_count = 1,
+        shift = { 0, -0.30 },
+        scale = 0.6
+      }
     }
+  },
+  working_visualisations = {
+    {
+      apply_recipe_tint = "primary",
+      animation = {
+        filename = "__angelsbioprocessing__/graphics/entity/trees/bio-arboretum-on.png",
+        blend_mode = "additive",
+        width = 224,
+        height = 256,
+        line_length = 1,
+        frame_count = 1,
+        shift = { 0, -0.30 },
+        scale = 0.6
+      },
+      light = { intensity = 1, size = 8, color = { r = 0.5, g = 1.0, b = 0.5 } },
+    }
+  },
+	fluid_boxes = {
+    {
+      production_type = "output",
+      pipe_covers = pipecoverspictures(),
+      base_level = 1,
+      pipe_connections = {{ type="output", position = {0, 2} }}
+    },
+    off_when_no_fluid_recipe = true
+  },
+  working_sound = {
+    sound = { filename = "__base__/sound/chemical-plant.ogg" },
+    idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+    apparent_volume = 2.5,
+  }
 }})

@@ -1,8 +1,8 @@
 data:extend({{
     type = "item",
     name = "aoe-slaughterhouse",
-    icon = "__aoe__/img/entities/slaughterhouse.png",
-    icon_size = 192,
+    icon = "__angelsbioprocessing__/graphics/icons/bio-butchery.png",
+    icon_size = 32,
     subgroup = "aoe-fauna-buildings",
     order = "a",
     place_result = "aoe-slaughterhouse",
@@ -10,46 +10,47 @@ data:extend({{
 }})
 
 data:extend({{
-    type = "assembling-machine",
-    name = "aoe-slaughterhouse",
+  type = "assembling-machine",
+  name = "aoe-slaughterhouse",
 	crafting_categories = {"aoe-category-slaughtering"},
 	crafting_speed = 1,
 	energy_source = {
-      type = "electric",
-      emissions_per_minute = 10,
-      usage_priority = "secondary-input",
+    type = "electric",
+    emissions_per_minute = 10,
+    usage_priority = "secondary-input",
 	  drain = "9.0kW"
-    },
+  },
 	energy_usage = "180kW",
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-	module_specification =
-    {
-      module_slots = 3
-    },
-	icon = "__aoe__/img/entities/slaughterhouse.png",
-	icon_size = 192,
+	module_specification = {
+    module_slots = 3
+  },
+  icon = "__angelsbioprocessing__/graphics/icons/bio-butchery.png",
+  icon_size = 32,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoe-slaughterhouse" },
 	max_health = 50,
 	selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
 	collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
 	animation = {
-      layers = {
-        {
-          filename = "__aoe__/img/entities/slaughterhouse.png",
-          width = 192,
-          height = 192,
-          frame_count = 1,
-		  scale = 0.833333
-        }
+    layers = {
+      {
+        filename = "__angelsbioprocessing__/graphics/entity/bio-butchery/bio-butchery.png",
+        width = 160,
+        height = 160,
+        frame_count = 36,
+        line_length = 6,
+        shift = { 0, 0 },
+        animation_speed = 0.5,
+        scale = 1.6666
       }
-    },
+    }
+  },
 	fluid_boxes = {
       {
         production_type = "output",
         pipe_picture = assembler2pipepictures(),
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
         base_level = 1,
         pipe_connections = {{ type="output", position = {3.0, 0} }}
       },

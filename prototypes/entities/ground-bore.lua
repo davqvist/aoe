@@ -4,8 +4,9 @@ require ("__base__/prototypes/entity/assemblerpipes")
 data:extend({{
     type = "item",
     name = "aoe-burner-ground-bore",
-    icon = "__aoe__/img/entities/ground-bore.png",
-    icon_size = 160,
+    icon = "__angelsrefining__/graphics/icons/liquifier.png",
+    icon_size = 32,
+    icon_mipmaps = 1,
     subgroup = "aoe-specific-buildings",
     order = "c",
     place_result = "aoe-burner-ground-bore",
@@ -13,73 +14,78 @@ data:extend({{
 }})
 
 data:extend({{
-    type = "assembling-machine",
-    name = "aoe-burner-ground-bore",
+  type = "assembling-machine",
+  name = "aoe-burner-ground-bore",
 	crafting_categories = {"aoe-category-digging"},
 	crafting_speed = 0.5,
 	energy_source = {
-      type = "burner",
-      fuel_category = "chemical",
-      effectivity = 1,
-      fuel_inventory_size = 1,
-      emissions_per_minute = 12,
-      light_flicker = {color = {0,0,0}},
-      smoke =
+    type = "burner",
+    fuel_category = "chemical",
+    effectivity = 1,
+    fuel_inventory_size = 1,
+    emissions_per_minute = 12,
+    light_flicker = {color = {0,0,0}},
+    smoke = {
       {
-        {
-          name = "smoke",
-          deviation = {0.1, 0.1},
-          frequency = 3
-        }
+        name = "smoke",
+        deviation = {0.1, 0.1},
+        frequency = 3
       }
-    },
+    }
+  },
 	energy_usage = "150kW",
 	allowed_effects = nil,
-	icon = "__aoe__/img/entities/ground-bore.png",
-	icon_size = 160,
+  icon = "__angelsrefining__/graphics/icons/liquifier.png",
+  icon_size = 32,
+  icon_mipmaps = 1,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoe-burner-ground-bore" },
 	max_health = 50,
 	selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
 	collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
 	animation = {
-      layers = {
-        {
-          filename = "__aoe__/img/entities/ground-bore.png",
-          width = 160,
-          height = 160,
-          frame_count = 1,
-		  scale = 0.8
-        }
-      }
-    },
-	fluid_boxes =
-    {
+    layers = {
       {
-        production_type = "input",
-        pipe_picture = assembler2pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = {{ type="input", position = {0, -3} }},
-        secondary_draw_orders = { north = -1 }
-      },{
-        production_type = "output",
-        pipe_picture = assembler2pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = 1,
-        pipe_connections = {{ type="output", position = {0, 3} }}
-      },
-      off_when_no_fluid_recipe = true
+        filename = "__angelsrefining__/graphics/entity/liquifier/liquifier.png",
+        width = 160,
+        height = 160,
+        line_length = 10,
+        frame_count = 30,
+        shift = { 0, 0 },
+        animation_speed = 0.5,
+        scale = 1.6666
+      }
     }
+  },
+	fluid_boxes = {
+    {
+      production_type = "input",
+      pipe_covers = pipecoverspictures(),
+      base_area = 10,
+      base_level = -1,
+      pipe_connections = {{ type="input", position = {0, 3} }},
+      secondary_draw_orders = { north = -1 }
+    },{
+      production_type = "output",
+      pipe_covers = pipecoverspictures(),
+      base_level = 1,
+      pipe_connections = {{ type="output", position = {0, -3} }}
+    },
+    off_when_no_fluid_recipe = true
+  },
+  working_sound = {
+    sound = { filename = "__base__/sound/oil-refinery.ogg" },
+    idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+    apparent_volume = 2.5,
+  }
 }})
 
 data:extend({{
     type = "item",
     name = "aoe-ground-bore",
-    icon = "__aoe__/img/entities/ground-bore.png",
-    icon_size = 160,
+    icon = "__angelsrefining__/graphics/icons/liquifier.png",
+    icon_size = 32,
+    icon_mipmaps = 1,
     subgroup = "aoe-specific-buildings",
     order = "d",
     place_result = "aoe-ground-bore",
@@ -87,58 +93,62 @@ data:extend({{
 }})
 
 data:extend({{
-    type = "assembling-machine",
-    name = "aoe-ground-bore",
+  type = "assembling-machine",
+  name = "aoe-ground-bore",
 	crafting_categories = {"aoe-category-digging"},
 	crafting_speed = 1,
 	energy_source = {
-      type = "electric",
-      emissions_per_minute = 10,
-      usage_priority = "secondary-input",
+    type = "electric",
+    emissions_per_minute = 10,
+    usage_priority = "secondary-input",
 	  drain = "7.5kW"
-    },
+  },
 	energy_usage = "150kW",
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-	module_specification =
-    {
-      module_slots = 3
-    },
-	icon = "__aoe__/img/entities/ground-bore.png",
-	icon_size = 160,
+	module_specification ={
+    module_slots = 3
+  },
+  icon = "__angelsrefining__/graphics/icons/liquifier.png",
+  icon_size = 32,
+  icon_mipmaps = 1,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoe-ground-bore" },
 	max_health = 50,
 	selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
 	collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
 	animation = {
-      layers = {
-        {
-          filename = "__aoe__/img/entities/ground-bore.png",
-          width = 160,
-          height = 160,
-          frame_count = 1,
-		  scale = 0.8
-        }
-      }
-    },
-	fluid_boxes =
-    {
+    layers = {
       {
-        production_type = "input",
-        pipe_picture = assembler2pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = {{ type="input", position = {0, -3} }},
-        secondary_draw_orders = { north = -1 }
-      },{
-        production_type = "output",
-        pipe_picture = assembler2pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = 1,
-        pipe_connections = {{ type="output", position = {0, 3} }}
-      },
-      off_when_no_fluid_recipe = true
+        filename = "__angelsrefining__/graphics/entity/liquifier/liquifier.png",
+        width = 160,
+        height = 160,
+        line_length = 10,
+        frame_count = 30,
+        shift = { 0, 0 },
+        animation_speed = 0.5,
+        scale = 1.6666
+      }
     }
+  },
+	fluid_boxes = {
+    {
+      production_type = "input",
+      pipe_covers = pipecoverspictures(),
+      base_area = 10,
+      base_level = -1,
+      pipe_connections = {{ type="input", position = {0, 3} }},
+      secondary_draw_orders = { north = -1 }
+    },{
+      production_type = "output",
+      pipe_covers = pipecoverspictures(),
+      base_level = 1,
+      pipe_connections = {{ type="output", position = {0, -3} }}
+    },
+    off_when_no_fluid_recipe = true
+  },
+  working_sound = {
+    sound = { filename = "__base__/sound/oil-refinery.ogg" },
+    idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+    apparent_volume = 2.5,
+  }
 }})
