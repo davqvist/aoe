@@ -13,7 +13,7 @@ data:extend({{
 data:extend({{
   type = "assembling-machine",
   name = "aoe-electrolyzer",
-	crafting_categories = {"aoe-category-electrolyzing"},
+	crafting_categories = {"aoe-category-electrolyzing","aoe-category-electrolyzing-iron","aoe-category-electrolyzing-copper","aoe-category-electrolyzing-tin","aoe-category-electrolyzing-aluminium","aoe-category-electrolyzing-lead","aoe-category-electrolyzing-silver"},
 	crafting_speed = 1,
 	energy_source = {
     type = "electric",

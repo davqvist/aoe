@@ -16,14 +16,14 @@ data:extend({{
 data:extend({{
   type = "assembling-machine",
   name = "aoe-mixer",
-	crafting_categories = {"aoe-category-mixing"},
+	crafting_categories = {"aoe-category-mixing","aoe-category-mixing-iron","aoe-category-mixing-copper","aoe-category-mixing-tin","aoe-category-mixing-aluminium","aoe-category-mixing-lead","aoe-category-mixing-silver"},
 	crafting_speed = 1,
 	energy_source = {
     type = "electric",
     emissions_per_minute = 10,
     usage_priority = "secondary-input",
 	  drain = "6.5kW"
-    },
+  },
 	energy_usage = "130kW",
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
 	module_specification = {

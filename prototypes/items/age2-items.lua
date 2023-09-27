@@ -213,7 +213,7 @@ data:extend({{
     icon = "__angelssmelting__/graphics/icons/powder-tin.png",
     icon_size = 64,
     subgroup = "aoe-metals-tin",
-    order = "b",
+    order = "d",
     stack_size = 200
 }})
 
@@ -223,7 +223,7 @@ data:extend({{
     icon = "__angelssmelting__/graphics/icons/plate-tin.png",
     icon_size = 32,
     subgroup = "aoe-metals-tin",
-    order = "c",
+    order = "e",
     stack_size = 200
 }})
 
@@ -233,7 +233,7 @@ data:extend({{
     icon = "__aoe__/img/items/tin-rod.png",
     icon_size = 64,
     subgroup = "aoe-metals-tin",
-    order = "d",
+    order = "f",
     stack_size = 200
 }})
 
@@ -243,7 +243,7 @@ data:extend({{
     icon = "__aoe__/img/items/tin-gear.png",
     icon_size = 64,
     subgroup = "aoe-metals-tin",
-    order = "e",
+    order = "g",
     stack_size = 200
 }})
 
@@ -293,7 +293,7 @@ data:extend({{
     icon = "__angelssmelting__/graphics/icons/powder-aluminium.png",
     icon_size = 64,
     subgroup = "aoe-metals-aluminium",
-    order = "b",
+    order = "d",
     stack_size = 200
 }})
 
@@ -303,7 +303,7 @@ data:extend({{
     icon = "__angelssmelting__/graphics/icons/plate-aluminium.png",
     icon_size = 32,
     subgroup = "aoe-metals-aluminium",
-    order = "c",
+    order = "e",
     stack_size = 200
 }})
 
@@ -313,7 +313,7 @@ data:extend({{
     icon = "__angelssmelting__/graphics/icons/rod-aluminium.png",
     icon_size = 32,
     subgroup = "aoe-metals-aluminium",
-    order = "d",
+    order = "f",
     stack_size = 200
 }})
 
@@ -380,8 +380,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoe-caustic-soda",
-    icon = "__aoe__/img/items/caustic-soda.png",
-    icon_size = 64,
+    icon = "__angelspetrochem__/graphics/icons/solid-sodium-hydroxide.png",
+    icon_size = 32,
     subgroup = "aoe-chemicals",
     order = "b",
     stack_size = 200

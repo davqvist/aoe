@@ -1,15 +1,63 @@
 data:extend({
   {
     type = "recipe-category",
-    name = "aoe-category-alloying",
-  },
-  {
-    type = "recipe-category",
     name = "aoe-category-burning",
   },
   {
     type = "recipe-category",
+    name = "aoe-category-casting",
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-casting-iron",
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-casting-copper",
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-casting-tin",
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-casting-aluminium",
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-casting-lead",
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-casting-silver",
+  },
+  {
+    type = "recipe-category",
     name = "aoe-category-crushing",
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-crushing-iron",
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-crushing-copper",
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-crushing-tin",
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-crushing-aluminium",
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-crushing-lead",
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-crushing-silver",
   },
   {
     type = "recipe-category",
@@ -18,6 +66,30 @@ data:extend({
   {
     type = "recipe-category",
     name = "aoe-category-electrolyzing",
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-electrolyzing-iron",
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-electrolyzing-copper",
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-electrolyzing-tin",
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-electrolyzing-aluminium",
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-electrolyzing-lead",
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-electrolyzing-silver",
   },
   {
     type = "recipe-category",
@@ -127,11 +199,59 @@ data:extend({
   },
   {
     type = "recipe-category",
+    name = "aoe-category-kiln-smelting-iron",
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-kiln-smelting-copper",
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-kiln-smelting-tin",
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-kiln-smelting-aluminium",
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-kiln-smelting-lead",
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-kiln-smelting-silver",
+  },
+  {
+    type = "recipe-category",
     name = "aoe-category-melting",
   },
   {
     type = "recipe-category",
     name = "aoe-category-mixing",
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-mixing-iron",
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-mixing-copper",
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-mixing-tin",
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-mixing-aluminium",
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-mixing-lead",
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-mixing-silver",
   },
   {
     type = "recipe-category",
@@ -172,6 +292,30 @@ data:extend({
   {
     type = "recipe-category",
     name = "aoe-category-venting",
+  },
+  {
+    type = "recipe-category",
+    name = "centrifuging-copper",
+  },
+  {
+    type = "recipe-category",
+    name = "centrifuging-iron",
+  },
+  {
+    type = "recipe-category",
+    name = "centrifuging-tin",
+  },
+  {
+    type = "recipe-category",
+    name = "centrifuging-aluminium",
+  },
+  {
+    type = "recipe-category",
+    name = "centrifuging-lead",
+  },
+  {
+    type = "recipe-category",
+    name = "centrifuging-silver",
   }
 })
 

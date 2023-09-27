@@ -1219,7 +1219,7 @@ data:extend({{
 	ingredients = {
 		{type = 'item', name = 'aoe-quicklime', amount = 6},
 		{type = 'item', name = 'aoe-soda-ash', amount = 5},
-		{type = 'item', name = 'aoe-bones', amount = 2},
+		{type = 'item', name = 'aoe-bone-meal', amount = 7},
 		{type = 'item', name = 'aoe-magnesium-dust', amount = 1}
 	},
 	results = {
@@ -1254,7 +1254,7 @@ data:extend({{
     results = {
         {type = 'item', name = 'aoe-kelp', amount = 1}
     },
-    energy_required = 16,
+    energy_required = 14,
 	category = 'aoe-category-farm-reservoir-kelp'
 }})
 
@@ -1699,23 +1699,7 @@ data:extend({{
 }})
 
 data:extend({{
-    name = 'aoe-crafting-alloy-furnace-recipe',
-    type = 'recipe',
-    enabled = false,
-	ingredients = {
-		{type = 'item', name = 'aoe-steel-machine-hull', amount = 12},
-		{type = 'item', name = 'aoe-heating-coil', amount = 8},
-		{type = 'item', name = 'steel-furnace', amount = 2},
-		{type = 'item', name = 'concrete', amount = 16}
-    },
-    results = {
-        {type = 'item', name = 'aoe-alloy-furnace', amount = 1}
-    },
-    energy_required = 2
-}})
-
-data:extend({{
-    name = 'aoe-alloying-bronze-plate-recipe',
+    name = 'aoe-smelting-bronze-plate-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -1726,7 +1710,7 @@ data:extend({{
         {type = 'item', name = 'aoe-bronze-plate', amount = 2}
     },
     energy_required = 2.4,
-	category = 'aoe-category-alloying'
+	category = 'smelting'
 }})
 
 data:extend({{

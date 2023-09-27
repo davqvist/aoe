@@ -143,6 +143,86 @@ data:extend({{
 
 data:extend({{
     type = "item",
+    name = "aoe-iron-processed",
+    icon = "__angelssmelting__/graphics/icons/processed-iron.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-iron",
+    order = "b",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-iron-reduced",
+    icon = "__angelssmelting__/graphics/icons/pellet-iron.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-iron",
+    order = "c",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-copper-processed",
+    icon = "__angelssmelting__/graphics/icons/processed-copper.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-copper",
+    order = "b",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-copper-reduced",
+    icon = "__angelssmelting__/graphics/icons/pellet-copper.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-copper",
+    order = "c",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-tin-processed",
+    icon = "__angelssmelting__/graphics/icons/processed-tin.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-tin",
+    order = "b",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-tin-reduced",
+    icon = "__angelssmelting__/graphics/icons/pellet-tin.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-tin",
+    order = "c",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-aluminium-processed",
+    icon = "__angelssmelting__/graphics/icons/processed-aluminium.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-aluminium",
+    order = "b",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-aluminium-reduced",
+    icon = "__angelssmelting__/graphics/icons/pellet-aluminium.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-aluminium",
+    order = "c",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
     name = "aoe-chromium-ore",
     icon = "__angelssmelting__/graphics/icons/ore-chrome.png",
     icon_size = 32,
@@ -153,11 +233,31 @@ data:extend({{
 
 data:extend({{
     type = "item",
+    name = "aoe-chromium-processed",
+    icon = "__angelssmelting__/graphics/icons/processed-chrome.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-chromium",
+    order = "b",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-chromium-reduced",
+    icon = "__angelssmelting__/graphics/icons/pellet-chrome.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-chromium",
+    order = "c",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
     name = "aoe-chromium-dust",
     icon = "__angelssmelting__/graphics/icons/powder-chrome.png",
     icon_size = 64,
     subgroup = "aoe-metals-chromium",
-    order = "b",
+    order = "d",
     stack_size = 200
 }})
 
@@ -167,7 +267,7 @@ data:extend({{
     icon = "__angelssmelting__/graphics/icons/plate-chrome.png",
     icon_size = 32,
     subgroup = "aoe-metals-chromium",
-    order = "c",
+    order = "e",
     stack_size = 200
 }})
 
@@ -183,11 +283,31 @@ data:extend({{
 
 data:extend({{
     type = "item",
+    name = "aoe-lead-processed",
+    icon = "__angelssmelting__/graphics/icons/processed-lead.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-lead",
+    order = "b",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-lead-reduced",
+    icon = "__angelssmelting__/graphics/icons/pellet-lead.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-lead",
+    order = "c",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
     name = "aoe-lead-dust",
     icon = "__angelssmelting__/graphics/icons/powder-lead.png",
     icon_size = 64,
     subgroup = "aoe-metals-lead",
-    order = "b",
+    order = "d",
     stack_size = 200
 }})
 
@@ -197,7 +317,7 @@ data:extend({{
     icon = "__angelssmelting__/graphics/icons/plate-lead.png",
     icon_size = 32,
     subgroup = "aoe-metals-lead",
-    order = "c",
+    order = "e",
     stack_size = 200
 }})
 
@@ -213,11 +333,31 @@ data:extend({{
 
 data:extend({{
     type = "item",
+    name = "aoe-silver-processed",
+    icon = "__angelssmelting__/graphics/icons/processed-silver.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-silver",
+    order = "b",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-silver-reduced",
+    icon = "__angelssmelting__/graphics/icons/pellet-silver.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-silver",
+    order = "c",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
     name = "aoe-silver-dust",
     icon = "__angelssmelting__/graphics/icons/powder-silver.png",
     icon_size = 64,
     subgroup = "aoe-metals-silver",
-    order = "b",
+    order = "d",
     stack_size = 200
 }})
 
@@ -227,7 +367,7 @@ data:extend({{
     icon = "__angelssmelting__/graphics/icons/plate-silver.png",
     icon_size = 32,
     subgroup = "aoe-metals-silver",
-    order = "c",
+    order = "e",
     stack_size = 200
 }})
 
@@ -243,11 +383,31 @@ data:extend({{
 
 data:extend({{
     type = "item",
+    name = "aoe-nickel-processed",
+    icon = "__angelssmelting__/graphics/icons/processed-nickel.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-nickel",
+    order = "b",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-nickel-reduced",
+    icon = "__angelssmelting__/graphics/icons/pellet-nickel.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-nickel",
+    order = "c",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
     name = "aoe-nickel-dust",
     icon = "__angelssmelting__/graphics/icons/powder-nickel.png",
     icon_size = 64,
     subgroup = "aoe-metals-nickel",
-    order = "b",
+    order = "d",
     stack_size = 200
 }})
 
@@ -257,7 +417,7 @@ data:extend({{
     icon = "__angelssmelting__/graphics/icons/plate-nickel.png",
     icon_size = 32,
     subgroup = "aoe-metals-nickel",
-    order = "c",
+    order = "e",
     stack_size = 200
 }})
 
@@ -273,11 +433,31 @@ data:extend({{
 
 data:extend({{
     type = "item",
+    name = "aoe-zinc-processed",
+    icon = "__angelssmelting__/graphics/icons/processed-zinc.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-zinc",
+    order = "b",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-zinc-reduced",
+    icon = "__angelssmelting__/graphics/icons/pellet-zinc.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-zinc",
+    order = "c",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
     name = "aoe-zinc-dust",
     icon = "__angelssmelting__/graphics/icons/powder-zinc.png",
     icon_size = 64,
     subgroup = "aoe-metals-zinc",
-    order = "b",
+    order = "d",
     stack_size = 200
 }})
 
@@ -287,7 +467,7 @@ data:extend({{
     icon = "__angelssmelting__/graphics/icons/plate-zinc.png",
     icon_size = 32,
     subgroup = "aoe-metals-zinc",
-    order = "c",
+    order = "e",
     stack_size = 200
 }})
 
@@ -303,11 +483,31 @@ data:extend({{
 
 data:extend({{
     type = "item",
+    name = "aoe-tungsten-processed",
+    icon = "__angelssmelting__/graphics/icons/processed-tungsten.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-tungsten",
+    order = "b",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-tungsten-reduced",
+    icon = "__angelssmelting__/graphics/icons/pellet-tungsten.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-tungsten",
+    order = "c",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
     name = "aoe-tungsten-dust",
     icon = "__angelssmelting__/graphics/icons/powder-tungsten.png",
     icon_size = 64,
     subgroup = "aoe-metals-tungsten",
-    order = "b",
+    order = "d",
     stack_size = 200
 }})
 
@@ -317,7 +517,7 @@ data:extend({{
     icon = "__angelssmelting__/graphics/icons/plate-tungsten.png",
     icon_size = 32,
     subgroup = "aoe-metals-tungsten",
-    order = "c",
+    order = "e",
     stack_size = 200
 }})
 
@@ -333,11 +533,31 @@ data:extend({{
 
 data:extend({{
     type = "item",
+    name = "aoe-gold-processed",
+    icon = "__angelssmelting__/graphics/icons/processed-gold.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-gold",
+    order = "b",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-gold-reduced",
+    icon = "__angelssmelting__/graphics/icons/pellet-gold.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-gold",
+    order = "c",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
     name = "aoe-gold-dust",
     icon = "__angelssmelting__/graphics/icons/powder-gold.png",
     icon_size = 64,
     subgroup = "aoe-metals-gold",
-    order = "b",
+    order = "d",
     stack_size = 200
 }})
 
@@ -347,9 +567,60 @@ data:extend({{
     icon = "__angelssmelting__/graphics/icons/plate-gold.png",
     icon_size = 32,
     subgroup = "aoe-metals-gold",
-    order = "c",
+    order = "e",
     stack_size = 200
-}})    
+}})
 
 data.raw['item']['uranium-ore'].subgroup = "aoe-metals-rest"
 data.raw['item']['uranium-ore'].order = "j"
+
+data:extend({{
+    type = "item",
+    name = "aoe-slag",
+    icon = "__angelsrefining__/graphics/icons/slag.png",
+    icon_size = 32,
+    subgroup = "aoe-stone",
+    order = "r",
+    stack_size = 500
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-sodium-bisulfate",
+    icon = "__angelspetrochem__/graphics/icons/solid-sodium-sulfate.png",
+    icon_size = 32,
+    subgroup = "aoe-chemicals",
+    order = "c",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-sodium-nitrate",
+    icon = "__angelspetrochem__/graphics/icons/solid-sodium-nitrate.png",
+    icon_size = 32,
+    subgroup = "aoe-chemicals",
+    order = "d",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-sodium-cyanide",
+    icon = "__angelspetrochem__/graphics/icons/solid-sodium-cyanide.png",
+    icon_size = 32,
+    subgroup = "aoe-chemicals",
+    order = "e",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-hydrogen-cyanide",
+    icon = "__angelssmelting__/graphics/icons/solid-silver-nitrate.png",
+    icon_size = 32,
+    subgroup = "aoe-chemicals",
+    order = "f",
+    stack_size = 200
+}})
+

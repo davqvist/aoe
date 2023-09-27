@@ -754,8 +754,8 @@ data:extend({{
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-plant-oil', amount = 60},
-        {type = 'fluid', name = 'aoe-ethanol', amount = 10},
+		{type = 'fluid', name = 'aoe-plant-oil', amount = 10},
+        {type = 'fluid', name = 'aoe-ethanol', amount = 60},
         {type = 'item', name = 'aoe-caustic-soda', amount = 1},
 	},
 	results = {
@@ -763,7 +763,25 @@ data:extend({{
         {type = 'fluid', name = 'aoe-glycerol', amount = 6}
     },
     main_product = "aoe-biodiesel",
-	energy_required = 7,
+	energy_required = 6,
+	category = 'oil-processing'
+}})
+
+data:extend({{
+	name = 'aoe-refining-biodiesel-2-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-plant-oil', amount = 20},
+        {type = 'fluid', name = 'aoe-methanol', amount = 60},
+        {type = 'item', name = 'aoe-caustic-soda', amount = 1},
+	},
+	results = {
+		{type = 'fluid', name = 'aoe-biodiesel', amount = 73},
+        {type = 'fluid', name = 'aoe-glycerol', amount = 7}
+    },
+    main_product = "aoe-biodiesel",
+	energy_required = 6,
 	category = 'oil-processing'
 }})
 
@@ -809,4 +827,887 @@ data:extend({{
 		{type = 'item', name = 'po-transformer', amount = 1}
     },
 	energy_required = 1
+}})
+
+data:extend({{
+    name = 'aoe-chemistry-methane-co2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-carbon-dioxide', amount = 30},
+		{type = 'fluid', name = 'aoe-hydrogen', amount = 120},
+    },
+    results = {
+        {type = 'fluid', name = 'aoe-methane', amount = 50},
+		{type = 'fluid', name = 'water', amount = 100}
+    },
+	main_product = 'aoe-methane',
+    energy_required = 15,
+	category = 'chemistry'
+}})
+
+data:extend({{
+    name = 'aoe-chemistry-methane-co-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-carbon-monoxide', amount = 30},
+		{type = 'fluid', name = 'aoe-hydrogen', amount = 90},
+    },
+    results = {
+        {type = 'fluid', name = 'aoe-methane', amount = 60},
+		{type = 'fluid', name = 'water', amount = 60}
+    },
+	main_product = 'aoe-methane',
+    energy_required = 12,
+	category = 'chemistry'
+}})
+
+data:extend({{
+    name = 'aoe-chemistry-carbon-monoxide-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'steam', amount = 20},
+		{type = 'fluid', name = 'aoe-methane', amount = 20},
+    },
+    results = {
+        {type = 'fluid', name = 'aoe-carbon-monoxide', amount = 10},
+		{type = 'fluid', name = 'aoe-hydrogen', amount = 30}
+    },
+	main_product = 'aoe-carbon-monoxide',
+    energy_required = 4,
+	category = 'chemistry'
+}})
+
+data:extend({{
+    name = 'aoe-chemistry-carbon-dioxide-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-carbon-monoxide', amount = 20},
+		{type = 'fluid', name = 'steam', amount = 20},
+    },
+    results = {
+        {type = 'fluid', name = 'aoe-carbon-dioxide', amount = 20},
+		{type = 'fluid', name = 'aoe-hydrogen', amount = 20}
+    },
+	main_product = 'aoe-carbon-dioxide',
+    energy_required = 4,
+	category = 'chemistry'
+}})
+
+data:extend({{
+    name = 'aoe-chemistry-methanol-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-carbon-monoxide', amount = 10},
+		{type = 'fluid', name = 'aoe-hydrogen', amount = 20},
+    },
+    results = {
+        {type = 'fluid', name = 'aoe-methanol', amount = 30}
+    },
+    energy_required = 3,
+	category = 'chemistry'
+}})
+
+data:extend({{
+    name = 'aoe-chemistry-methanol-2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-carbon-dioxide', amount = 10},
+		{type = 'fluid', name = 'aoe-hydrogen', amount = 30},
+    },
+    results = {
+        {type = 'fluid', name = 'aoe-methanol', amount = 20},
+        {type = 'fluid', name = 'water', amount = 20},
+    },
+	main_product = 'aoe-methanol',
+    energy_required = 4,
+	category = 'chemistry'
+}})
+
+data:extend({{
+    name = 'aoe-chemistry-formic-acid-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-methanol', amount = 20},
+		{type = 'fluid', name = 'aoe-oxygen', amount = 30},
+    },
+    results = {
+        {type = 'fluid', name = 'aoe-formic-acid', amount = 25},
+        {type = 'fluid', name = 'water', amount = 25},
+    },
+	main_product = 'aoe-formic-acid',
+    energy_required = 5,
+	category = 'chemistry'
+}})
+
+data:extend({{
+    name = 'aoe-chemistry-ammonia-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-nitrogen', amount = 10},
+		{type = 'fluid', name = 'aoe-hydrogen', amount = 30},
+    },
+    results = {
+        {type = 'fluid', name = 'aoe-ammonia', amount = 40}
+    },
+    energy_required = 4,
+	category = 'chemistry'
+}})
+
+data:extend({{
+    name = 'aoe-chemistry-nitric-oxide-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-ammonia', amount = 40},
+		{type = 'fluid', name = 'aoe-oxygen', amount = 50},
+    },
+    results = {
+        {type = 'fluid', name = 'aoe-nitric-oxide', amount = 40},
+		{type = 'fluid', name = 'steam', amount = 60}
+    },
+	main_product = 'aoe-nitric-oxide',
+    energy_required = 8,
+	category = 'chemistry'
+}})
+
+data:extend({{
+    name = 'aoe-chemistry-dinitrogen-tetroxide-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-nitric-oxide', amount = 20},
+		{type = 'fluid', name = 'aoe-oxygen', amount = 10},
+    },
+    results = {
+        {type = 'fluid', name = 'aoe-dinitrogen-tetroxide', amount = 30}
+    },
+    energy_required = 3,
+	category = 'chemistry'
+}})
+
+data:extend({{
+    name = 'aoe-chemistry-nitric-acid-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-dinitrogen-tetroxide', amount = 30},
+		{type = 'fluid', name = 'aoe-oxygen', amount = 30},
+    },
+    results = {
+        {type = 'fluid', name = 'aoe-nitric-acid', amount = 40},
+		{type = 'fluid', name = 'steam', amount = 20}
+    },
+	main_product = 'aoe-nitric-acid',
+    energy_required = 6,
+	category = 'chemistry'
+}})
+
+data:extend({{
+    name = 'aoe-chemistry-sodium-nitrate-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-soda-ash', amount = 1},
+		{type = 'fluid', name = 'aoe-nitric-acid', amount = 20},
+    },
+    results = {
+        {type = 'item', name = 'aoe-sodium-nitrate', amount = 2},
+		{type = 'fluid', name = 'water', amount = 10},
+		{type = 'fluid', name = 'aoe-carbon-dioxide', amount = 10}
+    },
+	main_product = 'aoe-sodium-nitrate',
+    energy_required = 2,
+	category = 'chemistry'
+}})
+
+data:extend({{
+    name = 'aoe-chemistry-sodium-nitrate-2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-caustic-soda', amount = 2},
+		{type = 'fluid', name = 'aoe-nitric-acid', amount = 20},
+    },
+    results = {
+        {type = 'item', name = 'aoe-sodium-nitrate', amount = 2},
+		{type = 'fluid', name = 'water', amount = 20}
+    },
+	main_product = 'aoe-sodium-nitrate',
+    energy_required = 2,
+	category = 'chemistry'
+}})
+
+data:extend({{
+    name = 'aoe-crafting-casting-unit-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-steel-machine-hull', amount = 12},
+		{type = 'item', name = 'aoe-cooling-coil', amount = 8},
+		{type = 'item', name = 'concrete', amount = 16},
+		{type = 'item', name = 'aoe-bronze-plate', amount = 20}
+    },
+    results = {
+        {type = 'item', name = 'aoe-casting-unit', amount = 1}
+    },
+    energy_required = 2
+}})
+
+data:extend({{
+    name = 'aoe-crafting-centrifuge-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-steel-machine-hull', amount = 15},
+		{type = 'item', name = 'engine-unit', amount = 5},
+		{type = 'item', name = 'concrete', amount = 25},
+		{type = 'item', name = 'electronic-circuit', amount = 10}
+    },
+    results = {
+        {type = 'item', name = 'centrifuge', amount = 1}
+    },
+    energy_required = 2
+}})
+
+data:extend({{
+    name = 'aoe-smelting-mold-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-clay', amount = 2},
+		{type = 'item', name = 'aoe-mica', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoe-mold', amount = 1}
+    },
+	category = 'smelting',
+    energy_required = 2.4
+}})
+
+data:extend({{
+    name = 'aoe-centrifuging-iron-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'iron-ore', amount = 4}
+    },
+    results = {
+        {type = 'item', name = 'aoe-iron-processed', amount = 6},
+		{type = 'item', name = 'aoe-sand', amount = 1}
+    },
+	main_product = 'aoe-iron-processed',
+	category = 'centrifuging-iron',
+    energy_required = 4
+}})
+
+data:extend({{
+    name = 'aoe-kiln-iron-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-iron-processed', amount = 4},
+		{type = 'fluid', name = 'aoe-methane', amount = 5}
+    },
+    results = {
+        {type = 'item', name = 'aoe-iron-reduced', amount = 6},
+		{type = 'fluid', name = 'aoe-sulfur-dioxide', amount = 5}
+    },
+	main_product = 'aoe-iron-reduced',
+	category = 'aoe-category-kiln-smelting-iron',
+    energy_required = 4.8
+}})
+
+data:extend({{
+	name = 'aoe-crushing-iron-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-iron-reduced', amount = 4}
+	},
+	results = {
+		{type = 'item', name = 'aoe-iron-dust', amount = 6},
+		{type = 'item', name = 'aoe-sand', amount = 1}
+    },
+	main_product = 'aoe-iron-dust',
+	energy_required = 4,
+	category = 'aoe-category-crushing-iron'
+}})
+
+data:extend({{
+	name = 'aoe-mixing-iron-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-iron-dust', amount = 5},
+		{type = 'fluid', name = 'aoe-oxygen', amount = 5}
+	},
+	results = {
+		{type = 'fluid', name = 'aoe-iron-slurry', amount = 30},
+		{type = 'item', name = 'aoe-slag', amount = 1}
+    },
+	main_product = 'aoe-iron-slurry',
+	energy_required = 5,
+	category = 'aoe-category-mixing-iron'
+}})
+
+data:extend({{
+	name = 'aoe-electrolyzing-iron-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-iron-slurry', amount = 25}
+	},
+	results = {
+		{type = 'fluid', name = 'aoe-iron-molten', amount = 30},
+		{type = 'fluid', name = 'aoe-tailings', amount = 30}
+    },
+	main_product = 'aoe-iron-molten',
+	energy_required = 3,
+	category = 'aoe-category-electrolyzing-iron'
+}})
+
+data:extend({{
+	name = 'aoe-casting-iron-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-iron-molten', amount = 25},
+		{type = 'item', name = 'aoe-mold', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'iron-plate', amount = 6},
+		{type = 'item', name = 'aoe-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+    },
+	main_product = 'iron-plate',
+	energy_required = 3,
+	category = 'aoe-category-casting-iron'
+}})
+
+data:extend({{
+    name = 'aoe-centrifuging-copper-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'copper-ore', amount = 4}
+    },
+    results = {
+        {type = 'item', name = 'aoe-copper-processed', amount = 6},
+		{type = 'item', name = 'aoe-sand', amount = 1}
+    },
+	main_product = 'aoe-copper-processed',
+	category = 'centrifuging-copper',
+    energy_required = 4
+}})
+
+data:extend({{
+    name = 'aoe-kiln-copper-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-copper-processed', amount = 4},
+		{type = 'item', name = 'aoe-coke', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoe-copper-reduced', amount = 6},
+		{type = 'fluid', name = 'aoe-carbon-dioxide', amount = 5}
+    },
+	main_product = 'aoe-copper-reduced',
+	category = 'aoe-category-kiln-smelting-copper',
+    energy_required = 4.8
+}})
+
+data:extend({{
+	name = 'aoe-crushing-copper-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-copper-reduced', amount = 4}
+	},
+	results = {
+		{type = 'item', name = 'aoe-copper-dust', amount = 6},
+		{type = 'item', name = 'aoe-sand', amount = 1}
+    },
+	main_product = 'aoe-copper-dust',
+	energy_required = 4,
+	category = 'aoe-category-crushing-copper'
+}})
+
+data:extend({{
+	name = 'aoe-mixing-copper-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-copper-dust', amount = 5},
+		{type = 'fluid', name = 'aoe-formic-acid', amount = 5}
+	},
+	results = {
+		{type = 'fluid', name = 'aoe-copper-slurry', amount = 30},
+		{type = 'item', name = 'aoe-slag', amount = 1}
+    },
+	main_product = 'aoe-copper-slurry',
+	energy_required = 5,
+	category = 'aoe-category-mixing-copper'
+}})
+
+data:extend({{
+	name = 'aoe-electrolyzing-copper-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-copper-slurry', amount = 25}
+	},
+	results = {
+		{type = 'fluid', name = 'aoe-copper-molten', amount = 30},
+		{type = 'fluid', name = 'aoe-tailings', amount = 30}
+    },
+	main_product = 'aoe-copper-molten',
+	energy_required = 3,
+	category = 'aoe-category-electrolyzing-copper'
+}})
+
+data:extend({{
+	name = 'aoe-casting-copper-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-copper-molten', amount = 25},
+		{type = 'item', name = 'aoe-mold', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'copper-plate', amount = 6},
+		{type = 'item', name = 'aoe-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+    },
+	main_product = 'copper-plate',
+	energy_required = 3,
+	category = 'aoe-category-casting-copper'
+}})
+
+data:extend({{
+    name = 'aoe-centrifuging-tin-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-tin-ore', amount = 4}
+    },
+    results = {
+        {type = 'item', name = 'aoe-tin-processed', amount = 6},
+		{type = 'item', name = 'aoe-gravel', amount = 1}
+    },
+	main_product = 'aoe-tin-processed',
+	category = 'centrifuging-tin',
+    energy_required = 4
+}})
+
+data:extend({{
+    name = 'aoe-kiln-tin-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-tin-processed', amount = 4},
+		{type = 'item', name = 'aoe-coke', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoe-tin-reduced', amount = 6},
+		{type = 'fluid', name = 'aoe-carbon-dioxide', amount = 5}
+    },
+	main_product = 'aoe-tin-reduced',
+	category = 'aoe-category-kiln-smelting-tin',
+    energy_required = 4.8
+}})
+
+data:extend({{
+	name = 'aoe-crushing-tin-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-tin-reduced', amount = 4}
+	},
+	results = {
+		{type = 'item', name = 'aoe-tin-dust', amount = 6},
+		{type = 'item', name = 'aoe-sand', amount = 1}
+    },
+	main_product = 'aoe-tin-dust',
+	energy_required = 4,
+	category = 'aoe-category-crushing-tin'
+}})
+
+data:extend({{
+	name = 'aoe-mixing-tin-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-tin-dust', amount = 5},
+		{type = 'fluid', name = 'aoe-nitric-acid', amount = 5}
+	},
+	results = {
+		{type = 'fluid', name = 'aoe-tin-slurry', amount = 30},
+		{type = 'item', name = 'aoe-slag', amount = 1}
+    },
+	main_product = 'aoe-tin-slurry',
+	energy_required = 5,
+	category = 'aoe-category-mixing-tin'
+}})
+
+data:extend({{
+	name = 'aoe-electrolyzing-tin-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-tin-slurry', amount = 25}
+	},
+	results = {
+		{type = 'fluid', name = 'aoe-tin-molten', amount = 30},
+		{type = 'fluid', name = 'aoe-tailings', amount = 30}
+    },
+	main_product = 'aoe-tin-molten',
+	energy_required = 3,
+	category = 'aoe-category-electrolyzing-tin'
+}})
+
+data:extend({{
+	name = 'aoe-casting-tin-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-tin-molten', amount = 25},
+		{type = 'item', name = 'aoe-mold', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoe-tin-plate', amount = 6},
+		{type = 'item', name = 'aoe-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+    },
+	main_product = 'aoe-tin-plate',
+	energy_required = 3,
+	category = 'aoe-category-casting-tin'
+}})
+
+data:extend({{
+    name = 'aoe-centrifuging-aluminium-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-aluminium-ore', amount = 4}
+    },
+    results = {
+        {type = 'item', name = 'aoe-aluminium-processed', amount = 6},
+		{type = 'item', name = 'aoe-gravel', amount = 1}
+    },
+	main_product = 'aoe-aluminium-processed',
+	category = 'centrifuging-aluminium',
+    energy_required = 4
+}})
+
+data:extend({{
+    name = 'aoe-kiln-aluminium-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-aluminium-processed', amount = 4},
+		{type = 'item', name = 'aoe-coke', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoe-aluminium-reduced', amount = 6},
+		{type = 'fluid', name = 'aoe-carbon-dioxide', amount = 5}
+    },
+	main_product = 'aoe-aluminium-reduced',
+	category = 'aoe-category-kiln-smelting-aluminium',
+    energy_required = 4.8
+}})
+
+data:extend({{
+	name = 'aoe-crushing-aluminium-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-aluminium-reduced', amount = 4}
+	},
+	results = {
+		{type = 'item', name = 'aoe-aluminium-dust', amount = 6},
+		{type = 'item', name = 'aoe-gravel', amount = 1}
+    },
+	main_product = 'aoe-aluminium-dust',
+	energy_required = 4,
+	category = 'aoe-category-crushing-aluminium'
+}})
+
+data:extend({{
+	name = 'aoe-mixing-aluminium-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-aluminium-dust', amount = 5},
+		{type = 'fluid', name = 'aoe-caustic-solution', amount = 5}
+	},
+	results = {
+		{type = 'fluid', name = 'aoe-aluminium-slurry', amount = 30},
+		{type = 'item', name = 'aoe-slag', amount = 1}
+    },
+	main_product = 'aoe-aluminium-slurry',
+	energy_required = 5,
+	category = 'aoe-category-mixing-aluminium'
+}})
+
+data:extend({{
+	name = 'aoe-electrolyzing-aluminium-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-aluminium-slurry', amount = 25}
+	},
+	results = {
+		{type = 'fluid', name = 'aoe-aluminium-molten', amount = 30},
+		{type = 'fluid', name = 'aoe-tailings', amount = 30}
+    },
+	main_product = 'aoe-aluminium-molten',
+	energy_required = 3,
+	category = 'aoe-category-electrolyzing-aluminium'
+}})
+
+data:extend({{
+	name = 'aoe-casting-aluminium-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-aluminium-molten', amount = 25},
+		{type = 'item', name = 'aoe-mold', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoe-aluminium-plate', amount = 6},
+		{type = 'item', name = 'aoe-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+    },
+	main_product = 'aoe-aluminium-plate',
+	energy_required = 3,
+	category = 'aoe-category-casting-aluminium'
+}})
+
+data:extend({{
+    name = 'aoe-centrifuging-lead-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-lead-ore', amount = 4}
+    },
+    results = {
+        {type = 'item', name = 'aoe-lead-processed', amount = 6},
+		{type = 'item', name = 'aoe-sand', amount = 1}
+    },
+	main_product = 'aoe-lead-processed',
+	category = 'centrifuging-lead',
+    energy_required = 4
+}})
+
+data:extend({{
+    name = 'aoe-kiln-lead-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-lead-processed', amount = 4},
+		{type = 'item', name = 'aoe-bone-meal', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoe-lead-reduced', amount = 6},
+		{type = 'fluid', name = 'aoe-sulfur-dioxide', amount = 5}
+    },
+	main_product = 'aoe-lead-reduced',
+	category = 'aoe-category-kiln-smelting-lead',
+    energy_required = 4.8
+}})
+
+data:extend({{
+	name = 'aoe-crushing-lead-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-lead-reduced', amount = 4}
+	},
+	results = {
+		{type = 'item', name = 'aoe-lead-dust', amount = 6},
+		{type = 'item', name = 'aoe-silver-dust', amount = 1, probability = 0.5},
+		{type = 'item', name = 'aoe-sand', amount = 1}
+    },
+	main_product = 'aoe-lead-dust',
+	energy_required = 4,
+	category = 'aoe-category-crushing-lead'
+}})
+
+data:extend({{
+	name = 'aoe-mixing-lead-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-lead-dust', amount = 5},
+		{type = 'fluid', name = 'aoe-hydrochloric-acid', amount = 5}
+	},
+	results = {
+		{type = 'fluid', name = 'aoe-lead-slurry', amount = 30},
+		{type = 'item', name = 'aoe-slag', amount = 1}
+    },
+	main_product = 'aoe-lead-slurry',
+	energy_required = 5,
+	category = 'aoe-category-mixing-aluminium'
+}})
+
+data:extend({{
+	name = 'aoe-electrolyzing-lead-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-lead-slurry', amount = 25}
+	},
+	results = {
+		{type = 'fluid', name = 'aoe-lead-molten', amount = 30},
+		{type = 'fluid', name = 'aoe-tailings', amount = 30}
+    },
+	main_product = 'aoe-lead-molten',
+	energy_required = 3,
+	category = 'aoe-category-electrolyzing-lead'
+}})
+
+data:extend({{
+	name = 'aoe-casting-lead-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-lead-molten', amount = 25},
+		{type = 'item', name = 'aoe-mold', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoe-lead-plate', amount = 6},
+		{type = 'item', name = 'aoe-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+    },
+	main_product = 'aoe-lead-plate',
+	energy_required = 3,
+	category = 'aoe-category-casting-lead'
+}})
+
+data:extend({{
+	name = 'aoe-smelting-lead-recipe',
+	type = 'recipe',
+	enabled = false,
+    allow_decomposition = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-lead-dust', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoe-lead-plate', amount = 1}
+    },
+	energy_required = 2.4,
+	category = 'smelting'
+}})
+
+data:extend({{
+    name = 'aoe-chemistry-hydrogen-chloride-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-chlorine', amount = 20},
+		{type = 'fluid', name = 'aoe-hydrogen', amount = 20}
+    },
+    results = {
+        {type = 'fluid', name = 'aoe-hydrogen-chloride', amount = 40}
+    },
+    energy_required = 4,
+	category = 'chemistry'
+}})
+
+data:extend({{
+    name = 'aoe-chemistry-hydrochloric-acid-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-hydrogen-chloride', amount = 40},
+		{type = 'fluid', name = 'water', amount = 40}
+    },
+    results = {
+        {type = 'fluid', name = 'aoe-hydrochloric-acid', amount = 40}
+    },
+    energy_required = 4,
+	category = 'chemistry'
+}})
+
+data:extend({{
+    name = 'aoe-mixing-caustic-solution-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-caustic-soda', amount = 1},
+		{type = 'fluid', name = 'water', amount = 10}
+    },
+    results = {
+        {type = 'fluid', name = 'aoe-caustic-solution', amount = 10}
+    },
+    energy_required = 1,
+	category = 'aoe-category-mixing'
+}})
+
+data:extend({{
+    name = 'aoe-chemistry-sulfur-dioxide-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'sulfur', amount = 1},
+		{type = 'fluid', name = 'aoe-oxygen', amount = 10}
+    },
+    results = {
+        {type = 'fluid', name = 'aoe-sulfur-dioxide', amount = 10}
+    },
+    energy_required = 1,
+	category = 'chemistry'
+}})
+
+data:extend({{
+    name = 'aoe-chemistry-sulfuric-acid-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-sulfur-dioxide', amount = 20},
+		{type = 'fluid', name = 'water', amount = 20}
+    },
+    results = {
+        {type = 'fluid', name = 'sulfuric-acid', amount = 40}
+    },
+    energy_required = 4,
+	category = 'chemistry'
+}})
+
+data:extend({{
+    name = 'aoe-chemistry-sodium-bisulfate-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-caustic-soda', amount = 1},
+		{type = 'fluid', name = 'sulfuric-acid', amount = 10}
+    },
+    results = {
+        {type = 'item', name = 'aoe-sodium-bisulfate', amount = 1},
+		{type = 'fluid', name = 'water', amount = 10}
+    },
+	main_product = 'aoe-sodium-bisulfate',
+    energy_required = 1,
+	category = 'chemistry'
+}})
+
+data:extend({{
+    name = 'aoe-chemistry-sodium-bisulfate-2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-salt', amount = 1},
+		{type = 'fluid', name = 'sulfuric-acid', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'aoe-sodium-bisulfate', amount = 1},
+		{type = 'fluid', name = 'aoe-hydrogen-chloride', amount = 10}
+    },
+	main_product = 'aoe-sodium-bisulfate',
+    energy_required = 1,
+	category = 'chemistry'
 }})

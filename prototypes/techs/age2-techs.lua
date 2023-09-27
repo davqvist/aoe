@@ -383,7 +383,7 @@ data:extend({{
     name = "aoe-electric-automation-tech",
 	  icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/automation-2.png",
-    prerequisites = {"aoe-electric-machines-tech", "aoe-optics-tech", "aoe-electric-inserters-tech"},
+    prerequisites = {"aoe-optics-tech", "aoe-electric-inserters-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -571,7 +571,7 @@ data:extend({{
     name = "aoe-electric-inserters-tech",
     icon_size = 64, icon_mipmaps = 4,
     icon = "__base__/graphics/icons/inserter.png",
-    prerequisites = {"aoe-electronics-tech", "aoe-low-voltage-tech"},
+    prerequisites = {"aoe-electric-machines-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -766,9 +766,9 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-tin-tech",
-    icon_size = 64,
-    icon = "__aoe__/img/items/tin-plate.png",
+    name = "aoe-tin-tech-1",
+    icon_size = 32,
+    icon = "__angelssmelting__/graphics/icons/plate-tin.png",
     prerequisites = {"aoe-igneous-stones-tech-1"},
 	  effects = {
       {
@@ -800,9 +800,9 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-aluminium-tech",
-    icon_size = 64,
-    icon = "__aoe__/img/items/aluminium-plate.png",
+    name = "aoe-aluminium-tech-1",
+    icon_size = 32,
+    icon = "__angelssmelting__/graphics/icons/plate-aluminium.png",
     prerequisites = {"aoe-metamorphic-stones-tech-1"},
 	  effects = {
       {
@@ -829,7 +829,7 @@ data:extend({{
     name = "aoe-radar-tech",
     icon_size = 64, icon_mipmaps = 4,
     icon = "__base__/graphics/icons/radar.png",
-    prerequisites = {"aoe-tin-tech"},
+    prerequisites = {"aoe-tin-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -903,7 +903,7 @@ data:extend({{
     name = "aoe-electrolysis-tech",
     icon_size = 224,
     icon = "__angelspetrochem__/graphics/entity/electrolyser/electrolyser-north.png",
-    prerequisites = {"aoe-sedimentary-stones-tech-1", "aoe-tin-tech", "aoe-salt-tech"},
+    prerequisites = {"aoe-sedimentary-stones-tech-1", "aoe-tin-tech-1", "aoe-salt-tech"},
 	  effects = {
       {
         type = "unlock-recipe",

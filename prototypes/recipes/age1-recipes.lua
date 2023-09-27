@@ -422,7 +422,7 @@ data:extend({{
 	enabled = false,
 	ingredients = {
 		{type = 'item', name = 'transport-belt', amount = 2},
-		{type = 'item', name = 'aoe-small-motor', amount = 4}
+		{type = 'item', name = 'aoe-small-motor', amount = 2}
 	},
 	results = {
         {type = 'item', name = 'splitter', amount = 1}

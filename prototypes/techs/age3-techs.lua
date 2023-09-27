@@ -441,7 +441,7 @@ data:extend({{
     name = "aoe-chicken-tech",
     icon_size = 64,
     icon = "__aoe__/img/items/chicken.png",
-    prerequisites = {"aoe-maize-tech-1", "aoe-lime-tech", "aoe-hay-tech", "aoe-aluminium-tech"},
+    prerequisites = {"aoe-maize-tech-1", "aoe-lime-tech", "aoe-hay-tech", "aoe-aluminium-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -865,17 +865,13 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "aoe-bronze-tech",
-    icon_size = 64,
-    icon = "__aoe__/img/items/bronze-plate.png",
-    prerequisites = {"aoe-agriculture-science-alternate-tech","aoe-tin-tech"},
+    icon_size = 32,
+    icon = "__angelssmelting__/graphics/icons/plate-bronze.png",
+    prerequisites = {"aoe-agriculture-science-alternate-tech","aoe-tin-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-alloy-furnace-recipe"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "aoe-alloying-bronze-plate-recipe"
+        recipe = "aoe-smelting-bronze-plate-recipe"
       },
 	    {
         type = "unlock-recipe",
@@ -888,6 +884,10 @@ data:extend({{
 	    {
         type = "unlock-recipe",
         recipe = "aoe-crafting-bronze-cable-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-chemical-plant-recipe"
       }
     },
     unit = {
@@ -907,10 +907,6 @@ data:extend({{
     icon = "__aoe__/img/items/yeast.png",
     prerequisites = {"aoe-bronze-tech","aoe-sugar-tech"},
 	  effects = {
-      {
-        type = "unlock-recipe",
-        recipe = "aoe-crafting-chemical-plant-recipe"
-      },
       {
         type = "unlock-recipe",
         recipe = "aoe-gene-lab-yeast-1-recipe"

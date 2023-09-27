@@ -74,20 +74,20 @@ data:extend({{
     icon = "__angelssmelting__/graphics/icons/powder-iron.png",
     icon_size = 64,
     subgroup = "aoe-metals-iron",
-    order = "b",
+    order = "d",
     stack_size = 200
 }})
 
 data.raw['item']['iron-plate'].subgroup = "aoe-metals-iron"
-data.raw['item']['iron-plate'].order = "c"
+data.raw['item']['iron-plate'].order = "e"
 data.raw['item']['iron-plate'].stack_size = 200
 
 data.raw['item']['iron-stick'].subgroup = "aoe-metals-iron"
-data.raw['item']['iron-stick'].order = "d"
+data.raw['item']['iron-stick'].order = "f"
 data.raw['item']['iron-stick'].stack_size = 200
 
 data.raw['item']['iron-gear-wheel'].subgroup = "aoe-metals-iron"
-data.raw['item']['iron-gear-wheel'].order = "e"
+data.raw['item']['iron-gear-wheel'].order = "g"
 data.raw['item']['iron-gear-wheel'].stack_size = 200
 
 data.raw['item']['stone'].subgroup = "aoe-stone"

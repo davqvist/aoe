@@ -1,20 +1,20 @@
 data:extend({{
     type = "item",
-    name = "aoe-alloy-furnace",
+    name = "aoe-casting-unit",
     icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
     icon_size = 64,
     icon_mipmaps = 4,
     scale = 0.5,
     subgroup = "aoe-processing-buildings",
     order = "m",
-    place_result = "aoe-alloy-furnace",
+    place_result = "aoe-casting-unit",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "assembling-machine",
-  name = "aoe-alloy-furnace",
-	crafting_categories = {"aoe-category-alloying"},
+  name = "aoe-casting-unit",
+	crafting_categories = {"aoe-category-casting","aoe-category-casting-iron","aoe-category-casting-copper","aoe-category-casting-tin","aoe-category-casting-aluminium","aoe-category-casting-lead","aoe-category-casting-silver"},
 	crafting_speed = 1,
 	energy_source = {
     type = "electric",
@@ -32,7 +32,7 @@ data:extend({{
   icon_mipmaps = 4,
   scale = 0.5,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoe-alloy-furnace" },
+	minable = { hardness = 1, mining_time = 0.2, result = "aoe-casting-unit" },
 	max_health = 50,
 	selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
 	collision_box = {{-2.4, -2.4}, {2.4, 2.4}},

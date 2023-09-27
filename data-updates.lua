@@ -26,6 +26,11 @@ for _, preset in pairs(data.raw["map-gen-presets"]["default"]) do
 		data.raw["autoplace-control"][resource] = nil
 		preset.basic_settings.autoplace_controls[resource] = nil
 	  end
+	  if preset.basic_settings.autoplace_controls["stone"] then
+	    preset.basic_settings.autoplace_controls["stone"].frequency = 4.0
+	    preset.basic_settings.autoplace_controls["stone"].size = 4.0
+	    preset.basic_settings.autoplace_controls["stone"].richness = 2.0
+	  end
 	end
   end
 end
@@ -41,7 +46,6 @@ for _, type in pairs({"unit-spawner", "unit", "turret"}) do
 end
 
 data.raw["map-settings"]["map-settings"].pollution.enabled = false
-data.raw["map-settings"]["map-settings"].difficulty_settings.research_queue_setting = "always"
 
 local module_mapping = {}
 for _, module in pairs(data.raw['module']) do

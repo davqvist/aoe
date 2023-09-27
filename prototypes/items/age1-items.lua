@@ -634,12 +634,12 @@ data:extend({{
     icon = "__angelssmelting__/graphics/icons/powder-copper.png",
     icon_size = 64,
     subgroup = "aoe-metals-copper",
-    order = "b",
+    order = "d",
     stack_size = 200
 }})
 
 data.raw['item']['copper-plate'].subgroup = "aoe-metals-copper"
-data.raw['item']['copper-plate'].order = "c"
+data.raw['item']['copper-plate'].order = "e"
 data.raw['item']['copper-plate'].stack_size = 200
 
 data:extend({{
@@ -648,7 +648,7 @@ data:extend({{
     icon = "__aoe__/img/items/copper-rod.png",
     icon_size = 64,
     subgroup = "aoe-metals-copper",
-    order = "d",
+    order = "f",
     stack_size = 200
 }})
 
@@ -658,12 +658,12 @@ data:extend({{
     icon = "__aoe__/img/items/copper-gear.png",
     icon_size = 64,
     subgroup = "aoe-metals-copper",
-    order = "e",
+    order = "g",
     stack_size = 200
 }})
 
 data.raw['item']['copper-cable'].subgroup = "aoe-metals-copper"
-data.raw['item']['copper-cable'].order = "f"
+data.raw['item']['copper-cable'].order = "h"
 data.raw['item']['copper-cable'].stack_size = 200
 
 data:extend({{

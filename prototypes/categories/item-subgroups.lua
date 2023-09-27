@@ -1,4 +1,16 @@
+data.raw["item-group"]["intermediate-products"].icon = "__base__/graphics/technology/plastics.png"
+data.raw["item-group"]["intermediate-products"].icon_size = 256
+data.raw["item-group"]["intermediate-products"].icon_mipmaps = 4
+
 data:extend({
+  {
+    type = "item-group",
+    name = "aoe-metals",
+	  order = "b2",
+	  icon = "__base__/graphics/technology/steel-processing.png",
+	  icon_size = 256,
+    icon_mipmaps = 4
+  },
   {
     type = "item-group",
     name = "aoe-flora",
@@ -225,111 +237,111 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-metals-iron",
-    group = "intermediate-products",
-    order = "e01"
-  },
-  {
-	  type = "item-subgroup",
-    name = "aoe-metals-steel",
-    group = "intermediate-products",
-    order = "e02"
-  },
-  {
-	  type = "item-subgroup",
-    name = "aoe-metals-copper",
-    group = "intermediate-products",
-    order = "e03"
-  },
-  {
-	  type = "item-subgroup",
-    name = "aoe-metals-tin",
-    group = "intermediate-products",
-    order = "e04"
-  },
-  {
-	  type = "item-subgroup",
-    name = "aoe-metals-aluminium",
-    group = "intermediate-products",
-    order = "e05"
-  },
-  {
-	  type = "item-subgroup",
-    name = "aoe-metals-lead",
-    group = "intermediate-products",
-    order = "e06"
-  },
-  {
-	  type = "item-subgroup",
-    name = "aoe-metals-silver",
-    group = "intermediate-products",
-    order = "e07"
-  },
-  {
-	  type = "item-subgroup",
-    name = "aoe-metals-nickel",
-    group = "intermediate-products",
-    order = "e08"
-  },
-  {
-	  type = "item-subgroup",
-    name = "aoe-metals-gold",
-    group = "intermediate-products",
-    order = "e09"
-  },
-  {
-	  type = "item-subgroup",
-    name = "aoe-metals-zinc",
-    group = "intermediate-products",
-    order = "e10"
-  },
-  {
-	  type = "item-subgroup",
-    name = "aoe-metals-chromium",
-    group = "intermediate-products",
-    order = "e11"
-  },
-  {
-	  type = "item-subgroup",
-    name = "aoe-metals-tungsten",
-    group = "intermediate-products",
-    order = "e12"
-  },
-  {
-	  type = "item-subgroup",
-    name = "aoe-metals-rest",
-    group = "intermediate-products",
-    order = "e13"
-  },
-  {
-	  type = "item-subgroup",
-    name = "aoe-metals-alloys",
-    group = "intermediate-products",
-    order = "e14"
-  },
-  {
-	  type = "item-subgroup",
-    name = "aoe-gems",
-    group = "intermediate-products",
-    order = "e15"
-  },
-  {
-	  type = "item-subgroup",
     name = "aoe-parts",
     group = "intermediate-products",
-    order = "f"
+    order = "e"
   },
   {
 	  type = "item-subgroup",
     name = "aoe-chemicals",
     group = "intermediate-products",
-    order = "g"
+    order = "f"
   },
   {
 	  type = "item-subgroup",
     name = "aoe-science-packs",
     group = "intermediate-products",
+    order = "g"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-metals-iron",
+    group = "aoe-metals",
+    order = "a"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-metals-copper",
+    group = "aoe-metals",
+    order = "b"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-metals-tin",
+    group = "aoe-metals",
+    order = "c"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-metals-aluminium",
+    group = "aoe-metals",
+    order = "d"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-metals-lead",
+    group = "aoe-metals",
+    order = "e"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-metals-silver",
+    group = "aoe-metals",
+    order = "f"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-metals-nickel",
+    group = "aoe-metals",
+    order = "g"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-metals-gold",
+    group = "aoe-metals",
     order = "h"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-metals-zinc",
+    group = "aoe-metals",
+    order = "i"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-metals-chromium",
+    group = "aoe-metals",
+    order = "j"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-metals-tungsten",
+    group = "aoe-metals",
+    order = "k"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-metals-rest",
+    group = "aoe-metals",
+    order = "l"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-metals-steel",
+    group = "aoe-metals",
+    order = "m"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-metals-alloys",
+    group = "aoe-metals",
+    order = "n"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-gems",
+    group = "aoe-metals",
+    order = "o"
   },
   {
 	  type = "item-subgroup",
@@ -345,15 +357,45 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-gasses",
+    name = "aoe-fluids-oil",
     group = "fluids",
     order = "c"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-air-gasses",
+    name = "aoe-fluids-acids",
     group = "fluids",
     order = "d"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-air-gasses",
+    group = "fluids",
+    order = "e"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-simple-gasses",
+    group = "fluids",
+    order = "f"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-compound-gasses",
+    group = "fluids",
+    order = "g"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-fluids-slurry",
+    group = "fluids",
+    order = "h"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-fluids-molten",
+    group = "fluids",
+    order = "i"
   },
   {
 	  type = "item-subgroup",

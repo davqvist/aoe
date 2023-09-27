@@ -16,7 +16,7 @@ data:extend({{
     type = "assembling-machine",
     name = "aoe-kiln",
     icon = "__aoe__/img/entities/kiln.png",
-	icon_size = 192,
+	  icon_size = 192,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 0.2, result = "aoe-kiln"},
     max_health = 200,
@@ -26,8 +26,7 @@ data:extend({{
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
     vehicle_impact_sound = sounds.car_stone_impact,
-    working_sound =
-    {
+    working_sound = {
       sound =
       {
         {
@@ -39,8 +38,7 @@ data:extend({{
       fade_out_ticks = 20,
       audible_distance_modifier = 0.4
     },
-    resistances =
-    {
+    resistances = {
       {
         type = "fire",
         percent = 90
@@ -56,11 +54,10 @@ data:extend({{
     },
     collision_box = {{-1.5, -1.5}, {1.5, 1.5}},
     selection_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    crafting_categories = {"aoe-category-kiln-smelting"},
+    crafting_categories = {"aoe-category-kiln-smelting","aoe-category-kiln-smelting-iron","aoe-category-kiln-smelting-copper","aoe-category-kiln-smelting-tin","aoe-category-kiln-smelting-aluminium","aoe-category-kiln-smelting-lead","aoe-category-kiln-smelting-silver"},
     energy_usage = "90kW",
     crafting_speed = 1,
-    energy_source =
-    {
+    energy_source = {
       type = "burner",
       fuel_category = "chemical",
       effectivity = 1,
@@ -91,7 +88,7 @@ data:extend({{
           width = 192,
           height = 192,
           frame_count = 1,
-		  scale = 0.5
+		      scale = 0.5
         }
       }
     },

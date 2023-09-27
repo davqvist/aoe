@@ -119,6 +119,14 @@ script.on_event(defines.events.on_tick,
 				if k ~= nil then inv.remove( {name=k, count=1} ) end
 			end
 		  end 
+		elseif farm.valid and farm.name == "aoe-farm-barn" then
+			if farm.crafting_progress == 1 and farm.get_recipe().name == "aoe-farm-barn-calf-recipe" then
+			  if( math.random()<=0.12 ) then
+				  local inv = farm.get_module_inventory()
+				  local k, v = next( inv.get_contents() )
+				  if k ~= nil then inv.remove( {name=k, count=1} ) end
+			  end
+			end 
 		else global.farms[_]=nil 
 		end
 	  end

@@ -466,9 +466,9 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-copper-tech",
-    icon_size = 64, icon_mipmaps = 4,
-    icon = "__base__/graphics/icons/copper-plate.png",
+    name = "aoe-copper-tech-1",
+    icon_size = 32,
+    icon = "__angelssmelting__/graphics/icons/plate-copper.png",
     prerequisites = {"aoe-water-filtering-tech"},
 	  effects = {
       {
@@ -531,7 +531,7 @@ data:extend({{
     name = "aoe-electric-age-tech",
     icon_size = 64,
     icon = "__aoe__/img/items/science-pack-2.png",
-    prerequisites = {"aoe-copper-tech"},
+    prerequisites = {"aoe-copper-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",

@@ -1,13 +1,15 @@
 local parts = {
     "aoe-steel-machine-hull",
+    "engine-unit",
     "aoe-small-motor"
 }
 
 for _, recipe in pairs(data.raw.recipe) do
+  local flag = false
   if recipe.ingredients then	
-	for _, ingredient in pairs(recipe.ingredients) do
-	  for _, part in pairs(parts) do 
-	    if ingredient.name == part then
+	for _, part in pairs(parts) do 
+	  for _, ingredient in pairs(recipe.ingredients) do
+	    if ingredient.name == part and flag == false then
 		  if recipe.results and recipe.results[1] then
 			data:extend({{
 				name = 'aoe-recycling-' .. recipe.results[1].name .. '-recipe',
@@ -39,7 +41,7 @@ for _, recipe in pairs(data.raw.recipe) do
 				energy_required = 0.2,
 				category = 'aoe-category-recycling'
 			}})
-		    break
+		    flag = true
 		  end
 		end
 	  end

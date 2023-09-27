@@ -826,8 +826,18 @@ data:extend({{
     name = "aoe-bones",
     icon = "__aoe__/img/items/bones.png",
     icon_size = 64,
-    subgroup = "aoe-fauna-chicken",
-    order = "d",
+    subgroup = "aoe-fauna-items",
+    order = "b",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-bone-meal",
+    icon = "__aoe__/img/items/bone-meal.png",
+    icon_size = 64,
+    subgroup = "aoe-fauna-items",
+    order = "c",
     stack_size = 200
 }})
 
@@ -1152,15 +1162,15 @@ data:extend({{
     icon = "__aoe__/img/items/fertilizer.png",
     icon_size = 64,
     subgroup = "aoe-fauna-items",
-    order = "b",
+    order = "d",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
     name = "aoe-soda-ash",
-    icon = "__aoe__/img/items/soda-ash.png",
-    icon_size = 64,
+    icon = "__angelspetrochem__/graphics/icons/solid-sodium-carbonate.png",
+    icon_size = 32,
     subgroup = "aoe-flora-kelp",
     order = "c",
     stack_size = 200

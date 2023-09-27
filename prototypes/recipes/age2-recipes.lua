@@ -160,11 +160,11 @@ data:extend({{
 	enabled = false,
 	ingredients = {
 		{type = 'item', name = 'iron-stick', amount = 2},
-		{type = 'item', name = 'aoe-small-motor', amount = 1},
+		{type = 'item', name = 'engine-unit', amount = 1},
 		{type = 'item', name = 'electronic-circuit', amount = 1}
 	},
 	results = {
-        {type = 'item', name = 'inserter', amount = 1}
+        {type = 'item', name = 'inserter', amount = 3}
     },
 	energy_required = 0.5
 }})
@@ -175,11 +175,11 @@ data:extend({{
 	enabled = false,
 	ingredients = {
 		{type = 'item', name = 'iron-stick', amount = 4},
-		{type = 'item', name = 'aoe-small-motor', amount = 1},
+		{type = 'item', name = 'engine-unit', amount = 1},
 		{type = 'item', name = 'electronic-circuit', amount = 1}
 	},
 	results = {
-        {type = 'item', name = 'long-handed-inserter', amount = 1}
+        {type = 'item', name = 'long-handed-inserter', amount = 3}
     },
 	energy_required = 0.5
 }})
@@ -580,7 +580,7 @@ data:extend({{
 	ingredients = {
 		{type = 'item', name = 'aoe-steel-machine-hull', amount = 8},
 		{type = 'item', name = 'aoe-heating-coil', amount = 6},
-		{type = 'item', name = 'steel-furnace', amount = 1},
+		{type = 'item', name = 'steel-furnace', amount = 2},
 	},
 	results = {
 		{type = 'item', name = 'aoe-melter', amount = 1}
@@ -1339,7 +1339,8 @@ data:extend({{
 	},
 	results = {
         {type = 'item', name = 'aoe-caustic-soda', amount = 1},
-        {type = 'fluid', name = 'aoe-chlorine', amount = 10}
+        {type = 'fluid', name = 'aoe-chlorine', amount = 10},
+        {type = 'fluid', name = 'aoe-hydrogen', amount = 10}
     },
 	icons = data.raw.fluid["aoe-brine"].icons,
 	subgroup = 'aoe-fluids-general',
@@ -1579,7 +1580,8 @@ data:extend({{
         {type = 'item', name = 'raw-fish', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoe-fish-meat', amount = 4}
+        {type = 'item', name = 'aoe-fish-meat', amount = 4},
+		{type = 'item', name = 'aoe-bones', amount = 1}
     },
     energy_required = 4,
 	subgroup = 'aoe-fauna-fish',
@@ -1636,6 +1638,20 @@ data:extend({{
 	main_product = 'aoe-fish-module-1',
     energy_required = 150,
 	category = 'aoe-category-farm-reservoir-fish'
+}})
+
+data:extend({{
+    name = 'aoe-crushing-bone-meal-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoe-bones', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoe-bone-meal', amount = 4}
+    },
+    energy_required = 4,
+	category = 'aoe-category-crushing'
 }})
 
 data:extend({{

@@ -47,6 +47,10 @@ data.raw['assembling-machine']['chemical-plant'].energy_usage = "420kW"
 data.raw['item']['oil-refinery'].subgroup = "aoe-specific-buildings"
 data.raw['item']['oil-refinery'].order = "p"
 data.raw['assembling-machine']['oil-refinery'].energy_usage = "750kW"
+data.raw['item']['centrifuge'].subgroup = "aoe-specific-buildings"
+data.raw['item']['centrifuge'].order = "q"
+data.raw['assembling-machine']['centrifuge'].energy_usage = "600kW"
+data.raw['assembling-machine']['centrifuge'].crafting_categories = {"centrifuging","centrifuging-copper","centrifuging-iron","centrifuging-tin","centrifuging-aluminium","centrifuging-lead","centrifuging-silver"}
 
 data.raw['item']['burner-inserter'].subgroup = "aoe-inserter"
 data.raw['item']['burner-inserter'].order = "a"
