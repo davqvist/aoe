@@ -1,3 +1,5 @@
+local AOE = require("__aoe__/globals")
+
 data:extend({{
     type = "technology",
     name = "aoe-basic-automation-tech",
@@ -12,9 +14,7 @@ data:extend({{
     },
     unit = {
         count = 15,
-        ingredients = {
-            {"aoe-science-01", 1}
-        },
+        ingredients = AOE["age_tech_table"][1],
         time = 10
     }
 }})
@@ -33,9 +33,7 @@ data:extend({{
     },
     unit = {
         count = 10,
-        ingredients = {
-            {"aoe-science-01", 1}
-        },
+        ingredients = AOE["age_tech_table"][1],
         time = 10
     }
 }})
@@ -62,9 +60,7 @@ data:extend({{
     },
     unit = {
         count = 25,
-        ingredients = {
-            {"aoe-science-01", 1}
-        },
+        ingredients = AOE["age_tech_table"][1],
         time = 15
     }
 }})
@@ -95,9 +91,7 @@ data:extend({{
     },
     unit = {
         count = 20,
-        ingredients = {
-            {"aoe-science-01", 1}
-        },
+        ingredients = AOE["age_tech_table"][1],
         time = 10
     }
 }})
@@ -120,9 +114,7 @@ data:extend({{
     },
     unit = {
         count = 10,
-        ingredients = {
-            {"aoe-science-01", 1}
-        },
+        ingredients = AOE["age_tech_table"][1],
         time = 10
     }
 }})
@@ -153,9 +145,7 @@ data:extend({{
     },
     unit = {
         count = 10,
-        ingredients = {
-            {"aoe-science-01", 1}
-        },
+        ingredients = AOE["age_tech_table"][1],
         time = 20
     }
 }})
@@ -182,9 +172,7 @@ data:extend({{
     },
     unit = {
         count = 30,
-        ingredients = {
-            {"aoe-science-01", 1}
-        },
+        ingredients = AOE["age_tech_table"][1],
         time = 20
     }
 }})
@@ -211,9 +199,7 @@ data:extend({{
     },
     unit = {
         count = 20,
-        ingredients = {
-            {"aoe-science-01", 1}
-        },
+        ingredients = AOE["age_tech_table"][1],
         time = 20
     }
 }})
@@ -248,9 +234,7 @@ data:extend({{
     },
     unit = {
         count = 30,
-        ingredients = {
-            {"aoe-science-01", 1}
-        },
+        ingredients = AOE["age_tech_table"][1],
         time = 20
     }
 }})
@@ -285,9 +269,7 @@ data:extend({{
     },
     unit = {
         count = 30,
-        ingredients = {
-            {"aoe-science-01", 1}
-        },
+        ingredients = AOE["age_tech_table"][1],
         time = 20
     }
 }})
@@ -318,9 +300,7 @@ data:extend({{
     },
     unit = {
         count = 40,
-        ingredients = {
-            {"aoe-science-01", 1}
-        },
+        ingredients = AOE["age_tech_table"][1],
         time = 20
     }
 }})
@@ -351,9 +331,7 @@ data:extend({{
     },
     unit = {
         count = 20,
-        ingredients = {
-            {"aoe-science-01", 1}
-        },
+        ingredients = AOE["age_tech_table"][1],
         time = 20
     }
 }})
@@ -392,9 +370,7 @@ data:extend({{
     },
     unit = {
         count = 35,
-        ingredients = {
-            {"aoe-science-01", 1}
-        },
+        ingredients = AOE["age_tech_table"][1],
         time = 20
     }
 }})
@@ -457,9 +433,7 @@ data:extend({{
     },
     unit = {
         count = 25,
-        ingredients = {
-            {"aoe-science-01", 1}
-        },
+        ingredients = AOE["age_tech_table"][1],
         time = 20
     }
 }})
@@ -494,9 +468,7 @@ data:extend({{
     },
     unit = {
         count = 40,
-        ingredients = {
-            {"aoe-science-01", 1}
-        },
+        ingredients = AOE["age_tech_table"][1],
         time = 20
     }
 }})
@@ -519,9 +491,7 @@ data:extend({{
     },
     unit = {
         count = 10,
-        ingredients = {
-            {"aoe-science-01", 1}
-        },
+        ingredients = AOE["age_tech_table"][1],
         time = 20
     }
 }})
@@ -540,9 +510,7 @@ data:extend({{
     },
     unit = {
         count = 50,
-        ingredients = {
-            {"aoe-science-01", 1}
-        },
+        ingredients = AOE["age_tech_table"][1],
         time = 25
     }
 }})

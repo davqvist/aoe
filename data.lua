@@ -1,6 +1,7 @@
 require("__base__/prototypes/entity/pipecovers")
 require("__base__/prototypes/entity/assemblerpipes")
 
+require("__aoe__/globals")
 require("__aoe__/prototypes/changes")
 require("__aoe__/prototypes/tips-and-tricks")
 

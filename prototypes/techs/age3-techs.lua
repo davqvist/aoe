@@ -1,3 +1,5 @@
+local AOE = require("__aoe__/globals")
+
 data:extend({{
     type = "technology",
     name = "aoe-water-drilling-tech",
@@ -12,10 +14,7 @@ data:extend({{
     },
     unit = {
         count = 20,
-        ingredients = {
-          {"aoe-science-02", 2},
-			    {"aoe-science-03", 1}
-        },
+        ingredients = AOE["age_tech_table"][3],
         time = 30
     }
 }})
@@ -54,10 +53,7 @@ data:extend({{
     },
     unit = {
         count = 20,
-        ingredients = {
-          {"aoe-science-02", 2},
-			    {"aoe-science-03", 1}
-        },
+        ingredients = AOE["age_tech_table"][3],
         time = 30
     }
 }})
@@ -104,10 +100,7 @@ data:extend({{
     },
     unit = {
         count = 25,
-        ingredients = {
-          {"aoe-science-02", 2},
-			    {"aoe-science-03", 1}
-        },
+        ingredients = AOE["age_tech_table"][3],
         time = 30
     }
 }})
@@ -154,10 +147,7 @@ data:extend({{
     },
     unit = {
         count = 30,
-        ingredients = {
-          {"aoe-science-02", 2},
-			    {"aoe-science-03", 1}
-        },
+        ingredients = AOE["age_tech_table"][3],
         time = 30
     }
 }})
@@ -216,10 +206,7 @@ data:extend({{
     },
     unit = {
         count = 30,
-        ingredients = {
-          {"aoe-science-02", 2},
-			    {"aoe-science-03", 1}
-        },
+        ingredients = AOE["age_tech_table"][3],
         time = 30
     }
 }})
@@ -250,155 +237,8 @@ data:extend({{
     },
     unit = {
         count = 25,
-        ingredients = {
-          {"aoe-science-02", 2},
-			    {"aoe-science-03", 1}
-        },
+        ingredients = AOE["age_tech_table"][3],
         time = 30
-    }
-}})
-
-data:extend({{
-    type = "technology",
-    name = "aoe-improved-axe-tech-2",
-    icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/steel-axe.png",
-    prerequisites = {"aoe-tree-cultivation-tech", "aoe-improved-axe-tech-1"},
-	  effects = {
-      {
-        type = "character-mining-speed",
-        modifier = 0.2
-      }
-    },
-    unit = {
-        count = 20,
-        ingredients = {
-          {"aoe-science-02", 2},
-			    {"aoe-science-03", 1}
-        },
-        time = 30
-    }
-}})
-
-data:extend({{
-    type = "technology",
-    name = "aoe-longer-arms-tech-2",
-    icon_size = 256,
-    icon = "__aoe__/img/techs/reach.png",
-    prerequisites = {"aoe-tree-cultivation-tech", "aoe-longer-arms-tech-1"},
-	  effects = {
-      {
-        type = "character-build-distance",
-        modifier = 1
-      },
-	    {
-        type = "character-item-drop-distance",
-        modifier = 1
-      },
-	    {
-        type = "character-resource-reach-distance",
-        modifier = 1
-      },
-	    {
-        type = "character-reach-distance",
-        modifier = 1
-      }
-    },
-    unit = {
-        count = 20,
-        ingredients = {
-          {"aoe-science-02", 2},
-			    {"aoe-science-03", 1}
-        },
-        time = 25
-    }
-}})
-
-data:extend({{
-    type = "technology",
-    name = "aoe-bigger-toolbelt-tech-2",
-    icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/toolbelt.png",
-    prerequisites = {"aoe-tree-cultivation-tech", "aoe-bigger-toolbelt-tech-1"},
-	  effects = {
-      {
-        type = "character-inventory-slots-bonus",
-        modifier = 5
-      }
-    },
-    unit = {
-        count = 20,
-        ingredients = {
-          {"aoe-science-02", 2},
-			    {"aoe-science-03", 1}
-        },
-        time = 25
-    }
-}})
-
-data:extend({{
-    type = "technology",
-    name = "aoe-faster-legs-tech-2",
-    icon_size = 256,
-    icon = "__aoe__/img/techs/running-speed.png",
-    prerequisites = {"aoe-tree-cultivation-tech", "aoe-faster-legs-tech-1"},
-	  effects = {
-      {
-        type = "character-running-speed",
-        modifier = 0.1
-      }
-    },
-    unit = {
-        count = 20,
-        ingredients = {
-          {"aoe-science-02", 2},
-			    {"aoe-science-03", 1}
-        },
-        time = 25
-    }
-}})
-
-data:extend({{
-    type = "technology",
-    name = "aoe-improved-tools-tech-2",
-    icon_size = 256,
-    icon = "__aoe__/img/techs/crafting-speed.png",
-    prerequisites = {"aoe-tree-cultivation-tech", "aoe-improved-tools-tech-1"},
-	  effects = {
-      {
-        type = "character-crafting-speed",
-        modifier = 0.2
-      }
-    },
-    unit = {
-        count = 20,
-        ingredients = {
-          {"aoe-science-02", 2},
-			    {"aoe-science-03", 1}
-        },
-        time = 25
-    }
-}})
-
-data:extend({{
-    type = "technology",
-    name = "aoe-increased-knowledge-tech-2",
-    icon_size = 256,
-    icon = "__aoe__/img/techs/research-speed.png",
-    prerequisites = {"aoe-tree-cultivation-tech", "aoe-increased-knowledge-tech-1"},
-	  effects = {
-      {
-        type = "laboratory-speed",
-        modifier = 0.2
-      }
-    },
-    unit = {
-        count = 20,
-        ingredients = {
-          {"aoe-science-02", 2},
-			    {"aoe-science-03", 1}
-        },
-        time = 25
     }
 }})
 
@@ -413,25 +253,22 @@ data:extend({{
         type = "unlock-recipe",
         recipe = "aoe-farm-plot-grass-recipe"
       },
-	  {
+	   {
         type = "unlock-recipe",
         recipe = "aoe-high-pressure-hay-bale-recipe"
       },
-	  {
+	    {
         type = "unlock-recipe",
         recipe = "aoe-crafting-grass-fiber-recipe"
       },
-	  {
+	    {
         type = "unlock-recipe",
         recipe = "aoe-crafting-bedding-recipe"
       }
     },
     unit = {
         count = 20,
-        ingredients = {
-          {"aoe-science-02", 2},
-			    {"aoe-science-03", 1}
-        },
+        ingredients = AOE["age_tech_table"][3],
         time = 30
     }
 }})
@@ -470,10 +307,7 @@ data:extend({{
     },
     unit = {
         count = 30,
-        ingredients = {
-          {"aoe-science-02", 2},
-			    {"aoe-science-03", 1}
-        },
+        ingredients = AOE["age_tech_table"][3],
         time = 30
     }
 }})
@@ -516,10 +350,7 @@ data:extend({{
     },
     unit = {
         count = 40,
-        ingredients = {
-          {"aoe-science-02", 2},
-			    {"aoe-science-03", 1}
-        },
+        ingredients = AOE["age_tech_table"][3],
         time = 30
     }
 }})
@@ -566,10 +397,7 @@ data:extend({{
     },
     unit = {
         count = 45,
-        ingredients = {
-          {"aoe-science-02", 2},
-			    {"aoe-science-03", 1}
-        },
+        ingredients = AOE["age_tech_table"][3],
         time = 30
     }
 }})
@@ -592,10 +420,7 @@ data:extend({{
     },
     unit = {
         count = 30,
-        ingredients = {
-          {"aoe-science-02", 2},
-			    {"aoe-science-03", 1}
-        },
+        ingredients = AOE["age_tech_table"][3],
         time = 30
     }
 }})
@@ -614,10 +439,7 @@ data:extend({{
     },
     unit = {
         count = 35,
-        ingredients = {
-          {"aoe-science-02", 2},
-			    {"aoe-science-03", 1}
-        },
+        ingredients = AOE["age_tech_table"][3],
         time = 30
     }
 }})
@@ -644,10 +466,7 @@ data:extend({{
     },
     unit = {
         count = 40,
-        ingredients = {
-          {"aoe-science-02", 2},
-			    {"aoe-science-03", 1}
-        },
+        ingredients = AOE["age_tech_table"][3],
         time = 30
     }
 }})
@@ -674,10 +493,7 @@ data:extend({{
     },
     unit = {
         count = 50,
-        ingredients = {
-          {"aoe-science-02", 2},
-			    {"aoe-science-03", 1}
-        },
+        ingredients = AOE["age_tech_table"][3],
         time = 30
     }
 }})
@@ -704,10 +520,7 @@ data:extend({{
     },
     unit = {
         count = 40,
-        ingredients = {
-          {"aoe-science-02", 2},
-			    {"aoe-science-03", 1}
-        },
+        ingredients = AOE["age_tech_table"][3],
         time = 30
     }
 }})
@@ -738,10 +551,7 @@ data:extend({{
   },
   unit = {
       count = 40,
-      ingredients = {
-        {"aoe-science-02", 2},
-        {"aoe-science-03", 1}
-      },
+      ingredients = AOE["age_tech_table"][3],
       time = 30
   }
 }})
@@ -760,10 +570,7 @@ data:extend({{
     },
     unit = {
         count = 50,
-        ingredients = {
-          {"aoe-science-02", 2},
-			    {"aoe-science-03", 1}
-        },
+        ingredients = AOE["age_tech_table"][3],
         time = 30
     }
 }})
@@ -794,10 +601,7 @@ data:extend({{
     },
     unit = {
         count = 50,
-        ingredients = {
-          {"aoe-science-02", 2},
-			    {"aoe-science-03", 1}
-        },
+        ingredients = AOE["age_tech_table"][3],
         time = 30
     }
 }})
@@ -820,10 +624,7 @@ data:extend({{
     },
     unit = {
         count = 50,
-        ingredients = {
-          {"aoe-science-02", 2},
-			    {"aoe-science-03", 1}
-        },
+        ingredients = AOE["age_tech_table"][3],
         time = 30
     }
 }})
@@ -854,10 +655,7 @@ data:extend({{
     },
     unit = {
         count = 60,
-        ingredients = {
-          {"aoe-science-02", 2},
-			    {"aoe-science-03", 1}
-        },
+        ingredients = AOE["age_tech_table"][3],
         time = 30
     }
 }})
@@ -892,10 +690,7 @@ data:extend({{
     },
     unit = {
         count = 70,
-        ingredients = {
-          {"aoe-science-02", 2},
-			    {"aoe-science-03", 1}
-        },
+        ingredients = AOE["age_tech_table"][3],
         time = 30
     }
 }})
@@ -922,10 +717,7 @@ data:extend({{
     },
     unit = {
         count = 70,
-        ingredients = {
-          {"aoe-science-02", 2},
-			    {"aoe-science-03", 1}
-        },
+        ingredients = AOE["age_tech_table"][3],
         time = 30
     }
 }})
@@ -944,10 +736,7 @@ data:extend({{
     },
     unit = {
         count = 75,
-        ingredients = {
-          {"aoe-science-02", 2},
-			    {"aoe-science-03", 1}
-        },
+        ingredients = AOE["age_tech_table"][3],
         time = 30
     }
 }})
