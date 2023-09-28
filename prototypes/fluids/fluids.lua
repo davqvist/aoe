@@ -563,3 +563,122 @@ data:extend({{
 	flow_color = {r=0.54, g=0.59, b=0.63},
 	default_temperature = 20
 }})
+
+data:extend({{
+    type = "fluid",
+    name = "aoe-nickel-slurry",
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { { 60, 108, 102 }, { 60, 108, 102 } }),
+    subgroup = "aoe-fluids-slurry",
+    order = "g",
+	base_color = {r=0.23, g=0.42, b=0.40},
+	flow_color = {r=0.23, g=0.42, b=0.40},
+	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoe-nickel-molten",
+    icon = "__angelssmelting__/graphics/icons/molten-nickel.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "aoe-fluids-molten",
+    order = "g",
+	base_color = {r=0.23, g=0.42, b=0.40},
+	flow_color = {r=0.23, g=0.42, b=0.40},
+	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoe-gold-slurry",
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { { 190, 160, 23 }, { 190, 160, 23 } }),
+    subgroup = "aoe-fluids-slurry",
+    order = "h",
+	base_color = {r=0.75, g=0.63, b=0.09},
+	flow_color = {r=0.75, g=0.63, b=0.09},
+	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoe-gold-molten",
+    icon = "__angelssmelting__/graphics/icons/molten-gold.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "aoe-fluids-molten",
+    order = "h",
+	base_color = {r=0.75, g=0.63, b=0.09},
+	flow_color = {r=0.75, g=0.63, b=0.09},
+	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoe-zinc-slurry",
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { { 97, 154, 149 }, { 97, 154, 149 } }),
+    subgroup = "aoe-fluids-slurry",
+    order = "i",
+	base_color = {r=0.38, g=0.60, b=0.58},
+	flow_color = {r=0.38, g=0.60, b=0.58},
+	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoe-zinc-molten",
+    icon = "__angelssmelting__/graphics/icons/molten-zinc.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "aoe-fluids-molten",
+    order = "i",
+	base_color = {r=0.38, g=0.60, b=0.58},
+	flow_color = {r=0.38, g=0.60, b=0.58},
+	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoe-chromium-slurry",
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { { 173, 157, 186 }, { 173, 157, 186 } }),
+    subgroup = "aoe-fluids-slurry",
+    order = "j",
+	base_color = {r=0.68, g=0.62, b=0.73},
+	flow_color = {r=0.68, g=0.62, b=0.73},
+	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoe-chromium-molten",
+    icon = "__angelssmelting__/graphics/icons/molten-chrome.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "aoe-fluids-molten",
+    order = "j",
+	base_color = {r=0.68, g=0.62, b=0.73},
+	flow_color = {r=0.68, g=0.62, b=0.73},
+	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoe-tungsten-slurry",
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { { 141, 85, 35 }, { 141, 85, 35 } }),
+    subgroup = "aoe-fluids-slurry",
+    order = "k",
+	base_color = {r=0.55, g=0.33, b=0.14},
+	flow_color = {r=0.55, g=0.33, b=0.14},
+	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoe-tungsten-molten",
+    icon = "__aoe__/img/fluids/molten-tungsten.png",
+    icon_size = 64,
+    subgroup = "aoe-fluids-molten",
+    order = "k",
+	base_color = {r=0.55, g=0.33, b=0.14},
+	flow_color = {r=0.55, g=0.33, b=0.14},
+	default_temperature = 20
+}})

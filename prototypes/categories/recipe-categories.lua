@@ -1,95 +1,155 @@
 data:extend({
   {
     type = "recipe-category",
-    name = "aoe-category-burning",
+    name = "aoe-category-burning"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-casting",
+    name = "aoe-category-casting"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-casting-iron",
+    name = "aoe-category-casting-iron"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-casting-copper",
+    name = "aoe-category-casting-copper"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-casting-tin",
+    name = "aoe-category-casting-tin"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-casting-aluminium",
+    name = "aoe-category-casting-aluminium"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-casting-lead",
+    name = "aoe-category-casting-lead"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-casting-silver",
+    name = "aoe-category-casting-silver"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-crushing",
+    name = "aoe-category-casting-nickel"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-crushing-iron",
+    name = "aoe-category-casting-gold"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-crushing-copper",
+    name = "aoe-category-casting-zinc"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-crushing-tin",
+    name = "aoe-category-casting-chromium"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-crushing-aluminium",
+    name = "aoe-category-casting-tungsten"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-crushing-lead",
+    name = "aoe-category-crushing"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-crushing-silver",
+    name = "aoe-category-crushing-iron"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-digging",
+    name = "aoe-category-crushing-copper"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-electrolyzing",
+    name = "aoe-category-crushing-tin"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-electrolyzing-iron",
+    name = "aoe-category-crushing-aluminium"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-electrolyzing-copper",
+    name = "aoe-category-crushing-lead"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-electrolyzing-tin",
+    name = "aoe-category-crushing-silver"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-electrolyzing-aluminium",
+    name = "aoe-category-crushing-nickel"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-electrolyzing-lead",
+    name = "aoe-category-crushing-gold"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-electrolyzing-silver",
+    name = "aoe-category-crushing-zinc"
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-crushing-chromium"
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-crushing-tungsten"
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-digging"
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-electrolyzing"
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-electrolyzing-iron"
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-electrolyzing-copper"
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-electrolyzing-tin"
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-electrolyzing-aluminium"
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-electrolyzing-lead"
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-electrolyzing-silver"
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-electrolyzing-nickel"
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-electrolyzing-gold"
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-electrolyzing-zinc"
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-electrolyzing-chromium"
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-electrolyzing-tungsten"
   },
   {
     type = "recipe-category",
@@ -167,155 +227,215 @@ data:extend({
   },
   {
     type = "recipe-category",
-    name = "aoe-category-freezing",
+    name = "aoe-category-freezing"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-gene-lab",
+    name = "aoe-category-gene-lab"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-greenhouse",
+    name = "aoe-category-greenhouse"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-growing",
+    name = "aoe-category-growing"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-handcrafting",
+    name = "aoe-category-handcrafting"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-harvesting",
+    name = "aoe-category-harvesting"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-high-pressure-heating",
+    name = "aoe-category-high-pressure-heating"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-kiln-smelting",
+    name = "aoe-category-kiln-smelting"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-kiln-smelting-iron",
+    name = "aoe-category-kiln-smelting-iron"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-kiln-smelting-copper",
+    name = "aoe-category-kiln-smelting-copper"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-kiln-smelting-tin",
+    name = "aoe-category-kiln-smelting-tin"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-kiln-smelting-aluminium",
+    name = "aoe-category-kiln-smelting-aluminium"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-kiln-smelting-lead",
+    name = "aoe-category-kiln-smelting-lead"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-kiln-smelting-silver",
+    name = "aoe-category-kiln-smelting-silver"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-melting",
+    name = "aoe-category-kiln-smelting-nickel"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-mixing",
+    name = "aoe-category-kiln-smelting-gold"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-mixing-iron",
+    name = "aoe-category-kiln-smelting-zinc"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-mixing-copper",
+    name = "aoe-category-kiln-smelting-chromium"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-mixing-tin",
+    name = "aoe-category-kiln-smelting-tungsten"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-mixing-aluminium",
+    name = "aoe-category-melting"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-mixing-lead",
+    name = "aoe-category-mixing"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-mixing-silver",
+    name = "aoe-category-mixing-iron"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-pumping",
+    name = "aoe-category-mixing-copper"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-recycling",
+    name = "aoe-category-mixing-tin"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-rotor",
+    name = "aoe-category-mixing-aluminium"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-sawing",
+    name = "aoe-category-mixing-lead"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-sedimenting",
+    name = "aoe-category-mixing-silver"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-sinking",
+    name = "aoe-category-mixing-nickel"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-slaughtering",
+    name = "aoe-category-mixing-gold"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-squeezing",
+    name = "aoe-category-mixing-zinc"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-straining",
+    name = "aoe-category-mixing-chromium"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-venting",
+    name = "aoe-category-mixing-tungsten"
   },
   {
     type = "recipe-category",
-    name = "centrifuging-copper",
+    name = "aoe-category-pumping"
   },
   {
     type = "recipe-category",
-    name = "centrifuging-iron",
+    name = "aoe-category-recycling"
   },
   {
     type = "recipe-category",
-    name = "centrifuging-tin",
+    name = "aoe-category-rotor"
   },
   {
     type = "recipe-category",
-    name = "centrifuging-aluminium",
+    name = "aoe-category-sawing"
   },
   {
     type = "recipe-category",
-    name = "centrifuging-lead",
+    name = "aoe-category-sedimenting"
   },
   {
     type = "recipe-category",
-    name = "centrifuging-silver",
+    name = "aoe-category-sinking"
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-slaughtering"
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-squeezing"
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-straining"
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-venting"
+  },
+  {
+    type = "recipe-category",
+    name = "centrifuging-copper"
+  },
+  {
+    type = "recipe-category",
+    name = "centrifuging-iron"
+  },
+  {
+    type = "recipe-category",
+    name = "centrifuging-tin"
+  },
+  {
+    type = "recipe-category",
+    name = "centrifuging-aluminium"
+  },
+  {
+    type = "recipe-category",
+    name = "centrifuging-lead"
+  },
+  {
+    type = "recipe-category",
+    name = "centrifuging-silver"
+  },
+  {
+    type = "recipe-category",
+    name = "centrifuging-nickel"
+  },
+  {
+    type = "recipe-category",
+    name = "centrifuging-gold"
+  },
+  {
+    type = "recipe-category",
+    name = "centrifuging-zinc"
+  },
+  {
+    type = "recipe-category",
+    name = "centrifuging-chromium"
+  },
+  {
+    type = "recipe-category",
+    name = "centrifuging-tungsten"
   }
 })
 

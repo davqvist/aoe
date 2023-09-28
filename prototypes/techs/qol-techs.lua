@@ -29,5 +29,3 @@ for age=2,4 do
         }})
     end
 end
-
-

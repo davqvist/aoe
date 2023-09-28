@@ -214,7 +214,7 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-electric-automation-tech",
+    name = "aoe-electric-automation-tech-1",
 	  icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/automation-2.png",
     prerequisites = {"aoe-optics-tech", "aoe-electric-inserters-tech"},

@@ -682,10 +682,29 @@ data:extend({{
 	    {
         type = "unlock-recipe",
         recipe = "aoe-crafting-bronze-cable-recipe"
-      },
+      }
+    },
+    unit = {
+        count = 70,
+        ingredients = AOE["age_tech_table"][3],
+        time = 30
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoe-electric-automation-tech-2",
+	  icon_size = 64, icon_mipmaps = 4,
+    icon = "__base__/graphics/icons/oil-refinery.png",
+    prerequisites = {"aoe-bronze-tech", "aoe-electric-automation-tech-1"},
+	  effects = {
       {
         type = "unlock-recipe",
         recipe = "aoe-crafting-chemical-plant-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-refinery-recipe"
       }
     },
     unit = {
@@ -700,7 +719,7 @@ data:extend({{
     name = "aoe-fermentation-tech",
     icon_size = 64,
     icon = "__aoe__/img/items/yeast.png",
-    prerequisites = {"aoe-bronze-tech","aoe-sugar-tech"},
+    prerequisites = {"aoe-electric-automation-tech-2","aoe-sugar-tech"},
 	  effects = {
       {
         type = "unlock-recipe",

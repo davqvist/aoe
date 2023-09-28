@@ -73,7 +73,7 @@ data:extend({{
 data:extend({{
   type = "assembling-machine",
   name = "aoe-crusher",
-	crafting_categories = {"aoe-category-crushing","aoe-category-crushing-iron","aoe-category-crushing-copper","aoe-category-crushing-tin","aoe-category-crushing-aluminium","aoe-category-crushing-lead","aoe-category-crushing-silver"},
+	crafting_categories = {"aoe-category-crushing","aoe-category-crushing-iron","aoe-category-crushing-copper","aoe-category-crushing-tin","aoe-category-crushing-aluminium","aoe-category-crushing-lead","aoe-category-crushing-silver","aoe-category-crushing-nickel","aoe-category-crushing-gold","aoe-category-crushing-zinc","aoe-category-crushing-chromium","aoe-category-crushing-tungsten"},
 	crafting_speed = 1,
 	energy_source = {
     type = "electric",

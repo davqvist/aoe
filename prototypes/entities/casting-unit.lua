@@ -14,7 +14,7 @@ data:extend({{
 data:extend({{
   type = "assembling-machine",
   name = "aoe-casting-unit",
-	crafting_categories = {"aoe-category-casting","aoe-category-casting-iron","aoe-category-casting-copper","aoe-category-casting-tin","aoe-category-casting-aluminium","aoe-category-casting-lead","aoe-category-casting-silver"},
+	crafting_categories = {"aoe-category-casting","aoe-category-casting-iron","aoe-category-casting-copper","aoe-category-casting-tin","aoe-category-casting-aluminium","aoe-category-casting-lead","aoe-category-casting-silver","aoe-category-casting-nickel","aoe-category-casting-gold","aoe-category-casting-zinc","aoe-category-casting-chromium","aoe-category-casting-tungsten"},
 	crafting_speed = 1,
 	energy_source = {
     type = "electric",

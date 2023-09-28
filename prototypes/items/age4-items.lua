@@ -624,3 +624,12 @@ data:extend({{
     stack_size = 200
 }})
 
+data:extend({{
+    type = "item",
+    name = "aoe-copper-sulfate",
+    icon = "__aoe__/img/items/copper-sulfate.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-copper",
+    order = "i",
+    stack_size = 200
+}})

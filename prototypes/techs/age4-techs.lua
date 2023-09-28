@@ -205,7 +205,7 @@ data:extend({{
   name = "aoe-basic-chemistry-tech",
   icon_size = 64, icon_mipmaps = 4,
   icon = "__base__/graphics/icons/chemical-plant.png",
-  prerequisites = {"aoe-bronze-tech"},
+  prerequisites = {"aoe-electric-automation-tech-2"},
   effects = {
     {
       type = "unlock-recipe",
@@ -245,10 +245,10 @@ data:extend({{
 
 data:extend({{
   type = "technology",
-  name = "aoe-sulfur-processing-tech",
+  name = "aoe-sulfur-tech",
   icon_size = 32,
   icon = "__angelspetrochem__/graphics/icons/solid-sulfur.png",
-  prerequisites = {"aoe-bronze-tech"},
+  prerequisites = {"aoe-electric-automation-tech-2"},
   effects = {
     {
       type = "unlock-recipe",
@@ -278,7 +278,7 @@ data:extend({{
   type = "technology",
   name = "aoe-ammonia-tech",
   icons = data.raw.fluid["aoe-ammonia"].icons,
-  prerequisites = {"aoe-bronze-tech"},
+  prerequisites = {"aoe-electric-automation-tech-2"},
   effects = {
     {
       type = "unlock-recipe",
@@ -316,7 +316,7 @@ data:extend({{
   type = "technology",
   name = "aoe-chlorine-tech",
   icons = data.raw.fluid["aoe-chlorine"].icons,
-  prerequisites = {"aoe-bronze-tech","aoe-electrolysis-tech"},
+  prerequisites = {"aoe-electric-automation-tech-2","aoe-electrolysis-tech"},
   effects = {
     {
       type = "unlock-recipe",
@@ -329,6 +329,37 @@ data:extend({{
     {
       type = "unlock-recipe",
       recipe = "aoe-mixing-caustic-solution-recipe"
+    }
+  },
+  unit = {
+      count = 25,
+      ingredients = AOE["age_tech_table"][4],
+      time = 35
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoe-cyanide-tech",
+  icon_size = 32,
+  icon = "__angelspetrochem__/graphics/icons/solid-sodium-cyanide.png",
+  prerequisites = {"aoe-ammonia-tech", "aoe-basic-chemistry-tech", "aoe-flax-tech-2"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-refining-hydrogen-cyanide-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-crushing-hydrogen-cyanide-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-chemistry-sodium-cyanide-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-chemistry-sodium-cyanide-2-recipe"
     }
   },
   unit = {
@@ -555,6 +586,268 @@ data:extend({{
     {
       type = "unlock-recipe",
       recipe = "aoe-smelting-lead-recipe"
+    }
+  },
+  unit = {
+      count = 30,
+      ingredients = AOE["age_tech_table"][4],
+      time = 35
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoe-silver-tech",
+  icon_size = 32,
+  icon = "__angelssmelting__/graphics/icons/plate-silver.png",
+  prerequisites = {"aoe-advanced-metal-processing-tech", "aoe-cyanide-tech", "aoe-sedimentary-stones-tech-2"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-centrifuging-silver-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-kiln-silver-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-crushing-silver-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-mixing-silver-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-electrolyzing-silver-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-casting-silver-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-smelting-silver-recipe"
+    }
+  },
+  unit = {
+      count = 30,
+      ingredients = AOE["age_tech_table"][4],
+      time = 35
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoe-nickel-tech",
+  icon_size = 32,
+  icon = "__angelssmelting__/graphics/icons/plate-nickel.png",
+  prerequisites = {"aoe-advanced-metal-processing-tech", "aoe-sulfur-tech", "aoe-sedimentary-stones-tech-2"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-centrifuging-nickel-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-kiln-nickel-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-crushing-nickel-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-mixing-nickel-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-electrolyzing-nickel-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-casting-nickel-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-smelting-nickel-recipe"
+    }
+  },
+  unit = {
+      count = 30,
+      ingredients = AOE["age_tech_table"][4],
+      time = 35
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoe-gold-tech",
+  icon_size = 32,
+  icon = "__angelssmelting__/graphics/icons/plate-gold.png",
+  prerequisites = {"aoe-advanced-metal-processing-tech", "aoe-cyanide-tech", "aoe-igneous-stones-tech-2"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-centrifuging-gold-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-kiln-gold-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-crushing-gold-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-mixing-gold-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-electrolyzing-gold-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-casting-gold-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-smelting-gold-recipe"
+    }
+  },
+  unit = {
+      count = 30,
+      ingredients = AOE["age_tech_table"][4],
+      time = 35
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoe-zinc-tech",
+  icon_size = 32,
+  icon = "__angelssmelting__/graphics/icons/plate-zinc.png",
+  prerequisites = {"aoe-advanced-metal-processing-tech", "aoe-sulfur-tech", "aoe-chlorine-tech", "aoe-sedimentary-stones-tech-2"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-chemistry-copper-sulfate-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-centrifuging-zinc-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-kiln-zinc-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-crushing-zinc-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-mixing-zinc-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-electrolyzing-zinc-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-casting-zinc-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-smelting-zinc-recipe"
+    }
+  },
+  unit = {
+      count = 30,
+      ingredients = AOE["age_tech_table"][4],
+      time = 35
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoe-chromium-tech",
+  icon_size = 32,
+  icon = "__angelssmelting__/graphics/icons/plate-chrome.png",
+  prerequisites = {"aoe-advanced-metal-processing-tech", "aoe-basic-chemistry-tech", "aoe-metamorphic-stones-tech-2"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-centrifuging-chromium-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-kiln-chromium-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-crushing-chromium-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-mixing-chromium-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-electrolyzing-chromium-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-casting-chromium-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-smelting-chromium-recipe"
+    }
+  },
+  unit = {
+      count = 30,
+      ingredients = AOE["age_tech_table"][4],
+      time = 35
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoe-tungsten-tech",
+  icon_size = 32,
+  icon = "__angelssmelting__/graphics/icons/plate-tungsten.png",
+  prerequisites = {"aoe-advanced-metal-processing-tech", "aoe-basic-chemistry-tech", "aoe-igneous-stones-tech-2"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-centrifuging-tungsten-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-kiln-tungsten-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-crushing-tungsten-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-mixing-tungsten-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-electrolyzing-tungsten-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-casting-tungsten-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-smelting-tungsten-recipe"
     }
   },
   unit = {
