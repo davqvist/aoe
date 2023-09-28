@@ -627,12 +627,14 @@ data:extend({{
 data.raw['item']['copper-ore'].subgroup = "aoe-metals-copper"
 data.raw['item']['copper-ore'].order = "a"
 data.raw['item']['copper-ore'].stack_size = 200
+data.raw['item']['copper-ore'].icons = { { icon = "__base__/graphics/icons/copper-ore.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__aoe__/img/items/atoms/cu.png", icon_size = 64 } }
 
 data:extend({{
     type = "item",
     name = "aoe-copper-dust",
-    icon = "__angelssmelting__/graphics/icons/powder-copper.png",
+    icons = { { icon = "__angelssmelting__/graphics/icons/powder-copper.png" }, { icon = "__aoe__/img/items/atoms/cu.png" } },
     icon_size = 64,
+    pictures = { { filename = "__angelssmelting__/graphics/icons/powder-copper.png", size = 64, scale = 0.25  } },
     subgroup = "aoe-metals-copper",
     order = "d",
     stack_size = 200
@@ -641,12 +643,15 @@ data:extend({{
 data.raw['item']['copper-plate'].subgroup = "aoe-metals-copper"
 data.raw['item']['copper-plate'].order = "e"
 data.raw['item']['copper-plate'].stack_size = 200
+data.raw['item']['copper-plate'].icons = { { icon = "__angelssmelting__/graphics/icons/plate-copper.png", icon_size = 32 }, { icon = "__aoe__/img/items/atoms/cu.png", icon_size = 64 } }
+data.raw['item']['copper-plate'].pictures = { { filename = "__angelssmelting__/graphics/icons/plate-copper.png", size = 32, scale = 0.5  } }
 
 data:extend({{
     type = "item",
     name = "aoe-copper-rod",
-    icon = "__aoe__/img/items/copper-rod.png",
+    icons = { { icon = "__aoe__/img/items/copper-rod.png" }, { icon = "__aoe__/img/items/atoms/cu.png" } },
     icon_size = 64,
+    pictures = { { filename = "__aoe__/img/items/copper-rod.png", size = 64, scale = 0.25  } },
     subgroup = "aoe-metals-copper",
     order = "f",
     stack_size = 200
@@ -655,8 +660,9 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoe-copper-gear",
-    icon = "__aoe__/img/items/copper-gear.png",
+    icons = { { icon = "__aoe__/img/items/copper-gear.png" }, { icon = "__aoe__/img/items/atoms/cu.png" } },
     icon_size = 64,
+    pictures = { { filename = "__aoe__/img/items/copper-gear.png", size = 64, scale = 0.25  } },
     subgroup = "aoe-metals-copper",
     order = "g",
     stack_size = 200
@@ -665,6 +671,8 @@ data:extend({{
 data.raw['item']['copper-cable'].subgroup = "aoe-metals-copper"
 data.raw['item']['copper-cable'].order = "h"
 data.raw['item']['copper-cable'].stack_size = 200
+data.raw['item']['copper-cable'].icons = { { icon = "__angelssmelting__/graphics/icons/wire-copper.png", icon_size = 32 }, { icon = "__aoe__/img/items/atoms/cu.png", icon_size = 64 } }
+data.raw['item']['copper-cable'].pictures = { { filename = "__angelssmelting__/graphics/icons/wire-copper.png", size = 32, scale = 0.5  } }
 
 data:extend({{
     type = "item",

@@ -69,9 +69,11 @@ for _, recipe in pairs(data.raw.recipe) do
   end
 end
 
--- ANGELS BIO REORDER
+-- ANGELS REORDER
 
 data.raw['item']['wood'].subgroup = "aoe-flora-wood"
 data.raw['item']['wood'].order = "e"
 data.raw['capsule']['raw-fish'].subgroup = "aoe-fauna-fish"
 data.raw['capsule']['raw-fish'].order = "a"
+data.raw.fluid["sulfuric-acid"].subgroup = "aoe-fluids-acids"
+data.raw.fluid["sulfuric-acid"].order = "a"

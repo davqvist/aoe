@@ -1,8 +1,18 @@
 data:extend({{
     type = "item",
     name = "aoe-burner-sawmill",
-    icon = "__aoe__/img/entities/sawmill.png",
-    icon_size = 192,
+    icons = {
+      {
+        icon = "__aoe__/img/entities/sawmill.png",
+        icon_size = 192
+      },
+      {
+        icon = "__aoe__/img/items/other/fire.png",
+        icon_size = 64,
+        scale = 0.25,
+        shift = {-12,8}
+      }
+    },
     subgroup = "aoe-flora-buildings",
     order = "d",
     place_result = "aoe-burner-sawmill",
@@ -32,8 +42,18 @@ data:extend({{
     },
 	energy_usage = "180kW",
 	allowed_effects = nil,
-	icon = "__aoe__/img/entities/sawmill.png",
-	icon_size = 192,
+  icons = {
+    {
+      icon = "__aoe__/img/entities/sawmill.png",
+      icon_size = 192
+    },
+    {
+      icon = "__aoe__/img/items/other/fire.png",
+      icon_size = 64,
+      scale = 0.25,
+      shift = {-12,8}
+    }
+  },
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoe-burner-sawmill" },
 	max_health = 50,

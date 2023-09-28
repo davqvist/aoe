@@ -1,9 +1,18 @@
 data:extend({{
     type = "item",
     name = "aoe-burner-crusher",
-    icon = "__angelsrefining__/graphics/icons/powderizer-ico.png",
-    icon_size = 32,
-    icon_mipmaps = 1,
+    icons = {
+      {
+        icon = "__angelsrefining__/graphics/icons/powderizer-ico.png",
+        icon_size = 32
+      },
+      {
+        icon = "__aoe__/img/items/other/fire.png",
+        icon_size = 64,
+        scale = 0.25,
+        shift = {-12,8}
+      }
+    },
     subgroup = "aoe-processing-buildings",
     order = "g",
     place_result = "aoe-burner-crusher",
@@ -33,9 +42,18 @@ data:extend({{
   },
 	energy_usage = "100kW",
 	allowed_effects = nil,
-  icon = "__angelsrefining__/graphics/icons/powderizer-ico.png",
-  icon_size = 32,
-  icon_mipmaps = 1,
+  icons = {
+    {
+      icon = "__angelsrefining__/graphics/icons/powderizer-ico.png",
+      icon_size = 32
+    },
+    {
+      icon = "__aoe__/img/items/other/fire.png",
+      icon_size = 64,
+      scale = 0.25,
+      shift = {-12,8}
+    }
+  },
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoe-burner-crusher" },
 	max_health = 50,

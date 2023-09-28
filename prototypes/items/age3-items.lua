@@ -674,8 +674,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoe-saw-blade-iron",
-    icon = "__aoe__/img/items/iron-saw-blade.png",
-    icon_size = 64,
+    icons = { { icon = "__aoe__/img/items/iron-saw-blade.png", icon_size = 64 }, { icon = "__aoe__/img/items/atoms/fe.png", icon_size = 64 } },
+    pictures = { { filename = "__aoe__/img/items/iron-saw-blade.png", size = 64, scale = 0.25  } },
     subgroup = "aoe-metals-iron",
     order = "f",
     stack_size = 100

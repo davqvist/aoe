@@ -1,12 +1,19 @@
 data:extend({{
     type = "item",
     name = "aoe-burner-squeezer",
-    icons = {{
-      icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
-      icon_size = 64,
-      icon_mipmaps = 4,
-      scale = 0.5,
-    }},
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
+        icon_size = 64,
+        icon_mipmaps = 4
+      },
+      {
+        icon = "__aoe__/img/items/other/fire.png",
+        icon_size = 64,
+        scale = 0.25,
+        shift = {-12,8}
+      }
+    },
     subgroup = "aoe-specific-buildings",
     order = "a",
     place_result = "aoe-burner-squeezer",
@@ -36,12 +43,19 @@ data:extend({{
     },
 	energy_usage = "250kW",
 	allowed_effects = nil,
-	icons = {{
-    icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    scale = 0.5,
-  }},
+	icons = {
+    {
+      icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
+      icon_size = 64,
+      icon_mipmaps = 4
+    },
+    {
+      icon = "__aoe__/img/items/other/fire.png",
+      icon_size = 64,
+      scale = 0.25,
+      shift = {-12,8}
+    }
+  },
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoe-burner-squeezer" },
 	max_health = 50,
@@ -108,12 +122,9 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoe-squeezer",
-    icons = {{
-      icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
-      icon_size = 64,
-      icon_mipmaps = 4,
-      scale = 0.5,
-    }},
+    icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
     subgroup = "aoe-specific-buildings",
     order = "b",
     place_result = "aoe-squeezer",
@@ -136,12 +147,9 @@ data:extend({{
 	module_specification = {
     module_slots = 3
   },
-  icons = {{
-    icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    scale = 0.5,
-  }},
+  icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
+  icon_size = 64,
+  icon_mipmaps = 4,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoe-squeezer" },
 	max_health = 50,

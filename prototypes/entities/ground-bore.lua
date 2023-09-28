@@ -4,9 +4,18 @@ require ("__base__/prototypes/entity/assemblerpipes")
 data:extend({{
     type = "item",
     name = "aoe-burner-ground-bore",
-    icon = "__angelsrefining__/graphics/icons/liquifier.png",
-    icon_size = 32,
-    icon_mipmaps = 1,
+    icons = {
+      {
+        icon = "__angelsrefining__/graphics/icons/liquifier.png",
+        icon_size = 32
+      },
+      {
+        icon = "__aoe__/img/items/other/fire.png",
+        icon_size = 64,
+        scale = 0.25,
+        shift = {-12,8}
+      }
+    },
     subgroup = "aoe-specific-buildings",
     order = "c",
     place_result = "aoe-burner-ground-bore",
@@ -35,9 +44,18 @@ data:extend({{
   },
 	energy_usage = "150kW",
 	allowed_effects = nil,
-  icon = "__angelsrefining__/graphics/icons/liquifier.png",
-  icon_size = 32,
-  icon_mipmaps = 1,
+  icons = {
+    {
+      icon = "__angelsrefining__/graphics/icons/liquifier.png",
+      icon_size = 32
+    },
+    {
+      icon = "__aoe__/img/items/other/fire.png",
+      icon_size = 64,
+      scale = 0.25,
+      shift = {-12,8}
+    }
+  },
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoe-burner-ground-bore" },
 	max_health = 50,

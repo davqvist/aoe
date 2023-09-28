@@ -423,7 +423,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoe-iron-slurry",
-    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { { 119, 129, 141 }, { 119, 129, 141 } }),
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon({ icon = "__aoe__/img/items/atoms/fe.png", icon_size = 64, shift = {0,0}, scale = 0.5 }, { { 119, 129, 141 }, { 119, 129, 141 } }),
     subgroup = "aoe-fluids-slurry",
     order = "a",
 	base_color = {r=0.47, g=0.52, b=0.55},
@@ -434,9 +434,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoe-iron-molten",
-    icon = "__angelssmelting__/graphics/icons/molten-iron.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
+    icons = { { icon = "__angelssmelting__/graphics/icons/molten-iron.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__aoe__/img/items/atoms/fe.png", icon_size = 64 } },
     subgroup = "aoe-fluids-molten",
     order = "a",
 	base_color = {r=0.47, g=0.52, b=0.55},
@@ -447,7 +445,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoe-copper-slurry",
-    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { { 142, 90, 75 }, { 142, 90, 75 } }),
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon({ icon = "__aoe__/img/items/atoms/cu.png", icon_size = 64, shift = {0,0}, scale = 0.5 }, { { 142, 90, 75 }, { 142, 90, 75 } }),
     subgroup = "aoe-fluids-slurry",
     order = "b",
 	base_color = {r=0.56, g=0.35, b=0.29},
@@ -458,9 +456,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoe-copper-molten",
-    icon = "__angelssmelting__/graphics/icons/molten-copper.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
+    icons = { { icon = "__angelssmelting__/graphics/icons/molten-copper.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__aoe__/img/items/atoms/cu.png", icon_size = 64 } },
     subgroup = "aoe-fluids-molten",
     order = "b",
 	base_color = {r=0.56, g=0.35, b=0.29},
@@ -471,7 +467,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoe-tin-slurry",
-    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { { 89, 119, 87 }, { 89, 119, 87 } }),
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon({ icon = "__aoe__/img/items/atoms/sn.png", icon_size = 64, shift = {0,0}, scale = 0.5 }, { { 89, 119, 87 }, { 89, 119, 87 } }),
     subgroup = "aoe-fluids-slurry",
     order = "c",
 	base_color = {r=0.35, g=0.47, b=0.34},
@@ -482,9 +478,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoe-tin-molten",
-    icon = "__angelssmelting__/graphics/icons/molten-tin.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
+    icons = { { icon = "__angelssmelting__/graphics/icons/molten-tin.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__aoe__/img/items/atoms/sn.png", icon_size = 64 } },
     subgroup = "aoe-fluids-molten",
     order = "c",
 	base_color = {r=0.35, g=0.47, b=0.34},
@@ -495,7 +489,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoe-aluminium-slurry",
-    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { { 164, 147, 80 }, { 164, 147, 80 } }),
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon({ icon = "__aoe__/img/items/atoms/al.png", icon_size = 64, shift = {0,0}, scale = 0.5 }, { { 164, 147, 80 }, { 164, 147, 80 } }),
     subgroup = "aoe-fluids-slurry",
     order = "d",
 	base_color = {r=0.64, g=0.57, b=0.31},
@@ -506,9 +500,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoe-aluminium-molten",
-    icon = "__angelssmelting__/graphics/icons/molten-aluminium.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
+    icons = { { icon = "__angelssmelting__/graphics/icons/molten-aluminium.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__aoe__/img/items/atoms/al.png", icon_size = 64 } },
     subgroup = "aoe-fluids-molten",
     order = "d",
 	base_color = {r=0.64, g=0.57, b=0.31},
@@ -519,7 +511,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoe-lead-slurry",
-    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { { 84, 71, 81 }, { 84, 71, 81 } }),
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon({ icon = "__aoe__/img/items/atoms/pb.png", icon_size = 64, shift = {0,0}, scale = 0.5 }, { { 84, 71, 81 }, { 84, 71, 81 } }),
     subgroup = "aoe-fluids-slurry",
     order = "e",
 	base_color = {r=0.33, g=0.28, b=0.32},
@@ -530,9 +522,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoe-lead-molten",
-    icon = "__angelssmelting__/graphics/icons/molten-lead.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
+    icons = { { icon = "__angelssmelting__/graphics/icons/molten-lead.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__aoe__/img/items/atoms/pb.png", icon_size = 64 } },
     subgroup = "aoe-fluids-molten",
     order = "e",
 	base_color = {r=0.33, g=0.28, b=0.32},
@@ -543,7 +533,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoe-silver-slurry",
-    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { { 138, 150, 160 }, { 138, 150, 160 } }),
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon({ icon = "__aoe__/img/items/atoms/ag.png", icon_size = 64, shift = {0,0}, scale = 0.5 }, { { 138, 150, 160 }, { 138, 150, 160 } }),
     subgroup = "aoe-fluids-slurry",
     order = "f",
 	base_color = {r=0.54, g=0.59, b=0.63},
@@ -554,9 +544,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoe-silver-molten",
-    icon = "__angelssmelting__/graphics/icons/molten-silver.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
+    icons = { { icon = "__angelssmelting__/graphics/icons/molten-silver.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__aoe__/img/items/atoms/ag.png", icon_size = 64 } },
     subgroup = "aoe-fluids-molten",
     order = "f",
 	base_color = {r=0.54, g=0.59, b=0.63},
@@ -567,7 +555,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoe-nickel-slurry",
-    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { { 60, 108, 102 }, { 60, 108, 102 } }),
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon({ icon = "__aoe__/img/items/atoms/ni.png", icon_size = 64, shift = {0,0}, scale = 0.5 }, { { 60, 108, 102 }, { 60, 108, 102 } }),
     subgroup = "aoe-fluids-slurry",
     order = "g",
 	base_color = {r=0.23, g=0.42, b=0.40},
@@ -578,9 +566,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoe-nickel-molten",
-    icon = "__angelssmelting__/graphics/icons/molten-nickel.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
+    icons = { { icon = "__angelssmelting__/graphics/icons/molten-nickel.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__aoe__/img/items/atoms/ni.png", icon_size = 64 } },
     subgroup = "aoe-fluids-molten",
     order = "g",
 	base_color = {r=0.23, g=0.42, b=0.40},
@@ -591,7 +577,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoe-gold-slurry",
-    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { { 190, 160, 23 }, { 190, 160, 23 } }),
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon({ icon = "__aoe__/img/items/atoms/au.png", icon_size = 64, shift = {0,0}, scale = 0.5 }, { { 190, 160, 23 }, { 190, 160, 23 } }),
     subgroup = "aoe-fluids-slurry",
     order = "h",
 	base_color = {r=0.75, g=0.63, b=0.09},
@@ -602,9 +588,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoe-gold-molten",
-    icon = "__angelssmelting__/graphics/icons/molten-gold.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
+    icons = { { icon = "__angelssmelting__/graphics/icons/molten-gold.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__aoe__/img/items/atoms/au.png", icon_size = 64 } },
     subgroup = "aoe-fluids-molten",
     order = "h",
 	base_color = {r=0.75, g=0.63, b=0.09},
@@ -615,7 +599,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoe-zinc-slurry",
-    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { { 97, 154, 149 }, { 97, 154, 149 } }),
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon({ icon = "__aoe__/img/items/atoms/zn.png", icon_size = 64, shift = {0,0}, scale = 0.5 }, { { 97, 154, 149 }, { 97, 154, 149 } }),
     subgroup = "aoe-fluids-slurry",
     order = "i",
 	base_color = {r=0.38, g=0.60, b=0.58},
@@ -626,9 +610,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoe-zinc-molten",
-    icon = "__angelssmelting__/graphics/icons/molten-zinc.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
+    icons = { { icon = "__angelssmelting__/graphics/icons/molten-zinc.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__aoe__/img/items/atoms/zn.png", icon_size = 64 } },
     subgroup = "aoe-fluids-molten",
     order = "i",
 	base_color = {r=0.38, g=0.60, b=0.58},
@@ -639,7 +621,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoe-chromium-slurry",
-    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { { 173, 157, 186 }, { 173, 157, 186 } }),
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon({ icon = "__aoe__/img/items/atoms/cr.png", icon_size = 64, shift = {0,0}, scale = 0.5 }, { { 173, 157, 186 }, { 173, 157, 186 } }),
     subgroup = "aoe-fluids-slurry",
     order = "j",
 	base_color = {r=0.68, g=0.62, b=0.73},
@@ -650,9 +632,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoe-chromium-molten",
-    icon = "__angelssmelting__/graphics/icons/molten-chrome.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
+    icons = { { icon = "__angelssmelting__/graphics/icons/molten-chrome.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__aoe__/img/items/atoms/cr.png", icon_size = 64 } },
     subgroup = "aoe-fluids-molten",
     order = "j",
 	base_color = {r=0.68, g=0.62, b=0.73},
@@ -663,7 +643,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoe-tungsten-slurry",
-    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { { 141, 85, 35 }, { 141, 85, 35 } }),
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon({ icon = "__aoe__/img/items/atoms/w.png", icon_size = 64, shift = {0,0}, scale = 0.5 }, { { 141, 85, 35 }, { 141, 85, 35 } }),
     subgroup = "aoe-fluids-slurry",
     order = "k",
 	base_color = {r=0.55, g=0.33, b=0.14},
@@ -674,8 +654,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoe-tungsten-molten",
-    icon = "__aoe__/img/fluids/molten-tungsten.png",
-    icon_size = 64,
+    icons = { { icon = "__aoe__/img/fluids/molten-tungsten.png", icon_size = 64 }, { icon = "__aoe__/img/items/atoms/w.png", icon_size = 64 } },
     subgroup = "aoe-fluids-molten",
     order = "k",
 	base_color = {r=0.55, g=0.33, b=0.14},

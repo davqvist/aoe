@@ -76,8 +76,8 @@ data:extend({{
 		icon_size = data.raw.item["aoe-maize"].icon_size
 	  },
 	  {
-		icon = data.raw.item["aoe-magnesium-dust"].icon,
-		icon_size = data.raw.item["aoe-magnesium-dust"].icon_size,
+		icon = "__aoe__/img/items/magnesium-dust.png",
+		icon_size = 64,
 		scale = 0.4,
 		shift = {8,8}
 	  }
@@ -1127,8 +1127,8 @@ data:extend({{
 		icon_size = data.raw.item["wood"].icon_size
 	  },
 	  {
-		icon = data.raw.item["aoe-saw-blade-iron"].icon,
-		icon_size = data.raw.item["aoe-saw-blade-iron"].icon_size,
+		icon = "__aoe__/img/items/iron-saw-blade.png",
+		icon_size = 64,
 		scale = 0.4,
 		shift = {8,8}
 	  }
@@ -1158,8 +1158,8 @@ data:extend({{
 		icon_size = data.raw.item["wood"].icon_size
 	  },
 	  {
-		icon = data.raw.item["aoe-saw-blade-steel"].icon,
-		icon_size = data.raw.item["aoe-saw-blade-steel"].icon_size,
+		icon = "__aoe__/img/items/steel-saw-blade.png",
+		icon_size = 64,
 		scale = 0.4,
 		shift = {8,8}
 	  }
@@ -1521,8 +1521,8 @@ data:extend({{
 		icon_size = data.raw.item["aoe-maize"].icon_size
 	  },
 	  {
-		icon = data.raw.item["aoe-magnesium-dust"].icon,
-		icon_size = data.raw.item["aoe-magnesium-dust"].icon_size,
+		icon = "__aoe__/img/items/magnesium-dust.png",
+		icon_size = 64,
 		scale = 0.4,
 		shift = {8,8}
 	  }

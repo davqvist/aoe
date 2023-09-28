@@ -144,12 +144,14 @@ data:extend({{
 data.raw['item']['coal'].subgroup = "aoe-metals-rest"
 data.raw['item']['coal'].order = "a"
 data.raw['item']['coal'].stack_size = 200
+data.raw['item']['coal'].icons = { { icon = "__base__/graphics/icons/coal.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__aoe__/img/items/atoms/c.png", icon_size = 64 } }
 
 data:extend({{
     type = "item",
     name = "aoe-coal-dust",
-    icon = "__aoe__/img/items/coal-dust.png",
+    icons = { { icon = "__aoe__/img/items/coal-dust.png" }, { icon = "__aoe__/img/items/atoms/c.png" } },
     icon_size = 64,
+    pictures = { { filename = "__aoe__/img/items/coal-dust.png", size = 64, scale = 0.25  } },
     subgroup = "aoe-metals-rest",
     order = "b",
     stack_size = 200
@@ -158,8 +160,9 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoe-graphite-rod",
-    icon = "__aoe__/img/items/graphite-rod.png",
+    icons = { { icon = "__aoe__/img/items/graphite-rod.png" }, { icon = "__aoe__/img/items/atoms/c.png" } },
     icon_size = 64,
+    pictures = { { filename = "__aoe__/img/items/graphite-rod.png", size = 64, scale = 0.25  } },
     subgroup = "aoe-metals-rest",
     order = "c",
     stack_size = 200
@@ -168,8 +171,9 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoe-coke",
-    icon = "__aoe__/img/items/coke.png",
+    icons = { { icon = "__aoe__/img/items/coke.png" }, { icon = "__aoe__/img/items/atoms/c.png" } },
     icon_size = 64,
+    pictures = { { filename = "__aoe__/img/items/coke.png", size = 64, scale = 0.25  } },
     subgroup = "aoe-metals-rest",
     order = "d",
     stack_size = 200,
@@ -200,8 +204,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoe-tin-ore",
-    icon = "__angelssmelting__/graphics/icons/ore-tin.png",
-    icon_size = 32,
+    icons = { { icon = "__angelssmelting__/graphics/icons/ore-tin.png", icon_size = 32 }, { icon = "__aoe__/img/items/atoms/sn.png", icon_size = 64 } },
+    pictures = { { filename = "__angelssmelting__/graphics/icons/ore-tin.png", size = 32, scale = 0.5  } },
     subgroup = "aoe-metals-tin",
     order = "a",
     stack_size = 200
@@ -210,8 +214,9 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoe-tin-dust",
-    icon = "__angelssmelting__/graphics/icons/powder-tin.png",
+    icons = { { icon = "__angelssmelting__/graphics/icons/powder-tin.png" }, { icon = "__aoe__/img/items/atoms/sn.png" } },
     icon_size = 64,
+    pictures = { { filename = "__angelssmelting__/graphics/icons/powder-tin.png", size = 64, scale = 0.25  } },
     subgroup = "aoe-metals-tin",
     order = "d",
     stack_size = 200
@@ -220,8 +225,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoe-tin-plate",
-    icon = "__angelssmelting__/graphics/icons/plate-tin.png",
-    icon_size = 32,
+    icons = { { icon = "__angelssmelting__/graphics/icons/plate-tin.png", icon_size = 32 }, { icon = "__aoe__/img/items/atoms/sn.png", icon_size = 64 } },
+    pictures = { { filename = "__angelssmelting__/graphics/icons/plate-tin.png", size = 32, scale = 0.5  } },
     subgroup = "aoe-metals-tin",
     order = "e",
     stack_size = 200
@@ -230,8 +235,9 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoe-tin-rod",
-    icon = "__aoe__/img/items/tin-rod.png",
+    icons = { { icon = "__aoe__/img/items/tin-rod.png" }, { icon = "__aoe__/img/items/atoms/sn.png" } },
     icon_size = 64,
+    pictures = { { filename = "__aoe__/img/items/tin-rod.png", size = 64, scale = 0.25  } },
     subgroup = "aoe-metals-tin",
     order = "f",
     stack_size = 200
@@ -240,8 +246,9 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoe-tin-gear",
-    icon = "__aoe__/img/items/tin-gear.png",
+    icons = { { icon = "__aoe__/img/items/tin-gear.png" }, { icon = "__aoe__/img/items/atoms/sn.png" } },
     icon_size = 64,
+    pictures = { { filename = "__aoe__/img/items/tin-gear.png", size = 64, scale = 0.25  } },
     subgroup = "aoe-metals-tin",
     order = "g",
     stack_size = 200
@@ -250,8 +257,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoe-manganese-ore",
-    icon = "__angelssmelting__/graphics/icons/ore-manganese.png",
-    icon_size = 32,
+    icons = { { icon = "__angelssmelting__/graphics/icons/ore-manganese.png", icon_size = 32 }, { icon = "__aoe__/img/items/atoms/mn.png", icon_size = 64 } },
+    pictures = { { filename = "__angelssmelting__/graphics/icons/ore-manganese.png", size = 32, scale = 0.5  } },
     subgroup = "aoe-metals-rest",
     order = "e",
     stack_size = 200
@@ -260,8 +267,9 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoe-manganese-dust",
-    icon = "__angelssmelting__/graphics/icons/powder-manganese.png",
+    icons = { { icon = "__angelssmelting__/graphics/icons/powder-manganese.png" }, { icon = "__aoe__/img/items/atoms/mn.png" } },
     icon_size = 64,
+    pictures = { { filename = "__angelssmelting__/graphics/icons/powder-manganese.png", size = 64, scale = 0.25  } },
     subgroup = "aoe-metals-rest",
     order = "f",
     stack_size = 200
@@ -280,8 +288,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoe-aluminium-ore",
-    icon = "__angelssmelting__/graphics/icons/ore-bauxite.png",
-    icon_size = 32,
+    icons = { { icon = "__angelssmelting__/graphics/icons/ore-bauxite.png", icon_size = 32 }, { icon = "__aoe__/img/items/atoms/al.png", icon_size = 64 } },
+    pictures = { { filename = "__angelssmelting__/graphics/icons/ore-bauxite.png", size = 32, scale = 0.5  } },
     subgroup = "aoe-metals-aluminium",
     order = "a",
     stack_size = 200
@@ -290,8 +298,9 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoe-aluminium-dust",
-    icon = "__angelssmelting__/graphics/icons/powder-aluminium.png",
+    icons = { { icon = "__angelssmelting__/graphics/icons/powder-aluminium.png" }, { icon = "__aoe__/img/items/atoms/al.png" } },
     icon_size = 64,
+    pictures = { { filename = "__angelssmelting__/graphics/icons/powder-aluminium.png", size = 64, scale = 0.25  } },
     subgroup = "aoe-metals-aluminium",
     order = "d",
     stack_size = 200
@@ -300,8 +309,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoe-aluminium-plate",
-    icon = "__angelssmelting__/graphics/icons/plate-aluminium.png",
-    icon_size = 32,
+    icons = { { icon = "__angelssmelting__/graphics/icons/plate-aluminium.png", icon_size = 32 }, { icon = "__aoe__/img/items/atoms/al.png", icon_size = 64 } },
+    pictures = { { filename = "__angelssmelting__/graphics/icons/plate-aluminium.png", size = 32, scale = 0.5  } },
     subgroup = "aoe-metals-aluminium",
     order = "e",
     stack_size = 200
@@ -310,8 +319,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoe-aluminium-rod",
-    icon = "__angelssmelting__/graphics/icons/rod-aluminium.png",
-    icon_size = 32,
+    icons = { { icon = "__angelssmelting__/graphics/icons/rod-aluminium.png", icon_size = 32 }, { icon = "__aoe__/img/items/atoms/al.png", icon_size = 64 } },
+    pictures = { { filename = "__angelssmelting__/graphics/icons/rod-aluminium.png", size = 32, scale = 0.5  } },
     subgroup = "aoe-metals-aluminium",
     order = "f",
     stack_size = 200
@@ -320,8 +329,9 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoe-magnesium-ore",
-    icon = "__aoe__/img/items/magnesium-ore.png",
+    icons = { { icon = "__aoe__/img/items/magnesium-ore.png" }, { icon = "__aoe__/img/items/atoms/mg.png" } },
     icon_size = 64,
+    pictures = { { filename = "__aoe__/img/items/magnesium-ore.png", size = 64, scale = 0.25  } },
     subgroup = "aoe-metals-rest",
     order = "h",
     stack_size = 200
@@ -330,8 +340,9 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoe-magnesium-dust",
-    icon = "__aoe__/img/items/magnesium-dust.png",
+    icons = { { icon = "__aoe__/img/items/magnesium-dust.png" }, { icon = "__aoe__/img/items/atoms/mg.png" } },
     icon_size = 64,
+    pictures = { { filename = "__aoe__/img/items/magnesium-dust.png", size = 64, scale = 0.25  } },
     subgroup = "aoe-metals-rest",
     order = "i",
     stack_size = 200

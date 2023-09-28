@@ -67,12 +67,14 @@ data:extend({{
 data.raw['item']['iron-ore'].subgroup = "aoe-metals-iron"
 data.raw['item']['iron-ore'].order = "a"
 data.raw['item']['iron-ore'].stack_size = 200
+data.raw['item']['iron-ore'].icons = { { icon = "__base__/graphics/icons/iron-ore.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__aoe__/img/items/atoms/fe.png", icon_size = 64 } }
 
 data:extend({{
     type = "item",
     name = "aoe-iron-dust",
-    icon = "__angelssmelting__/graphics/icons/powder-iron.png",
+    icons = { { icon = "__angelssmelting__/graphics/icons/powder-iron.png" }, { icon = "__aoe__/img/items/atoms/fe.png" } },
     icon_size = 64,
+    pictures = { { filename = "__angelssmelting__/graphics/icons/powder-iron.png", size = 64, scale = 0.25 } },
     subgroup = "aoe-metals-iron",
     order = "d",
     stack_size = 200
@@ -81,14 +83,20 @@ data:extend({{
 data.raw['item']['iron-plate'].subgroup = "aoe-metals-iron"
 data.raw['item']['iron-plate'].order = "e"
 data.raw['item']['iron-plate'].stack_size = 200
+data.raw['item']['iron-plate'].icons = { { icon = "__angelssmelting__/graphics/icons/plate-iron.png", icon_size = 32 }, { icon = "__aoe__/img/items/atoms/fe.png", icon_size = 64 } }
+data.raw['item']['iron-plate'].pictures = { { filename = "__angelssmelting__/graphics/icons/plate-iron.png", size = 32, scale = 0.5 } }
 
 data.raw['item']['iron-stick'].subgroup = "aoe-metals-iron"
 data.raw['item']['iron-stick'].order = "f"
 data.raw['item']['iron-stick'].stack_size = 200
+data.raw['item']['iron-stick'].icons = { { icon = "__angelssmelting__/graphics/icons/rod-iron.png", icon_size = 32 }, { icon = "__aoe__/img/items/atoms/fe.png", icon_size = 64 } }
+data.raw['item']['iron-stick'].pictures = { { filename = "__angelssmelting__/graphics/icons/rod-iron.png", size = 32, scale = 0.5 } }
 
 data.raw['item']['iron-gear-wheel'].subgroup = "aoe-metals-iron"
 data.raw['item']['iron-gear-wheel'].order = "g"
 data.raw['item']['iron-gear-wheel'].stack_size = 200
+data.raw['item']['iron-gear-wheel'].icons = { { icon = "__base__/graphics/icons/iron-gear-wheel.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__aoe__/img/items/atoms/fe.png", icon_size = 64 } }
+data.raw['item']['iron-gear-wheel'].pictures = { { filename = "__base__/graphics/icons/iron-gear-wheel.png", size = 64, mipmap_count = 4, scale = 0.25  } }
 
 data.raw['item']['stone'].subgroup = "aoe-stone"
 data.raw['item']['stone'].order = "a"
