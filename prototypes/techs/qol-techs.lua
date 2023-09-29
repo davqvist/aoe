@@ -9,7 +9,7 @@ local qol = {
     { "improved-tools", {{ icon = "__aoe__/img/techs/crafting-speed.png", icon_size = 256 }}, { { type = "character-crafting-speed", modifier = 0.2 } } },
     { "increased-knowledge", {{ icon = "__aoe__/img/techs/research-speed.png", icon_size = 256 }}, { { type = "laboratory-speed", modifier = 0.2 } } }
 }
-local prereq = { "", "aoe-steel-tech-1", "aoe-tree-cultivation-tech", "aoe-advanced-metal-processing-tech" }
+local prereq = { "", "aoe-steel-tech-1", "aoe-tree-cultivation-tech", "aoe-medium-voltage-tech" }
 
 for age=2,4 do
     for _, tech in pairs(qol) do

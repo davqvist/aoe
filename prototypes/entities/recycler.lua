@@ -10,17 +10,16 @@ data:extend({{
 }})
 
 data:extend({{
-    type = "furnace",
-    name = "aoe-recycler",
+  type = "furnace",
+  name = "aoe-recycler",
 	crafting_categories = {"aoe-category-recycling"},
 	crafting_speed = 1,
 	energy_source = { type = "void" },
 	energy_usage = "1kW",
 	allowed_effects = {"speed", "consumption", "pollution"},
-	module_specification =
-    {
-      module_slots = 3
-    },
+	module_specification = {
+    module_slots = 3
+  },
 	icon = "__aoe__/img/entities/recycler.png",
 	icon_size = 192,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -29,7 +28,7 @@ data:extend({{
 	selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
 	collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
 	source_inventory_size = 1,
-    result_inventory_size = 1,
+  result_inventory_size = 1,
 	animation = {
       layers = {
         {

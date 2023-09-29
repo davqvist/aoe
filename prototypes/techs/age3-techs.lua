@@ -63,7 +63,7 @@ data:extend({{
     name = "aoe-soybeans-tech-1",
     icon_size = 64,
     icon = "__aoe__/img/items/soybeans.png",
-    prerequisites = {"aoe-maize-tech-1","aoe-lime-tech","aoe-drinks-tech-1"},
+    prerequisites = {"aoe-maize-tech-1","aoe-lime-tech-1","aoe-drinks-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -110,7 +110,7 @@ data:extend({{
     name = "aoe-tree-cultivation-tech",
     icon = data.raw.tree["tree-01"].icon,
     icon_size = data.raw.tree["tree-01"].icon_size,
-    prerequisites = {"aoe-agriculture-age-tech", "aoe-lime-tech", "aoe-latex-tech"},
+    prerequisites = {"aoe-agriculture-age-tech", "aoe-lime-tech-1", "aoe-latex-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -278,7 +278,7 @@ data:extend({{
     name = "aoe-chicken-tech",
     icon_size = 64,
     icon = "__aoe__/img/items/chicken.png",
-    prerequisites = {"aoe-maize-tech-1", "aoe-lime-tech", "aoe-hay-tech", "aoe-aluminium-tech-1"},
+    prerequisites = {"aoe-maize-tech-1", "aoe-lime-tech-1", "aoe-hay-tech", "aoe-aluminium-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",

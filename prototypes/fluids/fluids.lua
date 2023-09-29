@@ -53,6 +53,18 @@ data:extend({{
 
 data:extend({{
     type = "fluid",
+    name = "aoe-wastewater",
+    icon = "__aoe__/img/fluids/wastewater.png",
+    icon_size = 64,
+    subgroup = "aoe-fluids-general",
+    order = "g",
+	base_color = {r=0.25, g=0.33, b=0.35},
+    flow_color = {r=0.25, g=0.33, b=0.35},
+	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
     name = "aoe-hydrogen",
     icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/hydrogen.png", 72 }, "HHH" ),
     subgroup = "aoe-simple-gasses",

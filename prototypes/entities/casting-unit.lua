@@ -6,7 +6,7 @@ data:extend({{
     icon_mipmaps = 4,
     scale = 0.5,
     subgroup = "aoe-processing-buildings",
-    order = "m",
+    order = "n",
     place_result = "aoe-casting-unit",
     stack_size = 25,
 }})

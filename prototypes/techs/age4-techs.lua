@@ -371,6 +371,25 @@ data:extend({{
 
 data:extend({{
   type = "technology",
+  name = "aoe-lime-tech-2",
+  icon_size = 64,
+  icon = "__aoe__/img/items/quicklime.png",
+  prerequisites = {"aoe-electric-automation-tech-2", "aoe-lime-tech-1"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-chemistry-calcium-chloride-recipe"
+    }
+  },
+  unit = {
+      count = 25,
+      ingredients = AOE["age_tech_table"][4],
+      time = 35
+  }
+}})
+
+data:extend({{
+  type = "technology",
   name = "aoe-advanced-metal-processing-tech",
   icon_size = 64, icon_mipmaps = 4,
   icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
@@ -762,6 +781,10 @@ data:extend({{
     {
       type = "unlock-recipe",
       recipe = "aoe-smelting-zinc-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-chemistry-zinc-chloride-recipe"
     }
   },
   unit = {
@@ -855,4 +878,134 @@ data:extend({{
       ingredients = AOE["age_tech_table"][4],
       time = 35
   }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoe-fuel-power-tech",
+  icon_size = 224,
+  icon = "__angelspetrochem__/graphics/entity/advanced-chemical-plant/advanced-chemical-plant.png",
+  prerequisites = {"aoe-metallurgy-age-tech", "aoe-fermentation-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-crafting-fuel-burning-generator-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-refining-biodiesel-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-refining-biodiesel-2-recipe"
+    }
+  },
+  unit = {
+      count = 25,
+      ingredients = AOE["age_tech_table"][4],
+      time = 35
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoe-slag-tech",
+  icon_size = 32,
+  icon = "__angelsrefining__/graphics/icons/slag.png",
+  prerequisites = {"aoe-advanced-metal-processing-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-kiln-cement-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-crushing-slag-recipe"
+    }
+  },
+  unit = {
+      count = 35,
+      ingredients = AOE["age_tech_table"][4],
+      time = 35
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoe-coal-tech",
+  icon_size = 64, icon_mipmaps = 4,
+  icon = "__base__/graphics/icons/coal.png",
+  prerequisites = {"aoe-zinc-tech", "aoe-lime-tech-2"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-high-pressure-heating-carbon-coal-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-high-pressure-heating-carbon-charcoal-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-crafting-carbon-fiber-mesh-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-chemistry-carbon-activated-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-high-pressure-heating-diamond-recipe"
+    }
+  },
+  unit = {
+      count = 35,
+      ingredients = AOE["age_tech_table"][4],
+      time = 35
+  }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoe-wind-power-tech-2",
+	  icon_size = 256,
+    icon = "__aoe__/img/entities/wind-turbine.png",
+    prerequisites = {"aoe-coal-tech", "aoe-wind-power-tech-1"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-carbon-rotor-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoe-rotor-carbon-recipe"
+      }
+    },
+    unit = {
+        count = 35,
+        ingredients = AOE["age_tech_table"][4],
+        time = 25
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoe-tailings-tech",
+	  icons = data.raw["fluid"]["aoe-tailings"].icons,
+    prerequisites = {"aoe-coal-tech", "aoe-slag-tech"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-sedimenting-tailings-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoe-crushing-tailings-dust-recipe"
+      }
+    },
+    unit = {
+        count = 40,
+        ingredients = AOE["age_tech_table"][4],
+        time = 25
+    }
 }})

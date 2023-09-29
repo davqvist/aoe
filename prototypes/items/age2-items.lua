@@ -141,7 +141,7 @@ data:extend({{
     stack_size = 200
 }})
 
-data.raw['item']['coal'].subgroup = "aoe-metals-rest"
+data.raw['item']['coal'].subgroup = "aoe-coal"
 data.raw['item']['coal'].order = "a"
 data.raw['item']['coal'].stack_size = 200
 data.raw['item']['coal'].icons = { { icon = "__base__/graphics/icons/coal.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__aoe__/img/items/atoms/c.png", icon_size = 64 } }
@@ -152,7 +152,7 @@ data:extend({{
     icons = { { icon = "__aoe__/img/items/coal-dust.png" }, { icon = "__aoe__/img/items/atoms/c.png" } },
     icon_size = 64,
     pictures = { { filename = "__aoe__/img/items/coal-dust.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-rest",
+    subgroup = "aoe-coal",
     order = "b",
     stack_size = 200
 }})
@@ -163,7 +163,7 @@ data:extend({{
     icons = { { icon = "__aoe__/img/items/graphite-rod.png" }, { icon = "__aoe__/img/items/atoms/c.png" } },
     icon_size = 64,
     pictures = { { filename = "__aoe__/img/items/graphite-rod.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-rest",
+    subgroup = "aoe-coal",
     order = "c",
     stack_size = 200
 }})
@@ -174,7 +174,7 @@ data:extend({{
     icons = { { icon = "__aoe__/img/items/coke.png" }, { icon = "__aoe__/img/items/atoms/c.png" } },
     icon_size = 64,
     pictures = { { filename = "__aoe__/img/items/coke.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-rest",
+    subgroup = "aoe-coal",
     order = "d",
     stack_size = 200,
 	fuel_value = "6MJ",
@@ -260,7 +260,7 @@ data:extend({{
     icons = { { icon = "__angelssmelting__/graphics/icons/ore-manganese.png", icon_size = 32 }, { icon = "__aoe__/img/items/atoms/mn.png", icon_size = 64 } },
     pictures = { { filename = "__angelssmelting__/graphics/icons/ore-manganese.png", size = 32, scale = 0.5  } },
     subgroup = "aoe-metals-rest",
-    order = "e",
+    order = "a",
     stack_size = 200
 }})
 
@@ -271,7 +271,7 @@ data:extend({{
     icon_size = 64,
     pictures = { { filename = "__angelssmelting__/graphics/icons/powder-manganese.png", size = 64, scale = 0.25  } },
     subgroup = "aoe-metals-rest",
-    order = "f",
+    order = "b",
     stack_size = 200
 }})
 
@@ -281,7 +281,7 @@ data:extend({{
     icon = "__aoe__/img/items/mica.png",
     icon_size = 64,
     subgroup = "aoe-metals-rest",
-    order = "g",
+    order = "c",
     stack_size = 200
 }})
 
@@ -333,7 +333,7 @@ data:extend({{
     icon_size = 64,
     pictures = { { filename = "__aoe__/img/items/magnesium-ore.png", size = 64, scale = 0.25  } },
     subgroup = "aoe-metals-rest",
-    order = "h",
+    order = "d",
     stack_size = 200
 }})
 
@@ -344,7 +344,7 @@ data:extend({{
     icon_size = 64,
     pictures = { { filename = "__aoe__/img/items/magnesium-dust.png", size = 64, scale = 0.25  } },
     subgroup = "aoe-metals-rest",
-    order = "i",
+    order = "e",
     stack_size = 200
 }})
 

@@ -7,7 +7,7 @@ data:extend({{
     icon = "__aoe__/img/entities/burner-lab-icon.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoe-processing-buildings",
-    order = "k",
+    order = "l",
     place_result = "aoe-burner-lab",
     stack_size = 25,
 }})

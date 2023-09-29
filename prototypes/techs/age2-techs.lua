@@ -168,7 +168,7 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-wind-power-tech",
+    name = "aoe-wind-power-tech-1",
 	  icon_size = 256,
     icon = "__aoe__/img/entities/wind-turbine.png",
     prerequisites = {"aoe-electric-machines-tech"},
@@ -663,7 +663,7 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-lime-tech",
+    name = "aoe-lime-tech-1",
     icon_size = 64,
     icon = "__aoe__/img/items/quicklime.png",
     prerequisites = {"aoe-sedimentary-stones-tech-1"},

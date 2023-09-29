@@ -651,6 +651,7 @@ data:extend({{
 	icon_size = data.raw.item["stone"].icon_size,
 	icon_mipmaps = data.raw.item["stone"].icon_mipmaps,
 	subgroup = 'aoe-stone',
+	order = "a1",
 	energy_required = 2,
 	category = 'aoe-category-straining'
 }})
@@ -1585,6 +1586,7 @@ data:extend({{
     },
     energy_required = 4,
 	subgroup = 'aoe-fauna-fish',
+	order = "a1",
 	icon = data.raw.capsule["raw-fish"].icon,
 	icon_size = data.raw.capsule["raw-fish"].icon_size,
 	category = 'aoe-category-slaughtering'

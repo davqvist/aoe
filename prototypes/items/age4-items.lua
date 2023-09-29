@@ -610,7 +610,7 @@ data:extend({{
     icon = "__angelsrefining__/graphics/icons/slag.png",
     icon_size = 32,
     subgroup = "aoe-stone",
-    order = "r",
+    order = "z",
     stack_size = 500
 }})
 
@@ -661,5 +661,93 @@ data:extend({{
     icon_size = 64,
     subgroup = "aoe-metals-copper",
     order = "i",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-zinc-chloride",
+    icon = "__angelssmelting__/graphics/icons/solid-zinc-oxide.png",
+    icon_size = 32,
+    subgroup = "aoe-metals-zinc",
+    order = "f",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-carbon",
+    icons = { { icon = "__angelspetrochem__/graphics/icons/solid-carbon.png", icon_size = 32 }, { icon = "__aoe__/img/items/atoms/c.png", icon_size = 64 } },
+    subgroup = "aoe-coal",
+    order = "e",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-carbon-fiber-mesh",
+    icons = { { icon = "__aoe__/img/items/carbon-fiber-mesh.png" }, { icon = "__aoe__/img/items/atoms/c.png" } },
+    icon_size = 64,
+    subgroup = "aoe-coal",
+    order = "f",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-rotor-carbon",
+    icon = "__aoe__/img/items/carbon-rotor.png",
+    icon_size = 64,
+    subgroup = "aoe-coal",
+    order = "g",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-carbon-activated",
+    icons = { { icon = "__angelspetrochem__/graphics/icons/pellet-coke.png", icon_size = 32 }, { icon = "__aoe__/img/items/atoms/c.png", icon_size = 64 } },
+    subgroup = "aoe-coal",
+    order = "g",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-calcium-chloride",
+    icon = "__angelsbioprocessing__/graphics/icons/solid-calcium-carbonate.png",
+    icon_size = 32,
+    subgroup = "aoe-stone",
+    order = "r",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-calcium-chloride",
+    icon = "__angelsbioprocessing__/graphics/icons/solid-calcium-carbonate.png",
+    icon_size = 32,
+    subgroup = "aoe-stone",
+    order = "r",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-tailings-dust",
+    icon = "__aoe__/img/items/tailings-dust.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-rest",
+    order = "k",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-nauvium-ore",
+    icon = "__aoe__/img/items/nauvium-ore.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-rest",
+    order = "l",
     stack_size = 200
 }})

@@ -376,6 +376,7 @@ data:extend({{
     },
     energy_required = 4,
 	subgroup = 'aoe-fauna-chicken',
+	order = "a1",
 	icon = data.raw.item["aoe-chicken"].icon,
 	icon_size = data.raw.item["aoe-chicken"].icon_size,
 	category = 'aoe-category-slaughtering'
@@ -506,6 +507,7 @@ data:extend({{
     },
     energy_required = 4,
 	subgroup = 'aoe-fauna-sheep',
+	order = "a1",
 	icon = data.raw.item["aoe-sheep"].icon,
 	icon_size = data.raw.item["aoe-sheep"].icon_size,
 	category = 'aoe-category-slaughtering'
@@ -625,6 +627,7 @@ data:extend({{
     },
     energy_required = 4,
 	subgroup = 'aoe-fauna-cow',
+	order = "a1",
 	icon = data.raw.item["aoe-cow"].icon,
 	icon_size = data.raw.item["aoe-cow"].icon_size,
 	category = 'aoe-category-slaughtering'
@@ -644,6 +647,7 @@ data:extend({{
     },
     energy_required = 4,
 	subgroup = 'aoe-fauna-cow',
+	order = "a1",
 	icon = data.raw.item["aoe-ox"].icon,
 	icon_size = data.raw.item["aoe-ox"].icon_size,
 	category = 'aoe-category-slaughtering'
@@ -1764,6 +1768,22 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'chemical-plant', amount = 1}
+    },
+    energy_required = 2
+}})
+
+data:extend({{
+    name = 'aoe-crafting-refinery-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-steel-machine-hull', amount = 10},
+		{type = 'item', name = 'aoe-bronze-plate', amount = 20},
+		{type = 'item', name = 'pipe', amount = 20},
+		{type = 'item', name = 'concrete', amount = 50}
+    },
+    results = {
+        {type = 'item', name = 'oil-refinery', amount = 1}
     },
     energy_required = 2
 }})

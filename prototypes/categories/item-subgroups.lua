@@ -321,27 +321,33 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-metals-rest",
+    name = "aoe-coal",
     group = "aoe-metals",
     order = "l"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-metals-steel",
+    name = "aoe-metals-rest",
     group = "aoe-metals",
     order = "m"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-metals-alloys",
+    name = "aoe-metals-steel",
     group = "aoe-metals",
     order = "n"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-gems",
+    name = "aoe-metals-alloys",
     group = "aoe-metals",
     order = "o"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-gems",
+    group = "aoe-metals",
+    order = "p"
   },
   {
 	  type = "item-subgroup",

@@ -15,6 +15,7 @@ data:extend({{
 	icon = data.raw.item["aoe-stones-igneous"].icon,
 	icon_size = data.raw.item["aoe-stones-igneous"].icon_size,
 	subgroup = 'aoe-stone',
+	order = "d1",
 	energy_required = 2,
 	category = 'aoe-category-straining'
 }})
@@ -252,6 +253,7 @@ data:extend({{
 	icon = data.raw.item["aoe-stones-metamorphic"].icon,
 	icon_size = data.raw.item["aoe-stones-metamorphic"].icon_size,
 	subgroup = 'aoe-stone',
+	order = "e1",
 	energy_required = 2,
 	category = 'aoe-category-straining'
 }})
@@ -486,6 +488,7 @@ data:extend({{
 	icon = data.raw.item["aoe-stones-sedimentary"].icon,
 	icon_size = data.raw.item["aoe-stones-sedimentary"].icon_size,
 	subgroup = 'aoe-stone',
+	order = "f1",
 	energy_required = 2,
 	category = 'aoe-category-straining'
 }})
@@ -2409,22 +2412,6 @@ data:extend({{
 }})
 
 data:extend({{
-    name = 'aoe-crafting-refinery-recipe',
-    type = 'recipe',
-    enabled = false,
-	ingredients = {
-		{type = 'item', name = 'aoe-steel-machine-hull', amount = 10},
-		{type = 'item', name = 'aoe-bronze-plate', amount = 20},
-		{type = 'item', name = 'pipe', amount = 20},
-		{type = 'item', name = 'concrete', amount = 50}
-    },
-    results = {
-        {type = 'item', name = 'oil-refinery', amount = 1}
-    },
-    energy_required = 2
-}})
-
-data:extend({{
     name = 'aoe-refining-hydrogen-cyanide-recipe',
     type = 'recipe',
     enabled = false,
@@ -2503,4 +2490,277 @@ data:extend({{
     main_product = 'aoe-copper-sulfate',
     energy_required = 2,
 	category = 'chemistry'
+}})
+
+data:extend({{
+    name = 'aoe-crafting-fuel-burning-generator-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-steel-machine-hull', amount = 20},
+		{type = 'item', name = 'aoe-aluminium-plate', amount = 50},
+		{type = 'item', name = 'concrete', amount = 100},
+		{type = 'item', name = 'storage-tank', amount = 5}
+    },
+    results = {
+        {type = 'item', name = 'aoe-fuel-burning-generator', amount = 1}
+    },
+    energy_required = 2
+}})
+
+data:extend({{
+	name = 'aoe-kiln-cement-2-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-slaked-lime', amount = 3},
+		{type = 'item', name = 'aoe-quartz-ore', amount = 2},
+		{type = 'item', name = 'aoe-aluminium-ore', amount = 1},
+		{type = 'item', name = 'iron-ore', amount = 1},
+		{type = 'item', name = 'aoe-slag', amount = 3}
+	},
+	results = {
+        {type = 'item', name = 'aoe-cement', amount = 7},
+        {type = 'fluid', name = 'aoe-carbon-dioxide', amount = 15}
+    },
+	main_product = 'aoe-cement',
+	energy_required = 2.4,
+	category = 'aoe-category-kiln-smelting'
+}})
+
+data:extend({{
+	name = 'aoe-crushing-slag-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-slag', amount = 6}
+	},
+	results = {
+		{type = 'item', name = 'coal', amount = 1, probability = 0.06},
+        {type = 'item', name = 'aoe-aluminium-ore', amount = 1, probability = 0.06},
+        {type = 'item', name = 'aoe-quartz-ore', amount = 1, probability = 0.06},
+        {type = 'item', name = 'iron-ore', amount = 1, probability = 0.04},
+        {type = 'item', name = 'aoe-tin-ore', amount = 1, probability = 0.04},
+        {type = 'item', name = 'aoe-magnesium-ore', amount = 1, probability = 0.04},
+        {type = 'item', name = 'aoe-manganese-ore', amount = 1, probability = 0.02},
+        {type = 'item', name = 'copper-ore', amount = 1, probability = 0.02}
+    },
+	icon = data.raw.item["aoe-slag"].icon,
+	icon_size = data.raw.item["aoe-slag"].icon_size,
+	subgroup = "aoe-stone",
+	order = "r1",
+	energy_required = 3,
+	category = 'aoe-category-crushing'
+}})
+
+data:extend({{
+    name = 'aoe-chemistry-zinc-chloride-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-zinc-ore', amount = 1},
+		{type = 'fluid', name = 'aoe-hydrochloric-acid', amount = 20}
+    },
+    results = {
+        {type = 'item', name = 'aoe-zinc-chloride', amount = 2},
+		{type = 'fluid', name = 'aoe-hydrogen', amount = 10}
+    },
+    main_product = 'aoe-zinc-chloride',
+    energy_required = 2,
+	category = 'chemistry'
+}})
+
+data:extend({{
+    name = 'aoe-high-pressure-heating-carbon-coal-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'coal', amount = 1},
+		{type = 'fluid', name = 'aoe-vacuum', amount = 100}
+    },
+    results = {
+        {type = 'item', name = 'aoe-carbon', amount = 1}
+    },
+	icons = {
+		{
+		  icon = "__angelspetrochem__/graphics/icons/solid-carbon.png",
+		  icon_size = 32
+		},
+		{
+		  icon = "__base__/graphics/icons/coal.png",
+		  icon_size = 64,
+		  icon_mipmaps = 4,
+		  scale = 0.4,
+		  shift = {8,8}
+		}
+	},
+    energy_required = 5,
+	category = 'aoe-category-high-pressure-heating'
+}})
+
+data:extend({{
+    name = 'aoe-high-pressure-heating-carbon-charcoal-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-charcoal', amount = 1},
+		{type = 'fluid', name = 'aoe-vacuum', amount = 100}
+    },
+    results = {
+        {type = 'item', name = 'aoe-carbon', amount = 1}
+    },
+	icons = {
+		{
+		  icon = "__angelspetrochem__/graphics/icons/solid-carbon.png",
+		  icon_size = 32
+		},
+		{
+		  icon = "__aoe__/img/items/charcoal.png",
+		  icon_size = 64,
+		  scale = 0.4,
+		  shift = {8,8}
+		}
+	},
+    energy_required = 5,
+	category = 'aoe-category-high-pressure-heating'
+}})
+
+data:extend({{
+    name = 'aoe-chemistry-calcium-chloride-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-quicklime', amount = 2},
+		{type = 'fluid', name = 'aoe-brine', amount = 200}
+    },
+    results = {
+        {type = 'item', name = 'aoe-calcium-chloride', amount = 1},
+        {type = 'item', name = 'aoe-soda-ash', amount = 1}
+    },
+	main_product = 'aoe-calcium-chloride',
+    energy_required = 4,
+	category = 'chemistry'
+}})
+
+data:extend({{
+    name = 'aoe-crafting-carbon-fiber-mesh-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-carbon', amount = 5},
+		{type = 'fluid', name = 'aoe-nitrogen', amount = 50}
+    },
+    results = {
+        {type = 'item', name = 'aoe-carbon-fiber-mesh', amount = 1}
+    },
+	category = 'advanced-crafting',
+    energy_required = 5
+}})
+
+data:extend({{
+    name = 'aoe-chemistry-carbon-activated-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-carbon', amount = 5},
+		{type = 'fluid', name = 'aoe-hydrochloric-acid', amount = 50},
+		{type = 'fluid', name = 'aoe-nitrogen', amount = 50},
+		{type = 'item', name = 'aoe-caustic-soda', amount = 3},
+		{type = 'item', name = 'aoe-calcium-chloride', amount = 5},
+		{type = 'item', name = 'aoe-zinc-chloride', amount = 5}
+    },
+    results = {
+        {type = 'item', name = 'aoe-carbon-activated', amount = 1}
+    },
+    energy_required = 10,
+	category = 'chemistry'
+}})
+
+data:extend({{
+    name = 'aoe-high-pressure-heating-diamond-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-coal-dust', amount = 50},
+		{type = 'fluid', name = 'aoe-pressure', amount = 1000}
+    },
+    results = {
+        {type = 'item', name = 'aoe-diamond', amount = 1}
+    },
+    energy_required = 10,
+	category = 'aoe-category-high-pressure-heating'
+}})
+
+data:extend({{
+	name = 'aoe-crafting-carbon-rotor-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'engine-unit', amount = 1},
+		{type = 'item', name = 'aoe-carbon-fiber-mesh', amount = 20},
+	},
+	results = {
+        {type = 'item', name = 'aoe-rotor-carbon', amount = 1}
+    },
+	energy_required = 10
+}})
+
+data:extend({{
+	name = 'aoe-rotor-carbon-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-rotor-carbon', amount = 1}
+	},
+	results = {
+    },
+	icon = data.raw.item["aoe-rotor-carbon"].icon,
+	icon_size = data.raw.item["aoe-rotor-carbon"].icon_size,
+	energy_required = 3000,
+	subgroup = 'aoe-power-buildings',
+	order = 'c2',
+	category = 'aoe-category-rotor'
+}})
+
+data:extend({{
+	name = 'aoe-sedimenting-tailings-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-tailings', amount = 200},
+		{type = 'item', name = 'aoe-carbon-activated', amount = 1}
+	},
+	results = {
+		{type = 'fluid', name = 'aoe-wastewater', amount = 200},
+		{type = 'item', name = 'aoe-tailings-dust', amount = 2},
+		{type = 'item', name = 'aoe-carbon-activated', amount = 1, probability = 0.96, catalyst_amount = 1}
+    },
+	main_product = 'aoe-tailings-dust',
+	energy_required = 4,
+	category = 'aoe-category-sedimenting'
+}})
+
+data:extend({{
+	name = 'aoe-crushing-tailings-dust-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-tailings-dust', amount = 6}
+	},
+	results = {
+		{type = 'item', name = 'aoe-lead-ore', amount = 1, probability = 0.04},
+        {type = 'item', name = 'aoe-silver-ore', amount = 1, probability = 0.04},
+        {type = 'item', name = 'aoe-nickel-ore', amount = 1, probability = 0.04},
+        {type = 'item', name = 'aoe-gold-ore', amount = 1, probability = 0.04},
+        {type = 'item', name = 'aoe-zinc-ore', amount = 1, probability = 0.04},
+        {type = 'item', name = 'aoe-chromium-ore', amount = 1, probability = 0.04},
+        {type = 'item', name = 'aoe-tungsten-ore', amount = 1, probability = 0.04},
+        {type = 'item', name = 'aoe-nauvium-ore', amount = 1, probability = 0.02}
+    },
+	icon = data.raw.item["aoe-tailings-dust"].icon,
+	icon_size = data.raw.item["aoe-tailings-dust"].icon_size,
+	subgroup = "aoe-metals-rest",
+	order = "k1",
+	energy_required = 3,
+	category = 'aoe-category-crushing'
 }})
