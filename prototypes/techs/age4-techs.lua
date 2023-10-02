@@ -970,7 +970,7 @@ data:extend({{
     name = "aoe-wind-power-tech-2",
 	  icon_size = 256,
     icon = "__aoe__/img/entities/wind-turbine.png",
-    prerequisites = {"aoe-coal-tech", "aoe-wind-power-tech-1"},
+    prerequisites = {"aoe-coal-tech", "aoe-medium-voltage-tech", "aoe-wind-power-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -1005,6 +1005,219 @@ data:extend({{
     },
     unit = {
         count = 40,
+        ingredients = AOE["age_tech_table"][4],
+        time = 25
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoe-steel-tech-3",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/steel-processing.png",
+    prerequisites = {"aoe-iron-tech", "aoe-nickel-tech", "aoe-chromium-tech", "aoe-steel-tech-2"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-casting-steel-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-casting-stainless-steel-recipe"
+      }
+    },
+    unit = {
+        count = 20,
+        ingredients = AOE["age_tech_table"][4],
+        time = 25
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoe-solder-tech",
+	  icon = data.raw["item"]["aoe-solder"].icon,
+	  icon_size = data.raw["item"]["aoe-solder"].icon_size,
+    prerequisites = {"aoe-tin-tech-2", "aoe-lead-tech"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-casting-solder-recipe"
+      }
+    },
+    unit = {
+        count = 20,
+        ingredients = AOE["age_tech_table"][4],
+        time = 25
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoe-brass-tech",
+	  icon = data.raw["item"]["aoe-brass"].icon,
+	  icon_size = data.raw["item"]["aoe-brass"].icon_size,
+    prerequisites = {"aoe-copper-tech-2", "aoe-zinc-tech"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-casting-brass-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-brass-rod-recipe"
+      }
+    },
+    unit = {
+        count = 20,
+        ingredients = AOE["age_tech_table"][4],
+        time = 25
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoe-electrum-tech",
+	  icon = data.raw["item"]["aoe-electrum"].icon,
+	  icon_size = data.raw["item"]["aoe-electrum"].icon_size,
+    prerequisites = {"aoe-gold-tech", "aoe-silver-tech"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-casting-electrum-recipe"
+      }
+    },
+    unit = {
+        count = 20,
+        ingredients = AOE["age_tech_table"][4],
+        time = 25
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoe-silicon-tech",
+	  icon = data.raw["item"]["aoe-silicon"].icon,
+	  icon_size = data.raw["item"]["aoe-silicon"].icon_size,
+    prerequisites = {"aoe-advanced-metal-processing-tech"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-kiln-smelting-silicon-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-sawmill-silicon-recipe"
+      }
+    },
+    unit = {
+        count = 20,
+        ingredients = AOE["age_tech_table"][4],
+        time = 25
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoe-bronze-tech-2",
+    icon_size = 32,
+    icon = "__angelssmelting__/graphics/icons/plate-bronze.png",
+    prerequisites = {"aoe-copper-tech-2","aoe-tin-tech-2","aoe-bronze-tech-1"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-casting-bronze-plate-recipe"
+      }
+    },
+    unit = {
+        count = 20,
+        ingredients = AOE["age_tech_table"][4],
+        time = 25
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoe-trains-tech",
+    icon_size = 256,
+    icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/automated-rail-transportation.png",
+    prerequisites = {"aoe-solder-tech"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-rail-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-locomotive-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-cargo-wagon-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-fluid-wagon-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-train-stop-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-rail-signal-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-rail-chain-signal-recipe"
+      }
+    },
+    unit = {
+        count = 50,
+        ingredients = AOE["age_tech_table"][4],
+        time = 25
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoe-fast-inserters-tech",
+    icon_size = 256,
+    icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/fast-inserter.png",
+    prerequisites = {"aoe-brass-tech"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-fast-inserter-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-long-fast-inserter-recipe"
+      }
+    },
+    unit = {
+        count = 40,
+        ingredients = AOE["age_tech_table"][4],
+        time = 25
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoe-cleanroom-automation-tech",
+	  icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/automation-3.png",
+    prerequisites = {"aoe-fast-inserters-tech", "aoe-silicon-tech"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-cleanroom-assembling-machine-recipe"
+      }
+    },
+    unit = {
+        count = 50,
         ingredients = AOE["age_tech_table"][4],
         time = 25
     }

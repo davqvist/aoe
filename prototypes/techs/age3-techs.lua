@@ -2,14 +2,22 @@ local AOE = require("__aoe__/globals")
 
 data:extend({{
     type = "technology",
-    name = "aoe-water-drilling-tech",
-    icon_size = 64, icon_mipmaps = 4,
-    icon = "__base__/graphics/icons/fluid/water.png",
-    prerequisites = {"aoe-agriculture-age-tech"},
+    name = "aoe-fluid-handling-tech-2",
+    icon = "__base__/graphics/technology/fluid-handling.png",
+    icon_size = 256, icon_mipmaps = 4,
+    prerequisites = {"aoe-agriculture-age-tech", "aoe-aluminium-tech-1", "aoe-fluid-handling-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
         recipe = "aoe-ground-bore-water-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-large-storage-tank-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-barreling-pump-recipe"
       }
     },
     unit = {
@@ -662,7 +670,7 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-bronze-tech",
+    name = "aoe-bronze-tech-1",
     icon_size = 32,
     icon = "__angelssmelting__/graphics/icons/plate-bronze.png",
     prerequisites = {"aoe-agriculture-science-alternate-tech","aoe-tin-tech-1"},
@@ -696,7 +704,7 @@ data:extend({{
     name = "aoe-electric-automation-tech-2",
 	  icon_size = 64, icon_mipmaps = 4,
     icon = "__base__/graphics/icons/oil-refinery.png",
-    prerequisites = {"aoe-bronze-tech", "aoe-electric-automation-tech-1"},
+    prerequisites = {"aoe-bronze-tech-1", "aoe-electric-automation-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -746,7 +754,7 @@ data:extend({{
     name = "aoe-metallurgy-age-tech",
     icon_size = 64,
     icon = "__aoe__/img/items/science-pack-4.png",
-    prerequisites = {"aoe-bronze-tech"},
+    prerequisites = {"aoe-bronze-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",

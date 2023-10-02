@@ -1,3 +1,6 @@
+local AOE = require("__aoe__/globals")
+local item_void_blacklist = { ["aoe-slag"] = true, ["aoe-tailings-dust"] = true }
+
 local groups = {
     "ammo",
     "armor",
@@ -14,8 +17,6 @@ local groups = {
     "repair-tool",
     "tool",
 }
-
-local item_void_blacklist = { ["aoe-slag"] = true }
 
 for _, type in pairs(groups) do
     for _, item in pairs(data.raw[type]) do
@@ -35,9 +36,7 @@ for _, type in pairs(groups) do
 				energy_required = 0.5,
 				category = 'aoe-category-burning',
 				subgroup = 'aoe-other',
-				icons = item.icons or { { icon = item.icon } },
-				icon_size = item.icon_size,
-				icon_mipmaps = item.icon_mipmaps or 1,
+				icons = get_void_icon( item )
 			}})
 		end
 	end

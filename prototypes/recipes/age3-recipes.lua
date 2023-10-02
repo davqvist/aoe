@@ -360,7 +360,7 @@ data:extend({{
     results = {
         {type = 'item', name = 'aoe-farm-chicken-coop', amount = 1}
     },
-    energy_required = 2
+    energy_required = 5
 }})
 
 data:extend({{
@@ -490,7 +490,7 @@ data:extend({{
     results = {
         {type = 'item', name = 'aoe-farm-barn', amount = 1}
     },
-    energy_required = 2
+    energy_required = 5
 }})
 
 data:extend({{
@@ -915,7 +915,7 @@ data:extend({{
 data:extend({{
 	name = 'aoe-greenhouse-apple-tree-seeds-recipe',
 	type = 'recipe',
-	enabled = true,
+	enabled = false,
 	ingredients = {
 		{type = 'item', name = 'aoe-apple', amount = 3}
 	},
@@ -1113,7 +1113,7 @@ data:extend({{
 data:extend({{
 	name = 'aoe-sawmill-wood-iron-saw-blade-recipe',
 	type = 'recipe',
-	enabled = true,
+	enabled = false,
     allow_decomposition = false,
 	ingredients = {
 		{type = 'item', name = 'aoe-log', amount = 1},
@@ -1144,7 +1144,7 @@ data:extend({{
 data:extend({{
 	name = 'aoe-sawmill-wood-steel-saw-blade-recipe',
 	type = 'recipe',
-	enabled = true,
+	enabled = false,
     allow_decomposition = false,
 	ingredients = {
 		{type = 'item', name = 'aoe-log', amount = 1},
@@ -1757,6 +1757,34 @@ data:extend({{
 }})
 
 data:extend({{
+    name = 'aoe-crafting-large-storage-tank-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-aluminium-plate', amount = 30},
+		{type = 'item', name = 'pipe', amount = 30}
+    },
+    results = {
+        {type = 'item', name = 'angels-storage-tank-2', amount = 1}
+    },
+    energy_required = 3
+}})
+
+data:extend({{
+    name = 'aoe-crafting-barreling-pump-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-aluminium-plate', amount = 15},
+		{type = 'item', name = 'pump', amount = 3}
+    },
+    results = {
+        {type = 'item', name = 'barreling-pump', amount = 1}
+    },
+    energy_required = 5
+}})
+
+data:extend({{
     name = 'aoe-crafting-chemical-plant-recipe',
     type = 'recipe',
     enabled = false,
@@ -1769,7 +1797,7 @@ data:extend({{
     results = {
         {type = 'item', name = 'chemical-plant', amount = 1}
     },
-    energy_required = 2
+    energy_required = 5
 }})
 
 data:extend({{
@@ -1785,7 +1813,7 @@ data:extend({{
     results = {
         {type = 'item', name = 'oil-refinery', amount = 1}
     },
-    energy_required = 2
+    energy_required = 5
 }})
 
 data:extend({{

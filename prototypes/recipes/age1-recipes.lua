@@ -63,7 +63,7 @@ data:extend({{
 		{type = 'item', name = 'pipe', amount = 10}
 	},
 	results = {
-        {type = 'item', name = 'aoe-small-storage-tank', amount = 1}
+        {type = 'item', name = 'angels-storage-tank-3', amount = 1}
     },
 	energy_required = 3
 }})
@@ -102,7 +102,7 @@ data:extend({{
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-small-storage-tank', amount = 1},
+		{type = 'item', name = 'angels-storage-tank-3', amount = 1},
 		{type = 'item', name = 'pipe', amount = 5},
 		{type = 'item', name = 'burner-mining-drill', amount = 2}
 	},
@@ -173,7 +173,7 @@ data:extend({{
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-small-storage-tank', amount = 4},
+		{type = 'item', name = 'angels-storage-tank-3', amount = 4},
 		{type = 'item', name = 'pipe', amount = 10}
     },
     results = {
@@ -248,7 +248,7 @@ data:extend({{
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-small-storage-tank', amount = 1},
+		{type = 'item', name = 'angels-storage-tank-3', amount = 1},
 		{type = 'item', name = 'pipe', amount = 5},
 		{type = 'item', name = 'stone-brick', amount = 20},
 		{type = 'item', name = 'iron-plate', amount = 10},

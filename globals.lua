@@ -21,6 +21,27 @@ for age, atc in pairs(age_tech_cost) do
     end
 end
 
+function get_void_icon( thing )
+local new_icons = {{}}
+if thing.icons then
+    new_icons = table.deepcopy(thing.icons)
+    for _, ic in pairs(new_icons) do
+        if thing.icon_size and not ic.icon_size then
+            ic.icon_size = thing.icon_size
+        end
+    end
+    for _, ic in pairs(new_icons) do
+        if thing.icon_mipmaps and not ic.icon_mipmaps then
+            ic.icon_mipmaps = thing.icon_mipmaps
+        end
+    end
+else
+    new_icons = {{icon = thing.icon, icon_size = thing.icon_size or 64, icon_mipmaps = thing.icon_mipmaps or 1}}
+end
+new_icons[#new_icons + 1] = {icon = "__aoe__/img/items/other/void.png", icon_size = 64}
+return new_icons
+end
+
 return {
     ["age_tech_table"] = age_tech_table,
 }

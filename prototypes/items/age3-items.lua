@@ -1222,7 +1222,7 @@ data:extend({{
     icon = "__aoe__/img/items/bronze-rod.png",
     icon_size = 64,
     subgroup = "aoe-metals-alloys",
-    order = "b",
+    order = "a1",
     stack_size = 200
 }})
 
@@ -1232,7 +1232,7 @@ data:extend({{
     icon = "__aoe__/img/items/bronze-gear.png",
     icon_size = 64,
     subgroup = "aoe-metals-alloys",
-    order = "c",
+    order = "a2",
     stack_size = 200
 }})
 
@@ -1242,6 +1242,6 @@ data:extend({{
     icon = "__aoe__/img/items/bronze-cable.png",
     icon_size = 64,
     subgroup = "aoe-metals-alloys",
-    order = "d",
+    order = "a3",
     stack_size = 200
 }})

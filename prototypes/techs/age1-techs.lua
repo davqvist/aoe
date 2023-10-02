@@ -67,7 +67,7 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-fluid-handling-tech",
+    name = "aoe-fluid-handling-tech-1",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/fluid-handling.png",
     prerequisites = {},
@@ -124,7 +124,7 @@ data:extend({{
     name = "aoe-digging-tech",
     icon_size = 160,
     icon = "__angelsrefining__/graphics/entity/liquifier/liquifier.png",
-    prerequisites = {"aoe-fluid-handling-tech"},
+    prerequisites = {"aoe-fluid-handling-tech-1"},
 	  effects = {
 	    {
         type = "unlock-recipe",
@@ -182,7 +182,7 @@ data:extend({{
     name = "aoe-kelp-tech-1",
     icon_size = 64,
     icon = "__aoe__/img/items/kelp.png",
-    prerequisites = {"aoe-fluid-handling-tech"},
+    prerequisites = {"aoe-fluid-handling-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",

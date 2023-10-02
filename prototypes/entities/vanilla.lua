@@ -4,16 +4,19 @@ data.raw['item']['stone-furnace'].subgroup = "aoe-processing-buildings"
 data.raw['item']['stone-furnace'].order = "a"
 data.raw['item']['steel-furnace'].subgroup = "aoe-processing-buildings"
 data.raw['item']['steel-furnace'].order = "b"
+data.raw['assembling-machine']['steel-furnace'].energy_usage = "125kW"
 data.raw['item']['electric-furnace'].subgroup = "aoe-processing-buildings"
 data.raw['item']['electric-furnace'].order = "d"
+data.raw['assembling-machine']['electric-furnace'].energy_usage = "175kW"
+data.raw['assembling-machine']['electric-furnace'].energy_source.drain = "9kW"
 data.raw['item']['burner-mining-drill'].subgroup = "aoe-processing-buildings"
 data.raw['item']['burner-mining-drill'].order = "e"
 data.raw['mining-drill']['burner-mining-drill'].mining_speed = 0.5
-data.raw['item']['burner-mining-drill'].energy_usage = "100kW"
+data.raw['mining-drill']['burner-mining-drill'].energy_usage = "100kW"
 data.raw['item']['electric-mining-drill'].subgroup = "aoe-processing-buildings"
 data.raw['item']['electric-mining-drill'].order = "f"
-data.raw['item']['electric-mining-drill'].mining_speed = 1
-data.raw['item']['electric-mining-drill'].energy_usage = "100kW"
+data.raw['mining-drill']['electric-mining-drill'].mining_speed = 1
+data.raw['mining-drill']['electric-mining-drill'].energy_usage = "140kW"
 data.raw['item']['assembling-machine-1'].subgroup = "aoe-processing-buildings"
 data.raw['item']['assembling-machine-1'].order = "i"
 data.raw['assembling-machine']['assembling-machine-1'].energy_source = {
@@ -35,21 +38,21 @@ data.raw['assembling-machine']['assembling-machine-1'].energy_source = {
 data.raw['item']['assembling-machine-2'].subgroup = "aoe-processing-buildings"
 data.raw['item']['assembling-machine-2'].order = "j"
 data.raw['assembling-machine']['assembling-machine-2'].energy_usage = "200kW"
+data.raw['assembling-machine']['assembling-machine-2'].energy_source.drain = "10kW"
 data.raw['assembling-machine']['assembling-machine-2'].crafting_speed = 1
-data.raw['assembling-machine']['assembling-machine-2'].module_specification = {
-  module_slots = 3
-}
+data.raw['assembling-machine']['assembling-machine-2'].module_specification = { module_slots = 3 }
 data.raw['item']['assembling-machine-3'].subgroup = "aoe-processing-buildings"
 data.raw['item']['assembling-machine-3'].order = "k"
 data.raw['assembling-machine']['assembling-machine-3'].energy_usage = "500kW"
+data.raw['assembling-machine']['assembling-machine-3'].energy_source.drain = "25kW"
 data.raw['assembling-machine']['assembling-machine-3'].crafting_speed = 2
-data.raw['assembling-machine']['assembling-machine-3'].module_specification = {
-  module_slots = 3
-}
+data.raw['assembling-machine']['assembling-machine-3'].module_specification = { module_slots = 3 }
+data.raw['assembling-machine']['assembling-machine-3'].crafting_categories = {"basic-crafting", "crafting", "advanced-crafting", "crafting-with-fluid", "aoe-category-vacuum-crafting"}
 
 data.raw['item']['lab'].subgroup = "aoe-processing-buildings"
 data.raw['item']['lab'].order = "m"
 data.raw['lab']['lab'].fast_replaceable_group = "lab"
+data.raw['lab']['lab'].energy_usage = "84kW"
 
 data.raw['item']['radar'].subgroup = "aoe-other-buildings"
 data.raw['item']['radar'].order = "a"
@@ -79,8 +82,19 @@ data.raw['item']['long-handed-inserter'].order = "c"
 data.raw['inserter']['long-handed-inserter'].rotation_speed = 0.0166667
 data.raw['inserter']['long-handed-inserter'].extension_speed = 0.04
 data.raw['inserter']['long-handed-inserter'].filter_count = 1
+data.raw['inserter']['long-handed-inserter'].fast_replaceable_group = "long-handed-inserter"
+data.raw['item']['fast-inserter'].subgroup = "aoe-inserter"
+data.raw['item']['fast-inserter'].order = "d"
 data.raw['inserter']['fast-inserter'].rotation_speed = 0.0333333
 data.raw['inserter']['fast-inserter'].extension_speed = 0.08
+data.raw['inserter']['fast-inserter'].filter_count = 5
+data.raw['item']['filter-inserter'].subgroup = "aoe-inserter"
+data.raw['item']['filter-inserter'].order = "e"
+data.raw['inserter']['filter-inserter'].rotation_speed = 0.0333333
+data.raw['inserter']['filter-inserter'].extension_speed = 0.08
+data.raw['inserter']['filter-inserter'].pickup_position = {0, -2}
+data.raw['inserter']['filter-inserter'].insert_position = {0, 2.2}
+data.raw['inserter']['filter-inserter'].fast_replaceable_group = "long-handed-inserter"
 
 data.raw['item']['wooden-chest'].subgroup = "aoe-storage"
 data.raw['item']['wooden-chest'].order = "a"
@@ -94,8 +108,17 @@ data.raw['container']['steel-chest'].inventory_size = 300
 data.raw['container']['steel-chest'].collision_box = {{-1.4, -1.4}, {1.4, 1.4}}
 data.raw['container']['steel-chest'].selection_box = {{-1.5, -1.5}, {1.5, 1.5}}
 data.raw['container']['steel-chest'].fast_replaceable_group = "big-container"
+data.raw['item']['angels-storage-tank-3'].subgroup = "aoe-storage"
+data.raw['item']['angels-storage-tank-3'].order = "g"
+data.raw['storage-tank']['angels-storage-tank-3'].fluid_box.base_area = 100
 data.raw['item']['storage-tank'].subgroup = "aoe-storage"
 data.raw['item']['storage-tank'].order = "h"
+data.raw['item']['angels-storage-tank-2'].subgroup = "aoe-storage"
+data.raw['item']['angels-storage-tank-2'].order = "i"
+data.raw['storage-tank']['angels-storage-tank-2'].fluid_box.base_area = 700
+
+data.raw['item']['barreling-pump'].subgroup = "aoe-voiding-buildings"
+data.raw['item']['barreling-pump'].order = "e"
 
 data.raw['item']['transport-belt'].subgroup = "aoe-item-logistics-belts"
 data.raw['item']['transport-belt'].order = "a1"
@@ -129,7 +152,7 @@ data.raw['pipe-to-ground']['pipe-to-ground'].fluid_box = {
 
 data.raw['item']['offshore-pump'].subgroup = "aoe-fluid-logistics"
 data.raw['item']['offshore-pump'].order = "c"
-data.raw['item']['offshore-pump'].pumping_speed = 16.6666666666
+data.raw['offshore-pump']['offshore-pump'].pumping_speed = 16.6666666666
 data.raw['item']['pump'].subgroup = "aoe-fluid-logistics"
 data.raw['item']['pump'].order = "d"
 

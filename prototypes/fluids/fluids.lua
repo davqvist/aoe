@@ -160,8 +160,8 @@ data:extend({{
 	gas = true
 }})
 
-data.raw.fluid["sulfuric-acid"].subgroup = "aoe-fluids-acids"
-data.raw.fluid["sulfuric-acid"].order = "a"
+data.raw.fluid["liquid-sulfuric-acid"].subgroup = "aoe-fluids-acids"
+data.raw.fluid["liquid-sulfuric-acid"].order = "a"
 
 data:extend({{
     type = "fluid",

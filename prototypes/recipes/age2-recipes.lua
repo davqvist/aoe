@@ -365,7 +365,7 @@ data:extend({{
 	enabled = false,
 	ingredients = {
 		{type = 'item', name = 'pipe', amount = 5},
-		{type = 'item', name = 'aoe-small-storage-tank', amount = 1},
+		{type = 'item', name = 'angels-storage-tank-3', amount = 1},
 		{type = 'item', name = 'electric-mining-drill', amount = 2}
 	},
 	results = {
@@ -382,7 +382,7 @@ data:extend({{
 		{type = 'item', name = 'aoe-steel-machine-hull', amount = 5},
 		{type = 'item', name = 'aoe-glass', amount = 50},
 		{type = 'item', name = 'pipe', amount = 5},
-		{type = 'item', name = 'aoe-small-storage-tank', amount = 1}
+		{type = 'item', name = 'angels-storage-tank-3', amount = 1}
 	},
 	results = {
         {type = 'item', name = 'aoe-gene-lab', amount = 1}
@@ -1057,7 +1057,7 @@ data:extend({{
     results = {
         {type = 'item', name = 'storage-tank', amount = 1}
     },
-    energy_required = 2
+    energy_required = 3
 }})
 
 data:extend({{
@@ -1570,7 +1570,7 @@ data:extend({{
     results = {
         {type = 'item', name = 'aoe-slaughterhouse', amount = 4}
     },
-    energy_required = 2
+    energy_required = 5
 }})
 
 data:extend({{
@@ -1684,7 +1684,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'radar', amount = 1}
     },
-	energy_required = 2
+	energy_required = 5
 }})
 
 data:extend({{

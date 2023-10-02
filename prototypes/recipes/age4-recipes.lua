@@ -1061,7 +1061,7 @@ data:extend({{
     results = {
         {type = 'item', name = 'aoe-casting-unit', amount = 1}
     },
-    energy_required = 2
+    energy_required = 5
 }})
 
 data:extend({{
@@ -1077,7 +1077,7 @@ data:extend({{
     results = {
         {type = 'item', name = 'centrifuge', amount = 1}
     },
-    energy_required = 2
+    energy_required = 5
 }})
 
 data:extend({{
@@ -2280,7 +2280,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoe-tungsten-plate', amount = 6},
-		{type = 'item', name = 'aoe-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoe-mold', amount = 1, catalyst_amount = 1, probability = 0.7}
     },
 	main_product = 'aoe-tungsten-plate',
 	energy_required = 3,
@@ -2505,7 +2505,7 @@ data:extend({{
     results = {
         {type = 'item', name = 'aoe-fuel-burning-generator', amount = 1}
     },
-    energy_required = 2
+    energy_required = 5
 }})
 
 data:extend({{
@@ -2523,6 +2523,18 @@ data:extend({{
         {type = 'item', name = 'aoe-cement', amount = 7},
         {type = 'fluid', name = 'aoe-carbon-dioxide', amount = 15}
     },
+	icons = {
+		{
+		  icon = data.raw["item"]["aoe-cement"].icon,
+		  icon_size = data.raw["item"]["aoe-cement"].icon_size,
+		},
+		{
+		  icon = data.raw["item"]["aoe-slag"].icon,
+		  icon_size = data.raw["item"]["aoe-slag"].icon_size,
+		  scale = 0.4,
+		  shift = {8,8}
+		}
+	},
 	main_product = 'aoe-cement',
 	energy_required = 2.4,
 	category = 'aoe-category-kiln-smelting'
@@ -2763,4 +2775,312 @@ data:extend({{
 	order = "k1",
 	energy_required = 3,
 	category = 'aoe-category-crushing'
+}})
+
+data:extend({{
+	name = 'aoe-casting-steel-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-iron-molten', amount = 40},
+		{type = 'item', name = 'aoe-coal-dust', amount = 1},
+		{type = 'item', name = 'aoe-manganese-dust', amount = 1},
+		{type = 'item', name = 'aoe-mold', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'steel-plate', amount = 6},
+		{type = 'item', name = 'aoe-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+    },
+	main_product = 'steel-plate',
+	energy_required = 3,
+	category = 'aoe-category-casting'
+}})
+
+data:extend({{
+	name = 'aoe-casting-stainless-steel-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-iron-molten', amount = 40},
+		{type = 'fluid', name = 'aoe-nickel-molten', amount = 15},
+		{type = 'fluid', name = 'aoe-chromium-molten', amount = 15},
+		{type = 'item', name = 'aoe-coal-dust', amount = 1},
+		{type = 'item', name = 'aoe-manganese-dust', amount = 1},
+		{type = 'item', name = 'aoe-mold', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoe-stainless-steel', amount = 4},
+		{type = 'item', name = 'aoe-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+    },
+	main_product = 'aoe-stainless-steel',
+	energy_required = 3,
+	category = 'aoe-category-casting'
+}})
+
+data:extend({{
+	name = 'aoe-casting-solder-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-tin-molten', amount = 15},
+		{type = 'fluid', name = 'aoe-lead-molten', amount = 10},
+		{type = 'item', name = 'aoe-mold', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoe-solder', amount = 6},
+		{type = 'item', name = 'aoe-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+    },
+	main_product = 'aoe-solder',
+	energy_required = 3,
+	category = 'aoe-category-casting'
+}})
+
+data:extend({{
+	name = 'aoe-casting-brass-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-copper-molten', amount = 17},
+		{type = 'fluid', name = 'aoe-zinc-molten', amount = 8},
+		{type = 'item', name = 'aoe-mold', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoe-brass', amount = 6},
+		{type = 'item', name = 'aoe-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+    },
+	main_product = 'aoe-brass',
+	energy_required = 3,
+	category = 'aoe-category-casting'
+}})
+
+data:extend({{
+	name = 'aoe-crafting-brass-rod-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-brass', amount = 1}
+	},
+	results = {
+        {type = 'item', name = 'aoe-brass-rod', amount = 2}
+    },
+	energy_required = 0.2
+}})
+
+data:extend({{
+	name = 'aoe-casting-electrum-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-gold-molten', amount = 14},
+		{type = 'fluid', name = 'aoe-silver-molten', amount = 11},
+		{type = 'item', name = 'aoe-mold', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoe-electrum', amount = 6},
+		{type = 'item', name = 'aoe-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+    },
+	main_product = 'aoe-electrum',
+	energy_required = 3,
+	category = 'aoe-category-casting'
+}})
+
+data:extend({{
+	name = 'aoe-casting-bronze-plate-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-copper-molten', amount = 18},
+		{type = 'fluid', name = 'aoe-tin-molten', amount = 7},
+		{type = 'item', name = 'aoe-mold', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoe-bronze-plate', amount = 6},
+		{type = 'item', name = 'aoe-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+    },
+	main_product = 'aoe-bronze-plate',
+	energy_required = 3,
+	category = 'aoe-category-casting'
+}})
+
+data:extend({{
+	name = 'aoe-kiln-smelting-silicon-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-coke', amount = 2},
+		{type = 'item', name = 'aoe-quartz-dust', amount = 4},
+		{type = 'item', name = 'aoe-sand', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoe-silicon', amount = 4},
+		{type = 'fluid', name = 'aoe-carbon-dioxide', amount = 1}
+    },
+	main_product = 'aoe-silicon',
+	energy_required = 4.8,
+	category = 'aoe-category-kiln-smelting'
+}})
+
+data:extend({{
+	name = 'aoe-sawmill-silicon-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-silicon', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoe-silicon-wafer', amount = 6}
+    },
+	energy_required = 1,
+	category = 'aoe-category-sawing'
+}})
+
+data:extend({{
+	name = 'aoe-crafting-rail-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'iron-stick', amount = 2},
+		{type = 'item', name = 'steel-plate', amount = 2},
+		{type = 'item', name = 'wood', amount = 2},
+		{type = 'item', name = 'stone', amount = 1},
+		{type = 'item', name = 'aoe-solder', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'rail', amount = 4}
+    },
+	energy_required = 1
+}})
+
+data:extend({{
+	name = 'aoe-crafting-locomotive-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'steel-furnace', amount = 4},
+		{type = 'item', name = 'engine-unit', amount = 4},
+		{type = 'item', name = 'iron-stick', amount = 4},
+		{type = 'item', name = 'steel-plate', amount = 30}
+	},
+	results = {
+		{type = 'item', name = 'locomotive', amount = 1}
+    },
+	energy_required = 5
+}})
+
+data:extend({{
+	name = 'aoe-crafting-cargo-wagon-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'iron-stick', amount = 4},
+		{type = 'item', name = 'steel-plate', amount = 20}
+	},
+	results = {
+		{type = 'item', name = 'cargo-wagon', amount = 1}
+    },
+	energy_required = 5
+}})
+
+data:extend({{
+	name = 'aoe-crafting-fluid-wagon-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'iron-stick', amount = 4},
+		{type = 'item', name = 'steel-plate', amount = 20},
+		{type = 'item', name = 'storage-tank', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'fluid-wagon', amount = 1}
+    },
+	energy_required = 5
+}})
+
+data:extend({{
+	name = 'aoe-crafting-train-stop-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'electronic-circuit', amount = 5},
+		{type = 'item', name = 'aoe-bronze-rod', amount = 10},
+		{type = 'item', name = 'aoe-solder', amount = 2}
+	},
+	results = {
+		{type = 'item', name = 'train-stop', amount = 1}
+    },
+	energy_required = 2
+}})
+
+data:extend({{
+	name = 'aoe-crafting-rail-signal-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'electronic-circuit', amount = 2},
+		{type = 'item', name = 'aoe-aluminium-plate', amount = 2}
+	},
+	results = {
+		{type = 'item', name = 'rail-signal', amount = 1}
+    },
+	energy_required = 1
+}})
+
+data:extend({{
+	name = 'aoe-crafting-rail-chain-signal-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'electronic-circuit', amount = 2},
+		{type = 'item', name = 'aoe-aluminium-plate', amount = 2}
+	},
+	results = {
+		{type = 'item', name = 'rail-chain-signal', amount = 1}
+    },
+	energy_required = 1
+}})
+
+data:extend({{
+	name = 'aoe-crafting-fast-inserter-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-brass-rod', amount = 2},
+		{type = 'item', name = 'engine-unit', amount = 2},
+		{type = 'item', name = 'electronic-circuit', amount = 4}
+	},
+	results = {
+        {type = 'item', name = 'fast-inserter', amount = 3}
+    },
+	energy_required = 0.5
+}})
+
+data:extend({{
+	name = 'aoe-crafting-long-fast-inserter-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-brass-rod', amount = 4},
+		{type = 'item', name = 'engine-unit', amount = 2},
+		{type = 'item', name = 'electronic-circuit', amount = 4}
+	},
+	results = {
+        {type = 'item', name = 'filter-inserter', amount = 3}
+    },
+	energy_required = 0.5
+}})
+
+data:extend({{
+	name = 'aoe-crafting-cleanroom-assembling-machine-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-steel-machine-hull', amount = 4},
+		{type = 'item', name = 'fast-inserter', amount = 2},
+		{type = 'item', name = 'aoe-silicon', amount = 4},
+		{type = 'item', name = 'stone-wall', amount = 4}
+	},
+	results = {
+        {type = 'item', name = 'assembling-machine-3', amount = 1}
+    },
+	energy_required = 5
 }})

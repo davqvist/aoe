@@ -391,6 +391,10 @@ data:extend({
   },
   {
     type = "recipe-category",
+    name = "aoe-category-vacuum-crafting"
+  },
+  {
+    type = "recipe-category",
     name = "aoe-category-venting"
   },
   {

@@ -111,6 +111,20 @@ data:extend({{
       base_area = 10,
       base_level = -1,
       pipe_connections = {{ type="input", position = {3, 0} }}
+    },{
+      production_type = "input",
+      pipe_picture = assembler2pipepictures(),
+      pipe_covers = pipecoverspictures(),
+      base_area = 10,
+      base_level = -1,
+      pipe_connections = {{ type="input", position = {3, -2} }}
+    },{
+      production_type = "input",
+      pipe_picture = assembler2pipepictures(),
+      pipe_covers = pipecoverspictures(),
+      base_area = 10,
+      base_level = -1,
+      pipe_connections = {{ type="input", position = {3, 2} }}
     },
     off_when_no_fluid_recipe = true
   },

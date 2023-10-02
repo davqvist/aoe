@@ -140,9 +140,9 @@ data:extend({{
       type = "electric",
       emissions_per_minute = 10,
       usage_priority = "secondary-input",
-	    drain = "12kW"
+	    drain = "18kW"
     },
-	energy_usage = "250kW",
+	energy_usage = "350kW",
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
 	module_specification = {
     module_slots = 3

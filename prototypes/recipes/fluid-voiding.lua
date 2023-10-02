@@ -1,3 +1,4 @@
+local AOE = require("__aoe__/globals")
 local fluid_void_blacklist = { ["aoe-tailings"] = true }
 
 for _, fluid in pairs(data.raw.fluid) do
@@ -18,8 +19,7 @@ for _, fluid in pairs(data.raw.fluid) do
 				energy_required = 1,
 				category = 'aoe-category-venting',
 				subgroup = 'aoe-other',
-				icons = get_icon( fluid ),
-				icon_size = 64
+				icons = get_void_icon( fluid )
 			}})
 		else
 			data:extend({{
@@ -37,8 +37,7 @@ for _, fluid in pairs(data.raw.fluid) do
 				energy_required = 1,
 				category = 'aoe-category-sinking',
 				subgroup = 'aoe-other',
-				icons = get_icon( fluid ),
-				icon_size = 64
+				icons = get_void_icon( fluid )
 			}})
 		end
 	end

@@ -751,3 +751,73 @@ data:extend({{
     order = "l",
     stack_size = 200
 }})
+
+data:extend({{
+    type = "item",
+    name = "aoe-stainless-steel",
+    icon = "__angelssmelting__/graphics/icons/plate-steel.png",
+    icon_size = 32,
+    subgroup = "aoe-metals-alloys",
+    order = "b",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-solder",
+    icon = "__angelssmelting__/graphics/icons/solder.png",
+    icon_size = 32,
+    subgroup = "aoe-metals-alloys",
+    order = "c",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-brass",
+    icon = "__aoe__/img/items/brass.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-alloys",
+    order = "d",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-brass-rod",
+    icon = "__aoe__/img/items/brass-rod.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-alloys",
+    order = "d1",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-electrum",
+    icon = "__aoe__/img/items/electrum.png",
+    icon_size = 64,
+    subgroup = "aoe-metals-alloys",
+    order = "e",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-silicon",
+    icon = "__angelssmelting__/graphics/icons/plate-silicon.png",
+    icon_size = 32,
+    subgroup = "aoe-metals-alloys",
+    order = "f",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-silicon-wafer",
+    icon = "__angelsindustries__/graphics/icons/silicon-wafer.png",
+    icon_size = 32,
+    subgroup = "aoe-metals-alloys",
+    order = "f1",
+    stack_size = 200
+}})
