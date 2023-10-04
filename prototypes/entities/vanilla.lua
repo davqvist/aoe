@@ -47,7 +47,7 @@ data.raw['assembling-machine']['assembling-machine-3'].energy_usage = "500kW"
 data.raw['assembling-machine']['assembling-machine-3'].energy_source.drain = "25kW"
 data.raw['assembling-machine']['assembling-machine-3'].crafting_speed = 2
 data.raw['assembling-machine']['assembling-machine-3'].module_specification = { module_slots = 3 }
-data.raw['assembling-machine']['assembling-machine-3'].crafting_categories = {"basic-crafting", "crafting", "advanced-crafting", "crafting-with-fluid", "aoe-category-vacuum-crafting"}
+data.raw['assembling-machine']['assembling-machine-3'].crafting_categories = {"basic-crafting", "crafting", "advanced-crafting", "crafting-with-fluid", "aoe-category-intricate-crafting", "aoe-category-vacuum-crafting"}
 
 data.raw['item']['lab'].subgroup = "aoe-processing-buildings"
 data.raw['item']['lab'].order = "m"
@@ -150,11 +150,19 @@ data.raw['pipe-to-ground']['pipe-to-ground'].fluid_box = {
 	},
 }
 
+data.raw['item']['valve-inspector'].subgroup = "aoe-fluid-logistics"
+data.raw['item']['valve-inspector'].order = "c"
+data.raw['item']['valve-return'].subgroup = "aoe-fluid-logistics"
+data.raw['item']['valve-return'].order = "d"
+data.raw['item']['valve-overflow'].subgroup = "aoe-fluid-logistics"
+data.raw['item']['valve-overflow'].order = "e"
+data.raw['item']['valve-underflow'].subgroup = "aoe-fluid-logistics"
+data.raw['item']['valve-underflow'].order = "f"
 data.raw['item']['offshore-pump'].subgroup = "aoe-fluid-logistics"
-data.raw['item']['offshore-pump'].order = "c"
+data.raw['item']['offshore-pump'].order = "g"
 data.raw['offshore-pump']['offshore-pump'].pumping_speed = 16.6666666666
 data.raw['item']['pump'].subgroup = "aoe-fluid-logistics"
-data.raw['item']['pump'].order = "d"
+data.raw['item']['pump'].order = "h"
 
 data.raw['item']['small-electric-pole'].subgroup = "aoe-poles"
 data.raw['item']['small-electric-pole'].order = "a"

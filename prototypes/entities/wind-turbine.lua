@@ -10,17 +10,14 @@ data:extend({{
 }})
 
 data:extend({{
-    type = "assembling-machine",
-    name = "aoe-wind-turbine",
+  type = "assembling-machine",
+  name = "aoe-wind-turbine",
 	crafting_categories = {"aoe-category-rotor"},
 	crafting_speed = 1,
 	energy_source = { type = "void" },
 	energy_usage = "1kW",
 	allowed_effects = {},
-	module_specification =
-    {
-      module_slots = 0
-    },
+	module_specification = { module_slots = 0 },
 	icon = "__aoe__/img/entities/wind-turbine.png",
 	icon_size = 256,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -35,44 +32,42 @@ data:extend({{
           width = 256,
           height = 256,
           frame_count = 1,
-		  scale = 0.625
+		      scale = 0.625
         }
       }
     }
 }})
 
 data:extend({{
-    type = "electric-energy-interface",
-    name = "aoe-wind-turbine-kinetic-generator",
+  type = "electric-energy-interface",
+  name = "aoe-wind-turbine-kinetic-generator",
 	energy_source = {
-        type = 'electric',
-        usage_priority = 'primary-output',
-        buffer_capacity = "1MJ",
-        input_flow_limit = "0W",
-        render_no_power_icon = false
-    },
-    energy_production = '1MW',
+      type = 'electric',
+      usage_priority = 'primary-output',
+      buffer_capacity = "1MJ",
+      input_flow_limit = "0W",
+      render_no_power_icon = false
+  },
+  energy_production = '1MW',
 	energy_usage = "0kW",
 	allowed_effects = {},
-	module_specification =
-    {
-      module_slots = 0
-    },
+	module_specification = { module_slots = 0 },
 	icon = "__aoe__/img/entities/empty.png",
 	icon_size = 128,
-	flags = { "placeable-neutral", "placeable-player" },
+	flags = { "placeable-neutral", "placeable-player", "not-on-map", "hidden", "hide-alt-info" },
 	minable = nil,
 	max_health = 1,
-	selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+	selection_box = {{-0, -0}, {0, 0}},
 	collision_box = {{-0, -0}, {0, 0}},
-	animation = {
+	selectable_in_game = false,
+  animation = {
       layers = {
         {
           filename = "__aoe__/img/entities/empty.png",
           width = 128,
           height = 128,
           frame_count = 1,
-		  scale = 0.25
+		      scale = 0.25
         }
       }
     }

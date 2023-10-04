@@ -95,7 +95,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoe-steel-gear', amount = 1}
     },
-	energy_required = 0.2
+	energy_required = 0.4
 }})
 
 data:extend({{
@@ -108,7 +108,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoe-steel-rod', amount = 2}
     },
-	energy_required = 0.2
+	energy_required = 0.4
 }})
 
 data:extend({{
@@ -1030,7 +1030,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoe-tin-gear', amount = 1}
     },
-	energy_required = 0.2
+	energy_required = 0.4
 }})
 
 data:extend({{
@@ -1043,7 +1043,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoe-tin-rod', amount = 2}
     },
-	energy_required = 0.2
+	energy_required = 0.4
 }})
 
 data:extend({{
@@ -1143,7 +1143,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoe-aluminium-rod', amount = 2}
     },
-	energy_required = 0.2
+	energy_required = 0.4
 }})
 
 data:extend({{
@@ -1527,7 +1527,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'hazard-concrete', amount = 5}
     },
-	energy_required = 0.1
+	energy_required = 0.2
 }})
 
 data:extend({{

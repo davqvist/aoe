@@ -401,11 +401,11 @@ data:extend({{
     },
     {
       type = "unlock-recipe",
-      recipe = "aoe-smelting-mold-recipe"
+      recipe = "aoe-crafting-centrifuge-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoe-crafting-centrifuge-recipe"
+      recipe = "aoe-smelting-mold-recipe"
     }
   },
   unit = {
@@ -984,7 +984,7 @@ data:extend({{
     unit = {
         count = 35,
         ingredients = AOE["age_tech_table"][4],
-        time = 25
+        time = 35
     }
 }})
 
@@ -1006,7 +1006,7 @@ data:extend({{
     unit = {
         count = 40,
         ingredients = AOE["age_tech_table"][4],
-        time = 25
+        time = 35
     }
 }})
 
@@ -1029,7 +1029,7 @@ data:extend({{
     unit = {
         count = 20,
         ingredients = AOE["age_tech_table"][4],
-        time = 25
+        time = 35
     }
 }})
 
@@ -1048,7 +1048,7 @@ data:extend({{
     unit = {
         count = 20,
         ingredients = AOE["age_tech_table"][4],
-        time = 25
+        time = 35
     }
 }})
 
@@ -1071,7 +1071,7 @@ data:extend({{
     unit = {
         count = 20,
         ingredients = AOE["age_tech_table"][4],
-        time = 25
+        time = 35
     }
 }})
 
@@ -1090,7 +1090,7 @@ data:extend({{
     unit = {
         count = 20,
         ingredients = AOE["age_tech_table"][4],
-        time = 25
+        time = 35
     }
 }})
 
@@ -1113,7 +1113,7 @@ data:extend({{
     unit = {
         count = 20,
         ingredients = AOE["age_tech_table"][4],
-        time = 25
+        time = 35
     }
 }})
 
@@ -1132,7 +1132,7 @@ data:extend({{
     unit = {
         count = 20,
         ingredients = AOE["age_tech_table"][4],
-        time = 25
+        time = 35
     }
 }})
 
@@ -1176,7 +1176,7 @@ data:extend({{
     unit = {
         count = 50,
         ingredients = AOE["age_tech_table"][4],
-        time = 25
+        time = 35
     }
 }})
 
@@ -1200,7 +1200,7 @@ data:extend({{
     unit = {
         count = 40,
         ingredients = AOE["age_tech_table"][4],
-        time = 25
+        time = 35
     }
 }})
 
@@ -1219,6 +1219,148 @@ data:extend({{
     unit = {
         count = 50,
         ingredients = AOE["age_tech_table"][4],
-        time = 25
+        time = 35
+    }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoe-electronics-tech-2",
+  icon_size = 256, icon_mipmaps = 4,
+  icon = "__base__/graphics/technology/advanced-electronics.png",
+  prerequisites = {"aoe-cleanroom-automation-tech", "aoe-solder-tech", "aoe-nickel-tech", "aoe-chromium-tech", "aoe-coal-tech", "aoe-electronics-tech-1"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-smelting-ceramic-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-crafting-resistor-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-crafting-resistor-recipe-with-vacuum"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-crafting-diode-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-crafting-diode-recipe-with-vacuum"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-crafting-capacitor-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-crafting-capacitor-recipe-with-vacuum"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-crafting-transistor-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-crafting-transistor-recipe-with-vacuum"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-crafting-inductor-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-crafting-inductor-recipe-with-vacuum"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-crafting-electronic-circuit-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-crafting-electronic-circuit-2-recipe-with-vacuum"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-crafting-advanced-circuit-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-crafting-advanced-circuit-recipe-with-vacuum"
+    }
+  },
+  unit = {
+      count = 50,
+      ingredients = AOE["age_tech_table"][4],
+      time = 35
+  }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoe-metal-boosting-tech",
+    icon_size = 64, icon_mipmaps = 4,
+    icon = "__angelssmelting__/graphics/icons/blast-furnace.png",
+    prerequisites = {"aoe-electronics-tech-2", "aoe-steel-tech-3"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-stainless-steel-machine-hull-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-metallurgy-beacon-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-iron-research-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-copper-research-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-tin-research-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-aluminium-research-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-lead-research-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-silver-research-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-nickel-research-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-gold-research-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-zinc-research-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-chromium-research-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-tungsten-research-recipe"
+      }
+    },
+    unit = {
+        count = 65,
+        ingredients = AOE["age_tech_table"][4],
+        time = 40
     }
 }})

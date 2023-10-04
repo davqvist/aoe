@@ -124,7 +124,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'iron-stick', amount = 2}
     },
-	energy_required = 0.2
+	energy_required = 0.4
 }})
 
 data:extend({{
@@ -137,7 +137,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'iron-gear-wheel', amount = 1}
     },
-	energy_required = 0.2
+	energy_required = 0.4
 }})
 
 data:extend({{

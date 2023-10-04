@@ -372,6 +372,7 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'aoe-poultry', amount = 6},
+        {type = 'item', name = 'aoe-feather', amount = 3},
 		{type = 'item', name = 'aoe-bones', amount = 2}
     },
     energy_required = 4,
@@ -1727,7 +1728,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoe-bronze-gear', amount = 1}
     },
-	energy_required = 0.2
+	energy_required = 0.4
 }})
 
 data:extend({{
@@ -1740,7 +1741,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoe-bronze-rod', amount = 2}
     },
-	energy_required = 0.2
+	energy_required = 0.4
 }})
 
 data:extend({{
@@ -1753,7 +1754,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoe-bronze-cable', amount = 3}
     },
-	energy_required = 0.2
+	energy_required = 0.4
 }})
 
 data:extend({{
@@ -1782,6 +1783,66 @@ data:extend({{
         {type = 'item', name = 'barreling-pump', amount = 1}
     },
     energy_required = 5
+}})
+
+data:extend({{
+    name = 'aoe-crafting-valve-inspector-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'pipe', amount = 5},
+		{type = 'item', name = 'electronic-circuit', amount = 1},
+		{type = 'item', name = 'aoe-aluminium-plate', amount = 3}
+    },
+    results = {
+        {type = 'item', name = 'valve-inspector', amount = 1}
+    },
+    energy_required = 2
+}})
+
+data:extend({{
+    name = 'aoe-crafting-valve-return-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'pipe', amount = 5},
+		{type = 'item', name = 'electronic-circuit', amount = 1},
+		{type = 'item', name = 'aoe-aluminium-plate', amount = 3}
+    },
+    results = {
+        {type = 'item', name = 'valve-return', amount = 1}
+    },
+    energy_required = 2
+}})
+
+data:extend({{
+    name = 'aoe-crafting-valve-overflow-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'pipe', amount = 5},
+		{type = 'item', name = 'electronic-circuit', amount = 1},
+		{type = 'item', name = 'aoe-aluminium-plate', amount = 3}
+    },
+    results = {
+        {type = 'item', name = 'valve-overflow', amount = 1}
+    },
+    energy_required = 2
+}})
+
+data:extend({{
+    name = 'aoe-crafting-valve-underflow-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'pipe', amount = 5},
+		{type = 'item', name = 'electronic-circuit', amount = 1},
+		{type = 'item', name = 'aoe-aluminium-plate', amount = 3}
+    },
+    results = {
+        {type = 'item', name = 'valve-underflow', amount = 1}
+    },
+    energy_required = 2
 }})
 
 data:extend({{

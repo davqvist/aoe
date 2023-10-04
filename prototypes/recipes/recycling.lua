@@ -1,4 +1,7 @@
+local AOE = require("__aoe__/globals")
+
 local parts = {
+    "aoe-stainless-steel-machine-hull",
     "aoe-steel-machine-hull",
     "engine-unit",
     "aoe-small-motor"
@@ -25,19 +28,7 @@ for _, recipe in pairs(data.raw.recipe) do
 				results = {
 					{type = 'item', name = ingredient.name, amount = ingredient.amount}
 				},
-				icons = {
-					{
-					  icon = data.raw.item[ingredient.name].icon,
-					  icon_size = data.raw.item[ingredient.name].icon_size,
-					  icon_mipmaps = data.raw.item[ingredient.name].icon_mipmaps
-					},
-					{
-					  icon = data.raw.item["aoe-recycler"].icon,
-					  icon_size = data.raw.item["aoe-recycler"].icon_size,
-					  scale = 64*0.4/data.raw.item["aoe-recycler"].icon_size,
-					  shift = {8,8}
-					}
-				},
+				icons = combine_icons_tiny( get_icons( data.raw.item[ingredient.name] ), get_icons( data.raw.item["aoe-recycler"] ) ),
 				energy_required = 0.2,
 				category = 'aoe-category-recycling'
 			}})
@@ -50,7 +41,7 @@ for _, recipe in pairs(data.raw.recipe) do
 end
 
 for _, m in pairs(data.raw.module) do
-  if string.sub(m.name,1,string.len("aoe-"))=="aoe-" then 
+  if string.sub(m.name,1,string.len("aoe-hidden-"))~="aoe-hidden-" and string.sub(m.name,1,string.len("aoe-"))=="aoe-" then 
 	local res = m.name:gsub('%-module.*', '')
 	local i = 'item'
 	if res == 'aoe-fish' then 
@@ -71,19 +62,7 @@ for _, m in pairs(data.raw.module) do
 		results = {
 			{type = 'item', name = res, amount=1}
 		},
-		icons = {
-			{
-			  icon = data.raw[i][res].icon,
-			  icon_size = data.raw[i][res].icon_size,
-			  icon_mipmaps = data.raw[i][res].icon_mipmaps
-			},
-			{
-			  icon = data.raw.item["aoe-recycler"].icon,
-			  icon_size = data.raw.item["aoe-recycler"].icon_size,
-			  scale = 64*0.4/data.raw.item["aoe-recycler"].icon_size,
-			  shift = {8,8}
-			}
-		},
+		icons = combine_icons_tiny( get_icons( data.raw[i][res] ), get_icons( data.raw.item["aoe-recycler"] ) ),
 		energy_required = 0.2,
 		category = 'aoe-category-recycling'
 	}})

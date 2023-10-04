@@ -56,7 +56,8 @@ data:extend({{
     selection_box = {{-1.4, -1.4}, {1.4, 1.4}},
     crafting_categories = {"aoe-category-kiln-smelting","aoe-category-kiln-smelting-iron","aoe-category-kiln-smelting-copper","aoe-category-kiln-smelting-tin","aoe-category-kiln-smelting-aluminium","aoe-category-kiln-smelting-lead","aoe-category-kiln-smelting-silver","aoe-category-kiln-smelting-nickel","aoe-category-kiln-smelting-gold","aoe-category-kiln-smelting-zinc","aoe-category-kiln-smelting-chromium","aoe-category-kiln-smelting-tungsten"},
     energy_usage = "90kW",
-    crafting_speed = 1,
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
+	  crafting_speed = 1,
     energy_source = {
       type = "burner",
       fuel_category = "chemical",

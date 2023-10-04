@@ -15,8 +15,8 @@ data.raw['item']['engine-unit'].subgroup = "aoe-parts"
 data.raw['item']['engine-unit'].order = "b"
 data.raw['item']['engine-unit'].stack_size = 100
 
-data.raw['item']['electronic-circuit'].subgroup = "aoe-parts"
-data.raw['item']['electronic-circuit'].order = "c"
+data.raw['item']['electronic-circuit'].subgroup = "aoe-circuits"
+data.raw['item']['electronic-circuit'].order = "a"
 data.raw['item']['electronic-circuit'].stack_size = 200
 
 data.raw['item']['steel-plate'].subgroup = "aoe-metals-steel"
@@ -49,7 +49,7 @@ data:extend({{
     icon = "__aoe__/img/items/steel-machine-hull.png",
     icon_size = 64,
     subgroup = "aoe-parts",
-    order = "d",
+    order = "c",
     stack_size = 100
 }})
 

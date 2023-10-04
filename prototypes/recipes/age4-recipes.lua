@@ -2863,7 +2863,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoe-brass-rod', amount = 2}
     },
-	energy_required = 0.2
+	energy_required = 0.4
 }})
 
 data:extend({{
@@ -3083,4 +3083,347 @@ data:extend({{
         {type = 'item', name = 'assembling-machine-3', amount = 1}
     },
 	energy_required = 5
+}})
+
+data:extend({{
+	name = 'aoe-crafting-stainless-steel-machine-hull-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-stainless-steel', amount = 5},
+		{type = 'item', name = 'advanced-circuit', amount = 2},
+	},
+	results = {
+        {type = 'item', name = 'aoe-stainless-steel-machine-hull', amount = 1}
+    },
+	energy_required = 2
+}})
+
+data:extend({{
+	name = 'aoe-crafting-resistor-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-carbon', amount = 2},
+		{type = 'item', name = 'aoe-nickel-plate', amount = 1},
+		{type = 'item', name = 'aoe-chromium-plate', amount = 1},
+		{type = 'item', name = 'aoe-tin-plate', amount = 1},
+		{type = 'item', name = 'aoe-ceramic', amount = 2},
+	},
+	results = {
+        {type = 'item', name = 'aoe-resistor', amount = 8}
+    },
+	energy_required = 2,
+	category = 'aoe-category-intricate-crafting'
+}})
+
+data:extend({{
+	name = 'aoe-crafting-diode-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'copper-cable', amount = 4},
+		{type = 'item', name = 'aoe-silicon-wafer', amount = 4},
+		{type = 'item', name = 'aoe-glass', amount = 1}
+	},
+	results = {
+        {type = 'item', name = 'aoe-diode', amount = 8}
+    },
+	energy_required = 2,
+	category = 'aoe-category-intricate-crafting'
+}})
+
+data:extend({{
+	name = 'aoe-crafting-capacitor-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-aluminium-plate', amount = 4},
+		{type = 'item', name = 'aoe-lead-plate', amount = 2},
+		{type = 'item', name = 'aoe-mica', amount = 1}
+	},
+	results = {
+        {type = 'item', name = 'aoe-capacitor', amount = 8}
+    },
+	energy_required = 2,
+	category = 'aoe-category-intricate-crafting'
+}})
+
+data:extend({{
+	name = 'aoe-crafting-transistor-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-tin-plate', amount = 4},
+		{type = 'item', name = 'aoe-silicon-wafer', amount = 4}
+	},
+	results = {
+        {type = 'item', name = 'aoe-transistor', amount = 8}
+    },
+	energy_required = 2,
+	category = 'aoe-category-intricate-crafting'
+}})
+
+data:extend({{
+	name = 'aoe-crafting-inductor-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'steel-plate', amount = 1},
+		{type = 'item', name = 'aoe-nickel-plate', amount = 2},
+		{type = 'item', name = 'aoe-zinc-plate', amount = 2},
+		{type = 'item', name = 'copper-cable', amount = 4}
+	},
+	results = {
+        {type = 'item', name = 'aoe-inductor', amount = 8}
+    },
+	energy_required = 2,
+	category = 'aoe-category-intricate-crafting'
+}})
+
+data:extend({{
+    name = 'aoe-smelting-ceramic-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-clay', amount = 2}
+    },
+    results = {
+        {type = 'item', name = 'aoe-ceramic', amount = 5}
+    },
+	category = 'smelting',
+    energy_required = 2.4
+}})
+
+data:extend({{
+	name = 'aoe-crafting-electronic-circuit-2-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-paper', amount = 1},
+		{type = 'item', name = 'aoe-diode', amount = 1},
+		{type = 'item', name = 'aoe-inductor', amount = 1},
+		{type = 'item', name = 'aoe-solder', amount = 1},
+		{type = 'item', name = 'aoe-silicon-wafer', amount = 1}
+	},
+	results = {
+        {type = 'item', name = 'electronic-circuit', amount = 2}
+    },
+	energy_required = 2,
+	category = 'aoe-category-intricate-crafting'
+}})
+
+data:extend({{
+	name = 'aoe-crafting-advanced-circuit-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'electronic-circuit', amount = 8},
+		{type = 'item', name = 'aoe-ceramic', amount = 1},
+		{type = 'item', name = 'aoe-resistor', amount = 1},
+		{type = 'item', name = 'aoe-transistor', amount = 1},
+		{type = 'item', name = 'aoe-capacitor', amount = 1}
+	},
+	results = {
+        {type = 'item', name = 'advanced-circuit', amount = 2}
+    },
+	energy_required = 6,
+	category = 'aoe-category-intricate-crafting'
+}})
+
+data:extend({{
+	name = 'aoe-metal-boosting-iron-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-iron-research', amount = 1}
+	},
+	results = {
+    },
+	icons = get_icons( data.raw["item"]["aoe-iron-research"] ),
+	subgroup = "aoe-metals-iron",
+    order = "z1",
+	energy_required = 60,
+	category = 'aoe-category-metal-boosting'
+}})
+
+data:extend({{
+	name = 'aoe-crafting-metallurgy-beacon-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-stainless-steel-machine-hull', amount = 20},
+		{type = 'item', name = 'aoe-sensor', amount = 20},
+		{type = 'item', name = 'concrete', amount = 200},
+		{type = 'item', name = 'aoe-brass', amount = 100}
+	},
+	results = {
+		{type = 'item', name = 'aoe-metallurgy-beacon', amount = 1}
+    },
+	energy_required = 10
+}})
+
+data:extend({{
+	name = 'aoe-crafting-iron-research-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'iron-plate', amount = 80},
+		{type = 'item', name = 'aoe-paper', amount = 1},
+		{type = 'item', name = 'aoe-feather', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoe-iron-research', amount = 1}
+    },
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoe-crafting-copper-research-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'copper-plate', amount = 80},
+		{type = 'item', name = 'aoe-paper', amount = 1},
+		{type = 'item', name = 'aoe-feather', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoe-copper-research', amount = 1}
+    },
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoe-crafting-tin-research-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-tin-plate', amount = 80},
+		{type = 'item', name = 'aoe-paper', amount = 1},
+		{type = 'item', name = 'aoe-feather', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoe-tin-research', amount = 1}
+    },
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoe-crafting-aluminium-research-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-aluminium-plate', amount = 80},
+		{type = 'item', name = 'aoe-paper', amount = 1},
+		{type = 'item', name = 'aoe-feather', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoe-aluminium-research', amount = 1}
+    },
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoe-crafting-lead-research-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-lead-plate', amount = 80},
+		{type = 'item', name = 'aoe-paper', amount = 1},
+		{type = 'item', name = 'aoe-feather', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoe-lead-research', amount = 1}
+    },
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoe-crafting-silver-research-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-silver-plate', amount = 80},
+		{type = 'item', name = 'aoe-paper', amount = 1},
+		{type = 'item', name = 'aoe-feather', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoe-silver-research', amount = 1}
+    },
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoe-crafting-nickel-research-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-nickel-plate', amount = 80},
+		{type = 'item', name = 'aoe-paper', amount = 1},
+		{type = 'item', name = 'aoe-feather', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoe-nickel-research', amount = 1}
+    },
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoe-crafting-gold-research-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-gold-plate', amount = 80},
+		{type = 'item', name = 'aoe-paper', amount = 1},
+		{type = 'item', name = 'aoe-feather', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoe-gold-research', amount = 1}
+    },
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoe-crafting-zinc-research-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-zinc-plate', amount = 80},
+		{type = 'item', name = 'aoe-paper', amount = 1},
+		{type = 'item', name = 'aoe-feather', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoe-zinc-research', amount = 1}
+    },
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoe-crafting-chromium-research-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-chromium-plate', amount = 80},
+		{type = 'item', name = 'aoe-paper', amount = 1},
+		{type = 'item', name = 'aoe-feather', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoe-chromium-research', amount = 1}
+    },
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoe-crafting-tungsten-research-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-tungsten-plate', amount = 80},
+		{type = 'item', name = 'aoe-paper', amount = 1},
+		{type = 'item', name = 'aoe-feather', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoe-tungsten-research', amount = 1}
+    },
+	energy_required = 20
 }})

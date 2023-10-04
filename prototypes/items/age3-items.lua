@@ -823,6 +823,16 @@ data:extend({{
 
 data:extend({{
     type = "item",
+    name = "aoe-feather",
+    icon = "__aoe__/img/items/feather.png",
+    icon_size = 64,
+    subgroup = "aoe-fauna-chicken",
+    order = "d",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
     name = "aoe-bones",
     icon = "__aoe__/img/items/bones.png",
     icon_size = 64,

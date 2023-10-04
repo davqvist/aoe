@@ -10,8 +10,8 @@ data:extend({{
 }})
 
 data:extend({{
-    type = "assembling-machine",
-    name = "aoe-tree-farm",
+  type = "assembling-machine",
+  name = "aoe-tree-farm",
 	crafting_categories = {"aoe-category-growing"},
 	crafting_speed = 0.5,
 	energy_source = { type = "void" },
@@ -27,9 +27,9 @@ data:extend({{
 	radius_visualisation_specification =
     {
       sprite = { 
-		filename = "__base__/graphics/entity/pumpjack/pumpjack-radius-visualization.png", 
-		size = 12
-	  },
+        filename = "__base__/graphics/entity/pumpjack/pumpjack-radius-visualization.png", 
+        size = 12
+      },
       distance = 7
     },
 	animation = {
@@ -39,7 +39,7 @@ data:extend({{
           width = 96,
           height = 96,
           frame_count = 1,
-		  scale = 1
+		      scale = 1
         }
       }
     }

@@ -10,8 +10,8 @@ data:extend({{
 }})
 
 data:extend({{
-    type = "assembling-machine",
-    name = "aoe-strainer",
+  type = "assembling-machine",
+  name = "aoe-strainer",
 	crafting_categories = {"aoe-category-straining"},
 	crafting_speed = 1,
 	energy_source = { type = "void" },

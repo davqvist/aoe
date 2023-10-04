@@ -18,6 +18,22 @@ data:extend({{
       {
         type = "unlock-recipe",
         recipe = "aoe-crafting-barreling-pump-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-valve-inspector-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-valve-return-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-valve-overflow-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-valve-underflow-recipe"
       }
     },
     unit = {

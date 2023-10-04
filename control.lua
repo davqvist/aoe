@@ -23,16 +23,19 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
   function(event)
     local entity = event.created_entity
 	if(entity.name == "aoe-tree-farm") then 
-		handleTreeFarmBuilt(event)
+		handleBuilt( event, global.treefarms )
 	end
 	if(entity.name == "aoe-forestry") then 
-		handleForestryBuilt(event)
-	end
-	if(entity.name == "aoe-wind-turbine") then 
-		handleWindTurbineBuilt(event)
+		handleBuilt( event, global.forestries )
 	end
 	if(string.sub(entity.name,1,string.len("aoe-farm"))=="aoe-farm") then 
-		handleFarmBuilt(event)
+		handleBuilt( event, global.farms )
+	end
+	if(entity.name == "aoe-metallurgy-beacon") then
+		handleMetalBeaconBuilt(event)
+	end
+	if(entity.name == "aoe-wind-turbine") then
+		handleWindTurbineBuilt(event)
 	end
 	if(entity.name == "inserter" or entity.name == "long-handed-inserter" or entity.name == "fast-inserter" or entity.name == "filter-inserter") then 
 	    if( entity.get_control_behavior() or next(entity.circuit_connected_entities.red) or next(entity.circuit_connected_entities.green) or entity.get_filter(1) ) then
@@ -46,11 +49,71 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity}, 
   function(event)
     local entity = event.entity
-	--if(entity.name:find("^aoe%-farm%-") ~= nil) then 
-	--	handleFarmMined(event)
-	--end
 	if(entity.name == "aoe-wind-turbine") then 
-		handleWindTurbineMined(event)
+		handleMined(event, global.wind_turbines, global.wind_turbine_generators)
+	end
+	if(entity.name == "aoe-metallurgy-beacon") then 
+		handleMined(event, global.metal_beacons, global.metal_beacon_beacons)
+	end
+  end
+)
+
+script.on_nth_tick(99,
+  function()
+	if global.wind_turbines then
+		for unit, wind_turbine in pairs(global.wind_turbines) do
+			if wind_turbine.valid and wind_turbine.name == "aoe-wind-turbine" then
+				local gen = global.wind_turbine_generators[unit]
+				if wind_turbine.crafting_progress>0 then
+					local x = game.tick / 10000
+					local wind = (math.sin(2 * x) + math.sin(math.pi * x) + math.sin(math.exp(1) * x)) / 3
+					local power_output = gen.prototype.max_energy_production * (1 + 0.5 * wind)
+					gen.power_production = power_output
+					gen.electric_buffer_size = power_output
+				else 
+					gen.power_production = 0
+					gen.electric_buffer_size = 0
+				end
+			else 
+				global.wind_turbines[unit]=nil
+				global.wind_turbine_generators[unit]=nil
+			end
+		end
+	end
+  end
+)
+script.on_nth_tick(55,
+  function()
+	recipe_to_module = { 
+		["aoe-metal-boosting-iron-recipe"] = "aoe-hidden-iron-module",
+		["aoe-metal-boosting-copper-recipe"] = "aoe-hidden-copper-module",
+		["aoe-metal-boosting-tin-recipe"] = "aoe-hidden-tin-module",
+		["aoe-metal-boosting-aluminium-recipe"] = "aoe-hidden-aluminium-module",
+		["aoe-metal-boosting-lead-recipe"] = "aoe-hidden-lead-module",
+		["aoe-metal-boosting-silver-recipe"] = "aoe-hidden-silver-module",
+		["aoe-metal-boosting-nickel-recipe"] = "aoe-hidden-nickel-module",
+		["aoe-metal-boosting-gold-recipe"] = "aoe-hidden-gold-module",
+		["aoe-metal-boosting-zinc-recipe"] = "aoe-hidden-zinc-module",
+		["aoe-metal-boosting-chromium-recipe"] = "aoe-hidden-chromium-module",
+		["aoe-metal-boosting-tungsten-recipe"] = "aoe-hidden-tungsten-module"
+	}
+
+	if global.metal_beacons then
+		for unit, metalbeacon in pairs(global.metal_beacons) do
+			if metalbeacon.valid and metalbeacon.name == "aoe-metallurgy-beacon" then
+				local beac = global.metal_beacon_beacons[unit]
+				beac.active = false
+				if metalbeacon.get_recipe() and recipe_to_module[metalbeacon.get_recipe().name] then
+					local module_slot = beac.get_module_inventory()
+					module_slot.clear()
+					module_slot.insert( {name = recipe_to_module[metalbeacon.get_recipe().name], amount = 1} )
+					if metalbeacon.status == defines.entity_status.working then beac.active = true end
+				end
+			else 
+				global.metal_beacons[unit]=nil
+				global.metal_beacon_beacons[unit]=nil
+			end
+		end
 	end
   end
 )
@@ -74,7 +137,7 @@ script.on_event(defines.events.on_tick,
 			plantRubberTree(treefarm)
 		  end
 		else global.treefarms[_]=nil
-	    end  
+	    end
 	  end
 	end
 	if global.forestries then
@@ -82,94 +145,61 @@ script.on_event(defines.events.on_tick,
   		if forestry.valid and forestry.name == "aoe-forestry" then
 		  if forestry.crafting_progress == 1 and forestry.get_recipe().name == "aoe-forestry-log-recipe" then
 			harvestTree(forestry)
-		  end 
+		  end
 		  if forestry.crafting_progress == 1 and forestry.get_recipe().name == "aoe-forestry-latex-recipe" then
-			tapRubberTree(forestry)
-		  end 
+			tapTree(forestry, "aoe-rubber-tree")
+		  end
 		  if forestry.crafting_progress == 1 and forestry.get_recipe().name == "aoe-forestry-resin-recipe" then
-			tapTree(forestry)
-		  end 
+			tapTree(forestry, "tree")
+		  end
 		else global.forestries[_]=nil
 		end
 	  end
     end
 	if global.farms then
       for _,farm in pairs(global.farms) do
-  		if farm.valid and farm.name == "aoe-farm-reservoir" then
-		  if farm.crafting_progress == 1 and farm.get_recipe().name == "aoe-farm-reservoir-fish-eggs-recipe" then
-		    if( math.random()<=0.05 ) then
-				local inv = farm.get_module_inventory()
-				local k, v = next( inv.get_contents() )
-				if k ~= nil then inv.remove( {name=k, count=1} ) end
-			end
-		  end 
+		if farm.valid and farm.name == "aoe-farm-reservoir" then
+			check_module_dying( farm, "aoe-farm-reservoir-fish-eggs-recipe", 0.05 )
 		elseif farm.valid and farm.name == "aoe-farm-chicken-coop" then
-		  if farm.crafting_progress == 1 and farm.get_recipe().name == "aoe-farm-chicken-coop-egg-recipe" then
-		    if( math.random()<=0.08 ) then
-				local inv = farm.get_module_inventory()
-				local k, v = next( inv.get_contents() )
-				if k ~= nil then inv.remove( {name=k, count=1} ) end
-			end
-		  end 
+			check_module_dying( farm, "aoe-farm-chicken-coop-egg-recipe", 0.08 )
 		elseif farm.valid and farm.name == "aoe-farm-barn" then
-		  if farm.crafting_progress == 1 and farm.get_recipe().name == "aoe-farm-barn-lamb-recipe" then
-		    if( math.random()<=0.1 ) then
-				local inv = farm.get_module_inventory()
-				local k, v = next( inv.get_contents() )
-				if k ~= nil then inv.remove( {name=k, count=1} ) end
-			end
-		  end 
-		elseif farm.valid and farm.name == "aoe-farm-barn" then
-			if farm.crafting_progress == 1 and farm.get_recipe().name == "aoe-farm-barn-calf-recipe" then
-			  if( math.random()<=0.12 ) then
-				  local inv = farm.get_module_inventory()
-				  local k, v = next( inv.get_contents() )
-				  if k ~= nil then inv.remove( {name=k, count=1} ) end
-			  end
-			end 
+			check_module_dying( farm, "aoe-farm-barn-lamb-recipe", 0.1 )
+			check_module_dying( farm, "aoe-farm-barn-calf-recipe", 0.12 )
 		else global.farms[_]=nil 
 		end
 	  end
     end
-	if global.wind_turbines and game.tick % 100 == 0 then
-	  for unit,wind_turbine in pairs(global.wind_turbines) do
-	    if wind_turbine.valid and wind_turbine.name == "aoe-wind-turbine" then
-		  local gen = global.wind_turbine_generators[unit]
-		  if wind_turbine.crafting_progress>0 then
-		    local x = game.tick / 10000
-		    local wind = (math.sin(2 * x) + math.sin(math.pi * x) + math.sin(math.exp(1) * x)) / 3
-		    local power_output = gen.prototype.max_energy_production * (1 + 0.5 * wind)
-		    gen.power_production = power_output
-		    gen.electric_buffer_size = power_output
-		  else 
-		    gen.power_production = 0
-		    gen.electric_buffer_size = 0
-		  end
-	    else 
-		  global.wind_turbines[unit]=nil
-		  global.wind_turbine_generators[unit]=nil
-		end
-	  end
-	end
   end
 )
 
-function handleTreeFarmBuilt(event)
-  if not global.treefarms then global.treefarms={} end
-  local entity = event.created_entity
-  global.treefarms[entity.unit_number] = entity
+function check_module_dying( farm, recipename, chance )
+	if farm.crafting_progress == 1 and farm.get_recipe().name == recipename then
+		if( math.random()<=chance ) then
+			local inv = farm.get_module_inventory()
+			local k, v = next( inv.get_contents() )
+			if k ~= nil then inv.remove( {name=k, count=1} ) end
+		end
+	end
 end
 
-function handleForestryBuilt(event)
-  if not global.forestries then global.forestries={} end
-  local entity = event.created_entity
-  global.forestries[entity.unit_number] = entity
+function handleBuilt( event, building )
+	if not building then building={} end
+	local entity = event.created_entity
+	building[entity.unit_number] = entity
 end
 
-function handleFarmBuilt(event)
-  if not global.farms then global.farms={} end
-  local farm = event.created_entity
-  global.farms[farm.unit_number] = farm
+function handleMetalBeaconBuilt(event)
+	if not global.metal_beacons then global.metal_beacons={} end
+	if not global.metal_beacon_beacons then global.metal_beacon_beacons={} end
+	local metalbeacon = event.created_entity
+	local metalbeaconbeacon = game.surfaces[metalbeacon.surface.name].create_entity{
+		  name = 'aoe-metallurgy-beacon-beacon',
+		  position = metalbeacon.position,
+		  force = metalbeacon.force
+	  }
+	print(metalbeaconbeacon)
+	global.metal_beacons[metalbeacon.unit_number] = metalbeacon
+	global.metal_beacon_beacons[metalbeacon.unit_number] = metalbeaconbeacon
 end
 
 function handleWindTurbineBuilt(event)
@@ -178,28 +208,20 @@ function handleWindTurbineBuilt(event)
   local wind_turbine = event.created_entity
   local kinetic_generator = game.surfaces[wind_turbine.surface.name].create_entity{
 		name = 'aoe-wind-turbine-kinetic-generator',
-		position = {wind_turbine.selection_box.left_top.x + 1, wind_turbine.selection_box.left_top.y - 2},
+		position = wind_turbine.position,
 		force = wind_turbine.force
 	}
   global.wind_turbines[wind_turbine.unit_number] = wind_turbine
   global.wind_turbine_generators[wind_turbine.unit_number] = kinetic_generator
 end
 
-function handleWindTurbineMined(event)
-  if not global.wind_turbines then global.wind_turbines={} end
-  if not global.wind_turbine_generators then global.wind_turbine_generators={} end
-  local wind_turbine = event.entity
-  local kinetic_generator = global.wind_turbine_generators[wind_turbine.unit_number]
-  kinetic_generator.destroy()
+function handleMined(event, main_entities, sub_entities)
+  if not main_entities then main_entities={} end
+  if not sub_entities then sub_entities={} end
+  local ent = event.entity
+  local ent2 = sub_entities[ent.unit_number]
+  ent2.destroy()
 end
-
---for i=1,#inv do
---if event.player_index ~= nil then
---	  game.players[event.player_index].insert(inv[i])
---else 
---	  game.surfaces[control.surface.name].spill_item_stack(control.position, inv[i], true, "player", false)
---	end
---  end
 
 function plantTree(treefarm)
   local area = 7
@@ -238,24 +260,13 @@ function harvestTree(forestry)
   end
 end
 
-function tapRubberTree(forestry)
+function tapTree(forestry, tree)
   local area = 10
   local surface = forestry.surface
   local x = math.random(forestry.position.x-area+2, forestry.position.x+area-2)+1.5
   local y = math.random(forestry.position.y-area+2, forestry.position.y+area-2)+1.5
   local entity = nil
-  local temp = surface.find_entities_filtered({position={x,y}, name="aoe-rubber-tree", radius=2.5})
-  if temp ~= nil then entity = temp[1] end
-  if entity == nil then forestry.crafting_progress = 0 end
-end
-
-function tapTree(forestry)
-  local area = 10
-  local surface = forestry.surface
-  local x = math.random(forestry.position.x-area+2, forestry.position.x+area-2)+1.5
-  local y = math.random(forestry.position.y-area+2, forestry.position.y+area-2)+1.5
-  local entity = nil
-  local temp = surface.find_entities_filtered({position={x,y}, type="tree", radius=2.5})
+  local temp = surface.find_entities_filtered({position={x,y}, type=tree, radius=2.5})
   if temp ~= nil then entity = temp[1] end
   if entity == nil then forestry.crafting_progress = 0 end
 end
@@ -263,14 +274,14 @@ end
 script.on_event(defines.events.on_script_trigger_effect,
     function(event)
 		local p = event.target_entity.player
-        if event.effect_id == "aoe-trigger-tea" then
+        if p and event.effect_id == "aoe-trigger-tea" then
 			if global.teatick == nil then global.teatick = {} end
 			global.teatick[game.tick+3600] = p.index
 			p.character_mining_speed_modifier = p.character_mining_speed_modifier+1
 			p.character_crafting_speed_modifier = p.character_crafting_speed_modifier+1
 			p.remove_item{name="aoe-tea", count=1}
 		end
-		if event.effect_id == "aoe-trigger-coffee" then
+		if p and event.effect_id == "aoe-trigger-coffee" then
 			if global.coffeetick == nil then global.coffeetick = {} end
 			global.coffeetick[game.tick+3600] = p.index
 			p.character_running_speed_modifier = p.character_running_speed_modifier+1

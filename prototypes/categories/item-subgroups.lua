@@ -237,21 +237,27 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-parts",
+    name = "aoe-chemicals",
     group = "intermediate-products",
     order = "e"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-chemicals",
+    name = "aoe-parts",
     group = "intermediate-products",
     order = "f"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-science-packs",
+    name = "aoe-circuits",
     group = "intermediate-products",
     order = "g"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-science-packs",
+    group = "intermediate-products",
+    order = "h"
   },
   {
 	  type = "item-subgroup",
@@ -406,6 +412,12 @@ data:extend({
   {
 	  type = "item-subgroup",
     name = "aoe-other",
+    group = "other",
+    order = "a"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-hidden",
     group = "other",
     order = "z"
   }

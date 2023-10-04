@@ -888,7 +888,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoe-copper-gear', amount = 1}
     },
-	energy_required = 0.2
+	energy_required = 0.4
 }})
 
 data:extend({{
@@ -901,7 +901,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoe-copper-rod', amount = 2}
     },
-	energy_required = 0.2
+	energy_required = 0.4
 }})
 
 data:extend({{
@@ -914,7 +914,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'copper-cable', amount = 3}
     },
-	energy_required = 0.2
+	energy_required = 0.4
 }})
 
 data:extend({{
@@ -928,7 +928,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'electronic-circuit', amount = 2}
     },
-	energy_required = 2.0
+	energy_required = 2
 }})
 
 data:extend({{

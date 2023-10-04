@@ -21,25 +21,52 @@ for age, atc in pairs(age_tech_cost) do
     end
 end
 
-function get_void_icon( thing )
-local new_icons = {{}}
-if thing.icons then
-    new_icons = table.deepcopy(thing.icons)
-    for _, ic in pairs(new_icons) do
-        if thing.icon_size and not ic.icon_size then
-            ic.icon_size = thing.icon_size
-        end
+function combine_icons_tiny( newicons, oldicons )
+    local new_icons = table.deepcopy( newicons )
+    local old_icons = table.deepcopy( oldicons )
+    local biggest_size = 32
+    for _, icon in pairs(new_icons) do
+        if icon.icon_size > biggest_size then biggest_size = icon.icon_size end
     end
-    for _, ic in pairs(new_icons) do
-        if thing.icon_mipmaps and not ic.icon_mipmaps then
-            ic.icon_mipmaps = thing.icon_mipmaps
-        end
+    for _, icon in pairs(old_icons) do
+        icon.scale = biggest_size*0.4/icon.icon_size
+		icon.shift = {8,8}
+        table.insert( new_icons, icon )
     end
-else
-    new_icons = {{icon = thing.icon, icon_size = thing.icon_size or 64, icon_mipmaps = thing.icon_mipmaps or 1}}
+    return new_icons
 end
-new_icons[#new_icons + 1] = {icon = "__aoe__/img/items/other/void.png", icon_size = 64}
-return new_icons
+
+function get_void_icon( thing )
+    return get_icons( thing, {icon = "__aoe__/img/items/other/void.png", icon_size = 64} )
+end
+
+function combine_icons( icons1, icons2 )
+    local new_icons = table.deepcopy( icons1 )
+    for _, icon in pairs(icons2) do
+        table.insert( new_icons, icon )
+    end
+    return new_icons
+end
+
+function get_icons( thing, addition )
+    local new_icons = {{}}
+    if thing and thing.icons then
+        new_icons = table.deepcopy(thing.icons)
+        for _, ic in pairs(new_icons) do
+            if thing.icon_size and not ic.icon_size then
+                ic.icon_size = thing.icon_size
+            end
+        end
+        for _, ic in pairs(new_icons) do
+            if thing.icon_mipmaps and not ic.icon_mipmaps then
+                ic.icon_mipmaps = thing.icon_mipmaps
+            end
+        end
+    else
+        new_icons = {{icon = thing.icon, icon_size = thing.icon_size or 64, icon_mipmaps = thing.icon_mipmaps or 1}}
+    end
+    if addition then new_icons[#new_icons + 1] = addition end
+    return new_icons
 end
 
 return {

@@ -1,3 +1,5 @@
+local AOE = require("__aoe__/globals")
+
 data:extend({{
     type = "tool",
     name = "aoe-science-04",
@@ -820,4 +822,331 @@ data:extend({{
     subgroup = "aoe-metals-alloys",
     order = "f1",
     stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-stainless-steel-machine-hull",
+    icon = "__aoe__/img/items/stainless-steel-machine-hull.png",
+    icon_size = 64,
+    subgroup = "aoe-parts",
+    order = "d",
+    stack_size = 200
+}})
+
+data.raw['item']['advanced-circuit'].subgroup = "aoe-circuits"
+data.raw['item']['advanced-circuit'].order = "b"
+data.raw['item']['advanced-circuit'].stack_size = 200
+
+data:extend({{
+    type = "item",
+    name = "aoe-resistor",
+    icon = "__angelsindustries__/graphics/icons/resistor.png",
+    icon_size = 32,
+    subgroup = "aoe-circuits",
+    order = "d",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-diode",
+    icon = "__aoe__/img/items/diode.png",
+    icon_size = 64,
+    subgroup = "aoe-circuits",
+    order = "e",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-capacitor",
+    icon = "__aoe__/img/items/capacitor.png",
+    icon_size = 64,
+    subgroup = "aoe-circuits",
+    order = "f",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-transistor",
+    icon = "__angelsindustries__/graphics/icons/transistor.png",
+    icon_size = 32,
+    subgroup = "aoe-circuits",
+    order = "g",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-inductor",
+    icon = "__aoe__/img/items/inductor.png",
+    icon_size = 64,
+    subgroup = "aoe-circuits",
+    order = "h",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-ceramic",
+    icon = "__aoe__/img/items/ceramic.png",
+    icon_size = 64,
+    subgroup = "aoe-dirt",
+    order = "f",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "module",
+    name = "aoe-hidden-iron-module",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["iron-plate"] ) ),
+	subgroup = "aoe-hidden",
+    order = "a",
+    stack_size = 1,
+	category = "aoe-module-iron",
+	tier = 1,
+    effect = { productivity = {bonus = 0.05} },
+	limitation = {},
+	limitation_message_key = "item-not-allowed-in-this-container-item"
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-iron-research",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["iron-plate"] ) ),
+    subgroup = "aoe-metals-iron",
+    order = "z",
+    stack_size = 10
+}})
+
+data:extend({{
+    type = "module",
+    name = "aoe-hidden-copper-module",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["copper-plate"] ) ),
+	subgroup = "aoe-hidden",
+    order = "b",
+    stack_size = 1,
+	category = "aoe-module-copper",
+	tier = 1,
+    effect = { productivity = {bonus = 0.05} },
+	limitation = {},
+	limitation_message_key = "item-not-allowed-in-this-container-item"
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-copper-research",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["copper-plate"] ) ),
+    subgroup = "aoe-metals-copper",
+    order = "z",
+    stack_size = 10
+}})
+
+data:extend({{
+    type = "module",
+    name = "aoe-hidden-tin-module",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-tin-plate"] ) ),
+	subgroup = "aoe-hidden",
+    order = "c",
+    stack_size = 1,
+	category = "aoe-module-tin",
+	tier = 1,
+    effect = { productivity = {bonus = 0.05} },
+	limitation = {},
+	limitation_message_key = "item-not-allowed-in-this-container-item"
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-tin-research",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-tin-plate"] ) ),
+    subgroup = "aoe-metals-tin",
+    order = "z",
+    stack_size = 10
+}})
+
+data:extend({{
+    type = "module",
+    name = "aoe-hidden-aluminium-module",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-aluminium-plate"] ) ),
+	subgroup = "aoe-hidden",
+    order = "d",
+    stack_size = 1,
+	category = "aoe-module-aluminium",
+	tier = 1,
+    effect = { productivity = {bonus = 0.05} },
+	limitation = {},
+	limitation_message_key = "item-not-allowed-in-this-container-item"
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-aluminium-research",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-aluminium-plate"] ) ),
+    subgroup = "aoe-metals-aluminium",
+    order = "z",
+    stack_size = 10
+}})
+
+data:extend({{
+    type = "module",
+    name = "aoe-hidden-lead-module",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-lead-plate"] ) ),
+	subgroup = "aoe-hidden",
+    order = "e",
+    stack_size = 1,
+	category = "aoe-module-lead",
+	tier = 1,
+    effect = { productivity = {bonus = 0.05} },
+	limitation = {},
+	limitation_message_key = "item-not-allowed-in-this-container-item"
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-lead-research",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-lead-plate"] ) ),
+    subgroup = "aoe-metals-lead",
+    order = "z",
+    stack_size = 10
+}})
+
+data:extend({{
+    type = "module",
+    name = "aoe-hidden-silver-module",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-silver-plate"] ) ),
+	subgroup = "aoe-hidden",
+    order = "f",
+    stack_size = 1,
+	category = "aoe-module-silver",
+	tier = 1,
+    effect = { productivity = {bonus = 0.05} },
+	limitation = {},
+	limitation_message_key = "item-not-allowed-in-this-container-item"
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-silver-research",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-silver-plate"] ) ),
+    subgroup = "aoe-metals-silver",
+    order = "z",
+    stack_size = 10
+}})
+
+data:extend({{
+    type = "module",
+    name = "aoe-hidden-nickel-module",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-nickel-plate"] ) ),
+	subgroup = "aoe-hidden",
+    order = "g",
+    stack_size = 1,
+	category = "aoe-module-nickel",
+	tier = 1,
+    effect = { productivity = {bonus = 0.05} },
+	limitation = {},
+	limitation_message_key = "item-not-allowed-in-this-container-item"
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-nickel-research",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-nickel-plate"] ) ),
+    subgroup = "aoe-metals-nickel",
+    order = "z",
+    stack_size = 10
+}})
+
+data:extend({{
+    type = "module",
+    name = "aoe-hidden-gold-module",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-gold-plate"] ) ),
+	subgroup = "aoe-hidden",
+    order = "h",
+    stack_size = 1,
+	category = "aoe-module-gold",
+	tier = 1,
+    effect = { productivity = {bonus = 0.05} },
+	limitation = {},
+	limitation_message_key = "item-not-allowed-in-this-container-item"
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-gold-research",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-gold-plate"] ) ),
+    subgroup = "aoe-metals-gold",
+    order = "z",
+    stack_size = 10
+}})
+
+data:extend({{
+    type = "module",
+    name = "aoe-hidden-zinc-module",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-zinc-plate"] ) ),
+	subgroup = "aoe-hidden",
+    order = "i",
+    stack_size = 1,
+	category = "aoe-module-zinc",
+	tier = 1,
+    effect = { productivity = {bonus = 0.05} },
+	limitation = {},
+	limitation_message_key = "item-not-allowed-in-this-container-item"
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-zinc-research",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-zinc-plate"] ) ),
+    subgroup = "aoe-metals-zinc",
+    order = "z",
+    stack_size = 10
+}})
+
+data:extend({{
+    type = "module",
+    name = "aoe-hidden-chromium-module",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-chromium-plate"] ) ),
+	subgroup = "aoe-hidden",
+    order = "j",
+    stack_size = 1,
+	category = "aoe-module-chromium",
+	tier = 1,
+    effect = { productivity = {bonus = 0.05} },
+	limitation = {},
+	limitation_message_key = "item-not-allowed-in-this-container-item"
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-chromium-research",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-chromium-plate"] ) ),
+    subgroup = "aoe-metals-chromium",
+    order = "z",
+    stack_size = 10
+}})
+
+data:extend({{
+    type = "module",
+    name = "aoe-hidden-tungsten-module",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-tungsten-plate"] ) ),
+	subgroup = "aoe-hidden",
+    order = "k",
+    stack_size = 1,
+	category = "aoe-module-tungsten",
+	tier = 1,
+    effect = { productivity = {bonus = 0.05} },
+	limitation = {},
+	limitation_message_key = "item-not-allowed-in-this-container-item"
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoe-tungsten-research",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-tungsten-plate"] ) ),
+    subgroup = "aoe-metals-tungsten",
+    order = "z",
+    stack_size = 10
 }})

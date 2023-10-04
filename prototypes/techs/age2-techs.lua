@@ -2,7 +2,7 @@ local AOE = require("__aoe__/globals")
 
 data:extend({{
     type = "technology",
-    name = "aoe-electronics-tech",
+    name = "aoe-electronics-tech-1",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/electronics.png",
     prerequisites = {"aoe-electric-age-tech"},
@@ -24,7 +24,7 @@ data:extend({{
     name = "aoe-circuit-network-tech",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/circuit-network.png",
-    prerequisites = {"aoe-electronics-tech"},
+    prerequisites = {"aoe-electronics-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -125,7 +125,7 @@ data:extend({{
     name = "aoe-steel-tech-2",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/steel-processing.png",
-    prerequisites = {"aoe-pressure-tech"},
+    prerequisites = {"aoe-sedimentary-stones-tech-1", "aoe-steel-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -148,7 +148,7 @@ data:extend({{
     name = "aoe-electric-machines-tech",
 	  icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/engine.png",
-    prerequisites = {"aoe-steel-tech-1", "aoe-electronics-tech", "aoe-low-voltage-tech", "aoe-basic-automation-tech", "aoe-basic-genetics-tech", "aoe-digging-tech"},
+    prerequisites = {"aoe-steel-tech-1", "aoe-electronics-tech-1", "aoe-low-voltage-tech", "aoe-basic-automation-tech", "aoe-basic-genetics-tech", "aoe-digging-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
