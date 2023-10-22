@@ -1,3 +1,5 @@
+local AOE = require("__aoe__/globals")
+
 data:extend({{
     name = 'aoe-ground-bore-water-recipe',
     type = 'recipe',
@@ -70,18 +72,7 @@ data:extend({{
     results = {
         {type = 'item', name = 'aoe-maize', amount = 5}
     },
-	icons = {
-	  {
-		icon = data.raw.item["aoe-maize"].icon,
-		icon_size = data.raw.item["aoe-maize"].icon_size
-	  },
-	  {
-		icon = "__aoe__/img/items/magnesium-dust.png",
-		icon_size = 64,
-		scale = 0.4,
-		shift = {8,8}
-	  }
-	},
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-maize"] ), get_icons( data.raw.item["aoe-magnesium-dust"] ) ),
     energy_required = 35,
 	category = 'aoe-category-farm-plot-maize'
 }})
@@ -119,14 +110,7 @@ data:extend({{
 	results = {
 		{type = 'fluid', name = 'aoe-plant-oil', amount = 100}
     },
-	icons = table.insert(table.deepcopy(data.raw.fluid["aoe-plant-oil"].icons),
-	  {
-		icon = data.raw.item["aoe-maize-kernels"].icon,
-		icon_size = data.raw.item["aoe-maize-kernels"].icon_size,
-		scale = 0.4,
-		shift = {8,8}
-	  }
-    ),
+	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoe-plant-oil"] ), get_icons( data.raw.item["aoe-maize-kernels"] ) ),
 	energy_required = 4,
 	category = 'aoe-category-squeezing'
 }})
@@ -252,14 +236,7 @@ data:extend({{
 	results = {
 		{type = 'fluid', name = 'aoe-plant-oil', amount = 100}
     },
-	icons = table.insert(table.deepcopy(data.raw.fluid["aoe-plant-oil"].icons),
-	  {
-		icon = data.raw.item["aoe-soybean-seeds"].icon,
-		icon_size = data.raw.item["aoe-soybean-seeds"].icon_size,
-		scale = 0.4,
-		shift = {8,8}
-	  }
-    ),
+	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoe-plant-oil"] ), get_icons( data.raw.item["aoe-soybean-seeds"] ) ),
 	energy_required = 4,
 	category = 'aoe-category-squeezing'
 }})
@@ -741,18 +718,7 @@ data:extend({{
     results = {
         {type = 'item', name = 'aoe-spruce-tree', amount = 1}
     },
-	icons = {
-	  {
-		icon = data.raw.item["aoe-spruce-tree"].icon,
-		icon_size = data.raw.item["aoe-spruce-tree"].icon_size
-	  },
-	  {
-		icon = data.raw.item["aoe-loam"].icon,
-		icon_size = data.raw.item["aoe-loam"].icon_size,
-		scale = 0.4,
-		shift = {8,8}
-	  }
-	},
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-spruce-tree"] ), get_icons( data.raw.item["aoe-loam"] ) ),
     energy_required = 6,
 	category = 'aoe-category-farm-plot-spruce-tree'
 }})
@@ -836,8 +802,9 @@ data:extend({{
 		{type = 'item', name = 'iron-stick', amount = 1}
     },
 	results = {
-        {type = 'item', name = 'aoe-log', amount = 1},	
-		{type = 'item', name = 'aoe-rubber-tree-seedling', amount = 2},	
+        {type = 'item', name = 'aoe-log', amount = 1},
+		{type = 'item', name = 'aoe-rubber-tree-seedling', amount = 1},
+		{type = 'item', name = 'aoe-rubber-tree-seedling', amount = 1, probability = 0.2},
         {type = 'fluid', name = 'aoe-latex', amount = 50}
     },
 	energy_required = 5,
@@ -1065,23 +1032,12 @@ data:extend({{
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-grass', amount = 1}
+		{type = 'item', name = 'aoe-grass', amount = 3}
 	},
 	results = {
         {type = 'item', name = 'aoe-fiber', amount = 1}
     },
-	icons = {
-	  {
-		icon = data.raw.item["aoe-fiber"].icon,
-		icon_size = data.raw.item["aoe-fiber"].icon_size
-	  },
-	  {
-		icon = data.raw.item["aoe-grass"].icon,
-		icon_size = data.raw.item["aoe-grass"].icon_size,
-		scale = 0.4,
-		shift = {8,8}
-	  }
-	},
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-fiber"] ), get_icons( data.raw.item["aoe-grass"] ) ),
 	energy_required = 1.5
 }})
 
@@ -1126,18 +1082,7 @@ data:extend({{
 		{type = 'item', name = 'aoe-saw-blade-iron', amount = 1, catalyst_amount = 1, probability = 0.94}
     },
 	main_product = 'wood',
-	icons = {
-	  {
-		icon = data.raw.item["wood"].icon,
-		icon_size = data.raw.item["wood"].icon_size
-	  },
-	  {
-		icon = "__aoe__/img/items/iron-saw-blade.png",
-		icon_size = 64,
-		scale = 0.4,
-		shift = {8,8}
-	  }
-	},
+	icons = combine_icons_tiny( get_icons( data.raw.item["wood"] ), get_icons( data.raw.item["aoe-saw-blade-iron"] ) ),
 	energy_required = 2,
 	category = 'aoe-category-sawing'
 }})
@@ -1157,18 +1102,7 @@ data:extend({{
 		{type = 'item', name = 'aoe-saw-blade-steel', amount = 1, catalyst_amount = 1, probability = 0.97}
     },
 	main_product = 'wood',
-	icons = {
-	  {
-		icon = data.raw.item["wood"].icon,
-		icon_size = data.raw.item["wood"].icon_size
-	  },
-	  {
-		icon = "__aoe__/img/items/steel-saw-blade.png",
-		icon_size = 64,
-		scale = 0.4,
-		shift = {8,8}
-	  }
-	},
+	icons = combine_icons_tiny( get_icons( data.raw.item["wood"] ), get_icons( data.raw.item["aoe-saw-blade-steel"] ) ),
 	energy_required = 2,
 	category = 'aoe-category-sawing'
 }})
@@ -1201,19 +1135,8 @@ data:extend({{
 	results = {
 		{type = 'item', name = 'aoe-glass', amount = 8}
     },
-	icons = {
-	  {
-		icon = data.raw.item["aoe-glass"].icon,
-		icon_size = data.raw.item["aoe-glass"].icon_size
-	  },
-	  {
-		icon = data.raw.item["aoe-soda-ash"].icon,
-		icon_size = data.raw.item["aoe-soda-ash"].icon_size,
-		scale = 0.4,
-		shift = {8,8}
-	  }
-	},
-	energy_required = 4.8,
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-glass"] ), get_icons( data.raw.item["aoe-soda-ash"] ) ),
+	energy_required = 9.6,
 	category = 'smelting'
 }})
 
@@ -1520,18 +1443,7 @@ data:extend({{
     results = {
         {type = 'item', name = 'aoe-maize', amount = 8}
     },
-	icons = {
-	  {
-		icon = data.raw.item["aoe-maize"].icon,
-		icon_size = data.raw.item["aoe-maize"].icon_size
-	  },
-	  {
-		icon = "__aoe__/img/items/magnesium-dust.png",
-		icon_size = 64,
-		scale = 0.4,
-		shift = {8,8}
-	  }
-	},
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-maize"] ), get_icons( data.raw.item["aoe-magnesium-dust"] ) ),
     energy_required = 55,
 	category = 'aoe-category-farm-plot-maize'
 }})
@@ -1632,18 +1544,7 @@ data:extend({{
     results = {
         {type = 'item', name = 'aoe-puree', amount = 1}
     },
-	icons = {
-	  {
-		icon = data.raw.item["aoe-puree"].icon,
-		icon_size = data.raw.item["aoe-puree"].icon_size
-	  },
-	  {
-		icon = data.raw.item["aoe-apple"].icon,
-		icon_size = data.raw.item["aoe-apple"].icon_size,
-		scale = 0.4,
-		shift = {8,8}
-	  }
-	},
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-puree"] ), get_icons( data.raw.item["aoe-apple"] ) ),
     energy_required = 3,
 	category = 'aoe-category-mixing'
 }})
@@ -1659,18 +1560,7 @@ data:extend({{
     results = {
         {type = 'item', name = 'aoe-puree', amount = 1}
     },
-	icons = {
-	  {
-		icon = data.raw.item["aoe-puree"].icon,
-		icon_size = data.raw.item["aoe-puree"].icon_size
-	  },
-	  {
-		icon = data.raw.item["aoe-maize-kernels"].icon,
-		icon_size = data.raw.item["aoe-maize-kernels"].icon_size,
-		scale = 0.4,
-		shift = {8,8}
-	  }
-	},
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-puree"] ), get_icons( data.raw.item["aoe-maize-kernels"] ) ),
     energy_required = 3,
 	category = 'aoe-category-mixing'
 }})
@@ -1769,6 +1659,19 @@ data:extend({{
         {type = 'item', name = 'angels-storage-tank-2', amount = 1}
     },
     energy_required = 3
+}})
+
+data:extend({{
+    name = 'aoe-crafting-barrel-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-tin-plate', amount = 5}
+    },
+    results = {
+        {type = 'item', name = 'empty-barrel', amount = 1}
+    },
+    energy_required = 0.5
 }})
 
 data:extend({{

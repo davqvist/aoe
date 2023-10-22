@@ -25,7 +25,7 @@ data:extend({{
   scale = 0.5,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoe-sinkhole" },
-	max_health = 50,
+	max_health = 300,
 	selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
 	source_inventory_size = 0,

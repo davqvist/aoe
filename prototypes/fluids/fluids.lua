@@ -415,10 +415,22 @@ data:extend({{
     name = "aoe-glycerol",
     icons = angelsmods.functions.create_liquid_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/glycerol.png", 72 }, "COH" ),
     subgroup = "aoe-fluids-flora-fauna",
-    order = "g",
+    order = "h",
 	base_color = {r=0.35, g=0.3, b=0.12},
 	flow_color = {r=0.35, g=0.3, b=0.12},
 	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoe-liquid-meat",
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { { 147, 61, 67 }, { 147, 61, 67 } }),
+    subgroup = "aoe-fluids-flora-fauna",
+    order = "i",
+	base_color = {r=0.58, g=0.24, b=0.26},
+	flow_color = {r=0.58, g=0.24, b=0.26},
+	default_temperature = 20,
+    fuel_value = "1.0MJ"
 }})
 
 data:extend({{

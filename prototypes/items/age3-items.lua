@@ -1216,6 +1216,9 @@ data:extend({{
     stack_size = 200
 }})
 
+data.raw['item']['empty-barrel'].subgroup = "aoe-storage"
+data.raw['item']['empty-barrel'].order = "g"
+
 data:extend({{
     type = "item",
     name = "aoe-bronze-plate",

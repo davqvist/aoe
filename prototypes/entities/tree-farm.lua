@@ -21,7 +21,7 @@ data:extend({{
 	icon_size = 96,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoe-tree-farm" },
-	max_health = 50,
+	max_health = 300,
 	selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
 	radius_visualisation_specification =

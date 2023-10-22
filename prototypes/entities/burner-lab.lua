@@ -19,7 +19,7 @@ data:extend({{
     icon_size = 64, icon_mipmaps = 4,
     flags = {"placeable-player", "player-creation"},
     minable = {mining_time = 0.2, result = "aoe-burner-lab"},
-    max_health = 150,
+    max_health = 300,
     corpse = "lab-remnants",
     dying_explosion = "lab-explosion",
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},

@@ -22,7 +22,7 @@ data:extend({{
 	icon_size = 256,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoe-farm-barn" },
-	max_health = 50,
+	max_health = 300,
 	selection_box = {{-4.0, -4.0}, {4.0, 4.0}},
 	collision_box = {{-3.9, -3.9}, {3.9, 3.9}},
 	animation = {
@@ -44,13 +44,13 @@ data:extend({{
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {-4.5, 0} }}
+        pipe_connections = {{ type="input", position = {-4.5, -1.5} }, { type="input", position = {-4.5, 1.5} }}
       },{
         production_type = "output",
         pipe_picture = assembler2pipepictures(),
         pipe_covers = pipecoverspictures(),
-        base_level = -1,
-        pipe_connections = {{ type="output", position = {4.5, 0} }}
+        base_level = 1,
+        pipe_connections = {{ type="output", position = {4.5, -1.5} }, { type="output", position = {4.5, 1.5} }}
       },
       off_when_no_fluid_recipe = true
     }

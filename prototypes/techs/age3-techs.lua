@@ -5,7 +5,7 @@ data:extend({{
     name = "aoe-fluid-handling-tech-2",
     icon = "__base__/graphics/technology/fluid-handling.png",
     icon_size = 256, icon_mipmaps = 4,
-    prerequisites = {"aoe-agriculture-age-tech", "aoe-aluminium-tech-1", "aoe-fluid-handling-tech-1"},
+    prerequisites = {"aoe-agriculture-age-tech", "aoe-aluminium-tech-1", "aoe-tin-tech-1", "aoe-fluid-handling-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -14,6 +14,10 @@ data:extend({{
       {
         type = "unlock-recipe",
         recipe = "aoe-crafting-large-storage-tank-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-barrel-recipe"
       },
       {
         type = "unlock-recipe",

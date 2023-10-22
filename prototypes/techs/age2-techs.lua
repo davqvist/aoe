@@ -292,7 +292,7 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-advanced-smelting-tech",
+    name = "aoe-advanced-smelting-tech-1",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/advanced-material-processing.png",
     prerequisites = {"aoe-construction-tech"},
@@ -318,7 +318,7 @@ data:extend({{
     name = "aoe-salt-tech",
     icon_size = 64,
     icon = "__aoe__/img/items/salt.png",
-    prerequisites = {"aoe-advanced-smelting-tech"},
+    prerequisites = {"aoe-advanced-smelting-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -410,7 +410,7 @@ data:extend({{
     name = "aoe-rock-cycle-tech",
     icon_size = 256,
     icon = "__aoe__/img/techs/rock-cycle.png",
-    prerequisites = {"aoe-advanced-smelting-tech", "aoe-optics-tech", "aoe-pressure-tech"},
+    prerequisites = {"aoe-advanced-smelting-tech-1", "aoe-optics-tech", "aoe-pressure-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -587,6 +587,10 @@ data:extend({{
 	    {
         type = "unlock-recipe",
         recipe = "aoe-crafting-storage-tank-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-pipe-2-recipe"
       }
     },
     unit = {
@@ -775,7 +779,7 @@ data:extend({{
     name = "aoe-concrete-tech",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/concrete.png",
-    prerequisites = {"aoe-igneous-stones-tech-1", "aoe-metamorphic-stones-tech-1", "aoe-sedimentary-stones-tech-1"},
+    prerequisites = {"aoe-igneous-stones-tech-1", "aoe-metamorphic-stones-tech-1", "aoe-lime-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",

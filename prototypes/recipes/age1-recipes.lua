@@ -1,3 +1,5 @@
+local AOE = require("__aoe__/globals")
+
 data:extend({{
 	name = 'aoe-crafting-burner-assembling-machine-recipe',
 	type = 'recipe',
@@ -23,6 +25,7 @@ data:extend({{
 	results = {
 		{type = 'item', name = 'pipe', amount = 1}
     },
+	icons = combine_icons_tiny( get_icons( data.raw["item"]["pipe"] ), get_icons( data.raw["item"]["iron-plate"] ) ),
 	energy_required = 0.4
 }})
 
@@ -441,18 +444,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoe-paper', amount = 1}
     },
-	icons = {
-	  {
-		icon = data.raw.item["aoe-paper"].icon,
-		icon_size = data.raw.item["aoe-paper"].icon_size
-	  },
-	  {
-		icon = data.raw.item["aoe-wood-pulp"].icon,
-		icon_size = data.raw.item["aoe-wood-pulp"].icon_size,
-		scale = 0.4,
-		shift = {8,8}
-	  }
-	},
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-paper"] ), get_icons( data.raw.item["aoe-wood-pulp"] ) ),
 	energy_required = 2.4,
 	category = 'smelting'
 }})
@@ -468,18 +460,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoe-paper', amount = 1}
     },
-	icons = {
-	  {
-		icon = data.raw.item["aoe-paper"].icon,
-		icon_size = data.raw.item["aoe-paper"].icon_size
-	  },
-	  {
-		icon = data.raw.item["aoe-kelp"].icon,
-		icon_size = data.raw.item["aoe-kelp"].icon_size,
-		scale = 0.4,
-		shift = {8,8}
-	  }
-	},
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-paper"] ), get_icons( data.raw.item["aoe-kelp"] ) ),
 	energy_required = 2.4,
 	category = 'smelting'
 }})
@@ -494,18 +475,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoe-fiber', amount = 1}
     },
-	icons = {
-	  {
-		icon = data.raw.item["aoe-fiber"].icon,
-		icon_size = data.raw.item["aoe-fiber"].icon_size
-	  },
-	  {
-		icon = data.raw.item["aoe-wood-pulp"].icon,
-		icon_size = data.raw.item["aoe-wood-pulp"].icon_size,
-		scale = 0.4,
-		shift = {8,8}
-	  }
-	},
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-fiber"] ), get_icons( data.raw.item["aoe-wood-pulp"] ) ),
 	energy_required = 1.5
 }})
 
@@ -519,18 +489,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoe-fiber', amount = 1}
     },
-	icons = {
-	  {
-		icon = data.raw.item["aoe-fiber"].icon,
-		icon_size = data.raw.item["aoe-fiber"].icon_size
-	  },
-	  {
-		icon = data.raw.item["aoe-leaves"].icon,
-		icon_size = data.raw.item["aoe-leaves"].icon_size,
-		scale = 0.4,
-		shift = {8,8}
-	  }
-	},
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-fiber"] ), get_icons( data.raw.item["aoe-leaves"] ) ),
 	energy_required = 1.5
 }})
 
@@ -603,18 +562,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoe-fiber', amount = 2}
     },
-	icons = {
-	  {
-		icon = data.raw.item["aoe-fiber"].icon,
-		icon_size = data.raw.item["aoe-fiber"].icon_size
-	  },
-	  {
-		icon = data.raw.item["aoe-flax"].icon,
-		icon_size = data.raw.item["aoe-flax"].icon_size,
-		scale = 0.4,
-		shift = {8,8}
-	  }
-	},
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-fiber"] ), get_icons( data.raw.item["aoe-flax"] ) ),
 	energy_required = 1.5
 }})
 
@@ -1031,7 +979,7 @@ data:extend({{
         {type = 'item', name = 'aoe-clay', amount = 3},
         {type = 'item', name = 'aoe-silt', amount = 3},
         {type = 'item', name = 'aoe-kelp', amount = 1, probability = 0.5},
-        {type = 'item', name = 'raw-fish', amount = 1, probability = 0.2},
+        {type = 'item', name = 'raw-fish', amount = 1, probability = 0.05},
         {type = 'item', name = 'aoe-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.98}
     },
 	main_product = 'aoe-soil',

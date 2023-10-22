@@ -22,7 +22,7 @@ data:extend({{
   icon_size = 32,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoe-farm-reservoir" },
-	max_health = 50,
+	max_health = 300,
 	selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
 	collision_box = {{-6.4, -6.4}, {6.4, 6.4}},
   animation = {

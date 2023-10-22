@@ -3,8 +3,8 @@ local AOE = require("__aoe__/globals")
 data:extend({{
   type = "technology",
   name = "aoe-medium-voltage-tech",
-  icon_size = 64, icon_mipmaps = 4,
-  icon = "__base__/graphics/icons/medium-electric-pole.png",
+  icon_size = 256, icon_mipmaps = 4,
+  icon = "__base__/graphics/technology/electric-energy-distribution-1.png",
   prerequisites = {"aoe-metallurgy-age-tech"},
   effects = {
     {
@@ -14,6 +14,14 @@ data:extend({{
     {
       type = "unlock-recipe",
       recipe = "aoe-crafting-medium-electric-fuse-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-crafting-big-electric-pole-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-crafting-big-electric-fuse-recipe"
     },
     {
       type = "unlock-recipe",
@@ -1296,6 +1304,67 @@ data:extend({{
       ingredients = AOE["age_tech_table"][4],
       time = 35
   }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoe-electric-science-alternate-tech",
+    icon_size = 64,
+    icon = "__aoe__/img/items/science-pack-2.png",
+    prerequisites = {"aoe-electronics-tech-2"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-science-02-alternate-recipe"
+      }
+    },
+    unit = {
+        count = 50,
+        ingredients = AOE["age_tech_table"][4],
+        time = 35
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoe-meat-processing-tech",
+    icon_size = 64,
+    icon = "__aoe__/img/items/meat.png",
+    prerequisites = {"aoe-chlorine-tech", "aoe-fuel-power-tech"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-mixing-liquid-meat-recipe"
+      }
+    },
+    unit = {
+        count = 35,
+        ingredients = AOE["age_tech_table"][4],
+        time = 35
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoe-advanced-smelting-tech-2",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/advanced-material-processing-2.png",
+    prerequisites = {"aoe-tungsten-tech", "aoe-electronics-tech-2", "aoe-steel-tech-3"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-stainless-steel-machine-hull-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-electric-furnace-recipe"
+      }
+    },
+    unit = {
+        count = 55,
+        ingredients = AOE["age_tech_table"][4],
+        time = 40
+    }
 }})
 
 data:extend({{

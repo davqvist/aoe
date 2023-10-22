@@ -29,7 +29,7 @@ data:extend({{
   icon_size = 32,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoe-slaughterhouse" },
-	max_health = 50,
+	max_health = 300,
 	selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
 	collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
 	animation = {

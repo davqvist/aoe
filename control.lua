@@ -147,10 +147,10 @@ script.on_event(defines.events.on_tick,
 			harvestTree(forestry)
 		  end
 		  if forestry.crafting_progress == 1 and forestry.get_recipe().name == "aoe-forestry-latex-recipe" then
-			tapTree(forestry, "aoe-rubber-tree")
+			tapTree(forestry, "name", "aoe-rubber-tree")
 		  end
 		  if forestry.crafting_progress == 1 and forestry.get_recipe().name == "aoe-forestry-resin-recipe" then
-			tapTree(forestry, "tree")
+			tapTree(forestry, "type", "tree")
 		  end
 		else global.forestries[_]=nil
 		end
@@ -159,12 +159,12 @@ script.on_event(defines.events.on_tick,
 	if global.farms then
       for _,farm in pairs(global.farms) do
 		if farm.valid and farm.name == "aoe-farm-reservoir" then
-			check_module_dying( farm, "aoe-farm-reservoir-fish-eggs-recipe", 0.05 )
+			check_module_dying( farm, "aoe-farm-reservoir-fish-eggs-recipe", 0.02 )
 		elseif farm.valid and farm.name == "aoe-farm-chicken-coop" then
-			check_module_dying( farm, "aoe-farm-chicken-coop-egg-recipe", 0.08 )
+			check_module_dying( farm, "aoe-farm-chicken-coop-egg-recipe", 0.04 )
 		elseif farm.valid and farm.name == "aoe-farm-barn" then
-			check_module_dying( farm, "aoe-farm-barn-lamb-recipe", 0.1 )
-			check_module_dying( farm, "aoe-farm-barn-calf-recipe", 0.12 )
+			check_module_dying( farm, "aoe-farm-barn-lamb-recipe", 0.06 )
+			check_module_dying( farm, "aoe-farm-barn-calf-recipe", 0.08 )
 		else global.farms[_]=nil 
 		end
 	  end
@@ -177,7 +177,21 @@ function check_module_dying( farm, recipename, chance )
 		if( math.random()<=chance ) then
 			local inv = farm.get_module_inventory()
 			local k, v = next( inv.get_contents() )
-			if k ~= nil then inv.remove( {name=k, count=1} ) end
+			if k ~= nil then 
+				inv.remove( {name=k, count=1} )
+				local irp = farm.surface.find_entity("item-request-proxy", farm.position)
+				if irp then
+					local requests = irp.item_requests
+					if requests[k] then
+						requests[k] = requests[k]+1
+					else 
+						requests[k]=1
+					end
+					irp.item_requests = requests
+				else 
+					farm.surface.create_entity{name="item-request-proxy", position=farm.position, force=farm.force, target=farm, modules={[k]=1}}
+				end
+			end
 		end
 	end
 end
@@ -260,13 +274,13 @@ function harvestTree(forestry)
   end
 end
 
-function tapTree(forestry, tree)
+function tapTree(forestry, what, tree)
   local area = 10
   local surface = forestry.surface
   local x = math.random(forestry.position.x-area+2, forestry.position.x+area-2)+1.5
   local y = math.random(forestry.position.y-area+2, forestry.position.y+area-2)+1.5
   local entity = nil
-  local temp = surface.find_entities_filtered({position={x,y}, type=tree, radius=2.5})
+  local temp = surface.find_entities_filtered({position={x,y}, [what]=tree, radius=2.5})
   if temp ~= nil then entity = temp[1] end
   if entity == nil then forestry.crafting_progress = 0 end
 end

@@ -29,7 +29,7 @@ function combine_icons_tiny( newicons, oldicons )
         if icon.icon_size > biggest_size then biggest_size = icon.icon_size end
     end
     for _, icon in pairs(old_icons) do
-        icon.scale = biggest_size*0.4/icon.icon_size
+        icon.scale = math.min(0.4, biggest_size*0.4/icon.icon_size)
 		icon.shift = {8,8}
         table.insert( new_icons, icon )
     end

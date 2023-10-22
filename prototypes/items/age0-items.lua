@@ -127,7 +127,7 @@ data:extend({{
     icon_size = 64,
     subgroup = "aoe-stone",
     order = "c",
-    stack_size = 200
+    stack_size = 500
 }})
 
 data:extend({{

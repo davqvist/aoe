@@ -37,7 +37,7 @@ data:extend({{
   }},
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoe-mixer" },
-	max_health = 50,
+	max_health = 300,
 	selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
 	collision_box = {{-1.9, -1.9}, {1.9, 1.9}},
 	animation = {

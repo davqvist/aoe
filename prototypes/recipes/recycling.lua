@@ -4,7 +4,10 @@ local parts = {
     "aoe-stainless-steel-machine-hull",
     "aoe-steel-machine-hull",
     "engine-unit",
-    "aoe-small-motor"
+    "aoe-small-motor",
+	"angels-storage-tank-3",
+	"aoe-bronze-cable",
+	"copper-cable"
 }
 
 for _, recipe in pairs(data.raw.recipe) do

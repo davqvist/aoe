@@ -1,3 +1,5 @@
+local AOE = require("__aoe__/globals")
+
 data:extend({{
 	name = 'aoe-crafting-steam-engine-recipe',
 	type = 'recipe',
@@ -666,19 +668,7 @@ data:extend({{
 	results = {
 		{type = 'fluid', name = 'aoe-lava', amount = 120}
     },
-	icons = {
-	  {
-		icon = data.raw.fluid["aoe-lava"].icon,
-		icon_size = data.raw.fluid["aoe-lava"].icon_size
-	  },
-	  {
-		icon = data.raw.item["stone"].icon,
-		icon_size = data.raw.item["stone"].icon_size,
-		icon_mipmaps = data.raw.item["stone"].icon_mipmaps,
-		scale = 0.4,
-		shift = {8,8}
-	  }
-	},
+	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoe-lava"] ), get_icons( data.raw.item["stone"] ) ),
 	energy_required = 2,
 	category = 'aoe-category-melting'
 }})
@@ -693,18 +683,7 @@ data:extend({{
 	results = {
 		{type = 'fluid', name = 'aoe-lava', amount = 120}
     },
-	icons = {
-	  {
-		icon = data.raw.fluid["aoe-lava"].icon,
-		icon_size = data.raw.fluid["aoe-lava"].icon_size
-	  },
-	  {
-		icon = data.raw.item["aoe-stones-sedimentary"].icon,
-		icon_size = data.raw.item["aoe-stones-sedimentary"].icon_size,
-		scale = 0.4,
-		shift = {8,8}
-	  }
-	},
+	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoe-lava"] ), get_icons( data.raw.item["aoe-stones-sedimentary"] ) ),
 	energy_required = 2,
 	category = 'aoe-category-melting'
 }})
@@ -719,18 +698,7 @@ data:extend({{
 	results = {
 		{type = 'fluid', name = 'aoe-lava', amount = 120}
     },
-	icons = {
-	  {
-		icon = data.raw.fluid["aoe-lava"].icon,
-		icon_size = data.raw.fluid["aoe-lava"].icon_size
-	  },
-	  {
-		icon = data.raw.item["aoe-stones-metamorphic"].icon,
-		icon_size = data.raw.item["aoe-stones-metamorphic"].icon_size,
-		scale = 0.4,
-		shift = {8,8}
-	  }
-	},
+	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoe-lava"] ), get_icons( data.raw.item["aoe-stones-metamorphic"] ) ),
 	energy_required = 2,
 	category = 'aoe-category-melting'
 }})
@@ -746,18 +714,7 @@ data:extend({{
 	results = {
 		{type = 'item', name = 'aoe-stones-metamorphic', amount = 6}
     },
-	icons = {
-	  {
-		icon = data.raw.item["aoe-stones-metamorphic"].icon,
-		icon_size = data.raw.item["aoe-stones-metamorphic"].icon_size
-	  },
-	  {
-		icon = data.raw.item["aoe-stones-sedimentary"].icon,
-		icon_size = data.raw.item["aoe-stones-sedimentary"].icon_size,
-		scale = 0.4,
-		shift = {8,8}
-	  }
-	},
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-stones-metamorphic"] ), get_icons( data.raw.item["aoe-stones-sedimentary"] ) ),
 	energy_required = 2,
 	category = 'aoe-category-high-pressure-heating'
 }})
@@ -773,18 +730,7 @@ data:extend({{
 	results = {
 		{type = 'item', name = 'aoe-stones-metamorphic', amount = 6}
     },
-	icons = {
-	  {
-		icon = data.raw.item["aoe-stones-metamorphic"].icon,
-		icon_size = data.raw.item["aoe-stones-metamorphic"].icon_size
-	  },
-	  {
-		icon = data.raw.item["aoe-stones-igneous"].icon,
-		icon_size = data.raw.item["aoe-stones-igneous"].icon_size,
-		scale = 0.4,
-		shift = {8,8}
-	  }
-	},
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-stones-metamorphic"] ), get_icons( data.raw.item["aoe-stones-igneous"] ) ),
 	energy_required = 2,
 	category = 'aoe-category-high-pressure-heating'
 }})
@@ -799,18 +745,7 @@ data:extend({{
 	results = {
 		{type = 'item', name = 'aoe-stones-sedimentary', amount = 6}
     },
-	icons = {
-	  {
-		icon = data.raw.item["aoe-stones-sedimentary"].icon,
-		icon_size = data.raw.item["aoe-stones-sedimentary"].icon_size
-	  },
-	  {
-		icon = data.raw.item["aoe-stones-metamorphic"].icon,
-		icon_size = data.raw.item["aoe-stones-metamorphic"].icon_size,
-		scale = 0.4,
-		shift = {8,8}
-	  }
-	},
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-stones-sedimentary"] ), get_icons( data.raw.item["aoe-stones-metamorphic"] ) ),
 	energy_required = 2,
 	category = 'aoe-category-sedimenting'
 }})
@@ -825,18 +760,7 @@ data:extend({{
 	results = {
 		{type = 'item', name = 'aoe-stones-sedimentary', amount = 6}
     },
-	icons = {
-	  {
-		icon = data.raw.item["aoe-stones-sedimentary"].icon,
-		icon_size = data.raw.item["aoe-stones-sedimentary"].icon_size
-	  },
-	  {
-		icon = data.raw.item["aoe-stones-igneous"].icon,
-		icon_size = data.raw.item["aoe-stones-igneous"].icon_size,
-		scale = 0.4,
-		shift = {8,8}
-	  }
-	},
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-stones-sedimentary"] ), get_icons( data.raw.item["aoe-stones-igneous"] ) ),
 	energy_required = 2,
 	category = 'aoe-category-sedimenting'
 }})
@@ -1061,6 +985,20 @@ data:extend({{
 }})
 
 data:extend({{
+	name = 'aoe-crafting-pipe-2-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-tin-plate', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'pipe', amount = 1}
+    },
+	icons = combine_icons_tiny( get_icons( data.raw["item"]["pipe"] ), get_icons( data.raw["item"]["aoe-tin-plate"] ) ),
+	energy_required = 0.4
+}})
+
+data:extend({{
 	name = 'aoe-crushing-manganese-ore-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1086,18 +1024,7 @@ data:extend({{
 	results = {
 		{type = 'item', name = 'aoe-glass', amount = 1}
     },
-	icons = {
-	  {
-		icon = data.raw.item["aoe-glass"].icon,
-		icon_size = data.raw.item["aoe-glass"].icon_size
-	  },
-	  {
-		icon = data.raw.item["aoe-quartz-dust"].icon,
-		icon_size = data.raw.item["aoe-quartz-dust"].icon_size,
-		scale = 0.4,
-		shift = {8,8}
-	  }
-	},
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-glass"] ), get_icons( data.raw.item["aoe-quartz-dust"] ) ),
 	energy_required = 2.4,
 	category = 'smelting'
 }})
@@ -1173,18 +1100,7 @@ data:extend({{
 		{type = 'item', name = 'aoe-quicklime', amount = 2},
 		{type = 'fluid', name = 'aoe-carbon-dioxide', amount = 20}
     },
-	icons = {
-	  {
-		icon = data.raw.item["aoe-quicklime"].icon,
-		icon_size = data.raw.item["aoe-quicklime"].icon_size
-	  },
-	  {
-		icon = data.raw.item["aoe-stones-sedimentary"].icon,
-		icon_size = data.raw.item["aoe-stones-sedimentary"].icon_size,
-		scale = 0.4,
-		shift = {8,8}
-	  }
-	},
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-quicklime"] ), get_icons( data.raw.item["aoe-stones-sedimentary"] ) ),
 	main_product = 'aoe-quicklime',
 	energy_required = 2.4,
 	category = 'aoe-category-kiln-smelting'
@@ -1542,18 +1458,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoe-paper', amount = 1}
     },
-	icons = {
-	  {
-		icon = data.raw.item["aoe-paper"].icon,
-		icon_size = data.raw.item["aoe-paper"].icon_size
-	  },
-	  {
-		icon = data.raw.item["aoe-caustic-soda"].icon,
-		icon_size = data.raw.item["aoe-caustic-soda"].icon_size,
-		scale = 0.4,
-		shift = {8,8}
-	  }
-	},
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-paper"] ), get_icons( data.raw.item["aoe-caustic-soda"] ) ),
 	energy_required = 2.4,
 	category = 'smelting'
 }})
@@ -1568,7 +1473,7 @@ data:extend({{
 		{type = 'item', name = 'aoe-steel-gear', amount = 4}
     },
     results = {
-        {type = 'item', name = 'aoe-slaughterhouse', amount = 4}
+        {type = 'item', name = 'aoe-slaughterhouse', amount = 1}
     },
     energy_required = 5
 }})

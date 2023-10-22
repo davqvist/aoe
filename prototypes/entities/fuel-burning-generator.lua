@@ -18,10 +18,11 @@ data:extend({{
   icon_mipmaps = 1,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
   minable = { hardness = 1, mining_time = 0.2, result = "aoe-fuel-burning-generator" },
-  max_health = 50,
+  max_health = 300,
   effectivity = 1,
   fluid_usage_per_tick = 10,
   burns_fluid = true,
+  scale_fluid_usage = true,
   collision_box = {{-3.5, -3.5}, {3.5, 3.5}},
   selection_box = {{-3.4, -3.4}, {3.4, 3.4}},
   fluid_box = {

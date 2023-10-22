@@ -17,23 +17,23 @@ local disabled_resources = {
 	"angels-natural-gas"
 }
 
+data.raw["map-gen-presets"]["default"]["aoe-recommended-preset"] = {}
+data.raw["map-gen-presets"]["default"]["aoe-recommended-preset"].order = "a1"
+data.raw["map-gen-presets"]["default"]["aoe-recommended-preset"].basic_settings = {}
+
 for _, preset in pairs(data.raw["map-gen-presets"]["default"]) do
-  if preset and preset.basic_settings
-  then
-	if preset.basic_settings.autoplace_controls
-	then
-	  for _, resource in pairs(disabled_resources) do
-		data.raw.resource[resource] = nil
-		data.raw["autoplace-control"][resource] = nil
-		preset.basic_settings.autoplace_controls[resource] = nil
-	  end
-	  if preset.basic_settings.autoplace_controls["stone"] then
-	    preset.basic_settings.autoplace_controls["stone"].frequency = 4.0
-	    preset.basic_settings.autoplace_controls["stone"].size = 4.0
-	    preset.basic_settings.autoplace_controls["stone"].richness = 2.0
-	  end
+  	if preset and preset.basic_settings then
+		if not preset.basic_settings.autoplace_controls then preset.basic_settings.autoplace_controls = {} end
+		for _, resource in pairs(disabled_resources) do
+			data.raw.resource[resource] = nil
+			data.raw["autoplace-control"][resource] = nil
+			preset.basic_settings.autoplace_controls[resource] = nil
+		end
+		if not preset.basic_settings.autoplace_controls["stone"] then preset.basic_settings.autoplace_controls["stone"] = {} end
+		preset.basic_settings.autoplace_controls["stone"].frequency = 4.0
+		preset.basic_settings.autoplace_controls["stone"].size = 4.0
+		preset.basic_settings.autoplace_controls["stone"].richness = 2.0
 	end
-  end
 end
 
 for _, type in pairs({"unit-spawner", "unit", "turret"}) do

@@ -19,7 +19,7 @@ data:extend({{
 	  icon_size = 192,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 0.2, result = "aoe-kiln"},
-    max_health = 200,
+    max_health = 300,
     dying_explosion = "stone-furnace-explosion",
     repair_sound = sounds.manual_repair,
     mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg",volume = 0.8},
@@ -55,7 +55,7 @@ data:extend({{
     collision_box = {{-1.5, -1.5}, {1.5, 1.5}},
     selection_box = {{-1.4, -1.4}, {1.4, 1.4}},
     crafting_categories = {"aoe-category-kiln-smelting","aoe-category-kiln-smelting-iron","aoe-category-kiln-smelting-copper","aoe-category-kiln-smelting-tin","aoe-category-kiln-smelting-aluminium","aoe-category-kiln-smelting-lead","aoe-category-kiln-smelting-silver","aoe-category-kiln-smelting-nickel","aoe-category-kiln-smelting-gold","aoe-category-kiln-smelting-zinc","aoe-category-kiln-smelting-chromium","aoe-category-kiln-smelting-tungsten"},
-    energy_usage = "90kW",
+    energy_usage = "125kW",
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
 	  crafting_speed = 1,
     energy_source = {

@@ -1,3 +1,5 @@
+local AOE = require("__aoe__/globals")
+
 data:extend({{
 	name = 'aoe-crafting-stone-furnace-recipe',
 	type = 'recipe',
@@ -373,19 +375,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoe-wood-pulp', amount = 2}
     },
-	icons = {
-	  {
-		icon = data.raw.item["aoe-wood-pulp"].icon,
-		icon_size = data.raw.item["aoe-wood-pulp"].icon_size
-	  },
-	  {
-		icon = data.raw.item["wood"].icon,
-		icon_size = data.raw.item["wood"].icon_size,
-		icon_mipmaps = 4,
-		scale = 0.4,
-		shift = {8,8}
-	  }
-	},
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-wood-pulp"] ), get_icons( data.raw.item["wood"] ) ),
 	energy_required = 1,
 	category = 'aoe-category-sawing'
 }})
@@ -400,18 +390,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoe-wood-pulp', amount = 12}
     },
-	icons = {
-	  {
-		icon = data.raw.item["aoe-wood-pulp"].icon,
-		icon_size = data.raw.item["aoe-wood-pulp"].icon_size
-	  },
-	  {
-		icon = data.raw.item["aoe-log"].icon,
-		icon_size = data.raw.item["aoe-log"].icon_size,
-		scale = 0.4,
-		shift = {8,8}
-	  }
-	},
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-wood-pulp"] ), get_icons( data.raw.item["aoe-log"] ) ),
 	energy_required = 2.5,
 	category = 'aoe-category-sawing'
 }})
@@ -496,4 +475,17 @@ data:extend({{
         {type = 'item', name = 'stone-wall', amount = 1}
     },
 	energy_required = 2
+}})
+
+data:extend({{
+	name = 'aoe-crafting-repair-pack-recipe',
+	type = 'recipe',
+	enabled = true,
+	ingredients = {
+		{type = 'item', name = 'iron-stick', amount = 8}
+	},
+	results = {
+        {type = 'item', name = 'repair-pack', amount = 1}
+    },
+	energy_required = 0.5
 }})
