@@ -1178,7 +1178,7 @@ data:extend({{
 	icon_size = data.raw.item["aoe-rotor-steel"].icon_size,
 	energy_required = 800,
 	subgroup = 'aoe-power-buildings',
-	order = 'c1',
+	order = 'd1',
 	category = 'aoe-category-rotor'
 }})
 

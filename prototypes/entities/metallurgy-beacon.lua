@@ -8,7 +8,7 @@ data:extend({{
         scale = 0.5,
     }},
     subgroup = "aoe-specific-buildings",
-    order = "r",
+    order = "s",
     place_result = "aoe-metallurgy-beacon",
     stack_size = 25,
 }})
@@ -22,7 +22,7 @@ data:extend({{
     type = "electric",
     emissions_per_minute = 10,
     usage_priority = "secondary-input",
-	drain = "180kW"
+	  drain = "180kW"
   },
   energy_usage = "3.6MW",
   allowed_effects = nil,
@@ -40,8 +40,8 @@ data:extend({{
   collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
   radius_visualisation_specification = {
     sprite = {
-        filename = "__base__/graphics/entity/pumpjack/pumpjack-radius-visualization.png", 
-        size = 12
+      filename = "__base__/graphics/entity/pumpjack/pumpjack-radius-visualization.png",
+      size = 12
     },
     distance = 25
   },
@@ -128,17 +128,17 @@ data:extend({{
 }})
 
 data:extend({{
-    type = "beacon",
-    name = "aoe-metallurgy-beacon-beacon",
-    energy_source = { type = 'void'},
-    energy_usage = '1W',
+  type = "beacon",
+  name = "aoe-metallurgy-beacon-beacon",
+  energy_source = { type = 'void'},
+  energy_usage = '1W',
 	allowed_effects = {'productivity'},
 	module_specification = {
-        module_slots = 1,
-        module_info_icon_shift = {0, 0},
-        module_info_multi_row_initial_height_modifier = -0.3,
-        module_info_max_icons_per_row = 2
-    },
+    module_slots = 1,
+    module_info_icon_shift = {0, 0},
+    module_info_multi_row_initial_height_modifier = -0.3,
+    module_info_max_icons_per_row = 2
+  },
 	icon = "__aoe__/img/entities/empty.png",
 	icon_size = 128,
 	flags = { "placeable-neutral", "placeable-player", "not-on-map", "hidden", "hide-alt-info" },
@@ -146,9 +146,9 @@ data:extend({{
 	max_health = 1,
 	selection_box = {{-0, -0}, {0, 0}},
 	collision_box = {{-0, -0}, {0, 0}},
-    supply_area_distance = 25,
-    distribution_effectivity = 1,
-    selectable_in_game = false,
+  supply_area_distance = 25,
+  distribution_effectivity = 1,
+  selectable_in_game = false,
 	animation = {
       layers = {
         {

@@ -772,8 +772,8 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "aoe-metallurgy-age-tech",
-    icon_size = 64,
-    icon = "__aoe__/img/items/science-pack-4.png",
+    icon = "__base__/graphics/icons/military-science-pack.png",
+    icon_size = 64, icon_mipmaps = 4,
     prerequisites = {"aoe-bronze-tech-1"},
 	  effects = {
       {

@@ -1,6 +1,19 @@
 data:extend({
   {
     type = "recipe-category",
+    name = "aoe-category-advanced-chemistry"
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-bees-apiary"
+  },
+  {
+    type = "recipe-category",
+    name = "aoe-category-bees-hive",
+    modules = { "aoe-module-drone" }
+  },
+  {
+    type = "recipe-category",
     name = "aoe-category-burning"
   },
   {

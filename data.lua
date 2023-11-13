@@ -14,6 +14,7 @@ require("__aoe__/prototypes/fluids/fluids")
 require("__aoe__/prototypes/entities/_entities")
 require("__aoe__/prototypes/recipes/recipes")
 require("__aoe__/prototypes/techs/techs")
+require("__aoe__/prototypes/bees")
 
 angelsmods.refining.disable_ore_override = true
 function angelsmods.functions.move_item(i_name, i_subgroup, i_order, i_type) end

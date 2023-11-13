@@ -3,8 +3,8 @@ local AOE = require("__aoe__/globals")
 data:extend({{
     type = "tool",
     name = "aoe-science-04",
-    icon = "__aoe__/img/items/science-pack-4.png",
-    icon_size = 64,
+    icon = "__base__/graphics/icons/military-science-pack.png",
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoe-science-packs",
     order = "d",
     stack_size = 200,
@@ -1150,3 +1150,10 @@ data:extend({{
     order = "z",
     stack_size = 10
 }})
+
+data.raw['item']['sulfur'].subgroup = "aoe-petrochem"
+data.raw['item']['sulfur'].order = "a"
+data.raw['item']['sulfur'].stack_size = 200
+data.raw['item']['plastic-bar'].subgroup = "aoe-petrochem"
+data.raw['item']['plastic-bar'].order = "b"
+data.raw['item']['plastic-bar'].stack_size = 200

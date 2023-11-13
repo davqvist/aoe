@@ -1236,7 +1236,7 @@ data:extend({{
   name = "aoe-electronics-tech-2",
   icon_size = 256, icon_mipmaps = 4,
   icon = "__base__/graphics/technology/advanced-electronics.png",
-  prerequisites = {"aoe-cleanroom-automation-tech", "aoe-solder-tech", "aoe-nickel-tech", "aoe-chromium-tech", "aoe-coal-tech", "aoe-electronics-tech-1"},
+  prerequisites = {"aoe-cleanroom-automation-tech", "aoe-solder-tech", "aoe-nickel-tech", "aoe-chromium-tech", "aoe-coal-tech", "aoe-electronics-tech-1", "aoe-steel-tech-3"},
   effects = {
     {
       type = "unlock-recipe",
@@ -1297,6 +1297,10 @@ data:extend({{
     {
       type = "unlock-recipe",
       recipe = "aoe-crafting-advanced-circuit-recipe-with-vacuum"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoe-crafting-stainless-steel-machine-hull-recipe"
     }
   },
   unit = {
@@ -1349,12 +1353,8 @@ data:extend({{
     name = "aoe-advanced-smelting-tech-2",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/advanced-material-processing-2.png",
-    prerequisites = {"aoe-tungsten-tech", "aoe-electronics-tech-2", "aoe-steel-tech-3"},
+    prerequisites = {"aoe-tungsten-tech", "aoe-electronics-tech-2"},
 	  effects = {
-      {
-        type = "unlock-recipe",
-        recipe = "aoe-crafting-stainless-steel-machine-hull-recipe"
-      },
       {
         type = "unlock-recipe",
         recipe = "aoe-crafting-electric-furnace-recipe"
@@ -1372,12 +1372,8 @@ data:extend({{
     name = "aoe-metal-boosting-tech",
     icon_size = 64, icon_mipmaps = 4,
     icon = "__angelssmelting__/graphics/icons/blast-furnace.png",
-    prerequisites = {"aoe-electronics-tech-2", "aoe-steel-tech-3"},
+    prerequisites = {"aoe-electronics-tech-2"},
 	  effects = {
-      {
-        type = "unlock-recipe",
-        recipe = "aoe-crafting-stainless-steel-machine-hull-recipe"
-      },
       {
         type = "unlock-recipe",
         recipe = "aoe-crafting-metallurgy-beacon-recipe"
@@ -1429,6 +1425,56 @@ data:extend({{
     },
     unit = {
         count = 65,
+        ingredients = AOE["age_tech_table"][4],
+        time = 40
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoe-plastic-tech",
+    icon = "__base__/graphics/icons/plastic-bar.png",
+    icon_size = 64, icon_mipmaps = 4,
+    prerequisites = {"aoe-electronics-tech-2"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-advanced-chemical-plant-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-chemistry-ethylene-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-chemistry-polyethylene-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-freezing-plastic-recipe"
+      }
+    },
+    unit = {
+        count = 70,
+        ingredients = AOE["age_tech_table"][4],
+        time = 40
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoe-petrochem-age-tech",
+    icon = "__base__/graphics/icons/military-science-pack.png",
+    icon_size = 64, icon_mipmaps = 4,
+    prerequisites = {"aoe-plastic-tech"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoe-crafting-science-05-recipe"
+      }
+    },
+    unit = {
+        count = 75,
         ingredients = AOE["age_tech_table"][4],
         time = 40
     }

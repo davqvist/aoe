@@ -1,41 +1,30 @@
-local small_furnaces = {
-	"stone-furnace",
-	"steel-furnace"
+local size_changes = {
+	["stone-furnace"] = {"furnace", 1.5},
+	["steel-furnace"] = {"furnace", 1.5},
+	["accumulator"] = {"accumulator", 1.5},
+	["steel-chest"] = {"container", 3},
 }
 
-for _, furnace in pairs(small_furnaces) do
-	for _, layers in pairs(data.raw.furnace[furnace].animation.layers) do
-		layers.scale = 1.5
-		if layers.hr_version ~= nil then layers.hr_version.scale = 0.75 end
+for _, change in pairs(size_changes) do
+	if data.raw[change[1]][_].animation and data.raw[change[1]][_].animation.layers then
+		for _, layers in pairs(data.raw[change[1]][_].animation.layers) do
+			layers.scale = change[2]
+			if layers.hr_version ~= nil then layers.hr_version.scale = change[2]/2 end
+		end
 	end
-	for _, wv in pairs(data.raw.furnace[furnace].working_visualisations) do
-		wv.animation.scale = 1.5
-		if wv.animation.hr_version ~= nil then wv.animation.hr_version.scale = 0.75 end
+	if data.raw[change[1]][_].working_visualisations then
+		for _, wv in pairs(data.raw[change[1]][_].working_visualisations) do
+			wv.animation.scale = change[2]
+			if wv.animation.hr_version ~= nil then wv.animation.hr_version.scale = change[2]/2 end
+		end
+	end
+	if data.raw[change[1]][_].picture and data.raw[change[1]][_].picture.layers then
+		for _, layers in pairs(data.raw[change[1]][_].picture.layers) do
+			layers.scale = change[2]
+			if layers.hr_version ~= nil then layers.hr_version.scale = change[2]/2 end
+		end
 	end
 end
-
-data.raw.container['steel-chest'].picture = {
-  layers =
-  {
-	{
-	  filename = "__base__/graphics/entity/steel-chest/steel-chest.png",
-	  priority = "extra-high",
-	  width = 32,
-	  height = 40,
-	  shift = util.by_pixel(0, -0.5),
-	  scale = 3,
-	  hr_version =
-	  {
-		filename = "__base__/graphics/entity/steel-chest/hr-steel-chest.png",
-		priority = "extra-high",
-		width = 64,
-		height = 80,
-		shift = util.by_pixel(-0.25, -0.5),
-		scale = 1.5
-	  }
-	}
-  }
-}
 
 local furnaces_to_change = {
 	"stone-furnace",

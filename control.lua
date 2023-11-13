@@ -23,13 +23,19 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
   function(event)
     local entity = event.created_entity
 	if(entity.name == "aoe-tree-farm") then 
-		handleBuilt( event, global.treefarms )
+		handleBuilt( event, "treefarms" )
 	end
 	if(entity.name == "aoe-forestry") then 
-		handleBuilt( event, global.forestries )
+		handleBuilt( event, "forestries" )
 	end
 	if(string.sub(entity.name,1,string.len("aoe-farm"))=="aoe-farm") then 
-		handleBuilt( event, global.farms )
+		handleBuilt( event, "farms" )
+	end
+	if(entity.name == "aoe-lightning-rod") then
+		if global.lightningtick == nil then global.lightningtick = {} end
+		entity.power_production = 0
+		entity.electric_buffer_size = 0
+		handleBuilt( event, "lightning_rods" )
 	end
 	if(entity.name == "aoe-metallurgy-beacon") then
 		handleMetalBeaconBuilt(event)
@@ -58,6 +64,33 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
   end
 )
 
+script.on_nth_tick(149,
+  function()
+	if global.lightning_rods then
+		for unit, lightning_rod in pairs(global.lightning_rods) do
+			if lightning_rod.valid and lightning_rod.name == "aoe-lightning-rod" then
+				if global.weather_stations == nil then global.weather_stations = {} end
+				if global.transmitting_stations == nil then global.transmitting_stations = {} end
+				local found_weather_stations = lightning_rod.surface.find_entities_filtered({name="aoe-weather-station", area={{lightning_rod.position.x-12, lightning_rod.position.y-10}, {lightning_rod.position.x+12, lightning_rod.position.y+14}}})
+				local found_transmitting_stations = lightning_rod.surface.find_entities_filtered({name="aoe-transmitting-station", area={{lightning_rod.position.x-12, lightning_rod.position.y-10}, {lightning_rod.position.x+12, lightning_rod.position.y+14}}})
+				global.weather_stations[unit] = #found_weather_stations
+				global.transmitting_stations[unit] = #found_transmitting_stations
+				local found = false
+				for tick, temprod in pairs(global.lightningtick) do
+					if temprod.unit_number == lightning_rod.unit_number then found = true end
+				end
+				if found == false then
+					global.lightningtick[game.tick+lightning_rod_tick_delay(unit)] = lightning_rod
+				end
+			else
+				global.lightning_rods[unit]=nil
+				global.weather_stations[unit]=nil
+				global.transmitting_stations[unit]=nil
+			end
+		end
+	end
+  end
+)
 script.on_nth_tick(99,
   function()
 	if global.wind_turbines then
@@ -123,11 +156,26 @@ script.on_event(defines.events.on_tick,
 	if global.teatick and global.teatick[game.tick] then
 		game.get_player(global.teatick[game.tick]).character_mining_speed_modifier = game.get_player(global.teatick[game.tick]).character_mining_speed_modifier-1
 		game.get_player(global.teatick[game.tick]).character_crafting_speed_modifier = game.get_player(global.teatick[game.tick]).character_crafting_speed_modifier-1
+		global.teatick[game.tick] = nil
 	end
 	if global.coffeetick and global.coffeetick[game.tick] then
 		game.get_player(global.coffeetick[game.tick]).character_running_speed_modifier = game.get_player(global.coffeetick[game.tick]).character_running_speed_modifier-1	
+		global.coffeetick[game.tick] = nil
 	end
-    if global.treefarms then
+	if global.lightningtick and global.lightningtick[game.tick] then
+		local rod = global.lightningtick[game.tick]
+		local power_output = rod.prototype.max_energy_production + rod.prototype.max_energy_production * global.weather_stations[rod.unit_number] * global.weather_stations[rod.unit_number] / 1280
+		rod.power_production = power_output
+		rod.electric_buffer_size = power_output
+	end
+	if global.lightningtick and global.lightningtick[game.tick-600] then
+		local rod = global.lightningtick[game.tick-600]
+		rod.power_production = 0
+		rod.electric_buffer_size = 0
+		global.lightningtick[game.tick-600+lightning_rod_tick_delay(rod.unit_number)] = rod
+		global.lightningtick[game.tick-600] = nil
+	end
+	if global.treefarms then
       for _,treefarm in pairs(global.treefarms) do
   		if treefarm.valid and treefarm.name == "aoe-tree-farm" then
 		  if treefarm.crafting_progress == 1 and treefarm.get_recipe().name == "aoe-tree-farm-tree-recipe" then
@@ -165,7 +213,7 @@ script.on_event(defines.events.on_tick,
 		elseif farm.valid and farm.name == "aoe-farm-barn" then
 			check_module_dying( farm, "aoe-farm-barn-lamb-recipe", 0.06 )
 			check_module_dying( farm, "aoe-farm-barn-calf-recipe", 0.08 )
-		else global.farms[_]=nil 
+		else global.farms[_]=nil
 		end
 	  end
     end
@@ -196,10 +244,14 @@ function check_module_dying( farm, recipename, chance )
 	end
 end
 
+function lightning_rod_tick_delay(unit)
+	return math.floor(36000-30000*global.transmitting_stations[unit]*global.transmitting_stations[unit]/19600)
+end
+
 function handleBuilt( event, building )
-	if not building then building={} end
+	if not global[building] then global[building]={} end
 	local entity = event.created_entity
-	building[entity.unit_number] = entity
+	global[building][entity.unit_number] = entity
 end
 
 function handleMetalBeaconBuilt(event)
@@ -211,7 +263,6 @@ function handleMetalBeaconBuilt(event)
 		  position = metalbeacon.position,
 		  force = metalbeacon.force
 	  }
-	print(metalbeaconbeacon)
 	global.metal_beacons[metalbeacon.unit_number] = metalbeacon
 	global.metal_beacon_beacons[metalbeacon.unit_number] = metalbeaconbeacon
 end
@@ -264,8 +315,8 @@ end
 function harvestTree(forestry)
   local area = 10
   local surface = forestry.surface
-  local x = math.random(forestry.position.x-area+1, forestry.position.x+area-1)+1.5
-  local y = math.random(forestry.position.y-area+1, forestry.position.y+area-1)+1.5
+  local x = math.random(forestry.position.x-area+1, forestry.position.x+area-1)
+  local y = math.random(forestry.position.y-area+1, forestry.position.y+area-1)
   local entity = nil
   local temp = surface.find_entities_filtered({position={x,y}, type="tree", radius=1.5})
   if temp ~= nil then entity = temp[1] end
@@ -277,8 +328,8 @@ end
 function tapTree(forestry, what, tree)
   local area = 10
   local surface = forestry.surface
-  local x = math.random(forestry.position.x-area+2, forestry.position.x+area-2)+1.5
-  local y = math.random(forestry.position.y-area+2, forestry.position.y+area-2)+1.5
+  local x = math.random(forestry.position.x-area+2, forestry.position.x+area-2)
+  local y = math.random(forestry.position.y-area+2, forestry.position.y+area-2)
   local entity = nil
   local temp = surface.find_entities_filtered({position={x,y}, [what]=tree, radius=2.5})
   if temp ~= nil then entity = temp[1] end

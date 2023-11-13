@@ -2517,7 +2517,7 @@ data:extend({{
 	icon_size = data.raw.item["aoe-rotor-carbon"].icon_size,
 	energy_required = 3000,
 	subgroup = 'aoe-power-buildings',
-	order = 'c2',
+	order = 'd2',
 	category = 'aoe-category-rotor'
 }})
 
@@ -3257,6 +3257,87 @@ data:extend({{
 	},
 	results = {
         {type = 'item', name = 'aoe-science-02', amount = 1}
+    },
+	energy_required = 4
+}})
+
+data:extend({{
+	name = 'aoe-crafting-advanced-chemical-plant-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-stainless-steel-machine-hull', amount = 8},
+		{type = 'item', name = 'aoe-bronze-plate', amount = 12},
+		{type = 'item', name = 'pipe', amount = 10},
+		{type = 'item', name = 'storage-tank', amount = 1}
+    },
+	results = {
+        {type = 'item', name = 'aoe-advanced-chemical-plant', amount = 1},
+    },
+	energy_required = 5,
+}})
+
+data:extend({{
+	name = 'aoe-chemistry-ethylene-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-ethanol', amount = 50},
+		{type = 'fluid', name = 'sulfuric-acid', amount = 50}
+	},
+	results = {
+        {type = 'fluid', name = 'aoe-ethylene', amount = 50},
+		{type = 'fluid', name = 'sulfuric-acid', amount = 25},
+		{type = 'fluid', name = 'water', amount = 25}
+    },
+	energy_required = 5,
+	main_product = 'aoe-ethylene',
+	category = 'chemistry'
+}})
+
+data:extend({{
+	name = 'aoe-chemistry-polyethylene-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-ethylene', amount = 100},
+		{type = 'fluid', name = 'aoe-oxygen', amount = 400},
+		{type = 'item', name = 'aoe-chromium-ore', amount = 1}
+	},
+	results = {
+        {type = 'fluid', name = 'aoe-polyethylene', amount = 100},
+		{type = 'fluid', name = 'aoe-warm-air', amount = 400},
+		{type = 'item', name = 'aoe-chromium-ore', amount = 1, probability = 0.9, catalyst_amount = 1}
+    },
+	energy_required = 10,
+	main_product = 'aoe-polyethylene',
+	category = 'aoe-category-advanced-chemistry'
+}})
+
+data:extend({{
+	name = 'aoe-freezing-plastic-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoe-polyethylene', amount = 20},
+	},
+	results = {
+        {type = 'item', name = 'plastic-bar', amount = 1}
+    },
+	energy_required = 1,
+	category = 'aoe-category-freezing'
+}})
+
+data:extend({{
+	name = 'aoe-crafting-science-05-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoe-flask', amount = 1},
+		{type = 'item', name = 'plastic-bar', amount = 5}
+	},
+	results = {
+        {type = 'item', name = 'aoe-science-05', amount = 1}
     },
 	energy_required = 4
 }})

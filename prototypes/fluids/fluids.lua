@@ -435,6 +435,29 @@ data:extend({{
 
 data:extend({{
     type = "fluid",
+    name = "aoe-ethylene",
+    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/ethylene.png", 72 }, "CHH" ),
+    subgroup = "aoe-petrochem-fluids",
+    order = "a",
+	base_color = {r=0.43, g=0.43, b=0.43},
+	flow_color = {r=0.43, g=0.43, b=0.43},
+	default_temperature = 20,
+	gas = true
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoe-polyethylene",
+    icons = angelsmods.functions.create_liquid_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/polyethylene_rotated.png", 72, { -10, 0 }, 32 / 72 }, "CHH" ),
+    subgroup = "aoe-petrochem-fluids",
+    order = "b",
+	base_color = {r=0.43, g=0.43, b=0.43},
+	flow_color = {r=0.43, g=0.43, b=0.43},
+	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
     name = "aoe-tailings",
     icons = angelsmods.functions.create_viscous_liquid_fluid_icon( nil, { { 60, 30, 0 }, { 60, 30, 0 } } ),
     subgroup = "aoe-fluids-slurry",

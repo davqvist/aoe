@@ -60,10 +60,10 @@ data.raw['item']['chemical-plant'].subgroup = "aoe-specific-buildings"
 data.raw['item']['chemical-plant'].order = "o"
 data.raw['assembling-machine']['chemical-plant'].energy_usage = "420kW"
 data.raw['item']['oil-refinery'].subgroup = "aoe-specific-buildings"
-data.raw['item']['oil-refinery'].order = "p"
+data.raw['item']['oil-refinery'].order = "q"
 data.raw['assembling-machine']['oil-refinery'].energy_usage = "750kW"
 data.raw['item']['centrifuge'].subgroup = "aoe-specific-buildings"
-data.raw['item']['centrifuge'].order = "q"
+data.raw['item']['centrifuge'].order = "r"
 data.raw['assembling-machine']['centrifuge'].energy_usage = "600kW"
 data.raw['assembling-machine']['centrifuge'].crafting_categories = {"centrifuging","centrifuging-copper","centrifuging-iron","centrifuging-tin","centrifuging-aluminium","centrifuging-lead","centrifuging-silver","centrifuging-nickel","centrifuging-gold","centrifuging-zinc","centrifuging-chromium","centrifuging-tungsten"}
 
@@ -192,13 +192,22 @@ data.raw['item']['po-transformer'].subgroup = "aoe-poles"
 data.raw['item']['po-transformer'].order = "k"
 	
 data.raw['item']['boiler'].subgroup = "aoe-power-buildings"
-data.raw['item']['boiler'].order = "a"
+data.raw['item']['boiler'].order = "b"
 data.raw['boiler']['boiler'].energy_consumption = "1.5MW"
 data.raw['item']['steam-engine'].subgroup = "aoe-power-buildings"
-data.raw['item']['steam-engine'].order = "b"
+data.raw['item']['steam-engine'].order = "c"
 data.raw['generator']['steam-engine'].max_power_output = "450kW"
 data.raw['generator']['steam-engine'].effectivity = 0.833333333	
 data.raw['generator']['steam-engine'].fluid_usage_per_tick = 0.2083333333
+
+data.raw['item']['solar-panel'].subgroup = "aoe-power-buildings"
+data.raw['item']['solar-panel'].order = "f"
+data.raw['solar-panel']['solar-panel'].production = "100kW"
+data.raw['item']['accumulator'].subgroup = "aoe-power-buildings"
+data.raw['item']['accumulator'].order = "a"
+data.raw['accumulator']['accumulator'].energy_source.buffer_capacity = "7MJ"
+data.raw['accumulator']['accumulator'].collision_box = {{-1.4, -1.4}, {1.4, 1.4}}
+data.raw['accumulator']['accumulator'].selection_box = {{-1.5, -1.5}, {1.5, 1.5}}
 
 data.raw['item']['small-lamp'].subgroup = "aoe-decoration"
 data.raw['item']['small-lamp'].order = "b"

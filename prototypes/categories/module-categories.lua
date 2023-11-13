@@ -29,6 +29,10 @@ data:extend({
   },
   {
     type = "module-category",
+    name = "aoe-module-drone"
+  },
+  {
+    type = "module-category",
     name = "aoe-module-fish"
   },
   {

@@ -67,5 +67,20 @@ data:extend({
     },
     tag = "[item=aoe-science-04]",
     --image = ""
+  },
+  {
+    type = "tips-and-tricks-item",
+    name = "aoe-tat-science-05",
+    category = "AOE",
+    order = "f",
+    indent = 1,
+    dependencies = { "aoe-tat-science-04" },
+    trigger =
+    {
+      type = "research",
+      technology = "aoe-petrochem-age-tech"
+    },
+    tag = "[item=aoe-science-05]",
+    --image = ""
   }
 })

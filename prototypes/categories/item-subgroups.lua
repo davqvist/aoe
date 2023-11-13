@@ -243,21 +243,27 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-parts",
+    name = "aoe-petrochem",
     group = "intermediate-products",
     order = "f"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-circuits",
+    name = "aoe-parts",
     group = "intermediate-products",
     order = "g"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-science-packs",
+    name = "aoe-circuits",
     group = "intermediate-products",
     order = "h"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-science-packs",
+    group = "intermediate-products",
+    order = "i"
   },
   {
 	  type = "item-subgroup",
@@ -399,15 +405,21 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-fluids-slurry",
+    name = "aoe-petrochem-fluids",
     group = "fluids",
     order = "h"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-fluids-molten",
+    name = "aoe-fluids-slurry",
     group = "fluids",
     order = "i"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoe-fluids-molten",
+    group = "fluids",
+    order = "j"
   },
   {
 	  type = "item-subgroup",

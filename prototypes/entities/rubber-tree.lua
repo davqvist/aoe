@@ -12,7 +12,7 @@ data:extend({{
 }})
 
 data:extend({{
-    type = "simple-entity",
+    type = "simple-entity-with-owner",
     name = "aoe-rubber-tree",
 	icon = "__aoe__/img/entities/rubber-tree.png",
     icon_size = 256,
