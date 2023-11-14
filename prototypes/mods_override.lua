@@ -1,4 +1,4 @@
-local AOE = require("__ageofcreation__/globals")
+local AOC =  require("__ageofcreation__/globals")
 
 -- ANGELS
 
@@ -61,7 +61,7 @@ if mods["aai-loaders"] then
         },
         unit = {
             count = 40,
-            ingredients = AOE["age_tech_table"][4],
+            ingredients = AOC["age_tech_table"][4],
             time = 35
         }
     }})

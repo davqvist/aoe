@@ -1,13 +1,13 @@
 data:extend({
   {
     type = "tips-and-tricks-item-category",
-    name = "AOE",
-    order = "l-[AOE]",
+    name = "AOC",
+    order = "l-[AOC]",
   },
   {
     type = "tips-and-tricks-item",
-    name = "aoc-tat-aoe",
-    category = "AOE",
+    name = "aoc-tat-aoc",
+    category = "AOC",
     order = "a",
     starting_status = "unlocked",
     is_title = true
@@ -15,10 +15,10 @@ data:extend({
   {
     type = "tips-and-tricks-item",
     name = "aoc-tat-science-01",
-    category = "AOE",
+    category = "AOC",
     order = "b",
     indent = 1,
-    dependencies = { "aoc-tat-aoe" },
+    dependencies = { "aoc-tat-aoc" },
     trigger = { type = "dependencies-met" },
     tag = "[item=aoc-science-01]",
     --image = ""
@@ -26,7 +26,7 @@ data:extend({
   {
     type = "tips-and-tricks-item",
     name = "aoc-tat-science-02",
-    category = "AOE",
+    category = "AOC",
     order = "c",
     indent = 1,
     dependencies = { "aoc-tat-science-01" },
@@ -41,7 +41,7 @@ data:extend({
   {
     type = "tips-and-tricks-item",
     name = "aoc-tat-science-03",
-    category = "AOE",
+    category = "AOC",
     order = "d",
     indent = 1,
     dependencies = { "aoc-tat-science-02" },
@@ -56,7 +56,7 @@ data:extend({
   {
     type = "tips-and-tricks-item",
     name = "aoc-tat-science-04",
-    category = "AOE",
+    category = "AOC",
     order = "e",
     indent = 1,
     dependencies = { "aoc-tat-science-03" },
@@ -71,7 +71,7 @@ data:extend({
   {
     type = "tips-and-tricks-item",
     name = "aoc-tat-science-05",
-    category = "AOE",
+    category = "AOC",
     order = "f",
     indent = 1,
     dependencies = { "aoc-tat-science-04" },

@@ -1,4 +1,4 @@
-local AOE = require("__ageofcreation__/globals")
+local AOC =  require("__ageofcreation__/globals")
 
 for _, recipe in pairs(data.raw.recipe) do
     if recipe.category == 'aoc-category-intricate-crafting' then

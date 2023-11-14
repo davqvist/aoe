@@ -1,4 +1,4 @@
-local AOE = require("__ageofcreation__/globals")
+local AOC =  require("__ageofcreation__/globals")
 
 local parts = {
     "aoc-stainless-steel-machine-hull",

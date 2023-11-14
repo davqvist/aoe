@@ -1,4 +1,4 @@
-local AOE = require("__ageofcreation__/globals")
+local AOC =  require("__ageofcreation__/globals")
 
 data:extend({{
 	name = 'aoc-straining-igneous-2-recipe',

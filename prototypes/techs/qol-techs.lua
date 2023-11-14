@@ -1,4 +1,4 @@
-local AOE = require("__ageofcreation__/globals")
+local AOC =  require("__ageofcreation__/globals")
 
 local qol = {
     { "improved-axe", {{ icon = "__base__/graphics/technology/steel-axe.png", icon_size = 256, icon_mipmaps = 4 }}, { { type = "character-mining-speed", modifier = 0.2 } } },
@@ -23,7 +23,7 @@ for age=2,4 do
             effects = tech[3],
             unit = {
                 count = 20,
-                ingredients = AOE["age_tech_table"][age],
+                ingredients = AOC["age_tech_table"][age],
                 time = 30
             }
         }})

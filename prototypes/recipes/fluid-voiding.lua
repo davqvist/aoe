@@ -1,4 +1,4 @@
-local AOE = require("__ageofcreation__/globals")
+local AOC =  require("__ageofcreation__/globals")
 local fluid_void_blacklist = { ["aoc-tailings"] = true }
 
 for _, fluid in pairs(data.raw.fluid) do

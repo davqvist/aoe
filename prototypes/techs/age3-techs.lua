@@ -1,4 +1,4 @@
-local AOE = require("__ageofcreation__/globals")
+local AOC =  require("__ageofcreation__/globals")
 
 data:extend({{
     type = "technology",
@@ -42,7 +42,7 @@ data:extend({{
     },
     unit = {
         count = 20,
-        ingredients = AOE["age_tech_table"][3],
+        ingredients = AOC["age_tech_table"][3],
         time = 30
     }
 }})
@@ -81,7 +81,7 @@ data:extend({{
     },
     unit = {
         count = 20,
-        ingredients = AOE["age_tech_table"][3],
+        ingredients = AOC["age_tech_table"][3],
         time = 30
     }
 }})
@@ -128,7 +128,7 @@ data:extend({{
     },
     unit = {
         count = 25,
-        ingredients = AOE["age_tech_table"][3],
+        ingredients = AOC["age_tech_table"][3],
         time = 30
     }
 }})
@@ -175,7 +175,7 @@ data:extend({{
     },
     unit = {
         count = 30,
-        ingredients = AOE["age_tech_table"][3],
+        ingredients = AOC["age_tech_table"][3],
         time = 30
     }
 }})
@@ -234,7 +234,7 @@ data:extend({{
     },
     unit = {
         count = 30,
-        ingredients = AOE["age_tech_table"][3],
+        ingredients = AOC["age_tech_table"][3],
         time = 30
     }
 }})
@@ -265,7 +265,7 @@ data:extend({{
     },
     unit = {
         count = 25,
-        ingredients = AOE["age_tech_table"][3],
+        ingredients = AOC["age_tech_table"][3],
         time = 30
     }
 }})
@@ -296,7 +296,7 @@ data:extend({{
     },
     unit = {
         count = 20,
-        ingredients = AOE["age_tech_table"][3],
+        ingredients = AOC["age_tech_table"][3],
         time = 30
     }
 }})
@@ -335,7 +335,7 @@ data:extend({{
     },
     unit = {
         count = 30,
-        ingredients = AOE["age_tech_table"][3],
+        ingredients = AOC["age_tech_table"][3],
         time = 30
     }
 }})
@@ -378,7 +378,7 @@ data:extend({{
     },
     unit = {
         count = 40,
-        ingredients = AOE["age_tech_table"][3],
+        ingredients = AOC["age_tech_table"][3],
         time = 30
     }
 }})
@@ -425,7 +425,7 @@ data:extend({{
     },
     unit = {
         count = 45,
-        ingredients = AOE["age_tech_table"][3],
+        ingredients = AOC["age_tech_table"][3],
         time = 30
     }
 }})
@@ -448,7 +448,7 @@ data:extend({{
     },
     unit = {
         count = 30,
-        ingredients = AOE["age_tech_table"][3],
+        ingredients = AOC["age_tech_table"][3],
         time = 30
     }
 }})
@@ -467,7 +467,7 @@ data:extend({{
     },
     unit = {
         count = 35,
-        ingredients = AOE["age_tech_table"][3],
+        ingredients = AOC["age_tech_table"][3],
         time = 30
     }
 }})
@@ -494,7 +494,7 @@ data:extend({{
     },
     unit = {
         count = 40,
-        ingredients = AOE["age_tech_table"][3],
+        ingredients = AOC["age_tech_table"][3],
         time = 30
     }
 }})
@@ -521,7 +521,7 @@ data:extend({{
     },
     unit = {
         count = 50,
-        ingredients = AOE["age_tech_table"][3],
+        ingredients = AOC["age_tech_table"][3],
         time = 30
     }
 }})
@@ -548,7 +548,7 @@ data:extend({{
     },
     unit = {
         count = 40,
-        ingredients = AOE["age_tech_table"][3],
+        ingredients = AOC["age_tech_table"][3],
         time = 30
     }
 }})
@@ -579,7 +579,7 @@ data:extend({{
   },
   unit = {
       count = 40,
-      ingredients = AOE["age_tech_table"][3],
+      ingredients = AOC["age_tech_table"][3],
       time = 30
   }
 }})
@@ -598,7 +598,7 @@ data:extend({{
     },
     unit = {
         count = 50,
-        ingredients = AOE["age_tech_table"][3],
+        ingredients = AOC["age_tech_table"][3],
         time = 30
     }
 }})
@@ -629,7 +629,7 @@ data:extend({{
     },
     unit = {
         count = 50,
-        ingredients = AOE["age_tech_table"][3],
+        ingredients = AOC["age_tech_table"][3],
         time = 30
     }
 }})
@@ -652,7 +652,7 @@ data:extend({{
     },
     unit = {
         count = 50,
-        ingredients = AOE["age_tech_table"][3],
+        ingredients = AOC["age_tech_table"][3],
         time = 30
     }
 }})
@@ -683,7 +683,7 @@ data:extend({{
     },
     unit = {
         count = 60,
-        ingredients = AOE["age_tech_table"][3],
+        ingredients = AOC["age_tech_table"][3],
         time = 30
     }
 }})
@@ -714,7 +714,7 @@ data:extend({{
     },
     unit = {
         count = 70,
-        ingredients = AOE["age_tech_table"][3],
+        ingredients = AOC["age_tech_table"][3],
         time = 30
     }
 }})
@@ -737,7 +737,7 @@ data:extend({{
     },
     unit = {
         count = 70,
-        ingredients = AOE["age_tech_table"][3],
+        ingredients = AOC["age_tech_table"][3],
         time = 30
     }
 }})
@@ -764,7 +764,7 @@ data:extend({{
     },
     unit = {
         count = 70,
-        ingredients = AOE["age_tech_table"][3],
+        ingredients = AOC["age_tech_table"][3],
         time = 30
     }
 }})
@@ -783,7 +783,7 @@ data:extend({{
     },
     unit = {
         count = 75,
-        ingredients = AOE["age_tech_table"][3],
+        ingredients = AOC["age_tech_table"][3],
         time = 30
     }
 }})

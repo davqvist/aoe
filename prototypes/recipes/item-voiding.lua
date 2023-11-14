@@ -1,4 +1,4 @@
-local AOE = require("__ageofcreation__/globals")
+local AOC =  require("__ageofcreation__/globals")
 local item_void_blacklist = { ["aoc-slag"] = true, ["aoc-tailings-dust"] = true }
 
 local groups = {
