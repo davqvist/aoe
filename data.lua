@@ -1,20 +1,20 @@
 require("__base__/prototypes/entity/pipecovers")
 require("__base__/prototypes/entity/assemblerpipes")
 
-require("__aoe__/globals")
-require("__aoe__/prototypes/changes")
-require("__aoe__/prototypes/tips-and-tricks")
+require("__ageofcreation__/globals")
+require("__ageofcreation__/prototypes/changes")
+require("__ageofcreation__/prototypes/tips-and-tricks")
 
-require("__aoe__/prototypes/categories/item-subgroups")
-require("__aoe__/prototypes/categories/ammo-categories")
-require("__aoe__/prototypes/categories/module-categories")
-require("__aoe__/prototypes/categories/recipe-categories")
-require("__aoe__/prototypes/items/items")
-require("__aoe__/prototypes/fluids/fluids")
-require("__aoe__/prototypes/entities/_entities")
-require("__aoe__/prototypes/recipes/recipes")
-require("__aoe__/prototypes/techs/techs")
-require("__aoe__/prototypes/bees")
+require("__ageofcreation__/prototypes/categories/item-subgroups")
+require("__ageofcreation__/prototypes/categories/ammo-categories")
+require("__ageofcreation__/prototypes/categories/module-categories")
+require("__ageofcreation__/prototypes/categories/recipe-categories")
+require("__ageofcreation__/prototypes/items/items")
+require("__ageofcreation__/prototypes/fluids/fluids")
+require("__ageofcreation__/prototypes/entities/_entities")
+require("__ageofcreation__/prototypes/recipes/recipes")
+require("__ageofcreation__/prototypes/techs/techs")
+require("__ageofcreation__/prototypes/bees")
 
 angelsmods.refining.disable_ore_override = true
 function angelsmods.functions.move_item(i_name, i_subgroup, i_order, i_type) end

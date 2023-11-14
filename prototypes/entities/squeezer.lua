@@ -1,6 +1,6 @@
 data:extend({{
     type = "item",
-    name = "aoe-burner-squeezer",
+    name = "aoc-burner-squeezer",
     icons = {
       {
         icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
@@ -8,22 +8,22 @@ data:extend({{
         icon_mipmaps = 4
       },
       {
-        icon = "__aoe__/img/items/other/fire.png",
+        icon = "__ageofcreation__/img/items/other/fire.png",
         icon_size = 64,
         scale = 0.25,
         shift = {-12,8}
       }
     },
-    subgroup = "aoe-specific-buildings",
+    subgroup = "aoc-specific-buildings",
     order = "a",
-    place_result = "aoe-burner-squeezer",
+    place_result = "aoc-burner-squeezer",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "assembling-machine",
-  name = "aoe-burner-squeezer",
-	crafting_categories = {"aoe-category-squeezing"},
+  name = "aoc-burner-squeezer",
+	crafting_categories = {"aoc-category-squeezing"},
 	crafting_speed = 0.5,
 	energy_source = {
       type = "burner",
@@ -50,14 +50,14 @@ data:extend({{
       icon_mipmaps = 4
     },
     {
-      icon = "__aoe__/img/items/other/fire.png",
+      icon = "__ageofcreation__/img/items/other/fire.png",
       icon_size = 64,
       scale = 0.25,
       shift = {-12,8}
     }
   },
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoe-burner-squeezer" },
+	minable = { hardness = 1, mining_time = 0.2, result = "aoc-burner-squeezer" },
   fast_replaceable_group = "squeezer",
 	max_health = 300,
 	selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
@@ -122,20 +122,20 @@ data:extend({{
 
 data:extend({{
     type = "item",
-    name = "aoe-squeezer",
+    name = "aoc-squeezer",
     icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    subgroup = "aoe-specific-buildings",
+    subgroup = "aoc-specific-buildings",
     order = "b",
-    place_result = "aoe-squeezer",
+    place_result = "aoc-squeezer",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "assembling-machine",
-  name = "aoe-squeezer",
-	crafting_categories = {"aoe-category-squeezing"},
+  name = "aoc-squeezer",
+	crafting_categories = {"aoc-category-squeezing"},
 	crafting_speed = 1,
 	energy_source = {
       type = "electric",
@@ -152,7 +152,7 @@ data:extend({{
   icon_size = 64,
   icon_mipmaps = 4,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoe-squeezer" },
+	minable = { hardness = 1, mining_time = 0.2, result = "aoc-squeezer" },
   fast_replaceable_group = "squeezer",
 	max_health = 300,
 	selection_box = {{-2.5, -2.5}, {2.5, 2.5}},

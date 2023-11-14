@@ -3,22 +3,22 @@ local sounds = require("__base__/prototypes/entity/sounds")
 
 data:extend({{
     type = "item",
-    name = "aoe-kiln",
-    icon = "__aoe__/img/entities/kiln.png",
+    name = "aoc-kiln",
+    icon = "__ageofcreation__/img/entities/kiln.png",
     icon_size = 192,
-    subgroup = "aoe-processing-buildings",
+    subgroup = "aoc-processing-buildings",
     order = "c",
-    place_result = "aoe-kiln",
+    place_result = "aoc-kiln",
     stack_size = 25,
 }})
 
 data:extend({{
     type = "assembling-machine",
-    name = "aoe-kiln",
-    icon = "__aoe__/img/entities/kiln.png",
+    name = "aoc-kiln",
+    icon = "__ageofcreation__/img/entities/kiln.png",
 	  icon_size = 192,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
-    minable = {mining_time = 0.2, result = "aoe-kiln"},
+    minable = {mining_time = 0.2, result = "aoc-kiln"},
     max_health = 300,
     dying_explosion = "stone-furnace-explosion",
     repair_sound = sounds.manual_repair,
@@ -54,7 +54,7 @@ data:extend({{
     },
     collision_box = {{-1.5, -1.5}, {1.5, 1.5}},
     selection_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    crafting_categories = {"aoe-category-kiln-smelting","aoe-category-kiln-smelting-iron","aoe-category-kiln-smelting-copper","aoe-category-kiln-smelting-tin","aoe-category-kiln-smelting-aluminium","aoe-category-kiln-smelting-lead","aoe-category-kiln-smelting-silver","aoe-category-kiln-smelting-nickel","aoe-category-kiln-smelting-gold","aoe-category-kiln-smelting-zinc","aoe-category-kiln-smelting-chromium","aoe-category-kiln-smelting-tungsten"},
+    crafting_categories = {"aoc-category-kiln-smelting","aoc-category-kiln-smelting-iron","aoc-category-kiln-smelting-copper","aoc-category-kiln-smelting-tin","aoc-category-kiln-smelting-aluminium","aoc-category-kiln-smelting-lead","aoc-category-kiln-smelting-silver","aoc-category-kiln-smelting-nickel","aoc-category-kiln-smelting-gold","aoc-category-kiln-smelting-zinc","aoc-category-kiln-smelting-chromium","aoc-category-kiln-smelting-tungsten"},
     energy_usage = "125kW",
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
 	  crafting_speed = 1,
@@ -85,7 +85,7 @@ data:extend({{
     animation = {
       layers = {
         {
-          filename = "__aoe__/img/entities/kiln.png",
+          filename = "__ageofcreation__/img/entities/kiln.png",
           width = 192,
           height = 192,
           frame_count = 1,

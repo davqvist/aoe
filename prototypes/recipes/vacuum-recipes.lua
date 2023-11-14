@@ -1,13 +1,13 @@
-local AOE = require("__aoe__/globals")
+local AOE = require("__ageofcreation__/globals")
 
 for _, recipe in pairs(data.raw.recipe) do
-    if recipe.category == 'aoe-category-intricate-crafting' then
+    if recipe.category == 'aoc-category-intricate-crafting' then
         local new_results = {}
         local icons = {}
         local main_product = ''
         for _, result in pairs(recipe.results) do
             if _ == 1 then 
-                icons = combine_icons_tiny( get_icons( data.raw[result.type][result.name] ), data.raw['fluid']['aoe-vacuum'].icons )
+                icons = combine_icons_tiny( get_icons( data.raw[result.type][result.name] ), data.raw['fluid']['aoc-vacuum'].icons )
                 main_product = result.name
             end
             if not result.catalyst_amount then
@@ -19,7 +19,7 @@ for _, recipe in pairs(data.raw.recipe) do
             end
         end
         local new_ingredients = table.deepcopy(recipe.ingredients)
-        table.insert(new_ingredients, {type = 'fluid', name = 'aoe-vacuum', amount = recipe.energy_required*10})
+        table.insert(new_ingredients, {type = 'fluid', name = 'aoc-vacuum', amount = recipe.energy_required*10})
         data:extend({{
             name = recipe.name .. '-with-vacuum',
             type = 'recipe',
@@ -29,7 +29,7 @@ for _, recipe in pairs(data.raw.recipe) do
             energy_required = recipe.energy_required,
             icons = icons,
             main_product = main_product,
-            category = 'aoe-category-vacuum-crafting'
+            category = 'aoc-category-vacuum-crafting'
         }})
     end
 end

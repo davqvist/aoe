@@ -1,22 +1,22 @@
 data:extend({{
     type = "item",
-    name = "aoe-mixer",
+    name = "aoc-mixer",
     icons = {{
       icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
       icon_size = 64,
       icon_mipmaps = 4,
       scale = 0.5,
     }},
-    subgroup = "aoe-specific-buildings",
+    subgroup = "aoc-specific-buildings",
     order = "h",
-    place_result = "aoe-mixer",
+    place_result = "aoc-mixer",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "assembling-machine",
-  name = "aoe-mixer",
-	crafting_categories = {"aoe-category-mixing","aoe-category-mixing-iron","aoe-category-mixing-copper","aoe-category-mixing-tin","aoe-category-mixing-aluminium","aoe-category-mixing-lead","aoe-category-mixing-silver","aoe-category-mixing-nickel","aoe-category-mixing-gold","aoe-category-mixing-zinc","aoe-category-mixing-chromium","aoe-category-mixing-tungsten"},
+  name = "aoc-mixer",
+	crafting_categories = {"aoc-category-mixing","aoc-category-mixing-iron","aoc-category-mixing-copper","aoc-category-mixing-tin","aoc-category-mixing-aluminium","aoc-category-mixing-lead","aoc-category-mixing-silver","aoc-category-mixing-nickel","aoc-category-mixing-gold","aoc-category-mixing-zinc","aoc-category-mixing-chromium","aoc-category-mixing-tungsten"},
 	crafting_speed = 1,
 	energy_source = {
     type = "electric",
@@ -36,7 +36,7 @@ data:extend({{
     scale = 0.5,
   }},
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoe-mixer" },
+	minable = { hardness = 1, mining_time = 0.2, result = "aoc-mixer" },
 	max_health = 300,
 	selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
 	collision_box = {{-1.9, -1.9}, {1.9, 1.9}},

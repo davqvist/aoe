@@ -3,29 +3,29 @@ require ("__base__/prototypes/entity/assemblerpipes")
 
 data:extend({{
     type = "item",
-    name = "aoe-burner-ground-bore",
+    name = "aoc-burner-ground-bore",
     icons = {
       {
         icon = "__angelsrefining__/graphics/icons/liquifier.png",
         icon_size = 32
       },
       {
-        icon = "__aoe__/img/items/other/fire.png",
+        icon = "__ageofcreation__/img/items/other/fire.png",
         icon_size = 64,
         scale = 0.25,
         shift = {-12,8}
       }
     },
-    subgroup = "aoe-specific-buildings",
+    subgroup = "aoc-specific-buildings",
     order = "c",
-    place_result = "aoe-burner-ground-bore",
+    place_result = "aoc-burner-ground-bore",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "assembling-machine",
-  name = "aoe-burner-ground-bore",
-	crafting_categories = {"aoe-category-digging"},
+  name = "aoc-burner-ground-bore",
+	crafting_categories = {"aoc-category-digging"},
 	crafting_speed = 0.5,
 	energy_source = {
     type = "burner",
@@ -50,14 +50,14 @@ data:extend({{
       icon_size = 32
     },
     {
-      icon = "__aoe__/img/items/other/fire.png",
+      icon = "__ageofcreation__/img/items/other/fire.png",
       icon_size = 64,
       scale = 0.25,
       shift = {-12,8}
     }
   },
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoe-burner-ground-bore" },
+	minable = { hardness = 1, mining_time = 0.2, result = "aoc-burner-ground-bore" },
   fast_replaceable_group = "ground-bore",
 	max_health = 300,
 	selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
@@ -101,20 +101,20 @@ data:extend({{
 
 data:extend({{
     type = "item",
-    name = "aoe-ground-bore",
+    name = "aoc-ground-bore",
     icon = "__angelsrefining__/graphics/icons/liquifier.png",
     icon_size = 32,
     icon_mipmaps = 1,
-    subgroup = "aoe-specific-buildings",
+    subgroup = "aoc-specific-buildings",
     order = "d",
-    place_result = "aoe-ground-bore",
+    place_result = "aoc-ground-bore",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "assembling-machine",
-  name = "aoe-ground-bore",
-	crafting_categories = {"aoe-category-digging"},
+  name = "aoc-ground-bore",
+	crafting_categories = {"aoc-category-digging"},
 	crafting_speed = 1,
 	energy_source = {
     type = "electric",
@@ -131,7 +131,7 @@ data:extend({{
   icon_size = 32,
   icon_mipmaps = 1,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoe-ground-bore" },
+	minable = { hardness = 1, mining_time = 0.2, result = "aoc-ground-bore" },
   fast_replaceable_group = "ground-bore",
 	max_health = 300,
 	selection_box = {{-2.5, -2.5}, {2.5, 2.5}},

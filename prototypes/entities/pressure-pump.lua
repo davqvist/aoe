@@ -1,19 +1,19 @@
 data:extend({{
     type = "item",
-    name = "aoe-pressure-pump",
+    name = "aoc-pressure-pump",
     icon = "__angelspetrochem__/graphics/icons/air-filter.png",
     icon_size = 32,
     icon_mipmaps = 1,
-    subgroup = "aoe-specific-buildings",
+    subgroup = "aoc-specific-buildings",
     order = "n",
-    place_result = "aoe-pressure-pump",
+    place_result = "aoc-pressure-pump",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "assembling-machine",
-  name = "aoe-pressure-pump",
-	crafting_categories = {"aoe-category-pumping"},
+  name = "aoc-pressure-pump",
+	crafting_categories = {"aoc-category-pumping"},
 	crafting_speed = 1,
 	energy_source = {
     type = "electric",
@@ -30,7 +30,7 @@ data:extend({{
   icon_size = 32,
   icon_mipmaps = 1,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoe-pressure-pump" },
+	minable = { hardness = 1, mining_time = 0.2, result = "aoc-pressure-pump" },
 	max_health = 300,
 	selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	collision_box = {{-1.4, -1.4}, {1.4, 1.4}},

@@ -1,20 +1,20 @@
 data:extend({{
     type = "item",
-    name = "aoe-casting-unit",
+    name = "aoc-casting-unit",
     icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
     icon_size = 64,
     icon_mipmaps = 4,
     scale = 0.5,
-    subgroup = "aoe-processing-buildings",
+    subgroup = "aoc-processing-buildings",
     order = "n",
-    place_result = "aoe-casting-unit",
+    place_result = "aoc-casting-unit",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "assembling-machine",
-  name = "aoe-casting-unit",
-	crafting_categories = {"aoe-category-casting","aoe-category-casting-iron","aoe-category-casting-copper","aoe-category-casting-tin","aoe-category-casting-aluminium","aoe-category-casting-lead","aoe-category-casting-silver","aoe-category-casting-nickel","aoe-category-casting-gold","aoe-category-casting-zinc","aoe-category-casting-chromium","aoe-category-casting-tungsten"},
+  name = "aoc-casting-unit",
+	crafting_categories = {"aoc-category-casting","aoc-category-casting-iron","aoc-category-casting-copper","aoc-category-casting-tin","aoc-category-casting-aluminium","aoc-category-casting-lead","aoc-category-casting-silver","aoc-category-casting-nickel","aoc-category-casting-gold","aoc-category-casting-zinc","aoc-category-casting-chromium","aoc-category-casting-tungsten"},
 	crafting_speed = 1,
 	energy_source = {
     type = "electric",
@@ -32,7 +32,7 @@ data:extend({{
   icon_mipmaps = 4,
   scale = 0.5,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoe-casting-unit" },
+	minable = { hardness = 1, mining_time = 0.2, result = "aoc-casting-unit" },
 	max_health = 300,
 	selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
 	collision_box = {{-2.4, -2.4}, {2.4, 2.4}},

@@ -1,22 +1,22 @@
 data:extend({{
     type = "item",
-    name = "aoe-melter",
+    name = "aoc-melter",
     icons = {{
       icon = "__angelssmelting__/graphics/icons/casting-machine.png",
       icon_size = 64,
       icon_mipmaps = 4,
       scale = 0.5,
     }},
-    subgroup = "aoe-specific-buildings",
+    subgroup = "aoc-specific-buildings",
     order = "i",
-    place_result = "aoe-melter",
+    place_result = "aoc-melter",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "assembling-machine",
-  name = "aoe-melter",
-	crafting_categories = {"aoe-category-melting"},
+  name = "aoc-melter",
+	crafting_categories = {"aoc-category-melting"},
 	crafting_speed = 1,
 	energy_source = {
     type = "electric",
@@ -36,7 +36,7 @@ data:extend({{
     scale = 0.5,
   }},
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoe-melter" },
+	minable = { hardness = 1, mining_time = 0.2, result = "aoc-melter" },
 	max_health = 300,
 	selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	collision_box = {{-1.4, -1.4}, {1.4, 1.4}},

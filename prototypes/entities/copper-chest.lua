@@ -4,22 +4,22 @@ local sounds = require("__base__/prototypes/entity/sounds")
 
 data:extend({{
     type = "item",
-    name = "aoe-copper-chest",
-    icon = "__aoe__/img/entities/copper-chest.png",
+    name = "aoc-copper-chest",
+    icon = "__ageofcreation__/img/entities/copper-chest.png",
     icon_size = 192,
-    subgroup = "aoe-storage",
+    subgroup = "aoc-storage",
     order = "e",
-    place_result = "aoe-copper-chest",
+    place_result = "aoc-copper-chest",
     stack_size = 50,
 }})
 
 data:extend({{
     type = "container",
-    name = "aoe-copper-chest",
-	icon = "__aoe__/img/entities/copper-chest.png",
+    name = "aoc-copper-chest",
+	icon = "__ageofcreation__/img/entities/copper-chest.png",
     icon_size = 192,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.1, result = "aoe-copper-chest"},
+    minable = {mining_time = 0.1, result = "aoc-copper-chest"},
     max_health = 100,
     collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
     fast_replaceable_group = "medium-container",
@@ -33,7 +33,7 @@ data:extend({{
       layers =
       {
         {
-          filename = "__aoe__/img/entities/copper-chest.png",
+          filename = "__ageofcreation__/img/entities/copper-chest.png",
           width = 192,
           height = 192,
 		  scale = 0.33333

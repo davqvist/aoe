@@ -1,593 +1,593 @@
-local AOE = require("__aoe__/globals")
+local AOE = require("__ageofcreation__/globals")
 
 data:extend({{
-	name = 'aoe-straining-igneous-2-recipe',
+	name = 'aoc-straining-igneous-2-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-stones-igneous', amount = 3},
-		{type = 'item', name = 'aoe-fiber-mesh', amount = 1}
+		{type = 'item', name = 'aoc-stones-igneous', amount = 3},
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-basalt', amount = 1},
-		{type = 'item', name = 'aoe-gabbro', amount = 1},
-		{type = 'item', name = 'aoe-granite', amount = 1},
-		{type = 'item', name = 'aoe-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.98}
+		{type = 'item', name = 'aoc-basalt', amount = 1},
+		{type = 'item', name = 'aoc-gabbro', amount = 1},
+		{type = 'item', name = 'aoc-granite', amount = 1},
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.98}
     },
-	icon = data.raw.item["aoe-stones-igneous"].icon,
-	icon_size = data.raw.item["aoe-stones-igneous"].icon_size,
-	subgroup = 'aoe-stone',
+	icon = data.raw.item["aoc-stones-igneous"].icon,
+	icon_size = data.raw.item["aoc-stones-igneous"].icon_size,
+	subgroup = 'aoc-stone',
 	order = "d1",
 	energy_required = 2,
-	category = 'aoe-category-straining'
+	category = 'aoc-category-straining'
 }})
 
 data:extend({{
-	name = 'aoe-straining-basalt-recipe',
+	name = 'aoc-straining-basalt-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-basalt', amount = 15},
-		{type = 'item', name = 'aoe-fiber-mesh', amount = 1}
+		{type = 'item', name = 'aoc-basalt', amount = 15},
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-tin-ore', amount = 4},
-		{type = 'item', name = 'aoe-tungsten-ore', amount = 3},
-		{type = 'item', name = 'aoe-quartz-ore', amount = 2},
-		{type = 'item', name = 'aoe-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.85}
+		{type = 'item', name = 'aoc-tin-ore', amount = 4},
+		{type = 'item', name = 'aoc-tungsten-ore', amount = 3},
+		{type = 'item', name = 'aoc-quartz-ore', amount = 2},
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.85}
     },
-	main_product = 'aoe-tin-ore',
+	main_product = 'aoc-tin-ore',
 	energy_required = 8,
-	category = 'aoe-category-straining'
+	category = 'aoc-category-straining'
 }})
 
 data:extend({{
-	name = 'aoe-straining-gabbro-recipe',
+	name = 'aoc-straining-gabbro-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-gabbro', amount = 15},
-		{type = 'item', name = 'aoe-fiber-mesh', amount = 1}
+		{type = 'item', name = 'aoc-gabbro', amount = 15},
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-manganese-ore', amount = 4},
-		{type = 'item', name = 'aoe-gold-ore', amount = 3},
-		{type = 'item', name = 'aoe-diamond', amount = 2},
-		{type = 'item', name = 'aoe-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.85}
+		{type = 'item', name = 'aoc-manganese-ore', amount = 4},
+		{type = 'item', name = 'aoc-gold-ore', amount = 3},
+		{type = 'item', name = 'aoc-diamond', amount = 2},
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.85}
     },
-	main_product = 'aoe-manganese-ore',
+	main_product = 'aoc-manganese-ore',
 	energy_required = 8,
-	category = 'aoe-category-straining'
+	category = 'aoc-category-straining'
 }})
 
 data:extend({{
-	name = 'aoe-straining-granite-recipe',
+	name = 'aoc-straining-granite-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-granite', amount = 15},
-		{type = 'item', name = 'aoe-fiber-mesh', amount = 1}
+		{type = 'item', name = 'aoc-granite', amount = 15},
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-quartz-ore', amount = 4},
-		{type = 'item', name = 'aoe-tin-ore', amount = 3},
+		{type = 'item', name = 'aoc-quartz-ore', amount = 4},
+		{type = 'item', name = 'aoc-tin-ore', amount = 3},
 		{type = 'item', name = 'uranium-ore', amount = 2},
-		{type = 'item', name = 'aoe-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.85}
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.85}
     },
-	main_product = 'aoe-quartz-ore',
+	main_product = 'aoc-quartz-ore',
 	energy_required = 8,
-	category = 'aoe-category-straining'
+	category = 'aoc-category-straining'
 }})
 
 data:extend({{
-	name = 'aoe-sedimenting-basalt-recipe',
+	name = 'aoc-sedimenting-basalt-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-basalt', amount = 6}
+		{type = 'item', name = 'aoc-basalt', amount = 6}
 	},
 	results = {
-		{type = 'item', name = 'aoe-stones-sedimentary', amount = 6}
+		{type = 'item', name = 'aoc-stones-sedimentary', amount = 6}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-stones-sedimentary"] ), get_icons( data.raw.item["aoe-basalt"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-sedimentary"] ), get_icons( data.raw.item["aoc-basalt"] ) ),
 	energy_required = 2,
-	category = 'aoe-category-sedimenting'
+	category = 'aoc-category-sedimenting'
 }})
 
 data:extend({{
-	name = 'aoe-sedimenting-gabbro-recipe',
+	name = 'aoc-sedimenting-gabbro-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-gabbro', amount = 6}
+		{type = 'item', name = 'aoc-gabbro', amount = 6}
 	},
 	results = {
-		{type = 'item', name = 'aoe-stones-sedimentary', amount = 6}
+		{type = 'item', name = 'aoc-stones-sedimentary', amount = 6}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-stones-sedimentary"] ), get_icons( data.raw.item["aoe-gabbro"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-sedimentary"] ), get_icons( data.raw.item["aoc-gabbro"] ) ),
 	energy_required = 2,
-	category = 'aoe-category-sedimenting'
+	category = 'aoc-category-sedimenting'
 }})
 
 data:extend({{
-	name = 'aoe-sedimenting-granite-recipe',
+	name = 'aoc-sedimenting-granite-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-granite', amount = 6}
+		{type = 'item', name = 'aoc-granite', amount = 6}
 	},
 	results = {
-		{type = 'item', name = 'aoe-stones-sedimentary', amount = 6}
+		{type = 'item', name = 'aoc-stones-sedimentary', amount = 6}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-stones-sedimentary"] ), get_icons( data.raw.item["aoe-granite"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-sedimentary"] ), get_icons( data.raw.item["aoc-granite"] ) ),
 	energy_required = 2,
-	category = 'aoe-category-sedimenting'
+	category = 'aoc-category-sedimenting'
 }})
 
 data:extend({{
-	name = 'aoe-high-pressure-heating-basalt-recipe',
+	name = 'aoc-high-pressure-heating-basalt-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-basalt', amount = 6},
-		{type = 'fluid', name = 'aoe-pressure', amount = 50}
+		{type = 'item', name = 'aoc-basalt', amount = 6},
+		{type = 'fluid', name = 'aoc-pressure', amount = 50}
 	},
 	results = {
-		{type = 'item', name = 'aoe-stones-metamorphic', amount = 6}
+		{type = 'item', name = 'aoc-stones-metamorphic', amount = 6}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-stones-metamorphic"] ), get_icons( data.raw.item["aoe-basalt"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-metamorphic"] ), get_icons( data.raw.item["aoc-basalt"] ) ),
 	energy_required = 2,
-	category = 'aoe-category-high-pressure-heating'
+	category = 'aoc-category-high-pressure-heating'
 }})
 
 data:extend({{
-	name = 'aoe-high-pressure-heating-gabbro-recipe',
+	name = 'aoc-high-pressure-heating-gabbro-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-gabbro', amount = 6},
-		{type = 'fluid', name = 'aoe-pressure', amount = 50}
+		{type = 'item', name = 'aoc-gabbro', amount = 6},
+		{type = 'fluid', name = 'aoc-pressure', amount = 50}
 	},
 	results = {
-		{type = 'item', name = 'aoe-stones-metamorphic', amount = 6}
+		{type = 'item', name = 'aoc-stones-metamorphic', amount = 6}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-stones-metamorphic"] ), get_icons( data.raw.item["aoe-gabbro"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-metamorphic"] ), get_icons( data.raw.item["aoc-gabbro"] ) ),
 	energy_required = 2,
-	category = 'aoe-category-high-pressure-heating'
+	category = 'aoc-category-high-pressure-heating'
 }})
 
 data:extend({{
-	name = 'aoe-high-pressure-heating-granite-recipe',
+	name = 'aoc-high-pressure-heating-granite-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-granite', amount = 6},
-		{type = 'fluid', name = 'aoe-pressure', amount = 50}
+		{type = 'item', name = 'aoc-granite', amount = 6},
+		{type = 'fluid', name = 'aoc-pressure', amount = 50}
 	},
 	results = {
-		{type = 'item', name = 'aoe-stones-metamorphic', amount = 6}
+		{type = 'item', name = 'aoc-stones-metamorphic', amount = 6}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-stones-metamorphic"] ), get_icons( data.raw.item["aoe-granite"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-metamorphic"] ), get_icons( data.raw.item["aoc-granite"] ) ),
 	energy_required = 2,
-	category = 'aoe-category-high-pressure-heating'
+	category = 'aoc-category-high-pressure-heating'
 }})
 
 data:extend({{
-	name = 'aoe-straining-metamorphic-2-recipe',
+	name = 'aoc-straining-metamorphic-2-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-stones-metamorphic', amount = 3},
-		{type = 'item', name = 'aoe-fiber-mesh', amount = 1}
+		{type = 'item', name = 'aoc-stones-metamorphic', amount = 3},
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-gneiss', amount = 1},
-		{type = 'item', name = 'aoe-slate', amount = 1},
-		{type = 'item', name = 'aoe-marble', amount = 1},
-		{type = 'item', name = 'aoe-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.98}
+		{type = 'item', name = 'aoc-gneiss', amount = 1},
+		{type = 'item', name = 'aoc-slate', amount = 1},
+		{type = 'item', name = 'aoc-marble', amount = 1},
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.98}
     },
-	icon = data.raw.item["aoe-stones-metamorphic"].icon,
-	icon_size = data.raw.item["aoe-stones-metamorphic"].icon_size,
-	subgroup = 'aoe-stone',
+	icon = data.raw.item["aoc-stones-metamorphic"].icon,
+	icon_size = data.raw.item["aoc-stones-metamorphic"].icon_size,
+	subgroup = 'aoc-stone',
 	order = "e1",
 	energy_required = 2,
-	category = 'aoe-category-straining'
+	category = 'aoc-category-straining'
 }})
 
 data:extend({{
-	name = 'aoe-straining-gneiss-recipe',
+	name = 'aoc-straining-gneiss-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-gneiss', amount = 15},
-		{type = 'item', name = 'aoe-fiber-mesh', amount = 1}
+		{type = 'item', name = 'aoc-gneiss', amount = 15},
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-magnesium-ore', amount = 4},
-		{type = 'item', name = 'aoe-apatite', amount = 3},
-		{type = 'item', name = 'aoe-garnet', amount = 2},
-		{type = 'item', name = 'aoe-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.85}
+		{type = 'item', name = 'aoc-magnesium-ore', amount = 4},
+		{type = 'item', name = 'aoc-apatite', amount = 3},
+		{type = 'item', name = 'aoc-garnet', amount = 2},
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.85}
     },
-	main_product = 'aoe-magnesium-ore',
+	main_product = 'aoc-magnesium-ore',
 	energy_required = 8,
-	category = 'aoe-category-straining'
+	category = 'aoc-category-straining'
 }})
 
 data:extend({{
-	name = 'aoe-straining-slate-recipe',
+	name = 'aoc-straining-slate-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-slate', amount = 15},
-		{type = 'item', name = 'aoe-fiber-mesh', amount = 1}
+		{type = 'item', name = 'aoc-slate', amount = 15},
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-aluminium-ore', amount = 4},
-		{type = 'item', name = 'aoe-mica', amount = 3},
-		{type = 'item', name = 'aoe-magnesium-ore', amount = 2},
-		{type = 'item', name = 'aoe-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.85}
+		{type = 'item', name = 'aoc-aluminium-ore', amount = 4},
+		{type = 'item', name = 'aoc-mica', amount = 3},
+		{type = 'item', name = 'aoc-magnesium-ore', amount = 2},
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.85}
     },
-	main_product = 'aoe-aluminium-ore',
+	main_product = 'aoc-aluminium-ore',
 	energy_required = 8,
-	category = 'aoe-category-straining'
+	category = 'aoc-category-straining'
 }})
 
 data:extend({{
-	name = 'aoe-straining-marble-recipe',
+	name = 'aoc-straining-marble-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-marble', amount = 15},
-		{type = 'item', name = 'aoe-fiber-mesh', amount = 1}
+		{type = 'item', name = 'aoc-marble', amount = 15},
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-chromium-ore', amount = 4},
-		{type = 'item', name = 'aoe-aluminium-ore', amount = 3},
-		{type = 'item', name = 'aoe-mica', amount = 2},
-		{type = 'item', name = 'aoe-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.85}
+		{type = 'item', name = 'aoc-chromium-ore', amount = 4},
+		{type = 'item', name = 'aoc-aluminium-ore', amount = 3},
+		{type = 'item', name = 'aoc-mica', amount = 2},
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.85}
     },
-	main_product = 'aoe-chromium-ore',
+	main_product = 'aoc-chromium-ore',
 	energy_required = 8,
-	category = 'aoe-category-straining'
+	category = 'aoc-category-straining'
 }})
 
 data:extend({{
-	name = 'aoe-sedimenting-gneiss-recipe',
+	name = 'aoc-sedimenting-gneiss-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-gneiss', amount = 6}
+		{type = 'item', name = 'aoc-gneiss', amount = 6}
 	},
 	results = {
-		{type = 'item', name = 'aoe-stones-sedimentary', amount = 6}
+		{type = 'item', name = 'aoc-stones-sedimentary', amount = 6}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-stones-sedimentary"] ), get_icons( data.raw.item["aoe-gneiss"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-sedimentary"] ), get_icons( data.raw.item["aoc-gneiss"] ) ),
 	energy_required = 2,
-	category = 'aoe-category-sedimenting'
+	category = 'aoc-category-sedimenting'
 }})
 
 data:extend({{
-	name = 'aoe-sedimenting-slate-recipe',
+	name = 'aoc-sedimenting-slate-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-slate', amount = 6}
+		{type = 'item', name = 'aoc-slate', amount = 6}
 	},
 	results = {
-		{type = 'item', name = 'aoe-stones-sedimentary', amount = 6}
+		{type = 'item', name = 'aoc-stones-sedimentary', amount = 6}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-stones-sedimentary"] ), get_icons( data.raw.item["aoe-slate"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-sedimentary"] ), get_icons( data.raw.item["aoc-slate"] ) ),
 	energy_required = 2,
-	category = 'aoe-category-sedimenting'
+	category = 'aoc-category-sedimenting'
 }})
 
 data:extend({{
-	name = 'aoe-sedimenting-marble-recipe',
+	name = 'aoc-sedimenting-marble-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-marble', amount = 6}
+		{type = 'item', name = 'aoc-marble', amount = 6}
 	},
 	results = {
-		{type = 'item', name = 'aoe-stones-sedimentary', amount = 6}
+		{type = 'item', name = 'aoc-stones-sedimentary', amount = 6}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-stones-sedimentary"] ), get_icons( data.raw.item["aoe-marble"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-sedimentary"] ), get_icons( data.raw.item["aoc-marble"] ) ),
 	energy_required = 2,
-	category = 'aoe-category-sedimenting'
+	category = 'aoc-category-sedimenting'
 }})
 
 data:extend({{
-	name = 'aoe-melting-gneiss-recipe',
+	name = 'aoc-melting-gneiss-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-gneiss', amount = 6}
+		{type = 'item', name = 'aoc-gneiss', amount = 6}
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-lava', amount = 120}
+		{type = 'fluid', name = 'aoc-lava', amount = 120}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoe-lava"] ), get_icons( data.raw.item["aoe-gneiss"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoc-lava"] ), get_icons( data.raw.item["aoc-gneiss"] ) ),
 	energy_required = 2,
-	category = 'aoe-category-melting'
+	category = 'aoc-category-melting'
 }})
 
 data:extend({{
-	name = 'aoe-melting-slate-recipe',
+	name = 'aoc-melting-slate-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-slate', amount = 6}
+		{type = 'item', name = 'aoc-slate', amount = 6}
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-lava', amount = 120}
+		{type = 'fluid', name = 'aoc-lava', amount = 120}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoe-lava"] ), get_icons( data.raw.item["aoe-slate"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoc-lava"] ), get_icons( data.raw.item["aoc-slate"] ) ),
 	energy_required = 2,
-	category = 'aoe-category-melting'
+	category = 'aoc-category-melting'
 }})
 
 data:extend({{
-	name = 'aoe-melting-marble-recipe',
+	name = 'aoc-melting-marble-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-marble', amount = 6}
+		{type = 'item', name = 'aoc-marble', amount = 6}
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-lava', amount = 120}
+		{type = 'fluid', name = 'aoc-lava', amount = 120}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoe-lava"] ), get_icons( data.raw.item["aoe-marble"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoc-lava"] ), get_icons( data.raw.item["aoc-marble"] ) ),
 	energy_required = 2,
-	category = 'aoe-category-melting'
+	category = 'aoc-category-melting'
 }})
 
 data:extend({{
-	name = 'aoe-straining-sedimentary-2-recipe',
+	name = 'aoc-straining-sedimentary-2-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-stones-sedimentary', amount = 3},
-		{type = 'item', name = 'aoe-fiber-mesh', amount = 1}
+		{type = 'item', name = 'aoc-stones-sedimentary', amount = 3},
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-limestone', amount = 1},
-		{type = 'item', name = 'aoe-sandstone', amount = 1},
-		{type = 'item', name = 'aoe-shale', amount = 1},
-		{type = 'item', name = 'aoe-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.98}
+		{type = 'item', name = 'aoc-limestone', amount = 1},
+		{type = 'item', name = 'aoc-sandstone', amount = 1},
+		{type = 'item', name = 'aoc-shale', amount = 1},
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.98}
     },
-	icon = data.raw.item["aoe-stones-sedimentary"].icon,
-	icon_size = data.raw.item["aoe-stones-sedimentary"].icon_size,
-	subgroup = 'aoe-stone',
+	icon = data.raw.item["aoc-stones-sedimentary"].icon,
+	icon_size = data.raw.item["aoc-stones-sedimentary"].icon_size,
+	subgroup = 'aoc-stone',
 	order = "f1",
 	energy_required = 2,
-	category = 'aoe-category-straining'
+	category = 'aoc-category-straining'
 }})
 
 data:extend({{
-	name = 'aoe-straining-limestone-recipe',
+	name = 'aoc-straining-limestone-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-limestone', amount = 15},
-		{type = 'item', name = 'aoe-fiber-mesh', amount = 1}
+		{type = 'item', name = 'aoc-limestone', amount = 15},
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1}
 	},
 	results = {
 		{type = 'item', name = 'iron-ore', amount = 4},
-		{type = 'item', name = 'aoe-nickel-ore', amount = 3},
+		{type = 'item', name = 'aoc-nickel-ore', amount = 3},
 		{type = 'item', name = 'copper-ore', amount = 2},
-		{type = 'item', name = 'aoe-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.85}
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.85}
     },
 	main_product = 'iron-ore',
 	energy_required = 8,
-	category = 'aoe-category-straining'
+	category = 'aoc-category-straining'
 }})
 
 data:extend({{
-	name = 'aoe-straining-sandstone-recipe',
+	name = 'aoc-straining-sandstone-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-sandstone', amount = 15},
-		{type = 'item', name = 'aoe-fiber-mesh', amount = 1}
+		{type = 'item', name = 'aoc-sandstone', amount = 15},
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1}
 	},
 	results = {
 		{type = 'item', name = 'copper-ore', amount = 4},
-		{type = 'item', name = 'aoe-zinc-ore', amount = 3},
+		{type = 'item', name = 'aoc-zinc-ore', amount = 3},
 		{type = 'item', name = 'iron-ore', amount = 2},
-		{type = 'item', name = 'aoe-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.85}
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.85}
     },
 	main_product = 'copper-ore',
 	energy_required = 8,
-	category = 'aoe-category-straining'
+	category = 'aoc-category-straining'
 }})
 
 data:extend({{
-	name = 'aoe-straining-shale-recipe',
+	name = 'aoc-straining-shale-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-shale', amount = 15},
-		{type = 'item', name = 'aoe-fiber-mesh', amount = 1}
+		{type = 'item', name = 'aoc-shale', amount = 15},
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1}
 	},
 	results = {
 		{type = 'item', name = 'coal', amount = 4},
-		{type = 'item', name = 'aoe-lead-ore', amount = 3},
-		{type = 'item', name = 'aoe-silver-ore', amount = 2},
-		{type = 'item', name = 'aoe-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.85}
+		{type = 'item', name = 'aoc-lead-ore', amount = 3},
+		{type = 'item', name = 'aoc-silver-ore', amount = 2},
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.85}
     },
 	main_product = 'coal',
 	energy_required = 8,
-	category = 'aoe-category-straining'
+	category = 'aoc-category-straining'
 }})
 
 data:extend({{
-	name = 'aoe-high-pressure-heating-limestone-recipe',
+	name = 'aoc-high-pressure-heating-limestone-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-limestone', amount = 6},
-		{type = 'fluid', name = 'aoe-pressure', amount = 50}
+		{type = 'item', name = 'aoc-limestone', amount = 6},
+		{type = 'fluid', name = 'aoc-pressure', amount = 50}
 	},
 	results = {
-		{type = 'item', name = 'aoe-stones-metamorphic', amount = 6}
+		{type = 'item', name = 'aoc-stones-metamorphic', amount = 6}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-stones-metamorphic"] ), get_icons( data.raw.item["aoe-limestone"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-metamorphic"] ), get_icons( data.raw.item["aoc-limestone"] ) ),
 	energy_required = 2,
-	category = 'aoe-category-high-pressure-heating'
+	category = 'aoc-category-high-pressure-heating'
 }})
 
 data:extend({{
-	name = 'aoe-high-pressure-heating-sandstone-recipe',
+	name = 'aoc-high-pressure-heating-sandstone-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-sandstone', amount = 6},
-		{type = 'fluid', name = 'aoe-pressure', amount = 50}
+		{type = 'item', name = 'aoc-sandstone', amount = 6},
+		{type = 'fluid', name = 'aoc-pressure', amount = 50}
 	},
 	results = {
-		{type = 'item', name = 'aoe-stones-metamorphic', amount = 6}
+		{type = 'item', name = 'aoc-stones-metamorphic', amount = 6}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-stones-metamorphic"] ), get_icons( data.raw.item["aoe-sandstone"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-metamorphic"] ), get_icons( data.raw.item["aoc-sandstone"] ) ),
 	energy_required = 2,
-	category = 'aoe-category-high-pressure-heating'
+	category = 'aoc-category-high-pressure-heating'
 }})
 
 data:extend({{
-	name = 'aoe-high-pressure-heating-shale-recipe',
+	name = 'aoc-high-pressure-heating-shale-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-shale', amount = 6},
-		{type = 'fluid', name = 'aoe-pressure', amount = 50}
+		{type = 'item', name = 'aoc-shale', amount = 6},
+		{type = 'fluid', name = 'aoc-pressure', amount = 50}
 	},
 	results = {
-		{type = 'item', name = 'aoe-stones-metamorphic', amount = 6}
+		{type = 'item', name = 'aoc-stones-metamorphic', amount = 6}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-stones-metamorphic"] ), get_icons( data.raw.item["aoe-shale"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-metamorphic"] ), get_icons( data.raw.item["aoc-shale"] ) ),
 	energy_required = 2,
-	category = 'aoe-category-high-pressure-heating'
+	category = 'aoc-category-high-pressure-heating'
 }})
 
 data:extend({{
-	name = 'aoe-melting-limestone-recipe',
+	name = 'aoc-melting-limestone-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-limestone', amount = 6}
+		{type = 'item', name = 'aoc-limestone', amount = 6}
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-lava', amount = 120}
+		{type = 'fluid', name = 'aoc-lava', amount = 120}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoe-lava"] ), get_icons( data.raw.item["aoe-limestone"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoc-lava"] ), get_icons( data.raw.item["aoc-limestone"] ) ),
 	energy_required = 2,
-	category = 'aoe-category-melting'
+	category = 'aoc-category-melting'
 }})
 
 
 data:extend({{
-	name = 'aoe-melting-sandstone-recipe',
+	name = 'aoc-melting-sandstone-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-sandstone', amount = 6}
+		{type = 'item', name = 'aoc-sandstone', amount = 6}
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-lava', amount = 120}
+		{type = 'fluid', name = 'aoc-lava', amount = 120}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoe-lava"] ), get_icons( data.raw.item["aoe-sandstone"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoc-lava"] ), get_icons( data.raw.item["aoc-sandstone"] ) ),
 	energy_required = 2,
-	category = 'aoe-category-melting'
+	category = 'aoc-category-melting'
 }})
 
 data:extend({{
-	name = 'aoe-melting-shale-recipe',
+	name = 'aoc-melting-shale-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-shale', amount = 6}
+		{type = 'item', name = 'aoc-shale', amount = 6}
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-lava', amount = 120}
+		{type = 'fluid', name = 'aoc-lava', amount = 120}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoe-lava"] ), get_icons( data.raw.item["aoe-shale"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoc-lava"] ), get_icons( data.raw.item["aoc-shale"] ) ),
 	energy_required = 2,
-	category = 'aoe-category-melting'
+	category = 'aoc-category-melting'
 }})
 
 data:extend({{
-	name = 'aoe-kiln-quicklime-limestone-recipe',
+	name = 'aoc-kiln-quicklime-limestone-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-limestone', amount = 1}
+		{type = 'item', name = 'aoc-limestone', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-quicklime', amount = 3},
-		{type = 'fluid', name = 'aoe-carbon-dioxide', amount = 20}
+		{type = 'item', name = 'aoc-quicklime', amount = 3},
+		{type = 'fluid', name = 'aoc-carbon-dioxide', amount = 20}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-quicklime"] ), get_icons( data.raw.item["aoe-limestone"] ) ),
-	main_product = 'aoe-quicklime',
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-quicklime"] ), get_icons( data.raw.item["aoc-limestone"] ) ),
+	main_product = 'aoc-quicklime',
 	energy_required = 2.4,
-	category = 'aoe-category-kiln-smelting'
+	category = 'aoc-category-kiln-smelting'
 }})
 
 data:extend({{
-	name = 'aoe-crushing-sandstone-recipe',
+	name = 'aoc-crushing-sandstone-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-sandstone', amount = 1}
+		{type = 'item', name = 'aoc-sandstone', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-sand', amount = 2}
+		{type = 'item', name = 'aoc-sand', amount = 2}
     },
 	energy_required = 1,
-	category = 'aoe-category-crushing'
+	category = 'aoc-category-crushing'
 }})
 
 data:extend({{
-	name = 'aoe-refining-biodiesel-recipe',
+	name = 'aoc-refining-biodiesel-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-plant-oil', amount = 10},
-        {type = 'fluid', name = 'aoe-ethanol', amount = 60},
-        {type = 'item', name = 'aoe-caustic-soda', amount = 1},
+		{type = 'fluid', name = 'aoc-plant-oil', amount = 10},
+        {type = 'fluid', name = 'aoc-ethanol', amount = 60},
+        {type = 'item', name = 'aoc-caustic-soda', amount = 1},
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-biodiesel', amount = 64},
-        {type = 'fluid', name = 'aoe-glycerol', amount = 6}
+		{type = 'fluid', name = 'aoc-biodiesel', amount = 64},
+        {type = 'fluid', name = 'aoc-glycerol', amount = 6}
     },
-    main_product = "aoe-biodiesel",
+    main_product = "aoc-biodiesel",
 	energy_required = 6,
 	category = 'oil-processing'
 }})
 
 data:extend({{
-	name = 'aoe-refining-biodiesel-2-recipe',
+	name = 'aoc-refining-biodiesel-2-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-plant-oil', amount = 20},
-        {type = 'fluid', name = 'aoe-methanol', amount = 60},
-        {type = 'item', name = 'aoe-caustic-soda', amount = 1},
+		{type = 'fluid', name = 'aoc-plant-oil', amount = 20},
+        {type = 'fluid', name = 'aoc-methanol', amount = 60},
+        {type = 'item', name = 'aoc-caustic-soda', amount = 1},
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-biodiesel', amount = 73},
-        {type = 'fluid', name = 'aoe-glycerol', amount = 7}
+		{type = 'fluid', name = 'aoc-biodiesel', amount = 73},
+        {type = 'fluid', name = 'aoc-glycerol', amount = 7}
     },
-    main_product = "aoe-biodiesel",
+    main_product = "aoc-biodiesel",
 	energy_required = 6,
 	category = 'oil-processing'
 }})
 
 data:extend({{
-	name = 'aoe-crafting-medium-electric-pole-recipe',
+	name = 'aoc-crafting-medium-electric-pole-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-tin-rod', amount = 4},
-        {type = 'item', name = 'aoe-bronze-cable', amount = 3}
+		{type = 'item', name = 'aoc-tin-rod', amount = 4},
+        {type = 'item', name = 'aoc-bronze-cable', amount = 3}
 	},
 	results = {
 		{type = 'item', name = 'medium-electric-pole', amount = 1}
@@ -596,12 +596,12 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoe-crafting-medium-electric-fuse-recipe',
+	name = 'aoc-crafting-medium-electric-fuse-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-tin-rod', amount = 4},
-        {type = 'item', name = 'aoe-bronze-cable', amount = 30}
+		{type = 'item', name = 'aoc-tin-rod', amount = 4},
+        {type = 'item', name = 'aoc-bronze-cable', amount = 30}
 	},
 	results = {
 		{type = 'item', name = 'po-medium-electric-fuse', amount = 1}
@@ -610,12 +610,12 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoe-crafting-big-electric-pole-recipe',
+	name = 'aoc-crafting-big-electric-pole-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-tin-rod', amount = 10},
-        {type = 'item', name = 'aoe-bronze-cable', amount = 10}
+		{type = 'item', name = 'aoc-tin-rod', amount = 10},
+        {type = 'item', name = 'aoc-bronze-cable', amount = 10}
 	},
 	results = {
 		{type = 'item', name = 'big-electric-pole', amount = 1}
@@ -624,12 +624,12 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoe-crafting-big-electric-fuse-recipe',
+	name = 'aoc-crafting-big-electric-fuse-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-tin-rod', amount = 10},
-        {type = 'item', name = 'aoe-bronze-cable', amount = 100}
+		{type = 'item', name = 'aoc-tin-rod', amount = 10},
+        {type = 'item', name = 'aoc-bronze-cable', amount = 100}
 	},
 	results = {
 		{type = 'item', name = 'po-big-electric-fuse', amount = 1}
@@ -638,13 +638,13 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoe-crafting-transformer-recipe',
+	name = 'aoc-crafting-transformer-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-        {type = 'item', name = 'aoe-tin-plate', amount = 16},
+        {type = 'item', name = 'aoc-tin-plate', amount = 16},
         {type = 'item', name = 'copper-cable', amount = 4},
-        {type = 'item', name = 'aoe-bronze-cable', amount = 4},
+        {type = 'item', name = 'aoc-bronze-cable', amount = 4},
         {type = 'item', name = 'electronic-circuit', amount = 4}
 	},
 	results = {
@@ -654,243 +654,243 @@ data:extend({{
 }})
 
 data:extend({{
-    name = 'aoe-chemistry-methane-co2-recipe',
+    name = 'aoc-chemistry-methane-co2-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-carbon-dioxide', amount = 30},
-		{type = 'fluid', name = 'aoe-hydrogen', amount = 120},
+		{type = 'fluid', name = 'aoc-carbon-dioxide', amount = 30},
+		{type = 'fluid', name = 'aoc-hydrogen', amount = 120},
     },
     results = {
-        {type = 'fluid', name = 'aoe-methane', amount = 50},
+        {type = 'fluid', name = 'aoc-methane', amount = 50},
 		{type = 'fluid', name = 'water', amount = 100}
     },
-	main_product = 'aoe-methane',
+	main_product = 'aoc-methane',
     energy_required = 15,
 	category = 'chemistry'
 }})
 
 data:extend({{
-    name = 'aoe-chemistry-methane-co-recipe',
+    name = 'aoc-chemistry-methane-co-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-carbon-monoxide', amount = 30},
-		{type = 'fluid', name = 'aoe-hydrogen', amount = 90},
+		{type = 'fluid', name = 'aoc-carbon-monoxide', amount = 30},
+		{type = 'fluid', name = 'aoc-hydrogen', amount = 90},
     },
     results = {
-        {type = 'fluid', name = 'aoe-methane', amount = 60},
+        {type = 'fluid', name = 'aoc-methane', amount = 60},
 		{type = 'fluid', name = 'water', amount = 60}
     },
-	main_product = 'aoe-methane',
+	main_product = 'aoc-methane',
     energy_required = 12,
 	category = 'chemistry'
 }})
 
 data:extend({{
-    name = 'aoe-chemistry-carbon-monoxide-recipe',
+    name = 'aoc-chemistry-carbon-monoxide-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
 		{type = 'fluid', name = 'steam', amount = 20},
-		{type = 'fluid', name = 'aoe-methane', amount = 20},
+		{type = 'fluid', name = 'aoc-methane', amount = 20},
     },
     results = {
-        {type = 'fluid', name = 'aoe-carbon-monoxide', amount = 10},
-		{type = 'fluid', name = 'aoe-hydrogen', amount = 30}
+        {type = 'fluid', name = 'aoc-carbon-monoxide', amount = 10},
+		{type = 'fluid', name = 'aoc-hydrogen', amount = 30}
     },
-	main_product = 'aoe-carbon-monoxide',
+	main_product = 'aoc-carbon-monoxide',
     energy_required = 4,
 	category = 'chemistry'
 }})
 
 data:extend({{
-    name = 'aoe-chemistry-carbon-dioxide-recipe',
+    name = 'aoc-chemistry-carbon-dioxide-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-carbon-monoxide', amount = 20},
+		{type = 'fluid', name = 'aoc-carbon-monoxide', amount = 20},
 		{type = 'fluid', name = 'steam', amount = 20},
     },
     results = {
-        {type = 'fluid', name = 'aoe-carbon-dioxide', amount = 20},
-		{type = 'fluid', name = 'aoe-hydrogen', amount = 20}
+        {type = 'fluid', name = 'aoc-carbon-dioxide', amount = 20},
+		{type = 'fluid', name = 'aoc-hydrogen', amount = 20}
     },
-	main_product = 'aoe-carbon-dioxide',
+	main_product = 'aoc-carbon-dioxide',
     energy_required = 4,
 	category = 'chemistry'
 }})
 
 data:extend({{
-    name = 'aoe-chemistry-methanol-recipe',
+    name = 'aoc-chemistry-methanol-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-carbon-monoxide', amount = 10},
-		{type = 'fluid', name = 'aoe-hydrogen', amount = 20},
+		{type = 'fluid', name = 'aoc-carbon-monoxide', amount = 10},
+		{type = 'fluid', name = 'aoc-hydrogen', amount = 20},
     },
     results = {
-        {type = 'fluid', name = 'aoe-methanol', amount = 30}
+        {type = 'fluid', name = 'aoc-methanol', amount = 30}
     },
     energy_required = 3,
 	category = 'chemistry'
 }})
 
 data:extend({{
-    name = 'aoe-chemistry-methanol-2-recipe',
+    name = 'aoc-chemistry-methanol-2-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-carbon-dioxide', amount = 10},
-		{type = 'fluid', name = 'aoe-hydrogen', amount = 30},
+		{type = 'fluid', name = 'aoc-carbon-dioxide', amount = 10},
+		{type = 'fluid', name = 'aoc-hydrogen', amount = 30},
     },
     results = {
-        {type = 'fluid', name = 'aoe-methanol', amount = 20},
+        {type = 'fluid', name = 'aoc-methanol', amount = 20},
         {type = 'fluid', name = 'water', amount = 20},
     },
-	main_product = 'aoe-methanol',
+	main_product = 'aoc-methanol',
     energy_required = 4,
 	category = 'chemistry'
 }})
 
 data:extend({{
-    name = 'aoe-chemistry-formic-acid-recipe',
+    name = 'aoc-chemistry-formic-acid-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-methanol', amount = 20},
-		{type = 'fluid', name = 'aoe-oxygen', amount = 30},
+		{type = 'fluid', name = 'aoc-methanol', amount = 20},
+		{type = 'fluid', name = 'aoc-oxygen', amount = 30},
     },
     results = {
-        {type = 'fluid', name = 'aoe-formic-acid', amount = 25},
+        {type = 'fluid', name = 'aoc-formic-acid', amount = 25},
         {type = 'fluid', name = 'water', amount = 25},
     },
-	main_product = 'aoe-formic-acid',
+	main_product = 'aoc-formic-acid',
     energy_required = 5,
 	category = 'chemistry'
 }})
 
 data:extend({{
-    name = 'aoe-chemistry-ammonia-recipe',
+    name = 'aoc-chemistry-ammonia-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-nitrogen', amount = 10},
-		{type = 'fluid', name = 'aoe-hydrogen', amount = 30},
+		{type = 'fluid', name = 'aoc-nitrogen', amount = 10},
+		{type = 'fluid', name = 'aoc-hydrogen', amount = 30},
     },
     results = {
-        {type = 'fluid', name = 'aoe-ammonia', amount = 40}
+        {type = 'fluid', name = 'aoc-ammonia', amount = 40}
     },
     energy_required = 4,
 	category = 'chemistry'
 }})
 
 data:extend({{
-    name = 'aoe-chemistry-nitric-oxide-recipe',
+    name = 'aoc-chemistry-nitric-oxide-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-ammonia', amount = 40},
-		{type = 'fluid', name = 'aoe-oxygen', amount = 50},
+		{type = 'fluid', name = 'aoc-ammonia', amount = 40},
+		{type = 'fluid', name = 'aoc-oxygen', amount = 50},
     },
     results = {
-        {type = 'fluid', name = 'aoe-nitric-oxide', amount = 40},
+        {type = 'fluid', name = 'aoc-nitric-oxide', amount = 40},
 		{type = 'fluid', name = 'steam', amount = 60}
     },
-	main_product = 'aoe-nitric-oxide',
+	main_product = 'aoc-nitric-oxide',
     energy_required = 8,
 	category = 'chemistry'
 }})
 
 data:extend({{
-    name = 'aoe-chemistry-dinitrogen-tetroxide-recipe',
+    name = 'aoc-chemistry-dinitrogen-tetroxide-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-nitric-oxide', amount = 20},
-		{type = 'fluid', name = 'aoe-oxygen', amount = 10},
+		{type = 'fluid', name = 'aoc-nitric-oxide', amount = 20},
+		{type = 'fluid', name = 'aoc-oxygen', amount = 10},
     },
     results = {
-        {type = 'fluid', name = 'aoe-dinitrogen-tetroxide', amount = 30}
+        {type = 'fluid', name = 'aoc-dinitrogen-tetroxide', amount = 30}
     },
     energy_required = 3,
 	category = 'chemistry'
 }})
 
 data:extend({{
-    name = 'aoe-chemistry-nitric-acid-recipe',
+    name = 'aoc-chemistry-nitric-acid-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-dinitrogen-tetroxide', amount = 30},
-		{type = 'fluid', name = 'aoe-oxygen', amount = 30},
+		{type = 'fluid', name = 'aoc-dinitrogen-tetroxide', amount = 30},
+		{type = 'fluid', name = 'aoc-oxygen', amount = 30},
     },
     results = {
-        {type = 'fluid', name = 'aoe-nitric-acid', amount = 40},
+        {type = 'fluid', name = 'aoc-nitric-acid', amount = 40},
 		{type = 'fluid', name = 'steam', amount = 20}
     },
-	main_product = 'aoe-nitric-acid',
+	main_product = 'aoc-nitric-acid',
     energy_required = 6,
 	category = 'chemistry'
 }})
 
 data:extend({{
-    name = 'aoe-chemistry-sodium-nitrate-recipe',
+    name = 'aoc-chemistry-sodium-nitrate-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-soda-ash', amount = 1},
-		{type = 'fluid', name = 'aoe-nitric-acid', amount = 20},
+		{type = 'item', name = 'aoc-soda-ash', amount = 1},
+		{type = 'fluid', name = 'aoc-nitric-acid', amount = 20},
     },
     results = {
-        {type = 'item', name = 'aoe-sodium-nitrate', amount = 2},
+        {type = 'item', name = 'aoc-sodium-nitrate', amount = 2},
 		{type = 'fluid', name = 'water', amount = 10},
-		{type = 'fluid', name = 'aoe-carbon-dioxide', amount = 10}
+		{type = 'fluid', name = 'aoc-carbon-dioxide', amount = 10}
     },
-	main_product = 'aoe-sodium-nitrate',
+	main_product = 'aoc-sodium-nitrate',
     energy_required = 2,
 	category = 'chemistry'
 }})
 
 data:extend({{
-    name = 'aoe-chemistry-sodium-nitrate-2-recipe',
+    name = 'aoc-chemistry-sodium-nitrate-2-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-caustic-soda', amount = 2},
-		{type = 'fluid', name = 'aoe-nitric-acid', amount = 20},
+		{type = 'item', name = 'aoc-caustic-soda', amount = 2},
+		{type = 'fluid', name = 'aoc-nitric-acid', amount = 20},
     },
     results = {
-        {type = 'item', name = 'aoe-sodium-nitrate', amount = 2},
+        {type = 'item', name = 'aoc-sodium-nitrate', amount = 2},
 		{type = 'fluid', name = 'water', amount = 20}
     },
-	main_product = 'aoe-sodium-nitrate',
+	main_product = 'aoc-sodium-nitrate',
     energy_required = 2,
 	category = 'chemistry'
 }})
 
 data:extend({{
-    name = 'aoe-crafting-casting-unit-recipe',
+    name = 'aoc-crafting-casting-unit-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-steel-machine-hull', amount = 12},
-		{type = 'item', name = 'aoe-cooling-coil', amount = 8},
+		{type = 'item', name = 'aoc-steel-machine-hull', amount = 12},
+		{type = 'item', name = 'aoc-cooling-coil', amount = 8},
 		{type = 'item', name = 'concrete', amount = 16},
-		{type = 'item', name = 'aoe-bronze-plate', amount = 20}
+		{type = 'item', name = 'aoc-bronze-plate', amount = 20}
     },
     results = {
-        {type = 'item', name = 'aoe-casting-unit', amount = 1}
+        {type = 'item', name = 'aoc-casting-unit', amount = 1}
     },
     energy_required = 5
 }})
 
 data:extend({{
-    name = 'aoe-crafting-centrifuge-recipe',
+    name = 'aoc-crafting-centrifuge-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-steel-machine-hull', amount = 15},
+		{type = 'item', name = 'aoc-steel-machine-hull', amount = 15},
 		{type = 'item', name = 'engine-unit', amount = 5},
 		{type = 'item', name = 'concrete', amount = 25},
 		{type = 'item', name = 'electronic-circuit', amount = 10}
@@ -902,1293 +902,1293 @@ data:extend({{
 }})
 
 data:extend({{
-    name = 'aoe-smelting-mold-recipe',
+    name = 'aoc-smelting-mold-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-clay', amount = 2},
-		{type = 'item', name = 'aoe-mica', amount = 1}
+		{type = 'item', name = 'aoc-clay', amount = 2},
+		{type = 'item', name = 'aoc-mica', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoe-mold', amount = 1}
+        {type = 'item', name = 'aoc-mold', amount = 1}
     },
 	category = 'smelting',
     energy_required = 2.4
 }})
 
 data:extend({{
-    name = 'aoe-centrifuging-iron-recipe',
+    name = 'aoc-centrifuging-iron-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
 		{type = 'item', name = 'iron-ore', amount = 4}
     },
     results = {
-        {type = 'item', name = 'aoe-iron-processed', amount = 6},
-		{type = 'item', name = 'aoe-sand', amount = 1}
+        {type = 'item', name = 'aoc-iron-processed', amount = 6},
+		{type = 'item', name = 'aoc-sand', amount = 1}
     },
-	main_product = 'aoe-iron-processed',
+	main_product = 'aoc-iron-processed',
 	category = 'centrifuging-iron',
     energy_required = 6
 }})
 
 data:extend({{
-    name = 'aoe-kiln-iron-recipe',
+    name = 'aoc-kiln-iron-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-iron-processed', amount = 4},
-		{type = 'fluid', name = 'aoe-oxygen', amount = 5}
+		{type = 'item', name = 'aoc-iron-processed', amount = 4},
+		{type = 'fluid', name = 'aoc-oxygen', amount = 5}
     },
     results = {
-        {type = 'item', name = 'aoe-iron-reduced', amount = 6},
-		{type = 'fluid', name = 'aoe-sulfur-dioxide', amount = 5}
+        {type = 'item', name = 'aoc-iron-reduced', amount = 6},
+		{type = 'fluid', name = 'aoc-sulfur-dioxide', amount = 5}
     },
-	main_product = 'aoe-iron-reduced',
-	category = 'aoe-category-kiln-smelting-iron',
+	main_product = 'aoc-iron-reduced',
+	category = 'aoc-category-kiln-smelting-iron',
     energy_required = 4.8
 }})
 
 data:extend({{
-	name = 'aoe-crushing-iron-recipe',
+	name = 'aoc-crushing-iron-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-iron-reduced', amount = 4}
+		{type = 'item', name = 'aoc-iron-reduced', amount = 4}
 	},
 	results = {
-		{type = 'item', name = 'aoe-iron-dust', amount = 5},
-		{type = 'item', name = 'aoe-iron-processed', amount = 1, probability = 0.5},
-		{type = 'item', name = 'aoe-sand', amount = 1}
+		{type = 'item', name = 'aoc-iron-dust', amount = 5},
+		{type = 'item', name = 'aoc-iron-processed', amount = 1, probability = 0.5},
+		{type = 'item', name = 'aoc-sand', amount = 1}
     },
-	main_product = 'aoe-iron-dust',
+	main_product = 'aoc-iron-dust',
 	energy_required = 4,
-	category = 'aoe-category-crushing-iron'
+	category = 'aoc-category-crushing-iron'
 }})
 
 data:extend({{
-	name = 'aoe-mixing-iron-recipe',
+	name = 'aoc-mixing-iron-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-iron-dust', amount = 5},
-		{type = 'fluid', name = 'aoe-methane', amount = 5}
+		{type = 'item', name = 'aoc-iron-dust', amount = 5},
+		{type = 'fluid', name = 'aoc-methane', amount = 5}
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-iron-slurry', amount = 30},
-		{type = 'item', name = 'aoe-slag', amount = 1}
+		{type = 'fluid', name = 'aoc-iron-slurry', amount = 30},
+		{type = 'item', name = 'aoc-slag', amount = 1}
     },
-	main_product = 'aoe-iron-slurry',
+	main_product = 'aoc-iron-slurry',
 	energy_required = 5,
-	category = 'aoe-category-mixing-iron'
+	category = 'aoc-category-mixing-iron'
 }})
 
 data:extend({{
-	name = 'aoe-electrolyzing-iron-recipe',
+	name = 'aoc-electrolyzing-iron-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-iron-slurry', amount = 25}
+		{type = 'fluid', name = 'aoc-iron-slurry', amount = 25}
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-iron-molten', amount = 30},
-		{type = 'fluid', name = 'aoe-tailings', amount = 30}
+		{type = 'fluid', name = 'aoc-iron-molten', amount = 30},
+		{type = 'fluid', name = 'aoc-tailings', amount = 30}
     },
-	main_product = 'aoe-iron-molten',
+	main_product = 'aoc-iron-molten',
 	energy_required = 3,
-	category = 'aoe-category-electrolyzing-iron'
+	category = 'aoc-category-electrolyzing-iron'
 }})
 
 data:extend({{
-	name = 'aoe-casting-iron-recipe',
+	name = 'aoc-casting-iron-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-iron-molten', amount = 25},
-		{type = 'item', name = 'aoe-mold', amount = 1}
+		{type = 'fluid', name = 'aoc-iron-molten', amount = 25},
+		{type = 'item', name = 'aoc-mold', amount = 1}
 	},
 	results = {
 		{type = 'item', name = 'iron-plate', amount = 6},
-		{type = 'item', name = 'aoe-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
     },
 	main_product = 'iron-plate',
 	energy_required = 3,
-	category = 'aoe-category-casting-iron'
+	category = 'aoc-category-casting-iron'
 }})
 
 data:extend({{
-    name = 'aoe-centrifuging-copper-recipe',
+    name = 'aoc-centrifuging-copper-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
 		{type = 'item', name = 'copper-ore', amount = 4}
     },
     results = {
-        {type = 'item', name = 'aoe-copper-processed', amount = 6},
-		{type = 'item', name = 'aoe-sand', amount = 1}
+        {type = 'item', name = 'aoc-copper-processed', amount = 6},
+		{type = 'item', name = 'aoc-sand', amount = 1}
     },
-	main_product = 'aoe-copper-processed',
+	main_product = 'aoc-copper-processed',
 	category = 'centrifuging-copper',
     energy_required = 6
 }})
 
 data:extend({{
-    name = 'aoe-kiln-copper-recipe',
+    name = 'aoc-kiln-copper-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-copper-processed', amount = 4},
-		{type = 'item', name = 'aoe-coke', amount = 1}
+		{type = 'item', name = 'aoc-copper-processed', amount = 4},
+		{type = 'item', name = 'aoc-coke', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoe-copper-reduced', amount = 6},
-		{type = 'fluid', name = 'aoe-carbon-dioxide', amount = 5}
+        {type = 'item', name = 'aoc-copper-reduced', amount = 6},
+		{type = 'fluid', name = 'aoc-carbon-dioxide', amount = 5}
     },
-	main_product = 'aoe-copper-reduced',
-	category = 'aoe-category-kiln-smelting-copper',
+	main_product = 'aoc-copper-reduced',
+	category = 'aoc-category-kiln-smelting-copper',
     energy_required = 4.8
 }})
 
 data:extend({{
-	name = 'aoe-crushing-copper-recipe',
+	name = 'aoc-crushing-copper-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-copper-reduced', amount = 4}
+		{type = 'item', name = 'aoc-copper-reduced', amount = 4}
 	},
 	results = {
-		{type = 'item', name = 'aoe-copper-dust', amount = 5},
-		{type = 'item', name = 'aoe-copper-processed', amount = 1, probability = 0.5},
-		{type = 'item', name = 'aoe-sand', amount = 1}
+		{type = 'item', name = 'aoc-copper-dust', amount = 5},
+		{type = 'item', name = 'aoc-copper-processed', amount = 1, probability = 0.5},
+		{type = 'item', name = 'aoc-sand', amount = 1}
     },
-	main_product = 'aoe-copper-dust',
+	main_product = 'aoc-copper-dust',
 	energy_required = 4,
-	category = 'aoe-category-crushing-copper'
+	category = 'aoc-category-crushing-copper'
 }})
 
 data:extend({{
-	name = 'aoe-mixing-copper-recipe',
+	name = 'aoc-mixing-copper-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-copper-dust', amount = 5},
-		{type = 'fluid', name = 'aoe-formic-acid', amount = 5}
+		{type = 'item', name = 'aoc-copper-dust', amount = 5},
+		{type = 'fluid', name = 'aoc-formic-acid', amount = 5}
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-copper-slurry', amount = 30},
-		{type = 'item', name = 'aoe-slag', amount = 1}
+		{type = 'fluid', name = 'aoc-copper-slurry', amount = 30},
+		{type = 'item', name = 'aoc-slag', amount = 1}
     },
-	main_product = 'aoe-copper-slurry',
+	main_product = 'aoc-copper-slurry',
 	energy_required = 5,
-	category = 'aoe-category-mixing-copper'
+	category = 'aoc-category-mixing-copper'
 }})
 
 data:extend({{
-	name = 'aoe-electrolyzing-copper-recipe',
+	name = 'aoc-electrolyzing-copper-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-copper-slurry', amount = 25}
+		{type = 'fluid', name = 'aoc-copper-slurry', amount = 25}
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-copper-molten', amount = 30},
-		{type = 'fluid', name = 'aoe-tailings', amount = 30}
+		{type = 'fluid', name = 'aoc-copper-molten', amount = 30},
+		{type = 'fluid', name = 'aoc-tailings', amount = 30}
     },
-	main_product = 'aoe-copper-molten',
+	main_product = 'aoc-copper-molten',
 	energy_required = 3,
-	category = 'aoe-category-electrolyzing-copper'
+	category = 'aoc-category-electrolyzing-copper'
 }})
 
 data:extend({{
-	name = 'aoe-casting-copper-recipe',
+	name = 'aoc-casting-copper-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-copper-molten', amount = 25},
-		{type = 'item', name = 'aoe-mold', amount = 1}
+		{type = 'fluid', name = 'aoc-copper-molten', amount = 25},
+		{type = 'item', name = 'aoc-mold', amount = 1}
 	},
 	results = {
 		{type = 'item', name = 'copper-plate', amount = 6},
-		{type = 'item', name = 'aoe-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
     },
 	main_product = 'copper-plate',
 	energy_required = 3,
-	category = 'aoe-category-casting-copper'
+	category = 'aoc-category-casting-copper'
 }})
 
 data:extend({{
-    name = 'aoe-centrifuging-tin-recipe',
+    name = 'aoc-centrifuging-tin-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-tin-ore', amount = 4}
+		{type = 'item', name = 'aoc-tin-ore', amount = 4}
     },
     results = {
-        {type = 'item', name = 'aoe-tin-processed', amount = 6},
-		{type = 'item', name = 'aoe-gravel', amount = 1}
+        {type = 'item', name = 'aoc-tin-processed', amount = 6},
+		{type = 'item', name = 'aoc-gravel', amount = 1}
     },
-	main_product = 'aoe-tin-processed',
+	main_product = 'aoc-tin-processed',
 	category = 'centrifuging-tin',
     energy_required = 6
 }})
 
 data:extend({{
-    name = 'aoe-kiln-tin-recipe',
+    name = 'aoc-kiln-tin-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-tin-processed', amount = 4},
-		{type = 'item', name = 'aoe-coke', amount = 1}
+		{type = 'item', name = 'aoc-tin-processed', amount = 4},
+		{type = 'item', name = 'aoc-coke', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoe-tin-reduced', amount = 6},
-		{type = 'fluid', name = 'aoe-carbon-dioxide', amount = 5}
+        {type = 'item', name = 'aoc-tin-reduced', amount = 6},
+		{type = 'fluid', name = 'aoc-carbon-dioxide', amount = 5}
     },
-	main_product = 'aoe-tin-reduced',
-	category = 'aoe-category-kiln-smelting-tin',
+	main_product = 'aoc-tin-reduced',
+	category = 'aoc-category-kiln-smelting-tin',
     energy_required = 4.8
 }})
 
 data:extend({{
-	name = 'aoe-crushing-tin-recipe',
+	name = 'aoc-crushing-tin-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-tin-reduced', amount = 4}
+		{type = 'item', name = 'aoc-tin-reduced', amount = 4}
 	},
 	results = {
-		{type = 'item', name = 'aoe-tin-dust', amount = 5},
-		{type = 'item', name = 'aoe-tin-processed', amount = 1, probability = 0.5},
-		{type = 'item', name = 'aoe-sand', amount = 1}
+		{type = 'item', name = 'aoc-tin-dust', amount = 5},
+		{type = 'item', name = 'aoc-tin-processed', amount = 1, probability = 0.5},
+		{type = 'item', name = 'aoc-sand', amount = 1}
     },
-	main_product = 'aoe-tin-dust',
+	main_product = 'aoc-tin-dust',
 	energy_required = 4,
-	category = 'aoe-category-crushing-tin'
+	category = 'aoc-category-crushing-tin'
 }})
 
 data:extend({{
-	name = 'aoe-mixing-tin-recipe',
+	name = 'aoc-mixing-tin-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-tin-dust', amount = 5},
-		{type = 'fluid', name = 'aoe-nitric-acid', amount = 5}
+		{type = 'item', name = 'aoc-tin-dust', amount = 5},
+		{type = 'fluid', name = 'aoc-nitric-acid', amount = 5}
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-tin-slurry', amount = 30},
-		{type = 'item', name = 'aoe-slag', amount = 1}
+		{type = 'fluid', name = 'aoc-tin-slurry', amount = 30},
+		{type = 'item', name = 'aoc-slag', amount = 1}
     },
-	main_product = 'aoe-tin-slurry',
+	main_product = 'aoc-tin-slurry',
 	energy_required = 5,
-	category = 'aoe-category-mixing-tin'
+	category = 'aoc-category-mixing-tin'
 }})
 
 data:extend({{
-	name = 'aoe-electrolyzing-tin-recipe',
+	name = 'aoc-electrolyzing-tin-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-tin-slurry', amount = 25}
+		{type = 'fluid', name = 'aoc-tin-slurry', amount = 25}
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-tin-molten', amount = 30},
-		{type = 'fluid', name = 'aoe-tailings', amount = 30}
+		{type = 'fluid', name = 'aoc-tin-molten', amount = 30},
+		{type = 'fluid', name = 'aoc-tailings', amount = 30}
     },
-	main_product = 'aoe-tin-molten',
+	main_product = 'aoc-tin-molten',
 	energy_required = 3,
-	category = 'aoe-category-electrolyzing-tin'
+	category = 'aoc-category-electrolyzing-tin'
 }})
 
 data:extend({{
-	name = 'aoe-casting-tin-recipe',
+	name = 'aoc-casting-tin-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-tin-molten', amount = 25},
-		{type = 'item', name = 'aoe-mold', amount = 1}
+		{type = 'fluid', name = 'aoc-tin-molten', amount = 25},
+		{type = 'item', name = 'aoc-mold', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-tin-plate', amount = 6},
-		{type = 'item', name = 'aoe-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-tin-plate', amount = 6},
+		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
     },
-	main_product = 'aoe-tin-plate',
+	main_product = 'aoc-tin-plate',
 	energy_required = 3,
-	category = 'aoe-category-casting-tin'
+	category = 'aoc-category-casting-tin'
 }})
 
 data:extend({{
-    name = 'aoe-centrifuging-aluminium-recipe',
+    name = 'aoc-centrifuging-aluminium-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-aluminium-ore', amount = 4}
+		{type = 'item', name = 'aoc-aluminium-ore', amount = 4}
     },
     results = {
-        {type = 'item', name = 'aoe-aluminium-processed', amount = 6},
-		{type = 'item', name = 'aoe-gravel', amount = 1}
+        {type = 'item', name = 'aoc-aluminium-processed', amount = 6},
+		{type = 'item', name = 'aoc-gravel', amount = 1}
     },
-	main_product = 'aoe-aluminium-processed',
+	main_product = 'aoc-aluminium-processed',
 	category = 'centrifuging-aluminium',
     energy_required = 6
 }})
 
 data:extend({{
-    name = 'aoe-kiln-aluminium-recipe',
+    name = 'aoc-kiln-aluminium-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-aluminium-processed', amount = 4},
-		{type = 'item', name = 'aoe-coke', amount = 1}
+		{type = 'item', name = 'aoc-aluminium-processed', amount = 4},
+		{type = 'item', name = 'aoc-coke', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoe-aluminium-reduced', amount = 6},
-		{type = 'fluid', name = 'aoe-carbon-dioxide', amount = 5}
+        {type = 'item', name = 'aoc-aluminium-reduced', amount = 6},
+		{type = 'fluid', name = 'aoc-carbon-dioxide', amount = 5}
     },
-	main_product = 'aoe-aluminium-reduced',
-	category = 'aoe-category-kiln-smelting-aluminium',
+	main_product = 'aoc-aluminium-reduced',
+	category = 'aoc-category-kiln-smelting-aluminium',
     energy_required = 4.8
 }})
 
 data:extend({{
-	name = 'aoe-crushing-aluminium-recipe',
+	name = 'aoc-crushing-aluminium-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-aluminium-reduced', amount = 4}
+		{type = 'item', name = 'aoc-aluminium-reduced', amount = 4}
 	},
 	results = {
-		{type = 'item', name = 'aoe-aluminium-dust', amount = 5},
-		{type = 'item', name = 'aoe-aluminium-processed', amount = 1, probability = 0.5},
-		{type = 'item', name = 'aoe-gravel', amount = 1}
+		{type = 'item', name = 'aoc-aluminium-dust', amount = 5},
+		{type = 'item', name = 'aoc-aluminium-processed', amount = 1, probability = 0.5},
+		{type = 'item', name = 'aoc-gravel', amount = 1}
     },
-	main_product = 'aoe-aluminium-dust',
+	main_product = 'aoc-aluminium-dust',
 	energy_required = 4,
-	category = 'aoe-category-crushing-aluminium'
+	category = 'aoc-category-crushing-aluminium'
 }})
 
 data:extend({{
-	name = 'aoe-mixing-aluminium-recipe',
+	name = 'aoc-mixing-aluminium-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-aluminium-dust', amount = 5},
-		{type = 'fluid', name = 'aoe-caustic-solution', amount = 5}
+		{type = 'item', name = 'aoc-aluminium-dust', amount = 5},
+		{type = 'fluid', name = 'aoc-caustic-solution', amount = 5}
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-aluminium-slurry', amount = 30},
-		{type = 'item', name = 'aoe-slag', amount = 1}
+		{type = 'fluid', name = 'aoc-aluminium-slurry', amount = 30},
+		{type = 'item', name = 'aoc-slag', amount = 1}
     },
-	main_product = 'aoe-aluminium-slurry',
+	main_product = 'aoc-aluminium-slurry',
 	energy_required = 5,
-	category = 'aoe-category-mixing-aluminium'
+	category = 'aoc-category-mixing-aluminium'
 }})
 
 data:extend({{
-	name = 'aoe-electrolyzing-aluminium-recipe',
+	name = 'aoc-electrolyzing-aluminium-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-aluminium-slurry', amount = 25}
+		{type = 'fluid', name = 'aoc-aluminium-slurry', amount = 25}
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-aluminium-molten', amount = 30},
-		{type = 'fluid', name = 'aoe-tailings', amount = 30}
+		{type = 'fluid', name = 'aoc-aluminium-molten', amount = 30},
+		{type = 'fluid', name = 'aoc-tailings', amount = 30}
     },
-	main_product = 'aoe-aluminium-molten',
+	main_product = 'aoc-aluminium-molten',
 	energy_required = 3,
-	category = 'aoe-category-electrolyzing-aluminium'
+	category = 'aoc-category-electrolyzing-aluminium'
 }})
 
 data:extend({{
-	name = 'aoe-casting-aluminium-recipe',
+	name = 'aoc-casting-aluminium-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-aluminium-molten', amount = 25},
-		{type = 'item', name = 'aoe-mold', amount = 1}
+		{type = 'fluid', name = 'aoc-aluminium-molten', amount = 25},
+		{type = 'item', name = 'aoc-mold', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-aluminium-plate', amount = 6},
-		{type = 'item', name = 'aoe-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-aluminium-plate', amount = 6},
+		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
     },
-	main_product = 'aoe-aluminium-plate',
+	main_product = 'aoc-aluminium-plate',
 	energy_required = 3,
-	category = 'aoe-category-casting-aluminium'
+	category = 'aoc-category-casting-aluminium'
 }})
 
 data:extend({{
-    name = 'aoe-centrifuging-lead-recipe',
+    name = 'aoc-centrifuging-lead-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-lead-ore', amount = 4}
+		{type = 'item', name = 'aoc-lead-ore', amount = 4}
     },
     results = {
-        {type = 'item', name = 'aoe-lead-processed', amount = 6},
-		{type = 'item', name = 'aoe-sand', amount = 1}
+        {type = 'item', name = 'aoc-lead-processed', amount = 6},
+		{type = 'item', name = 'aoc-sand', amount = 1}
     },
-	main_product = 'aoe-lead-processed',
+	main_product = 'aoc-lead-processed',
 	category = 'centrifuging-lead',
     energy_required = 6
 }})
 
 data:extend({{
-    name = 'aoe-kiln-lead-recipe',
+    name = 'aoc-kiln-lead-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-lead-processed', amount = 4},
-		{type = 'item', name = 'aoe-bone-meal', amount = 1}
+		{type = 'item', name = 'aoc-lead-processed', amount = 4},
+		{type = 'item', name = 'aoc-bone-meal', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoe-lead-reduced', amount = 6},
-		{type = 'fluid', name = 'aoe-sulfur-dioxide', amount = 5}
+        {type = 'item', name = 'aoc-lead-reduced', amount = 6},
+		{type = 'fluid', name = 'aoc-sulfur-dioxide', amount = 5}
     },
-	main_product = 'aoe-lead-reduced',
-	category = 'aoe-category-kiln-smelting-lead',
+	main_product = 'aoc-lead-reduced',
+	category = 'aoc-category-kiln-smelting-lead',
     energy_required = 4.8
 }})
 
 data:extend({{
-	name = 'aoe-crushing-lead-recipe',
+	name = 'aoc-crushing-lead-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-lead-reduced', amount = 4}
+		{type = 'item', name = 'aoc-lead-reduced', amount = 4}
 	},
 	results = {
-		{type = 'item', name = 'aoe-lead-dust', amount = 5},
-		{type = 'item', name = 'aoe-silver-processed', amount = 1, probability = 0.5},
-		{type = 'item', name = 'aoe-sand', amount = 1}
+		{type = 'item', name = 'aoc-lead-dust', amount = 5},
+		{type = 'item', name = 'aoc-silver-processed', amount = 1, probability = 0.5},
+		{type = 'item', name = 'aoc-sand', amount = 1}
     },
-	main_product = 'aoe-lead-dust',
+	main_product = 'aoc-lead-dust',
 	energy_required = 4,
-	category = 'aoe-category-crushing-lead'
+	category = 'aoc-category-crushing-lead'
 }})
 
 data:extend({{
-	name = 'aoe-mixing-lead-recipe',
+	name = 'aoc-mixing-lead-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-lead-dust', amount = 5},
-		{type = 'fluid', name = 'aoe-hydrochloric-acid', amount = 5}
+		{type = 'item', name = 'aoc-lead-dust', amount = 5},
+		{type = 'fluid', name = 'aoc-hydrochloric-acid', amount = 5}
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-lead-slurry', amount = 30},
-		{type = 'item', name = 'aoe-slag', amount = 1}
+		{type = 'fluid', name = 'aoc-lead-slurry', amount = 30},
+		{type = 'item', name = 'aoc-slag', amount = 1}
     },
-	main_product = 'aoe-lead-slurry',
+	main_product = 'aoc-lead-slurry',
 	energy_required = 5,
-	category = 'aoe-category-mixing-lead'
+	category = 'aoc-category-mixing-lead'
 }})
 
 data:extend({{
-	name = 'aoe-electrolyzing-lead-recipe',
+	name = 'aoc-electrolyzing-lead-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-lead-slurry', amount = 25}
+		{type = 'fluid', name = 'aoc-lead-slurry', amount = 25}
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-lead-molten', amount = 30},
-		{type = 'fluid', name = 'aoe-tailings', amount = 30}
+		{type = 'fluid', name = 'aoc-lead-molten', amount = 30},
+		{type = 'fluid', name = 'aoc-tailings', amount = 30}
     },
-	main_product = 'aoe-lead-molten',
+	main_product = 'aoc-lead-molten',
 	energy_required = 3,
-	category = 'aoe-category-electrolyzing-lead'
+	category = 'aoc-category-electrolyzing-lead'
 }})
 
 data:extend({{
-	name = 'aoe-casting-lead-recipe',
+	name = 'aoc-casting-lead-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-lead-molten', amount = 25},
-		{type = 'item', name = 'aoe-mold', amount = 1}
+		{type = 'fluid', name = 'aoc-lead-molten', amount = 25},
+		{type = 'item', name = 'aoc-mold', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-lead-plate', amount = 6},
-		{type = 'item', name = 'aoe-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-lead-plate', amount = 6},
+		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
     },
-	main_product = 'aoe-lead-plate',
+	main_product = 'aoc-lead-plate',
 	energy_required = 3,
-	category = 'aoe-category-casting-lead'
+	category = 'aoc-category-casting-lead'
 }})
 
 data:extend({{
-	name = 'aoe-smelting-lead-recipe',
+	name = 'aoc-smelting-lead-recipe',
 	type = 'recipe',
 	enabled = false,
     allow_decomposition = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-lead-dust', amount = 1}
+		{type = 'item', name = 'aoc-lead-dust', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-lead-plate', amount = 1}
+		{type = 'item', name = 'aoc-lead-plate', amount = 1}
     },
 	energy_required = 2.4,
 	category = 'smelting'
 }})
 
 data:extend({{
-    name = 'aoe-centrifuging-silver-recipe',
+    name = 'aoc-centrifuging-silver-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-silver-ore', amount = 4}
+		{type = 'item', name = 'aoc-silver-ore', amount = 4}
     },
     results = {
-        {type = 'item', name = 'aoe-silver-processed', amount = 6},
-		{type = 'item', name = 'aoe-sand', amount = 1}
+        {type = 'item', name = 'aoc-silver-processed', amount = 6},
+		{type = 'item', name = 'aoc-sand', amount = 1}
     },
-	main_product = 'aoe-silver-processed',
+	main_product = 'aoc-silver-processed',
 	category = 'centrifuging-silver',
     energy_required = 6
 }})
 
 data:extend({{
-    name = 'aoe-kiln-silver-recipe',
+    name = 'aoc-kiln-silver-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-silver-processed', amount = 4},
-		{type = 'item', name = 'aoe-quicklime', amount = 1}
+		{type = 'item', name = 'aoc-silver-processed', amount = 4},
+		{type = 'item', name = 'aoc-quicklime', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoe-silver-reduced', amount = 6},
-		{type = 'fluid', name = 'aoe-sulfur-dioxide', amount = 5}
+        {type = 'item', name = 'aoc-silver-reduced', amount = 6},
+		{type = 'fluid', name = 'aoc-sulfur-dioxide', amount = 5}
     },
-	main_product = 'aoe-silver-reduced',
-	category = 'aoe-category-kiln-smelting-silver',
+	main_product = 'aoc-silver-reduced',
+	category = 'aoc-category-kiln-smelting-silver',
     energy_required = 4.8
 }})
 
 data:extend({{
-	name = 'aoe-crushing-silver-recipe',
+	name = 'aoc-crushing-silver-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-silver-reduced', amount = 4}
+		{type = 'item', name = 'aoc-silver-reduced', amount = 4}
 	},
 	results = {
-		{type = 'item', name = 'aoe-silver-dust', amount = 5},
-		{type = 'item', name = 'aoe-lead-processed', amount = 1, probability = 0.5},
-		{type = 'item', name = 'aoe-sand', amount = 1}
+		{type = 'item', name = 'aoc-silver-dust', amount = 5},
+		{type = 'item', name = 'aoc-lead-processed', amount = 1, probability = 0.5},
+		{type = 'item', name = 'aoc-sand', amount = 1}
     },
-	main_product = 'aoe-silver-dust',
+	main_product = 'aoc-silver-dust',
 	energy_required = 4,
-	category = 'aoe-category-crushing-silver'
+	category = 'aoc-category-crushing-silver'
 }})
 
 data:extend({{
-	name = 'aoe-mixing-silver-recipe',
+	name = 'aoc-mixing-silver-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-silver-dust', amount = 5},
-		{type = 'item', name = 'aoe-sodium-cyanide', amount = 1},
+		{type = 'item', name = 'aoc-silver-dust', amount = 5},
+		{type = 'item', name = 'aoc-sodium-cyanide', amount = 1},
 		{type = 'fluid', name = 'water', amount = 5}
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-silver-slurry', amount = 30},
-		{type = 'item', name = 'aoe-slag', amount = 1}
+		{type = 'fluid', name = 'aoc-silver-slurry', amount = 30},
+		{type = 'item', name = 'aoc-slag', amount = 1}
     },
-	main_product = 'aoe-silver-slurry',
+	main_product = 'aoc-silver-slurry',
 	energy_required = 5,
-	category = 'aoe-category-mixing-silver'
+	category = 'aoc-category-mixing-silver'
 }})
 
 data:extend({{
-	name = 'aoe-electrolyzing-silver-recipe',
+	name = 'aoc-electrolyzing-silver-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-silver-slurry', amount = 25}
+		{type = 'fluid', name = 'aoc-silver-slurry', amount = 25}
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-silver-molten', amount = 30},
-		{type = 'fluid', name = 'aoe-tailings', amount = 30}
+		{type = 'fluid', name = 'aoc-silver-molten', amount = 30},
+		{type = 'fluid', name = 'aoc-tailings', amount = 30}
     },
-	main_product = 'aoe-silver-molten',
+	main_product = 'aoc-silver-molten',
 	energy_required = 3,
-	category = 'aoe-category-electrolyzing-silver'
+	category = 'aoc-category-electrolyzing-silver'
 }})
 
 data:extend({{
-	name = 'aoe-casting-silver-recipe',
+	name = 'aoc-casting-silver-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-silver-molten', amount = 25},
-		{type = 'item', name = 'aoe-mold', amount = 1}
+		{type = 'fluid', name = 'aoc-silver-molten', amount = 25},
+		{type = 'item', name = 'aoc-mold', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-silver-plate', amount = 6},
-		{type = 'item', name = 'aoe-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-silver-plate', amount = 6},
+		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
     },
-	main_product = 'aoe-silver-plate',
+	main_product = 'aoc-silver-plate',
 	energy_required = 3,
-	category = 'aoe-category-casting-silver'
+	category = 'aoc-category-casting-silver'
 }})
 
 data:extend({{
-	name = 'aoe-smelting-silver-recipe',
+	name = 'aoc-smelting-silver-recipe',
 	type = 'recipe',
 	enabled = false,
     allow_decomposition = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-silver-dust', amount = 1}
+		{type = 'item', name = 'aoc-silver-dust', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-silver-plate', amount = 1}
+		{type = 'item', name = 'aoc-silver-plate', amount = 1}
     },
 	energy_required = 2.4,
 	category = 'smelting'
 }})
 
 data:extend({{
-    name = 'aoe-centrifuging-nickel-recipe',
+    name = 'aoc-centrifuging-nickel-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-nickel-ore', amount = 4}
+		{type = 'item', name = 'aoc-nickel-ore', amount = 4}
     },
     results = {
-        {type = 'item', name = 'aoe-nickel-processed', amount = 6},
-		{type = 'item', name = 'aoe-sand', amount = 1}
+        {type = 'item', name = 'aoc-nickel-processed', amount = 6},
+		{type = 'item', name = 'aoc-sand', amount = 1}
     },
-	main_product = 'aoe-nickel-processed',
+	main_product = 'aoc-nickel-processed',
 	category = 'centrifuging-nickel',
     energy_required = 6
 }})
 
 data:extend({{
-    name = 'aoe-kiln-nickel-recipe',
+    name = 'aoc-kiln-nickel-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-nickel-processed', amount = 4},
-		{type = 'fluid', name = 'aoe-oxygen', amount = 5}
+		{type = 'item', name = 'aoc-nickel-processed', amount = 4},
+		{type = 'fluid', name = 'aoc-oxygen', amount = 5}
     },
     results = {
-        {type = 'item', name = 'aoe-nickel-reduced', amount = 6},
-		{type = 'fluid', name = 'aoe-sulfur-dioxide', amount = 5}
+        {type = 'item', name = 'aoc-nickel-reduced', amount = 6},
+		{type = 'fluid', name = 'aoc-sulfur-dioxide', amount = 5}
     },
-	main_product = 'aoe-nickel-reduced',
-	category = 'aoe-category-kiln-smelting-nickel',
+	main_product = 'aoc-nickel-reduced',
+	category = 'aoc-category-kiln-smelting-nickel',
     energy_required = 4.8
 }})
 
 data:extend({{
-	name = 'aoe-crushing-nickel-recipe',
+	name = 'aoc-crushing-nickel-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-nickel-reduced', amount = 4}
+		{type = 'item', name = 'aoc-nickel-reduced', amount = 4}
 	},
 	results = {
-		{type = 'item', name = 'aoe-nickel-dust', amount = 5},
-		{type = 'item', name = 'aoe-nickel-processed', amount = 1, probability = 0.5},
-		{type = 'item', name = 'aoe-sand', amount = 1}
+		{type = 'item', name = 'aoc-nickel-dust', amount = 5},
+		{type = 'item', name = 'aoc-nickel-processed', amount = 1, probability = 0.5},
+		{type = 'item', name = 'aoc-sand', amount = 1}
     },
-	main_product = 'aoe-nickel-dust',
+	main_product = 'aoc-nickel-dust',
 	energy_required = 4,
-	category = 'aoe-category-crushing-nickel'
+	category = 'aoc-category-crushing-nickel'
 }})
 
 data:extend({{
-	name = 'aoe-mixing-nickel-recipe',
+	name = 'aoc-mixing-nickel-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-nickel-dust', amount = 5},
+		{type = 'item', name = 'aoc-nickel-dust', amount = 5},
 		{type = 'fluid', name = 'sulfuric-acid', amount = 5}
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-nickel-slurry', amount = 30},
-		{type = 'item', name = 'aoe-slag', amount = 1}
+		{type = 'fluid', name = 'aoc-nickel-slurry', amount = 30},
+		{type = 'item', name = 'aoc-slag', amount = 1}
     },
-	main_product = 'aoe-nickel-slurry',
+	main_product = 'aoc-nickel-slurry',
 	energy_required = 5,
-	category = 'aoe-category-mixing-nickel'
+	category = 'aoc-category-mixing-nickel'
 }})
 
 data:extend({{
-	name = 'aoe-electrolyzing-nickel-recipe',
+	name = 'aoc-electrolyzing-nickel-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-nickel-slurry', amount = 25}
+		{type = 'fluid', name = 'aoc-nickel-slurry', amount = 25}
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-nickel-molten', amount = 30},
-		{type = 'fluid', name = 'aoe-tailings', amount = 30}
+		{type = 'fluid', name = 'aoc-nickel-molten', amount = 30},
+		{type = 'fluid', name = 'aoc-tailings', amount = 30}
     },
-	main_product = 'aoe-nickel-molten',
+	main_product = 'aoc-nickel-molten',
 	energy_required = 3,
-	category = 'aoe-category-electrolyzing-nickel'
+	category = 'aoc-category-electrolyzing-nickel'
 }})
 
 data:extend({{
-	name = 'aoe-casting-nickel-recipe',
+	name = 'aoc-casting-nickel-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-nickel-molten', amount = 25},
-		{type = 'item', name = 'aoe-mold', amount = 1}
+		{type = 'fluid', name = 'aoc-nickel-molten', amount = 25},
+		{type = 'item', name = 'aoc-mold', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-nickel-plate', amount = 6},
-		{type = 'item', name = 'aoe-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-nickel-plate', amount = 6},
+		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
     },
-	main_product = 'aoe-nickel-plate',
+	main_product = 'aoc-nickel-plate',
 	energy_required = 3,
-	category = 'aoe-category-casting-nickel'
+	category = 'aoc-category-casting-nickel'
 }})
 
 data:extend({{
-	name = 'aoe-smelting-nickel-recipe',
+	name = 'aoc-smelting-nickel-recipe',
 	type = 'recipe',
 	enabled = false,
     allow_decomposition = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-nickel-dust', amount = 1}
+		{type = 'item', name = 'aoc-nickel-dust', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-nickel-plate', amount = 1}
+		{type = 'item', name = 'aoc-nickel-plate', amount = 1}
     },
 	energy_required = 2.4,
 	category = 'smelting'
 }})
 
 data:extend({{
-    name = 'aoe-centrifuging-gold-recipe',
+    name = 'aoc-centrifuging-gold-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-gold-ore', amount = 4}
+		{type = 'item', name = 'aoc-gold-ore', amount = 4}
     },
     results = {
-        {type = 'item', name = 'aoe-gold-processed', amount = 6},
-		{type = 'item', name = 'aoe-gravel', amount = 1}
+        {type = 'item', name = 'aoc-gold-processed', amount = 6},
+		{type = 'item', name = 'aoc-gravel', amount = 1}
     },
-	main_product = 'aoe-gold-processed',
+	main_product = 'aoc-gold-processed',
 	category = 'centrifuging-gold',
     energy_required = 6
 }})
 
 data:extend({{
-    name = 'aoe-kiln-gold-recipe',
+    name = 'aoc-kiln-gold-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-gold-processed', amount = 4},
-		{type = 'fluid', name = 'aoe-chlorine', amount = 5}
+		{type = 'item', name = 'aoc-gold-processed', amount = 4},
+		{type = 'fluid', name = 'aoc-chlorine', amount = 5}
     },
     results = {
-        {type = 'item', name = 'aoe-gold-reduced', amount = 6},
-		{type = 'fluid', name = 'aoe-carbon-dioxide', amount = 5}
+        {type = 'item', name = 'aoc-gold-reduced', amount = 6},
+		{type = 'fluid', name = 'aoc-carbon-dioxide', amount = 5}
     },
-	main_product = 'aoe-gold-reduced',
-	category = 'aoe-category-kiln-smelting-gold',
+	main_product = 'aoc-gold-reduced',
+	category = 'aoc-category-kiln-smelting-gold',
     energy_required = 4.8
 }})
 
 data:extend({{
-	name = 'aoe-crushing-gold-recipe',
+	name = 'aoc-crushing-gold-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-gold-reduced', amount = 4}
+		{type = 'item', name = 'aoc-gold-reduced', amount = 4}
 	},
 	results = {
-		{type = 'item', name = 'aoe-gold-dust', amount = 5},
-		{type = 'item', name = 'aoe-gold-processed', amount = 1, probability = 0.5},
-		{type = 'item', name = 'aoe-sand', amount = 1}
+		{type = 'item', name = 'aoc-gold-dust', amount = 5},
+		{type = 'item', name = 'aoc-gold-processed', amount = 1, probability = 0.5},
+		{type = 'item', name = 'aoc-sand', amount = 1}
     },
-	main_product = 'aoe-gold-dust',
+	main_product = 'aoc-gold-dust',
 	energy_required = 4,
-	category = 'aoe-category-crushing-gold'
+	category = 'aoc-category-crushing-gold'
 }})
 
 data:extend({{
-	name = 'aoe-mixing-gold-recipe',
+	name = 'aoc-mixing-gold-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-gold-dust', amount = 5},
-		{type = 'item', name = 'aoe-hydrogen-cyanide', amount = 1},
+		{type = 'item', name = 'aoc-gold-dust', amount = 5},
+		{type = 'item', name = 'aoc-hydrogen-cyanide', amount = 1},
 		{type = 'fluid', name = 'water', amount = 5}
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-gold-slurry', amount = 30},
-		{type = 'item', name = 'aoe-slag', amount = 1}
+		{type = 'fluid', name = 'aoc-gold-slurry', amount = 30},
+		{type = 'item', name = 'aoc-slag', amount = 1}
     },
-	main_product = 'aoe-gold-slurry',
+	main_product = 'aoc-gold-slurry',
 	energy_required = 5,
-	category = 'aoe-category-mixing-gold'
+	category = 'aoc-category-mixing-gold'
 }})
 
 data:extend({{
-	name = 'aoe-electrolyzing-gold-recipe',
+	name = 'aoc-electrolyzing-gold-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-gold-slurry', amount = 25}
+		{type = 'fluid', name = 'aoc-gold-slurry', amount = 25}
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-gold-molten', amount = 30},
-		{type = 'fluid', name = 'aoe-tailings', amount = 30}
+		{type = 'fluid', name = 'aoc-gold-molten', amount = 30},
+		{type = 'fluid', name = 'aoc-tailings', amount = 30}
     },
-	main_product = 'aoe-gold-molten',
+	main_product = 'aoc-gold-molten',
 	energy_required = 3,
-	category = 'aoe-category-electrolyzing-gold'
+	category = 'aoc-category-electrolyzing-gold'
 }})
 
 data:extend({{
-	name = 'aoe-casting-gold-recipe',
+	name = 'aoc-casting-gold-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-gold-molten', amount = 25},
-		{type = 'item', name = 'aoe-mold', amount = 1}
+		{type = 'fluid', name = 'aoc-gold-molten', amount = 25},
+		{type = 'item', name = 'aoc-mold', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-gold-plate', amount = 6},
-		{type = 'item', name = 'aoe-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-gold-plate', amount = 6},
+		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
     },
-	main_product = 'aoe-gold-plate',
+	main_product = 'aoc-gold-plate',
 	energy_required = 3,
-	category = 'aoe-category-casting-gold'
+	category = 'aoc-category-casting-gold'
 }})
 
 data:extend({{
-	name = 'aoe-smelting-gold-recipe',
+	name = 'aoc-smelting-gold-recipe',
 	type = 'recipe',
 	enabled = false,
     allow_decomposition = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-gold-dust', amount = 1}
+		{type = 'item', name = 'aoc-gold-dust', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-gold-plate', amount = 1}
+		{type = 'item', name = 'aoc-gold-plate', amount = 1}
     },
 	energy_required = 2.4,
 	category = 'smelting'
 }})
 
 data:extend({{
-    name = 'aoe-centrifuging-zinc-recipe',
+    name = 'aoc-centrifuging-zinc-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-zinc-ore', amount = 4}
+		{type = 'item', name = 'aoc-zinc-ore', amount = 4}
     },
     results = {
-        {type = 'item', name = 'aoe-zinc-processed', amount = 6},
-		{type = 'item', name = 'aoe-sand', amount = 1}
+        {type = 'item', name = 'aoc-zinc-processed', amount = 6},
+		{type = 'item', name = 'aoc-sand', amount = 1}
     },
-	main_product = 'aoe-zinc-processed',
+	main_product = 'aoc-zinc-processed',
 	category = 'centrifuging-zinc',
     energy_required = 6
 }})
 
 data:extend({{
-    name = 'aoe-kiln-zinc-recipe',
+    name = 'aoc-kiln-zinc-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-zinc-processed', amount = 4},
-		{type = 'item', name = 'aoe-copper-sulfate', amount = 1}
+		{type = 'item', name = 'aoc-zinc-processed', amount = 4},
+		{type = 'item', name = 'aoc-copper-sulfate', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoe-zinc-reduced', amount = 6},
-		{type = 'fluid', name = 'aoe-sulfur-dioxide', amount = 5}
+        {type = 'item', name = 'aoc-zinc-reduced', amount = 6},
+		{type = 'fluid', name = 'aoc-sulfur-dioxide', amount = 5}
     },
-	main_product = 'aoe-zinc-reduced',
-	category = 'aoe-category-kiln-smelting-zinc',
+	main_product = 'aoc-zinc-reduced',
+	category = 'aoc-category-kiln-smelting-zinc',
     energy_required = 4.8
 }})
 
 data:extend({{
-	name = 'aoe-crushing-zinc-recipe',
+	name = 'aoc-crushing-zinc-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-zinc-reduced', amount = 4}
+		{type = 'item', name = 'aoc-zinc-reduced', amount = 4}
 	},
 	results = {
-		{type = 'item', name = 'aoe-zinc-dust', amount = 5},
-		{type = 'item', name = 'aoe-zinc-processed', amount = 1, probability = 0.5},
-		{type = 'item', name = 'aoe-sand', amount = 1}
+		{type = 'item', name = 'aoc-zinc-dust', amount = 5},
+		{type = 'item', name = 'aoc-zinc-processed', amount = 1, probability = 0.5},
+		{type = 'item', name = 'aoc-sand', amount = 1}
     },
-	main_product = 'aoe-zinc-dust',
+	main_product = 'aoc-zinc-dust',
 	energy_required = 4,
-	category = 'aoe-category-crushing-zinc'
+	category = 'aoc-category-crushing-zinc'
 }})
 
 data:extend({{
-	name = 'aoe-mixing-zinc-recipe',
+	name = 'aoc-mixing-zinc-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-zinc-dust', amount = 5},
-		{type = 'fluid', name = 'aoe-hydrochloric-acid', amount = 5}
+		{type = 'item', name = 'aoc-zinc-dust', amount = 5},
+		{type = 'fluid', name = 'aoc-hydrochloric-acid', amount = 5}
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-zinc-slurry', amount = 30},
-		{type = 'item', name = 'aoe-slag', amount = 1}
+		{type = 'fluid', name = 'aoc-zinc-slurry', amount = 30},
+		{type = 'item', name = 'aoc-slag', amount = 1}
     },
-	main_product = 'aoe-zinc-slurry',
+	main_product = 'aoc-zinc-slurry',
 	energy_required = 5,
-	category = 'aoe-category-mixing-zinc'
+	category = 'aoc-category-mixing-zinc'
 }})
 
 data:extend({{
-	name = 'aoe-electrolyzing-zinc-recipe',
+	name = 'aoc-electrolyzing-zinc-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-zinc-slurry', amount = 25}
+		{type = 'fluid', name = 'aoc-zinc-slurry', amount = 25}
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-zinc-molten', amount = 30},
-		{type = 'fluid', name = 'aoe-tailings', amount = 30}
+		{type = 'fluid', name = 'aoc-zinc-molten', amount = 30},
+		{type = 'fluid', name = 'aoc-tailings', amount = 30}
     },
-	main_product = 'aoe-zinc-molten',
+	main_product = 'aoc-zinc-molten',
 	energy_required = 3,
-	category = 'aoe-category-electrolyzing-zinc'
+	category = 'aoc-category-electrolyzing-zinc'
 }})
 
 data:extend({{
-	name = 'aoe-casting-zinc-recipe',
+	name = 'aoc-casting-zinc-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-zinc-molten', amount = 25},
-		{type = 'item', name = 'aoe-mold', amount = 1}
+		{type = 'fluid', name = 'aoc-zinc-molten', amount = 25},
+		{type = 'item', name = 'aoc-mold', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-zinc-plate', amount = 6},
-		{type = 'item', name = 'aoe-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-zinc-plate', amount = 6},
+		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
     },
-	main_product = 'aoe-zinc-plate',
+	main_product = 'aoc-zinc-plate',
 	energy_required = 3,
-	category = 'aoe-category-casting-zinc'
+	category = 'aoc-category-casting-zinc'
 }})
 
 data:extend({{
-	name = 'aoe-smelting-zinc-recipe',
+	name = 'aoc-smelting-zinc-recipe',
 	type = 'recipe',
 	enabled = false,
     allow_decomposition = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-zinc-dust', amount = 1}
+		{type = 'item', name = 'aoc-zinc-dust', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-zinc-plate', amount = 1}
+		{type = 'item', name = 'aoc-zinc-plate', amount = 1}
     },
 	energy_required = 2.4,
 	category = 'smelting'
 }})
 
 data:extend({{
-    name = 'aoe-centrifuging-chromium-recipe',
+    name = 'aoc-centrifuging-chromium-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-chromium-ore', amount = 4}
+		{type = 'item', name = 'aoc-chromium-ore', amount = 4}
     },
     results = {
-        {type = 'item', name = 'aoe-chromium-processed', amount = 6},
-		{type = 'item', name = 'aoe-gravel', amount = 1}
+        {type = 'item', name = 'aoc-chromium-processed', amount = 6},
+		{type = 'item', name = 'aoc-gravel', amount = 1}
     },
-	main_product = 'aoe-chromium-processed',
+	main_product = 'aoc-chromium-processed',
 	category = 'centrifuging-chromium',
     energy_required = 6
 }})
 
 data:extend({{
-    name = 'aoe-kiln-chromium-recipe',
+    name = 'aoc-kiln-chromium-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-chromium-processed', amount = 4},
-		{type = 'item', name = 'aoe-aluminium-dust', amount = 1}
+		{type = 'item', name = 'aoc-chromium-processed', amount = 4},
+		{type = 'item', name = 'aoc-aluminium-dust', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoe-chromium-reduced', amount = 6},
-		{type = 'fluid', name = 'aoe-carbon-dioxide', amount = 5}
+        {type = 'item', name = 'aoc-chromium-reduced', amount = 6},
+		{type = 'fluid', name = 'aoc-carbon-dioxide', amount = 5}
     },
-	main_product = 'aoe-chromium-reduced',
-	category = 'aoe-category-kiln-smelting-chromium',
+	main_product = 'aoc-chromium-reduced',
+	category = 'aoc-category-kiln-smelting-chromium',
     energy_required = 4.8
 }})
 
 data:extend({{
-	name = 'aoe-crushing-chromium-recipe',
+	name = 'aoc-crushing-chromium-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-chromium-reduced', amount = 4}
+		{type = 'item', name = 'aoc-chromium-reduced', amount = 4}
 	},
 	results = {
-		{type = 'item', name = 'aoe-chromium-dust', amount = 5},
-		{type = 'item', name = 'aoe-chromium-processed', amount = 1, probability = 0.5},
-		{type = 'item', name = 'aoe-gravel', amount = 1}
+		{type = 'item', name = 'aoc-chromium-dust', amount = 5},
+		{type = 'item', name = 'aoc-chromium-processed', amount = 1, probability = 0.5},
+		{type = 'item', name = 'aoc-gravel', amount = 1}
     },
-	main_product = 'aoe-chromium-dust',
+	main_product = 'aoc-chromium-dust',
 	energy_required = 4,
-	category = 'aoe-category-crushing-chromium'
+	category = 'aoc-category-crushing-chromium'
 }})
 
 data:extend({{
-	name = 'aoe-mixing-chromium-recipe',
+	name = 'aoc-mixing-chromium-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-chromium-dust', amount = 5},
-		{type = 'fluid', name = 'aoe-formic-acid', amount = 5}
+		{type = 'item', name = 'aoc-chromium-dust', amount = 5},
+		{type = 'fluid', name = 'aoc-formic-acid', amount = 5}
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-chromium-slurry', amount = 30},
-		{type = 'item', name = 'aoe-slag', amount = 1}
+		{type = 'fluid', name = 'aoc-chromium-slurry', amount = 30},
+		{type = 'item', name = 'aoc-slag', amount = 1}
     },
-	main_product = 'aoe-chromium-slurry',
+	main_product = 'aoc-chromium-slurry',
 	energy_required = 5,
-	category = 'aoe-category-mixing-chromium'
+	category = 'aoc-category-mixing-chromium'
 }})
 
 data:extend({{
-	name = 'aoe-electrolyzing-chromium-recipe',
+	name = 'aoc-electrolyzing-chromium-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-chromium-slurry', amount = 25}
+		{type = 'fluid', name = 'aoc-chromium-slurry', amount = 25}
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-chromium-molten', amount = 30},
-		{type = 'fluid', name = 'aoe-tailings', amount = 30}
+		{type = 'fluid', name = 'aoc-chromium-molten', amount = 30},
+		{type = 'fluid', name = 'aoc-tailings', amount = 30}
     },
-	main_product = 'aoe-chromium-molten',
+	main_product = 'aoc-chromium-molten',
 	energy_required = 3,
-	category = 'aoe-category-electrolyzing-chromium'
+	category = 'aoc-category-electrolyzing-chromium'
 }})
 
 data:extend({{
-	name = 'aoe-casting-chromium-recipe',
+	name = 'aoc-casting-chromium-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-chromium-molten', amount = 25},
-		{type = 'item', name = 'aoe-mold', amount = 1}
+		{type = 'fluid', name = 'aoc-chromium-molten', amount = 25},
+		{type = 'item', name = 'aoc-mold', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-chromium-plate', amount = 6},
-		{type = 'item', name = 'aoe-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-chromium-plate', amount = 6},
+		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
     },
-	main_product = 'aoe-chromium-plate',
+	main_product = 'aoc-chromium-plate',
 	energy_required = 3,
-	category = 'aoe-category-casting-chromium'
+	category = 'aoc-category-casting-chromium'
 }})
 
 data:extend({{
-	name = 'aoe-smelting-chromium-recipe',
+	name = 'aoc-smelting-chromium-recipe',
 	type = 'recipe',
 	enabled = false,
     allow_decomposition = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-chromium-dust', amount = 1}
+		{type = 'item', name = 'aoc-chromium-dust', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-chromium-plate', amount = 1}
+		{type = 'item', name = 'aoc-chromium-plate', amount = 1}
     },
 	energy_required = 2.4,
 	category = 'smelting'
 }})
 
 data:extend({{
-    name = 'aoe-centrifuging-tungsten-recipe',
+    name = 'aoc-centrifuging-tungsten-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-tungsten-ore', amount = 4}
+		{type = 'item', name = 'aoc-tungsten-ore', amount = 4}
     },
     results = {
-        {type = 'item', name = 'aoe-tungsten-processed', amount = 6},
-		{type = 'item', name = 'aoe-gravel', amount = 1}
+        {type = 'item', name = 'aoc-tungsten-processed', amount = 6},
+		{type = 'item', name = 'aoc-gravel', amount = 1}
     },
-	main_product = 'aoe-tungsten-processed',
+	main_product = 'aoc-tungsten-processed',
 	category = 'centrifuging-tungsten',
     energy_required = 6
 }})
 
 data:extend({{
-    name = 'aoe-kiln-tungsten-recipe',
+    name = 'aoc-kiln-tungsten-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-tungsten-processed', amount = 4},
-		{type = 'fluid', name = 'aoe-hydrogen', amount = 5}
+		{type = 'item', name = 'aoc-tungsten-processed', amount = 4},
+		{type = 'fluid', name = 'aoc-hydrogen', amount = 5}
     },
     results = {
-        {type = 'item', name = 'aoe-tungsten-reduced', amount = 6},
-		{type = 'fluid', name = 'aoe-carbon-dioxide', amount = 5}
+        {type = 'item', name = 'aoc-tungsten-reduced', amount = 6},
+		{type = 'fluid', name = 'aoc-carbon-dioxide', amount = 5}
     },
-	main_product = 'aoe-tungsten-reduced',
-	category = 'aoe-category-kiln-smelting-tungsten',
+	main_product = 'aoc-tungsten-reduced',
+	category = 'aoc-category-kiln-smelting-tungsten',
     energy_required = 19.2
 }})
 
 data:extend({{
-	name = 'aoe-crushing-tungsten-recipe',
+	name = 'aoc-crushing-tungsten-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-tungsten-reduced', amount = 4}
+		{type = 'item', name = 'aoc-tungsten-reduced', amount = 4}
 	},
 	results = {
-		{type = 'item', name = 'aoe-tungsten-dust', amount = 5},
-		{type = 'item', name = 'aoe-tungsten-processed', amount = 1, probability = 0.5},
-		{type = 'item', name = 'aoe-sand', amount = 1}
+		{type = 'item', name = 'aoc-tungsten-dust', amount = 5},
+		{type = 'item', name = 'aoc-tungsten-processed', amount = 1, probability = 0.5},
+		{type = 'item', name = 'aoc-sand', amount = 1}
     },
-	main_product = 'aoe-tungsten-dust',
+	main_product = 'aoc-tungsten-dust',
 	energy_required = 8,
-	category = 'aoe-category-crushing-tungsten'
+	category = 'aoc-category-crushing-tungsten'
 }})
 
 data:extend({{
-	name = 'aoe-mixing-tungsten-recipe',
+	name = 'aoc-mixing-tungsten-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-tungsten-dust', amount = 5},
-		{type = 'fluid', name = 'aoe-methanol', amount = 5}
+		{type = 'item', name = 'aoc-tungsten-dust', amount = 5},
+		{type = 'fluid', name = 'aoc-methanol', amount = 5}
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-tungsten-slurry', amount = 30},
-		{type = 'item', name = 'aoe-slag', amount = 1}
+		{type = 'fluid', name = 'aoc-tungsten-slurry', amount = 30},
+		{type = 'item', name = 'aoc-slag', amount = 1}
     },
-	main_product = 'aoe-tungsten-slurry',
+	main_product = 'aoc-tungsten-slurry',
 	energy_required = 20,
-	category = 'aoe-category-mixing-tungsten'
+	category = 'aoc-category-mixing-tungsten'
 }})
 
 data:extend({{
-	name = 'aoe-electrolyzing-tungsten-recipe',
+	name = 'aoc-electrolyzing-tungsten-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-tungsten-slurry', amount = 25}
+		{type = 'fluid', name = 'aoc-tungsten-slurry', amount = 25}
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-tungsten-molten', amount = 30},
-		{type = 'fluid', name = 'aoe-tailings', amount = 30}
+		{type = 'fluid', name = 'aoc-tungsten-molten', amount = 30},
+		{type = 'fluid', name = 'aoc-tailings', amount = 30}
     },
-	main_product = 'aoe-tungsten-molten',
+	main_product = 'aoc-tungsten-molten',
 	energy_required = 12,
-	category = 'aoe-category-electrolyzing-tungsten'
+	category = 'aoc-category-electrolyzing-tungsten'
 }})
 
 data:extend({{
-	name = 'aoe-casting-tungsten-recipe',
+	name = 'aoc-casting-tungsten-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-tungsten-molten', amount = 25},
-		{type = 'item', name = 'aoe-mold', amount = 1}
+		{type = 'fluid', name = 'aoc-tungsten-molten', amount = 25},
+		{type = 'item', name = 'aoc-mold', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-tungsten-plate', amount = 6},
-		{type = 'item', name = 'aoe-mold', amount = 1, catalyst_amount = 1, probability = 0.7}
+		{type = 'item', name = 'aoc-tungsten-plate', amount = 6},
+		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.7}
     },
-	main_product = 'aoe-tungsten-plate',
+	main_product = 'aoc-tungsten-plate',
 	energy_required = 3,
-	category = 'aoe-category-casting-tungsten'
+	category = 'aoc-category-casting-tungsten'
 }})
 
 data:extend({{
-	name = 'aoe-smelting-tungsten-recipe',
+	name = 'aoc-smelting-tungsten-recipe',
 	type = 'recipe',
 	enabled = false,
     allow_decomposition = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-tungsten-dust', amount = 1}
+		{type = 'item', name = 'aoc-tungsten-dust', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-tungsten-plate', amount = 1}
+		{type = 'item', name = 'aoc-tungsten-plate', amount = 1}
     },
 	energy_required = 2.4,
 	category = 'smelting'
 }})
 
 data:extend({{
-    name = 'aoe-chemistry-hydrogen-chloride-recipe',
+    name = 'aoc-chemistry-hydrogen-chloride-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-chlorine', amount = 20},
-		{type = 'fluid', name = 'aoe-hydrogen', amount = 20}
+		{type = 'fluid', name = 'aoc-chlorine', amount = 20},
+		{type = 'fluid', name = 'aoc-hydrogen', amount = 20}
     },
     results = {
-        {type = 'fluid', name = 'aoe-hydrogen-chloride', amount = 40}
+        {type = 'fluid', name = 'aoc-hydrogen-chloride', amount = 40}
     },
     energy_required = 4,
 	category = 'chemistry'
 }})
 
 data:extend({{
-    name = 'aoe-chemistry-hydrochloric-acid-recipe',
+    name = 'aoc-chemistry-hydrochloric-acid-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-hydrogen-chloride', amount = 40},
+		{type = 'fluid', name = 'aoc-hydrogen-chloride', amount = 40},
 		{type = 'fluid', name = 'water', amount = 40}
     },
     results = {
-        {type = 'fluid', name = 'aoe-hydrochloric-acid', amount = 40}
+        {type = 'fluid', name = 'aoc-hydrochloric-acid', amount = 40}
     },
     energy_required = 4,
 	category = 'chemistry'
 }})
 
 data:extend({{
-    name = 'aoe-mixing-caustic-solution-recipe',
+    name = 'aoc-mixing-caustic-solution-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-caustic-soda', amount = 1},
+		{type = 'item', name = 'aoc-caustic-soda', amount = 1},
 		{type = 'fluid', name = 'water', amount = 10}
     },
     results = {
-        {type = 'fluid', name = 'aoe-caustic-solution', amount = 10}
+        {type = 'fluid', name = 'aoc-caustic-solution', amount = 10}
     },
     energy_required = 1,
-	category = 'aoe-category-mixing'
+	category = 'aoc-category-mixing'
 }})
 
 data:extend({{
-    name = 'aoe-chemistry-sulfur-dioxide-recipe',
+    name = 'aoc-chemistry-sulfur-dioxide-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
 		{type = 'item', name = 'sulfur', amount = 1},
-		{type = 'fluid', name = 'aoe-oxygen', amount = 10}
+		{type = 'fluid', name = 'aoc-oxygen', amount = 10}
     },
     results = {
-        {type = 'fluid', name = 'aoe-sulfur-dioxide', amount = 10}
+        {type = 'fluid', name = 'aoc-sulfur-dioxide', amount = 10}
     },
     energy_required = 1,
 	category = 'chemistry'
 }})
 
 data:extend({{
-    name = 'aoe-chemistry-sulfuric-acid-recipe',
+    name = 'aoc-chemistry-sulfuric-acid-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-sulfur-dioxide', amount = 20},
+		{type = 'fluid', name = 'aoc-sulfur-dioxide', amount = 20},
 		{type = 'fluid', name = 'water', amount = 20}
     },
     results = {
@@ -2199,105 +2199,105 @@ data:extend({{
 }})
 
 data:extend({{
-    name = 'aoe-chemistry-sodium-bisulfate-recipe',
+    name = 'aoc-chemistry-sodium-bisulfate-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-caustic-soda', amount = 1},
+		{type = 'item', name = 'aoc-caustic-soda', amount = 1},
 		{type = 'fluid', name = 'sulfuric-acid', amount = 10}
     },
     results = {
-        {type = 'item', name = 'aoe-sodium-bisulfate', amount = 1},
+        {type = 'item', name = 'aoc-sodium-bisulfate', amount = 1},
 		{type = 'fluid', name = 'water', amount = 10}
     },
-	main_product = 'aoe-sodium-bisulfate',
+	main_product = 'aoc-sodium-bisulfate',
     energy_required = 1,
 	category = 'chemistry'
 }})
 
 data:extend({{
-    name = 'aoe-chemistry-sodium-bisulfate-2-recipe',
+    name = 'aoc-chemistry-sodium-bisulfate-2-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-salt', amount = 1},
+		{type = 'item', name = 'aoc-salt', amount = 1},
 		{type = 'fluid', name = 'sulfuric-acid', amount = 10},
     },
     results = {
-        {type = 'item', name = 'aoe-sodium-bisulfate', amount = 1},
-		{type = 'fluid', name = 'aoe-hydrogen-chloride', amount = 10}
+        {type = 'item', name = 'aoc-sodium-bisulfate', amount = 1},
+		{type = 'fluid', name = 'aoc-hydrogen-chloride', amount = 10}
     },
-	main_product = 'aoe-sodium-bisulfate',
+	main_product = 'aoc-sodium-bisulfate',
     energy_required = 1,
 	category = 'chemistry'
 }})
 
 data:extend({{
-    name = 'aoe-refining-hydrogen-cyanide-recipe',
+    name = 'aoc-refining-hydrogen-cyanide-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-ammonia', amount = 20},
-		{type = 'fluid', name = 'aoe-methane', amount = 20},
-		{type = 'fluid', name = 'aoe-oxygen', amount = 30}
+		{type = 'fluid', name = 'aoc-ammonia', amount = 20},
+		{type = 'fluid', name = 'aoc-methane', amount = 20},
+		{type = 'fluid', name = 'aoc-oxygen', amount = 30}
     },
     results = {
-        {type = 'item', name = 'aoe-hydrogen-cyanide', amount = 2}
+        {type = 'item', name = 'aoc-hydrogen-cyanide', amount = 2}
     },
     energy_required = 7,
 	category = 'oil-processing'
 }})
 
 data:extend({{
-    name = 'aoe-crushing-hydrogen-cyanide-recipe',
+    name = 'aoc-crushing-hydrogen-cyanide-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-flax-seed', amount = 4}
+		{type = 'item', name = 'aoc-flax-seed', amount = 4}
     },
     results = {
-        {type = 'item', name = 'aoe-hydrogen-cyanide', amount = 2}
+        {type = 'item', name = 'aoc-hydrogen-cyanide', amount = 2}
     },
     energy_required = 4,
-	category = 'aoe-category-crushing'
+	category = 'aoc-category-crushing'
 }})
 
 data:extend({{
-    name = 'aoe-chemistry-sodium-cyanide-recipe',
+    name = 'aoc-chemistry-sodium-cyanide-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-hydrogen-cyanide', amount = 1},
-		{type = 'item', name = 'aoe-caustic-soda', amount = 1}
+		{type = 'item', name = 'aoc-hydrogen-cyanide', amount = 1},
+		{type = 'item', name = 'aoc-caustic-soda', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoe-sodium-cyanide', amount = 1},
+        {type = 'item', name = 'aoc-sodium-cyanide', amount = 1},
 		{type = 'fluid', name = 'water', amount = 10}
     },
-	main_product = 'aoe-sodium-cyanide',
+	main_product = 'aoc-sodium-cyanide',
     energy_required = 4,
 	category = 'chemistry'
 }})
 
 data:extend({{
-    name = 'aoe-chemistry-sodium-cyanide-2-recipe',
+    name = 'aoc-chemistry-sodium-cyanide-2-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-hydrogen-cyanide', amount = 1},
-		{type = 'item', name = 'aoe-sodium-bisulfate', amount = 1}
+		{type = 'item', name = 'aoc-hydrogen-cyanide', amount = 1},
+		{type = 'item', name = 'aoc-sodium-bisulfate', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoe-sodium-cyanide', amount = 1},
+        {type = 'item', name = 'aoc-sodium-cyanide', amount = 1},
 		{type = 'fluid', name = 'sulfuric-acid', amount = 10}
     },
-    main_product = 'aoe-sodium-cyanide',
+    main_product = 'aoc-sodium-cyanide',
     energy_required = 4,
 	category = 'chemistry'
 }})
 
 data:extend({{
-    name = 'aoe-chemistry-copper-sulfate-recipe',
+    name = 'aoc-chemistry-copper-sulfate-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -2305,424 +2305,424 @@ data:extend({{
 		{type = 'fluid', name = 'sulfuric-acid', amount = 20}
     },
     results = {
-        {type = 'item', name = 'aoe-copper-sulfate', amount = 2},
+        {type = 'item', name = 'aoc-copper-sulfate', amount = 2},
 		{type = 'fluid', name = 'water', amount = 10}
     },
-    main_product = 'aoe-copper-sulfate',
+    main_product = 'aoc-copper-sulfate',
     energy_required = 2,
 	category = 'chemistry'
 }})
 
 data:extend({{
-    name = 'aoe-crafting-fuel-burning-generator-recipe',
+    name = 'aoc-crafting-fuel-burning-generator-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-steel-machine-hull', amount = 20},
-		{type = 'item', name = 'aoe-aluminium-plate', amount = 50},
+		{type = 'item', name = 'aoc-steel-machine-hull', amount = 20},
+		{type = 'item', name = 'aoc-aluminium-plate', amount = 50},
 		{type = 'item', name = 'concrete', amount = 100},
 		{type = 'item', name = 'storage-tank', amount = 5}
     },
     results = {
-        {type = 'item', name = 'aoe-fuel-burning-generator', amount = 1}
+        {type = 'item', name = 'aoc-fuel-burning-generator', amount = 1}
     },
     energy_required = 5
 }})
 
 data:extend({{
-	name = 'aoe-kiln-cement-2-recipe',
+	name = 'aoc-kiln-cement-2-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-slaked-lime', amount = 3},
-		{type = 'item', name = 'aoe-quartz-ore', amount = 2},
-		{type = 'item', name = 'aoe-aluminium-ore', amount = 1},
+		{type = 'item', name = 'aoc-slaked-lime', amount = 3},
+		{type = 'item', name = 'aoc-quartz-ore', amount = 2},
+		{type = 'item', name = 'aoc-aluminium-ore', amount = 1},
 		{type = 'item', name = 'iron-ore', amount = 1},
-		{type = 'item', name = 'aoe-slag', amount = 3}
+		{type = 'item', name = 'aoc-slag', amount = 3}
 	},
 	results = {
-        {type = 'item', name = 'aoe-cement', amount = 7},
-        {type = 'fluid', name = 'aoe-carbon-dioxide', amount = 15}
+        {type = 'item', name = 'aoc-cement', amount = 7},
+        {type = 'fluid', name = 'aoc-carbon-dioxide', amount = 15}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-cement"] ), get_icons( data.raw.item["aoe-slag"] ) ),
-	main_product = 'aoe-cement',
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-cement"] ), get_icons( data.raw.item["aoc-slag"] ) ),
+	main_product = 'aoc-cement',
 	energy_required = 2.4,
-	category = 'aoe-category-kiln-smelting'
+	category = 'aoc-category-kiln-smelting'
 }})
 
 data:extend({{
-	name = 'aoe-crushing-slag-recipe',
+	name = 'aoc-crushing-slag-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-slag', amount = 6}
+		{type = 'item', name = 'aoc-slag', amount = 6}
 	},
 	results = {
 		{type = 'item', name = 'coal', amount = 1, probability = 0.06},
-        {type = 'item', name = 'aoe-aluminium-ore', amount = 1, probability = 0.06},
-        {type = 'item', name = 'aoe-quartz-ore', amount = 1, probability = 0.06},
+        {type = 'item', name = 'aoc-aluminium-ore', amount = 1, probability = 0.06},
+        {type = 'item', name = 'aoc-quartz-ore', amount = 1, probability = 0.06},
         {type = 'item', name = 'iron-ore', amount = 1, probability = 0.04},
-        {type = 'item', name = 'aoe-tin-ore', amount = 1, probability = 0.04},
-        {type = 'item', name = 'aoe-magnesium-ore', amount = 1, probability = 0.04},
-        {type = 'item', name = 'aoe-manganese-ore', amount = 1, probability = 0.02},
+        {type = 'item', name = 'aoc-tin-ore', amount = 1, probability = 0.04},
+        {type = 'item', name = 'aoc-magnesium-ore', amount = 1, probability = 0.04},
+        {type = 'item', name = 'aoc-manganese-ore', amount = 1, probability = 0.02},
         {type = 'item', name = 'copper-ore', amount = 1, probability = 0.02}
     },
-	icon = data.raw.item["aoe-slag"].icon,
-	icon_size = data.raw.item["aoe-slag"].icon_size,
-	subgroup = "aoe-stone",
+	icon = data.raw.item["aoc-slag"].icon,
+	icon_size = data.raw.item["aoc-slag"].icon_size,
+	subgroup = "aoc-stone",
 	order = "r1",
 	energy_required = 3,
-	category = 'aoe-category-crushing'
+	category = 'aoc-category-crushing'
 }})
 
 data:extend({{
-    name = 'aoe-chemistry-zinc-chloride-recipe',
+    name = 'aoc-chemistry-zinc-chloride-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-zinc-ore', amount = 1},
-		{type = 'fluid', name = 'aoe-hydrochloric-acid', amount = 20}
+		{type = 'item', name = 'aoc-zinc-ore', amount = 1},
+		{type = 'fluid', name = 'aoc-hydrochloric-acid', amount = 20}
     },
     results = {
-        {type = 'item', name = 'aoe-zinc-chloride', amount = 2},
-		{type = 'fluid', name = 'aoe-hydrogen', amount = 10}
+        {type = 'item', name = 'aoc-zinc-chloride', amount = 2},
+		{type = 'fluid', name = 'aoc-hydrogen', amount = 10}
     },
-    main_product = 'aoe-zinc-chloride',
+    main_product = 'aoc-zinc-chloride',
     energy_required = 2,
 	category = 'chemistry'
 }})
 
 data:extend({{
-    name = 'aoe-high-pressure-heating-carbon-coal-recipe',
+    name = 'aoc-high-pressure-heating-carbon-coal-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
 		{type = 'item', name = 'coal', amount = 1},
-		{type = 'fluid', name = 'aoe-vacuum', amount = 100}
+		{type = 'fluid', name = 'aoc-vacuum', amount = 100}
     },
     results = {
-        {type = 'item', name = 'aoe-carbon', amount = 1}
+        {type = 'item', name = 'aoc-carbon', amount = 1}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-carbon"] ), get_icons( data.raw.item["coal"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-carbon"] ), get_icons( data.raw.item["coal"] ) ),
     energy_required = 5,
-	category = 'aoe-category-high-pressure-heating'
+	category = 'aoc-category-high-pressure-heating'
 }})
 
 data:extend({{
-    name = 'aoe-high-pressure-heating-carbon-charcoal-recipe',
+    name = 'aoc-high-pressure-heating-carbon-charcoal-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-charcoal', amount = 1},
-		{type = 'fluid', name = 'aoe-vacuum', amount = 100}
+		{type = 'item', name = 'aoc-charcoal', amount = 1},
+		{type = 'fluid', name = 'aoc-vacuum', amount = 100}
     },
     results = {
-        {type = 'item', name = 'aoe-carbon', amount = 1}
+        {type = 'item', name = 'aoc-carbon', amount = 1}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-carbon"] ), get_icons( data.raw.item["aoe-charcoal"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-carbon"] ), get_icons( data.raw.item["aoc-charcoal"] ) ),
     energy_required = 5,
-	category = 'aoe-category-high-pressure-heating'
+	category = 'aoc-category-high-pressure-heating'
 }})
 
 data:extend({{
-    name = 'aoe-chemistry-calcium-chloride-recipe',
+    name = 'aoc-chemistry-calcium-chloride-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-quicklime', amount = 2},
-		{type = 'fluid', name = 'aoe-brine', amount = 200}
+		{type = 'item', name = 'aoc-quicklime', amount = 2},
+		{type = 'fluid', name = 'aoc-brine', amount = 200}
     },
     results = {
-        {type = 'item', name = 'aoe-calcium-chloride', amount = 1},
-        {type = 'item', name = 'aoe-soda-ash', amount = 1}
+        {type = 'item', name = 'aoc-calcium-chloride', amount = 1},
+        {type = 'item', name = 'aoc-soda-ash', amount = 1}
     },
-	main_product = 'aoe-calcium-chloride',
+	main_product = 'aoc-calcium-chloride',
     energy_required = 4,
 	category = 'chemistry'
 }})
 
 data:extend({{
-    name = 'aoe-crafting-carbon-fiber-mesh-recipe',
+    name = 'aoc-crafting-carbon-fiber-mesh-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-carbon', amount = 5},
-		{type = 'fluid', name = 'aoe-nitrogen', amount = 50}
+		{type = 'item', name = 'aoc-carbon', amount = 5},
+		{type = 'fluid', name = 'aoc-nitrogen', amount = 50}
     },
     results = {
-        {type = 'item', name = 'aoe-carbon-fiber-mesh', amount = 1}
+        {type = 'item', name = 'aoc-carbon-fiber-mesh', amount = 1}
     },
 	category = 'advanced-crafting',
     energy_required = 5
 }})
 
 data:extend({{
-    name = 'aoe-chemistry-carbon-activated-recipe',
+    name = 'aoc-chemistry-carbon-activated-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-carbon', amount = 5},
-		{type = 'fluid', name = 'aoe-hydrochloric-acid', amount = 50},
-		{type = 'fluid', name = 'aoe-nitrogen', amount = 50},
-		{type = 'item', name = 'aoe-caustic-soda', amount = 3},
-		{type = 'item', name = 'aoe-calcium-chloride', amount = 5},
-		{type = 'item', name = 'aoe-zinc-chloride', amount = 5}
+		{type = 'item', name = 'aoc-carbon', amount = 5},
+		{type = 'fluid', name = 'aoc-hydrochloric-acid', amount = 50},
+		{type = 'fluid', name = 'aoc-nitrogen', amount = 50},
+		{type = 'item', name = 'aoc-caustic-soda', amount = 3},
+		{type = 'item', name = 'aoc-calcium-chloride', amount = 5},
+		{type = 'item', name = 'aoc-zinc-chloride', amount = 5}
     },
     results = {
-        {type = 'item', name = 'aoe-carbon-activated', amount = 1}
+        {type = 'item', name = 'aoc-carbon-activated', amount = 1}
     },
     energy_required = 10,
 	category = 'chemistry'
 }})
 
 data:extend({{
-    name = 'aoe-high-pressure-heating-diamond-recipe',
+    name = 'aoc-high-pressure-heating-diamond-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-coal-dust', amount = 50},
-		{type = 'fluid', name = 'aoe-pressure', amount = 1000}
+		{type = 'item', name = 'aoc-coal-dust', amount = 50},
+		{type = 'fluid', name = 'aoc-pressure', amount = 1000}
     },
     results = {
-        {type = 'item', name = 'aoe-diamond', amount = 1}
+        {type = 'item', name = 'aoc-diamond', amount = 1}
     },
     energy_required = 10,
-	category = 'aoe-category-high-pressure-heating'
+	category = 'aoc-category-high-pressure-heating'
 }})
 
 data:extend({{
-	name = 'aoe-crafting-carbon-rotor-recipe',
+	name = 'aoc-crafting-carbon-rotor-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
 		{type = 'item', name = 'engine-unit', amount = 1},
-		{type = 'item', name = 'aoe-carbon-fiber-mesh', amount = 20},
+		{type = 'item', name = 'aoc-carbon-fiber-mesh', amount = 20},
 	},
 	results = {
-        {type = 'item', name = 'aoe-rotor-carbon', amount = 1}
+        {type = 'item', name = 'aoc-rotor-carbon', amount = 1}
     },
 	energy_required = 10
 }})
 
 data:extend({{
-	name = 'aoe-rotor-carbon-recipe',
+	name = 'aoc-rotor-carbon-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-rotor-carbon', amount = 1}
+		{type = 'item', name = 'aoc-rotor-carbon', amount = 1}
 	},
 	results = {
     },
-	icon = data.raw.item["aoe-rotor-carbon"].icon,
-	icon_size = data.raw.item["aoe-rotor-carbon"].icon_size,
+	icon = data.raw.item["aoc-rotor-carbon"].icon,
+	icon_size = data.raw.item["aoc-rotor-carbon"].icon_size,
 	energy_required = 3000,
-	subgroup = 'aoe-power-buildings',
+	subgroup = 'aoc-power-buildings',
 	order = 'd2',
-	category = 'aoe-category-rotor'
+	category = 'aoc-category-rotor'
 }})
 
 data:extend({{
-	name = 'aoe-sedimenting-tailings-recipe',
+	name = 'aoc-sedimenting-tailings-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-tailings', amount = 200},
-		{type = 'item', name = 'aoe-carbon-activated', amount = 1}
+		{type = 'fluid', name = 'aoc-tailings', amount = 200},
+		{type = 'item', name = 'aoc-carbon-activated', amount = 1}
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-wastewater', amount = 200},
-		{type = 'item', name = 'aoe-tailings-dust', amount = 2},
-		{type = 'item', name = 'aoe-carbon-activated', amount = 1, probability = 0.96, catalyst_amount = 1}
+		{type = 'fluid', name = 'aoc-wastewater', amount = 200},
+		{type = 'item', name = 'aoc-tailings-dust', amount = 2},
+		{type = 'item', name = 'aoc-carbon-activated', amount = 1, probability = 0.96, catalyst_amount = 1}
     },
-	main_product = 'aoe-tailings-dust',
+	main_product = 'aoc-tailings-dust',
 	energy_required = 4,
-	category = 'aoe-category-sedimenting'
+	category = 'aoc-category-sedimenting'
 }})
 
 data:extend({{
-	name = 'aoe-crushing-tailings-dust-recipe',
+	name = 'aoc-crushing-tailings-dust-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-tailings-dust', amount = 6}
+		{type = 'item', name = 'aoc-tailings-dust', amount = 6}
 	},
 	results = {
-		{type = 'item', name = 'aoe-lead-ore', amount = 1, probability = 0.04},
-        {type = 'item', name = 'aoe-silver-ore', amount = 1, probability = 0.04},
-        {type = 'item', name = 'aoe-nickel-ore', amount = 1, probability = 0.04},
-        {type = 'item', name = 'aoe-gold-ore', amount = 1, probability = 0.04},
-        {type = 'item', name = 'aoe-zinc-ore', amount = 1, probability = 0.04},
-        {type = 'item', name = 'aoe-chromium-ore', amount = 1, probability = 0.04},
-        {type = 'item', name = 'aoe-tungsten-ore', amount = 1, probability = 0.04},
-        {type = 'item', name = 'aoe-nauvium-ore', amount = 1, probability = 0.02}
+		{type = 'item', name = 'aoc-lead-ore', amount = 1, probability = 0.04},
+        {type = 'item', name = 'aoc-silver-ore', amount = 1, probability = 0.04},
+        {type = 'item', name = 'aoc-nickel-ore', amount = 1, probability = 0.04},
+        {type = 'item', name = 'aoc-gold-ore', amount = 1, probability = 0.04},
+        {type = 'item', name = 'aoc-zinc-ore', amount = 1, probability = 0.04},
+        {type = 'item', name = 'aoc-chromium-ore', amount = 1, probability = 0.04},
+        {type = 'item', name = 'aoc-tungsten-ore', amount = 1, probability = 0.04},
+        {type = 'item', name = 'aoc-nauvium-ore', amount = 1, probability = 0.02}
     },
-	icon = data.raw.item["aoe-tailings-dust"].icon,
-	icon_size = data.raw.item["aoe-tailings-dust"].icon_size,
-	subgroup = "aoe-metals-rest",
+	icon = data.raw.item["aoc-tailings-dust"].icon,
+	icon_size = data.raw.item["aoc-tailings-dust"].icon_size,
+	subgroup = "aoc-metals-rest",
 	order = "k1",
 	energy_required = 3,
-	category = 'aoe-category-crushing'
+	category = 'aoc-category-crushing'
 }})
 
 data:extend({{
-	name = 'aoe-casting-steel-recipe',
+	name = 'aoc-casting-steel-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-iron-molten', amount = 40},
-		{type = 'item', name = 'aoe-coal-dust', amount = 1},
-		{type = 'item', name = 'aoe-manganese-dust', amount = 1},
-		{type = 'item', name = 'aoe-mold', amount = 1}
+		{type = 'fluid', name = 'aoc-iron-molten', amount = 40},
+		{type = 'item', name = 'aoc-coal-dust', amount = 1},
+		{type = 'item', name = 'aoc-manganese-dust', amount = 1},
+		{type = 'item', name = 'aoc-mold', amount = 1}
 	},
 	results = {
 		{type = 'item', name = 'steel-plate', amount = 6},
-		{type = 'item', name = 'aoe-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
     },
 	main_product = 'steel-plate',
 	energy_required = 3,
-	category = 'aoe-category-casting'
+	category = 'aoc-category-casting'
 }})
 
 data:extend({{
-	name = 'aoe-casting-stainless-steel-recipe',
+	name = 'aoc-casting-stainless-steel-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-iron-molten', amount = 40},
-		{type = 'fluid', name = 'aoe-nickel-molten', amount = 15},
-		{type = 'fluid', name = 'aoe-chromium-molten', amount = 15},
-		{type = 'item', name = 'aoe-coal-dust', amount = 1},
-		{type = 'item', name = 'aoe-manganese-dust', amount = 1},
-		{type = 'item', name = 'aoe-mold', amount = 1}
+		{type = 'fluid', name = 'aoc-iron-molten', amount = 40},
+		{type = 'fluid', name = 'aoc-nickel-molten', amount = 15},
+		{type = 'fluid', name = 'aoc-chromium-molten', amount = 15},
+		{type = 'item', name = 'aoc-coal-dust', amount = 1},
+		{type = 'item', name = 'aoc-manganese-dust', amount = 1},
+		{type = 'item', name = 'aoc-mold', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-stainless-steel', amount = 4},
-		{type = 'item', name = 'aoe-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-stainless-steel', amount = 4},
+		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
     },
-	main_product = 'aoe-stainless-steel',
+	main_product = 'aoc-stainless-steel',
 	energy_required = 3,
-	category = 'aoe-category-casting'
+	category = 'aoc-category-casting'
 }})
 
 data:extend({{
-	name = 'aoe-casting-solder-recipe',
+	name = 'aoc-casting-solder-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-tin-molten', amount = 15},
-		{type = 'fluid', name = 'aoe-lead-molten', amount = 10},
-		{type = 'item', name = 'aoe-mold', amount = 1}
+		{type = 'fluid', name = 'aoc-tin-molten', amount = 15},
+		{type = 'fluid', name = 'aoc-lead-molten', amount = 10},
+		{type = 'item', name = 'aoc-mold', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-solder', amount = 6},
-		{type = 'item', name = 'aoe-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-solder', amount = 6},
+		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
     },
-	main_product = 'aoe-solder',
+	main_product = 'aoc-solder',
 	energy_required = 3,
-	category = 'aoe-category-casting'
+	category = 'aoc-category-casting'
 }})
 
 data:extend({{
-	name = 'aoe-casting-brass-recipe',
+	name = 'aoc-casting-brass-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-copper-molten', amount = 17},
-		{type = 'fluid', name = 'aoe-zinc-molten', amount = 8},
-		{type = 'item', name = 'aoe-mold', amount = 1}
+		{type = 'fluid', name = 'aoc-copper-molten', amount = 17},
+		{type = 'fluid', name = 'aoc-zinc-molten', amount = 8},
+		{type = 'item', name = 'aoc-mold', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-brass', amount = 6},
-		{type = 'item', name = 'aoe-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-brass', amount = 6},
+		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
     },
-	main_product = 'aoe-brass',
+	main_product = 'aoc-brass',
 	energy_required = 3,
-	category = 'aoe-category-casting'
+	category = 'aoc-category-casting'
 }})
 
 data:extend({{
-	name = 'aoe-crafting-brass-rod-recipe',
+	name = 'aoc-crafting-brass-rod-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-brass', amount = 1}
+		{type = 'item', name = 'aoc-brass', amount = 1}
 	},
 	results = {
-        {type = 'item', name = 'aoe-brass-rod', amount = 2}
+        {type = 'item', name = 'aoc-brass-rod', amount = 2}
     },
 	energy_required = 0.4
 }})
 
 data:extend({{
-	name = 'aoe-casting-electrum-recipe',
+	name = 'aoc-casting-electrum-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-gold-molten', amount = 14},
-		{type = 'fluid', name = 'aoe-silver-molten', amount = 11},
-		{type = 'item', name = 'aoe-mold', amount = 1}
+		{type = 'fluid', name = 'aoc-gold-molten', amount = 14},
+		{type = 'fluid', name = 'aoc-silver-molten', amount = 11},
+		{type = 'item', name = 'aoc-mold', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-electrum', amount = 6},
-		{type = 'item', name = 'aoe-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-electrum', amount = 6},
+		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
     },
-	main_product = 'aoe-electrum',
+	main_product = 'aoc-electrum',
 	energy_required = 3,
-	category = 'aoe-category-casting'
+	category = 'aoc-category-casting'
 }})
 
 data:extend({{
-	name = 'aoe-casting-bronze-plate-recipe',
+	name = 'aoc-casting-bronze-plate-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-copper-molten', amount = 18},
-		{type = 'fluid', name = 'aoe-tin-molten', amount = 7},
-		{type = 'item', name = 'aoe-mold', amount = 1}
+		{type = 'fluid', name = 'aoc-copper-molten', amount = 18},
+		{type = 'fluid', name = 'aoc-tin-molten', amount = 7},
+		{type = 'item', name = 'aoc-mold', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-bronze-plate', amount = 6},
-		{type = 'item', name = 'aoe-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-bronze-plate', amount = 6},
+		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
     },
-	main_product = 'aoe-bronze-plate',
+	main_product = 'aoc-bronze-plate',
 	energy_required = 3,
-	category = 'aoe-category-casting'
+	category = 'aoc-category-casting'
 }})
 
 data:extend({{
-	name = 'aoe-kiln-smelting-silicon-recipe',
+	name = 'aoc-kiln-smelting-silicon-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-coke', amount = 2},
-		{type = 'item', name = 'aoe-quartz-dust', amount = 4},
-		{type = 'item', name = 'aoe-sand', amount = 1}
+		{type = 'item', name = 'aoc-coke', amount = 2},
+		{type = 'item', name = 'aoc-quartz-dust', amount = 4},
+		{type = 'item', name = 'aoc-sand', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-silicon', amount = 4},
-		{type = 'fluid', name = 'aoe-carbon-dioxide', amount = 1}
+		{type = 'item', name = 'aoc-silicon', amount = 4},
+		{type = 'fluid', name = 'aoc-carbon-dioxide', amount = 1}
     },
-	main_product = 'aoe-silicon',
+	main_product = 'aoc-silicon',
 	energy_required = 4.8,
-	category = 'aoe-category-kiln-smelting'
+	category = 'aoc-category-kiln-smelting'
 }})
 
 data:extend({{
-	name = 'aoe-sawmill-silicon-recipe',
+	name = 'aoc-sawmill-silicon-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-silicon', amount = 1}
+		{type = 'item', name = 'aoc-silicon', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-silicon-wafer', amount = 6}
+		{type = 'item', name = 'aoc-silicon-wafer', amount = 6}
     },
 	energy_required = 1,
-	category = 'aoe-category-sawing'
+	category = 'aoc-category-sawing'
 }})
 
 data:extend({{
-	name = 'aoe-crafting-rail-recipe',
+	name = 'aoc-crafting-rail-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
@@ -2730,7 +2730,7 @@ data:extend({{
 		{type = 'item', name = 'steel-plate', amount = 2},
 		{type = 'item', name = 'wood', amount = 2},
 		{type = 'item', name = 'stone', amount = 1},
-		{type = 'item', name = 'aoe-solder', amount = 1}
+		{type = 'item', name = 'aoc-solder', amount = 1}
 	},
 	results = {
 		{type = 'item', name = 'rail', amount = 4}
@@ -2739,7 +2739,7 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoe-crafting-locomotive-recipe',
+	name = 'aoc-crafting-locomotive-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
@@ -2755,7 +2755,7 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoe-crafting-cargo-wagon-recipe',
+	name = 'aoc-crafting-cargo-wagon-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
@@ -2769,7 +2769,7 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoe-crafting-fluid-wagon-recipe',
+	name = 'aoc-crafting-fluid-wagon-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
@@ -2784,13 +2784,13 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoe-crafting-train-stop-recipe',
+	name = 'aoc-crafting-train-stop-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
 		{type = 'item', name = 'electronic-circuit', amount = 5},
-		{type = 'item', name = 'aoe-bronze-rod', amount = 10},
-		{type = 'item', name = 'aoe-solder', amount = 2}
+		{type = 'item', name = 'aoc-bronze-rod', amount = 10},
+		{type = 'item', name = 'aoc-solder', amount = 2}
 	},
 	results = {
 		{type = 'item', name = 'train-stop', amount = 1}
@@ -2799,12 +2799,12 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoe-crafting-rail-signal-recipe',
+	name = 'aoc-crafting-rail-signal-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
 		{type = 'item', name = 'electronic-circuit', amount = 2},
-		{type = 'item', name = 'aoe-aluminium-plate', amount = 2}
+		{type = 'item', name = 'aoc-aluminium-plate', amount = 2}
 	},
 	results = {
 		{type = 'item', name = 'rail-signal', amount = 1}
@@ -2813,12 +2813,12 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoe-crafting-rail-chain-signal-recipe',
+	name = 'aoc-crafting-rail-chain-signal-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
 		{type = 'item', name = 'electronic-circuit', amount = 2},
-		{type = 'item', name = 'aoe-aluminium-plate', amount = 2}
+		{type = 'item', name = 'aoc-aluminium-plate', amount = 2}
 	},
 	results = {
 		{type = 'item', name = 'rail-chain-signal', amount = 1}
@@ -2827,11 +2827,11 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoe-crafting-fast-inserter-recipe',
+	name = 'aoc-crafting-fast-inserter-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-brass-rod', amount = 2},
+		{type = 'item', name = 'aoc-brass-rod', amount = 2},
 		{type = 'item', name = 'engine-unit', amount = 2},
 		{type = 'item', name = 'electronic-circuit', amount = 4}
 	},
@@ -2842,11 +2842,11 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoe-crafting-long-fast-inserter-recipe',
+	name = 'aoc-crafting-long-fast-inserter-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-brass-rod', amount = 4},
+		{type = 'item', name = 'aoc-brass-rod', amount = 4},
 		{type = 'item', name = 'engine-unit', amount = 2},
 		{type = 'item', name = 'electronic-circuit', amount = 4}
 	},
@@ -2857,13 +2857,13 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoe-crafting-cleanroom-assembling-machine-recipe',
+	name = 'aoc-crafting-cleanroom-assembling-machine-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-steel-machine-hull', amount = 4},
+		{type = 'item', name = 'aoc-steel-machine-hull', amount = 4},
 		{type = 'item', name = 'fast-inserter', amount = 2},
-		{type = 'item', name = 'aoe-silicon', amount = 4},
+		{type = 'item', name = 'aoc-silicon', amount = 4},
 		{type = 'item', name = 'stone-wall', amount = 4}
 	},
 	results = {
@@ -2873,373 +2873,373 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoe-crafting-stainless-steel-machine-hull-recipe',
+	name = 'aoc-crafting-stainless-steel-machine-hull-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-stainless-steel', amount = 5},
+		{type = 'item', name = 'aoc-stainless-steel', amount = 5},
 		{type = 'item', name = 'advanced-circuit', amount = 2},
 	},
 	results = {
-        {type = 'item', name = 'aoe-stainless-steel-machine-hull', amount = 1}
+        {type = 'item', name = 'aoc-stainless-steel-machine-hull', amount = 1}
     },
 	energy_required = 2
 }})
 
 data:extend({{
-	name = 'aoe-crafting-resistor-recipe',
+	name = 'aoc-crafting-resistor-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-carbon', amount = 2},
-		{type = 'item', name = 'aoe-nickel-plate', amount = 1},
-		{type = 'item', name = 'aoe-chromium-plate', amount = 1},
-		{type = 'item', name = 'aoe-tin-plate', amount = 1},
-		{type = 'item', name = 'aoe-ceramic', amount = 2},
+		{type = 'item', name = 'aoc-carbon', amount = 2},
+		{type = 'item', name = 'aoc-nickel-plate', amount = 1},
+		{type = 'item', name = 'aoc-chromium-plate', amount = 1},
+		{type = 'item', name = 'aoc-tin-plate', amount = 1},
+		{type = 'item', name = 'aoc-ceramic', amount = 2},
 	},
 	results = {
-        {type = 'item', name = 'aoe-resistor', amount = 8}
+        {type = 'item', name = 'aoc-resistor', amount = 8}
     },
 	energy_required = 2,
-	category = 'aoe-category-intricate-crafting'
+	category = 'aoc-category-intricate-crafting'
 }})
 
 data:extend({{
-	name = 'aoe-crafting-diode-recipe',
+	name = 'aoc-crafting-diode-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
 		{type = 'item', name = 'copper-cable', amount = 4},
-		{type = 'item', name = 'aoe-silicon-wafer', amount = 4},
-		{type = 'item', name = 'aoe-glass', amount = 1}
+		{type = 'item', name = 'aoc-silicon-wafer', amount = 4},
+		{type = 'item', name = 'aoc-glass', amount = 1}
 	},
 	results = {
-        {type = 'item', name = 'aoe-diode', amount = 8}
+        {type = 'item', name = 'aoc-diode', amount = 8}
     },
 	energy_required = 2,
-	category = 'aoe-category-intricate-crafting'
+	category = 'aoc-category-intricate-crafting'
 }})
 
 data:extend({{
-	name = 'aoe-crafting-capacitor-recipe',
+	name = 'aoc-crafting-capacitor-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-aluminium-plate', amount = 4},
-		{type = 'item', name = 'aoe-lead-plate', amount = 2},
-		{type = 'item', name = 'aoe-mica', amount = 1}
+		{type = 'item', name = 'aoc-aluminium-plate', amount = 4},
+		{type = 'item', name = 'aoc-lead-plate', amount = 2},
+		{type = 'item', name = 'aoc-mica', amount = 1}
 	},
 	results = {
-        {type = 'item', name = 'aoe-capacitor', amount = 8}
+        {type = 'item', name = 'aoc-capacitor', amount = 8}
     },
 	energy_required = 2,
-	category = 'aoe-category-intricate-crafting'
+	category = 'aoc-category-intricate-crafting'
 }})
 
 data:extend({{
-	name = 'aoe-crafting-transistor-recipe',
+	name = 'aoc-crafting-transistor-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-tin-plate', amount = 4},
-		{type = 'item', name = 'aoe-silicon-wafer', amount = 4}
+		{type = 'item', name = 'aoc-tin-plate', amount = 4},
+		{type = 'item', name = 'aoc-silicon-wafer', amount = 4}
 	},
 	results = {
-        {type = 'item', name = 'aoe-transistor', amount = 8}
+        {type = 'item', name = 'aoc-transistor', amount = 8}
     },
 	energy_required = 2,
-	category = 'aoe-category-intricate-crafting'
+	category = 'aoc-category-intricate-crafting'
 }})
 
 data:extend({{
-	name = 'aoe-crafting-inductor-recipe',
+	name = 'aoc-crafting-inductor-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
 		{type = 'item', name = 'steel-plate', amount = 1},
-		{type = 'item', name = 'aoe-nickel-plate', amount = 2},
-		{type = 'item', name = 'aoe-zinc-plate', amount = 2},
+		{type = 'item', name = 'aoc-nickel-plate', amount = 2},
+		{type = 'item', name = 'aoc-zinc-plate', amount = 2},
 		{type = 'item', name = 'copper-cable', amount = 4}
 	},
 	results = {
-        {type = 'item', name = 'aoe-inductor', amount = 8}
+        {type = 'item', name = 'aoc-inductor', amount = 8}
     },
 	energy_required = 2,
-	category = 'aoe-category-intricate-crafting'
+	category = 'aoc-category-intricate-crafting'
 }})
 
 data:extend({{
-    name = 'aoe-smelting-ceramic-recipe',
+    name = 'aoc-smelting-ceramic-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-clay', amount = 2}
+		{type = 'item', name = 'aoc-clay', amount = 2}
     },
     results = {
-        {type = 'item', name = 'aoe-ceramic', amount = 5}
+        {type = 'item', name = 'aoc-ceramic', amount = 5}
     },
 	category = 'smelting',
     energy_required = 2.4
 }})
 
 data:extend({{
-	name = 'aoe-crafting-electronic-circuit-2-recipe',
+	name = 'aoc-crafting-electronic-circuit-2-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-paper', amount = 1},
-		{type = 'item', name = 'aoe-diode', amount = 1},
-		{type = 'item', name = 'aoe-inductor', amount = 1},
-		{type = 'item', name = 'aoe-solder', amount = 1},
-		{type = 'item', name = 'aoe-silicon-wafer', amount = 1}
+		{type = 'item', name = 'aoc-paper', amount = 1},
+		{type = 'item', name = 'aoc-diode', amount = 1},
+		{type = 'item', name = 'aoc-inductor', amount = 1},
+		{type = 'item', name = 'aoc-solder', amount = 1},
+		{type = 'item', name = 'aoc-silicon-wafer', amount = 1}
 	},
 	results = {
         {type = 'item', name = 'electronic-circuit', amount = 2}
     },
 	energy_required = 2,
-	category = 'aoe-category-intricate-crafting'
+	category = 'aoc-category-intricate-crafting'
 }})
 
 data:extend({{
-	name = 'aoe-crafting-advanced-circuit-recipe',
+	name = 'aoc-crafting-advanced-circuit-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
 		{type = 'item', name = 'electronic-circuit', amount = 8},
-		{type = 'item', name = 'aoe-ceramic', amount = 1},
-		{type = 'item', name = 'aoe-resistor', amount = 1},
-		{type = 'item', name = 'aoe-transistor', amount = 1},
-		{type = 'item', name = 'aoe-capacitor', amount = 1}
+		{type = 'item', name = 'aoc-ceramic', amount = 1},
+		{type = 'item', name = 'aoc-resistor', amount = 1},
+		{type = 'item', name = 'aoc-transistor', amount = 1},
+		{type = 'item', name = 'aoc-capacitor', amount = 1}
 	},
 	results = {
         {type = 'item', name = 'advanced-circuit', amount = 2}
     },
 	energy_required = 6,
-	category = 'aoe-category-intricate-crafting'
+	category = 'aoc-category-intricate-crafting'
 }})
 
 data:extend({{
-	name = 'aoe-metal-boosting-iron-recipe',
+	name = 'aoc-metal-boosting-iron-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-iron-research', amount = 1}
+		{type = 'item', name = 'aoc-iron-research', amount = 1}
 	},
 	results = {
     },
-	icons = get_icons( data.raw["item"]["aoe-iron-research"] ),
-	subgroup = "aoe-metals-iron",
+	icons = get_icons( data.raw["item"]["aoc-iron-research"] ),
+	subgroup = "aoc-metals-iron",
     order = "z1",
 	energy_required = 60,
-	category = 'aoe-category-metal-boosting'
+	category = 'aoc-category-metal-boosting'
 }})
 
 data:extend({{
-	name = 'aoe-crafting-metallurgy-beacon-recipe',
+	name = 'aoc-crafting-metallurgy-beacon-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-stainless-steel-machine-hull', amount = 20},
-		{type = 'item', name = 'aoe-sensor', amount = 20},
+		{type = 'item', name = 'aoc-stainless-steel-machine-hull', amount = 20},
+		{type = 'item', name = 'aoc-sensor', amount = 20},
 		{type = 'item', name = 'concrete', amount = 200},
-		{type = 'item', name = 'aoe-brass', amount = 100}
+		{type = 'item', name = 'aoc-brass', amount = 100}
 	},
 	results = {
-		{type = 'item', name = 'aoe-metallurgy-beacon', amount = 1}
+		{type = 'item', name = 'aoc-metallurgy-beacon', amount = 1}
     },
 	energy_required = 10
 }})
 
 data:extend({{
-	name = 'aoe-crafting-iron-research-recipe',
+	name = 'aoc-crafting-iron-research-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
 		{type = 'item', name = 'iron-plate', amount = 80},
-		{type = 'item', name = 'aoe-paper', amount = 1},
-		{type = 'item', name = 'aoe-feather', amount = 1}
+		{type = 'item', name = 'aoc-paper', amount = 1},
+		{type = 'item', name = 'aoc-feather', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-iron-research', amount = 1}
+		{type = 'item', name = 'aoc-iron-research', amount = 1}
     },
 	energy_required = 20
 }})
 
 data:extend({{
-	name = 'aoe-crafting-copper-research-recipe',
+	name = 'aoc-crafting-copper-research-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
 		{type = 'item', name = 'copper-plate', amount = 80},
-		{type = 'item', name = 'aoe-paper', amount = 1},
-		{type = 'item', name = 'aoe-feather', amount = 1}
+		{type = 'item', name = 'aoc-paper', amount = 1},
+		{type = 'item', name = 'aoc-feather', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-copper-research', amount = 1}
+		{type = 'item', name = 'aoc-copper-research', amount = 1}
     },
 	energy_required = 20
 }})
 
 data:extend({{
-	name = 'aoe-crafting-tin-research-recipe',
+	name = 'aoc-crafting-tin-research-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-tin-plate', amount = 80},
-		{type = 'item', name = 'aoe-paper', amount = 1},
-		{type = 'item', name = 'aoe-feather', amount = 1}
+		{type = 'item', name = 'aoc-tin-plate', amount = 80},
+		{type = 'item', name = 'aoc-paper', amount = 1},
+		{type = 'item', name = 'aoc-feather', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-tin-research', amount = 1}
+		{type = 'item', name = 'aoc-tin-research', amount = 1}
     },
 	energy_required = 20
 }})
 
 data:extend({{
-	name = 'aoe-crafting-aluminium-research-recipe',
+	name = 'aoc-crafting-aluminium-research-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-aluminium-plate', amount = 80},
-		{type = 'item', name = 'aoe-paper', amount = 1},
-		{type = 'item', name = 'aoe-feather', amount = 1}
+		{type = 'item', name = 'aoc-aluminium-plate', amount = 80},
+		{type = 'item', name = 'aoc-paper', amount = 1},
+		{type = 'item', name = 'aoc-feather', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-aluminium-research', amount = 1}
+		{type = 'item', name = 'aoc-aluminium-research', amount = 1}
     },
 	energy_required = 20
 }})
 
 data:extend({{
-	name = 'aoe-crafting-lead-research-recipe',
+	name = 'aoc-crafting-lead-research-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-lead-plate', amount = 80},
-		{type = 'item', name = 'aoe-paper', amount = 1},
-		{type = 'item', name = 'aoe-feather', amount = 1}
+		{type = 'item', name = 'aoc-lead-plate', amount = 80},
+		{type = 'item', name = 'aoc-paper', amount = 1},
+		{type = 'item', name = 'aoc-feather', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-lead-research', amount = 1}
+		{type = 'item', name = 'aoc-lead-research', amount = 1}
     },
 	energy_required = 20
 }})
 
 data:extend({{
-	name = 'aoe-crafting-silver-research-recipe',
+	name = 'aoc-crafting-silver-research-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-silver-plate', amount = 80},
-		{type = 'item', name = 'aoe-paper', amount = 1},
-		{type = 'item', name = 'aoe-feather', amount = 1}
+		{type = 'item', name = 'aoc-silver-plate', amount = 80},
+		{type = 'item', name = 'aoc-paper', amount = 1},
+		{type = 'item', name = 'aoc-feather', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-silver-research', amount = 1}
+		{type = 'item', name = 'aoc-silver-research', amount = 1}
     },
 	energy_required = 20
 }})
 
 data:extend({{
-	name = 'aoe-crafting-nickel-research-recipe',
+	name = 'aoc-crafting-nickel-research-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-nickel-plate', amount = 80},
-		{type = 'item', name = 'aoe-paper', amount = 1},
-		{type = 'item', name = 'aoe-feather', amount = 1}
+		{type = 'item', name = 'aoc-nickel-plate', amount = 80},
+		{type = 'item', name = 'aoc-paper', amount = 1},
+		{type = 'item', name = 'aoc-feather', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-nickel-research', amount = 1}
+		{type = 'item', name = 'aoc-nickel-research', amount = 1}
     },
 	energy_required = 20
 }})
 
 data:extend({{
-	name = 'aoe-crafting-gold-research-recipe',
+	name = 'aoc-crafting-gold-research-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-gold-plate', amount = 80},
-		{type = 'item', name = 'aoe-paper', amount = 1},
-		{type = 'item', name = 'aoe-feather', amount = 1}
+		{type = 'item', name = 'aoc-gold-plate', amount = 80},
+		{type = 'item', name = 'aoc-paper', amount = 1},
+		{type = 'item', name = 'aoc-feather', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-gold-research', amount = 1}
+		{type = 'item', name = 'aoc-gold-research', amount = 1}
     },
 	energy_required = 20
 }})
 
 data:extend({{
-	name = 'aoe-crafting-zinc-research-recipe',
+	name = 'aoc-crafting-zinc-research-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-zinc-plate', amount = 80},
-		{type = 'item', name = 'aoe-paper', amount = 1},
-		{type = 'item', name = 'aoe-feather', amount = 1}
+		{type = 'item', name = 'aoc-zinc-plate', amount = 80},
+		{type = 'item', name = 'aoc-paper', amount = 1},
+		{type = 'item', name = 'aoc-feather', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-zinc-research', amount = 1}
+		{type = 'item', name = 'aoc-zinc-research', amount = 1}
     },
 	energy_required = 20
 }})
 
 data:extend({{
-	name = 'aoe-crafting-chromium-research-recipe',
+	name = 'aoc-crafting-chromium-research-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-chromium-plate', amount = 80},
-		{type = 'item', name = 'aoe-paper', amount = 1},
-		{type = 'item', name = 'aoe-feather', amount = 1}
+		{type = 'item', name = 'aoc-chromium-plate', amount = 80},
+		{type = 'item', name = 'aoc-paper', amount = 1},
+		{type = 'item', name = 'aoc-feather', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-chromium-research', amount = 1}
+		{type = 'item', name = 'aoc-chromium-research', amount = 1}
     },
 	energy_required = 20
 }})
 
 data:extend({{
-	name = 'aoe-crafting-tungsten-research-recipe',
+	name = 'aoc-crafting-tungsten-research-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-tungsten-plate', amount = 80},
-		{type = 'item', name = 'aoe-paper', amount = 1},
-		{type = 'item', name = 'aoe-feather', amount = 1}
+		{type = 'item', name = 'aoc-tungsten-plate', amount = 80},
+		{type = 'item', name = 'aoc-paper', amount = 1},
+		{type = 'item', name = 'aoc-feather', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-tungsten-research', amount = 1}
+		{type = 'item', name = 'aoc-tungsten-research', amount = 1}
     },
 	energy_required = 20
 }})
 
 data:extend({{
-	name = 'aoe-mixing-liquid-meat-recipe',
+	name = 'aoc-mixing-liquid-meat-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-meat', amount = 3},
-		{type = 'fluid', name = 'aoe-caustic-solution', amount = 50},
-		{type = 'fluid', name = 'aoe-bacteria', amount = 50}
+		{type = 'item', name = 'aoc-meat', amount = 3},
+		{type = 'fluid', name = 'aoc-caustic-solution', amount = 50},
+		{type = 'fluid', name = 'aoc-bacteria', amount = 50}
 	},
 	results = {
-		{type = 'fluid', name = 'aoe-liquid-meat', amount = 50}
+		{type = 'fluid', name = 'aoc-liquid-meat', amount = 50}
     },
 	energy_required = 5,
-	category = 'aoe-category-mixing'
+	category = 'aoc-category-mixing'
 }})
 
 data:extend({{
-	name = 'aoe-crafting-electric-furnace-recipe',
+	name = 'aoc-crafting-electric-furnace-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-stainless-steel-machine-hull', amount = 2},
+		{type = 'item', name = 'aoc-stainless-steel-machine-hull', amount = 2},
 		{type = 'item', name = 'stone-wall', amount = 8},
-		{type = 'item', name = 'aoe-mica', amount = 8},
-		{type = 'item', name = 'aoe-tungsten-plate', amount = 12}
+		{type = 'item', name = 'aoc-mica', amount = 8},
+		{type = 'item', name = 'aoc-tungsten-plate', amount = 12}
 	},
 	results = {
 		{type = 'item', name = 'electric-furnace', amount = 1}
@@ -3248,96 +3248,96 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoe-crafting-science-02-alternate-recipe',
+	name = 'aoc-crafting-science-02-alternate-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-flask', amount = 1},
+		{type = 'item', name = 'aoc-flask', amount = 1},
 		{type = 'item', name = 'electronic-circuit', amount = 2}
 	},
 	results = {
-        {type = 'item', name = 'aoe-science-02', amount = 1}
+        {type = 'item', name = 'aoc-science-02', amount = 1}
     },
 	energy_required = 4
 }})
 
 data:extend({{
-	name = 'aoe-crafting-advanced-chemical-plant-recipe',
+	name = 'aoc-crafting-advanced-chemical-plant-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-stainless-steel-machine-hull', amount = 8},
-		{type = 'item', name = 'aoe-bronze-plate', amount = 12},
+		{type = 'item', name = 'aoc-stainless-steel-machine-hull', amount = 8},
+		{type = 'item', name = 'aoc-bronze-plate', amount = 12},
 		{type = 'item', name = 'pipe', amount = 10},
 		{type = 'item', name = 'storage-tank', amount = 1}
     },
 	results = {
-        {type = 'item', name = 'aoe-advanced-chemical-plant', amount = 1},
+        {type = 'item', name = 'aoc-advanced-chemical-plant', amount = 1},
     },
 	energy_required = 5,
 }})
 
 data:extend({{
-	name = 'aoe-chemistry-ethylene-recipe',
+	name = 'aoc-chemistry-ethylene-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-ethanol', amount = 50},
+		{type = 'fluid', name = 'aoc-ethanol', amount = 50},
 		{type = 'fluid', name = 'sulfuric-acid', amount = 50}
 	},
 	results = {
-        {type = 'fluid', name = 'aoe-ethylene', amount = 50},
+        {type = 'fluid', name = 'aoc-ethylene', amount = 50},
 		{type = 'fluid', name = 'sulfuric-acid', amount = 25},
 		{type = 'fluid', name = 'water', amount = 25}
     },
 	energy_required = 5,
-	main_product = 'aoe-ethylene',
+	main_product = 'aoc-ethylene',
 	category = 'chemistry'
 }})
 
 data:extend({{
-	name = 'aoe-chemistry-polyethylene-recipe',
+	name = 'aoc-chemistry-polyethylene-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-ethylene', amount = 100},
-		{type = 'fluid', name = 'aoe-oxygen', amount = 400},
-		{type = 'item', name = 'aoe-chromium-ore', amount = 1}
+		{type = 'fluid', name = 'aoc-ethylene', amount = 100},
+		{type = 'fluid', name = 'aoc-oxygen', amount = 400},
+		{type = 'item', name = 'aoc-chromium-ore', amount = 1}
 	},
 	results = {
-        {type = 'fluid', name = 'aoe-polyethylene', amount = 100},
-		{type = 'fluid', name = 'aoe-warm-air', amount = 400},
-		{type = 'item', name = 'aoe-chromium-ore', amount = 1, probability = 0.9, catalyst_amount = 1}
+        {type = 'fluid', name = 'aoc-polyethylene', amount = 100},
+		{type = 'fluid', name = 'aoc-warm-air', amount = 400},
+		{type = 'item', name = 'aoc-chromium-ore', amount = 1, probability = 0.9, catalyst_amount = 1}
     },
 	energy_required = 10,
-	main_product = 'aoe-polyethylene',
-	category = 'aoe-category-advanced-chemistry'
+	main_product = 'aoc-polyethylene',
+	category = 'aoc-category-advanced-chemistry'
 }})
 
 data:extend({{
-	name = 'aoe-freezing-plastic-recipe',
+	name = 'aoc-freezing-plastic-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoe-polyethylene', amount = 20},
+		{type = 'fluid', name = 'aoc-polyethylene', amount = 20},
 	},
 	results = {
         {type = 'item', name = 'plastic-bar', amount = 1}
     },
 	energy_required = 1,
-	category = 'aoe-category-freezing'
+	category = 'aoc-category-freezing'
 }})
 
 data:extend({{
-	name = 'aoe-crafting-science-05-recipe',
+	name = 'aoc-crafting-science-05-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-flask', amount = 1},
+		{type = 'item', name = 'aoc-flask', amount = 1},
 		{type = 'item', name = 'plastic-bar', amount = 5}
 	},
 	results = {
-        {type = 'item', name = 'aoe-science-05', amount = 1}
+        {type = 'item', name = 'aoc-science-05', amount = 1}
     },
 	energy_required = 4
 }})

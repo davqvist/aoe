@@ -1,18 +1,18 @@
 data:extend({{
     type = "item",
-    name = "aoe-burner",
-    icon = "__aoe__/img/entities/burner.png",
+    name = "aoc-burner",
+    icon = "__ageofcreation__/img/entities/burner.png",
     icon_size = 256,
-    subgroup = "aoe-voiding-buildings",
+    subgroup = "aoc-voiding-buildings",
     order = "b",
-    place_result = "aoe-burner",
+    place_result = "aoc-burner",
     stack_size = 25,
 }})
 
 data:extend({{
     type = "furnace",
-    name = "aoe-burner",
-	crafting_categories = {"aoe-category-burning"},
+    name = "aoc-burner",
+	crafting_categories = {"aoc-category-burning"},
 	crafting_speed = 1,
 	energy_source = {
       type = "burner",
@@ -32,10 +32,10 @@ data:extend({{
     },
 	energy_usage = "90kW",
 	allowed_effects = nil,
-	icon = "__aoe__/img/entities/burner.png",
+	icon = "__ageofcreation__/img/entities/burner.png",
 	icon_size = 256,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoe-burner" },
+	minable = { hardness = 1, mining_time = 0.2, result = "aoc-burner" },
 	max_health = 300,
 	selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
 	collision_box = {{-1.9, -1.9}, {1.9, 1.9}},
@@ -44,7 +44,7 @@ data:extend({{
 	animation = {
       layers = {
         {
-          filename = "__aoe__/img/entities/burner.png",
+          filename = "__ageofcreation__/img/entities/burner.png",
           width = 256,
           height = 256,
           frame_count = 1,

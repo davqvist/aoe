@@ -3,22 +3,22 @@ local hit_effects = require ("__base__/prototypes/entity/hit-effects")
 
 data:extend({{
     type = "item",
-    name = "aoe-burner-lab",
-    icon = "__aoe__/img/entities/burner-lab-icon.png",
+    name = "aoc-burner-lab",
+    icon = "__ageofcreation__/img/entities/burner-lab-icon.png",
     icon_size = 64, icon_mipmaps = 4,
-    subgroup = "aoe-processing-buildings",
+    subgroup = "aoc-processing-buildings",
     order = "l",
-    place_result = "aoe-burner-lab",
+    place_result = "aoc-burner-lab",
     stack_size = 25,
 }})
 
 data:extend({{
     type = "lab",
-    name = "aoe-burner-lab",
-    icon = "__aoe__/img/entities/burner-lab-icon.png",
+    name = "aoc-burner-lab",
+    icon = "__ageofcreation__/img/entities/burner-lab-icon.png",
     icon_size = 64, icon_mipmaps = 4,
     flags = {"placeable-player", "player-creation"},
-    minable = {mining_time = 0.2, result = "aoe-burner-lab"},
+    minable = {mining_time = 0.2, result = "aoc-burner-lab"},
     max_health = 300,
     corpse = "lab-remnants",
     dying_explosion = "lab-explosion",
@@ -32,7 +32,7 @@ data:extend({{
       layers =
       {
         {
-          filename = "__aoe__/img/entities/burner-lab.png",
+          filename = "__ageofcreation__/img/entities/burner-lab.png",
           width = 98,
           height = 87,
           frame_count = 33,
@@ -51,7 +51,7 @@ data:extend({{
           shift = util.by_pixel(0, 15.5)
         },
         {
-          filename = "__aoe__/img/entities/burner-lab-light.png",
+          filename = "__ageofcreation__/img/entities/burner-lab-light.png",
           blend_mode = "additive",
           draw_as_light = true,
           width = 106,
@@ -79,7 +79,7 @@ data:extend({{
       layers =
       {
         {
-          filename = "__aoe__/img/entities/burner-lab.png",
+          filename = "__ageofcreation__/img/entities/burner-lab.png",
           width = 98,
           height = 87,
           frame_count = 1,
@@ -134,5 +134,5 @@ data:extend({{
     },
     energy_usage = "60kW",
     researching_speed = 0.5,
-    inputs = {"aoe-science-01","aoe-science-02"}
+    inputs = {"aoc-science-01","aoc-science-02"}
 }})

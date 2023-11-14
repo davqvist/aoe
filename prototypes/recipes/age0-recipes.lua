@@ -1,7 +1,7 @@
-local AOE = require("__aoe__/globals")
+local AOE = require("__ageofcreation__/globals")
 
 data:extend({{
-	name = 'aoe-crafting-stone-furnace-recipe',
+	name = 'aoc-crafting-stone-furnace-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
@@ -14,21 +14,21 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoe-smelting-charcoal-recipe',
+	name = 'aoc-smelting-charcoal-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
 		{type = 'item', name = 'wood', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoe-charcoal', amount = 1}
+		{type = 'item', name = 'aoc-charcoal', amount = 1}
     },
 	energy_required = 2.4,
 	category = 'smelting'
 }})
 
 data:extend({{
-	name = 'aoe-smelting-stone-bricks-recipe',
+	name = 'aoc-smelting-stone-bricks-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
@@ -42,26 +42,26 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoe-handcrafting-tree-seedling-recipe',
+	name = 'aoc-handcrafting-tree-seedling-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
 		{type = 'item', name = 'wood', amount = 40}
 	},
 	results = {
-        {type = 'item', name = 'aoe-tree-seedling', amount = 1}
+        {type = 'item', name = 'aoc-tree-seedling', amount = 1}
     },
 	energy_required = 10,
-	category = 'aoe-category-handcrafting'
+	category = 'aoc-category-handcrafting'
 }})
 
 data:extend({{
-	name = 'aoe-crafting-burner-mining-drill-recipe',
+	name = 'aoc-crafting-burner-mining-drill-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
 		{type = 'item', name = 'iron-plate', amount = 4},
-		{type = 'item', name = 'aoe-small-motor', amount = 1},
+		{type = 'item', name = 'aoc-small-motor', amount = 1},
 		{type = 'item', name = 'stone-brick', amount = 4}
 	},
 	results = {
@@ -71,53 +71,53 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoe-crafting-burner-crusher-recipe',
+	name = 'aoc-crafting-burner-crusher-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
 		{type = 'item', name = 'iron-gear-wheel', amount = 6},
-		{type = 'item', name = 'aoe-small-motor', amount = 3}
+		{type = 'item', name = 'aoc-small-motor', amount = 3}
 	},
 	results = {
-        {type = 'item', name = 'aoe-burner-crusher', amount = 1}
+        {type = 'item', name = 'aoc-burner-crusher', amount = 1}
     },
 	energy_required = 5
 }})
 
 data:extend({{
-	name = 'aoe-crushing-crushed-stone-recipe',
+	name = 'aoc-crushing-crushed-stone-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
 		{type = 'item', name = 'stone', amount = 8}
 	},
 	results = {
-        {type = 'item', name = 'aoe-gravel', amount = 4},
-        {type = 'item', name = 'aoe-iron-dust', amount = 1}
+        {type = 'item', name = 'aoc-gravel', amount = 4},
+        {type = 'item', name = 'aoc-iron-dust', amount = 1}
     },
-	main_product = 'aoe-iron-dust',
+	main_product = 'aoc-iron-dust',
 	energy_required = 4,
-	category = 'aoe-category-crushing'
+	category = 'aoc-category-crushing'
 }})
 
 data:extend({{
-	name = 'aoe-crushing-sand-recipe',
+	name = 'aoc-crushing-sand-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
-		{type = 'item', name = 'aoe-gravel', amount = 4}
+		{type = 'item', name = 'aoc-gravel', amount = 4}
 	},
 	results = {
-        {type = 'item', name = 'aoe-gravel', amount = 1, catalyst_amount = 1},
-        {type = 'item', name = 'aoe-sand', amount = 1}
+        {type = 'item', name = 'aoc-gravel', amount = 1, catalyst_amount = 1},
+        {type = 'item', name = 'aoc-sand', amount = 1}
     },
-	main_product = 'aoe-sand',
+	main_product = 'aoc-sand',
 	energy_required = 4,
-	category = 'aoe-category-crushing'
+	category = 'aoc-category-crushing'
 }})
 
 data:extend({{
-	name = 'aoe-crafting-iron-stick-recipe',
+	name = 'aoc-crafting-iron-stick-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
@@ -130,7 +130,7 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoe-crafting-iron-gear-wheel-recipe',
+	name = 'aoc-crafting-iron-gear-wheel-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
@@ -143,12 +143,12 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoe-smelting-iron-recipe',
+	name = 'aoc-smelting-iron-recipe',
 	type = 'recipe',
 	enabled = true,
     allow_decomposition = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-iron-dust', amount = 1}
+		{type = 'item', name = 'aoc-iron-dust', amount = 1}
 	},
 	results = {
 		{type = 'item', name = 'iron-plate', amount = 1}
@@ -158,7 +158,7 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoe-crafting-small-motor-recipe',
+	name = 'aoc-crafting-small-motor-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
@@ -167,18 +167,18 @@ data:extend({{
 		{type = 'item', name = 'iron-gear-wheel', amount = 1}
 	},
 	results = {
-        {type = 'item', name = 'aoe-small-motor', amount = 1}
+        {type = 'item', name = 'aoc-small-motor', amount = 1}
     },
 	energy_required = 0.6
 }})
 
 data:extend({{
-	name = 'aoe-crafting-burner-inserter-recipe',
+	name = 'aoc-crafting-burner-inserter-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
 		{type = 'item', name = 'iron-stick', amount = 2},
-		{type = 'item', name = 'aoe-small-motor', amount = 1}
+		{type = 'item', name = 'aoc-small-motor', amount = 1}
 	},
 	results = {
         {type = 'item', name = 'burner-inserter', amount = 2}
@@ -187,7 +187,7 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoe-crafting-wooden-chest-recipe',
+	name = 'aoc-crafting-wooden-chest-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
@@ -200,25 +200,25 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoe-tree-farm-tree-recipe',
+	name = 'aoc-tree-farm-tree-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
-		{type = 'item', name = 'aoe-tree-seedling', amount = 1}
+		{type = 'item', name = 'aoc-tree-seedling', amount = 1}
 	},
 	results = {
-        {type = 'item', name = 'aoe-tree-farm', amount = 1, probability = 0}
+        {type = 'item', name = 'aoc-tree-farm', amount = 1, probability = 0}
     },
 	energy_required = 10,
-	icon = data.raw.item["aoe-tree-farm"].icon,
-    icon_size = data.raw.item["aoe-tree-farm"].icon_size,
+	icon = data.raw.item["aoc-tree-farm"].icon,
+    icon_size = data.raw.item["aoc-tree-farm"].icon_size,
 	main_product = "",
-	category = 'aoe-category-growing',
-	subgroup = 'aoe-other'
+	category = 'aoc-category-growing',
+	subgroup = 'aoc-other'
 }})
 
 data:extend({{
-	name = 'aoe-crafting-forestry-recipe',
+	name = 'aoc-crafting-forestry-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
@@ -226,246 +226,246 @@ data:extend({{
 		{type = 'item', name = 'wood', amount = 50}
 	},
 	results = {
-        {type = 'item', name = 'aoe-forestry', amount = 1}
+        {type = 'item', name = 'aoc-forestry', amount = 1}
     },
 	energy_required = 5
 }})
 
 data:extend({{
-	name = 'aoe-forestry-log-recipe',
+	name = 'aoc-forestry-log-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {},
 	results = {
-        {type = 'item', name = 'aoe-log', amount = 1},	
-        {type = 'item', name = 'aoe-leaves', amount = 6}
+        {type = 'item', name = 'aoc-log', amount = 1},	
+        {type = 'item', name = 'aoc-leaves', amount = 6}
     },
 	energy_required = 5,
-	icon = data.raw.item["aoe-log"].icon,
-    icon_size = data.raw.item["aoe-log"].icon_size,
+	icon = data.raw.item["aoc-log"].icon,
+    icon_size = data.raw.item["aoc-log"].icon_size,
 	main_product = "",
-	category = 'aoe-category-harvesting',
-	subgroup = 'aoe-other'
+	category = 'aoc-category-harvesting',
+	subgroup = 'aoc-other'
 }})
 
 data:extend({{
-	name = 'aoe-crafting-greenhouse-recipe',
+	name = 'aoc-crafting-greenhouse-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
 		{type = 'item', name = 'stone-brick', amount = 20},
-		{type = 'item', name = 'aoe-soil', amount = 40},
-		{type = 'item', name = 'aoe-glass', amount = 20}
+		{type = 'item', name = 'aoc-soil', amount = 40},
+		{type = 'item', name = 'aoc-glass', amount = 20}
 	},
 	results = {
-        {type = 'item', name = 'aoe-greenhouse', amount = 1}
+        {type = 'item', name = 'aoc-greenhouse', amount = 1}
     },
 	energy_required = 5
 }})
 
 data:extend({{
-	name = 'aoe-greenhouse-tree-seedling-recipe',
+	name = 'aoc-greenhouse-tree-seedling-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
-		{type = 'item', name = 'aoe-leaves', amount = 2}
+		{type = 'item', name = 'aoc-leaves', amount = 2}
 	},
 	results = {
-        {type = 'item', name = 'aoe-tree-seedling', amount = 1}
+        {type = 'item', name = 'aoc-tree-seedling', amount = 1}
     },
 	energy_required = 3,
-	category = 'aoe-category-greenhouse'
+	category = 'aoc-category-greenhouse'
 }})
 
 data:extend({{
-	name = 'aoe-smelting-glass-recipe',
+	name = 'aoc-smelting-glass-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
-		{type = 'item', name = 'aoe-sand', amount = 2}
+		{type = 'item', name = 'aoc-sand', amount = 2}
 	},
 	results = {
-		{type = 'item', name = 'aoe-glass', amount = 1}
+		{type = 'item', name = 'aoc-glass', amount = 1}
     },
 	energy_required = 2.4,
 	category = 'smelting'
 }})
 
 data:extend({{
-	name = 'aoe-crafting-flask-recipe',
+	name = 'aoc-crafting-flask-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
-		{type = 'item', name = 'aoe-glass', amount = 4}
+		{type = 'item', name = 'aoc-glass', amount = 4}
 	},
 	results = {
-        {type = 'item', name = 'aoe-flask', amount = 1}
+        {type = 'item', name = 'aoc-flask', amount = 1}
     },
 	energy_required = 0.8
 }})
 
 data:extend({{
-	name = 'aoe-crafting-burner-lab-recipe',
+	name = 'aoc-crafting-burner-lab-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
-		{type = 'item', name = 'aoe-glass', amount = 25},
-		{type = 'item', name = 'aoe-small-motor', amount = 6},
+		{type = 'item', name = 'aoc-glass', amount = 25},
+		{type = 'item', name = 'aoc-small-motor', amount = 6},
 		{type = 'item', name = 'stone-brick', amount = 20}
 	},
 	results = {
-        {type = 'item', name = 'aoe-burner-lab', amount = 1}
+        {type = 'item', name = 'aoc-burner-lab', amount = 1}
     },
 	energy_required = 5
 }})
 
 data:extend({{
-	name = 'aoe-crafting-science-01-recipe',
+	name = 'aoc-crafting-science-01-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
-		{type = 'item', name = 'aoe-flask', amount = 1},
-		{type = 'item', name = 'aoe-resin', amount = 4}
+		{type = 'item', name = 'aoc-flask', amount = 1},
+		{type = 'item', name = 'aoc-resin', amount = 4}
 	},
 	results = {
-        {type = 'item', name = 'aoe-science-01', amount = 1}
+        {type = 'item', name = 'aoc-science-01', amount = 1}
     },
 	energy_required = 4
 }})
 
 data:extend({{
-	name = 'aoe-crafting-burner-sawmill-recipe',
+	name = 'aoc-crafting-burner-sawmill-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
 		{type = 'item', name = 'wood', amount = 50},
 		{type = 'item', name = 'iron-plate', amount = 6},
-		{type = 'item', name = 'aoe-small-motor', amount = 4}
+		{type = 'item', name = 'aoc-small-motor', amount = 4}
 	},
 	results = {
-        {type = 'item', name = 'aoe-burner-sawmill', amount = 1}
+        {type = 'item', name = 'aoc-burner-sawmill', amount = 1}
     },
 	energy_required = 5
 }})
 
 data:extend({{
-	name = 'aoe-sawmill-wood-recipe',
+	name = 'aoc-sawmill-wood-recipe',
 	type = 'recipe',
 	enabled = true,
     allow_decomposition = false,
 	ingredients = {
-		{type = 'item', name = 'aoe-log', amount = 1}
+		{type = 'item', name = 'aoc-log', amount = 1}
 	},
 	results = {
         {type = 'item', name = 'wood', amount = 5},
-        {type = 'item', name = 'aoe-wood-pulp', amount = 1}
+        {type = 'item', name = 'aoc-wood-pulp', amount = 1}
     },
 	main_product = 'wood',
 	energy_required = 2,
-	category = 'aoe-category-sawing'
+	category = 'aoc-category-sawing'
 }})
 
 data:extend({{
-	name = 'aoe-sawmill-wood-wood-pulp-recipe',
+	name = 'aoc-sawmill-wood-wood-pulp-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
 		{type = 'item', name = 'wood', amount = 1}
 	},
 	results = {
-        {type = 'item', name = 'aoe-wood-pulp', amount = 2}
+        {type = 'item', name = 'aoc-wood-pulp', amount = 2}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-wood-pulp"] ), get_icons( data.raw.item["wood"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-wood-pulp"] ), get_icons( data.raw.item["wood"] ) ),
 	energy_required = 1,
-	category = 'aoe-category-sawing'
+	category = 'aoc-category-sawing'
 }})
 
 data:extend({{
-	name = 'aoe-sawmill-log-wood-pulp-recipe',
+	name = 'aoc-sawmill-log-wood-pulp-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
-		{type = 'item', name = 'aoe-log', amount = 1}
+		{type = 'item', name = 'aoc-log', amount = 1}
 	},
 	results = {
-        {type = 'item', name = 'aoe-wood-pulp', amount = 12}
+        {type = 'item', name = 'aoc-wood-pulp', amount = 12}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.item["aoe-wood-pulp"] ), get_icons( data.raw.item["aoe-log"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-wood-pulp"] ), get_icons( data.raw.item["aoc-log"] ) ),
 	energy_required = 2.5,
-	category = 'aoe-category-sawing'
+	category = 'aoc-category-sawing'
 }})
 
 data:extend({{
-	name = 'aoe-crafting-burner-squeezer-recipe',
+	name = 'aoc-crafting-burner-squeezer-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
 		{type = 'item', name = 'stone-brick', amount = 40},
 		{type = 'item', name = 'iron-plate', amount = 12},
-		{type = 'item', name = 'aoe-small-motor', amount = 8}
+		{type = 'item', name = 'aoc-small-motor', amount = 8}
 	},
 	results = {
-        {type = 'item', name = 'aoe-burner-squeezer', amount = 1}
+        {type = 'item', name = 'aoc-burner-squeezer', amount = 1}
     },
 	energy_required = 5
 }})
 
 data:extend({{
-	name = 'aoe-squeezer-resin-recipe',
+	name = 'aoc-squeezer-resin-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
 		{type = 'item', name = 'wood', amount = 5}
 	},
 	results = {
-        {type = 'item', name = 'aoe-resin', amount = 4}
+        {type = 'item', name = 'aoc-resin', amount = 4}
     },
 	energy_required = 4,
-	category = 'aoe-category-squeezing'
+	category = 'aoc-category-squeezing'
 }})
 
 data:extend({{
-	name = 'aoe-handcrafting-soil-recipe',
+	name = 'aoc-handcrafting-soil-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {},
 	results = {
-        {type = 'item', name = 'aoe-soil', amount = 1}
+        {type = 'item', name = 'aoc-soil', amount = 1}
     },
 	energy_required = 0.2,
-	category = 'aoe-category-handcrafting'
+	category = 'aoc-category-handcrafting'
 }})
 
 data:extend({{
-	name = 'aoe-crafting-tree-farm-recipe',
+	name = 'aoc-crafting-tree-farm-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
-		{type = 'item', name = 'aoe-tree-seedling', amount = 1},
-		{type = 'item', name = 'aoe-soil', amount = 100}
+		{type = 'item', name = 'aoc-tree-seedling', amount = 1},
+		{type = 'item', name = 'aoc-soil', amount = 100}
 	},
 	results = {
-        {type = 'item', name = 'aoe-tree-farm', amount = 1}
+        {type = 'item', name = 'aoc-tree-farm', amount = 1}
     },
 	energy_required = 5
 }})
 
 data:extend({{
-	name = 'aoe-crafting-torch-recipe',
+	name = 'aoc-crafting-torch-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
 		{type = 'item', name = 'wood', amount = 1},
-		{type = 'item', name = 'aoe-charcoal', amount = 1}
+		{type = 'item', name = 'aoc-charcoal', amount = 1}
 	},
 	results = {
-        {type = 'item', name = 'aoe-torch', amount = 1}
+        {type = 'item', name = 'aoc-torch', amount = 1}
     },
 	energy_required = 0.5
 }})
 
 data:extend({{
-	name = 'aoe-crafting-stone-wall-recipe',
+	name = 'aoc-crafting-stone-wall-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
@@ -478,7 +478,7 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoe-crafting-repair-pack-recipe',
+	name = 'aoc-crafting-repair-pack-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {

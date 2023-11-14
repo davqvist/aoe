@@ -1,5 +1,5 @@
-require("__aoe__/prototypes/hide_rest")
-require("__aoe__/prototypes/mods_override")
+require("__ageofcreation__/prototypes/hide_rest")
+require("__ageofcreation__/prototypes/mods_override")
 
 local disabled_resources = {
 	"coal",
@@ -17,9 +17,9 @@ local disabled_resources = {
 	"angels-natural-gas"
 }
 
-data.raw["map-gen-presets"]["default"]["aoe-recommended-preset"] = {}
-data.raw["map-gen-presets"]["default"]["aoe-recommended-preset"].order = "a1"
-data.raw["map-gen-presets"]["default"]["aoe-recommended-preset"].basic_settings = {}
+data.raw["map-gen-presets"]["default"]["aoc-recommended-preset"] = {}
+data.raw["map-gen-presets"]["default"]["aoc-recommended-preset"].order = "a1"
+data.raw["map-gen-presets"]["default"]["aoc-recommended-preset"].basic_settings = {}
 
 for _, preset in pairs(data.raw["map-gen-presets"]["default"]) do
   	if preset and preset.basic_settings then

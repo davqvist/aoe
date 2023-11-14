@@ -1,19 +1,19 @@
 data:extend({{
     type = "item",
-    name = "aoe-freezer",
+    name = "aoc-freezer",
     icon = "__angelssmelting__/graphics/icons/cooling-tower.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    subgroup = "aoe-specific-buildings",
+    subgroup = "aoc-specific-buildings",
     order = "l",
-    place_result = "aoe-freezer",
+    place_result = "aoc-freezer",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "assembling-machine",
-  name = "aoe-freezer",
-	crafting_categories = {"aoe-category-freezing"},
+  name = "aoc-freezer",
+	crafting_categories = {"aoc-category-freezing"},
 	crafting_speed = 1,
 	energy_source = {
     type = "electric",
@@ -30,7 +30,7 @@ data:extend({{
   icon_size = 64,
   icon_mipmaps = 4,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoe-freezer" },
+	minable = { hardness = 1, mining_time = 0.2, result = "aoc-freezer" },
 	max_health = 300,
 	selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
 	collision_box = {{-2.4, -2.4}, {2.4, 2.4}},

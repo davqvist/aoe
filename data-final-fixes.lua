@@ -1,3 +1,3 @@
-require("__aoe__/prototypes/recipes/fluid-voiding")
-require("__aoe__/prototypes/recipes/item-voiding")
-require("__aoe__/prototypes/recipes/recycling")
+require("__ageofcreation__/prototypes/recipes/fluid-voiding")
+require("__ageofcreation__/prototypes/recipes/item-voiding")
+require("__ageofcreation__/prototypes/recipes/recycling")

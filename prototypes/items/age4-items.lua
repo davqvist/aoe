@@ -1,11 +1,11 @@
-local AOE = require("__aoe__/globals")
+local AOE = require("__ageofcreation__/globals")
 
 data:extend({{
     type = "tool",
-    name = "aoe-science-04",
+    name = "aoc-science-04",
     icon = "__base__/graphics/icons/military-science-pack.png",
     icon_size = 64, icon_mipmaps = 4,
-    subgroup = "aoe-science-packs",
+    subgroup = "aoc-science-packs",
     order = "d",
     stack_size = 200,
     durability = 1,
@@ -15,897 +15,897 @@ data:extend({{
 
 data:extend({{
     type = "item",
-    name = "aoe-basalt",
-    icon = "__aoe__/img/items/basalt.png",
+    name = "aoc-basalt",
+    icon = "__ageofcreation__/img/items/basalt.png",
     icon_size = 64,
-    subgroup = "aoe-stone",
+    subgroup = "aoc-stone",
     order = "g",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-gabbro",
-    icon = "__aoe__/img/items/gabbro.png",
+    name = "aoc-gabbro",
+    icon = "__ageofcreation__/img/items/gabbro.png",
     icon_size = 64,
-    subgroup = "aoe-stone",
+    subgroup = "aoc-stone",
     order = "h",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-granite",
-    icon = "__aoe__/img/items/granite.png",
+    name = "aoc-granite",
+    icon = "__ageofcreation__/img/items/granite.png",
     icon_size = 64,
-    subgroup = "aoe-stone",
+    subgroup = "aoc-stone",
     order = "i",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-gneiss",
-    icon = "__aoe__/img/items/gneiss.png",
+    name = "aoc-gneiss",
+    icon = "__ageofcreation__/img/items/gneiss.png",
     icon_size = 64,
-    subgroup = "aoe-stone",
+    subgroup = "aoc-stone",
     order = "j",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-slate",
-    icon = "__aoe__/img/items/slate.png",
+    name = "aoc-slate",
+    icon = "__ageofcreation__/img/items/slate.png",
     icon_size = 64,
-    subgroup = "aoe-stone",
+    subgroup = "aoc-stone",
     order = "k",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-marble",
-    icon = "__aoe__/img/items/marble.png",
+    name = "aoc-marble",
+    icon = "__ageofcreation__/img/items/marble.png",
     icon_size = 64,
-    subgroup = "aoe-stone",
+    subgroup = "aoc-stone",
     order = "l",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-limestone",
-    icon = "__aoe__/img/items/limestone.png",
+    name = "aoc-limestone",
+    icon = "__ageofcreation__/img/items/limestone.png",
     icon_size = 64,
-    subgroup = "aoe-stone",
+    subgroup = "aoc-stone",
     order = "m",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-sandstone",
-    icon = "__aoe__/img/items/sandstone.png",
+    name = "aoc-sandstone",
+    icon = "__ageofcreation__/img/items/sandstone.png",
     icon_size = 64,
-    subgroup = "aoe-stone",
+    subgroup = "aoc-stone",
     order = "n",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-shale",
-    icon = "__aoe__/img/items/shale.png",
+    name = "aoc-shale",
+    icon = "__ageofcreation__/img/items/shale.png",
     icon_size = 64,
-    subgroup = "aoe-stone",
+    subgroup = "aoc-stone",
     order = "o",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-mold",
-    icon = "__aoe__/img/items/mold.png",
+    name = "aoc-mold",
+    icon = "__ageofcreation__/img/items/mold.png",
     icon_size = 64,
-    subgroup = "aoe-dirt",
+    subgroup = "aoc-dirt",
     order = "e",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-diamond",
-    icon = "__aoe__/img/items/diamond.png",
+    name = "aoc-diamond",
+    icon = "__ageofcreation__/img/items/diamond.png",
     icon_size = 64,
-    subgroup = "aoe-gems",
+    subgroup = "aoc-gems",
     order = "a",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-garnet",
-    icon = "__aoe__/img/items/garnet.png",
+    name = "aoc-garnet",
+    icon = "__ageofcreation__/img/items/garnet.png",
     icon_size = 64,
-    subgroup = "aoe-gems",
+    subgroup = "aoc-gems",
     order = "b",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-apatite",
-    icon = "__aoe__/img/items/apatite.png",
+    name = "aoc-apatite",
+    icon = "__ageofcreation__/img/items/apatite.png",
     icon_size = 64,
-    subgroup = "aoe-gems",
+    subgroup = "aoc-gems",
     order = "c",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-iron-processed",
-    icons = { { icon = "__angelssmelting__/graphics/icons/processed-iron.png" }, { icon = "__aoe__/img/items/atoms/fe.png" } },
+    name = "aoc-iron-processed",
+    icons = { { icon = "__angelssmelting__/graphics/icons/processed-iron.png" }, { icon = "__ageofcreation__/img/items/atoms/fe.png" } },
     icon_size = 64,
     pictures = { { filename = "__angelssmelting__/graphics/icons/processed-iron.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-iron",
+    subgroup = "aoc-metals-iron",
     order = "b",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-iron-reduced",
-    icons = { { icon = "__angelssmelting__/graphics/icons/pellet-iron.png" }, { icon = "__aoe__/img/items/atoms/fe.png" } },
+    name = "aoc-iron-reduced",
+    icons = { { icon = "__angelssmelting__/graphics/icons/pellet-iron.png" }, { icon = "__ageofcreation__/img/items/atoms/fe.png" } },
     icon_size = 64,
     pictures = { { filename = "__angelssmelting__/graphics/icons/pellet-iron.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-iron",
+    subgroup = "aoc-metals-iron",
     order = "c",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-copper-processed",
-    icons = { { icon = "__angelssmelting__/graphics/icons/processed-copper.png" }, { icon = "__aoe__/img/items/atoms/cu.png" } },
+    name = "aoc-copper-processed",
+    icons = { { icon = "__angelssmelting__/graphics/icons/processed-copper.png" }, { icon = "__ageofcreation__/img/items/atoms/cu.png" } },
     icon_size = 64,
     pictures = { { filename = "__angelssmelting__/graphics/icons/processed-copper.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-copper",
+    subgroup = "aoc-metals-copper",
     order = "b",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-copper-reduced",
-    icons = { { icon = "__angelssmelting__/graphics/icons/pellet-copper.png" }, { icon = "__aoe__/img/items/atoms/cu.png" } },
+    name = "aoc-copper-reduced",
+    icons = { { icon = "__angelssmelting__/graphics/icons/pellet-copper.png" }, { icon = "__ageofcreation__/img/items/atoms/cu.png" } },
     icon_size = 64,
     pictures = { { filename = "__angelssmelting__/graphics/icons/pellet-copper.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-copper",
+    subgroup = "aoc-metals-copper",
     order = "c",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-tin-processed",
-    icons = { { icon = "__angelssmelting__/graphics/icons/processed-tin.png" }, { icon = "__aoe__/img/items/atoms/sn.png" } },
+    name = "aoc-tin-processed",
+    icons = { { icon = "__angelssmelting__/graphics/icons/processed-tin.png" }, { icon = "__ageofcreation__/img/items/atoms/sn.png" } },
     icon_size = 64,
     pictures = { { filename = "__angelssmelting__/graphics/icons/processed-tin.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-tin",
+    subgroup = "aoc-metals-tin",
     order = "b",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-tin-reduced",
-    icons = { { icon = "__angelssmelting__/graphics/icons/pellet-tin.png" }, { icon = "__aoe__/img/items/atoms/sn.png" } },
+    name = "aoc-tin-reduced",
+    icons = { { icon = "__angelssmelting__/graphics/icons/pellet-tin.png" }, { icon = "__ageofcreation__/img/items/atoms/sn.png" } },
     icon_size = 64,
     pictures = { { filename = "__angelssmelting__/graphics/icons/pellet-tin.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-tin",
+    subgroup = "aoc-metals-tin",
     order = "c",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-aluminium-processed",
-    icons = { { icon = "__angelssmelting__/graphics/icons/processed-aluminium.png" }, { icon = "__aoe__/img/items/atoms/al.png" } },
+    name = "aoc-aluminium-processed",
+    icons = { { icon = "__angelssmelting__/graphics/icons/processed-aluminium.png" }, { icon = "__ageofcreation__/img/items/atoms/al.png" } },
     icon_size = 64,
     pictures = { { filename = "__angelssmelting__/graphics/icons/processed-aluminium.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-aluminium",
+    subgroup = "aoc-metals-aluminium",
     order = "b",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-aluminium-reduced",
-    icons = { { icon = "__angelssmelting__/graphics/icons/pellet-aluminium.png" }, { icon = "__aoe__/img/items/atoms/al.png" } },
+    name = "aoc-aluminium-reduced",
+    icons = { { icon = "__angelssmelting__/graphics/icons/pellet-aluminium.png" }, { icon = "__ageofcreation__/img/items/atoms/al.png" } },
     icon_size = 64,
     pictures = { { filename = "__angelssmelting__/graphics/icons/pellet-aluminium.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-aluminium",
+    subgroup = "aoc-metals-aluminium",
     order = "c",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-chromium-ore",
-    icons = { { icon = "__angelssmelting__/graphics/icons/ore-chrome.png", icon_size = 32 }, { icon = "__aoe__/img/items/atoms/cr.png", icon_size = 64 } },
+    name = "aoc-chromium-ore",
+    icons = { { icon = "__angelssmelting__/graphics/icons/ore-chrome.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/cr.png", icon_size = 64 } },
     pictures = { { filename = "__angelssmelting__/graphics/icons/ore-chrome.png", size = 32, scale = 0.5  } },
-    subgroup = "aoe-metals-chromium",
+    subgroup = "aoc-metals-chromium",
     order = "a",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-chromium-processed",
-    icons = { { icon = "__angelssmelting__/graphics/icons/processed-chrome.png" }, { icon = "__aoe__/img/items/atoms/cr.png" } },
+    name = "aoc-chromium-processed",
+    icons = { { icon = "__angelssmelting__/graphics/icons/processed-chrome.png" }, { icon = "__ageofcreation__/img/items/atoms/cr.png" } },
     icon_size = 64,
     pictures = { { filename = "__angelssmelting__/graphics/icons/processed-chrome.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-chromium",
+    subgroup = "aoc-metals-chromium",
     order = "b",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-chromium-reduced",
-    icons = { { icon = "__angelssmelting__/graphics/icons/pellet-chrome.png" }, { icon = "__aoe__/img/items/atoms/cr.png" } },
+    name = "aoc-chromium-reduced",
+    icons = { { icon = "__angelssmelting__/graphics/icons/pellet-chrome.png" }, { icon = "__ageofcreation__/img/items/atoms/cr.png" } },
     icon_size = 64,
     pictures = { { filename = "__angelssmelting__/graphics/icons/pellet-chrome.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-chromium",
+    subgroup = "aoc-metals-chromium",
     order = "c",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-chromium-dust",
-    icons = { { icon = "__angelssmelting__/graphics/icons/powder-chrome.png" }, { icon = "__aoe__/img/items/atoms/cr.png" } },
+    name = "aoc-chromium-dust",
+    icons = { { icon = "__angelssmelting__/graphics/icons/powder-chrome.png" }, { icon = "__ageofcreation__/img/items/atoms/cr.png" } },
     icon_size = 64,
     pictures = { { filename = "__angelssmelting__/graphics/icons/powder-chrome.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-chromium",
+    subgroup = "aoc-metals-chromium",
     order = "d",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-chromium-plate",
-    icons = { { icon = "__angelssmelting__/graphics/icons/plate-chrome.png", icon_size = 32 }, { icon = "__aoe__/img/items/atoms/cr.png", icon_size = 64 } },
+    name = "aoc-chromium-plate",
+    icons = { { icon = "__angelssmelting__/graphics/icons/plate-chrome.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/cr.png", icon_size = 64 } },
     pictures = { { filename = "__angelssmelting__/graphics/icons/plate-chrome.png", size = 32, scale = 0.5  } },
-    subgroup = "aoe-metals-chromium",
+    subgroup = "aoc-metals-chromium",
     order = "e",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-lead-ore",
-    icons = { { icon = "__angelssmelting__/graphics/icons/ore-lead.png", icon_size = 32 }, { icon = "__aoe__/img/items/atoms/pb.png", icon_size = 64 } },
+    name = "aoc-lead-ore",
+    icons = { { icon = "__angelssmelting__/graphics/icons/ore-lead.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/pb.png", icon_size = 64 } },
     pictures = { { filename = "__angelssmelting__/graphics/icons/ore-lead.png", size = 32, scale = 0.5  } },
-    subgroup = "aoe-metals-lead",
+    subgroup = "aoc-metals-lead",
     order = "a",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-lead-processed",
-    icons = { { icon = "__angelssmelting__/graphics/icons/processed-lead.png" }, { icon = "__aoe__/img/items/atoms/pb.png" } },
+    name = "aoc-lead-processed",
+    icons = { { icon = "__angelssmelting__/graphics/icons/processed-lead.png" }, { icon = "__ageofcreation__/img/items/atoms/pb.png" } },
     icon_size = 64,
     pictures = { { filename = "__angelssmelting__/graphics/icons/processed-lead.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-lead",
+    subgroup = "aoc-metals-lead",
     order = "b",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-lead-reduced",
-    icons = { { icon = "__angelssmelting__/graphics/icons/pellet-lead.png" }, { icon = "__aoe__/img/items/atoms/pb.png" } },
+    name = "aoc-lead-reduced",
+    icons = { { icon = "__angelssmelting__/graphics/icons/pellet-lead.png" }, { icon = "__ageofcreation__/img/items/atoms/pb.png" } },
     icon_size = 64,
     pictures = { { filename = "__angelssmelting__/graphics/icons/pellet-lead.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-lead",
+    subgroup = "aoc-metals-lead",
     order = "c",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-lead-dust",
-    icons = { { icon = "__angelssmelting__/graphics/icons/powder-lead.png" }, { icon = "__aoe__/img/items/atoms/pb.png" } },
+    name = "aoc-lead-dust",
+    icons = { { icon = "__angelssmelting__/graphics/icons/powder-lead.png" }, { icon = "__ageofcreation__/img/items/atoms/pb.png" } },
     icon_size = 64,
     pictures = { { filename = "__angelssmelting__/graphics/icons/powder-lead.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-lead",
+    subgroup = "aoc-metals-lead",
     order = "d",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-lead-plate",
-    icons = { { icon = "__angelssmelting__/graphics/icons/plate-lead.png", icon_size = 32 }, { icon = "__aoe__/img/items/atoms/pb.png", icon_size = 64 } },
+    name = "aoc-lead-plate",
+    icons = { { icon = "__angelssmelting__/graphics/icons/plate-lead.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/pb.png", icon_size = 64 } },
     pictures = { { filename = "__angelssmelting__/graphics/icons/plate-lead.png", size = 32, scale = 0.5  } },
-    subgroup = "aoe-metals-lead",
+    subgroup = "aoc-metals-lead",
     order = "e",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-silver-ore",
-    icons = { { icon = "__angelssmelting__/graphics/icons/ore-silver.png", icon_size = 32 }, { icon = "__aoe__/img/items/atoms/ag.png", icon_size = 64 } },
+    name = "aoc-silver-ore",
+    icons = { { icon = "__angelssmelting__/graphics/icons/ore-silver.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/ag.png", icon_size = 64 } },
     pictures = { { filename = "__angelssmelting__/graphics/icons/ore-silver.png", size = 32, scale = 0.5  } },
-    subgroup = "aoe-metals-silver",
+    subgroup = "aoc-metals-silver",
     order = "a",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-silver-processed",
-    icons = { { icon = "__angelssmelting__/graphics/icons/processed-silver.png" }, { icon = "__aoe__/img/items/atoms/ag.png" } },
+    name = "aoc-silver-processed",
+    icons = { { icon = "__angelssmelting__/graphics/icons/processed-silver.png" }, { icon = "__ageofcreation__/img/items/atoms/ag.png" } },
     icon_size = 64,
     pictures = { { filename = "__angelssmelting__/graphics/icons/processed-silver.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-silver",
+    subgroup = "aoc-metals-silver",
     order = "b",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-silver-reduced",
-    icons = { { icon = "__angelssmelting__/graphics/icons/pellet-silver.png" }, { icon = "__aoe__/img/items/atoms/ag.png" } },
+    name = "aoc-silver-reduced",
+    icons = { { icon = "__angelssmelting__/graphics/icons/pellet-silver.png" }, { icon = "__ageofcreation__/img/items/atoms/ag.png" } },
     icon_size = 64,
     pictures = { { filename = "__angelssmelting__/graphics/icons/pellet-silver.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-silver",
+    subgroup = "aoc-metals-silver",
     order = "c",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-silver-dust",
-    icons = { { icon = "__angelssmelting__/graphics/icons/powder-silver.png" }, { icon = "__aoe__/img/items/atoms/ag.png" } },
+    name = "aoc-silver-dust",
+    icons = { { icon = "__angelssmelting__/graphics/icons/powder-silver.png" }, { icon = "__ageofcreation__/img/items/atoms/ag.png" } },
     icon_size = 64,
     pictures = { { filename = "__angelssmelting__/graphics/icons/powder-silver.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-silver",
+    subgroup = "aoc-metals-silver",
     order = "d",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-silver-plate",
-    icons = { { icon = "__angelssmelting__/graphics/icons/plate-silver.png", icon_size = 32 }, { icon = "__aoe__/img/items/atoms/ag.png", icon_size = 64 } },
+    name = "aoc-silver-plate",
+    icons = { { icon = "__angelssmelting__/graphics/icons/plate-silver.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/ag.png", icon_size = 64 } },
     pictures = { { filename = "__angelssmelting__/graphics/icons/plate-silver.png", size = 32, scale = 0.5  } },
-    subgroup = "aoe-metals-silver",
+    subgroup = "aoc-metals-silver",
     order = "e",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-nickel-ore",
-    icons = { { icon = "__angelssmelting__/graphics/icons/ore-nickel.png", icon_size = 32 }, { icon = "__aoe__/img/items/atoms/ni.png", icon_size = 64 } },
+    name = "aoc-nickel-ore",
+    icons = { { icon = "__angelssmelting__/graphics/icons/ore-nickel.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/ni.png", icon_size = 64 } },
     pictures = { { filename = "__angelssmelting__/graphics/icons/ore-nickel.png", size = 32, scale = 0.5  } },
-    subgroup = "aoe-metals-nickel",
+    subgroup = "aoc-metals-nickel",
     order = "a",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-nickel-processed",
-    icons = { { icon = "__angelssmelting__/graphics/icons/processed-nickel.png" }, { icon = "__aoe__/img/items/atoms/ni.png" } },
+    name = "aoc-nickel-processed",
+    icons = { { icon = "__angelssmelting__/graphics/icons/processed-nickel.png" }, { icon = "__ageofcreation__/img/items/atoms/ni.png" } },
     icon_size = 64,
     pictures = { { filename = "__angelssmelting__/graphics/icons/processed-nickel.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-nickel",
+    subgroup = "aoc-metals-nickel",
     order = "b",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-nickel-reduced",
-    icons = { { icon = "__angelssmelting__/graphics/icons/pellet-nickel.png" }, { icon = "__aoe__/img/items/atoms/ni.png" } },
+    name = "aoc-nickel-reduced",
+    icons = { { icon = "__angelssmelting__/graphics/icons/pellet-nickel.png" }, { icon = "__ageofcreation__/img/items/atoms/ni.png" } },
     icon_size = 64,
     pictures = { { filename = "__angelssmelting__/graphics/icons/pellet-nickel.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-nickel",
+    subgroup = "aoc-metals-nickel",
     order = "c",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-nickel-dust",
-    icons = { { icon = "__angelssmelting__/graphics/icons/powder-nickel.png" }, { icon = "__aoe__/img/items/atoms/ni.png" } },
+    name = "aoc-nickel-dust",
+    icons = { { icon = "__angelssmelting__/graphics/icons/powder-nickel.png" }, { icon = "__ageofcreation__/img/items/atoms/ni.png" } },
     icon_size = 64,
     pictures = { { filename = "__angelssmelting__/graphics/icons/powder-nickel.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-nickel",
+    subgroup = "aoc-metals-nickel",
     order = "d",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-nickel-plate",
-    icons = { { icon = "__angelssmelting__/graphics/icons/plate-nickel.png", icon_size = 32 }, { icon = "__aoe__/img/items/atoms/ni.png", icon_size = 64 } },
+    name = "aoc-nickel-plate",
+    icons = { { icon = "__angelssmelting__/graphics/icons/plate-nickel.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/ni.png", icon_size = 64 } },
     pictures = { { filename = "__angelssmelting__/graphics/icons/plate-nickel.png", size = 32, scale = 0.5  } },
-    subgroup = "aoe-metals-nickel",
+    subgroup = "aoc-metals-nickel",
     order = "e",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-zinc-ore",
-    icons = { { icon = "__angelssmelting__/graphics/icons/ore-zinc.png", icon_size = 32 }, { icon = "__aoe__/img/items/atoms/zn.png", icon_size = 64 } },
+    name = "aoc-zinc-ore",
+    icons = { { icon = "__angelssmelting__/graphics/icons/ore-zinc.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/zn.png", icon_size = 64 } },
     pictures = { { filename = "__angelssmelting__/graphics/icons/ore-zinc.png", size = 32, scale = 0.5  } },
-    subgroup = "aoe-metals-zinc",
+    subgroup = "aoc-metals-zinc",
     order = "a",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-zinc-processed",
-    icons = { { icon = "__angelssmelting__/graphics/icons/processed-zinc.png" }, { icon = "__aoe__/img/items/atoms/zn.png" } },
+    name = "aoc-zinc-processed",
+    icons = { { icon = "__angelssmelting__/graphics/icons/processed-zinc.png" }, { icon = "__ageofcreation__/img/items/atoms/zn.png" } },
     icon_size = 64,
     pictures = { { filename = "__angelssmelting__/graphics/icons/processed-zinc.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-zinc",
+    subgroup = "aoc-metals-zinc",
     order = "b",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-zinc-reduced",
-    icons = { { icon = "__angelssmelting__/graphics/icons/pellet-zinc.png" }, { icon = "__aoe__/img/items/atoms/zn.png" } },
+    name = "aoc-zinc-reduced",
+    icons = { { icon = "__angelssmelting__/graphics/icons/pellet-zinc.png" }, { icon = "__ageofcreation__/img/items/atoms/zn.png" } },
     icon_size = 64,
     pictures = { { filename = "__angelssmelting__/graphics/icons/pellet-zinc.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-zinc",
+    subgroup = "aoc-metals-zinc",
     order = "c",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-zinc-dust",
-    icons = { { icon = "__angelssmelting__/graphics/icons/powder-zinc.png" }, { icon = "__aoe__/img/items/atoms/zn.png" } },
+    name = "aoc-zinc-dust",
+    icons = { { icon = "__angelssmelting__/graphics/icons/powder-zinc.png" }, { icon = "__ageofcreation__/img/items/atoms/zn.png" } },
     icon_size = 64,
     pictures = { { filename = "__angelssmelting__/graphics/icons/powder-zinc.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-zinc",
+    subgroup = "aoc-metals-zinc",
     order = "d",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-zinc-plate",
-    icons = { { icon = "__angelssmelting__/graphics/icons/plate-zinc.png", icon_size = 32 }, { icon = "__aoe__/img/items/atoms/zn.png", icon_size = 64 } },
+    name = "aoc-zinc-plate",
+    icons = { { icon = "__angelssmelting__/graphics/icons/plate-zinc.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/zn.png", icon_size = 64 } },
     pictures = { { filename = "__angelssmelting__/graphics/icons/plate-zinc.png", size = 32, scale = 0.5  } },
-    subgroup = "aoe-metals-zinc",
+    subgroup = "aoc-metals-zinc",
     order = "e",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-tungsten-ore",
-    icons = { { icon = "__angelssmelting__/graphics/icons/ore-tungsten.png", icon_size = 32 }, { icon = "__aoe__/img/items/atoms/w.png", icon_size = 64 } },
+    name = "aoc-tungsten-ore",
+    icons = { { icon = "__angelssmelting__/graphics/icons/ore-tungsten.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/w.png", icon_size = 64 } },
     pictures = { { filename = "__angelssmelting__/graphics/icons/ore-tungsten.png", size = 32, scale = 0.5  } },
-    subgroup = "aoe-metals-tungsten",
+    subgroup = "aoc-metals-tungsten",
     order = "a",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-tungsten-processed",
-    icons = { { icon = "__angelssmelting__/graphics/icons/processed-tungsten.png" }, { icon = "__aoe__/img/items/atoms/w.png" } },
+    name = "aoc-tungsten-processed",
+    icons = { { icon = "__angelssmelting__/graphics/icons/processed-tungsten.png" }, { icon = "__ageofcreation__/img/items/atoms/w.png" } },
     icon_size = 64,
     pictures = { { filename = "__angelssmelting__/graphics/icons/processed-tungsten.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-tungsten",
+    subgroup = "aoc-metals-tungsten",
     order = "b",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-tungsten-reduced",
-    icons = { { icon = "__angelssmelting__/graphics/icons/pellet-tungsten.png" }, { icon = "__aoe__/img/items/atoms/w.png" } },
+    name = "aoc-tungsten-reduced",
+    icons = { { icon = "__angelssmelting__/graphics/icons/pellet-tungsten.png" }, { icon = "__ageofcreation__/img/items/atoms/w.png" } },
     icon_size = 64,
     pictures = { { filename = "__angelssmelting__/graphics/icons/pellet-tungsten.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-tungsten",
+    subgroup = "aoc-metals-tungsten",
     order = "c",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-tungsten-dust",
-    icons = { { icon = "__angelssmelting__/graphics/icons/powder-tungsten.png" }, { icon = "__aoe__/img/items/atoms/w.png" } },
+    name = "aoc-tungsten-dust",
+    icons = { { icon = "__angelssmelting__/graphics/icons/powder-tungsten.png" }, { icon = "__ageofcreation__/img/items/atoms/w.png" } },
     icon_size = 64,
     pictures = { { filename = "__angelssmelting__/graphics/icons/powder-tungsten.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-tungsten",
+    subgroup = "aoc-metals-tungsten",
     order = "d",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-tungsten-plate",
-    icons = { { icon = "__angelssmelting__/graphics/icons/plate-tungsten.png", icon_size = 32 }, { icon = "__aoe__/img/items/atoms/w.png", icon_size = 64 } },
+    name = "aoc-tungsten-plate",
+    icons = { { icon = "__angelssmelting__/graphics/icons/plate-tungsten.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/w.png", icon_size = 64 } },
     pictures = { { filename = "__angelssmelting__/graphics/icons/plate-tungsten.png", size = 32, scale = 0.5  } },
-    subgroup = "aoe-metals-tungsten",
+    subgroup = "aoc-metals-tungsten",
     order = "e",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-gold-ore",
-    icons = { { icon = "__angelssmelting__/graphics/icons/ore-gold.png", icon_size = 32 }, { icon = "__aoe__/img/items/atoms/au.png", icon_size = 64 } },
+    name = "aoc-gold-ore",
+    icons = { { icon = "__angelssmelting__/graphics/icons/ore-gold.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/au.png", icon_size = 64 } },
     pictures = { { filename = "__angelssmelting__/graphics/icons/ore-gold.png", size = 32, scale = 0.5  } },
-    subgroup = "aoe-metals-gold",
+    subgroup = "aoc-metals-gold",
     order = "a",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-gold-processed",
-    icons = { { icon = "__angelssmelting__/graphics/icons/processed-gold.png" }, { icon = "__aoe__/img/items/atoms/au.png" } },
+    name = "aoc-gold-processed",
+    icons = { { icon = "__angelssmelting__/graphics/icons/processed-gold.png" }, { icon = "__ageofcreation__/img/items/atoms/au.png" } },
     icon_size = 64,
     pictures = { { filename = "__angelssmelting__/graphics/icons/processed-gold.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-gold",
+    subgroup = "aoc-metals-gold",
     order = "b",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-gold-reduced",
-    icons = { { icon = "__angelssmelting__/graphics/icons/pellet-gold.png" }, { icon = "__aoe__/img/items/atoms/ag.png" } },
+    name = "aoc-gold-reduced",
+    icons = { { icon = "__angelssmelting__/graphics/icons/pellet-gold.png" }, { icon = "__ageofcreation__/img/items/atoms/ag.png" } },
     icon_size = 64,
     pictures = { { filename = "__angelssmelting__/graphics/icons/pellet-gold.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-gold",
+    subgroup = "aoc-metals-gold",
     order = "c",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-gold-dust",
-    icons = { { icon = "__angelssmelting__/graphics/icons/powder-gold.png" }, { icon = "__aoe__/img/items/atoms/ag.png" } },
+    name = "aoc-gold-dust",
+    icons = { { icon = "__angelssmelting__/graphics/icons/powder-gold.png" }, { icon = "__ageofcreation__/img/items/atoms/ag.png" } },
     icon_size = 64,
     pictures = { { filename = "__angelssmelting__/graphics/icons/powder-gold.png", size = 64, scale = 0.25  } },
-    subgroup = "aoe-metals-gold",
+    subgroup = "aoc-metals-gold",
     order = "d",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-gold-plate",
-    icons = { { icon = "__angelssmelting__/graphics/icons/plate-gold.png", icon_size = 32 }, { icon = "__aoe__/img/items/atoms/au.png", icon_size = 64 } },
+    name = "aoc-gold-plate",
+    icons = { { icon = "__angelssmelting__/graphics/icons/plate-gold.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/au.png", icon_size = 64 } },
     pictures = { { filename = "__angelssmelting__/graphics/icons/plate-gold.png", size = 32, scale = 0.5  } },
-    subgroup = "aoe-metals-gold",
+    subgroup = "aoc-metals-gold",
     order = "e",
     stack_size = 200
 }})
 
-data.raw['item']['uranium-ore'].subgroup = "aoe-metals-rest"
+data.raw['item']['uranium-ore'].subgroup = "aoc-metals-rest"
 data.raw['item']['uranium-ore'].order = "j"
-data.raw['item']['uranium-ore'].icons = { { icon = "__base__/graphics/icons/uranium-ore.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__aoe__/img/items/atoms/u.png", icon_size = 64 } }
+data.raw['item']['uranium-ore'].icons = { { icon = "__base__/graphics/icons/uranium-ore.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/u.png", icon_size = 64 } }
 
 data:extend({{
     type = "item",
-    name = "aoe-slag",
+    name = "aoc-slag",
     icon = "__angelsrefining__/graphics/icons/slag.png",
     icon_size = 32,
-    subgroup = "aoe-stone",
+    subgroup = "aoc-stone",
     order = "z",
     stack_size = 500
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-sodium-bisulfate",
+    name = "aoc-sodium-bisulfate",
     icon = "__angelspetrochem__/graphics/icons/solid-sodium-sulfate.png",
     icon_size = 32,
-    subgroup = "aoe-chemicals",
+    subgroup = "aoc-chemicals",
     order = "c",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-sodium-nitrate",
+    name = "aoc-sodium-nitrate",
     icon = "__angelspetrochem__/graphics/icons/solid-sodium-nitrate.png",
     icon_size = 32,
-    subgroup = "aoe-chemicals",
+    subgroup = "aoc-chemicals",
     order = "d",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-sodium-cyanide",
+    name = "aoc-sodium-cyanide",
     icon = "__angelspetrochem__/graphics/icons/solid-sodium-cyanide.png",
     icon_size = 32,
-    subgroup = "aoe-chemicals",
+    subgroup = "aoc-chemicals",
     order = "e",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-hydrogen-cyanide",
+    name = "aoc-hydrogen-cyanide",
     icon = "__angelssmelting__/graphics/icons/solid-silver-nitrate.png",
     icon_size = 32,
-    subgroup = "aoe-chemicals",
+    subgroup = "aoc-chemicals",
     order = "f",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-copper-sulfate",
-    icon = "__aoe__/img/items/copper-sulfate.png",
+    name = "aoc-copper-sulfate",
+    icon = "__ageofcreation__/img/items/copper-sulfate.png",
     icon_size = 64,
-    subgroup = "aoe-metals-copper",
+    subgroup = "aoc-metals-copper",
     order = "i",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-zinc-chloride",
+    name = "aoc-zinc-chloride",
     icon = "__angelssmelting__/graphics/icons/solid-zinc-oxide.png",
     icon_size = 32,
-    subgroup = "aoe-metals-zinc",
+    subgroup = "aoc-metals-zinc",
     order = "f",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-carbon",
-    icons = { { icon = "__angelspetrochem__/graphics/icons/solid-carbon.png", icon_size = 32 }, { icon = "__aoe__/img/items/atoms/c.png", icon_size = 64 } },
-    subgroup = "aoe-coal",
+    name = "aoc-carbon",
+    icons = { { icon = "__angelspetrochem__/graphics/icons/solid-carbon.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/c.png", icon_size = 64 } },
+    subgroup = "aoc-coal",
     order = "e",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-carbon-fiber-mesh",
-    icons = { { icon = "__aoe__/img/items/carbon-fiber-mesh.png" }, { icon = "__aoe__/img/items/atoms/c.png" } },
+    name = "aoc-carbon-fiber-mesh",
+    icons = { { icon = "__ageofcreation__/img/items/carbon-fiber-mesh.png" }, { icon = "__ageofcreation__/img/items/atoms/c.png" } },
     icon_size = 64,
-    subgroup = "aoe-coal",
+    subgroup = "aoc-coal",
     order = "f",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-rotor-carbon",
-    icon = "__aoe__/img/items/carbon-rotor.png",
+    name = "aoc-rotor-carbon",
+    icon = "__ageofcreation__/img/items/carbon-rotor.png",
     icon_size = 64,
-    subgroup = "aoe-coal",
+    subgroup = "aoc-coal",
     order = "g",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-carbon-activated",
-    icons = { { icon = "__angelspetrochem__/graphics/icons/pellet-coke.png", icon_size = 32 }, { icon = "__aoe__/img/items/atoms/c.png", icon_size = 64 } },
-    subgroup = "aoe-coal",
+    name = "aoc-carbon-activated",
+    icons = { { icon = "__angelspetrochem__/graphics/icons/pellet-coke.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/c.png", icon_size = 64 } },
+    subgroup = "aoc-coal",
     order = "g",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-calcium-chloride",
+    name = "aoc-calcium-chloride",
     icon = "__angelsbioprocessing__/graphics/icons/solid-calcium-carbonate.png",
     icon_size = 32,
-    subgroup = "aoe-stone",
+    subgroup = "aoc-stone",
     order = "r",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-calcium-chloride",
+    name = "aoc-calcium-chloride",
     icon = "__angelsbioprocessing__/graphics/icons/solid-calcium-carbonate.png",
     icon_size = 32,
-    subgroup = "aoe-stone",
+    subgroup = "aoc-stone",
     order = "r",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-tailings-dust",
-    icon = "__aoe__/img/items/tailings-dust.png",
+    name = "aoc-tailings-dust",
+    icon = "__ageofcreation__/img/items/tailings-dust.png",
     icon_size = 64,
-    subgroup = "aoe-metals-rest",
+    subgroup = "aoc-metals-rest",
     order = "k",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-nauvium-ore",
-    icon = "__aoe__/img/items/nauvium-ore.png",
+    name = "aoc-nauvium-ore",
+    icon = "__ageofcreation__/img/items/nauvium-ore.png",
     icon_size = 64,
-    subgroup = "aoe-metals-rest",
+    subgroup = "aoc-metals-rest",
     order = "l",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-stainless-steel",
+    name = "aoc-stainless-steel",
     icon = "__angelssmelting__/graphics/icons/plate-steel.png",
     icon_size = 32,
-    subgroup = "aoe-metals-alloys",
+    subgroup = "aoc-metals-alloys",
     order = "b",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-solder",
+    name = "aoc-solder",
     icon = "__angelssmelting__/graphics/icons/solder.png",
     icon_size = 32,
-    subgroup = "aoe-metals-alloys",
+    subgroup = "aoc-metals-alloys",
     order = "c",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-brass",
-    icon = "__aoe__/img/items/brass.png",
+    name = "aoc-brass",
+    icon = "__ageofcreation__/img/items/brass.png",
     icon_size = 64,
-    subgroup = "aoe-metals-alloys",
+    subgroup = "aoc-metals-alloys",
     order = "d",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-brass-rod",
-    icon = "__aoe__/img/items/brass-rod.png",
+    name = "aoc-brass-rod",
+    icon = "__ageofcreation__/img/items/brass-rod.png",
     icon_size = 64,
-    subgroup = "aoe-metals-alloys",
+    subgroup = "aoc-metals-alloys",
     order = "d1",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-electrum",
-    icon = "__aoe__/img/items/electrum.png",
+    name = "aoc-electrum",
+    icon = "__ageofcreation__/img/items/electrum.png",
     icon_size = 64,
-    subgroup = "aoe-metals-alloys",
+    subgroup = "aoc-metals-alloys",
     order = "e",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-silicon",
+    name = "aoc-silicon",
     icon = "__angelssmelting__/graphics/icons/plate-silicon.png",
     icon_size = 32,
-    subgroup = "aoe-metals-alloys",
+    subgroup = "aoc-metals-alloys",
     order = "f",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-silicon-wafer",
+    name = "aoc-silicon-wafer",
     icon = "__angelsindustries__/graphics/icons/silicon-wafer.png",
     icon_size = 32,
-    subgroup = "aoe-metals-alloys",
+    subgroup = "aoc-metals-alloys",
     order = "f1",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-stainless-steel-machine-hull",
-    icon = "__aoe__/img/items/stainless-steel-machine-hull.png",
+    name = "aoc-stainless-steel-machine-hull",
+    icon = "__ageofcreation__/img/items/stainless-steel-machine-hull.png",
     icon_size = 64,
-    subgroup = "aoe-parts",
+    subgroup = "aoc-parts",
     order = "d",
     stack_size = 200
 }})
 
-data.raw['item']['advanced-circuit'].subgroup = "aoe-circuits"
+data.raw['item']['advanced-circuit'].subgroup = "aoc-circuits"
 data.raw['item']['advanced-circuit'].order = "b"
 data.raw['item']['advanced-circuit'].stack_size = 200
 
 data:extend({{
     type = "item",
-    name = "aoe-resistor",
+    name = "aoc-resistor",
     icon = "__angelsindustries__/graphics/icons/resistor.png",
     icon_size = 32,
-    subgroup = "aoe-circuits",
+    subgroup = "aoc-circuits",
     order = "d",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-diode",
-    icon = "__aoe__/img/items/diode.png",
+    name = "aoc-diode",
+    icon = "__ageofcreation__/img/items/diode.png",
     icon_size = 64,
-    subgroup = "aoe-circuits",
+    subgroup = "aoc-circuits",
     order = "e",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-capacitor",
-    icon = "__aoe__/img/items/capacitor.png",
+    name = "aoc-capacitor",
+    icon = "__ageofcreation__/img/items/capacitor.png",
     icon_size = 64,
-    subgroup = "aoe-circuits",
+    subgroup = "aoc-circuits",
     order = "f",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-transistor",
+    name = "aoc-transistor",
     icon = "__angelsindustries__/graphics/icons/transistor.png",
     icon_size = 32,
-    subgroup = "aoe-circuits",
+    subgroup = "aoc-circuits",
     order = "g",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-inductor",
-    icon = "__aoe__/img/items/inductor.png",
+    name = "aoc-inductor",
+    icon = "__ageofcreation__/img/items/inductor.png",
     icon_size = 64,
-    subgroup = "aoe-circuits",
+    subgroup = "aoc-circuits",
     order = "h",
     stack_size = 200
 }})
 
 data:extend({{
     type = "item",
-    name = "aoe-ceramic",
-    icon = "__aoe__/img/items/ceramic.png",
+    name = "aoc-ceramic",
+    icon = "__ageofcreation__/img/items/ceramic.png",
     icon_size = 64,
-    subgroup = "aoe-dirt",
+    subgroup = "aoc-dirt",
     order = "f",
     stack_size = 200
 }})
 
 data:extend({{
     type = "module",
-    name = "aoe-hidden-iron-module",
-    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["iron-plate"] ) ),
-	subgroup = "aoe-hidden",
+    name = "aoc-hidden-iron-module",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoc-paper"] ), get_icons( data.raw["item"]["iron-plate"] ) ),
+	subgroup = "aoc-hidden",
     order = "a",
     stack_size = 1,
-	category = "aoe-module-iron",
+	category = "aoc-module-iron",
 	tier = 1,
     effect = { productivity = {bonus = 0.05} },
 	limitation = {},
@@ -914,21 +914,21 @@ data:extend({{
 
 data:extend({{
     type = "item",
-    name = "aoe-iron-research",
-    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["iron-plate"] ) ),
-    subgroup = "aoe-metals-iron",
+    name = "aoc-iron-research",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoc-paper"] ), get_icons( data.raw["item"]["iron-plate"] ) ),
+    subgroup = "aoc-metals-iron",
     order = "z",
     stack_size = 10
 }})
 
 data:extend({{
     type = "module",
-    name = "aoe-hidden-copper-module",
-    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["copper-plate"] ) ),
-	subgroup = "aoe-hidden",
+    name = "aoc-hidden-copper-module",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoc-paper"] ), get_icons( data.raw["item"]["copper-plate"] ) ),
+	subgroup = "aoc-hidden",
     order = "b",
     stack_size = 1,
-	category = "aoe-module-copper",
+	category = "aoc-module-copper",
 	tier = 1,
     effect = { productivity = {bonus = 0.05} },
 	limitation = {},
@@ -937,21 +937,21 @@ data:extend({{
 
 data:extend({{
     type = "item",
-    name = "aoe-copper-research",
-    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["copper-plate"] ) ),
-    subgroup = "aoe-metals-copper",
+    name = "aoc-copper-research",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoc-paper"] ), get_icons( data.raw["item"]["copper-plate"] ) ),
+    subgroup = "aoc-metals-copper",
     order = "z",
     stack_size = 10
 }})
 
 data:extend({{
     type = "module",
-    name = "aoe-hidden-tin-module",
-    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-tin-plate"] ) ),
-	subgroup = "aoe-hidden",
+    name = "aoc-hidden-tin-module",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoc-paper"] ), get_icons( data.raw["item"]["aoc-tin-plate"] ) ),
+	subgroup = "aoc-hidden",
     order = "c",
     stack_size = 1,
-	category = "aoe-module-tin",
+	category = "aoc-module-tin",
 	tier = 1,
     effect = { productivity = {bonus = 0.05} },
 	limitation = {},
@@ -960,21 +960,21 @@ data:extend({{
 
 data:extend({{
     type = "item",
-    name = "aoe-tin-research",
-    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-tin-plate"] ) ),
-    subgroup = "aoe-metals-tin",
+    name = "aoc-tin-research",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoc-paper"] ), get_icons( data.raw["item"]["aoc-tin-plate"] ) ),
+    subgroup = "aoc-metals-tin",
     order = "z",
     stack_size = 10
 }})
 
 data:extend({{
     type = "module",
-    name = "aoe-hidden-aluminium-module",
-    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-aluminium-plate"] ) ),
-	subgroup = "aoe-hidden",
+    name = "aoc-hidden-aluminium-module",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoc-paper"] ), get_icons( data.raw["item"]["aoc-aluminium-plate"] ) ),
+	subgroup = "aoc-hidden",
     order = "d",
     stack_size = 1,
-	category = "aoe-module-aluminium",
+	category = "aoc-module-aluminium",
 	tier = 1,
     effect = { productivity = {bonus = 0.05} },
 	limitation = {},
@@ -983,21 +983,21 @@ data:extend({{
 
 data:extend({{
     type = "item",
-    name = "aoe-aluminium-research",
-    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-aluminium-plate"] ) ),
-    subgroup = "aoe-metals-aluminium",
+    name = "aoc-aluminium-research",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoc-paper"] ), get_icons( data.raw["item"]["aoc-aluminium-plate"] ) ),
+    subgroup = "aoc-metals-aluminium",
     order = "z",
     stack_size = 10
 }})
 
 data:extend({{
     type = "module",
-    name = "aoe-hidden-lead-module",
-    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-lead-plate"] ) ),
-	subgroup = "aoe-hidden",
+    name = "aoc-hidden-lead-module",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoc-paper"] ), get_icons( data.raw["item"]["aoc-lead-plate"] ) ),
+	subgroup = "aoc-hidden",
     order = "e",
     stack_size = 1,
-	category = "aoe-module-lead",
+	category = "aoc-module-lead",
 	tier = 1,
     effect = { productivity = {bonus = 0.05} },
 	limitation = {},
@@ -1006,21 +1006,21 @@ data:extend({{
 
 data:extend({{
     type = "item",
-    name = "aoe-lead-research",
-    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-lead-plate"] ) ),
-    subgroup = "aoe-metals-lead",
+    name = "aoc-lead-research",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoc-paper"] ), get_icons( data.raw["item"]["aoc-lead-plate"] ) ),
+    subgroup = "aoc-metals-lead",
     order = "z",
     stack_size = 10
 }})
 
 data:extend({{
     type = "module",
-    name = "aoe-hidden-silver-module",
-    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-silver-plate"] ) ),
-	subgroup = "aoe-hidden",
+    name = "aoc-hidden-silver-module",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoc-paper"] ), get_icons( data.raw["item"]["aoc-silver-plate"] ) ),
+	subgroup = "aoc-hidden",
     order = "f",
     stack_size = 1,
-	category = "aoe-module-silver",
+	category = "aoc-module-silver",
 	tier = 1,
     effect = { productivity = {bonus = 0.05} },
 	limitation = {},
@@ -1029,21 +1029,21 @@ data:extend({{
 
 data:extend({{
     type = "item",
-    name = "aoe-silver-research",
-    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-silver-plate"] ) ),
-    subgroup = "aoe-metals-silver",
+    name = "aoc-silver-research",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoc-paper"] ), get_icons( data.raw["item"]["aoc-silver-plate"] ) ),
+    subgroup = "aoc-metals-silver",
     order = "z",
     stack_size = 10
 }})
 
 data:extend({{
     type = "module",
-    name = "aoe-hidden-nickel-module",
-    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-nickel-plate"] ) ),
-	subgroup = "aoe-hidden",
+    name = "aoc-hidden-nickel-module",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoc-paper"] ), get_icons( data.raw["item"]["aoc-nickel-plate"] ) ),
+	subgroup = "aoc-hidden",
     order = "g",
     stack_size = 1,
-	category = "aoe-module-nickel",
+	category = "aoc-module-nickel",
 	tier = 1,
     effect = { productivity = {bonus = 0.05} },
 	limitation = {},
@@ -1052,21 +1052,21 @@ data:extend({{
 
 data:extend({{
     type = "item",
-    name = "aoe-nickel-research",
-    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-nickel-plate"] ) ),
-    subgroup = "aoe-metals-nickel",
+    name = "aoc-nickel-research",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoc-paper"] ), get_icons( data.raw["item"]["aoc-nickel-plate"] ) ),
+    subgroup = "aoc-metals-nickel",
     order = "z",
     stack_size = 10
 }})
 
 data:extend({{
     type = "module",
-    name = "aoe-hidden-gold-module",
-    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-gold-plate"] ) ),
-	subgroup = "aoe-hidden",
+    name = "aoc-hidden-gold-module",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoc-paper"] ), get_icons( data.raw["item"]["aoc-gold-plate"] ) ),
+	subgroup = "aoc-hidden",
     order = "h",
     stack_size = 1,
-	category = "aoe-module-gold",
+	category = "aoc-module-gold",
 	tier = 1,
     effect = { productivity = {bonus = 0.05} },
 	limitation = {},
@@ -1075,21 +1075,21 @@ data:extend({{
 
 data:extend({{
     type = "item",
-    name = "aoe-gold-research",
-    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-gold-plate"] ) ),
-    subgroup = "aoe-metals-gold",
+    name = "aoc-gold-research",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoc-paper"] ), get_icons( data.raw["item"]["aoc-gold-plate"] ) ),
+    subgroup = "aoc-metals-gold",
     order = "z",
     stack_size = 10
 }})
 
 data:extend({{
     type = "module",
-    name = "aoe-hidden-zinc-module",
-    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-zinc-plate"] ) ),
-	subgroup = "aoe-hidden",
+    name = "aoc-hidden-zinc-module",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoc-paper"] ), get_icons( data.raw["item"]["aoc-zinc-plate"] ) ),
+	subgroup = "aoc-hidden",
     order = "i",
     stack_size = 1,
-	category = "aoe-module-zinc",
+	category = "aoc-module-zinc",
 	tier = 1,
     effect = { productivity = {bonus = 0.05} },
 	limitation = {},
@@ -1098,21 +1098,21 @@ data:extend({{
 
 data:extend({{
     type = "item",
-    name = "aoe-zinc-research",
-    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-zinc-plate"] ) ),
-    subgroup = "aoe-metals-zinc",
+    name = "aoc-zinc-research",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoc-paper"] ), get_icons( data.raw["item"]["aoc-zinc-plate"] ) ),
+    subgroup = "aoc-metals-zinc",
     order = "z",
     stack_size = 10
 }})
 
 data:extend({{
     type = "module",
-    name = "aoe-hidden-chromium-module",
-    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-chromium-plate"] ) ),
-	subgroup = "aoe-hidden",
+    name = "aoc-hidden-chromium-module",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoc-paper"] ), get_icons( data.raw["item"]["aoc-chromium-plate"] ) ),
+	subgroup = "aoc-hidden",
     order = "j",
     stack_size = 1,
-	category = "aoe-module-chromium",
+	category = "aoc-module-chromium",
 	tier = 1,
     effect = { productivity = {bonus = 0.05} },
 	limitation = {},
@@ -1121,21 +1121,21 @@ data:extend({{
 
 data:extend({{
     type = "item",
-    name = "aoe-chromium-research",
-    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-chromium-plate"] ) ),
-    subgroup = "aoe-metals-chromium",
+    name = "aoc-chromium-research",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoc-paper"] ), get_icons( data.raw["item"]["aoc-chromium-plate"] ) ),
+    subgroup = "aoc-metals-chromium",
     order = "z",
     stack_size = 10
 }})
 
 data:extend({{
     type = "module",
-    name = "aoe-hidden-tungsten-module",
-    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-tungsten-plate"] ) ),
-	subgroup = "aoe-hidden",
+    name = "aoc-hidden-tungsten-module",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoc-paper"] ), get_icons( data.raw["item"]["aoc-tungsten-plate"] ) ),
+	subgroup = "aoc-hidden",
     order = "k",
     stack_size = 1,
-	category = "aoe-module-tungsten",
+	category = "aoc-module-tungsten",
 	tier = 1,
     effect = { productivity = {bonus = 0.05} },
 	limitation = {},
@@ -1144,16 +1144,16 @@ data:extend({{
 
 data:extend({{
     type = "item",
-    name = "aoe-tungsten-research",
-    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoe-paper"] ), get_icons( data.raw["item"]["aoe-tungsten-plate"] ) ),
-    subgroup = "aoe-metals-tungsten",
+    name = "aoc-tungsten-research",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoc-paper"] ), get_icons( data.raw["item"]["aoc-tungsten-plate"] ) ),
+    subgroup = "aoc-metals-tungsten",
     order = "z",
     stack_size = 10
 }})
 
-data.raw['item']['sulfur'].subgroup = "aoe-petrochem"
+data.raw['item']['sulfur'].subgroup = "aoc-petrochem"
 data.raw['item']['sulfur'].order = "a"
 data.raw['item']['sulfur'].stack_size = 200
-data.raw['item']['plastic-bar'].subgroup = "aoe-petrochem"
+data.raw['item']['plastic-bar'].subgroup = "aoc-petrochem"
 data.raw['item']['plastic-bar'].order = "b"
 data.raw['item']['plastic-bar'].stack_size = 200

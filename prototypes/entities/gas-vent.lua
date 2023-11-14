@@ -1,19 +1,19 @@
 data:extend({{
     type = "item",
-    name = "aoe-gas-vent",
+    name = "aoc-gas-vent",
     icon = "__angelspetrochem__/graphics/icons/flare-stack.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    subgroup = "aoe-voiding-buildings",
+    subgroup = "aoc-voiding-buildings",
     order = "c",
-    place_result = "aoe-gas-vent",
+    place_result = "aoc-gas-vent",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "furnace",
-  name = "aoe-gas-vent",
-	crafting_categories = {"aoe-category-venting"},
+  name = "aoc-gas-vent",
+	crafting_categories = {"aoc-category-venting"},
 	crafting_speed = 1,
 	energy_source = { type = "void" },
 	energy_usage = "1kW",
@@ -22,7 +22,7 @@ data:extend({{
   icon_size = 64,
   icon_mipmaps = 4,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoe-gas-vent" },
+	minable = { hardness = 1, mining_time = 0.2, result = "aoc-gas-vent" },
 	max_health = 300,
 	selection_box = {{-1.0, -1.0}, {1.0, 1.0}},
 	collision_box = {{-0.9, -0.9}, {0.9, 0.9}},

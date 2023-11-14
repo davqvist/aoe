@@ -1,19 +1,19 @@
 data:extend({{
     type = "item",
-    name = "aoe-electrolyzer",
+    name = "aoc-electrolyzer",
     icon = "__angelspetrochem__/graphics/icons/electrolyser.png",
     icon_size = 32,
     icon_mipmaps = 1,
-    subgroup = "aoe-specific-buildings",
+    subgroup = "aoc-specific-buildings",
     order = "m",
-    place_result = "aoe-electrolyzer",
+    place_result = "aoc-electrolyzer",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "assembling-machine",
-  name = "aoe-electrolyzer",
-	crafting_categories = {"aoe-category-electrolyzing","aoe-category-electrolyzing-iron","aoe-category-electrolyzing-copper","aoe-category-electrolyzing-tin","aoe-category-electrolyzing-aluminium","aoe-category-electrolyzing-lead","aoe-category-electrolyzing-silver","aoe-category-electrolyzing-nickel","aoe-category-electrolyzing-gold","aoe-category-electrolyzing-zinc","aoe-category-electrolyzing-chromium","aoe-category-electrolyzing-tungsten"},
+  name = "aoc-electrolyzer",
+	crafting_categories = {"aoc-category-electrolyzing","aoc-category-electrolyzing-iron","aoc-category-electrolyzing-copper","aoc-category-electrolyzing-tin","aoc-category-electrolyzing-aluminium","aoc-category-electrolyzing-lead","aoc-category-electrolyzing-silver","aoc-category-electrolyzing-nickel","aoc-category-electrolyzing-gold","aoc-category-electrolyzing-zinc","aoc-category-electrolyzing-chromium","aoc-category-electrolyzing-tungsten"},
 	crafting_speed = 1,
 	energy_source = {
     type = "electric",
@@ -30,7 +30,7 @@ data:extend({{
   icon_size = 32,
   icon_mipmaps = 1,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoe-electrolyzer" },
+	minable = { hardness = 1, mining_time = 0.2, result = "aoc-electrolyzer" },
 	max_health = 300,
 	selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
 	collision_box = {{-3.4, -3.4}, {3.4, 3.4}},

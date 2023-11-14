@@ -1,28 +1,28 @@
 data:extend({{
     type = "item",
-    name = "aoe-burner-gene-lab",
+    name = "aoc-burner-gene-lab",
     icons = {
       {
-        icon = "__aoe__/img/entities/gene-lab.png",
+        icon = "__ageofcreation__/img/entities/gene-lab.png",
         icon_size = 256
       },
       {
-        icon = "__aoe__/img/items/other/fire.png",
+        icon = "__ageofcreation__/img/items/other/fire.png",
         icon_size = 64,
         scale = 0.25,
         shift = {-12,8}
       }
     },
-    subgroup = "aoe-specific-buildings",
+    subgroup = "aoc-specific-buildings",
     order = "f",
-    place_result = "aoe-burner-gene-lab",
+    place_result = "aoc-burner-gene-lab",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "assembling-machine",
-  name = "aoe-burner-gene-lab",
-	crafting_categories = {"aoe-category-gene-lab"},
+  name = "aoc-burner-gene-lab",
+	crafting_categories = {"aoc-category-gene-lab"},
 	crafting_speed = 0.5,
 	energy_source = {
       type = "burner",
@@ -44,18 +44,18 @@ data:extend({{
 	allowed_effects = nil,
   icons = {
     {
-      icon = "__aoe__/img/entities/gene-lab.png",
+      icon = "__ageofcreation__/img/entities/gene-lab.png",
       icon_size = 256
     },
     {
-      icon = "__aoe__/img/items/other/fire.png",
+      icon = "__ageofcreation__/img/items/other/fire.png",
       icon_size = 64,
       scale = 0.25,
       shift = {-12,8}
     }
   },
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoe-burner-gene-lab" },
+	minable = { hardness = 1, mining_time = 0.2, result = "aoc-burner-gene-lab" },
   fast_replaceable_group = "gene-lab",
   max_health = 300,
 	selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
@@ -63,7 +63,7 @@ data:extend({{
 	animation = {
       layers = {
         {
-          filename = "__aoe__/img/entities/gene-lab.png",
+          filename = "__ageofcreation__/img/entities/gene-lab.png",
           width = 256,
           height = 256,
           frame_count = 1,
@@ -100,19 +100,19 @@ data:extend({{
 
 data:extend({{
     type = "item",
-    name = "aoe-gene-lab",
-    icon = "__aoe__/img/entities/gene-lab.png",
+    name = "aoc-gene-lab",
+    icon = "__ageofcreation__/img/entities/gene-lab.png",
     icon_size = 256,
-    subgroup = "aoe-specific-buildings",
+    subgroup = "aoc-specific-buildings",
     order = "g",
-    place_result = "aoe-gene-lab",
+    place_result = "aoc-gene-lab",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "assembling-machine",
-  name = "aoe-gene-lab",
-	crafting_categories = {"aoe-category-gene-lab"},
+  name = "aoc-gene-lab",
+	crafting_categories = {"aoc-category-gene-lab"},
 	crafting_speed = 1,
 	energy_source = {
     type = "electric",
@@ -125,10 +125,10 @@ data:extend({{
 	module_specification = {
     module_slots = 3
   },
-	icon = "__aoe__/img/entities/gene-lab.png",
+	icon = "__ageofcreation__/img/entities/gene-lab.png",
 	icon_size = 256,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoe-gene-lab" },
+	minable = { hardness = 1, mining_time = 0.2, result = "aoc-gene-lab" },
   fast_replaceable_group = "gene-lab",
 	max_health = 300,
 	selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
@@ -136,7 +136,7 @@ data:extend({{
 	animation = {
       layers = {
         {
-          filename = "__aoe__/img/entities/gene-lab.png",
+          filename = "__ageofcreation__/img/entities/gene-lab.png",
           width = 256,
           height = 256,
           frame_count = 1,

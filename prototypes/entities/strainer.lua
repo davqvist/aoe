@@ -1,33 +1,33 @@
 data:extend({{
     type = "item",
-    name = "aoe-strainer",
-    icon = "__aoe__/img/entities/strainer.png",
+    name = "aoc-strainer",
+    icon = "__ageofcreation__/img/entities/strainer.png",
     icon_size = 96,
-    subgroup = "aoe-specific-buildings",
+    subgroup = "aoc-specific-buildings",
     order = "e",
-    place_result = "aoe-strainer",
+    place_result = "aoc-strainer",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "assembling-machine",
-  name = "aoe-strainer",
-	crafting_categories = {"aoe-category-straining"},
+  name = "aoc-strainer",
+	crafting_categories = {"aoc-category-straining"},
 	crafting_speed = 1,
 	energy_source = { type = "void" },
 	energy_usage = "1kW",
 	allowed_effects = nil,
-	icon = "__aoe__/img/entities/strainer.png",
+	icon = "__ageofcreation__/img/entities/strainer.png",
 	icon_size = 96,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoe-strainer" },
+	minable = { hardness = 1, mining_time = 0.2, result = "aoc-strainer" },
 	max_health = 300,
 	selection_box = {{-1.0, -1.0}, {1.0, 1.0}},
 	collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
 	animation = {
       layers = {
         {
-          filename = "__aoe__/img/entities/strainer.png",
+          filename = "__ageofcreation__/img/entities/strainer.png",
           width = 96,
           height = 96,
           frame_count = 1,

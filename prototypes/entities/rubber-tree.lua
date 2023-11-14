@@ -2,19 +2,19 @@ local sounds = require("__base__/prototypes/entity/sounds")
 
 data:extend({{
     type = "item",
-    name = "aoe-rubber-tree",
-    icon = "__aoe__/img/entities/rubber-tree.png",
+    name = "aoc-rubber-tree",
+    icon = "__ageofcreation__/img/entities/rubber-tree.png",
     icon_size = 256,
-    subgroup = "aoe-flora-rubber",
+    subgroup = "aoc-flora-rubber",
     order = "b",
-    place_result = "aoe-rubber-tree",
+    place_result = "aoc-rubber-tree",
     stack_size = 100,
 }})
 
 data:extend({{
     type = "simple-entity-with-owner",
-    name = "aoe-rubber-tree",
-	icon = "__aoe__/img/entities/rubber-tree.png",
+    name = "aoc-rubber-tree",
+	icon = "__ageofcreation__/img/entities/rubber-tree.png",
     icon_size = 256,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "wood", count = 5},
@@ -26,7 +26,7 @@ data:extend({{
     selection_box = {{-1.0, -2.0}, {1.0, 0.5}},
     picture =
     {
-      filename = "__aoe__/img/entities/rubber-tree.png",
+      filename = "__ageofcreation__/img/entities/rubber-tree.png",
       width = 256,
       height = 256,
       frame_count = 1,

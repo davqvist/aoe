@@ -1,26 +1,26 @@
 data:extend({{
     type = "item",
-    name = "aoe-tree-farm",
-    icon = "__aoe__/img/entities/tree-farm.png",
+    name = "aoc-tree-farm",
+    icon = "__ageofcreation__/img/entities/tree-farm.png",
     icon_size = 96,
-    subgroup = "aoe-flora-buildings",
+    subgroup = "aoc-flora-buildings",
     order = "b",
-    place_result = "aoe-tree-farm",
+    place_result = "aoc-tree-farm",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "assembling-machine",
-  name = "aoe-tree-farm",
-	crafting_categories = {"aoe-category-growing"},
+  name = "aoc-tree-farm",
+	crafting_categories = {"aoc-category-growing"},
 	crafting_speed = 0.5,
 	energy_source = { type = "void" },
 	energy_usage = "1kW",
 	allowed_effects = nil,
-	icon = "__aoe__/img/entities/tree-farm.png",
+	icon = "__ageofcreation__/img/entities/tree-farm.png",
 	icon_size = 96,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoe-tree-farm" },
+	minable = { hardness = 1, mining_time = 0.2, result = "aoc-tree-farm" },
 	max_health = 300,
 	selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
@@ -35,7 +35,7 @@ data:extend({{
 	animation = {
       layers = {
         {
-          filename = "__aoe__/img/entities/tree-farm.png",
+          filename = "__ageofcreation__/img/entities/tree-farm.png",
           width = 96,
           height = 96,
           frame_count = 1,

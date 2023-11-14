@@ -1,18 +1,18 @@
 data:extend({{
     type = "item",
-    name = "aoe-apiary",
+    name = "aoc-apiary",
     icon = '__NPBees2__/graphics/icon/apiary.png',
 	icon_size = 32,
-    subgroup = "aoe-bees-buildings",
+    subgroup = "aoc-bees-buildings",
     order = "a",
-    place_result = "aoe-apiary",
+    place_result = "aoc-apiary",
     stack_size = 25,
 }})
 
 data:extend({{
     type = "assembling-machine",
-    name = "aoe-apiary",
-    crafting_categories = {"aoe-category-bees-apiary"},
+    name = "aoc-apiary",
+    crafting_categories = {"aoc-category-bees-apiary"},
     crafting_speed = 1,
     energy_source = { type = "void" },
 	energy_usage = "1kW",
@@ -23,7 +23,7 @@ data:extend({{
     icon = '__NPBees2__/graphics/icon/apiary.png',
 	icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
-    minable = { hardness = 1, mining_time = 0.2, result = "aoe-apiary" },
+    minable = { hardness = 1, mining_time = 0.2, result = "aoc-apiary" },
     max_health = 300,
     selection_box = {{-1.0, -1.0}, {1.0, 1.0}},
     collision_box = {{-0.9, -0.9}, {0.9, 0.9}},

@@ -1,110 +1,110 @@
 data:extend({
   {
     type = "module-category",
-    name = "aoe-module-apple-tree"
+    name = "aoc-module-apple-tree"
   },
   {
     type = "module-category",
-    name = "aoe-module-aluminium"
+    name = "aoc-module-aluminium"
   },
   {
     type = "module-category",
-    name = "aoe-module-chicken"
+    name = "aoc-module-chicken"
   },
   {
     type = "module-category",
-    name = "aoe-module-chromium"
+    name = "aoc-module-chromium"
   },
   {
     type = "module-category",
-    name = "aoe-module-coffee"
+    name = "aoc-module-coffee"
   },
   {
     type = "module-category",
-    name = "aoe-module-copper"
+    name = "aoc-module-copper"
   },
   {
     type = "module-category",
-    name = "aoe-module-cow"
+    name = "aoc-module-cow"
   },
   {
     type = "module-category",
-    name = "aoe-module-drone"
+    name = "aoc-module-drone"
   },
   {
     type = "module-category",
-    name = "aoe-module-fish"
+    name = "aoc-module-fish"
   },
   {
     type = "module-category",
-    name = "aoe-module-flax"
+    name = "aoc-module-flax"
   },
   {
     type = "module-category",
-    name = "aoe-module-gold"
+    name = "aoc-module-gold"
   },
   {
     type = "module-category",
-    name = "aoe-module-iron"
+    name = "aoc-module-iron"
   },
   {
     type = "module-category",
-    name = "aoe-module-kelp"
+    name = "aoc-module-kelp"
   },
   {
     type = "module-category",
-    name = "aoe-module-lead"
+    name = "aoc-module-lead"
   },
   {
     type = "module-category",
-    name = "aoe-module-maize"
+    name = "aoc-module-maize"
   },
   {
     type = "module-category",
-    name = "aoe-module-nickel"
+    name = "aoc-module-nickel"
   },
   {
     type = "module-category",
-    name = "aoe-module-soybean"
+    name = "aoc-module-soybean"
   },
   {
     type = "module-category",
-    name = "aoe-module-olive-tree"
+    name = "aoc-module-olive-tree"
   },
   {
     type = "module-category",
-    name = "aoe-module-ox"
+    name = "aoc-module-ox"
   },
   {
     type = "module-category",
-    name = "aoe-module-rubber-tree"
+    name = "aoc-module-rubber-tree"
   },
   {
     type = "module-category",
-    name = "aoe-module-sheep"
+    name = "aoc-module-sheep"
   },
   {
     type = "module-category",
-    name = "aoe-module-silver"
+    name = "aoc-module-silver"
   },
   {
     type = "module-category",
-    name = "aoe-module-spruce-tree"
+    name = "aoc-module-spruce-tree"
   },
   {
     type = "module-category",
-    name = "aoe-module-tea"
+    name = "aoc-module-tea"
   },
   {
     type = "module-category",
-    name = "aoe-module-tin"
+    name = "aoc-module-tin"
   },
   {
     type = "module-category",
-    name = "aoe-module-tungsten"
+    name = "aoc-module-tungsten"
   },
   {
     type = "module-category",
-    name = "aoe-module-zinc"
+    name = "aoc-module-zinc"
   }
 })

@@ -1,15 +1,15 @@
-local AOE = require("__aoe__/globals")
+local AOE = require("__ageofcreation__/globals")
 
 data:extend({{
     type = "technology",
-    name = "aoe-electronics-tech-1",
+    name = "aoc-electronics-tech-1",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/electronics.png",
-    prerequisites = {"aoe-electric-age-tech"},
+    prerequisites = {"aoc-electric-age-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-electronic-circuit-recipe"
+        recipe = "aoc-crafting-electronic-circuit-recipe"
       }
     },
     unit = {
@@ -21,38 +21,38 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-circuit-network-tech",
+    name = "aoc-circuit-network-tech",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/circuit-network.png",
-    prerequisites = {"aoe-electronics-tech-1"},
+    prerequisites = {"aoc-electronics-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-red-wire-recipe"
+        recipe = "aoc-crafting-red-wire-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-green-wire-recipe"
+        recipe = "aoc-crafting-green-wire-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-arithmetic-combinator-recipe"
+        recipe = "aoc-crafting-arithmetic-combinator-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-decider-combinator-recipe"
+        recipe = "aoc-crafting-decider-combinator-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-constant-combinator-recipe"
+        recipe = "aoc-crafting-constant-combinator-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-power-switch-recipe"
+        recipe = "aoc-crafting-power-switch-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-programmable-speaker-recipe"
+        recipe = "aoc-crafting-programmable-speaker-recipe"
       }
     },
     unit = {
@@ -64,26 +64,26 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-low-voltage-tech",
+    name = "aoc-low-voltage-tech",
     icon_size = 64, icon_mipmaps = 4,
     icon = "__base__/graphics/icons/steam-engine.png",
-    prerequisites = {"aoe-electric-age-tech"},
+    prerequisites = {"aoc-electric-age-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-boiler-recipe"
+        recipe = "aoc-crafting-boiler-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-steam-engine-recipe"
+        recipe = "aoc-crafting-steam-engine-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-small-electric-pole-recipe"
+        recipe = "aoc-crafting-small-electric-pole-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-small-electric-fuse-recipe"
+        recipe = "aoc-crafting-small-electric-fuse-recipe"
       }
     },
     unit = {
@@ -95,22 +95,22 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-steel-tech-1",
+    name = "aoc-steel-tech-1",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/steel-processing.png",
-    prerequisites = {"aoe-electric-age-tech"},
+    prerequisites = {"aoc-electric-age-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-smelting-steel-recipe"
+        recipe = "aoc-smelting-steel-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-steel-rod-recipe"
+        recipe = "aoc-crafting-steel-rod-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-steel-gear-recipe"
+        recipe = "aoc-crafting-steel-gear-recipe"
       }
     },
     unit = {
@@ -122,18 +122,18 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-steel-tech-2",
+    name = "aoc-steel-tech-2",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/steel-processing.png",
-    prerequisites = {"aoe-sedimentary-stones-tech-1", "aoe-steel-tech-1"},
+    prerequisites = {"aoc-sedimentary-stones-tech-1", "aoc-steel-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-kiln-coke-recipe"
+        recipe = "aoc-kiln-coke-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-smelting-steel-coke-recipe"
+        recipe = "aoc-smelting-steel-coke-recipe"
       }
     },
     unit = {
@@ -145,18 +145,18 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-electric-machines-tech",
+    name = "aoc-electric-machines-tech",
 	  icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/engine.png",
-    prerequisites = {"aoe-steel-tech-1", "aoe-electronics-tech-1", "aoe-low-voltage-tech", "aoe-basic-automation-tech", "aoe-basic-genetics-tech", "aoe-digging-tech"},
+    prerequisites = {"aoc-steel-tech-1", "aoc-electronics-tech-1", "aoc-low-voltage-tech", "aoc-basic-automation-tech", "aoc-basic-genetics-tech", "aoc-digging-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-engine-unit-recipe"
+        recipe = "aoc-crafting-engine-unit-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-steel-machine-hull-recipe"
+        recipe = "aoc-crafting-steel-machine-hull-recipe"
       }
     },
     unit = {
@@ -168,22 +168,22 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-wind-power-tech-1",
+    name = "aoc-wind-power-tech-1",
 	  icon_size = 256,
-    icon = "__aoe__/img/entities/wind-turbine.png",
-    prerequisites = {"aoe-electric-machines-tech"},
+    icon = "__ageofcreation__/img/entities/wind-turbine.png",
+    prerequisites = {"aoc-electric-machines-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-wind-turbine-recipe"
+        recipe = "aoc-crafting-wind-turbine-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-steel-rotor-recipe"
+        recipe = "aoc-crafting-steel-rotor-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-rotor-steel-recipe"
+        recipe = "aoc-rotor-steel-recipe"
       }
     },
     unit = {
@@ -195,14 +195,14 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-automobilism-tech",
+    name = "aoc-automobilism-tech",
 	  icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/automobilism.png",
-    prerequisites = {"aoe-electric-machines-tech"},
+    prerequisites = {"aoc-electric-machines-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-car-recipe"
+        recipe = "aoc-crafting-car-recipe"
       }
     },
     unit = {
@@ -214,42 +214,42 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-electric-automation-tech-1",
+    name = "aoc-electric-automation-tech-1",
 	  icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/automation-2.png",
-    prerequisites = {"aoe-optics-tech", "aoe-electric-inserters-tech"},
+    prerequisites = {"aoc-optics-tech", "aoc-electric-inserters-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-electric-mining-drill-recipe"
+        recipe = "aoc-crafting-electric-mining-drill-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-assembling-machine-recipe"
+        recipe = "aoc-crafting-assembling-machine-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-lab-recipe"
+        recipe = "aoc-crafting-lab-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-crusher-recipe"
+        recipe = "aoc-crafting-crusher-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-sawmill-recipe"
+        recipe = "aoc-crafting-sawmill-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-squeezer-recipe"
+        recipe = "aoc-crafting-squeezer-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-ground-bore-recipe"
+        recipe = "aoc-crafting-ground-bore-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-gene-lab-recipe"
+        recipe = "aoc-crafting-gene-lab-recipe"
       }
     },
     unit = {
@@ -261,26 +261,26 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-construction-tech",
+    name = "aoc-construction-tech",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/stone-wall.png",
-    prerequisites = {"aoe-electric-machines-tech"},
+    prerequisites = {"aoc-electric-machines-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-mixer-recipe"
+        recipe = "aoc-crafting-mixer-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-mixing-loam-recipe"
+        recipe = "aoc-mixing-loam-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-smelting-brick-recipe"
+        recipe = "aoc-smelting-brick-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-brick-wall-recipe"
+        recipe = "aoc-crafting-brick-wall-recipe"
       }
     },
     unit = {
@@ -292,18 +292,18 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-advanced-smelting-tech-1",
+    name = "aoc-advanced-smelting-tech-1",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/advanced-material-processing.png",
-    prerequisites = {"aoe-construction-tech"},
+    prerequisites = {"aoc-construction-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-steel-furnace-recipe"
+        recipe = "aoc-crafting-steel-furnace-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-kiln-recipe"
+        recipe = "aoc-crafting-kiln-recipe"
       }
     },
     unit = {
@@ -315,18 +315,18 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-salt-tech",
+    name = "aoc-salt-tech",
     icon_size = 64,
-    icon = "__aoe__/img/items/salt.png",
-    prerequisites = {"aoe-advanced-smelting-tech-1"},
+    icon = "__ageofcreation__/img/items/salt.png",
+    prerequisites = {"aoc-advanced-smelting-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-smelting-salt-recipe"
+        recipe = "aoc-smelting-salt-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-mixing-brine-recipe"
+        recipe = "aoc-mixing-brine-recipe"
       }
     },
     unit = {
@@ -338,22 +338,22 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-advanced-storage-tech-2",
+    name = "aoc-advanced-storage-tech-2",
     icon_size = 64, icon_mipmaps = 4,
     icon = "__base__/graphics/icons/steel-chest.png",
-    prerequisites = {"aoe-advanced-storage-tech-1", "aoe-steel-tech-1"},
+    prerequisites = {"aoc-advanced-storage-tech-1", "aoc-steel-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-iron-chest-recipe"
+        recipe = "aoc-crafting-iron-chest-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-copper-chest-recipe"
+        recipe = "aoc-crafting-copper-chest-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-steel-chest-recipe"
+        recipe = "aoc-crafting-steel-chest-recipe"
       }
     },
     unit = {
@@ -365,14 +365,14 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-optics-tech",
+    name = "aoc-optics-tech",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/optics.png",
-    prerequisites = {"aoe-low-voltage-tech"},
+    prerequisites = {"aoc-low-voltage-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-lamp-recipe"
+        recipe = "aoc-crafting-lamp-recipe"
       }
     },
     unit = {
@@ -384,18 +384,18 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-electric-inserters-tech",
+    name = "aoc-electric-inserters-tech",
     icon_size = 64, icon_mipmaps = 4,
     icon = "__base__/graphics/icons/inserter.png",
-    prerequisites = {"aoe-electric-machines-tech"},
+    prerequisites = {"aoc-electric-machines-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-inserter-recipe"
+        recipe = "aoc-crafting-inserter-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-long-handed-inserter-recipe"
+        recipe = "aoc-crafting-long-handed-inserter-recipe"
       }
     },
     unit = {
@@ -407,62 +407,62 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-rock-cycle-tech",
+    name = "aoc-rock-cycle-tech",
     icon_size = 256,
-    icon = "__aoe__/img/techs/rock-cycle.png",
-    prerequisites = {"aoe-advanced-smelting-tech-1", "aoe-optics-tech", "aoe-pressure-tech"},
+    icon = "__ageofcreation__/img/techs/rock-cycle.png",
+    prerequisites = {"aoc-advanced-smelting-tech-1", "aoc-optics-tech", "aoc-pressure-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-straining-stone-recipe"
+        recipe = "aoc-straining-stone-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-melter-recipe"
+        recipe = "aoc-crafting-melter-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-melting-stone-recipe"
+        recipe = "aoc-melting-stone-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-melting-metamorphic-recipe"
+        recipe = "aoc-melting-metamorphic-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-melting-sedimentary-recipe"
+        recipe = "aoc-melting-sedimentary-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-high-pressure-heater-recipe"
+        recipe = "aoc-crafting-high-pressure-heater-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-high-pressure-heating-igneous-recipe"
+        recipe = "aoc-high-pressure-heating-igneous-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-high-pressure-heating-sedimentary-recipe"
+        recipe = "aoc-high-pressure-heating-sedimentary-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-sedimenter-recipe"
+        recipe = "aoc-crafting-sedimenter-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-sedimenting-igneous-recipe"
+        recipe = "aoc-sedimenting-igneous-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-sedimenting-metamorphic-recipe"
+        recipe = "aoc-sedimenting-metamorphic-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-freezer-recipe"
+        recipe = "aoc-crafting-freezer-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-freezing-lava-recipe"
+        recipe = "aoc-freezing-lava-recipe"
       }
     },
     unit = {
@@ -474,30 +474,30 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-sedimentary-stones-tech-1",
+    name = "aoc-sedimentary-stones-tech-1",
     icon_size = 64,
-    icon = "__aoe__/img/items/sedimentary-stones.png",
-    prerequisites = {"aoe-rock-cycle-tech"},
+    icon = "__ageofcreation__/img/items/sedimentary-stones.png",
+    prerequisites = {"aoc-rock-cycle-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-straining-sedimentary-recipe"
+        recipe = "aoc-straining-sedimentary-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crushing-iron-ore-recipe"
+        recipe = "aoc-crushing-iron-ore-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crushing-copper-ore-recipe"
+        recipe = "aoc-crushing-copper-ore-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crushing-coal-recipe"
+        recipe = "aoc-crushing-coal-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-graphite-rod-recipe"
+        recipe = "aoc-crafting-graphite-rod-recipe"
       }
     },
     unit = {
@@ -509,26 +509,26 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-igneous-stones-tech-1",
+    name = "aoc-igneous-stones-tech-1",
     icon_size = 64,
-    icon = "__aoe__/img/items/igneous-stones.png",
-    prerequisites = {"aoe-rock-cycle-tech"},
+    icon = "__ageofcreation__/img/items/igneous-stones.png",
+    prerequisites = {"aoc-rock-cycle-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-straining-igneous-recipe"
+        recipe = "aoc-straining-igneous-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crushing-quartz-ore-recipe"
+        recipe = "aoc-crushing-quartz-ore-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crushing-tin-ore-recipe"
+        recipe = "aoc-crushing-tin-ore-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crushing-manganese-ore-recipe"
+        recipe = "aoc-crushing-manganese-ore-recipe"
       }
     },
     unit = {
@@ -540,22 +540,22 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-metamorphic-stones-tech-1",
+    name = "aoc-metamorphic-stones-tech-1",
     icon_size = 64,
-    icon = "__aoe__/img/items/metamorphic-stones.png",
-    prerequisites = {"aoe-rock-cycle-tech"},
+    icon = "__ageofcreation__/img/items/metamorphic-stones.png",
+    prerequisites = {"aoc-rock-cycle-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-straining-metamorphic-recipe"
+        recipe = "aoc-straining-metamorphic-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crushing-aluminium-ore-recipe"
+        recipe = "aoc-crushing-aluminium-ore-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crushing-magnesium-ore-recipe"
+        recipe = "aoc-crushing-magnesium-ore-recipe"
       }
     },
     unit = {
@@ -567,30 +567,30 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-tin-tech-1",
+    name = "aoc-tin-tech-1",
     icon_size = 32,
     icon = "__angelssmelting__/graphics/icons/plate-tin.png",
-    prerequisites = {"aoe-igneous-stones-tech-1"},
+    prerequisites = {"aoc-igneous-stones-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-smelting-tin-recipe"
+        recipe = "aoc-smelting-tin-recipe"
       },
 	  {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-tin-gear-recipe"
+        recipe = "aoc-crafting-tin-gear-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-tin-rod-recipe"
+        recipe = "aoc-crafting-tin-rod-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-storage-tank-recipe"
+        recipe = "aoc-crafting-storage-tank-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-pipe-2-recipe"
+        recipe = "aoc-crafting-pipe-2-recipe"
       }
     },
     unit = {
@@ -602,18 +602,18 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-aluminium-tech-1",
+    name = "aoc-aluminium-tech-1",
     icon_size = 32,
     icon = "__angelssmelting__/graphics/icons/plate-aluminium.png",
-    prerequisites = {"aoe-metamorphic-stones-tech-1"},
+    prerequisites = {"aoc-metamorphic-stones-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-smelting-aluminium-recipe"
+        recipe = "aoc-smelting-aluminium-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-aluminium-rod-recipe"
+        recipe = "aoc-crafting-aluminium-rod-recipe"
       }
     },
     unit = {
@@ -625,18 +625,18 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-radar-tech",
+    name = "aoc-radar-tech",
     icon_size = 64, icon_mipmaps = 4,
     icon = "__base__/graphics/icons/radar.png",
-    prerequisites = {"aoe-tin-tech-1"},
+    prerequisites = {"aoc-tin-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-sensor-recipe"
+        recipe = "aoc-crafting-sensor-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-radar-recipe"
+        recipe = "aoc-crafting-radar-recipe"
       }
     },
     unit = {
@@ -648,14 +648,14 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-better-glass-tech-1",
+    name = "aoc-better-glass-tech-1",
     icon_size = 64,
-    icon = "__aoe__/img/items/glass.png",
-    prerequisites = {"aoe-igneous-stones-tech-1"},
+    icon = "__ageofcreation__/img/items/glass.png",
+    prerequisites = {"aoc-igneous-stones-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-smelting-glass-2-recipe"
+        recipe = "aoc-smelting-glass-2-recipe"
       }
     },
     unit = {
@@ -667,18 +667,18 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-lime-tech-1",
+    name = "aoc-lime-tech-1",
     icon_size = 64,
-    icon = "__aoe__/img/items/quicklime.png",
-    prerequisites = {"aoe-sedimentary-stones-tech-1"},
+    icon = "__ageofcreation__/img/items/quicklime.png",
+    prerequisites = {"aoc-sedimentary-stones-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-kiln-quicklime-recipe"
+        recipe = "aoc-kiln-quicklime-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-mixing-slaked-lime-recipe"
+        recipe = "aoc-mixing-slaked-lime-recipe"
       }
     },
     unit = {
@@ -690,22 +690,22 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-electrolysis-tech",
+    name = "aoc-electrolysis-tech",
     icon_size = 224,
     icon = "__angelspetrochem__/graphics/entity/electrolyser/electrolyser-north.png",
-    prerequisites = {"aoe-sedimentary-stones-tech-1", "aoe-tin-tech-1", "aoe-salt-tech"},
+    prerequisites = {"aoc-sedimentary-stones-tech-1", "aoc-tin-tech-1", "aoc-salt-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-electrolyzer-recipe"
+        recipe = "aoc-crafting-electrolyzer-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-electrolyzing-water-recipe"
+        recipe = "aoc-electrolyzing-water-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-electrolyzing-brine-recipe"
+        recipe = "aoc-electrolyzing-brine-recipe"
       },
     },
     unit = {
@@ -717,54 +717,54 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-pressure-tech",
+    name = "aoc-pressure-tech",
     icon_size = 256,
     icon = "__angelspetrochem__/graphics/entity/air-filter/air-filter.png",
-    prerequisites = {"aoe-electric-machines-tech"},
+    prerequisites = {"aoc-electric-machines-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-pump-recipe"
+        recipe = "aoc-crafting-pump-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-pressure-pump-recipe"
+        recipe = "aoc-crafting-pressure-pump-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-heating-coil-recipe"
+        recipe = "aoc-crafting-heating-coil-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-cooling-coil-recipe"
+        recipe = "aoc-crafting-cooling-coil-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-pumping-air-recipe"
+        recipe = "aoc-pumping-air-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-pumping-cold-air-recipe"
+        recipe = "aoc-pumping-cold-air-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-pumping-warm-air-recipe"
+        recipe = "aoc-pumping-warm-air-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-pumping-pressure-recipe"
+        recipe = "aoc-pumping-pressure-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-pumping-vacuum-recipe"
+        recipe = "aoc-pumping-vacuum-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-pumping-oxygen-recipe"
+        recipe = "aoc-pumping-oxygen-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-pumping-nitrogen-recipe"
+        recipe = "aoc-pumping-nitrogen-recipe"
       }
     },
     unit = {
@@ -776,22 +776,22 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-concrete-tech",
+    name = "aoc-concrete-tech",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/concrete.png",
-    prerequisites = {"aoe-igneous-stones-tech-1", "aoe-metamorphic-stones-tech-1", "aoe-lime-tech-1"},
+    prerequisites = {"aoc-igneous-stones-tech-1", "aoc-metamorphic-stones-tech-1", "aoc-lime-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-kiln-cement-recipe"
+        recipe = "aoc-kiln-cement-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-mixing-concrete-recipe"
+        recipe = "aoc-mixing-concrete-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-hazard-concrete-recipe"
+        recipe = "aoc-crafting-hazard-concrete-recipe"
       }
     },
     unit = {
@@ -803,14 +803,14 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-paper-tech-2",
+    name = "aoc-paper-tech-2",
     icon_size = 64,
-    icon = "__aoe__/img/items/paper.png",
-    prerequisites = {"aoe-electrolysis-tech"},
+    icon = "__ageofcreation__/img/items/paper.png",
+    prerequisites = {"aoc-electrolysis-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-smelting-caustic-soda-paper-recipe"
+        recipe = "aoc-smelting-caustic-soda-paper-recipe"
       }
     },
     unit = {
@@ -822,30 +822,30 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-fish-tech-1",
+    name = "aoc-fish-tech-1",
     icon_size = 64, icon_mipmaps = 4,
     icon = "__base__/graphics/icons/fish.png",
-    prerequisites = {"aoe-salt-tech", "aoe-concrete-tech"},
+    prerequisites = {"aoc-salt-tech", "aoc-concrete-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-slaughterhouse-recipe"
+        recipe = "aoc-crafting-slaughterhouse-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-slaughterhouse-fish-recipe"
+        recipe = "aoc-slaughterhouse-fish-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-farm-reservoir-fish-recipe"
+        recipe = "aoc-farm-reservoir-fish-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-farm-reservoir-fish-module-1-recipe"
+        recipe = "aoc-farm-reservoir-fish-module-1-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoe-farm-reservoir-fish-eggs-recipe"
+        recipe = "aoc-farm-reservoir-fish-eggs-recipe"
       }
     },
     unit = {
@@ -857,14 +857,14 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoe-agriculture-age-tech",
+    name = "aoc-agriculture-age-tech",
     icon_size = 64,
-    icon = "__aoe__/img/items/science-pack-3.png",
-    prerequisites = {"aoe-fish-tech-1"},
+    icon = "__ageofcreation__/img/items/science-pack-3.png",
+    prerequisites = {"aoc-fish-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoe-crafting-science-03-recipe"
+        recipe = "aoc-crafting-science-03-recipe"
       }
     },
     unit = {

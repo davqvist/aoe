@@ -1,28 +1,28 @@
 data:extend({{
     type = "item",
-    name = "aoe-burner-crusher",
+    name = "aoc-burner-crusher",
     icons = {
       {
         icon = "__angelsrefining__/graphics/icons/powderizer-ico.png",
         icon_size = 32
       },
       {
-        icon = "__aoe__/img/items/other/fire.png",
+        icon = "__ageofcreation__/img/items/other/fire.png",
         icon_size = 64,
         scale = 0.25,
         shift = {-12,8}
       }
     },
-    subgroup = "aoe-processing-buildings",
+    subgroup = "aoc-processing-buildings",
     order = "g",
-    place_result = "aoe-burner-crusher",
+    place_result = "aoc-burner-crusher",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "assembling-machine",
-  name = "aoe-burner-crusher",
-	crafting_categories = {"aoe-category-crushing"},
+  name = "aoc-burner-crusher",
+	crafting_categories = {"aoc-category-crushing"},
 	crafting_speed = 0.5,
 	energy_source = {
     type = "burner",
@@ -48,14 +48,14 @@ data:extend({{
       icon_size = 32
     },
     {
-      icon = "__aoe__/img/items/other/fire.png",
+      icon = "__ageofcreation__/img/items/other/fire.png",
       icon_size = 64,
       scale = 0.25,
       shift = {-12,8}
     }
   },
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoe-burner-crusher" },
+	minable = { hardness = 1, mining_time = 0.2, result = "aoc-burner-crusher" },
   fast_replaceable_group = "crusher",
 	max_health = 300,
 	selection_box = {{-1.0, -1.0}, {1.0, 1.0}},
@@ -79,20 +79,20 @@ data:extend({{
 
 data:extend({{
     type = "item",
-    name = "aoe-crusher",
+    name = "aoc-crusher",
     icon = "__angelsrefining__/graphics/icons/powderizer-ico.png",
     icon_size = 32,
     icon_mipmaps = 1,
-    subgroup = "aoe-processing-buildings",
+    subgroup = "aoc-processing-buildings",
     order = "h",
-    place_result = "aoe-crusher",
+    place_result = "aoc-crusher",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "assembling-machine",
-  name = "aoe-crusher",
-	crafting_categories = {"aoe-category-crushing","aoe-category-crushing-iron","aoe-category-crushing-copper","aoe-category-crushing-tin","aoe-category-crushing-aluminium","aoe-category-crushing-lead","aoe-category-crushing-silver","aoe-category-crushing-nickel","aoe-category-crushing-gold","aoe-category-crushing-zinc","aoe-category-crushing-chromium","aoe-category-crushing-tungsten"},
+  name = "aoc-crusher",
+	crafting_categories = {"aoc-category-crushing","aoc-category-crushing-iron","aoc-category-crushing-copper","aoc-category-crushing-tin","aoc-category-crushing-aluminium","aoc-category-crushing-lead","aoc-category-crushing-silver","aoc-category-crushing-nickel","aoc-category-crushing-gold","aoc-category-crushing-zinc","aoc-category-crushing-chromium","aoc-category-crushing-tungsten"},
 	crafting_speed = 1,
 	energy_source = {
     type = "electric",
@@ -109,7 +109,7 @@ data:extend({{
   icon_size = 32,
   icon_mipmaps = 1,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoe-crusher" },
+	minable = { hardness = 1, mining_time = 0.2, result = "aoc-crusher" },
   fast_replaceable_group = "crusher",
 	max_health = 300,
 	selection_box = {{-1.0, -1.0}, {1.0, 1.0}},

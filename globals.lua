@@ -1,7 +1,7 @@
 
 data.raw.lab["lab"].inputs = {}
 for age=1,4 do
-    table.insert(data.raw.lab["lab"].inputs, "aoe-science-" .. string.format("%02d", age) )
+    table.insert(data.raw.lab["lab"].inputs, "aoc-science-" .. string.format("%02d", age) )
 end
 
 local age_tech_cost = {
@@ -37,7 +37,7 @@ function combine_icons_tiny( newicons, oldicons )
 end
 
 function get_void_icon( thing )
-    return get_icons( thing, {icon = "__aoe__/img/items/other/void.png", icon_size = 64} )
+    return get_icons( thing, {icon = "__ageofcreation__/img/items/other/void.png", icon_size = 64} )
 end
 
 function combine_icons( icons1, icons2 )

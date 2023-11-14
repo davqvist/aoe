@@ -6,7 +6,7 @@ data:extend({
   },
   {
     type = "tips-and-tricks-item",
-    name = "aoe-tat-aoe",
+    name = "aoc-tat-aoe",
     category = "AOE",
     order = "a",
     starting_status = "unlocked",
@@ -14,73 +14,73 @@ data:extend({
   },
   {
     type = "tips-and-tricks-item",
-    name = "aoe-tat-science-01",
+    name = "aoc-tat-science-01",
     category = "AOE",
     order = "b",
     indent = 1,
-    dependencies = { "aoe-tat-aoe" },
+    dependencies = { "aoc-tat-aoe" },
     trigger = { type = "dependencies-met" },
-    tag = "[item=aoe-science-01]",
+    tag = "[item=aoc-science-01]",
     --image = ""
   },
   {
     type = "tips-and-tricks-item",
-    name = "aoe-tat-science-02",
+    name = "aoc-tat-science-02",
     category = "AOE",
     order = "c",
     indent = 1,
-    dependencies = { "aoe-tat-science-01" },
+    dependencies = { "aoc-tat-science-01" },
     trigger =
     {
       type = "research",
-      technology = "aoe-electric-age-tech"
+      technology = "aoc-electric-age-tech"
     },
-    tag = "[item=aoe-science-02]",
+    tag = "[item=aoc-science-02]",
     --image = ""
   },
   {
     type = "tips-and-tricks-item",
-    name = "aoe-tat-science-03",
+    name = "aoc-tat-science-03",
     category = "AOE",
     order = "d",
     indent = 1,
-    dependencies = { "aoe-tat-science-02" },
+    dependencies = { "aoc-tat-science-02" },
     trigger =
     {
       type = "research",
-      technology = "aoe-agriculture-age-tech"
+      technology = "aoc-agriculture-age-tech"
     },
-    tag = "[item=aoe-science-03]",
+    tag = "[item=aoc-science-03]",
     --image = ""
   },
   {
     type = "tips-and-tricks-item",
-    name = "aoe-tat-science-04",
+    name = "aoc-tat-science-04",
     category = "AOE",
     order = "e",
     indent = 1,
-    dependencies = { "aoe-tat-science-03" },
+    dependencies = { "aoc-tat-science-03" },
     trigger =
     {
       type = "research",
-      technology = "aoe-metallurgy-age-tech"
+      technology = "aoc-metallurgy-age-tech"
     },
-    tag = "[item=aoe-science-04]",
+    tag = "[item=aoc-science-04]",
     --image = ""
   },
   {
     type = "tips-and-tricks-item",
-    name = "aoe-tat-science-05",
+    name = "aoc-tat-science-05",
     category = "AOE",
     order = "f",
     indent = 1,
-    dependencies = { "aoe-tat-science-04" },
+    dependencies = { "aoc-tat-science-04" },
     trigger =
     {
       type = "research",
-      technology = "aoe-petrochem-age-tech"
+      technology = "aoc-petrochem-age-tech"
     },
-    tag = "[item=aoe-science-05]",
+    tag = "[item=aoc-science-05]",
     --image = ""
   }
 })

@@ -4,22 +4,22 @@ local sounds = require("__base__/prototypes/entity/sounds")
 
 data:extend({{
     type = "item",
-    name = "aoe-big-wooden-chest",
-    icon = "__aoe__/img/entities/big-wooden-chest.png",
+    name = "aoc-big-wooden-chest",
+    icon = "__ageofcreation__/img/entities/big-wooden-chest.png",
     icon_size = 192,
-    subgroup = "aoe-storage",
+    subgroup = "aoc-storage",
     order = "c",
-    place_result = "aoe-big-wooden-chest",
+    place_result = "aoc-big-wooden-chest",
     stack_size = 50,
 }})
 
 data:extend({{
     type = "container",
-    name = "aoe-big-wooden-chest",
-    icon = "__aoe__/img/entities/big-wooden-chest.png",
+    name = "aoc-big-wooden-chest",
+    icon = "__ageofcreation__/img/entities/big-wooden-chest.png",
     icon_size = 192,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.1, result = "aoe-big-wooden-chest"},
+    minable = {mining_time = 0.1, result = "aoc-big-wooden-chest"},
     max_health = 100,
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     fast_replaceable_group = "big-container",
@@ -33,7 +33,7 @@ data:extend({{
       layers =
       {
         {
-          filename = "__aoe__/img/entities/big-wooden-chest.png",
+          filename = "__ageofcreation__/img/entities/big-wooden-chest.png",
           width = 192,
           height = 192,
 		  scale = 0.5

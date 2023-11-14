@@ -5,7 +5,7 @@ data.raw["item-group"]["intermediate-products"].icon_mipmaps = 4
 data:extend({
   {
     type = "item-group",
-    name = "aoe-metals",
+    name = "aoc-metals",
 	  order = "b2",
 	  icon = "__base__/graphics/technology/steel-processing.png",
 	  icon_size = 256,
@@ -13,423 +13,423 @@ data:extend({
   },
   {
     type = "item-group",
-    name = "aoe-flora",
+    name = "aoc-flora",
 	  order = "y",
 	  icon = "__base__/graphics/icons/wood.png",
 	  icon_size = 64
   },
   {
     type = "item-group",
-    name = "aoe-fauna",
+    name = "aoc-fauna",
 	  order = "z",
 	  icon = "__base__/graphics/icons/fish.png",
 	  icon_size = 64
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-flora-buildings",
-    group = "aoe-flora",
+    name = "aoc-flora-buildings",
+    group = "aoc-flora",
     order = "a"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-flora-farms",
-    group = "aoe-flora",
+    name = "aoc-flora-farms",
+    group = "aoc-flora",
     order = "b"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-flora-wood",
-    group = "aoe-flora",
+    name = "aoc-flora-wood",
+    group = "aoc-flora",
     order = "c01"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-flora-rubber",
-    group = "aoe-flora",
+    name = "aoc-flora-rubber",
+    group = "aoc-flora",
     order = "c02"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-flora-apple",
-    group = "aoe-flora",
+    name = "aoc-flora-apple",
+    group = "aoc-flora",
     order = "c03"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-flora-olive",
-    group = "aoe-flora",
+    name = "aoc-flora-olive",
+    group = "aoc-flora",
     order = "c04"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-flora-kelp",
-    group = "aoe-flora",
+    name = "aoc-flora-kelp",
+    group = "aoc-flora",
     order = "c05"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-flora-flax",
-    group = "aoe-flora",
+    name = "aoc-flora-flax",
+    group = "aoc-flora",
     order = "c06"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-flora-maize",
-    group = "aoe-flora",
+    name = "aoc-flora-maize",
+    group = "aoc-flora",
     order = "c07"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-flora-soybean",
-    group = "aoe-flora",
+    name = "aoc-flora-soybean",
+    group = "aoc-flora",
     order = "c08"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-flora-drinks",
-    group = "aoe-flora",
+    name = "aoc-flora-drinks",
+    group = "aoc-flora",
     order = "c09"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-flora-fermentation",
-    group = "aoe-flora",
+    name = "aoc-flora-fermentation",
+    group = "aoc-flora",
     order = "d"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-fauna-buildings",
-    group = "aoe-fauna",
+    name = "aoc-fauna-buildings",
+    group = "aoc-fauna",
     order = "a"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-fauna-items",
-    group = "aoe-fauna",
+    name = "aoc-fauna-items",
+    group = "aoc-fauna",
     order = "b"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-fauna-fish",
-    group = "aoe-fauna",
+    name = "aoc-fauna-fish",
+    group = "aoc-fauna",
     order = "c"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-fauna-chicken",
-    group = "aoe-fauna",
+    name = "aoc-fauna-chicken",
+    group = "aoc-fauna",
     order = "d"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-fauna-sheep",
-    group = "aoe-fauna",
+    name = "aoc-fauna-sheep",
+    group = "aoc-fauna",
     order = "e"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-fauna-cow",
-    group = "aoe-fauna",
+    name = "aoc-fauna-cow",
+    group = "aoc-fauna",
     order = "f"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-power-buildings",
+    name = "aoc-power-buildings",
     group = "production",
     order = "a"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-processing-buildings",
+    name = "aoc-processing-buildings",
     group = "production",
     order = "b"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-specific-buildings",
+    name = "aoc-specific-buildings",
     group = "production",
     order = "c"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-voiding-buildings",
+    name = "aoc-voiding-buildings",
     group = "production",
     order = "d"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-other-buildings",
+    name = "aoc-other-buildings",
     group = "production",
     order = "e"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-inserter",
+    name = "aoc-inserter",
     group = "logistics",
     order = "a"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-item-logistics-belts",
+    name = "aoc-item-logistics-belts",
     group = "logistics",
     order = "b"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-fluid-logistics",
+    name = "aoc-fluid-logistics",
     group = "logistics",
     order = "c"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-storage",
+    name = "aoc-storage",
     group = "logistics",
     order = "d"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-poles",
+    name = "aoc-poles",
     group = "logistics",
     order = "e"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-logic",
+    name = "aoc-logic",
     group = "logistics",
     order = "f"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-vehicles",
+    name = "aoc-vehicles",
     group = "logistics",
     order = "g"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-decoration",
+    name = "aoc-decoration",
     group = "logistics",
     order = "h"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-stone",
+    name = "aoc-stone",
     group = "intermediate-products",
     order = "a"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-glass",
+    name = "aoc-glass",
     group = "intermediate-products",
     order = "b"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-dirt",
+    name = "aoc-dirt",
     group = "intermediate-products",
     order = "c"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-construction",
+    name = "aoc-construction",
     group = "intermediate-products",
     order = "d"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-chemicals",
+    name = "aoc-chemicals",
     group = "intermediate-products",
     order = "e"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-petrochem",
+    name = "aoc-petrochem",
     group = "intermediate-products",
     order = "f"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-parts",
+    name = "aoc-parts",
     group = "intermediate-products",
     order = "g"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-circuits",
+    name = "aoc-circuits",
     group = "intermediate-products",
     order = "h"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-science-packs",
+    name = "aoc-science-packs",
     group = "intermediate-products",
     order = "i"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-metals-iron",
-    group = "aoe-metals",
+    name = "aoc-metals-iron",
+    group = "aoc-metals",
     order = "a"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-metals-copper",
-    group = "aoe-metals",
+    name = "aoc-metals-copper",
+    group = "aoc-metals",
     order = "b"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-metals-tin",
-    group = "aoe-metals",
+    name = "aoc-metals-tin",
+    group = "aoc-metals",
     order = "c"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-metals-aluminium",
-    group = "aoe-metals",
+    name = "aoc-metals-aluminium",
+    group = "aoc-metals",
     order = "d"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-metals-lead",
-    group = "aoe-metals",
+    name = "aoc-metals-lead",
+    group = "aoc-metals",
     order = "e"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-metals-silver",
-    group = "aoe-metals",
+    name = "aoc-metals-silver",
+    group = "aoc-metals",
     order = "f"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-metals-nickel",
-    group = "aoe-metals",
+    name = "aoc-metals-nickel",
+    group = "aoc-metals",
     order = "g"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-metals-gold",
-    group = "aoe-metals",
+    name = "aoc-metals-gold",
+    group = "aoc-metals",
     order = "h"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-metals-zinc",
-    group = "aoe-metals",
+    name = "aoc-metals-zinc",
+    group = "aoc-metals",
     order = "i"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-metals-chromium",
-    group = "aoe-metals",
+    name = "aoc-metals-chromium",
+    group = "aoc-metals",
     order = "j"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-metals-tungsten",
-    group = "aoe-metals",
+    name = "aoc-metals-tungsten",
+    group = "aoc-metals",
     order = "k"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-coal",
-    group = "aoe-metals",
+    name = "aoc-coal",
+    group = "aoc-metals",
     order = "l"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-metals-rest",
-    group = "aoe-metals",
+    name = "aoc-metals-rest",
+    group = "aoc-metals",
     order = "m"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-metals-steel",
-    group = "aoe-metals",
+    name = "aoc-metals-steel",
+    group = "aoc-metals",
     order = "n"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-metals-alloys",
-    group = "aoe-metals",
+    name = "aoc-metals-alloys",
+    group = "aoc-metals",
     order = "o"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-gems",
-    group = "aoe-metals",
+    name = "aoc-gems",
+    group = "aoc-metals",
     order = "p"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-fluids-general",
+    name = "aoc-fluids-general",
     group = "fluids",
     order = "a"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-fluids-flora-fauna",
+    name = "aoc-fluids-flora-fauna",
     group = "fluids",
     order = "b"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-fluids-oil",
+    name = "aoc-fluids-oil",
     group = "fluids",
     order = "c"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-fluids-acids",
+    name = "aoc-fluids-acids",
     group = "fluids",
     order = "d"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-air-gasses",
+    name = "aoc-air-gasses",
     group = "fluids",
     order = "e"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-simple-gasses",
+    name = "aoc-simple-gasses",
     group = "fluids",
     order = "f"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-compound-gasses",
+    name = "aoc-compound-gasses",
     group = "fluids",
     order = "g"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-petrochem-fluids",
+    name = "aoc-petrochem-fluids",
     group = "fluids",
     order = "h"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-fluids-slurry",
+    name = "aoc-fluids-slurry",
     group = "fluids",
     order = "i"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-fluids-molten",
+    name = "aoc-fluids-molten",
     group = "fluids",
     order = "j"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-other",
+    name = "aoc-other",
     group = "other",
     order = "a"
   },
   {
 	  type = "item-subgroup",
-    name = "aoe-hidden",
+    name = "aoc-hidden",
     group = "other",
     order = "z"
   }

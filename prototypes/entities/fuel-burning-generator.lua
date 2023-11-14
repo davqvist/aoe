@@ -1,23 +1,23 @@
 data:extend({{
     type = "item",
-    name = "aoe-fuel-burning-generator",
+    name = "aoc-fuel-burning-generator",
     icon = "__angelspetrochem__/graphics/icons/advanced-chemical-plant.png",
     icon_size = 32,
     icon_mipmaps = 1,
-    subgroup = "aoe-power-buildings",
+    subgroup = "aoc-power-buildings",
     order = "e",
-    place_result = "aoe-fuel-burning-generator",
+    place_result = "aoc-fuel-burning-generator",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "generator",
-  name = "aoe-fuel-burning-generator",
+  name = "aoc-fuel-burning-generator",
   icon = "__angelspetrochem__/graphics/icons/advanced-chemical-plant.png",
   icon_size = 32,
   icon_mipmaps = 1,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-  minable = { hardness = 1, mining_time = 0.2, result = "aoe-fuel-burning-generator" },
+  minable = { hardness = 1, mining_time = 0.2, result = "aoc-fuel-burning-generator" },
   max_health = 300,
   effectivity = 1,
   fluid_usage_per_tick = 10,

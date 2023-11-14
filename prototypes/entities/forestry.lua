@@ -1,18 +1,18 @@
 data:extend({{
     type = "item",
-    name = "aoe-forestry",
+    name = "aoc-forestry",
     icon = "__angelsbioprocessing__/graphics/icons/bio-arboretum.png",
     icon_size = 32,
-    subgroup = "aoe-flora-buildings",
+    subgroup = "aoc-flora-buildings",
     order = "c",
-    place_result = "aoe-forestry",
+    place_result = "aoc-forestry",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "assembling-machine",
-  name = "aoe-forestry",
-	crafting_categories = {"aoe-category-harvesting"},
+  name = "aoc-forestry",
+	crafting_categories = {"aoc-category-harvesting"},
 	crafting_speed = 1,
 	energy_source = { type = "void" },
 	energy_usage = "1kW",
@@ -23,7 +23,7 @@ data:extend({{
   icon = "__angelsbioprocessing__/graphics/icons/bio-arboretum.png",
   icon_size = 32,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoe-forestry" },
+	minable = { hardness = 1, mining_time = 0.2, result = "aoc-forestry" },
 	max_health = 300,
 	selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	collision_box = {{-1.4, -1.4}, {1.4, 1.4}},

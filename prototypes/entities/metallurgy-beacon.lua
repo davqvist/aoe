@@ -1,22 +1,22 @@
 data:extend({{
     type = "item",
-    name = "aoe-metallurgy-beacon",
+    name = "aoc-metallurgy-beacon",
     icons = {{
         icon = "__angelssmelting__/graphics/icons/blast-furnace.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
     }},
-    subgroup = "aoe-specific-buildings",
+    subgroup = "aoc-specific-buildings",
     order = "s",
-    place_result = "aoe-metallurgy-beacon",
+    place_result = "aoc-metallurgy-beacon",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "assembling-machine",
-  name = "aoe-metallurgy-beacon",
-  crafting_categories = {"aoe-category-metal-boosting"},
+  name = "aoc-metallurgy-beacon",
+  crafting_categories = {"aoc-category-metal-boosting"},
   crafting_speed = 1,
   energy_source = {
     type = "electric",
@@ -34,7 +34,7 @@ data:extend({{
     scale = 0.5,
   }},
   flags = { "placeable-neutral", "placeable-player", "player-creation" },
-  minable = { hardness = 1, mining_time = 0.2, result = "aoe-metallurgy-beacon" },
+  minable = { hardness = 1, mining_time = 0.2, result = "aoc-metallurgy-beacon" },
   max_health = 300,
   selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
   collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
@@ -129,7 +129,7 @@ data:extend({{
 
 data:extend({{
   type = "beacon",
-  name = "aoe-metallurgy-beacon-beacon",
+  name = "aoc-metallurgy-beacon-beacon",
   energy_source = { type = 'void'},
   energy_usage = '1W',
 	allowed_effects = {'productivity'},
@@ -139,7 +139,7 @@ data:extend({{
     module_info_multi_row_initial_height_modifier = -0.3,
     module_info_max_icons_per_row = 2
   },
-	icon = "__aoe__/img/entities/empty.png",
+	icon = "__ageofcreation__/img/entities/empty.png",
 	icon_size = 128,
 	flags = { "placeable-neutral", "placeable-player", "not-on-map", "hidden", "hide-alt-info" },
 	minable = nil,
@@ -152,7 +152,7 @@ data:extend({{
 	animation = {
       layers = {
         {
-          filename = "__aoe__/img/entities/empty.png",
+          filename = "__ageofcreation__/img/entities/empty.png",
           width = 128,
           height = 128,
           frame_count = 1,

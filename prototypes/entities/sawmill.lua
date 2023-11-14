@@ -1,28 +1,28 @@
 data:extend({{
     type = "item",
-    name = "aoe-burner-sawmill",
+    name = "aoc-burner-sawmill",
     icons = {
       {
-        icon = "__aoe__/img/entities/sawmill.png",
+        icon = "__ageofcreation__/img/entities/sawmill.png",
         icon_size = 192
       },
       {
-        icon = "__aoe__/img/items/other/fire.png",
+        icon = "__ageofcreation__/img/items/other/fire.png",
         icon_size = 64,
         scale = 0.25,
         shift = {-12,8}
       }
     },
-    subgroup = "aoe-flora-buildings",
+    subgroup = "aoc-flora-buildings",
     order = "d",
-    place_result = "aoe-burner-sawmill",
+    place_result = "aoc-burner-sawmill",
     stack_size = 25,
 }})
 
 data:extend({{
     type = "assembling-machine",
-    name = "aoe-burner-sawmill",
-	crafting_categories = {"aoe-category-sawing"},
+    name = "aoc-burner-sawmill",
+	crafting_categories = {"aoc-category-sawing"},
 	crafting_speed = 0.5,
 	energy_source = {
       type = "burner",
@@ -44,25 +44,25 @@ data:extend({{
 	allowed_effects = nil,
   icons = {
     {
-      icon = "__aoe__/img/entities/sawmill.png",
+      icon = "__ageofcreation__/img/entities/sawmill.png",
       icon_size = 192
     },
     {
-      icon = "__aoe__/img/items/other/fire.png",
+      icon = "__ageofcreation__/img/items/other/fire.png",
       icon_size = 64,
       scale = 0.25,
       shift = {-12,8}
     }
   },
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoe-burner-sawmill" },
+	minable = { hardness = 1, mining_time = 0.2, result = "aoc-burner-sawmill" },
 	max_health = 300,
 	selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
 	collision_box = {{-1.9, -1.9}, {1.9, 1.9}},
 	animation = {
       layers = {
         {
-          filename = "__aoe__/img/entities/sawmill.png",
+          filename = "__ageofcreation__/img/entities/sawmill.png",
           width = 192,
           height = 192,
           frame_count = 1,
@@ -74,19 +74,19 @@ data:extend({{
 
 data:extend({{
     type = "item",
-    name = "aoe-sawmill",
-    icon = "__aoe__/img/entities/sawmill.png",
+    name = "aoc-sawmill",
+    icon = "__ageofcreation__/img/entities/sawmill.png",
     icon_size = 192,
-    subgroup = "aoe-flora-buildings",
+    subgroup = "aoc-flora-buildings",
     order = "e",
-    place_result = "aoe-sawmill",
+    place_result = "aoc-sawmill",
     stack_size = 25,
 }})
 
 data:extend({{
     type = "assembling-machine",
-    name = "aoe-sawmill",
-	crafting_categories = {"aoe-category-sawing"},
+    name = "aoc-sawmill",
+	crafting_categories = {"aoc-category-sawing"},
 	crafting_speed = 1,
 	energy_source = {
       type = "electric",
@@ -100,17 +100,17 @@ data:extend({{
     {
       module_slots = 3
     },
-	icon = "__aoe__/img/entities/sawmill.png",
+	icon = "__ageofcreation__/img/entities/sawmill.png",
 	icon_size = 192,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoe-sawmill" },
+	minable = { hardness = 1, mining_time = 0.2, result = "aoc-sawmill" },
 	max_health = 300,
 	selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
 	collision_box = {{-1.9, -1.9}, {1.9, 1.9}},
 	animation = {
       layers = {
         {
-          filename = "__aoe__/img/entities/sawmill.png",
+          filename = "__ageofcreation__/img/entities/sawmill.png",
           width = 192,
           height = 192,
           frame_count = 1,

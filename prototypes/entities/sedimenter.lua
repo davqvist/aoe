@@ -1,19 +1,19 @@
 data:extend({{
     type = "item",
-    name = "aoe-sedimenter",
+    name = "aoc-sedimenter",
     icon = "__angelsrefining__/graphics/icons/ore-sorting-facility.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    subgroup = "aoe-specific-buildings",
+    subgroup = "aoc-specific-buildings",
     order = "k",
-    place_result = "aoe-sedimenter",
+    place_result = "aoc-sedimenter",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "assembling-machine",
-  name = "aoe-sedimenter",
-	crafting_categories = {"aoe-category-sedimenting"},
+  name = "aoc-sedimenter",
+	crafting_categories = {"aoc-category-sedimenting"},
 	crafting_speed = 1,
 	energy_source = {
     type = "electric",
@@ -30,7 +30,7 @@ data:extend({{
   icon_size = 64,
   icon_mipmaps = 4,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoe-sedimenter" },
+	minable = { hardness = 1, mining_time = 0.2, result = "aoc-sedimenter" },
 	max_health = 300,
 	selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
 	collision_box = {{-2.4, -2.4}, {2.4, 2.4}},

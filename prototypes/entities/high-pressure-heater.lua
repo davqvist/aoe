@@ -1,22 +1,22 @@
 data:extend({{
     type = "item",
-    name = "aoe-high-pressure-heater",
+    name = "aoc-high-pressure-heater",
     icons = {{
       icon = "__angelssmelting__/graphics/icons/sintering-oven.png",
       icon_size = 64,
       icon_mipmaps = 4,
       scale = 0.5,
     }},
-    subgroup = "aoe-specific-buildings",
+    subgroup = "aoc-specific-buildings",
     order = "j",
-    place_result = "aoe-high-pressure-heater",
+    place_result = "aoc-high-pressure-heater",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "assembling-machine",
-  name = "aoe-high-pressure-heater",
-	crafting_categories = {"aoe-category-high-pressure-heating"},
+  name = "aoc-high-pressure-heater",
+	crafting_categories = {"aoc-category-high-pressure-heating"},
 	crafting_speed = 1,
 	energy_source = {
     type = "electric",
@@ -36,7 +36,7 @@ data:extend({{
     scale = 0.5,
   }},
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoe-high-pressure-heater" },
+	minable = { hardness = 1, mining_time = 0.2, result = "aoc-high-pressure-heater" },
 	max_health = 300,
 	selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
 	collision_box = {{-2.4, -2.4}, {2.4, 2.4}},

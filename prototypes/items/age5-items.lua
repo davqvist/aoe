@@ -1,9 +1,9 @@
 data:extend({{
     type = "tool",
-    name = "aoe-science-05",
+    name = "aoc-science-05",
     icon = "__base__/graphics/icons/utility-science-pack.png",
     icon_size = 64, icon_mipmaps = 4,
-    subgroup = "aoe-science-packs",
+    subgroup = "aoc-science-packs",
     order = "e",
     stack_size = 200,
     durability = 1,

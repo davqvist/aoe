@@ -1,21 +1,21 @@
 data:extend({{
     type = "item",
-    name = "aoe-torch",
-    icon = "__aoe__/img/entities/torch.png",
+    name = "aoc-torch",
+    icon = "__ageofcreation__/img/entities/torch.png",
     icon_size = 128,
-    subgroup = "aoe-decoration",
+    subgroup = "aoc-decoration",
     order = "a",
-    place_result = "aoe-torch",
+    place_result = "aoc-torch",
     stack_size = 100,
 }})
 
 data:extend({{
     type = "lamp",
-    name = "aoe-torch",
-	icon = "__aoe__/img/entities/torch.png",
+    name = "aoc-torch",
+	icon = "__ageofcreation__/img/entities/torch.png",
     icon_size = 128,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.1, result = "aoe-torch"},
+    minable = {mining_time = 0.1, result = "aoc-torch"},
     max_health = 100,
     collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
@@ -29,7 +29,7 @@ data:extend({{
     glow_render_mode = "multiplicative",
     picture_on =
     {
-      filename = "__aoe__/img/entities/torch.png",
+      filename = "__ageofcreation__/img/entities/torch.png",
       width = 128,
       height = 128,
       frame_count = 1,
@@ -37,7 +37,7 @@ data:extend({{
     },
 	picture_off =
     {
-      filename = "__aoe__/img/entities/torch.png",
+      filename = "__ageofcreation__/img/entities/torch.png",
       width = 128,
       height = 128,
       frame_count = 1,

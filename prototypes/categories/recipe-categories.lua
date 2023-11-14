@@ -1,533 +1,533 @@
 data:extend({
   {
     type = "recipe-category",
-    name = "aoe-category-advanced-chemistry"
+    name = "aoc-category-advanced-chemistry"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-bees-apiary"
+    name = "aoc-category-bees-apiary"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-bees-hive",
-    modules = { "aoe-module-drone" }
+    name = "aoc-category-bees-hive",
+    modules = { "aoc-module-drone" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-burning"
+    name = "aoc-category-burning"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-casting"
+    name = "aoc-category-casting"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-casting-iron",
-    modules = { "aoe-module-iron" }
+    name = "aoc-category-casting-iron",
+    modules = { "aoc-module-iron" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-casting-copper",
-    modules = { "aoe-module-copper" }
+    name = "aoc-category-casting-copper",
+    modules = { "aoc-module-copper" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-casting-tin",
-    modules = { "aoe-module-tin" }
+    name = "aoc-category-casting-tin",
+    modules = { "aoc-module-tin" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-casting-aluminium",
-    modules = { "aoe-module-aluminium" }
+    name = "aoc-category-casting-aluminium",
+    modules = { "aoc-module-aluminium" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-casting-lead",
-    modules = { "aoe-module-lead" }
+    name = "aoc-category-casting-lead",
+    modules = { "aoc-module-lead" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-casting-silver",
-    modules = { "aoe-module-silver" }
+    name = "aoc-category-casting-silver",
+    modules = { "aoc-module-silver" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-casting-nickel",
-    modules = { "aoe-module-nickel" }
+    name = "aoc-category-casting-nickel",
+    modules = { "aoc-module-nickel" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-casting-gold",
-    modules = { "aoe-module-gold" }
+    name = "aoc-category-casting-gold",
+    modules = { "aoc-module-gold" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-casting-zinc",
-    modules = { "aoe-module-zinc" }
+    name = "aoc-category-casting-zinc",
+    modules = { "aoc-module-zinc" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-casting-chromium",
-    modules = { "aoe-module-chromium" }
+    name = "aoc-category-casting-chromium",
+    modules = { "aoc-module-chromium" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-casting-tungsten",
-    modules = { "aoe-module-tungsten" }
+    name = "aoc-category-casting-tungsten",
+    modules = { "aoc-module-tungsten" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-crushing"
+    name = "aoc-category-crushing"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-crushing-iron",
-    modules = { "aoe-module-iron" }
+    name = "aoc-category-crushing-iron",
+    modules = { "aoc-module-iron" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-crushing-copper",
-    modules = { "aoe-module-copper" }
+    name = "aoc-category-crushing-copper",
+    modules = { "aoc-module-copper" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-crushing-tin",
-    modules = { "aoe-module-tin" }
+    name = "aoc-category-crushing-tin",
+    modules = { "aoc-module-tin" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-crushing-aluminium",
-    modules = { "aoe-module-aluminium" }
+    name = "aoc-category-crushing-aluminium",
+    modules = { "aoc-module-aluminium" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-crushing-lead",
-    modules = { "aoe-module-lead" }
+    name = "aoc-category-crushing-lead",
+    modules = { "aoc-module-lead" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-crushing-silver",
-    modules = { "aoe-module-silver" }
+    name = "aoc-category-crushing-silver",
+    modules = { "aoc-module-silver" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-crushing-nickel",
-    modules = { "aoe-module-nickel" }
+    name = "aoc-category-crushing-nickel",
+    modules = { "aoc-module-nickel" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-crushing-gold",
-    modules = { "aoe-module-gold" }
+    name = "aoc-category-crushing-gold",
+    modules = { "aoc-module-gold" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-crushing-zinc",
-    modules = { "aoe-module-zinc" }
+    name = "aoc-category-crushing-zinc",
+    modules = { "aoc-module-zinc" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-crushing-chromium",
-    modules = { "aoe-module-chromium" }
+    name = "aoc-category-crushing-chromium",
+    modules = { "aoc-module-chromium" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-crushing-tungsten",
-    modules = { "aoe-module-tungsten" }
+    name = "aoc-category-crushing-tungsten",
+    modules = { "aoc-module-tungsten" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-digging"
+    name = "aoc-category-digging"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-electrolyzing"
+    name = "aoc-category-electrolyzing"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-electrolyzing-iron",
-    modules = { "aoe-module-iron" }
+    name = "aoc-category-electrolyzing-iron",
+    modules = { "aoc-module-iron" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-electrolyzing-copper",
-    modules = { "aoe-module-copper" }
+    name = "aoc-category-electrolyzing-copper",
+    modules = { "aoc-module-copper" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-electrolyzing-tin",
-    modules = { "aoe-module-tin" }
+    name = "aoc-category-electrolyzing-tin",
+    modules = { "aoc-module-tin" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-electrolyzing-aluminium",
-    modules = { "aoe-module-aluminium" }
+    name = "aoc-category-electrolyzing-aluminium",
+    modules = { "aoc-module-aluminium" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-electrolyzing-lead",
-    modules = { "aoe-module-lead" }
+    name = "aoc-category-electrolyzing-lead",
+    modules = { "aoc-module-lead" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-electrolyzing-silver",
-    modules = { "aoe-module-silver" }
+    name = "aoc-category-electrolyzing-silver",
+    modules = { "aoc-module-silver" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-electrolyzing-nickel",
-    modules = { "aoe-module-nickel" }
+    name = "aoc-category-electrolyzing-nickel",
+    modules = { "aoc-module-nickel" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-electrolyzing-gold",
-    modules = { "aoe-module-gold" }
+    name = "aoc-category-electrolyzing-gold",
+    modules = { "aoc-module-gold" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-electrolyzing-zinc",
-    modules = { "aoe-module-zinc" }
+    name = "aoc-category-electrolyzing-zinc",
+    modules = { "aoc-module-zinc" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-electrolyzing-chromium",
-    modules = { "aoe-module-chromium" }
+    name = "aoc-category-electrolyzing-chromium",
+    modules = { "aoc-module-chromium" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-electrolyzing-tungsten",
-    modules = { "aoe-module-tungsten" }
+    name = "aoc-category-electrolyzing-tungsten",
+    modules = { "aoc-module-tungsten" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-farm-plot-flax",
-	  modules = { "aoe-module-flax" }
+    name = "aoc-category-farm-plot-flax",
+	  modules = { "aoc-module-flax" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-farm-plot-tea",
-	  modules = { "aoe-module-tea" }
+    name = "aoc-category-farm-plot-tea",
+	  modules = { "aoc-module-tea" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-farm-plot-coffee",
-	  modules = { "aoe-module-coffee" }
+    name = "aoc-category-farm-plot-coffee",
+	  modules = { "aoc-module-coffee" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-farm-plot-maize",
-	  modules = { "aoe-module-maize" }
+    name = "aoc-category-farm-plot-maize",
+	  modules = { "aoc-module-maize" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-farm-plot-soybean",
-	  modules = { "aoe-module-soybean" }
+    name = "aoc-category-farm-plot-soybean",
+	  modules = { "aoc-module-soybean" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-farm-plot-spruce-tree",
-	  modules = { "aoe-module-spruce-tree" }
+    name = "aoc-category-farm-plot-spruce-tree",
+	  modules = { "aoc-module-spruce-tree" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-farm-plot-rubber-tree",
-	  modules = { "aoe-module-rubber-tree" }
+    name = "aoc-category-farm-plot-rubber-tree",
+	  modules = { "aoc-module-rubber-tree" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-farm-plot-apple-tree",
-	  modules = { "aoe-module-apple-tree" }
+    name = "aoc-category-farm-plot-apple-tree",
+	  modules = { "aoc-module-apple-tree" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-farm-plot-olive-tree",
-	  modules = { "aoe-module-olive-tree" }
+    name = "aoc-category-farm-plot-olive-tree",
+	  modules = { "aoc-module-olive-tree" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-farm-plot-rest"
+    name = "aoc-category-farm-plot-rest"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-farm-reservoir-kelp",
-	  modules = { "aoe-module-kelp" }
+    name = "aoc-category-farm-reservoir-kelp",
+	  modules = { "aoc-module-kelp" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-farm-reservoir-fish",
-	  modules = { "aoe-module-fish" }
+    name = "aoc-category-farm-reservoir-fish",
+	  modules = { "aoc-module-fish" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-farm-chicken-coop",
-	  modules = { "aoe-module-chicken" }
+    name = "aoc-category-farm-chicken-coop",
+	  modules = { "aoc-module-chicken" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-farm-barn-sheep",
-	  modules = { "aoe-module-sheep" }
+    name = "aoc-category-farm-barn-sheep",
+	  modules = { "aoc-module-sheep" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-farm-barn-cow",
-	  modules = { "aoe-module-cow", "aoe-module-ox" }
+    name = "aoc-category-farm-barn-cow",
+	  modules = { "aoc-module-cow", "aoc-module-ox" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-freezing"
+    name = "aoc-category-freezing"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-gene-lab"
+    name = "aoc-category-gene-lab"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-greenhouse"
+    name = "aoc-category-greenhouse"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-growing"
+    name = "aoc-category-growing"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-handcrafting"
+    name = "aoc-category-handcrafting"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-harvesting"
+    name = "aoc-category-harvesting"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-high-pressure-heating"
+    name = "aoc-category-high-pressure-heating"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-intricate-crafting"
+    name = "aoc-category-intricate-crafting"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-kiln-smelting"
+    name = "aoc-category-kiln-smelting"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-kiln-smelting-iron",
-    modules = { "aoe-module-iron" }
+    name = "aoc-category-kiln-smelting-iron",
+    modules = { "aoc-module-iron" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-kiln-smelting-copper",
-    modules = { "aoe-module-copper" }
+    name = "aoc-category-kiln-smelting-copper",
+    modules = { "aoc-module-copper" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-kiln-smelting-tin",
-    modules = { "aoe-module-tin" }
+    name = "aoc-category-kiln-smelting-tin",
+    modules = { "aoc-module-tin" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-kiln-smelting-aluminium",
-    modules = { "aoe-module-aluminium" }
+    name = "aoc-category-kiln-smelting-aluminium",
+    modules = { "aoc-module-aluminium" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-kiln-smelting-lead",
-    modules = { "aoe-module-lead" }
+    name = "aoc-category-kiln-smelting-lead",
+    modules = { "aoc-module-lead" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-kiln-smelting-silver",
-    modules = { "aoe-module-silver" }
+    name = "aoc-category-kiln-smelting-silver",
+    modules = { "aoc-module-silver" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-kiln-smelting-nickel",
-    modules = { "aoe-module-nickel" }
+    name = "aoc-category-kiln-smelting-nickel",
+    modules = { "aoc-module-nickel" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-kiln-smelting-gold",
-    modules = { "aoe-module-gold" }
+    name = "aoc-category-kiln-smelting-gold",
+    modules = { "aoc-module-gold" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-kiln-smelting-zinc",
-    modules = { "aoe-module-zinc" }
+    name = "aoc-category-kiln-smelting-zinc",
+    modules = { "aoc-module-zinc" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-kiln-smelting-chromium",
-    modules = { "aoe-module-chromium" }
+    name = "aoc-category-kiln-smelting-chromium",
+    modules = { "aoc-module-chromium" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-kiln-smelting-tungsten",
-    modules = { "aoe-module-tungsten" }
+    name = "aoc-category-kiln-smelting-tungsten",
+    modules = { "aoc-module-tungsten" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-melting"
+    name = "aoc-category-melting"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-metal-boosting"
+    name = "aoc-category-metal-boosting"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-mixing"
+    name = "aoc-category-mixing"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-mixing-iron",
-    modules = { "aoe-module-iron" }
+    name = "aoc-category-mixing-iron",
+    modules = { "aoc-module-iron" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-mixing-copper",
-    modules = { "aoe-module-copper" }
+    name = "aoc-category-mixing-copper",
+    modules = { "aoc-module-copper" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-mixing-tin",
-    modules = { "aoe-module-tin" }
+    name = "aoc-category-mixing-tin",
+    modules = { "aoc-module-tin" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-mixing-aluminium",
-    modules = { "aoe-module-aluminium" }
+    name = "aoc-category-mixing-aluminium",
+    modules = { "aoc-module-aluminium" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-mixing-lead",
-    modules = { "aoe-module-lead" }
+    name = "aoc-category-mixing-lead",
+    modules = { "aoc-module-lead" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-mixing-silver",
-    modules = { "aoe-module-silver" }
+    name = "aoc-category-mixing-silver",
+    modules = { "aoc-module-silver" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-mixing-nickel",
-    modules = { "aoe-module-nickel" }
+    name = "aoc-category-mixing-nickel",
+    modules = { "aoc-module-nickel" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-mixing-gold",
-    modules = { "aoe-module-gold" }
+    name = "aoc-category-mixing-gold",
+    modules = { "aoc-module-gold" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-mixing-zinc",
-    modules = { "aoe-module-zinc" }
+    name = "aoc-category-mixing-zinc",
+    modules = { "aoc-module-zinc" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-mixing-chromium",
-    modules = { "aoe-module-chromium" }
+    name = "aoc-category-mixing-chromium",
+    modules = { "aoc-module-chromium" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-mixing-tungsten",
-    modules = { "aoe-module-tungsten" }
+    name = "aoc-category-mixing-tungsten",
+    modules = { "aoc-module-tungsten" }
   },
   {
     type = "recipe-category",
-    name = "aoe-category-pumping"
+    name = "aoc-category-pumping"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-recycling"
+    name = "aoc-category-recycling"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-rotor"
+    name = "aoc-category-rotor"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-sawing"
+    name = "aoc-category-sawing"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-sedimenting"
+    name = "aoc-category-sedimenting"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-sinking"
+    name = "aoc-category-sinking"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-slaughtering"
+    name = "aoc-category-slaughtering"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-squeezing"
+    name = "aoc-category-squeezing"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-straining"
+    name = "aoc-category-straining"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-vacuum-crafting"
+    name = "aoc-category-vacuum-crafting"
   },
   {
     type = "recipe-category",
-    name = "aoe-category-venting"
+    name = "aoc-category-venting"
   },
   {
     type = "recipe-category",
     name = "centrifuging-iron",
-    modules = { "aoe-module-iron" }
+    modules = { "aoc-module-iron" }
   },
   {
     type = "recipe-category",
     name = "centrifuging-copper",
-    modules = { "aoe-module-copper" }
+    modules = { "aoc-module-copper" }
   },
   {
     type = "recipe-category",
     name = "centrifuging-tin",
-    modules = { "aoe-module-tin" }
+    modules = { "aoc-module-tin" }
   },
   {
     type = "recipe-category",
     name = "centrifuging-aluminium",
-    modules = { "aoe-module-aluminium" }
+    modules = { "aoc-module-aluminium" }
   },
   {
     type = "recipe-category",
     name = "centrifuging-lead",
-    modules = { "aoe-module-lead" }
+    modules = { "aoc-module-lead" }
   },
   {
     type = "recipe-category",
     name = "centrifuging-silver",
-    modules = { "aoe-module-silver" }
+    modules = { "aoc-module-silver" }
   },
   {
     type = "recipe-category",
     name = "centrifuging-nickel",
-    modules = { "aoe-module-nickel" }
+    modules = { "aoc-module-nickel" }
   },
   {
     type = "recipe-category",
     name = "centrifuging-gold",
-    modules = { "aoe-module-gold" }
+    modules = { "aoc-module-gold" }
   },
   {
     type = "recipe-category",
     name = "centrifuging-zinc",
-    modules = { "aoe-module-zinc" }
+    modules = { "aoc-module-zinc" }
   },
   {
     type = "recipe-category",
     name = "centrifuging-chromium",
-    modules = { "aoe-module-chromium" }
+    modules = { "aoc-module-chromium" }
   },
   {
     type = "recipe-category",
     name = "centrifuging-tungsten",
-    modules = { "aoe-module-tungsten" }
+    modules = { "aoc-module-tungsten" }
   }
 })
 
-table.insert(data.raw.character.character.crafting_categories,"aoe-category-handcrafting")
+table.insert(data.raw.character.character.crafting_categories,"aoc-category-handcrafting")

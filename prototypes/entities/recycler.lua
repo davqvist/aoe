@@ -1,18 +1,18 @@
 data:extend({{
     type = "item",
-    name = "aoe-recycler",
-    icon = "__aoe__/img/entities/recycler.png",
+    name = "aoc-recycler",
+    icon = "__ageofcreation__/img/entities/recycler.png",
     icon_size = 192,
-    subgroup = "aoe-voiding-buildings",
+    subgroup = "aoc-voiding-buildings",
     order = "a",
-    place_result = "aoe-recycler",
+    place_result = "aoc-recycler",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "furnace",
-  name = "aoe-recycler",
-	crafting_categories = {"aoe-category-recycling"},
+  name = "aoc-recycler",
+	crafting_categories = {"aoc-category-recycling"},
 	crafting_speed = 1,
 	energy_source = { type = "void" },
 	energy_usage = "1kW",
@@ -20,10 +20,10 @@ data:extend({{
 	module_specification = {
     module_slots = 3
   },
-	icon = "__aoe__/img/entities/recycler.png",
+	icon = "__ageofcreation__/img/entities/recycler.png",
 	icon_size = 192,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoe-recycler" },
+	minable = { hardness = 1, mining_time = 0.2, result = "aoc-recycler" },
 	max_health = 300,
 	selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
 	collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
@@ -32,7 +32,7 @@ data:extend({{
 	animation = {
       layers = {
         {
-          filename = "__aoe__/img/entities/recycler.png",
+          filename = "__ageofcreation__/img/entities/recycler.png",
           width = 192,
           height = 192,
           frame_count = 1,

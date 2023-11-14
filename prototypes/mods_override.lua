@@ -1,17 +1,17 @@
-local AOE = require("__aoe__/globals")
+local AOE = require("__ageofcreation__/globals")
 
 -- ANGELS
 
-data.raw['item']['wood'].subgroup = "aoe-flora-wood"
+data.raw['item']['wood'].subgroup = "aoc-flora-wood"
 data.raw['item']['wood'].order = "e"
-data.raw['capsule']['raw-fish'].subgroup = "aoe-fauna-fish"
+data.raw['capsule']['raw-fish'].subgroup = "aoc-fauna-fish"
 data.raw['capsule']['raw-fish'].order = "a"
 
 data.raw['item']['steel-plate'].icon = "__base__/graphics/icons/steel-plate.png"
 data.raw['item']['steel-plate'].icon_size = 64
 data.raw['item']['steel-plate'].icon_mipmaps = 4
 
-data.raw.lab["aoe-burner-lab"].inputs[#data.raw.lab["aoe-burner-lab"].inputs] = nil
+data.raw.lab["aoc-burner-lab"].inputs[#data.raw.lab["aoc-burner-lab"].inputs] = nil
 data.raw.lab["lab"].inputs[#data.raw.lab["lab"]] = nil
 
 data.raw['fish']['alien-fish-1'].autoplace = nil
@@ -21,11 +21,11 @@ data.raw['fish']['alien-fish-3'].autoplace = nil
 -- AAI Loader
 
 if mods["aai-loaders"] then
-    data.raw['item']['aai-loader'].subgroup = "aoe-item-logistics-belts"
+    data.raw['item']['aai-loader'].subgroup = "aoc-item-logistics-belts"
     data.raw['item']['aai-loader'].order = "d1"
 
     data:extend({{
-        name = 'aoe-crafting-loader-recipe',
+        name = 'aoc-crafting-loader-recipe',
         type = 'recipe',
         enabled = false,
         ingredients = {
@@ -41,7 +41,7 @@ if mods["aai-loaders"] then
 
     data:extend({{
         type = "technology",
-        name = "aoe-loader-tech",
+        name = "aoc-loader-tech",
         icons = {
             {
               icon = "__aai-loaders__/graphics/technology/loader-tech-icon.png" ,
@@ -52,11 +52,11 @@ if mods["aai-loaders"] then
               icon_size = 256, tint = {255, 217, 85}
             }
         },
-        prerequisites = {"aoe-fast-inserters-tech"},
+        prerequisites = {"aoc-fast-inserters-tech"},
         effects = {
             {
                 type = "unlock-recipe",
-                recipe = "aoe-crafting-loader-recipe"
+                recipe = "aoc-crafting-loader-recipe"
             }
         },
         unit = {

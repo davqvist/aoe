@@ -1,5 +1,5 @@
-local AOE = require("__aoe__/globals")
-local item_void_blacklist = { ["aoe-slag"] = true, ["aoe-tailings-dust"] = true }
+local AOE = require("__ageofcreation__/globals")
+local item_void_blacklist = { ["aoc-slag"] = true, ["aoc-tailings-dust"] = true }
 
 local groups = {
     "ammo",
@@ -22,7 +22,7 @@ for _, type in pairs(groups) do
     for _, item in pairs(data.raw[type]) do
 		if item_void_blacklist[item.name] == nil then
 			data:extend({{
-				name = 'aoe-burning-' .. item.name .. '-recipe',
+				name = 'aoc-burning-' .. item.name .. '-recipe',
 				type = 'recipe',	
 				enabled = true,
 				hide_from_player_crafting = true,
@@ -34,8 +34,8 @@ for _, type in pairs(groups) do
 				},
 				results = {},
 				energy_required = 0.5,
-				category = 'aoe-category-burning',
-				subgroup = 'aoe-other',
+				category = 'aoc-category-burning',
+				subgroup = 'aoc-other',
 				icons = get_void_icon( item )
 			}})
 		end

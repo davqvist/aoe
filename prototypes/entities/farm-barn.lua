@@ -1,34 +1,34 @@
 data:extend({{
     type = "item",
-    name = "aoe-farm-barn",
-    icon = "__aoe__/img/entities/barn.png",
+    name = "aoc-farm-barn",
+    icon = "__ageofcreation__/img/entities/barn.png",
     icon_size = 256,
-    subgroup = "aoe-fauna-buildings",
+    subgroup = "aoc-fauna-buildings",
     order = "b",
-    place_result = "aoe-farm-barn",
+    place_result = "aoc-farm-barn",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "assembling-machine",
-  name = "aoe-farm-barn",
-	crafting_categories = {"aoe-category-farm-barn-sheep","aoe-category-farm-barn-cow"},
+  name = "aoc-farm-barn",
+	crafting_categories = {"aoc-category-farm-barn-sheep","aoc-category-farm-barn-cow"},
 	crafting_speed = 0.5,
 	energy_source = { type = "void" },
 	energy_usage = "1kW",
 	module_specification = { module_slots = 5 },
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-	icon = "__aoe__/img/entities/barn.png",
+	icon = "__ageofcreation__/img/entities/barn.png",
 	icon_size = 256,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoe-farm-barn" },
+	minable = { hardness = 1, mining_time = 0.2, result = "aoc-farm-barn" },
 	max_health = 300,
 	selection_box = {{-4.0, -4.0}, {4.0, 4.0}},
 	collision_box = {{-3.9, -3.9}, {3.9, 3.9}},
 	animation = {
       layers = {
         {
-          filename = "__aoe__/img/entities/barn.png",
+          filename = "__ageofcreation__/img/entities/barn.png",
           width = 256,
           height = 256,
           frame_count = 1,

@@ -1,18 +1,18 @@
 data:extend({{
     type = "item",
-    name = "aoe-greenhouse",
+    name = "aoc-greenhouse",
     icon = "__angelsbioprocessing__/graphics/icons/bio-temperate-generator.png",
     icon_size = 32,
-    subgroup = "aoe-flora-buildings",
+    subgroup = "aoc-flora-buildings",
     order = "a",
-    place_result = "aoe-greenhouse",
+    place_result = "aoc-greenhouse",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "assembling-machine",
-  name = "aoe-greenhouse",
-	crafting_categories = {"aoe-category-greenhouse"},
+  name = "aoc-greenhouse",
+	crafting_categories = {"aoc-category-greenhouse"},
 	crafting_speed = 1,
 	energy_source = { type = "void" },
 	energy_usage = "1kW",
@@ -23,7 +23,7 @@ data:extend({{
 	icon = "__angelsbioprocessing__/graphics/icons/bio-temperate-generator.png",
 	icon_size = 32,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoe-greenhouse" },
+	minable = { hardness = 1, mining_time = 0.2, result = "aoc-greenhouse" },
 	max_health = 300,
 	selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	collision_box = {{-1.4, -1.4}, {1.4, 1.4}},

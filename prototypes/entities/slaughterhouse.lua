@@ -1,18 +1,18 @@
 data:extend({{
     type = "item",
-    name = "aoe-slaughterhouse",
+    name = "aoc-slaughterhouse",
     icon = "__angelsbioprocessing__/graphics/icons/bio-butchery.png",
     icon_size = 32,
-    subgroup = "aoe-fauna-buildings",
+    subgroup = "aoc-fauna-buildings",
     order = "a",
-    place_result = "aoe-slaughterhouse",
+    place_result = "aoc-slaughterhouse",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "assembling-machine",
-  name = "aoe-slaughterhouse",
-	crafting_categories = {"aoe-category-slaughtering"},
+  name = "aoc-slaughterhouse",
+	crafting_categories = {"aoc-category-slaughtering"},
 	crafting_speed = 1,
 	energy_source = {
     type = "electric",
@@ -28,7 +28,7 @@ data:extend({{
   icon = "__angelsbioprocessing__/graphics/icons/bio-butchery.png",
   icon_size = 32,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoe-slaughterhouse" },
+	minable = { hardness = 1, mining_time = 0.2, result = "aoc-slaughterhouse" },
 	max_health = 300,
 	selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
 	collision_box = {{-2.4, -2.4}, {2.4, 2.4}},

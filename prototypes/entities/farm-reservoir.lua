@@ -1,18 +1,18 @@
 data:extend({{
     type = "item",
-    name = "aoe-farm-reservoir",
+    name = "aoc-farm-reservoir",
     icon = "__angelsbioprocessing__/graphics/icons/bio-refugium-fish.png",
     icon_size = 32,
-    subgroup = "aoe-flora-farms",
+    subgroup = "aoc-flora-farms",
     order = "a",
-    place_result = "aoe-farm-reservoir",
+    place_result = "aoc-farm-reservoir",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "assembling-machine",
-  name = "aoe-farm-reservoir",
-	crafting_categories = {"aoe-category-farm-reservoir-kelp", "aoe-category-farm-reservoir-fish"},
+  name = "aoc-farm-reservoir",
+	crafting_categories = {"aoc-category-farm-reservoir-kelp", "aoc-category-farm-reservoir-fish"},
 	crafting_speed = 0.5,
 	energy_source = { type = "void" },
 	energy_usage = "1kW",
@@ -21,7 +21,7 @@ data:extend({{
   icon = "__angelsbioprocessing__/graphics/icons/bio-refugium-fish.png",
   icon_size = 32,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoe-farm-reservoir" },
+	minable = { hardness = 1, mining_time = 0.2, result = "aoc-farm-reservoir" },
 	max_health = 300,
 	selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
 	collision_box = {{-6.4, -6.4}, {6.4, 6.4}},

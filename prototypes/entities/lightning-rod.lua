@@ -1,17 +1,17 @@
 data:extend({{
     type = "item",
-    name = "aoe-lightning-rod",
-    icon = "__aoe__/img/entities/lightning-rod-icon.png",
+    name = "aoc-lightning-rod",
+    icon = "__ageofcreation__/img/entities/lightning-rod-icon.png",
     icon_size = 128,
-    subgroup = "aoe-power-buildings",
+    subgroup = "aoc-power-buildings",
     order = "g",
-    place_result = "aoe-lightning-rod",
+    place_result = "aoc-lightning-rod",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "electric-energy-interface",
-  name = "aoe-lightning-rod",
+  name = "aoc-lightning-rod",
   energy_source = {
     type = 'electric',
     usage_priority = 'primary-output',
@@ -23,10 +23,10 @@ data:extend({{
   energy_usage = "0kW",
   allowed_effects = {},
   module_specification = { module_slots = 0 },
-  icon = "__aoe__/img/entities/lightning-rod-icon.png",
+  icon = "__ageofcreation__/img/entities/lightning-rod-icon.png",
   icon_size = 128,
   flags = { "placeable-neutral", "placeable-player", "player-creation" },
-  minable = { hardness = 1, mining_time = 0.2, result = "aoe-lightning-rod" },
+  minable = { hardness = 1, mining_time = 0.2, result = "aoc-lightning-rod" },
   max_health = 300,
   selection_box = {{-2.0, 0.0}, {2.0, 4.0}},
   collision_box = {{-1.9, 0.0}, {1.9, 4.0}},
@@ -41,7 +41,7 @@ data:extend({{
   animation = {
     layers = {
         {
-          filename = "__aoe__/img/entities/lightning-rod.png",
+          filename = "__ageofcreation__/img/entities/lightning-rod.png",
           width = 64,
           height = 592,
           frame_count = 1,

@@ -1,18 +1,18 @@
 data:extend({{
     type = "item",
-    name = "aoe-advanced-chemical-plant",
+    name = "aoc-advanced-chemical-plant",
     icon = "__angelspetrochem__/graphics/icons/separator.png",
     icon_size = 32,
-    subgroup = "aoe-specific-buildings",
+    subgroup = "aoc-specific-buildings",
     order = "p",
-    place_result = "aoe-advanced-chemical-plant",
+    place_result = "aoc-advanced-chemical-plant",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "assembling-machine",
-  name = "aoe-advanced-chemical-plant",
-  crafting_categories = {"chemistry", "aoe-category-advanced-chemistry"},
+  name = "aoc-advanced-chemical-plant",
+  crafting_categories = {"chemistry", "aoc-category-advanced-chemistry"},
   crafting_speed = 2,
   energy_source = {
     type = "electric",
@@ -28,7 +28,7 @@ data:extend({{
   icon = "__angelspetrochem__/graphics/icons/separator.png",
   icon_size = 32,
   flags = { "placeable-neutral", "placeable-player", "player-creation" },
-  minable = { hardness = 1, mining_time = 0.2, result = "aoe-advanced-chemical-plant" },
+  minable = { hardness = 1, mining_time = 0.2, result = "aoc-advanced-chemical-plant" },
   max_health = 300,
   selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
   collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
