@@ -36,7 +36,7 @@ data:extend({{
           width = 192,
           height = 192,
           frame_count = 1,
-		  scale = 0.833333
+		      scale = 0.833333
         }
       }
     }

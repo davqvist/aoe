@@ -1,14 +1,17 @@
 
+local AOC =  require("__ageofcreation__/globals")
+
 local bee_globals = {
-	["aoc-honey"] = {["color"] = {255, 255, 0}, ["amount"] = 8, ["offspring"] = 5},
-  ["aoc-royal-jelly"] = {["color"] = {255, 200, 25}, ["amount"] = 32, ["offspring"] = 5},
-  ["stone"] = {["color"] = {176, 156, 109}, ["amount"] = 1, ["offspring"] = 4},
-  ["aoc-soil"] = {["color"] = {71, 57, 52}, ["amount"] = 1, ["offspring"] = 4},
-  ["aoc-sand"] = {["color"] = {213, 166, 67}, ["amount"] = 1, ["offspring"] = 4},
-  ["aoc-clay"] = {["color"] = {227, 205, 172}, ["amount"] = 1, ["offspring"] = 4},
-  ["aoc-silt"] = {["color"] = {171, 133, 82}, ["amount"] = 1, ["offspring"] = 4},
-  ["iron-ore"] = {["color"] = {106, 134, 148}, ["amount"] = 0.3, ["offspring"] = 3},
-  ["copper-ore"] = {["color"] = {212, 99, 55}, ["amount"] = 0.3, ["offspring"] = 3}
+	["aoc-honey"] = {["color"] = {255, 255, 0}, ["amount"] = 8, ["offspring"] = 5, ["technology"] = "aoc-bees-tech", ["chance"] = nil, ["parents"] = nil},
+  ["aoc-royal-jelly"] = {["color"] = {255, 200, 25}, ["amount"] = 32, ["offspring"] = 5, ["technology"] = "aoc-bees-tech", ["chance"] = nil, ["parents"] = nil},
+  ["aoc-soil"] = {["color"] = {71, 57, 52}, ["amount"] = 1, ["offspring"] = 4, ["technology"] = "aoc-bees-soil-tech", ["chance"] = 0.25, ["parents"] = {"aoc-honey", "aoc-royal-jelly"}},
+  ["aoc-gravel"] = {["color"] = {144, 144, 144}, ["amount"] = 1, ["offspring"] = 4, ["technology"] = "aoc-bees-gravel-tech", ["chance"] = 0.2, ["parents"] = {"aoc-honey", "aoc-soil"}},
+  ["aoc-sand"] = {["color"] = {213, 166, 67}, ["amount"] = 1, ["offspring"] = 4, ["technology"] = "aoc-bees-sand-tech", ["chance"] = 0.2, ["parents"] = {"aoc-honey", "aoc-soil"}},
+  ["aoc-clay"] = {["color"] = {227, 205, 172}, ["amount"] = 1, ["offspring"] = 4, ["technology"] = "aoc-bees-clay-tech", ["chance"] = 0.2, ["parents"] = {"aoc-soil", "aoc-royal-jelly"}},
+  ["aoc-silt"] = {["color"] = {171, 133, 82}, ["amount"] = 1, ["offspring"] = 4, ["technology"] = "aoc-bees-silt-tech", ["chance"] = 0.2, ["parents"] = {"aoc-sand", "aoc-soil"}},
+  ["stone"] = {["color"] = {176, 156, 109}, ["amount"] = 1, ["offspring"] = 4, ["technology"] = "aoc-bees-stone-tech", ["chance"] = 0.15, ["parents"] = {"aoc-sand", "aoc-silt"}},
+  ["iron-ore"] = {["color"] = {106, 134, 148}, ["amount"] = 0.3, ["offspring"] = 3, ["technology"] = "aoc-bees-iron-ore-tech", ["chance"] = 0.1, ["parents"] = {"stone", "aoc-gravel"}},
+  ["copper-ore"] = {["color"] = {212, 99, 55}, ["amount"] = 0.3, ["offspring"] = 3, ["technology"] = "aoc-bees-copper-ore-tech", ["chance"] = 0.1, ["parents"] = {"stone", "aoc-sand"}},
 }
 
 data:extend({
@@ -198,8 +201,76 @@ data:extend({{
   limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
 data:extend({{
+  name = 'aoc-crafting-apiary-recipe',
+  type = 'recipe',
+  enabled = false,
+  ingredients = {
+    {type = 'item', name = 'aoc-stainless-steel-machine-hull', amount = 1},
+    {type = 'item', name = 'wood', amount = 20},
+    {type = 'item', name = 'pipe', amount = 4}
+  },
+  results = {
+    {type = 'item', name = 'aoc-farm-apiary', amount = 1}
+  },
+  energy_required = 5
+}})
+data:extend({{
+  name = 'aoc-crafting-hive-recipe',
+  type = 'recipe',
+  enabled = false,
+  ingredients = {
+    {type = 'item', name = 'advanced-circuit', amount = 1},
+    {type = 'item', name = 'aoc-beeswax', amount = 10},
+    {type = 'item', name = 'wood', amount = 5},
+    {type = 'item', name = 'aoc-glass', amount = 10},
+    {type = 'item', name = 'aoc-ceramic', amount = 10}
+  },
+  results = {
+    {type = 'item', name = 'aoc-farm-hive', amount = 1}
+  },
+  icons = combine_icons_tiny( get_icons( data.raw["item"]["aoc-farm-hive"] ), get_icons( data.raw["item"]["aoc-beeswax"] ) ),
+  energy_required = 5
+}})
+data:extend({{
+  name = 'aoc-crafting-hive-paraffin-recipe',
+  type = 'recipe',
+  enabled = false,
+  ingredients = {
+    {type = 'item', name = 'advanced-circuit', amount = 1},
+    {type = 'item', name = 'aoc-paraffin-wax', amount = 5},
+    {type = 'item', name = 'wood', amount = 5},
+    {type = 'item', name = 'aoc-glass', amount = 10},
+    {type = 'item', name = 'aoc-ceramic', amount = 10}
+  },
+  results = {
+    {type = 'item', name = 'aoc-farm-hive', amount = 1}
+  },
+  icons = combine_icons_tiny( get_icons( data.raw["item"]["aoc-farm-hive"] ), get_icons( data.raw["item"]["aoc-paraffin-wax"] ) ),
+  energy_required = 5
+}})
+data:extend({{
+    name = 'aoc-gene-lab-queen-recipe',
+    type = 'recipe',
+    enabled = false,
+	  ingredients = {
+      {type = 'item', name = 'aoc-resin', amount = 10},
+      {type = 'item', name = 'sulfur', amount = 10},
+      {type = 'item', name = 'aoc-paraffin-wax', amount = 5},
+      {type = 'fluid', name = 'lubricant', amount = 100},
+      {type = 'fluid', name = 'aoc-bacteria', amount = 400}
+    },
+    results = {
+      {type = 'item', name = 'aoc-queen-aoc-honey', amount = 1, probability = 0.1},
+      {type = 'item', name = 'aoc-queen-aoc-royal-jelly', amount = 1, probability = 0.1},
+      {type = 'item', name = 'aoc-honey', amount = 2}
+    },
+    main_product = 'aoc-queen-aoc-honey',
+    energy_required = 60,
+	category = 'aoc-category-gene-lab'
+}})
+data:extend({{
   type = "item",
-  name = "aoc-apiary-frame-untreated",
+  name = "aoc-frame-untreated",
   icon = "__ageofcreation__/img/items/apiary-frame-untreated.png",
   icon_size = 64,
   subgroup = "aoc-bees-frames",
@@ -207,7 +278,7 @@ data:extend({{
   stack_size = 100
 }})
 data:extend({{
-  name = 'aoc-crafting-apiary-frame-untreated-recipe',
+  name = 'aoc-crafting-frame-untreated-recipe',
   type = 'recipe',
   enabled = false,
   ingredients = {
@@ -215,13 +286,13 @@ data:extend({{
     {type = 'item', name = 'aoc-fiber', amount = 1}
   },
   results = {
-    {type = 'item', name = 'aoc-apiary-frame-untreated', amount = 1}
+    {type = 'item', name = 'aoc-frame-untreated', amount = 1}
   },
   energy_required = 2
 }})
 data:extend({{
   type = "item",
-  name = "aoc-apiary-frame-impregnated",
+  name = "aoc-frame-impregnated",
   icon = "__ageofcreation__/img/items/apiary-frame-treated.png",
   icon_size = 64,
   subgroup = "aoc-bees-frames",
@@ -229,22 +300,22 @@ data:extend({{
   stack_size = 100
 }})
 data:extend({{
-  name = 'aoc-crafting-apiary-frame-impregnated-recipe',
+  name = 'aoc-crafting-frame-impregnated-recipe',
   type = 'recipe',
   enabled = false,
   ingredients = {
-    {type = 'item', name = 'aoc-apiary-frame-untreated', amount = 1},
+    {type = 'item', name = 'aoc-frame-untreated', amount = 1},
     {type = 'fluid', name = 'aoc-plant-oil', amount = 50}
   },
   results = {
-    {type = 'item', name = 'aoc-apiary-frame-impregnated', amount = 1}
+    {type = 'item', name = 'aoc-frame-impregnated', amount = 1}
   },
   energy_required = 2,
   category = 'advanced-crafting'
 }})
 data:extend({{
   type = "item",
-  name = "aoc-apiary-frame-sweet",
+  name = "aoc-frame-sweet",
   icon = "__ageofcreation__/img/items/apiary-frame-sugary.png",
   icon_size = 64,
   subgroup = "aoc-bees-frames",
@@ -252,22 +323,22 @@ data:extend({{
   stack_size = 100
 }})
 data:extend({{
-  name = 'aoc-crafting-apiary-frame-sweet-recipe',
+  name = 'aoc-crafting-frame-sweet-recipe',
   type = 'recipe',
   enabled = false,
   ingredients = {
-    {type = 'item', name = 'aoc-apiary-frame-impregnated', amount = 1},
+    {type = 'item', name = 'aoc-frame-impregnated', amount = 1},
     {type = 'fluid', name = 'aoc-syrup', amount = 50}
   },
   results = {
-    {type = 'item', name = 'aoc-apiary-frame-sweet', amount = 1}
+    {type = 'item', name = 'aoc-frame-sweet', amount = 1}
   },
   energy_required = 2,
   category = 'advanced-crafting'
 }})
 data:extend({{
   type = "item",
-  name = "aoc-apiary-frame-plastic",
+  name = "aoc-frame-plastic",
   icon = "__ageofcreation__/img/items/apiary-frame-plastic.png",
   icon_size = 64,
   subgroup = "aoc-bees-frames",
@@ -275,7 +346,7 @@ data:extend({{
   stack_size = 100
 }})
 data:extend({{
-  name = 'aoc-crafting-apiary-frame-plastic-recipe',
+  name = 'aoc-crafting-frame-plastic-recipe',
   type = 'recipe',
   enabled = false,
   ingredients = {
@@ -283,13 +354,13 @@ data:extend({{
     {type = 'item', name = 'aoc-fiber', amount = 1}
   },
   results = {
-    {type = 'item', name = 'aoc-apiary-frame-plastic', amount = 1}
+    {type = 'item', name = 'aoc-frame-plastic', amount = 1}
   },
   energy_required = 2
 }})
 data:extend({{
   type = "item",
-  name = "aoc-apiary-frame-mutating",
+  name = "aoc-frame-mutating",
   icon = "__ageofcreation__/img/items/apiary-frame-mutating.png",
   icon_size = 64,
   subgroup = "aoc-bees-frames",
@@ -297,7 +368,7 @@ data:extend({{
   stack_size = 100
 }})
 data:extend({{
-  name = 'aoc-crafting-apiary-frame-mutating-recipe',
+  name = 'aoc-crafting-frame-mutating-recipe',
   type = 'recipe',
   enabled = false,
   ingredients = {
@@ -305,7 +376,7 @@ data:extend({{
     {type = 'item', name = 'aoc-carbon-fiber-mesh', amount = 1}
   },
   results = {
-    {type = 'item', name = 'aoc-apiary-frame-mutating', amount = 1}
+    {type = 'item', name = 'aoc-frame-mutating', amount = 1}
   },
   energy_required = 2
 }})
@@ -332,14 +403,14 @@ data:extend({{
   ingredients = {
     {type = 'item', name = 'aoc-bee-aoc-honey', amount = 1},
     {type = 'item', name = 'aoc-beeswax', amount = 10},
-    {type = 'item', name = 'aoc-apiary-frame-untreated', amount = 1}
+    {type = 'item', name = 'aoc-frame-untreated', amount = 1}
   },
   results = {
     {type = 'item', name = 'aoc-bee-aoc-honey-module-1', amount = 1, probability = 0.3},
-    {type = 'item', name = 'aoc-apiary-frame-untreated', amount = 1, probability = 0.7, catalyst_amount = 1 }
+    {type = 'item', name = 'aoc-frame-untreated', amount = 1, probability = 0.7, catalyst_amount = 1 }
   },
   main_product = 'aoc-bee-aoc-honey-module-1',
-  icons = combine_icons_tiny( get_icons( data.raw["module"]['aoc-bee-aoc-honey-module-1'] ), get_icons( data.raw["item"]["aoc-apiary-frame-untreated"] ) ),
+  icons = combine_icons_tiny( get_icons( data.raw["module"]['aoc-bee-aoc-honey-module-1'] ), get_icons( data.raw["item"]["aoc-frame-untreated"] ) ),
   energy_required = 180,
   order = 'a12',
   category = 'aoc-category-bees-apiary'
@@ -351,14 +422,14 @@ data:extend({{
   ingredients = {
     {type = 'item', name = 'aoc-bee-aoc-honey', amount = 1},
     {type = 'item', name = 'aoc-beeswax', amount = 10},
-    {type = 'item', name = 'aoc-apiary-frame-impregnated', amount = 1}
+    {type = 'item', name = 'aoc-frame-impregnated', amount = 1}
   },
   results = {
     {type = 'item', name = 'aoc-bee-aoc-honey-module-1', amount = 1, probability = 0.3},
-    {type = 'item', name = 'aoc-apiary-frame-impregnated', amount = 1, probability = 0.85, catalyst_amount = 1 }
+    {type = 'item', name = 'aoc-frame-impregnated', amount = 1, probability = 0.85, catalyst_amount = 1 }
   },
   main_product = 'aoc-bee-aoc-honey-module-1',
-  icons = combine_icons_tiny( get_icons( data.raw["module"]['aoc-bee-aoc-honey-module-1'] ), get_icons( data.raw["item"]["aoc-apiary-frame-impregnated"] ) ),
+  icons = combine_icons_tiny( get_icons( data.raw["module"]['aoc-bee-aoc-honey-module-1'] ), get_icons( data.raw["item"]["aoc-frame-impregnated"] ) ),
   energy_required = 180,
   order = 'a13',
   category = 'aoc-category-bees-apiary'
@@ -370,14 +441,14 @@ data:extend({{
   ingredients = {
     {type = 'item', name = 'aoc-bee-aoc-honey', amount = 1},
     {type = 'item', name = 'aoc-beeswax', amount = 10},
-    {type = 'item', name = 'aoc-apiary-frame-sweet', amount = 1}
+    {type = 'item', name = 'aoc-frame-sweet', amount = 1}
   },
   results = {
     {type = 'item', name = 'aoc-bee-aoc-honey-module-1', amount = 1, probability = 0.45},
-    {type = 'item', name = 'aoc-apiary-frame-sweet', amount = 1, probability = 0.82, catalyst_amount = 1 }
+    {type = 'item', name = 'aoc-frame-sweet', amount = 1, probability = 0.82, catalyst_amount = 1 }
   },
   main_product = 'aoc-bee-aoc-honey-module-1',
-  icons = combine_icons_tiny( get_icons( data.raw["module"]['aoc-bee-aoc-honey-module-1'] ), get_icons( data.raw["item"]["aoc-apiary-frame-sweet"] ) ),
+  icons = combine_icons_tiny( get_icons( data.raw["module"]['aoc-bee-aoc-honey-module-1'] ), get_icons( data.raw["item"]["aoc-frame-sweet"] ) ),
   energy_required = 216,
   order = 'a14',
   category = 'aoc-category-bees-apiary'
@@ -389,14 +460,14 @@ data:extend({{
   ingredients = {
     {type = 'item', name = 'aoc-bee-aoc-honey', amount = 1},
     {type = 'item', name = 'aoc-beeswax', amount = 10},
-    {type = 'item', name = 'aoc-apiary-frame-plastic', amount = 1}
+    {type = 'item', name = 'aoc-frame-plastic', amount = 1}
   },
   results = {
     {type = 'item', name = 'aoc-bee-aoc-honey-module-1', amount = 1, probability = 0.15},
-    {type = 'item', name = 'aoc-apiary-frame-plastic', amount = 1, probability = 0.85, catalyst_amount = 1 }
+    {type = 'item', name = 'aoc-frame-plastic', amount = 1, probability = 0.85, catalyst_amount = 1 }
   },
   main_product = 'aoc-bee-aoc-honey-module-1',
-  icons = combine_icons_tiny( get_icons( data.raw["module"]['aoc-bee-aoc-honey-module-1'] ), get_icons( data.raw["item"]["aoc-apiary-frame-plastic"] ) ),
+  icons = combine_icons_tiny( get_icons( data.raw["module"]['aoc-bee-aoc-honey-module-1'] ), get_icons( data.raw["item"]["aoc-frame-plastic"] ) ),
   energy_required = 90,
   order = 'a15',
   category = 'aoc-category-bees-apiary'
@@ -482,6 +553,107 @@ for name, bee in pairs(bee_globals) do
     stack_size = 200,
     localised_name = {'item-name.aoc-comb', localised }
   }})
+  if data.raw["technology"][bee.technology] == nil and bee.chance ~= nil and bee.parents ~= nil then
+    data:extend({{
+        type = "technology",
+        name = bee.technology,
+        icons = get_icons( data.raw["item"]["aoc-bee-" .. name] ),
+        prerequisites = {},
+        effects = {},
+        unit = {
+            count = 20,
+            ingredients = AOC["age_tech_table"][5],
+            time = 40
+        },
+        localised_name = {'technology-name.aoc-bee-tech', localised }
+    }})
+    table.insert( data.raw["technology"][bee.technology].prerequisites, bee_globals[bee.parents[1]].technology )
+    if bee_globals[bee.parents[1]].technology ~= bee_globals[bee.parents[2]].technology then
+      table.insert( data.raw["technology"][bee.technology].prerequisites, bee_globals[bee.parents[2]].technology )
+    end
+    data:extend({{
+      name = 'aoc-gene-lab-queen-' .. name .. '-recipe',
+      type = 'recipe',
+      enabled = false,
+      ingredients = {
+        {type = 'item', name = 'aoc-queen-' .. bee.parents[1], amount = 1},
+        {type = 'item', name = 'aoc-bee-' .. bee.parents[2], amount = 1},
+        {type = 'fluid', name = 'aoc-bacteria', amount = 100},
+        {type = 'item', name = name, amount = bee.amount*20}
+      },
+      results = {
+        {type = 'item', name = 'aoc-queen-' .. name, amount = 1, probability = bee.chance},
+        {type = 'item', name = 'aoc-queen-' .. bee.parents[1], amount = 1, probability = 1-bee.chance, catalyst_amount = 1}
+      },
+      main_product = 'aoc-queen-' .. name,
+      energy_required = 60,
+      category = 'aoc-category-gene-lab'
+    }})
+    data:extend({{
+      name = 'aoc-gene-lab-queen-' .. name .. '-alternative-recipe',
+      type = 'recipe',
+      enabled = false,
+      ingredients = {
+        {type = 'item', name = 'aoc-queen-' .. bee.parents[2], amount = 1},
+        {type = 'item', name = 'aoc-bee-' .. bee.parents[1], amount = 1},
+        {type = 'fluid', name = 'aoc-bacteria', amount = 100},
+        {type = 'item', name = name, amount = bee.amount*20}
+      },
+      results = {
+        {type = 'item', name = 'aoc-queen-' .. name, amount = 1, probability = bee.chance},
+        {type = 'item', name = 'aoc-queen-' .. bee.parents[2], amount = 1, probability = 1-bee.chance, catalyst_amount = 1}
+      },
+      main_product = 'aoc-queen-' .. name,
+      energy_required = 60,
+      category = 'aoc-category-gene-lab'
+    }})
+    data:extend({{
+      name = 'aoc-gene-lab-queen-' .. name .. '-mutating-recipe',
+      type = 'recipe',
+      enabled = false,
+      ingredients = {
+        {type = 'item', name = 'aoc-queen-' .. bee.parents[1], amount = 1},
+        {type = 'item', name = 'aoc-bee-' .. bee.parents[2], amount = 1},
+        {type = 'fluid', name = 'aoc-bacteria', amount = 100},
+        {type = 'item', name = name, amount = bee.amount*20},
+        {type = 'item', name = 'aoc-frame-mutating', amount = 1}
+      },
+      results = {
+        {type = 'item', name = 'aoc-queen-' .. name, amount = 1, probability = bee.chance+0.05},
+        {type = 'item', name = 'aoc-queen-' .. bee.parents[1], amount = 1, probability = 1-bee.chance-0.05, catalyst_amount = 1},
+        {type = 'item', name = 'aoc-frame-mutating', amount = 1, probability = 0.8, catalyst_amount = 1 }
+      },
+      icons = combine_icons_tiny( get_icons( data.raw["item"]['aoc-queen-' .. name] ), get_icons( data.raw["item"]["aoc-frame-mutating"] ) ),
+      main_product = 'aoc-queen-' .. name,
+      energy_required = 60,
+      category = 'aoc-category-gene-lab'
+    }})
+    data:extend({{
+      name = 'aoc-gene-lab-queen-' .. name .. '-alternative-mutating-recipe',
+      type = 'recipe',
+      enabled = false,
+      ingredients = {
+        {type = 'item', name = 'aoc-queen-' .. bee.parents[2], amount = 1},
+        {type = 'item', name = 'aoc-bee-' .. bee.parents[1], amount = 1},
+        {type = 'fluid', name = 'aoc-bacteria', amount = 100},
+        {type = 'item', name = name, amount = bee.amount*20},
+        {type = 'item', name = 'aoc-frame-mutating', amount = 1}
+      },
+      results = {
+        {type = 'item', name = 'aoc-queen-' .. name, amount = 1, probability = bee.chance+0.05},
+        {type = 'item', name = 'aoc-queen-' .. bee.parents[2], amount = 1, probability = 1-bee.chance-0.05, catalyst_amount = 1 },
+        {type = 'item', name = 'aoc-frame-mutating', amount = 1, probability = 0.8, catalyst_amount = 1 }
+      },
+      icons = combine_icons_tiny( get_icons( data.raw["item"]['aoc-queen-' .. name] ), get_icons( data.raw["item"]["aoc-frame-mutating"] ) ),
+      main_product = 'aoc-queen-' .. name,
+      energy_required = 60,
+      category = 'aoc-category-gene-lab'
+    }})
+    table.insert( data.raw["technology"][bee.technology].effects, { type = "unlock-recipe", recipe = 'aoc-gene-lab-queen-' .. name .. '-recipe' } )
+    table.insert( data.raw["technology"][bee.technology].effects, { type = "unlock-recipe", recipe = 'aoc-gene-lab-queen-' .. name .. '-alternative-recipe' } )
+    table.insert( data.raw["technology"][bee.technology].effects, { type = "unlock-recipe", recipe = 'aoc-gene-lab-queen-' .. name .. '-mutating-recipe' } )
+    table.insert( data.raw["technology"][bee.technology].effects, { type = "unlock-recipe", recipe = 'aoc-gene-lab-queen-' .. name .. '-alternative-mutating-recipe' } )
+  end
   data:extend({{
     name = 'aoc-larva-' .. name .. '-recipe',
     type = 'recipe',
@@ -495,6 +667,7 @@ for name, bee in pairs(bee_globals) do
     energy_required =  5,
     category = 'aoc-category-bees-apiary'
   }})
+  table.insert( data.raw["technology"][bee.technology].effects, { type = "unlock-recipe", recipe = 'aoc-larva-' .. name .. '-recipe' } )
   data:extend({{
     name = 'aoc-larva-' .. name .. '-royal-jelly-recipe',
     type = 'recipe',
@@ -510,6 +683,7 @@ for name, bee in pairs(bee_globals) do
     icons = combine_icons_tiny( get_icons( data.raw["item"]['aoc-larva-' .. name] ), get_icons( data.raw["fluid"]["aoc-royal-jelly"] ) ),
     category = 'aoc-category-bees-apiary'
   }})
+  table.insert( data.raw["technology"][bee.technology].effects, { type = "unlock-recipe", recipe = 'aoc-larva-' .. name .. '-royal-jelly-recipe' } )
   data:extend({{
     name = 'aoc-bee-' .. name .. '-recipe',
     type = 'recipe',
@@ -524,6 +698,7 @@ for name, bee in pairs(bee_globals) do
     energy_required =  12,
     category = 'aoc-category-bees-apiary'
   }})
+  table.insert( data.raw["technology"][bee.technology].effects, { type = "unlock-recipe", recipe = 'aoc-bee-' .. name .. '-recipe' } )
   local ing = {{type = 'item', name = 'aoc-larva-' .. name, amount = 1}}
   if name ~= 'aoc-royal-jelly' then table.insert(ing, {type = 'item', name = 'aoc-honey', amount = 4}) end
   if name ~= 'aoc-honey' then table.insert(ing, {type = 'fluid', name = 'aoc-royal-jelly', amount = 24}) end
@@ -538,6 +713,7 @@ for name, bee in pairs(bee_globals) do
     energy_required =  12,
     category = 'aoc-category-bees-apiary'
   }})
+  table.insert( data.raw["technology"][bee.technology].effects, { type = "unlock-recipe", recipe = 'aoc-queen-' .. name .. '-recipe' } )
   data:extend({{
     name = 'aoc-comb-' .. name .. '-recipe',
     type = 'recipe',
@@ -552,60 +728,64 @@ for name, bee in pairs(bee_globals) do
     order = 'd1',
     category = 'aoc-category-bees-hive'
   }})
+  table.insert( data.raw["technology"][bee.technology].effects, { type = "unlock-recipe", recipe = 'aoc-comb-' .. name .. '-recipe' } )
   data:extend({{
     name = 'aoc-comb-' .. name .. '-untreated-recipe',
     type = 'recipe',
     enabled = false,
     ingredients = {
       {type = 'item', name = 'aoc-bee-' .. name, amount = 1},
-      {type = 'item', name = 'aoc-apiary-frame-untreated', amount = 1}
+      {type = 'item', name = 'aoc-frame-untreated', amount = 1}
     },
     results = {
       {type = 'item', name = 'aoc-comb-' .. name, amount = 2},
-      {type = 'item', name = 'aoc-apiary-frame-untreated', amount = 1, probability = 0.9, catalyst_amount = 1 }
+      {type = 'item', name = 'aoc-frame-untreated', amount = 1, probability = 0.9, catalyst_amount = 1 }
     },
     main_product = 'aoc-comb-' .. name,
-    icons = combine_icons_tiny( get_icons( data.raw["item"]['aoc-comb-' .. name] ), get_icons( data.raw["item"]["aoc-apiary-frame-untreated"] ) ),
+    icons = combine_icons_tiny( get_icons( data.raw["item"]['aoc-comb-' .. name] ), get_icons( data.raw["item"]["aoc-frame-untreated"] ) ),
     energy_required = 60,
     order = 'd2',
     category = 'aoc-category-bees-hive'
   }})
+  table.insert( data.raw["technology"][bee.technology].effects, { type = "unlock-recipe", recipe = 'aoc-comb-' .. name .. '-untreated-recipe' } )
   data:extend({{
     name = 'aoc-comb-' .. name .. '-impregnated-recipe',
     type = 'recipe',
     enabled = false,
     ingredients = {
       {type = 'item', name = 'aoc-bee-' .. name, amount = 1},
-      {type = 'item', name = 'aoc-apiary-frame-impregnated', amount = 1}
+      {type = 'item', name = 'aoc-frame-impregnated', amount = 1}
     },
     results = {
       {type = 'item', name = 'aoc-comb-' .. name, amount = 2},
-      {type = 'item', name = 'aoc-apiary-frame-impregnated', amount = 1, probability = 0.95, catalyst_amount = 1 }
+      {type = 'item', name = 'aoc-frame-impregnated', amount = 1, probability = 0.95, catalyst_amount = 1 }
     },
     main_product = 'aoc-comb-' .. name,
-    icons = combine_icons_tiny( get_icons( data.raw["item"]['aoc-comb-' .. name] ), get_icons( data.raw["item"]["aoc-apiary-frame-impregnated"] ) ),
+    icons = combine_icons_tiny( get_icons( data.raw["item"]['aoc-comb-' .. name] ), get_icons( data.raw["item"]["aoc-frame-impregnated"] ) ),
     energy_required = 60,
     order = 'd3',
     category = 'aoc-category-bees-hive'
   }})
+  table.insert( data.raw["technology"][bee.technology].effects, { type = "unlock-recipe", recipe = 'aoc-comb-' .. name .. '-impregnated-recipe' } )
   data:extend({{
     name = 'aoc-comb-' .. name .. '-sweet-recipe',
     type = 'recipe',
     enabled = false,
     ingredients = {
       {type = 'item', name = 'aoc-bee-' .. name, amount = 1},
-      {type = 'item', name = 'aoc-apiary-frame-sweet', amount = 1}
+      {type = 'item', name = 'aoc-frame-sweet', amount = 1}
     },
     results = {
       {type = 'item', name = 'aoc-comb-' .. name, amount = 3},
-      {type = 'item', name = 'aoc-apiary-frame-sweet', amount = 1, probability = 0.94, catalyst_amount = 1 }
+      {type = 'item', name = 'aoc-frame-sweet', amount = 1, probability = 0.94, catalyst_amount = 1 }
     },
     main_product = 'aoc-comb-' .. name,
-    icons = combine_icons_tiny( get_icons( data.raw["item"]['aoc-comb-' .. name] ), get_icons( data.raw["item"]["aoc-apiary-frame-sweet"] ) ),
+    icons = combine_icons_tiny( get_icons( data.raw["item"]['aoc-comb-' .. name] ), get_icons( data.raw["item"]["aoc-frame-sweet"] ) ),
     energy_required = 72,
     order = 'd4',
     category = 'aoc-category-bees-hive'
   }})
+  table.insert( data.raw["technology"][bee.technology].effects, { type = "unlock-recipe", recipe = 'aoc-comb-' .. name .. '-sweet-recipe' } )
   local res = {{type = 'item', name = "aoc-beeswax", amount = 1}}
   local mp = "aoc-beeswax"
   if data.raw.item[name] then
@@ -624,12 +804,14 @@ for name, bee in pairs(bee_globals) do
     type = 'recipe',
     enabled = false,
     ingredients = {
-      {type = 'item', name = 'aoc-comb-' .. name, amount = 1}
+      {type = 'item', name = 'aoc-comb-' .. name, amount = 1},
+      {type = 'fluid', name = 'aoc-solvent', amount = 2}
     },
     results = res,
     main_product = mp,
     energy_required = 5,
     category = 'aoc-category-squeezing'
   }})
+  table.insert( data.raw["technology"][bee.technology].effects, { type = "unlock-recipe", recipe = 'aoc-comb-liquify-' .. name .. '-recipe' } )
   i = i+1
 end

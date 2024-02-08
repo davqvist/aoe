@@ -249,21 +249,27 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-parts",
+    name = "aoc-rubber",
     group = "intermediate-products",
     order = "g"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-circuits",
+    name = "aoc-parts",
     group = "intermediate-products",
     order = "h"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-science-packs",
+    name = "aoc-circuits",
     group = "intermediate-products",
     order = "i"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-science-packs",
+    group = "intermediate-products",
+    order = "j"
   },
   {
 	  type = "item-subgroup",
@@ -411,15 +417,27 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-fluids-slurry",
+    name = "aoc-petrochem-fluids-2",
     group = "fluids",
     order = "i"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-fluids-molten",
+    name = "aoc-fluids-rubber",
     group = "fluids",
     order = "j"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-fluids-slurry",
+    group = "fluids",
+    order = "k"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-fluids-molten",
+    group = "fluids",
+    order = "l"
   },
   {
 	  type = "item-subgroup",

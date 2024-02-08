@@ -276,7 +276,7 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoc-logistics-tech",
+    name = "aoc-logistics-tech-1",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/logistics-1.png",
     prerequisites = {"aoc-latex-tech"},

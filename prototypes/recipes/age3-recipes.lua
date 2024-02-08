@@ -1141,6 +1141,20 @@ data:extend({{
 }})
 
 data:extend({{
+    name = 'aoc-crushing-bone-meal-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-bones', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-bone-meal', amount = 4}
+    },
+    energy_required = 4,
+	category = 'aoc-category-crushing'
+}})
+
+data:extend({{
 	name = 'aoc-mixing-fertilizer-recipe',
 	type = 'recipe',
 	enabled = false,

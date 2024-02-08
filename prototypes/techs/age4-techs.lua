@@ -584,7 +584,7 @@ data:extend({{
   name = "aoc-lead-tech",
   icon_size = 32,
   icon = "__angelssmelting__/graphics/icons/plate-lead.png",
-  prerequisites = {"aoc-advanced-metal-processing-tech", "aoc-chlorine-tech", "aoc-sedimentary-stones-tech-2"},
+  prerequisites = {"aoc-advanced-metal-processing-tech", "aoc-chlorine-tech", "aoc-sedimentary-stones-tech-2", "aoc-fertilizer-tech"},
   effects = {
     {
       type = "unlock-recipe",
@@ -1074,6 +1074,10 @@ data:extend({{
       {
         type = "unlock-recipe",
         recipe = "aoc-crafting-brass-rod-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-huge-storage-tank-recipe"
       }
     },
     unit = {

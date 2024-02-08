@@ -692,7 +692,7 @@ data:extend({{
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'steam', amount = 20},
+		{type = 'fluid', name = 'steam', amount = 20, minimum_temperature = 160},
 		{type = 'fluid', name = 'aoc-methane', amount = 20},
     },
     results = {
@@ -710,7 +710,7 @@ data:extend({{
     enabled = false,
 	ingredients = {
 		{type = 'fluid', name = 'aoc-carbon-monoxide', amount = 20},
-		{type = 'fluid', name = 'steam', amount = 20},
+		{type = 'fluid', name = 'steam', amount = 20, minimum_temperature = 160},
     },
     results = {
         {type = 'fluid', name = 'aoc-carbon-dioxide', amount = 20},
@@ -795,7 +795,7 @@ data:extend({{
     },
     results = {
         {type = 'fluid', name = 'aoc-nitric-oxide', amount = 40},
-		{type = 'fluid', name = 'steam', amount = 60}
+		{type = 'fluid', name = 'steam', amount = 60, temperature = 165}
     },
 	main_product = 'aoc-nitric-oxide',
     energy_required = 8,
@@ -827,7 +827,7 @@ data:extend({{
     },
     results = {
         {type = 'fluid', name = 'aoc-nitric-acid', amount = 40},
-		{type = 'fluid', name = 'steam', amount = 20}
+		{type = 'fluid', name = 'steam', amount = 20, temperature = 165}
     },
 	main_product = 'aoc-nitric-acid',
     energy_required = 6,
@@ -2690,6 +2690,20 @@ data:extend({{
 }})
 
 data:extend({{
+    name = 'aoc-crafting-huge-storage-tank-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-brass', amount = 40},
+		{type = 'item', name = 'pipe', amount = 40}
+    },
+    results = {
+        {type = 'item', name = 'angels-storage-tank-1', amount = 1}
+    },
+    energy_required = 3
+}})
+
+data:extend({{
 	name = 'aoc-kiln-smelting-silicon-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -3322,7 +3336,7 @@ data:extend({{
 		{type = 'fluid', name = 'aoc-polyethylene', amount = 20},
 	},
 	results = {
-        {type = 'item', name = 'plastic-bar', amount = 1}
+        {type = 'item', name = 'plastic-bar', amount = 2}
     },
 	energy_required = 1,
 	category = 'aoc-category-freezing'
@@ -3334,7 +3348,7 @@ data:extend({{
 	enabled = false,
 	ingredients = {
 		{type = 'item', name = 'aoc-flask', amount = 1},
-		{type = 'item', name = 'plastic-bar', amount = 5}
+		{type = 'item', name = 'plastic-bar', amount = 2}
 	},
 	results = {
         {type = 'item', name = 'aoc-science-05', amount = 1}

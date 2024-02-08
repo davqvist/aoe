@@ -409,8 +409,8 @@ data:extend({{
     name = "aoc-latex-rubber",
     icon = "__ageofcreation__/img/items/latex-rubber.png",
     icon_size = 64,
-    subgroup = "aoc-flora-rubber",
-    order = "c",
+    subgroup = "aoc-rubber",
+    order = "a",
     stack_size = 200
 }})
 
@@ -419,8 +419,8 @@ data:extend({{
     name = "aoc-rubber-belt",
     icon = "__ageofcreation__/img/items/rubber-belt.png",
     icon_size = 64,
-    subgroup = "aoc-flora-rubber",
-    order = "d",
+    subgroup = "aoc-rubber",
+    order = "c",
     stack_size = 100
 }})
 

@@ -4,7 +4,7 @@ data:extend({{
     icon = "__ageofcreation__/img/entities/transmitting-station.png",
     icon_size = 192,
     subgroup = "aoc-power-buildings",
-    order = "i",
+    order = "k",
     place_result = "aoc-transmitting-station",
     stack_size = 25,
 }})

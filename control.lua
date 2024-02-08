@@ -43,7 +43,7 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 	if(entity.name == "aoc-wind-turbine") then
 		handleWindTurbineBuilt(event)
 	end
-	if(entity.name == "inserter" or entity.name == "long-handed-inserter" or entity.name == "fast-inserter" or entity.name == "filter-inserter") then 
+	if(entity.type == "inserter" and entity.name ~= "burner-inserter") then
 	    if( entity.get_control_behavior() or next(entity.circuit_connected_entities.red) or next(entity.circuit_connected_entities.green) or entity.get_filter(1) ) then
 			return
 		else entity.inserter_filter_mode = "blacklist"

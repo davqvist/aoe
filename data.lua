@@ -18,6 +18,7 @@ require("__ageofcreation__/prototypes/bees")
 
 angelsmods.refining.disable_ore_override = true
 function angelsmods.functions.move_item(i_name, i_subgroup, i_order, i_type) end
+angelsmods.functions.OV.converter_fluid = function(old_fluid_name, new_fluid_name) end
 angelsmods.trigger.disable_vanilla_chemical_plants = nil
 -- TEMP --
 angelsmods.trigger.smelting_products["enable-all"] = true

@@ -14,6 +14,10 @@ data:extend({
   },
   {
     type = "recipe-category",
+    name = "aoc-category-boiling"
+  },
+  {
+    type = "recipe-category",
     name = "aoc-category-burning"
   },
   {
@@ -74,6 +78,10 @@ data:extend({
     type = "recipe-category",
     name = "aoc-category-casting-tungsten",
     modules = { "aoc-module-tungsten" }
+  },
+  {
+    type = "recipe-category",
+    name = "aoc-category-cracking"
   },
   {
     type = "recipe-category",

@@ -5,7 +5,7 @@ data:extend({{
     icon_size = 32,
     icon_mipmaps = 1,
     subgroup = "aoc-power-buildings",
-    order = "e",
+    order = "g",
     place_result = "aoc-fuel-burning-generator",
     stack_size = 25,
 }})

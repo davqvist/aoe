@@ -443,6 +443,10 @@ data:extend({{
       },
 	    {
         type = "unlock-recipe",
+        recipe = "aoc-crushing-bone-meal-recipe"
+      },
+      {
+        type = "unlock-recipe",
         recipe = "aoc-mixing-fertilizer-recipe"
       }
     },

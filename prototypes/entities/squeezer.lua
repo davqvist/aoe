@@ -200,10 +200,15 @@ data:extend({{
   },
 	fluid_boxes = {
     {
+      production_type = "input",
+      pipe_covers = pipecoverspictures(),
+      base_level = 1,
+      pipe_connections = {{ type="output", position = {-3, 0} }}
+    },{
       production_type = "output",
       pipe_covers = pipecoverspictures(),
       base_level = 1,
-      pipe_connections = {{ type="output", position = {0, -3} }}
+      pipe_connections = {{ type="output", position = {3, 0} }}
     },
     off_when_no_fluid_recipe = true
   },

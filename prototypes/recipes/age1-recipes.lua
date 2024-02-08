@@ -388,7 +388,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoc-rubber-belt', amount = 2}
     },
-	energy_required = 0.5
+	energy_required = 1
 }})
 
 data:extend({{
@@ -402,7 +402,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'transport-belt', amount = 6}
     },
-	energy_required = 1.0
+	energy_required = 1
 }})
 
 data:extend({{
@@ -416,7 +416,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'underground-belt', amount = 2}
     },
-	energy_required = 1.0
+	energy_required = 1
 }})
 
 data:extend({{
@@ -430,7 +430,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'splitter', amount = 1}
     },
-	energy_required = 1.0
+	energy_required = 1
 }})
 
 data:extend({{

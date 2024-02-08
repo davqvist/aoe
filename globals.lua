@@ -1,6 +1,6 @@
 
 data.raw.lab["lab"].inputs = {}
-for age=1,4 do
+for age=1,5 do
     table.insert(data.raw.lab["lab"].inputs, "aoc-science-" .. string.format("%02d", age) )
 end
 
@@ -8,7 +8,8 @@ local age_tech_cost = {
 	{1},
     {2,1},
     {0,2,1},
-    {0,3,2,1}
+    {0,3,2,1},
+    {0,5,3,2,1}
 }
 
 local age_tech_table = {}
@@ -25,13 +26,14 @@ function combine_icons_tiny( newicons, oldicons )
     local new_icons = table.deepcopy( newicons )
     local old_icons = table.deepcopy( oldicons )
     local biggest_size = 32
-    for _, icon in pairs(new_icons) do
-        if icon.icon_size > biggest_size then biggest_size = icon.icon_size end
+    for _, new in pairs(new_icons) do
+        if new.icon_size > biggest_size then biggest_size = new.icon_size end
     end
-    for _, icon in pairs(old_icons) do
-        icon.scale = math.min(0.4, biggest_size*0.4/icon.icon_size)
-		icon.shift = {8,8}
-        table.insert( new_icons, icon )
+    for _, old in pairs(old_icons) do
+        local old_scale = old.scale or 1
+        old.scale = old_scale*math.min(0.4, biggest_size*0.4/old.icon_size)
+		old.shift = {8,8}
+        table.insert( new_icons, old )
     end
     return new_icons
 end

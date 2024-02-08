@@ -1,17 +1,17 @@
 data:extend({{
     type = "item",
-    name = "aoc-hive",
+    name = "aoc-farm-hive",
     icon = '__NPBees2__/graphics/icon/hive-1.png',
 	icon_size = 32,
     subgroup = "aoc-bees-buildings",
     order = "b",
-    place_result = "aoc-hive",
+    place_result = "aoc-farm-hive",
     stack_size = 25,
 }})
 
 data:extend({{
     type = "assembling-machine",
-    name = "aoc-hive",
+    name = "aoc-farm-hive",
     crafting_categories = {"aoc-category-bees-hive"},
     crafting_speed = 1,
     energy_source = { type = "void" },
@@ -23,7 +23,7 @@ data:extend({{
     icon = '__NPBees2__/graphics/icon/hive-1.png',
 	icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
-    minable = { hardness = 1, mining_time = 0.2, result = "aoc-hive" },
+    minable = { hardness = 1, mining_time = 0.2, result = "aoc-farm-hive" },
     max_health = 300,
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
