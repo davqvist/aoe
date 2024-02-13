@@ -1,6 +1,25 @@
 local AOC =  require("__ageofcreation__/globals")
 
 data:extend({{
+  type = "technology",
+  name = "aoc-accumulator-tech",
+  icon_size = 256, icon_mipmaps = 4,
+  icon = "__base__/graphics/technology/electric-energy-acumulators.png",
+  prerequisites = {"aoc-petrochem-age-tech","aoc-battery-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-accumulator-recipe"
+    }
+  },
+  unit = {
+      count = 30,
+      ingredients = AOC["age_tech_table"][5],
+      time = 40
+  }
+}})
+
+data:extend({{
     type = "technology",
     name = "aoc-coal-liquefaction-tech",
     icon_size = 256, icon_mipmaps = 4,
@@ -377,6 +396,82 @@ data:extend({{
 
 data:extend({{
     type = "technology",
+    name = "aoc-petrochem-fuels-tech",
+    icons = get_icons( data.raw["fluid"]["aoc-gasoline-high-octane"] ),
+    prerequisites = {"aoc-oil-cracking-tech-1"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-chemistry-diesel-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-chemistry-gasoline-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-chemistry-high-octane-gasoline-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-chemistry-ethyl-tert-butyl-ether-recipe"
+      }
+    },
+    unit = {
+        count = 40,
+        ingredients = AOC["age_tech_table"][5],
+        time = 40
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoc-explosives-tech",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/explosives.png",
+    prerequisites = {"aoc-oil-cracking-tech-1","aoc-fuel-power-tech"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-chemistry-explosives-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-chemistry-explosives-toluene-recipe"
+      }
+    },
+    unit = {
+        count = 40,
+        ingredients = AOC["age_tech_table"][5],
+        time = 40
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoc-digging-tech-2",
+    icon_size = 160,
+    icon = "__angelsrefining__/graphics/entity/liquifier/liquifier.png",
+    prerequisites = {"aoc-lubricant-tech", "aoc-digging-tech-1", "aoc-sugar-tech"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-mixing-drilling-fluid-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-ground-bore-oil-recipe"
+      }
+    },
+    unit = {
+        count = 50,
+        ingredients = AOC["age_tech_table"][5],
+        time = 40
+    }
+}})
+
+data:extend({{
+    type = "technology",
     name = "aoc-bees-tech",
     icons = {
       {
@@ -387,7 +482,7 @@ data:extend({{
       }
     },
     icon_size = 32,
-    prerequisites = {"aoc-lubricant-tech", "aoc-acetone-tech"},
+    prerequisites = {"aoc-lubricant-tech", "aoc-acetone-tech", "aoc-radar-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -403,7 +498,15 @@ data:extend({{
       },
       {
         type = "unlock-recipe",
+        recipe = "aoc-crafting-inoculator-recipe"
+      },
+      {
+        type = "unlock-recipe",
         recipe = "aoc-gene-lab-queen-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-syringe-recipe"
       }
     },
     unit = {

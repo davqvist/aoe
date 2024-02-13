@@ -666,7 +666,7 @@ data:extend({{
 		{type = 'item', name = 'stone', amount = 6}
 	},
 	results = {
-		{type = 'fluid', name = 'aoc-lava', amount = 120}
+		{type = 'fluid', name = 'aoc-lava', amount = 60}
     },
 	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoc-lava"] ), get_icons( data.raw.item["stone"] ) ),
 	energy_required = 2,
@@ -681,7 +681,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-stones-sedimentary', amount = 6}
 	},
 	results = {
-		{type = 'fluid', name = 'aoc-lava', amount = 120}
+		{type = 'fluid', name = 'aoc-lava', amount = 60}
     },
 	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoc-lava"] ), get_icons( data.raw.item["aoc-stones-sedimentary"] ) ),
 	energy_required = 2,
@@ -696,7 +696,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-stones-metamorphic', amount = 6}
 	},
 	results = {
-		{type = 'fluid', name = 'aoc-lava', amount = 120}
+		{type = 'fluid', name = 'aoc-lava', amount = 60}
     },
 	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoc-lava"] ), get_icons( data.raw.item["aoc-stones-metamorphic"] ) ),
 	energy_required = 2,
@@ -770,7 +770,7 @@ data:extend({{
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoc-lava', amount = 120}
+		{type = 'fluid', name = 'aoc-lava', amount = 60}
 	},
 	results = {
 		{type = 'item', name = 'aoc-stones-igneous', amount = 6}

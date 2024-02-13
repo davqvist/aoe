@@ -304,7 +304,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-gneiss', amount = 6}
 	},
 	results = {
-		{type = 'fluid', name = 'aoc-lava', amount = 120}
+		{type = 'fluid', name = 'aoc-lava', amount = 60}
     },
 	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoc-lava"] ), get_icons( data.raw.item["aoc-gneiss"] ) ),
 	energy_required = 2,
@@ -319,7 +319,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-slate', amount = 6}
 	},
 	results = {
-		{type = 'fluid', name = 'aoc-lava', amount = 120}
+		{type = 'fluid', name = 'aoc-lava', amount = 60}
     },
 	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoc-lava"] ), get_icons( data.raw.item["aoc-slate"] ) ),
 	energy_required = 2,
@@ -334,7 +334,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-marble', amount = 6}
 	},
 	results = {
-		{type = 'fluid', name = 'aoc-lava', amount = 120}
+		{type = 'fluid', name = 'aoc-lava', amount = 60}
     },
 	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoc-lava"] ), get_icons( data.raw.item["aoc-marble"] ) ),
 	energy_required = 2,
@@ -476,7 +476,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-limestone', amount = 6}
 	},
 	results = {
-		{type = 'fluid', name = 'aoc-lava', amount = 120}
+		{type = 'fluid', name = 'aoc-lava', amount = 60}
     },
 	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoc-lava"] ), get_icons( data.raw.item["aoc-limestone"] ) ),
 	energy_required = 2,
@@ -492,7 +492,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-sandstone', amount = 6}
 	},
 	results = {
-		{type = 'fluid', name = 'aoc-lava', amount = 120}
+		{type = 'fluid', name = 'aoc-lava', amount = 60}
     },
 	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoc-lava"] ), get_icons( data.raw.item["aoc-sandstone"] ) ),
 	energy_required = 2,
@@ -507,7 +507,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-shale', amount = 6}
 	},
 	results = {
-		{type = 'fluid', name = 'aoc-lava', amount = 120}
+		{type = 'fluid', name = 'aoc-lava', amount = 60}
     },
 	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoc-lava"] ), get_icons( data.raw.item["aoc-shale"] ) ),
 	energy_required = 2,
@@ -2442,6 +2442,24 @@ data:extend({{
 }})
 
 data:extend({{
+    name = 'aoc-ground-bore-limestone-recipe',
+    type = 'recipe',
+    enabled = false,
+    allow_decomposition = false,
+	ingredients = {
+        {type = 'fluid', name = 'water', amount = 500},
+		{type = 'item', name = 'aoc-steel-rod', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-limestone', amount = 3},
+        {type = 'item', name = 'aoc-gravel', amount = 1}
+    },
+	main_product = 'aoc-limestone',
+    energy_required = 6,
+	category = 'aoc-category-digging'
+}})
+
+data:extend({{
     name = 'aoc-crafting-carbon-fiber-mesh-recipe',
     type = 'recipe',
     enabled = false,
@@ -3273,6 +3291,54 @@ data:extend({{
         {type = 'item', name = 'aoc-science-02', amount = 1}
     },
 	energy_required = 4
+}})
+
+data:extend({{
+    name = 'aoc-chemistry-battery-lead-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-lead-plate', amount = 4},
+		{type = 'fluid', name = 'sulfuric-acid', amount = 50}
+    },
+    results = {
+        {type = 'item', name = 'battery', amount = 1}
+    },
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["battery"] ), get_icons( data.raw["item"]["aoc-lead-plate"] ) ),
+    energy_required = 1,
+	category = 'chemistry'
+}})
+
+data:extend({{
+    name = 'aoc-chemistry-battery-zinc-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-zinc-plate', amount = 4},
+		{type = 'item', name = 'aoc-magnesium-dust', amount = 1},
+		{type = 'item', name = 'aoc-ammonium-chloride', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'battery', amount = 1}
+    },
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["battery"] ), get_icons( data.raw["item"]["aoc-zinc-plate"] ) ),
+    energy_required = 1,
+	category = 'chemistry'
+}})
+
+data:extend({{
+    name = 'aoc-chemistry-ammonium-chloride-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoc-ammonia', amount = 10},
+		{type = 'fluid', name = 'aoc-hydrogen-chloride', amount = 10}
+    },
+    results = {
+        {type = 'item', name = 'aoc-ammonium-chloride', amount = 1}
+    },
+    energy_required = 2,
+	category = 'chemistry'
 }})
 
 data:extend({{

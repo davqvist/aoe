@@ -398,6 +398,25 @@ data:extend({{
 
 data:extend({{
   type = "technology",
+  name = "aoc-lime-tech-3",
+  icon_size = 64,
+  icon = "__ageofcreation__/img/items/quicklime.png",
+  prerequisites = {"aoc-steel-tech-3", "aoc-lime-tech-2"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-ground-bore-limestone-recipe"
+    }
+  },
+  unit = {
+      count = 35,
+      ingredients = AOC["age_tech_table"][4],
+      time = 35
+  }
+}})
+
+data:extend({{
+  type = "technology",
   name = "aoc-advanced-metal-processing-tech",
   icon_size = 64, icon_mipmaps = 4,
   icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
@@ -1376,7 +1395,7 @@ data:extend({{
     name = "aoc-metal-boosting-tech",
     icon_size = 64, icon_mipmaps = 4,
     icon = "__angelssmelting__/graphics/icons/blast-furnace.png",
-    prerequisites = {"aoc-electronics-tech-2"},
+    prerequisites = {"aoc-electronics-tech-2","aoc-radar-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -1462,6 +1481,33 @@ data:extend({{
         count = 70,
         ingredients = AOC["age_tech_table"][4],
         time = 40
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoc-battery-tech",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/battery.png",
+    prerequisites = {"aoc-zinc-tech","aoc-lead-tech"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-chemistry-battery-lead-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-chemistry-battery-zinc-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-chemistry-ammonium-chloride-recipe"
+      }
+    },
+    unit = {
+        count = 45,
+        ingredients = AOC["age_tech_table"][4],
+        time = 35
     }
 }})
 

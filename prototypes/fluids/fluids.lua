@@ -21,12 +21,13 @@ data:extend({{
     name = "aoc-lava",
     icon = "__ageofcreation__/img/fluids/lava.png",
     icon_size = 64,
-    subgroup = "aoc-fluids-general",
-    order = "d",
+    subgroup = "aoc-fuel-fluids",
+    order = "a",
     heat_capacity = "15KJ",
     base_color = {r=0.8, g=0.4, b=0.25},
     flow_color = {r=0.8, g=0.6, b=0.25},
-    default_temperature = 1000
+    default_temperature = 1000,
+    fuel_value = "100kJ"
 }})
 
 data:extend({{
@@ -34,7 +35,7 @@ data:extend({{
     name = "aoc-brine",
     icons = angelsmods.functions.create_viscous_liquid_fluid_icon( nil, { { 039, 112, 194 }, { 168, 173, 173 }, { 070, 133, 232 }, { 185, 185, 185, 0.8 } } ),
     subgroup = "aoc-fluids-general",
-    order = "e",
+    order = "d",
 	base_color = {r=0.0, g=0.2, b=0.3},
 	flow_color = {r=0.0, g=0.2, b=0.3},
 	default_temperature = 20
@@ -45,7 +46,7 @@ data:extend({{
     name = "aoc-caustic-solution",
     icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { { 151, 212, 255 }, { 255, 255, 255 } }),
     subgroup = "aoc-fluids-general",
-    order = "f",
+    order = "e",
 	base_color = {r=0.59, g=0.83, b=1.0},
 	flow_color = {r=0.59, g=0.83, b=1.0},
 	default_temperature = 20
@@ -54,11 +55,9 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-fish-water",
-    icons = angelsmods.functions.create_liquid_fluid_icon( nil,
-        { { 194, 227, 091 }, { 184, 239, 000 }, { 156, 207, 000 } }
-    ),
+    icons = angelsmods.functions.create_liquid_fluid_icon( nil, { { 194, 227, 091 }, { 184, 239, 000 }, { 156, 207, 000 } } ),
     subgroup = "aoc-fluids-general",
-    order = "g",
+    order = "f",
 	base_color = {r=0, g=0.4, b=0.5},
     flow_color = {r=0, g=0.4, b=0.5},
 	default_temperature = 20
@@ -70,9 +69,20 @@ data:extend({{
     icon = "__ageofcreation__/img/fluids/wastewater.png",
     icon_size = 64,
     subgroup = "aoc-fluids-general",
-    order = "h",
+    order = "g",
 	base_color = {r=0.25, g=0.33, b=0.35},
     flow_color = {r=0.25, g=0.33, b=0.35},
+	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoc-drilling-fluid",
+    icons = angelsmods.functions.create_liquid_fluid_icon( nil, { { 255, 170, 83 }, { 255, 190, 103 }, { 255, 210, 123 } } ),
+    subgroup = "aoc-fluids-general",
+    order = "h",
+	base_color = {r=1, g=0.67, b=0.32},
+	flow_color = {r=1, g=0.67, b=0.32},
 	default_temperature = 20
 }})
 
@@ -414,8 +424,8 @@ data:extend({{
     type = "fluid",
     name = "aoc-ethanol",
     icons = angelsmods.functions.create_liquid_fluid_icon( { "__angelsbioprocessing__/graphics/icons/molecule-ethanol.png", 72 }, "COH"),
-    subgroup = "aoc-fluids-flora-fauna",
-    order = "e",
+    subgroup = "aoc-fuel-fluids",
+    order = "b",
 	base_color = {r=0.27, g=0.4, b=0.43},
 	flow_color = {r=0.27, g=0.4, b=0.43},
 	default_temperature = 20,
@@ -426,8 +436,8 @@ data:extend({{
     type = "fluid",
     name = "aoc-methanol",
     icons = angelsmods.functions.create_liquid_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/methanol.png", 72 }, "COH"),
-    subgroup = "aoc-fluids-flora-fauna",
-    order = "f",
+    subgroup = "aoc-fuel-fluids",
+    order = "c",
 	base_color = {r=0.27, g=0.4, b=0.43},
 	flow_color = {r=0.27, g=0.4, b=0.43},
 	default_temperature = 20,
@@ -437,13 +447,49 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-biodiesel",
-    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { { 247, 216, 081 }, { 237, 212, 104 } }),
-    subgroup = "aoc-fluids-flora-fauna",
-    order = "g",
-	base_color = {r=0.2, g=0.04, b=0.0},
-	flow_color = {r=0.2, g=0.04, b=0.0},
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { { 247, 216, 81 }, { 237, 212, 101 } }),
+    subgroup = "aoc-fuel-fluids",
+    order = "d",
+	base_color = {r=0.97, g=0.85, b=0.32},
+	flow_color = {r=0.97, g=0.85, b=0.32},
 	default_temperature = 20,
     fuel_value = "1.2MJ"
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoc-diesel",
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { { 247, 166, 81 }, { 237, 162, 101 } }),
+    subgroup = "aoc-fuel-fluids",
+    order = "e",
+	base_color = {r=0.97, g=0.65, b=0.32},
+	flow_color = {r=0.97, g=0.65, b=0.32},
+	default_temperature = 20,
+    fuel_value = "1.2MJ"
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoc-gasoline",
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { { 215, 123, 30 }, { 205, 119, 50 } }),
+    subgroup = "aoc-fuel-fluids",
+    order = "f",
+	base_color = {r=0.85, g=0.48, b=0.12},
+	flow_color = {r=0.85, g=0.48, b=0.12},
+	default_temperature = 20,
+    fuel_value = "1.6MJ"
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoc-gasoline-high-octane",
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { { 215, 123, 0 }, { 205, 119, 20 } }),
+    subgroup = "aoc-fuel-fluids",
+    order = "g",
+	base_color = {r=0.85, g=0.48, b=0},
+	flow_color = {r=0.85, g=0.48, b=0},
+	default_temperature = 20,
+    fuel_value = "2MJ"
 }})
 
 data:extend({{
@@ -451,7 +497,7 @@ data:extend({{
     name = "aoc-glycerol",
     icons = angelsmods.functions.create_liquid_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/glycerol.png", 72 }, "COH" ),
     subgroup = "aoc-fluids-flora-fauna",
-    order = "h",
+    order = "e",
 	base_color = {r=0.35, g=0.3, b=0.12},
 	flow_color = {r=0.35, g=0.3, b=0.12},
 	default_temperature = 20
@@ -461,8 +507,8 @@ data:extend({{
     type = "fluid",
     name = "aoc-liquid-meat",
     icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { { 147, 61, 67 }, { 147, 61, 67 } }),
-    subgroup = "aoc-fluids-flora-fauna",
-    order = "i",
+    subgroup = "aoc-fuel-fluids",
+    order = "h",
 	base_color = {r=0.58, g=0.24, b=0.26},
 	flow_color = {r=0.58, g=0.24, b=0.26},
 	default_temperature = 20,
@@ -928,11 +974,22 @@ data:extend({{
 
 data:extend({{
     type = "fluid",
+    name = "aoc-ethyl-tert-butyl-ether",
+    icons = angelsmods.functions.create_liquid_fluid_icon( nil, "COH" ),
+    subgroup = "aoc-petrochem-fluids-2",
+    order = "c",
+	base_color = {r=0.58, g=0.58, b=0.58},
+	flow_color = {r=0.58, g=0.58, b=0.58},
+	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
     name = "aoc-solvent",
     icon = "__ageofcreation__/img/fluids/solvent.png",
     icon_size = 64,
     subgroup = "aoc-petrochem-fluids-2",
-    order = "c",
+    order = "d",
 	base_color = {r=0.88, g=0.88, b=0.88},
 	flow_color = {r=0.88, g=0.88, b=0.88},
 	default_temperature = 20
@@ -943,14 +1000,14 @@ data:extend({{
     name = "aoc-phenol",
     icons = angelsmods.functions.create_liquid_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/phenol.png", 72 }, "COH" ),
     subgroup = "aoc-petrochem-fluids-2",
-    order = "d",
+    order = "e",
 	base_color = {r=0.56, g=0.36, b=0.2},
 	flow_color = {r=0.56, g=0.36, b=0.2},
 	default_temperature = 20
 }})
 
 data.raw['fluid']['lubricant'].subgroup = "aoc-petrochem-fluids-2"
-data.raw['fluid']['lubricant'].order = "d"
+data.raw['fluid']['lubricant'].order = "f"
 
 data:extend({{
     type = "fluid",

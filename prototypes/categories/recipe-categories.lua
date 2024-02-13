@@ -309,6 +309,10 @@ data:extend({
   },
   {
     type = "recipe-category",
+    name = "aoc-category-inoculating"
+  },
+  {
+    type = "recipe-category",
     name = "aoc-category-intricate-crafting"
   },
   {

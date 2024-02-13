@@ -658,6 +658,16 @@ data:extend({{
 
 data:extend({{
     type = "item",
+    name = "aoc-ammonium-chloride",
+    icon = "__angelspetrochem__/graphics/icons/solid-ammonium-perchlorate.png",
+    icon_size = 32,
+    subgroup = "aoc-chemicals",
+    order = "g",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
     name = "aoc-copper-sulfate",
     icon = "__ageofcreation__/img/items/copper-sulfate.png",
     icon_size = 64,

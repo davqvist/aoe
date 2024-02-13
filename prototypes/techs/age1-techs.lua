@@ -121,7 +121,7 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoc-digging-tech",
+    name = "aoc-digging-tech-1",
     icon_size = 160,
     icon = "__angelsrefining__/graphics/entity/liquifier/liquifier.png",
     prerequisites = {"aoc-fluid-handling-tech-1"},
@@ -478,7 +478,7 @@ data:extend({{
     name = "aoc-landfill-tech",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/landfill.png",
-    prerequisites = {"aoc-digging-tech"},
+    prerequisites = {"aoc-digging-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",

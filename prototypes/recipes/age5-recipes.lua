@@ -988,3 +988,150 @@ data:extend({{
     energy_required = 6,
 	category = 'oil-processing'
 }})
+
+data:extend({{
+    name = 'aoc-mixing-drilling-fluid-recipe',
+    type = 'recipe',
+    enabled = false,
+    ingredients = {
+        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'item', name = 'aoc-iron-dust', amount = 2},
+        {type = 'item', name = 'aoc-clay', amount = 4},
+        {type = 'item', name = 'aoc-puree', amount = 4},
+        {type = 'item', name = 'aoc-caustic-soda', amount = 3},
+        {type = 'item', name = 'aoc-mica', amount = 1}
+    },
+    results = {
+        {type = 'fluid', name = 'aoc-drilling-fluid', amount = 1000}
+    },
+    energy_required = 4,
+	category = 'aoc-category-mixing'
+}})
+
+data:extend({{
+    name = 'aoc-ground-bore-oil-recipe',
+    type = 'recipe',
+    enabled = false,
+	allow_decomposition = false,
+    ingredients = {
+        {type = 'fluid', name = 'aoc-drilling-fluid', amount = 500},
+		{type = 'item', name = 'aoc-steel-rod', amount = 1}
+    },
+    results = {
+        {type = 'fluid', name = 'crude-oil', amount = 100}
+    },
+    energy_required = 4,
+	category = 'aoc-category-digging'
+}})
+
+data:extend({{
+    name = 'aoc-chemistry-diesel-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'heavy-oil', amount = 10},
+		{type = 'fluid', name = 'light-oil', amount = 50}
+    },
+    results = {
+        {type = 'fluid', name = 'aoc-diesel', amount = 60}
+    },
+    energy_required = 12,
+	category = 'aoc-category-advanced-chemistry'
+}})
+
+data:extend({{
+    name = 'aoc-chemistry-gasoline-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoc-naphtha', amount = 60},
+		{type = 'fluid', name = 'petroleum-gas', amount = 15},
+		{type = 'fluid', name = 'aoc-toluene', amount = 5}
+    },
+    results = {
+        {type = 'fluid', name = 'aoc-gasoline', amount = 80}
+    },
+    energy_required = 16,
+	category = 'aoc-category-advanced-chemistry'
+}})
+
+data:extend({{
+    name = 'aoc-chemistry-high-octane-gasoline-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoc-gasoline', amount = 60},
+		{type = 'fluid', name = 'aoc-ethyl-tert-butyl-ether', amount = 15},
+		{type = 'fluid', name = 'aoc-octane', amount = 5}
+    },
+    results = {
+        {type = 'fluid', name = 'aoc-gasoline-high-octane', amount = 80}
+    },
+    energy_required = 4,
+	category = 'aoc-category-advanced-chemistry'
+}})
+
+data:extend({{
+    name = 'aoc-chemistry-ethyl-tert-butyl-ether-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoc-ethylene', amount = 20},
+		{type = 'fluid', name = 'aoc-butylene', amount = 20},
+		{type = 'fluid', name = 'aoc-pressure', amount = 10}
+    },
+    results = {
+        {type = 'fluid', name = 'aoc-ethyl-tert-butyl-ether', amount = 40}
+    },
+    energy_required = 2,
+	category = 'aoc-category-advanced-chemistry'
+}})
+
+data:extend({{
+    name = 'aoc-chemistry-explosives-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoc-glycerol', amount = 100},
+		{type = 'fluid', name = 'sulfuric-acid', amount = 50},
+		{type = 'fluid', name = 'aoc-nitric-acid', amount = 50}
+    },
+    results = {
+        {type = 'item', name = 'cliff-explosives', amount = 1}
+    },
+    icons = combine_icons_tiny( get_icons( data.raw["capsule"]["cliff-explosives"] ), get_icons( data.raw["fluid"]["aoc-glycerol"] ) ),
+    energy_required = 4,
+	category = 'aoc-category-advanced-chemistry'
+}})
+
+data:extend({{
+    name = 'aoc-chemistry-explosives-toluene-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoc-toluene', amount = 50},
+		{type = 'fluid', name = 'sulfuric-acid', amount = 50},
+		{type = 'fluid', name = 'aoc-nitric-acid', amount = 50}
+    },
+    results = {
+        {type = 'item', name = 'cliff-explosives', amount = 1}
+    },
+    icons = combine_icons_tiny( get_icons( data.raw["capsule"]["cliff-explosives"] ), get_icons( data.raw["fluid"]["aoc-toluene"] ) ),
+    energy_required = 4,
+	category = 'aoc-category-advanced-chemistry'
+}})
+
+data:extend({{
+    name = 'aoc-crafting-accumulator-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'plastic-bar', amount = 2},
+		{type = 'item', name = 'aoc-stainless-steel', amount = 1},
+		{type = 'item', name = 'battery', amount = 5}
+    },
+    results = {
+        {type = 'item', name = 'accumulator', amount = 1}
+    },
+    energy_required = 5
+}})

@@ -411,33 +411,39 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-petrochem-fluids",
+    name = "aoc-fuel-fluids",
     group = "fluids",
     order = "h"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-petrochem-fluids-2",
+    name = "aoc-petrochem-fluids",
     group = "fluids",
     order = "i"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-fluids-rubber",
+    name = "aoc-petrochem-fluids-2",
     group = "fluids",
     order = "j"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-fluids-slurry",
+    name = "aoc-fluids-rubber",
     group = "fluids",
     order = "k"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-fluids-molten",
+    name = "aoc-fluids-slurry",
     group = "fluids",
     order = "l"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-fluids-molten",
+    group = "fluids",
+    order = "m"
   },
   {
 	  type = "item-subgroup",

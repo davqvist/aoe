@@ -148,7 +148,7 @@ data:extend({{
     name = "aoc-electric-machines-tech",
 	  icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/engine.png",
-    prerequisites = {"aoc-steel-tech-1", "aoc-electronics-tech-1", "aoc-low-voltage-tech", "aoc-basic-automation-tech", "aoc-basic-genetics-tech", "aoc-digging-tech"},
+    prerequisites = {"aoc-steel-tech-1", "aoc-electronics-tech-1", "aoc-low-voltage-tech", "aoc-basic-automation-tech", "aoc-basic-genetics-tech", "aoc-digging-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",

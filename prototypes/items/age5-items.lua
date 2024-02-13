@@ -50,3 +50,7 @@ data:extend({{
     order = "c",
     stack_size = 200
 }})
+
+data.raw['capsule']['cliff-explosives'].subgroup = "aoc-petrochem"
+data.raw['capsule']['cliff-explosives'].order = "d"
+data.raw['capsule']['cliff-explosives'].stack_size = 100
