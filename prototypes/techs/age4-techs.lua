@@ -311,6 +311,10 @@ data:extend({{
     {
       type = "unlock-recipe",
       recipe = "aoc-chemistry-sodium-nitrate-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-chemistry-nitric-acid-recycle-recipe"
     }
   },
   unit = {
@@ -603,7 +607,7 @@ data:extend({{
   name = "aoc-lead-tech",
   icon_size = 32,
   icon = "__angelssmelting__/graphics/icons/plate-lead.png",
-  prerequisites = {"aoc-advanced-metal-processing-tech", "aoc-chlorine-tech", "aoc-sedimentary-stones-tech-2", "aoc-fertilizer-tech"},
+  prerequisites = {"aoc-advanced-metal-processing-tech", "aoc-chlorine-tech", "aoc-sedimentary-stones-tech-2", "aoc-fertilizer-tech-1"},
   effects = {
     {
       type = "unlock-recipe",
@@ -993,6 +997,24 @@ data:extend({{
 }})
 
 data:extend({{
+  type = "technology",
+  name = "aoc-noble-gasses-tech",
+  icons = data.raw.fluid["aoc-noble-gasses"].icons,
+  prerequisites = {"aoc-coal-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-freezing-noble-gasses-recipe"
+    }
+  },
+  unit = {
+      count = 40,
+      ingredients = AOC["age_tech_table"][4],
+      time = 35
+  }
+}})
+
+data:extend({{
     type = "technology",
     name = "aoc-wind-power-tech-2",
 	  icon_size = 256,
@@ -1127,10 +1149,33 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoc-silicon-tech",
+    name = "aoc-tree-cutting-tech-2",
+    icon = "__ageofcreation__/img/items/diamond-saw-blade.png",
+    icon_size = 64,
+    prerequisites = {"aoc-tree-cutting-tech-1", "aoc-igneous-stones-tech-2"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-saw-blade-diamond-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoc-sawmill-wood-diamond-saw-blade-recipe"
+      }
+    },
+    unit = {
+        count = 30,
+        ingredients = AOC["age_tech_table"][4],
+        time = 35
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoc-silicon-tech-1",
 	  icon = data.raw["item"]["aoc-silicon"].icon,
 	  icon_size = data.raw["item"]["aoc-silicon"].icon_size,
-    prerequisites = {"aoc-advanced-metal-processing-tech"},
+    prerequisites = {"aoc-advanced-metal-processing-tech", "aoc-tree-cutting-tech-2"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -1142,7 +1187,7 @@ data:extend({{
       }
     },
     unit = {
-        count = 20,
+        count = 35,
         ingredients = AOC["age_tech_table"][4],
         time = 35
     }
@@ -1240,7 +1285,7 @@ data:extend({{
     name = "aoc-cleanroom-automation-tech",
 	  icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/automation-3.png",
-    prerequisites = {"aoc-fast-inserters-tech", "aoc-silicon-tech"},
+    prerequisites = {"aoc-fast-inserters-tech", "aoc-silicon-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -1455,7 +1500,7 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoc-plastic-tech",
+    name = "aoc-plastic-tech-1",
     icon = "__base__/graphics/icons/plastic-bar.png",
     icon_size = 64, icon_mipmaps = 4,
     prerequisites = {"aoc-electronics-tech-2"},
@@ -1474,7 +1519,7 @@ data:extend({{
       },
       {
         type = "unlock-recipe",
-        recipe = "aoc-freezing-plastic-recipe"
+        recipe = "aoc-freezing-plastic-polyethylene-recipe"
       }
     },
     unit = {
@@ -1516,7 +1561,7 @@ data:extend({{
     name = "aoc-petrochem-age-tech",
     icon = "__base__/graphics/icons/utility-science-pack.png",
     icon_size = 64, icon_mipmaps = 4,
-    prerequisites = {"aoc-plastic-tech"},
+    prerequisites = {"aoc-plastic-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",

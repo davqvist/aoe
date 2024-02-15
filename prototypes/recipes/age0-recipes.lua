@@ -169,7 +169,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoc-small-motor', amount = 1}
     },
-	energy_required = 0.6
+	energy_required = 1
 }})
 
 data:extend({{

@@ -129,7 +129,7 @@ data:extend({{
     icon = "__ageofcreation__/img/items/garnet.png",
     icon_size = 64,
     subgroup = "aoc-gems",
-    order = "b",
+    order = "c",
     stack_size = 200
 }})
 
@@ -139,7 +139,7 @@ data:extend({{
     icon = "__ageofcreation__/img/items/apatite.png",
     icon_size = 64,
     subgroup = "aoc-gems",
-    order = "c",
+    order = "d",
     stack_size = 200
 }})
 
@@ -642,7 +642,7 @@ data:extend({{
     icon = "__angelspetrochem__/graphics/icons/solid-sodium-cyanide.png",
     icon_size = 32,
     subgroup = "aoc-chemicals",
-    order = "e",
+    order = "g",
     stack_size = 200
 }})
 
@@ -652,7 +652,7 @@ data:extend({{
     icon = "__angelssmelting__/graphics/icons/solid-silver-nitrate.png",
     icon_size = 32,
     subgroup = "aoc-chemicals",
-    order = "f",
+    order = "h",
     stack_size = 200
 }})
 
@@ -662,7 +662,7 @@ data:extend({{
     icon = "__angelspetrochem__/graphics/icons/solid-ammonium-perchlorate.png",
     icon_size = 32,
     subgroup = "aoc-chemicals",
-    order = "g",
+    order = "i",
     stack_size = 200
 }})
 
@@ -840,13 +840,23 @@ data:extend({{
     icon = "__ageofcreation__/img/items/stainless-steel-machine-hull.png",
     icon_size = 64,
     subgroup = "aoc-parts",
-    order = "d",
+    order = "e",
     stack_size = 200
 }})
 
 data.raw['item']['advanced-circuit'].subgroup = "aoc-circuits"
 data.raw['item']['advanced-circuit'].order = "b"
 data.raw['item']['advanced-circuit'].stack_size = 200
+
+data:extend({{
+    type = "item",
+    name = "aoc-saw-blade-diamond",
+    icon = "__ageofcreation__/img/items/diamond-saw-blade.png",
+    icon_size = 64,
+    subgroup = "aoc-gems",
+    order = "b",
+    stack_size = 100
+}})
 
 data:extend({{
     type = "item",

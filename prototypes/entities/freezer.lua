@@ -204,6 +204,14 @@ data:extend({{
       base_area = 10,
       base_level = -1,
       pipe_connections = {{ type="input", position = {2, 3} }}
+    },{
+      production_type = "output",
+      base_level = 1,
+      pipe_connections = { { type = "output", position = {-2, -3} } },
+    },{
+      production_type = "output",
+      base_level = 1,
+      pipe_connections = { { type = "output", position = {2, -3} } },
     },
     off_when_no_fluid_recipe = true
   }

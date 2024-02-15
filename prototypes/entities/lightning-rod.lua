@@ -4,7 +4,7 @@ data:extend({{
     icon = "__ageofcreation__/img/entities/lightning-rod-icon.png",
     icon_size = 128,
     subgroup = "aoc-power-buildings",
-    order = "i",
+    order = "j",
     place_result = "aoc-lightning-rod",
     stack_size = 25,
 }})

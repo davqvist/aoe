@@ -207,12 +207,14 @@ script.on_event(defines.events.on_tick,
 	if global.farms then
       for _,farm in pairs(global.farms) do
 		if farm.valid and farm.name == "aoc-farm-reservoir" then
-			check_module_dying( farm, "aoc-farm-reservoir-fish-eggs-recipe", 0.02 )
+			check_module_dying( farm, "aoc%-farm%-reservoir%-fish%-eggs%-recipe", 0.02 )
 		elseif farm.valid and farm.name == "aoc-farm-chicken-coop" then
-			check_module_dying( farm, "aoc-farm-chicken-coop-egg-recipe", 0.04 )
+			check_module_dying( farm, "aoc%-farm%-chicken%-coop%-egg%-recipe", 0.04 )
 		elseif farm.valid and farm.name == "aoc-farm-barn" then
-			check_module_dying( farm, "aoc-farm-barn-lamb-recipe", 0.06 )
-			check_module_dying( farm, "aoc-farm-barn-calf-recipe", 0.08 )
+			check_module_dying( farm, "aoc%-farm%-barn%-lamb%-recipe", 0.06 )
+			check_module_dying( farm, "aoc%-farm%-barn%-calf%-recipe", 0.08 )
+		elseif farm.valid and farm.name == "aoc-farm-apiary" then
+			check_module_dying( farm, "aoc%-larva%-.*%-recipe", 0.06 )
 		else global.farms[_]=nil
 		end
 	  end
@@ -221,7 +223,7 @@ script.on_event(defines.events.on_tick,
 )
 
 function check_module_dying( farm, recipename, chance )
-	if farm.crafting_progress == 1 and farm.get_recipe().name == recipename then
+	if farm.crafting_progress == 1 and farm.get_recipe().name:find('^' .. recipename .. '$') ~= nil then
 		if( math.random()<=chance ) then
 			local inv = farm.get_module_inventory()
 			local k, v = next( inv.get_contents() )

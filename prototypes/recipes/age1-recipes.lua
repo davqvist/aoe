@@ -897,7 +897,7 @@ data:extend({{
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoc-sand', amount = 50}
+		{type = 'item', name = 'aoc-sand', amount = 20}
 	},
 	results = {
         {type = 'item', name = 'landfill', amount = 1}

@@ -229,8 +229,10 @@ data.raw['generator']['steam-turbine'].max_power_output = "10MW"
 data.raw['generator']['steam-turbine'].effectivity = 1
 data.raw['generator']['steam-turbine'].fluid_usage_per_tick = 1.666666667
 
+data.raw['solar-panel-equipment']['solar-panel-equipment'].subgroup = "aoc-power-buildings"
+data.raw['solar-panel-equipment']['solar-panel-equipment'].order = "h"
 data.raw['item']['solar-panel'].subgroup = "aoc-power-buildings"
-data.raw['item']['solar-panel'].order = "h"
+data.raw['item']['solar-panel'].order = "i"
 data.raw['solar-panel']['solar-panel'].production = "100kW"
 data.raw['item']['accumulator'].subgroup = "aoc-power-buildings"
 data.raw['item']['accumulator'].order = "a"

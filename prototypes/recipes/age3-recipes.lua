@@ -1042,6 +1042,19 @@ data:extend({{
 }})
 
 data:extend({{
+	name = 'aoc-crafting-landfill-grass-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-grass', amount = 20}
+	},
+	results = {
+        {type = 'item', name = 'landfill', amount = 1}
+    },
+	energy_required = 1
+}})
+
+data:extend({{
 	name = 'aoc-crafting-saw-blade-iron-recipe',
 	type = 'recipe',
 	enabled = false,

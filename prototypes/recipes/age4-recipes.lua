@@ -870,6 +870,24 @@ data:extend({{
 }})
 
 data:extend({{
+    name = 'aoc-chemistry-nitric-acid-recycle-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'sulfuric-acid', amount = 20},
+		{type = 'item', name = 'aoc-sodium-nitrate', amount = 2},
+    },
+    results = {
+		{type = 'fluid', name = 'aoc-nitric-acid', amount = 20},
+        {type = 'item', name = 'aoc-sodium-bisulfate', amount = 2}
+    },
+	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoc-nitric-acid"] ), get_icons( data.raw.item["aoc-sodium-nitrate"] ) ),
+	main_product = 'aoc-nitric-acid',
+    energy_required = 2,
+	category = 'chemistry'
+}})
+
+data:extend({{
     name = 'aoc-crafting-casting-unit-recipe',
     type = 'recipe',
     enabled = false,
@@ -2494,6 +2512,23 @@ data:extend({{
 }})
 
 data:extend({{
+	name = 'aoc-freezing-noble-gasses-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+	  {type = 'fluid', name = 'aoc-cold-air', amount = 25},
+	  {type = 'item', name = 'aoc-carbon-activated', amount = 1}
+	},
+	results = {
+	  {type = 'fluid', name = 'aoc-noble-gasses', amount = 5},
+	  {type = 'item', name = 'aoc-carbon-activated', amount = 1, probability = 0.92, catalyst_amount = 1}
+	},
+	main_product = 'aoc-noble-gasses',
+	energy_required = 1,
+	category = 'aoc-category-freezing'
+}})
+
+data:extend({{
     name = 'aoc-high-pressure-heating-diamond-recipe',
     type = 'recipe',
     enabled = false,
@@ -2732,7 +2767,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoc-silicon', amount = 4},
-		{type = 'fluid', name = 'aoc-carbon-dioxide', amount = 1}
+		{type = 'fluid', name = 'aoc-carbon-dioxide', amount = 10}
     },
 	main_product = 'aoc-silicon',
 	energy_required = 4.8,
@@ -2740,15 +2775,52 @@ data:extend({{
 }})
 
 data:extend({{
+	name = 'aoc-crafting-saw-blade-diamond-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-diamond', amount = 8}
+	},
+	results = {
+        {type = 'item', name = 'aoc-saw-blade-diamond', amount = 1}
+    },
+	energy_required = 2
+}})
+
+data:extend({{
+	name = 'aoc-sawmill-wood-diamond-saw-blade-recipe',
+	type = 'recipe',
+	enabled = false,
+    allow_decomposition = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-log', amount = 1},
+		{type = 'item', name = 'aoc-saw-blade-diamond', amount = 1}
+	},
+	results = {
+        {type = 'item', name = 'wood', amount = 8},
+        {type = 'item', name = 'aoc-wood-pulp', amount = 1},
+		{type = 'item', name = 'aoc-saw-blade-diamond', amount = 1, catalyst_amount = 1, probability = 0.99}
+    },
+	main_product = 'wood',
+	icons = combine_icons_tiny( get_icons( data.raw.item["wood"] ), get_icons( data.raw.item["aoc-saw-blade-diamond"] ) ),
+	energy_required = 2,
+	category = 'aoc-category-sawing'
+}})
+
+data:extend({{
 	name = 'aoc-sawmill-silicon-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoc-silicon', amount = 1}
+		{type = 'item', name = 'aoc-silicon', amount = 1},
+		{type = 'item', name = 'aoc-saw-blade-diamond', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoc-silicon-wafer', amount = 6}
+		{type = 'item', name = 'aoc-silicon-wafer', amount = 4},
+		{type = 'item', name = 'aoc-saw-blade-diamond', amount = 1, catalyst_amount = 1, probability = 0.99}
     },
+	icons = combine_icons_tiny( get_icons( data.raw["item"]['aoc-silicon-wafer'] ), get_icons( data.raw["item"]["aoc-saw-blade-diamond"] ) ),
+	main_product = 'aoc-silicon-wafer',
 	energy_required = 1,
 	category = 'aoc-category-sawing'
 }})
@@ -3020,8 +3092,8 @@ data:extend({{
 	enabled = false,
 	ingredients = {
 		{type = 'item', name = 'aoc-paper', amount = 1},
-		{type = 'item', name = 'aoc-diode', amount = 1},
-		{type = 'item', name = 'aoc-inductor', amount = 1},
+		{type = 'item', name = 'aoc-diode', amount = 2},
+		{type = 'item', name = 'aoc-inductor', amount = 2},
 		{type = 'item', name = 'aoc-solder', amount = 1},
 		{type = 'item', name = 'aoc-silicon-wafer', amount = 1}
 	},
@@ -3039,9 +3111,9 @@ data:extend({{
 	ingredients = {
 		{type = 'item', name = 'electronic-circuit', amount = 8},
 		{type = 'item', name = 'aoc-ceramic', amount = 1},
-		{type = 'item', name = 'aoc-resistor', amount = 1},
-		{type = 'item', name = 'aoc-transistor', amount = 1},
-		{type = 'item', name = 'aoc-capacitor', amount = 1}
+		{type = 'item', name = 'aoc-resistor', amount = 2},
+		{type = 'item', name = 'aoc-transistor', amount = 2},
+		{type = 'item', name = 'aoc-capacitor', amount = 2}
 	},
 	results = {
         {type = 'item', name = 'advanced-circuit', amount = 2}
@@ -3395,7 +3467,7 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoc-freezing-plastic-recipe',
+	name = 'aoc-freezing-plastic-polyethylene-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {

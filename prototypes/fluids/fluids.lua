@@ -149,6 +149,18 @@ data:extend({{
 
 data:extend({{
     type = "fluid",
+    name = "aoc-noble-gasses",
+    icons = angelsmods.functions.create_gas_fluid_icon( nil, { { 180, 60, 220 }, { 150, 40, 190 }, { 120, 20, 180 } } ),
+    subgroup = "aoc-simple-gasses",
+    order = "e",
+	base_color = {r=0.7, g=0.15, b=0.83},
+	flow_color = {r=0.7, g=0.15, b=0.83},
+	default_temperature = 20,
+	gas = true
+}})
+
+data:extend({{
+    type = "fluid",
     name = "aoc-hydrogen-chloride",
     icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/hydrogen-chloride.png", 72 }, "ClClH" ),
     subgroup = "aoc-compound-gasses",
@@ -164,7 +176,7 @@ data:extend({{
     name = "aoc-ammonia",
     icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/ammonia.png", 72 }, "NNH" ),
     subgroup = "aoc-compound-gasses",
-    order = "f",
+    order = "g",
 	base_color = {r=0.0, g=0.0, b=0.7},
 	flow_color = {r=0.0, g=0.0, b=0.7},
 	default_temperature = 20,
@@ -176,7 +188,7 @@ data:extend({{
     name = "aoc-nitric-oxide",
     icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/nitric-oxide.png", 72 }, "NNO" ),
     subgroup = "aoc-compound-gasses",
-    order = "g",
+    order = "h",
 	base_color = {r=0.2, g=0.0, b=0.7},
 	flow_color = {r=0.2, g=0.0, b=0.7},
 	default_temperature = 20,
@@ -188,11 +200,23 @@ data:extend({{
     name = "aoc-dinitrogen-tetroxide",
     icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/dinitrogen-tetroxide.png", 72 }, "NNO" ),
     subgroup = "aoc-compound-gasses",
-    order = "h",
+    order = "i",
 	base_color = {r=0.2, g=0.0, b=0.7},
 	flow_color = {r=0.2, g=0.0, b=0.7},
 	default_temperature = 20,
 	gas = true
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoc-phosgene",
+    icons = angelsmods.functions.create_gas_fluid_icon( nil, "ClCO" ),
+    subgroup = "aoc-compound-gasses",
+    order = "j",
+	base_color = {r=0.3, g=0.8, b=0.5},
+	flow_color = {r=0.3, g=0.8, b=0.5},
+	default_temperature = 20,
+    gas = true
 }})
 
 data.raw.fluid["liquid-sulfuric-acid"].subgroup = "aoc-fluids-acids"
@@ -294,7 +318,7 @@ data:extend({{
     name = "aoc-sulfur-dioxide",
     icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/sulfur-dioxide.png", 72 }, "SOO" ),
     subgroup = "aoc-compound-gasses",
-    order = "d",
+    order = "e",
 	base_color = {r=0.8, g=0.8, b=0.0},
 	flow_color = {r=0.8, g=0.8, b=0.0},
 	default_temperature = 20,
@@ -306,7 +330,7 @@ data:extend({{
     name = "aoc-hydrogen-sulfide",
     icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/hydrogen-sulfide.png", 72 }, "SHH" ),
     subgroup = "aoc-compound-gasses",
-    order = "e",
+    order = "f",
 	base_color = {r=0.6, g=0.8, b=0.0},
 	flow_color = {r=0.6, g=0.8, b=0.0},
 	default_temperature = 20,
@@ -1006,13 +1030,36 @@ data:extend({{
 	default_temperature = 20
 }})
 
+data:extend({{
+    type = "fluid",
+    name = "aoc-bisphenol-a",
+    icons = angelsmods.functions.create_liquid_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/bisphenol_a.png", 72 }, "COH" ),
+    subgroup = "aoc-petrochem-fluids-2",
+    order = "f",
+	base_color = {r=0.66, g=0.41, b=0.22},
+	flow_color = {r=0.66, g=0.41, b=0.22},
+	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoc-epichlorohydrin",
+    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/epichlorohydrin.png", 72 }, "CHCl" ),
+    subgroup = "aoc-petrochem-fluids-2",
+    order = "g",
+	base_color = {r=0.3, g=1.0, b=0.5},
+	flow_color = {r=0.3, g=1.0, b=0.5},
+	default_temperature = 20,
+    gas = true
+}})
+
 data.raw['fluid']['lubricant'].subgroup = "aoc-petrochem-fluids-2"
 data.raw['fluid']['lubricant'].order = "f"
 
 data:extend({{
     type = "fluid",
     name = "aoc-liquid-rubber",
-    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { { 193, 197, 255 }, { 193, 197, 255 } }),
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon( nil, { { 193, 197, 255 }, { 193, 197, 255 } } ),
     subgroup = "aoc-fluids-rubber",
     order = "a",
 	base_color = {r=0.75, g=0.75, b=1.0},
@@ -1039,5 +1086,16 @@ data:extend({{
     order = "c",
 	base_color = {r=0.48, g=0.48, b=0.48},
 	flow_color = {r=0.48, g=0.48, b=0.48},
+	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoc-epoxy-resin",
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon( nil, { { 255, 225, 155 }, { 255, 225, 155 } } ),
+    subgroup = "aoc-fluids-rubber",
+    order = "d",
+	base_color = {r=1, g=0.8, b=0.4},
+	flow_color = {r=1, g=0.8, b=0.4},
 	default_temperature = 20
 }})

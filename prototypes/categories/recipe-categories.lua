@@ -5,7 +5,8 @@ data:extend({
   },
   {
     type = "recipe-category",
-    name = "aoc-category-bees-apiary"
+    name = "aoc-category-bees-apiary",
+    modules = { "aoc-module-drone" }
   },
   {
     type = "recipe-category",
@@ -373,6 +374,10 @@ data:extend({
     type = "recipe-category",
     name = "aoc-category-kiln-smelting-tungsten",
     modules = { "aoc-module-tungsten" }
+  },
+  {
+    type = "recipe-category",
+    name = "aoc-category-lasering"
   },
   {
     type = "recipe-category",

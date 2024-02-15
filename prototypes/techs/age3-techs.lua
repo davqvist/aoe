@@ -241,7 +241,7 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoc-tree-cutting-tech",
+    name = "aoc-tree-cutting-tech-1",
     icon = "__ageofcreation__/img/items/steel-saw-blade.png",
     icon_size = 64,
     prerequisites = {"aoc-tree-cultivation-tech"},
@@ -292,6 +292,10 @@ data:extend({{
 	    {
         type = "unlock-recipe",
         recipe = "aoc-crafting-bedding-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-landfill-grass-recipe"
       }
     },
     unit = {
@@ -432,7 +436,7 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoc-fertilizer-tech",
+    name = "aoc-fertilizer-tech-1",
     icon_size = 64,
     icon = "__ageofcreation__/img/items/fertilizer.png",
     prerequisites = {"aoc-chicken-tech"},
@@ -462,7 +466,7 @@ data:extend({{
     name = "aoc-better-glass-tech-2",
     icon_size = 64,
     icon = "__ageofcreation__/img/items/glass.png",
-    prerequisites = {"aoc-fertilizer-tech", "aoc-better-glass-tech-1"},
+    prerequisites = {"aoc-fertilizer-tech-1", "aoc-better-glass-tech-1"},
 	  effects = {
 	    {
         type = "unlock-recipe",
@@ -481,7 +485,7 @@ data:extend({{
     name = "aoc-kelp-tech-2",
     icon_size = 64,
     icon = "__ageofcreation__/img/items/kelp.png",
-    prerequisites = {"aoc-fertilizer-tech", "aoc-kelp-tech-1"},
+    prerequisites = {"aoc-fertilizer-tech-1", "aoc-kelp-tech-1"},
 	  effects = {
 	    {
         type = "unlock-recipe",
@@ -535,7 +539,7 @@ data:extend({{
     name = "aoc-flax-tech-2",
     icon_size = 64,
     icon = "__ageofcreation__/img/items/flax.png",
-    prerequisites = {"aoc-fertilizer-tech", "aoc-flax-tech-1"},
+    prerequisites = {"aoc-fertilizer-tech-1", "aoc-flax-tech-1"},
 	  effects = {
 	    {
         type = "unlock-recipe",
@@ -562,7 +566,7 @@ data:extend({{
   name = "aoc-drinks-tech-2",
   icon_size = 64,
   icon = "__ageofcreation__/img/items/tea.png",
-  prerequisites = {"aoc-fertilizer-tech", "aoc-drinks-tech-1"},
+  prerequisites = {"aoc-fertilizer-tech-1", "aoc-drinks-tech-1"},
   effects = {
     {
       type = "unlock-recipe",
@@ -612,7 +616,7 @@ data:extend({{
     name = "aoc-maize-tech-2",
     icon_size = 64,
     icon = "__ageofcreation__/img/items/maize.png",
-    prerequisites = {"aoc-agriculture-science-alternate-tech", "aoc-fertilizer-tech", "aoc-maize-tech-1"},
+    prerequisites = {"aoc-agriculture-science-alternate-tech", "aoc-fertilizer-tech-1", "aoc-maize-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -643,7 +647,7 @@ data:extend({{
     name = "aoc-soybeans-tech-2",
     icon_size = 64,
     icon = "__ageofcreation__/img/items/soybeans.png",
-    prerequisites = {"aoc-agriculture-science-alternate-tech","aoc-fertilizer-tech","aoc-soybeans-tech-1"},
+    prerequisites = {"aoc-agriculture-science-alternate-tech","aoc-fertilizer-tech-1","aoc-soybeans-tech-1"},
 	  effects = {
 	    {
         type = "unlock-recipe",

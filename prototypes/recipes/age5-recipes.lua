@@ -917,12 +917,12 @@ data:extend({{
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoc-caustic-soda', amount = 6},
+		{type = 'item', name = 'aoc-caustic-soda', amount = 2},
 		{type = 'fluid', name = 'aoc-chlorine', amount = 40},
 		{type = 'fluid', name = 'aoc-benzene', amount = 20}
     },
     results = {
-        {type = 'item', name = 'aoc-salt', amount = 4},
+        {type = 'item', name = 'aoc-salt', amount = 1},
 		{type = 'fluid', name = 'aoc-phenol', amount = 20},
         {type = 'fluid', name = 'aoc-hydrochloric-acid', amount = 20}
     },
@@ -1134,4 +1134,359 @@ data:extend({{
         {type = 'item', name = 'accumulator', amount = 1}
     },
     energy_required = 5
+}})
+
+data:extend({{
+    name = 'aoc-chemistry-bisphenol-a-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoc-acetone', amount = 10},
+		{type = 'fluid', name = 'aoc-phenol', amount = 20},
+		{type = 'fluid', name = 'aoc-hydrochloric-acid', amount = 10}
+    },
+    results = {
+        {type = 'fluid', name = 'aoc-bisphenol-a', amount = 30},
+        {type = 'fluid', name = 'aoc-hydrochloric-acid', amount = 5},
+        {type = 'fluid', name = 'water', amount = 5}
+    },
+    main_product = 'aoc-bisphenol-a',
+    energy_required = 4,
+	category = 'aoc-category-advanced-chemistry'
+}})
+
+data:extend({{
+    name = 'aoc-chemistry-epichlorohydrin-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-caustic-soda', amount = 1},
+		{type = 'fluid', name = 'water', amount = 10},
+		{type = 'fluid', name = 'aoc-propylene', amount = 10},
+		{type = 'fluid', name = 'aoc-chlorine', amount = 10}
+    },
+    results = {
+        {type = 'fluid', name = 'aoc-epichlorohydrin', amount = 10},
+        {type = 'fluid', name = 'aoc-hydrochloric-acid', amount = 10},
+        {type = 'fluid', name = 'aoc-brine', amount = 10}
+    },
+    main_product = 'aoc-epichlorohydrin',
+    energy_required = 3,
+	category = 'aoc-category-advanced-chemistry'
+}})
+
+data:extend({{
+    name = 'aoc-chemistry-glycerol-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoc-epichlorohydrin', amount = 10},
+		{type = 'fluid', name = 'water', amount = 20}
+    },
+    results = {
+        {type = 'fluid', name = 'aoc-glycerol', amount = 15},
+        {type = 'fluid', name = 'aoc-hydrochloric-acid', amount = 15}
+    },
+    main_product = 'aoc-glycerol',
+    energy_required = 3,
+	category = 'chemistry'
+}})
+
+data:extend({{
+    name = 'aoc-chemistry-epoxy-resin-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoc-epichlorohydrin', amount = 10},
+		{type = 'fluid', name = 'aoc-bisphenol-a', amount = 10},
+		{type = 'item', name = 'aoc-caustic-soda', amount = 1}
+    },
+    results = {
+        {type = 'fluid', name = 'aoc-epoxy-resin', amount = 10},
+        {type = 'fluid', name = 'aoc-brine', amount = 10}
+    },
+    main_product = 'aoc-epoxy-resin',
+    energy_required = 2,
+	category = 'chemistry'
+}})
+
+data:extend({{
+    name = 'aoc-smelting-epoxy-resin-solid-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoc-epoxy-resin', amount = 10}
+    },
+    results = {
+        {type = 'item', name = 'aoc-epoxy-resin-solid', amount = 1}
+    },
+    energy_required = 2.4,
+	category = 'smelting'
+}})
+
+data:extend({{
+	name = 'aoc-crafting-laser-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'electronic-circuit', amount = 4},
+		{type = 'item', name = 'small-lamp', amount = 2},
+		{type = 'item', name = 'aoc-garnet', amount = 2},
+		{type = 'fluid', name = 'aoc-noble-gasses', amount = 10},
+		{type = 'item', name = 'aoc-silicon', amount = 2}
+	},
+	results = {
+		{type = 'item', name = 'aoc-laser', amount = 1}
+    },
+	energy_required = 6,
+	category = 'advanced-crafting'
+}})
+
+data:extend({{
+	name = 'aoc-crafting-laser-cutter-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-laser', amount = 5},
+		{type = 'item', name = 'aoc-stainless-steel-machine-hull', amount = 10},
+		{type = 'item', name = 'electric-engine-unit', amount = 4},
+		{type = 'item', name = 'aoc-nickel-plate', amount = 20}
+	},
+	results = {
+		{type = 'item', name = 'aoc-laser-cutter', amount = 1}
+    },
+	energy_required = 5
+}})
+
+data:extend({{
+	name = 'aoc-lasering-silicon-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-silicon', amount = 1},
+        {type = 'fluid', name = 'aoc-noble-gasses', amount = 5}
+	},
+	results = {
+		{type = 'item', name = 'aoc-silicon-wafer', amount = 6}
+    },
+	energy_required = 2,
+	category = 'aoc-category-lasering'
+}})
+
+data:extend({{
+	name = 'aoc-crafting-electric-engine-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'engine-unit', amount = 4},
+		{type = 'item', name = 'advanced-circuit', amount = 2},
+		{type = 'item', name = 'aoc-bronze-gear', amount = 1},
+        {type = 'fluid', name = 'lubricant', amount = 20}
+	},
+	results = {
+        {type = 'item', name = 'electric-engine-unit', amount = 1}
+    },
+	energy_required = 16,
+	category = 'advanced-crafting'
+}})
+
+data:extend({{
+	name = 'aoc-kiln-smelting-silicon-doped-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-coke', amount = 2},
+		{type = 'item', name = 'aoc-quartz-dust', amount = 4},
+		{type = 'item', name = 'aoc-sand', amount = 1},
+		{type = 'item', name = 'aoc-phosphate', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoc-silicon-doped', amount = 4},
+		{type = 'fluid', name = 'aoc-carbon-dioxide', amount = 10}
+    },
+	main_product = 'aoc-silicon-doped',
+	energy_required = 4.8,
+	category = 'aoc-category-kiln-smelting'
+}})
+
+data:extend({{
+	name = 'aoc-sawmill-silicon-doped-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-silicon-doped', amount = 1},
+		{type = 'item', name = 'aoc-saw-blade-diamond', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoc-silicon-doped-wafer', amount = 4},
+		{type = 'item', name = 'aoc-saw-blade-diamond', amount = 1, catalyst_amount = 1, probability = 0.99}
+    },
+	icons = combine_icons_tiny( get_icons( data.raw["item"]['aoc-silicon-doped-wafer'] ), get_icons( data.raw["item"]["aoc-saw-blade-diamond"] ) ),
+	main_product = 'aoc-silicon-doped-wafer',
+	energy_required = 1,
+	category = 'aoc-category-sawing'
+}})
+
+data:extend({{
+	name = 'aoc-lasering-silicon-doped-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-silicon-doped', amount = 1},
+        {type = 'fluid', name = 'aoc-noble-gasses', amount = 5}
+	},
+	results = {
+		{type = 'item', name = 'aoc-silicon-doped-wafer', amount = 6}
+    },
+	energy_required = 2,
+	category = 'aoc-category-lasering'
+}})
+
+data:extend({{
+	name = 'aoc-crafting-photovoltaic-cell-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-silicon-doped', amount = 4},
+        {type = 'item', name = 'aoc-epoxy-resin-solid', amount = 2},
+        {type = 'item', name = 'advanced-circuit', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'solar-panel-equipment', amount = 1}
+    },
+	energy_required = 2,
+    category = 'aoc-category-intricate-crafting'
+}})
+
+data:extend({{
+	name = 'aoc-crafting-solar-panel-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'solar-panel-equipment', amount = 4},
+        {type = 'item', name = 'steel-plate', amount = 8}
+	},
+	results = {
+		{type = 'item', name = 'solar-panel', amount = 1}
+    },
+	energy_required = 8
+}})
+
+data:extend({{
+	name = 'aoc-chemistry-phosgene-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoc-carbon-monoxide', amount = 10},
+        {type = 'fluid', name = 'aoc-chlorine', amount = 10},
+		{type = 'item', name = 'aoc-carbon-activated', amount = 1}
+	},
+	results = {
+		{type = 'fluid', name = 'aoc-phosgene', amount = 20},
+		{type = 'item', name = 'aoc-carbon-activated', amount = 1, probability = 0.96, catalyst_amount = 1}
+    },
+    main_product = 'aoc-phosgene',
+	energy_required = 2,
+    category = 'aoc-category-advanced-chemistry'
+}})
+
+data:extend({{
+	name = 'aoc-freezing-plastic-polycarbonate-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoc-phosgene', amount = 10},
+        {type = 'fluid', name = 'aoc-bisphenol-a', amount = 10}
+	},
+	results = {
+		{type = 'item', name = 'plastic-bar', amount = 1},
+		{type = 'fluid', name = 'aoc-hydrogen-chloride', amount = 10}
+    },
+    main_product = 'plastic-bar',
+	energy_required = 0.5,
+    category = 'aoc-category-freezing'
+}})
+
+data:extend({{
+	name = 'aoc-chemistry-ammonium-bicarbonate-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-ammonium-chloride', amount = 1},
+        {type = 'fluid', name = 'water', amount = 10},
+		{type = 'fluid', name = 'aoc-carbon-dioxide', amount = 10}
+	},
+	results = {
+		{type = 'item', name = 'aoc-ammonium-bicarbonate', amount = 1}
+    },
+	energy_required = 2,
+    category = 'chemistry'
+}})
+
+data:extend({{
+	name = 'aoc-chemistry-baking-soda-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-ammonium-bicarbonate', amount = 1},
+        {type = 'item', name = 'aoc-salt', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoc-baking-soda', amount = 1},
+        {type = 'item', name = 'aoc-ammonium-chloride', amount = 1}
+    },
+    main_product = 'aoc-baking-soda',
+	energy_required = 2,
+    category = 'chemistry'
+}})
+
+data:extend({{
+	name = 'aoc-high-pressure-heating-soda-ash-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-baking-soda', amount = 1},
+        {type = 'fluid', name = 'aoc-warm-air', amount = 25}
+	},
+	results = {
+		{type = 'item', name = 'aoc-soda-ash', amount = 1},
+        {type = 'fluid', name = 'water', amount = 10},
+        {type = 'fluid', name = 'aoc-carbon-dioxide', amount = 10}
+    },
+    main_product = 'aoc-soda-ash',
+	energy_required = 2,
+    category = 'aoc-category-high-pressure-heating'
+}})
+
+data:extend({{
+	name = 'aoc-chemistry-gypsum-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-quicklime', amount = 1},
+        {type = 'fluid', name = 'sulfuric-acid', amount = 10}
+	},
+	results = {
+		{type = 'item', name = 'aoc-gypsum', amount = 1}
+    },
+	energy_required = 2,
+    category = 'chemistry'
+}})
+
+data:extend({{
+	name = 'aoc-mixing-industrial-fertilizer-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-fertilizer', amount = 7},
+		{type = 'item', name = 'aoc-gypsum', amount = 8},
+		{type = 'item', name = 'aoc-phosphate', amount = 4},
+		{type = 'item', name = 'aoc-sodium-nitrate', amount = 5},
+		{type = 'item', name = 'sulfur', amount = 2}
+	},
+	results = {
+		{type = 'item', name = 'aoc-industrial-fertilizer', amount = 5}
+    },
+	energy_required = 3.5,
+	category = 'aoc-category-mixing'
 }})

@@ -327,7 +327,7 @@ data:extend({{
     type = "technology",
     name = "aoc-phosphate-tech",
     icons = get_icons( data.raw["item"]["aoc-phosphate"] ),
-    prerequisites = {"aoc-petrochem-age-tech", "aoc-fertilizer-tech"},
+    prerequisites = {"aoc-petrochem-age-tech", "aoc-fertilizer-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -344,6 +344,40 @@ data:extend({{
     },
     unit = {
         count = 30,
+        ingredients = AOC["age_tech_table"][5],
+        time = 40
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoc-fertilizer-tech-2",
+    icons = get_icons( data.raw["item"]["aoc-industrial-fertilizer"] ),
+    prerequisites = {"aoc-phosphate-tech", "aoc-fertilizer-tech-1"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-chemistry-ammonium-bicarbonate-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-chemistry-baking-soda-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-high-pressure-heating-soda-ash-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-chemistry-gypsum-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-mixing-industrial-fertilizer-recipe"
+      }
+    },
+    unit = {
+        count = 40,
         ingredients = AOC["age_tech_table"][5],
         time = 40
     }
@@ -377,6 +411,40 @@ data:extend({{
 
 data:extend({{
     type = "technology",
+    name = "aoc-epoxy-tech",
+    icons = get_icons( data.raw["item"]["aoc-epoxy-resin-solid"] ),
+    prerequisites = {"aoc-phenol-tech"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-chemistry-bisphenol-a-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-chemistry-epichlorohydrin-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-chemistry-glycerol-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-chemistry-epoxy-resin-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-smelting-epoxy-resin-solid-recipe"
+      }
+    },
+    unit = {
+        count = 50,
+        ingredients = AOC["age_tech_table"][5],
+        time = 40
+    }
+}})
+
+data:extend({{
+    type = "technology",
     name = "aoc-lubricant-tech",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/lubricant.png",
@@ -389,6 +457,78 @@ data:extend({{
     },
     unit = {
         count = 40,
+        ingredients = AOC["age_tech_table"][5],
+        time = 40
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoc-electric-engines-tech",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/electric-engine.png",
+    prerequisites = {"aoc-lubricant-tech"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-electric-engine-recipe"
+      }
+    },
+    unit = {
+        count = 45,
+        ingredients = AOC["age_tech_table"][5],
+        time = 40
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoc-laser-tech",
+    icon = "__base__/graphics/technology/laser.png",
+    icon_size = 256, icon_mipmaps = 4,
+    prerequisites = {"aoc-electric-engines-tech", "aoc-noble-gasses-tech"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-laser-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-laser-cutter-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-lasering-silicon-recipe"
+      }
+    },
+    unit = {
+        count = 50,
+        ingredients = AOC["age_tech_table"][5],
+        time = 40
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoc-silicon-tech-2",
+    icons = get_icons( data.raw["item"]["aoc-silicon-doped"] ),
+    prerequisites = {"aoc-laser-tech", "aoc-silicon-tech-1", "aoc-phosphate-tech"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-kiln-smelting-silicon-doped-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-sawmill-silicon-doped-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-lasering-silicon-doped-recipe"
+      }
+    },
+    unit = {
+        count = 60,
         ingredients = AOC["age_tech_table"][5],
         time = 40
     }
@@ -652,4 +792,54 @@ data:extend({{
         ingredients = AOC["age_tech_table"][5],
         time = 40
     }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-solar-power-tech",
+  icon_size = 256, icon_mipmaps = 4,
+  icon = "__base__/graphics/technology/solar-energy.png",
+  prerequisites = {"aoc-epoxy-tech", "aoc-silicon-tech-2"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-photovoltaic-cell-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-photovoltaic-cell-recipe-with-vacuum"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-solar-panel-recipe"
+    }
+  },
+  unit = {
+      count = 70,
+      ingredients = AOC["age_tech_table"][5],
+      time = 40
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-plastic-tech-2",
+  icon = "__base__/graphics/icons/plastic-bar.png",
+  icon_size = 64, icon_mipmaps = 4,
+  prerequisites = {"aoc-epoxy-tech", "aoc-plastic-tech-1"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-chemistry-phosgene-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-freezing-plastic-polycarbonate-recipe"
+    }
+  },
+  unit = {
+      count = 70,
+      ingredients = AOC["age_tech_table"][5],
+      time = 40
+  }
 }})

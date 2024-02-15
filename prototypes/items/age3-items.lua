@@ -1181,8 +1181,8 @@ data:extend({{
     name = "aoc-soda-ash",
     icon = "__angelspetrochem__/graphics/icons/solid-sodium-carbonate.png",
     icon_size = 32,
-    subgroup = "aoc-flora-kelp",
-    order = "c",
+    subgroup = "aoc-chemicals",
+    order = "e",
     stack_size = 200
 }})
 
