@@ -5,6 +5,10 @@ data:extend({
   },
   {
     type = "recipe-category",
+    name = "aoc-category-alchemy"
+  },
+  {
+    type = "recipe-category",
     name = "aoc-category-bees-apiary",
     modules = { "aoc-module-drone" }
   },
@@ -267,6 +271,11 @@ data:extend({
   },
   {
     type = "recipe-category",
+    name = "aoc-category-farm-reservoir-lotus",
+	  modules = { "aoc-module-lotus" }
+  },
+  {
+    type = "recipe-category",
     name = "aoc-category-farm-chicken-coop",
 	  modules = { "aoc-module-chicken" }
   },
@@ -307,6 +316,10 @@ data:extend({
   {
     type = "recipe-category",
     name = "aoc-category-high-pressure-heating"
+  },
+  {
+    type = "recipe-category",
+    name = "aoc-category-infusing"
   },
   {
     type = "recipe-category",
@@ -477,6 +490,10 @@ data:extend({
   {
     type = "recipe-category",
     name = "aoc-category-squeezing"
+  },
+  {
+    type = "recipe-category",
+    name = "aoc-category-starlight"
   },
   {
     type = "recipe-category",

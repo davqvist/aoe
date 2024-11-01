@@ -247,7 +247,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-nitric-acid",
-    icons = angelsmods.functions.create_liquid_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/nitric-acid.png", 72 }, "HNO" ),
+    icons = angelsmods.functions.create_liquid_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/nitric-acid.png", 72 }, "NHO" ),
     subgroup = "aoc-fluids-acids",
     order = "d",
 	base_color = {r=0.4, g=0.2, b=0.7},
@@ -1097,5 +1097,51 @@ data:extend({{
     order = "d",
 	base_color = {r=1, g=0.8, b=0.4},
 	flow_color = {r=1, g=0.8, b=0.4},
+	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoc-aqua-regia",
+    icons = angelsmods.functions.create_liquid_fluid_icon( nil, "ClNO" ),
+    subgroup = "aoc-fluids-magic-chemicals",
+    order = "a",
+	base_color = {r=0.8, g=0.8, b=0.0},
+	flow_color = {r=0.8, g=0.8, b=0.0},
+	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoc-nauvium-solution",
+    --icons = angelsmods.functions.create_viscous_liquid_fluid_icon( nil, { { 173, 59, 193 }, { 173, 59, 193 } }),
+    icons = { { icon = "__angelssmelting__/graphics/icons/molten-titanium.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/nv.png", icon_size = 64 } },
+    subgroup = "aoc-fluids-magic-metals",
+    order = "a",
+	base_color = {r=0.68, g=0.23, b=0.76},
+	flow_color = {r=0.68, g=0.23, b=0.76},
+	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoc-starlight",
+    icon = "__ageofcreation__/img/fluids/starlight.png",
+    icon_size = 64,
+    subgroup = "aoc-fluids-magic-rest",
+    order = "a",
+	base_color = {r=0.85, g=0.85, b=0.85},
+	flow_color = {r=0.85, g=0.85, b=0.85},
+	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoc-mercury",
+    icons = { { icon = "__angelssmelting__/graphics/icons/molten-silicon.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/hg.png", icon_size = 64 } },
+    subgroup = "aoc-fluids-magic-metals",
+    order = "b",
+	base_color = {r=0.75, g=0.75, b=0.75},
+	flow_color = {r=0.75, g=0.75, b=0.75},
 	default_temperature = 20
 }})

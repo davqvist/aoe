@@ -134,16 +134,16 @@ data:extend({{
 	selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
 	collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
 	animation = {
-      layers = {
-        {
-          filename = "__ageofcreation__/img/entities/gene-lab.png",
-          width = 256,
-          height = 256,
-          frame_count = 1,
-		      scale = 0.625
-        }
+    layers = {
+      {
+        filename = "__ageofcreation__/img/entities/gene-lab.png",
+        width = 256,
+        height = 256,
+        frame_count = 1,
+        scale = 0.625
       }
-    },
+    }
+  },
 	fluid_boxes =
     {
       {

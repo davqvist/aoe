@@ -12,8 +12,27 @@ local bee_globals = {
   ["stone"] = {["color"] = {176, 156, 109}, ["amount"] = 1, ["offspring"] = 4, ["technology"] = "aoc-bees-stone-tech", ["chance"] = 0.08, ["parents"] = {"aoc-sand", "aoc-silt"}},
   ["iron-ore"] = {["color"] = {106, 134, 148}, ["amount"] = 0.3, ["offspring"] = 3, ["technology"] = "aoc-bees-iron-ore-tech", ["chance"] = 0.05, ["parents"] = {"stone", "aoc-gravel"}},
   ["copper-ore"] = {["color"] = {212, 99, 55}, ["amount"] = 0.3, ["offspring"] = 3, ["technology"] = "aoc-bees-copper-ore-tech", ["chance"] = 0.05, ["parents"] = {"stone", "aoc-sand"}},
+  ["coal"] = {["color"] = {20, 20, 20}, ["amount"] = 0.3, ["offspring"] = 3, ["technology"] = "aoc-bees-coal-tech", ["chance"] = 0.05, ["parents"] = {"stone", "aoc-soil"}},
+  ["aoc-quartz-ore"] = {["color"] = {224, 235, 235}, ["amount"] = 0.3, ["offspring"] = 3, ["technology"] = "aoc-bees-quartz-ore-tech", ["chance"] = 0.05, ["parents"] = {"copper-ore", "aoc-sand"}},
+  ["aoc-tin-ore"] = {["color"] = {101, 134, 108}, ["amount"] = 0.3, ["offspring"] = 3, ["technology"] = "aoc-bees-tin-ore-tech", ["chance"] = 0.05, ["parents"] = {"aoc-quartz-ore", "iron-ore"}},
+  ["aoc-manganese-ore"] = {["color"] = {207, 83, 83}, ["amount"] = 0.2, ["offspring"] = 3, ["technology"] = "aoc-bees-manganese-ore-tech", ["chance"] = 0.04, ["parents"] = {"aoc-tin-ore", "iron-ore"}},
+  ["aoc-aluminium-ore"] = {["color"] = {196, 175, 78}, ["amount"] = 0.3, ["offspring"] = 3, ["technology"] = "aoc-bees-aluminium-ore-tech", ["chance"] = 0.05, ["parents"] = {"copper-ore", "aoc-clay"}},
+  ["aoc-magnesium-ore"] = {["color"] = {174, 169, 158}, ["amount"] = 0.3, ["offspring"] = 3, ["technology"] = "aoc-bees-magnesium-ore-tech", ["chance"] = 0.05, ["parents"] = {"aoc-aluminium-ore", "aoc-silt"}},
+  ["aoc-mica"] = {["color"] = {218, 210, 199}, ["amount"] = 0.2, ["offspring"] = 3, ["technology"] = "aoc-bees-mica-tech", ["chance"] = 0.04, ["parents"] = {"aoc-magnesium-ore", "aoc-quartz-ore"}},
+  ["aoc-tungsten-ore"] = {["color"] = {138, 89, 46}, ["amount"] = 0.15, ["offspring"] = 3, ["technology"] = "aoc-bees-tungsten-ore-tech", ["chance"] = 0.03, ["parents"] = {"aoc-tin-ore", "aoc-gravel"}},
+  ["aoc-gold-ore"] = {["color"] = {255, 215, 95}, ["amount"] = 0.15, ["offspring"] = 3, ["technology"] = "aoc-bees-gold-ore-tech", ["chance"] = 0.03, ["parents"] = {"aoc-manganese-ore", "copper-ore"}},
+  ["aoc-diamond"] = {["color"] = {52, 204, 230}, ["amount"] = 0.1, ["offspring"] = 3, ["technology"] = "aoc-bees-diamond-tech", ["chance"] = 0.02, ["parents"] = {"aoc-gold-ore", "coal"}},
+  ["uranium-ore"] = {["color"] = {0, 179, 0}, ["amount"] = 0.1, ["offspring"] = 3, ["technology"] = "aoc-bees-uranium-ore-tech", ["chance"] = 0.02, ["parents"] = {"aoc-quartz-ore", "aoc-tin-ore"}},
+  ["aoc-apatite"] = {["color"] = {13, 115, 146}, ["amount"] = 0.15, ["offspring"] = 3, ["technology"] = "aoc-bees-apatite-ore-tech", ["chance"] = 0.03, ["parents"] = {"aoc-magnesium-ore", "coal"}},
+  ["aoc-garnet"] = {["color"] = {170, 23, 23}, ["amount"] = 0.1, ["offspring"] = 3, ["technology"] = "aoc-bees-garnet-tech", ["chance"] = 0.02, ["parents"] = {"aoc-apatite", "aoc-aluminium-ore"}},
+  ["aoc-chromium-ore"] = {["color"] = {159, 148, 196}, ["amount"] = 0.2, ["offspring"] = 3, ["technology"] = "aoc-bees-chromium-ore-tech", ["chance"] = 0.04, ["parents"] = {"aoc-aluminium-ore", "aoc-magnesium-ore"}},
+  ["aoc-nickel-ore"] = {["color"] = {96, 142, 130}, ["amount"] = 0.15, ["offspring"] = 3, ["technology"] = "aoc-bees-nickel-ore-tech", ["chance"] = 0.03, ["parents"] = {"iron-ore", "aoc-gravel"}},
+  ["aoc-zinc-ore"] = {["color"] = {92, 194, 174}, ["amount"] = 0.15, ["offspring"] = 3, ["technology"] = "aoc-bees-zinc-ore-tech", ["chance"] = 0.03, ["parents"] = {"copper-ore", "aoc-gravel"}},
+  ["aoc-lead-ore"] = {["color"] = {55, 55, 55}, ["amount"] = 0.15, ["offspring"] = 3, ["technology"] = "aoc-bees-lead-ore-tech", ["chance"] = 0.03, ["parents"] = {"iron-ore", "coal"}},
+  ["aoc-silver-ore"] = {["color"] = {117, 146, 146}, ["amount"] = 0.1, ["offspring"] = 3, ["technology"] = "aoc-bees-silver-ore-tech", ["chance"] = 0.02, ["parents"] = {"aoc-lead-ore", "iron-ore"}},
 }
 
+data.raw["item-group"]["beekeeping"].order = "y2"
 data:extend({
   {
     type = "item-subgroup",
@@ -22,21 +41,156 @@ data:extend({
     order = "a"
   },{
     type = "item-subgroup",
-    name = "aoc-bees-modules",
+    name = "aoc-bees-bots",
     group = "beekeeping",
     order = "b"
   },{
     type = "item-subgroup",
-    name = "aoc-bees-items",
+    name = "aoc-bees-modules",
     group = "beekeeping",
     order = "c"
   },{
     type = "item-subgroup",
-    name = "aoc-bees-frames",
+    name = "aoc-bees-items",
     group = "beekeeping",
     order = "d"
+  },{
+    type = "item-subgroup",
+    name = "aoc-bees-frames",
+    group = "beekeeping",
+    order = "e"
   }
 })
+
+data.raw['item']['bee-construction'].stack_size = 5
+data.raw['item']['bee-construction'].subgroup = "aoc-bees-bots"
+data.raw['item']['bee-construction'].order = "a"
+data.raw['construction-robot']['bee-construction'].speed = 0.04
+data.raw['item']['bee-logistic'].stack_size = 5
+data.raw['item']['bee-logistic'].subgroup = "aoc-bees-bots"
+data.raw['item']['bee-logistic'].order = "b"
+data.raw['logistic-robot']['bee-logistic'].speed = 0.04
+data.raw['logistic-robot']['bee-logistic'].max_payload_size = 4
+
+data:extend({{
+  type = "item",
+  name = "aoc-dna-construction",
+  icons = {
+    {
+      icon = "__NPBees2__/graphics/dynamic/syringe-fluid.png",
+      tint = bee_globals["aoc-royal-jelly"].color
+    },{
+      icon = "__NPBees2__/graphics/dynamic/syringe-base.png"
+    }
+  },
+  icon_size = 32,
+  subgroup = "aoc-bees-bots",
+  order = "c",
+  stack_size = 10
+}})
+data:extend({{
+  type = "item",
+  name = "aoc-dna-logistic",
+  icons = {
+    {
+      icon = "__NPBees2__/graphics/dynamic/syringe-fluid.png",
+      tint = bee_globals["aoc-honey"].color
+    },{
+      icon = "__NPBees2__/graphics/dynamic/syringe-base.png"
+    }
+  },
+  icon_size = 32,
+  subgroup = "aoc-bees-bots",
+  order = "d",
+  stack_size = 10
+}})
+data:extend({{
+  name = 'aoc-gene-lab-dna-construction-recipe',
+  type = 'recipe',
+  enabled = false,
+  ingredients = {
+    {type = 'item', name = 'aoc-syringe', amount = 1},
+    {type = 'fluid', name = 'aoc-bacteria', amount = 100},
+    {type = 'item', name = 'repair-pack', amount = 10}
+  },
+  results = {
+    {type = 'item', name = 'aoc-dna-construction', amount = 1}
+  },
+  energy_required = 5,
+  category = 'aoc-category-gene-lab'
+}})
+data:extend({{
+  name = 'aoc-gene-lab-dna-logistic-recipe',
+  type = 'recipe',
+  enabled = false,
+  ingredients = {
+    {type = 'item', name = 'aoc-syringe', amount = 1},
+    {type = 'fluid', name = 'aoc-bacteria', amount = 100},
+    {type = 'item', name = 'iron-chest', amount = 10}
+  },
+  results = {
+    {type = 'item', name = 'aoc-dna-logistic', amount = 1}
+  },
+  energy_required = 5,
+  category = 'aoc-category-gene-lab'
+}})
+data:extend({{
+  name = 'aoc-inoculating-bee-construction-recipe',
+  type = 'recipe',
+  enabled = false,
+  ingredients = {
+    {type = 'item', name = 'aoc-bee-aoc-royal-jelly', amount = 1},
+    {type = 'item', name = 'aoc-dna-construction', amount = 1}
+  },
+  results = {
+    {type = 'item', name = 'bee-construction', amount = 1}
+  },
+  energy_required = 60,
+  category = 'aoc-category-inoculating'
+}})
+data:extend({{
+  name = 'aoc-inoculating-bee-logistic-recipe',
+  type = 'recipe',
+  enabled = false,
+  ingredients = {
+    {type = 'item', name = 'aoc-bee-aoc-honey', amount = 1},
+    {type = 'item', name = 'aoc-dna-logistic', amount = 1}
+  },
+  results = {
+    {type = 'item', name = 'bee-logistic', amount = 1}
+  },
+  energy_required = 60,
+  category = 'aoc-category-inoculating'
+}})
+data:extend({{
+  name = 'aoc-crafting-logistic-hive-recipe',
+  type = 'recipe',
+  enabled = false,
+  ingredients = {
+    {type = 'item', name = 'aoc-stainless-steel-machine-hull', amount = 10},
+    {type = 'item', name = 'aoc-sensor', amount = 10},
+    {type = 'item', name = 'aoc-farm-hive', amount = 1}
+  },
+  results = {
+    {type = 'item', name = 'aoc-logistic-hive', amount = 1}
+  },
+  energy_required = 5
+}})
+data:extend({{
+  name = 'aoc-crafting-pocket-hive-recipe',
+  type = 'recipe',
+  enabled = false,
+  ingredients = {
+    {type = 'item', name = 'aoc-stainless-steel-machine-hull', amount = 10},
+    {type = 'item', name = 'aoc-sensor', amount = 10},
+    {type = 'item', name = 'aoc-farm-hive', amount = 1}
+  },
+  results = {
+    {type = 'item', name = 'aoc-pocket-hive-equipment', amount = 1}
+  },
+  energy_required = 5
+}})
+
 data:extend({{
   type = "item",
   name = "aoc-beeswax",
@@ -523,7 +677,7 @@ for name, bee in pairs(bee_globals) do
       type = "item-subgroup",
       name = "aoc-bees-" .. name,
       group = "beekeeping",
-      order = "e" .. i
+      order = "e" .. string.format("%03d", i)
     }
   })
   data:extend({{

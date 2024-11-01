@@ -56,7 +56,7 @@ data:extend({{
 	enabled = false,
 	ingredients = {
 		{type = 'item', name = 'aoc-stainless-steel-machine-hull', amount = 10},
-		{type = 'item', name = 'aoc-bronze-plate', amount = 100},
+		{type = 'item', name = 'aoc-tungsten-plate', amount = 100},
 		{type = 'item', name = 'pipe', amount = 100},
 		{type = 'item', name = 'storage-tank', amount = 5}
     },
@@ -1137,6 +1137,235 @@ data:extend({{
 }})
 
 data:extend({{
+    name = 'aoc-crafting-substation-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'plastic-bar', amount = 2},
+        {type = 'item', name = 'aoc-sensor', amount = 2},
+        {type = 'item', name = 'aoc-zinc-plate', amount = 10},
+        {type = 'item', name = 'aoc-bronze-cable', amount = 8}
+    },
+    results = {
+        {type = 'item', name = 'substation', amount = 1}
+    },
+    energy_required = 1
+}})
+
+data:extend({{
+    name = 'aoc-crafting-lightning-rod-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-copper-rod', amount = 2000},
+        {type = 'item', name = 'aoc-electrum-machine-hull', amount = 200},
+        {type = 'item', name = 'concrete', amount = 500}
+    },
+    results = {
+        {type = 'item', name = 'aoc-lightning-rod', amount = 1}
+    },
+    energy_required = 30
+}})
+
+data:extend({{
+    name = 'aoc-crafting-weather-station-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-aluminium-plate', amount = 90},
+        {type = 'item', name = 'aoc-stainless-steel-machine-hull', amount = 6},
+        {type = 'item', name = 'aoc-sensor', amount = 10}
+    },
+    results = {
+        {type = 'item', name = 'aoc-weather-station', amount = 1}
+    },
+    energy_required = 5
+}})
+
+data:extend({{
+    name = 'aoc-crafting-transmitting-station-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-tin-plate', amount = 40},
+        {type = 'item', name = 'aoc-stainless-steel-machine-hull', amount = 3},
+        {type = 'item', name = 'aoc-sensor', amount = 5}
+    },
+    results = {
+        {type = 'item', name = 'aoc-transmitting-station', amount = 1}
+    },
+    energy_required = 5
+}})
+
+data:extend({{
+    name = 'aoc-crafting-huge-electric-pole-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-steel-rod', amount = 40},
+        {type = 'item', name = 'aoc-bronze-cable', amount = 40}
+    },
+    results = {
+        {type = 'item', name = 'po-huge-electric-pole', amount = 1}
+    },
+    energy_required = 1
+}})
+
+data:extend({{
+    name = 'aoc-crafting-huge-electric-fuse-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-steel-rod', amount = 40},
+        {type = 'item', name = 'aoc-bronze-cable', amount = 400}
+    },
+    results = {
+        {type = 'item', name = 'po-huge-electric-fuse', amount = 1}
+    },
+    energy_required = 1
+}})
+
+data:extend({{
+    name = 'aoc-crafting-battery-equipment-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'accumulator', amount = 2}
+    },
+    results = {
+        {type = 'item', name = 'battery-equipment', amount = 1}
+    },
+    energy_required = 2
+}})
+
+data:extend({{
+    name = 'aoc-crafting-light-armor-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'steel-plate', amount = 50},
+        {type = 'item', name = 'plastic-bar', amount = 10}
+    },
+    results = {
+        {type = 'item', name = 'light-armor', amount = 1}
+    },
+    energy_required = 5
+}})
+
+data:extend({{
+    name = 'aoc-crafting-belt-immunity-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-rubber', amount = 20},
+        {type = 'item', name = 'advanced-circuit', amount = 10}
+    },
+    results = {
+        {type = 'item', name = 'belt-immunity-equipment', amount = 1}
+    },
+    energy_required = 5
+}})
+
+data:extend({{
+    name = 'aoc-crafting-night-vision-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-garnet', amount = 10},
+        {type = 'item', name = 'aoc-aluminium-plate', amount = 10},
+        {type = 'item', name = 'advanced-circuit', amount = 10}
+    },
+    results = {
+        {type = 'item', name = 'night-vision-equipment', amount = 1}
+    },
+    energy_required = 5
+}})
+
+data:extend({{
+    name = 'aoc-crafting-portable-boiler-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'boiler', amount = 1},
+        {type = 'item', name = 'steam-engine', amount = 4}
+    },
+    results = {
+        {type = 'item', name = 'aoc-portable-boiler-equipment', amount = 1}
+    },
+    energy_required = 5
+}})
+
+data:extend({{
+    name = 'aoc-crafting-chest-storage-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'iron-chest', amount = 1},
+        {type = 'item', name = 'electronic-circuit', amount = 3}
+    },
+    results = {
+        {type = 'item', name = 'logistic-chest-storage', amount = 1}
+    },
+    energy_required = 1
+}})
+
+data:extend({{
+    name = 'aoc-crafting-chest-passive-provider-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'iron-chest', amount = 1},
+        {type = 'item', name = 'advanced-circuit', amount = 3}
+    },
+    results = {
+        {type = 'item', name = 'logistic-chest-passive-provider', amount = 1}
+    },
+    energy_required = 1
+}})
+
+data:extend({{
+    name = 'aoc-crafting-chest-active-provider-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'iron-chest', amount = 1},
+        {type = 'item', name = 'advanced-circuit', amount = 3}
+    },
+    results = {
+        {type = 'item', name = 'logistic-chest-active-provider', amount = 1}
+    },
+    energy_required = 1
+}})
+
+data:extend({{
+    name = 'aoc-crafting-chest-requester-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'iron-chest', amount = 1},
+        {type = 'item', name = 'processing-unit', amount = 3}
+    },
+    results = {
+        {type = 'item', name = 'logistic-chest-requester', amount = 1}
+    },
+    energy_required = 1
+}})
+
+data:extend({{
+    name = 'aoc-crafting-chest-buffer-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'iron-chest', amount = 1},
+        {type = 'item', name = 'processing-unit', amount = 3}
+    },
+    results = {
+        {type = 'item', name = 'logistic-chest-buffer', amount = 1}
+    },
+    energy_required = 1
+}})
+
+data:extend({{
     name = 'aoc-chemistry-bisphenol-a-recipe',
     type = 'recipe',
     enabled = false,
@@ -1489,4 +1718,248 @@ data:extend({{
     },
 	energy_required = 3.5,
 	category = 'aoc-category-mixing'
+}})
+
+data:extend({{
+	name = 'aoc-crafting-infusion-table-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-laser', amount = 25},
+        {type = 'item', name = 'aoc-electrum-machine-hull', amount = 20},
+        {type = 'item', name = 'aoc-gold-plate', amount = 50},
+        {type = 'item', name = 'electric-engine-unit', amount = 20},
+        {type = 'item', name = 'wood', amount = 100}
+	},
+	results = {
+		{type = 'item', name = 'aoc-infusion-table', amount = 1}
+    },
+	energy_required = 10
+}})
+
+data:extend({{
+	name = 'aoc-crafting-infusion-pedestal-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-gold-plate', amount = 5},
+        {type = 'item', name = 'wood', amount = 20}
+	},
+	results = {
+		{type = 'item', name = 'aoc-infusion-pedestal', amount = 1}
+    },
+	energy_required = 5
+}})
+
+data:extend({{
+	name = 'aoc-infusing-earth-catalyst-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-soil', amount = 1},
+		{type = 'item', name = 'aoc-sand', amount = 1},
+		{type = 'item', name = 'aoc-clay', amount = 1},
+		{type = 'item', name = 'aoc-silt', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoc-earth-catalyst', amount = 1}
+    },
+	energy_required = 60,
+	category = 'aoc-category-infusing'
+}})
+
+data:extend({{
+	name = 'aoc-infusing-nature-catalyst-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-soybeans', amount = 1},
+		{type = 'item', name = 'aoc-maize', amount = 1},
+		{type = 'item', name = 'aoc-apple', amount = 1},
+		{type = 'item', name = 'aoc-olive', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoc-nature-catalyst', amount = 1}
+    },
+	energy_required = 60,
+	category = 'aoc-category-infusing'
+}})
+
+data:extend({{
+	name = 'aoc-infusing-metal-catalyst-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-solder', amount = 1},
+		{type = 'item', name = 'aoc-bronze-plate', amount = 1},
+		{type = 'item', name = 'aoc-brass', amount = 1},
+		{type = 'item', name = 'aoc-electrum', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoc-metal-catalyst', amount = 1}
+    },
+	energy_required = 60,
+	category = 'aoc-category-infusing'
+}})
+
+data:extend({{
+	name = 'aoc-infusing-nauvium-catalyst-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-nauvium-ore', amount = 1},
+		{type = 'item', name = 'aoc-earth-catalyst', amount = 1},
+		{type = 'item', name = 'aoc-nature-catalyst', amount = 1},
+		{type = 'item', name = 'aoc-metal-catalyst', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoc-nauvium-catalyst', amount = 1}
+    },
+	energy_required = 60,
+	category = 'aoc-category-infusing'
+}})
+
+data:extend({{
+	name = 'aoc-crafting-integrated-circuit-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-silicon-doped-wafer', amount = 4},
+		{type = 'item', name = 'aoc-resistor', amount = 4},
+		{type = 'item', name = 'aoc-transistor', amount = 4},
+		{type = 'item', name = 'aoc-capacitor', amount = 4},
+		{type = 'item', name = 'plastic-bar', amount = 4}
+	},
+	results = {
+        {type = 'item', name = 'aoc-integrated-circuit', amount = 1}
+    },
+	energy_required = 2,
+	category = 'aoc-category-intricate-crafting'
+}})
+
+data:extend({{
+	name = 'aoc-crafting-processing-unit-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'advanced-circuit', amount = 8},
+		{type = 'item', name = 'aoc-epoxy-resin-solid', amount = 2},
+		{type = 'item', name = 'aoc-integrated-circuit', amount = 2},
+		{type = 'item', name = 'red-wire', amount = 4},
+		{type = 'item', name = 'green-wire', amount = 4}
+	},
+	results = {
+        {type = 'item', name = 'processing-unit', amount = 2}
+    },
+	energy_required = 18,
+	category = 'aoc-category-intricate-crafting'
+}})
+
+data:extend({{
+	name = 'aoc-crafting-advanced-circuit-2-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'electronic-circuit', amount = 6},
+		{type = 'item', name = 'aoc-epoxy-resin-solid', amount = 1},
+		{type = 'item', name = 'aoc-resistor', amount = 2},
+		{type = 'item', name = 'aoc-transistor', amount = 2},
+		{type = 'item', name = 'aoc-capacitor', amount = 2}
+	},
+	results = {
+        {type = 'item', name = 'advanced-circuit', amount = 2}
+    },
+	energy_required = 6,
+	category = 'aoc-category-intricate-crafting'
+}})
+
+data:extend({{
+	name = 'aoc-crafting-electrum-machine-hull-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-electrum', amount = 5},
+		{type = 'item', name = 'processing-unit', amount = 2},
+	},
+	results = {
+        {type = 'item', name = 'aoc-electrum-machine-hull', amount = 1}
+    },
+	energy_required = 2
+}})
+
+data:extend({{
+	name = 'aoc-crafting-alchemical-construct-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-lead-plate', amount = 50},
+		{type = 'item', name = 'aoc-electrum-machine-hull', amount = 8},
+		{type = 'item', name = 'pipe', amount = 20},
+		{type = 'item', name = 'aoc-nauvium-catalyst', amount = 8},
+	},
+	results = {
+        {type = 'item', name = 'aoc-alchemical-construct', amount = 1}
+    },
+	energy_required = 5
+}})
+
+data:extend({{
+	name = 'aoc-mixing-aqua-regia-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoc-nitric-acid', amount = 10},
+		{type = 'fluid', name = 'aoc-hydrochloric-acid', amount = 30}
+	},
+	results = {
+        {type = 'fluid', name = 'aoc-aqua-regia', amount = 40}
+    },
+	energy_required = 4,
+	category = 'aoc-category-mixing'
+}})
+
+data:extend({{
+	name = 'aoc-alchemy-nauvium-solution-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoc-aqua-regia', amount = 25},
+		{type = 'item', name = 'aoc-nauvium-ore', amount = 1}
+	},
+	results = {
+        {type = 'fluid', name = 'aoc-nauvium-solution', amount = 25}
+    },
+	energy_required = 5,
+	category = 'aoc-category-alchemy'
+}})
+
+data:extend({{
+	name = 'aoc-casting-nauvium-plate-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoc-nauvium-solution', amount = 25},
+		{type = 'item', name = 'aoc-mold', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoc-nauvium-plate', amount = 6},
+		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+    },
+	main_product = 'aoc-nauvium-plate',
+	energy_required = 3,
+	category = 'aoc-category-casting'
+}})
+
+data:extend({{
+	name = 'aoc-crafting-science-06-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-flask', amount = 1},
+		{type = 'item', name = 'aoc-nauvium-plate', amount = 2}
+	},
+	results = {
+        {type = 'item', name = 'aoc-science-06', amount = 1}
+    },
+	energy_required = 4
 }})

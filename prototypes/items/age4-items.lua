@@ -757,10 +757,10 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-nauvium-ore",
-    icon = "__ageofcreation__/img/items/nauvium-ore.png",
-    icon_size = 64,
-    subgroup = "aoc-metals-rest",
-    order = "l",
+    icons = { { icon = "__ageofcreation__/img/items/nauvium-ore.png", icon_size = 64 }, { icon = "__ageofcreation__/img/items/atoms/nv.png", icon_size = 64 } },
+    pictures = { { filename = "__ageofcreation__/img/items/nauvium-ore.png", size = 64, scale = 0.5  } },
+    subgroup = "aoc-magic-metals",
+    order = "a",
     stack_size = 200
 }})
 

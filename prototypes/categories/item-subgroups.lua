@@ -14,15 +14,22 @@ data:extend({
   {
     type = "item-group",
     name = "aoc-flora",
-	  order = "y",
+	  order = "x",
 	  icon = "__base__/graphics/icons/wood.png",
 	  icon_size = 64
   },
   {
     type = "item-group",
     name = "aoc-fauna",
-	  order = "z",
+	  order = "y",
 	  icon = "__base__/graphics/icons/fish.png",
+	  icon_size = 64
+  },
+  {
+    type = "item-group",
+    name = "aoc-magic",
+	  order = "z",
+	  icon = "__ageofcreation__/img/items/nauvium-plate.png",
 	  icon_size = 64
   },
   {
@@ -87,15 +94,21 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-flora-drinks",
+    name = "aoc-flora-lotus",
     group = "aoc-flora",
     order = "c09"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-flora-fermentation",
+    name = "aoc-flora-drinks",
     group = "aoc-flora",
     order = "d"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-flora-fermentation",
+    group = "aoc-flora",
+    order = "e"
   },
   {
 	  type = "item-subgroup",
@@ -444,6 +457,60 @@ data:extend({
     name = "aoc-fluids-molten",
     group = "fluids",
     order = "m"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-fluids-magic-chemicals",
+    group = "fluids",
+    order = "n"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-fluids-magic-metals",
+    group = "fluids",
+    order = "o"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-fluids-magic-rest",
+    group = "fluids",
+    order = "p"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-armor",
+    group = "combat",
+    order = "a"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-equipment",
+    group = "combat",
+    order = "b"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-magic-buildings",
+    group = "aoc-magic",
+    order = "a"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-magic-catalysts",
+    group = "aoc-magic",
+    order = "b"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-magic-metals",
+    group = "aoc-magic",
+    order = "c"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-magic-alchemy",
+    group = "aoc-magic",
+    order = "d"
   },
   {
 	  type = "item-subgroup",

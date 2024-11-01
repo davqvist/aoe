@@ -26,18 +26,6 @@ data:extend({{
       {
         type = "unlock-recipe",
         recipe = "aoc-crafting-valve-inspector-recipe"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "aoc-crafting-valve-return-recipe"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "aoc-crafting-valve-overflow-recipe"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "aoc-crafting-valve-underflow-recipe"
       }
     },
     unit = {

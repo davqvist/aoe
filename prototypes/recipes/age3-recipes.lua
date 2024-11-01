@@ -143,7 +143,7 @@ data:extend({{
     results = {
         {type = 'item', name = 'aoc-soybean-seeds', amount = 8}
     },
-    energy_required = 2,
+    energy_required = 3,
 	category = 'aoc-category-greenhouse'
 }})
 
@@ -286,7 +286,7 @@ data:extend({{
     results = {
         {type = 'item', name = 'aoc-bedding', amount = 1}
     },
-    energy_required = 1
+    energy_required = 4
 }})
 
 data:extend({{

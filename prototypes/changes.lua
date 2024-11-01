@@ -5,23 +5,45 @@ local size_changes = {
 	["steel-chest"] = {"container", 3},
 }
 
+function resize(thing, to)
+	thing.scale = to
+	if thing.hr_version ~= nil then thing.hr_version.scale = to/2 end
+end
+
 for _, change in pairs(size_changes) do
 	if data.raw[change[1]][_].animation and data.raw[change[1]][_].animation.layers then
 		for _, layers in pairs(data.raw[change[1]][_].animation.layers) do
-			layers.scale = change[2]
-			if layers.hr_version ~= nil then layers.hr_version.scale = change[2]/2 end
+			resize(layers, change[2])
+		end
+	end
+	if data.raw[change[1]][_].charge_animation and data.raw[change[1]][_].charge_animation.layers then
+		for _, layers in pairs(data.raw[change[1]][_].charge_animation.layers) do
+			resize(layers, change[2])
+			if layers.layers then
+				for _, layers2 in pairs(layers.layers) do
+					resize(layers2, change[2])
+				end
+			end
+		end
+	end
+	if data.raw[change[1]][_].discharge_animation and data.raw[change[1]][_].discharge_animation.layers then
+		for _, layers in pairs(data.raw[change[1]][_].discharge_animation.layers) do
+			resize(layers, change[2])
+			if layers.layers then
+				for _, layers2 in pairs(layers.layers) do
+					resize(layers2, change[2])
+				end
+			end
 		end
 	end
 	if data.raw[change[1]][_].working_visualisations then
 		for _, wv in pairs(data.raw[change[1]][_].working_visualisations) do
-			wv.animation.scale = change[2]
-			if wv.animation.hr_version ~= nil then wv.animation.hr_version.scale = change[2]/2 end
+			resize(wv.animation, change[2])
 		end
 	end
 	if data.raw[change[1]][_].picture and data.raw[change[1]][_].picture.layers then
 		for _, layers in pairs(data.raw[change[1]][_].picture.layers) do
-			layers.scale = change[2]
-			if layers.hr_version ~= nil then layers.hr_version.scale = change[2]/2 end
+			resize(layers, change[2])
 		end
 	end
 end

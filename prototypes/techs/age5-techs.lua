@@ -2,6 +2,33 @@ local AOC =  require("__ageofcreation__/globals")
 
 data:extend({{
   type = "technology",
+  name = "aoc-equipment-tech-1",
+  icon_size = 256, icon_mipmaps = 4,
+  icon = "__base__/graphics/technology/armor-making.png",
+  prerequisites = {"aoc-petrochem-age-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-light-armor-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-portable-boiler-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-night-vision-recipe"
+    }
+  },
+  unit = {
+      count = 30,
+      ingredients = AOC["age_tech_table"][5],
+      time = 40
+  }
+}})
+
+data:extend({{
+  type = "technology",
   name = "aoc-accumulator-tech",
   icon_size = 256, icon_mipmaps = 4,
   icon = "__base__/graphics/technology/electric-energy-acumulators.png",
@@ -10,6 +37,29 @@ data:extend({{
     {
       type = "unlock-recipe",
       recipe = "aoc-crafting-accumulator-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-battery-equipment-recipe"
+    }
+  },
+  unit = {
+      count = 30,
+      ingredients = AOC["age_tech_table"][5],
+      time = 40
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-wide-power-tech",
+  icon_size = 256, icon_mipmaps = 4,
+  icon = "__base__/graphics/technology/electric-energy-distribution-2.png",
+  prerequisites = {"aoc-petrochem-age-tech", "aoc-radar-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-substation-recipe"
     }
   },
   unit = {
@@ -70,7 +120,7 @@ data:extend({{
     name = "aoc-oil-cracking-tech-1",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/oil-processing.png",
-    prerequisites = {"aoc-coal-liquefaction-tech"},
+    prerequisites = {"aoc-coal-liquefaction-tech","aoc-tungsten-tech"},
     effects = {
       {
         type = "unlock-recipe",
@@ -229,6 +279,10 @@ data:extend({{
         {
             type = "unlock-recipe",
             recipe = "aoc-crafting-green-wire-rubber-recipe"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "aoc-crafting-belt-immunity-recipe"
         }
     },
     unit = {
@@ -592,7 +646,7 @@ data:extend({{
     name = "aoc-digging-tech-2",
     icon_size = 160,
     icon = "__angelsrefining__/graphics/entity/liquifier/liquifier.png",
-    prerequisites = {"aoc-lubricant-tech", "aoc-digging-tech-1", "aoc-sugar-tech"},
+    prerequisites = {"aoc-phenol-tech", "aoc-digging-tech-1", "aoc-sugar-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -654,6 +708,53 @@ data:extend({{
         ingredients = AOC["age_tech_table"][5],
         time = 40
     }
+}})
+
+
+data:extend({{
+  type = "technology",
+  name = "aoc-bee-helpers-tech",
+  icons = get_icons( data.raw["item"]["bee-construction"] ),
+  prerequisites = {"aoc-bees-tech", "aoc-advanced-storage-tech-2"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-gene-lab-dna-construction-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-gene-lab-dna-logistic-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-inoculating-bee-construction-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-inoculating-bee-logistic-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-logistic-hive-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-pocket-hive-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-chest-storage-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-chest-passive-provider-recipe"
+    }
+  },
+  unit = {
+      count = 75,
+      ingredients = AOC["age_tech_table"][5],
+      time = 40
+  }
 }})
 
 data:extend({{
@@ -842,4 +943,199 @@ data:extend({{
       ingredients = AOC["age_tech_table"][5],
       time = 40
   }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-electronics-tech-3",
+  icon_size = 256, icon_mipmaps = 4,
+  icon = "__base__/graphics/technology/advanced-electronics-2.png",
+  prerequisites = {"aoc-rubber-tech", "aoc-epoxy-tech", "aoc-silicon-tech-2", "aoc-electronics-tech-2"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-integrated-circuit-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-integrated-circuit-recipe-with-vacuum"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-processing-unit-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-processing-unit-recipe-with-vacuum"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-advanced-circuit-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-advanced-circuit-2-recipe-with-vacuum"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-electrum-machine-hull-recipe"
+    }
+  },
+  unit = {
+      count = 70,
+      ingredients = AOC["age_tech_table"][5],
+      time = 50
+  }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoc-infusion-tech",
+    icon = "__ageofcreation__/img/entities/infusion-table.png",
+    icon_size = 256,
+    prerequisites = {"aoc-electronics-tech-3"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-infusion-table-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-infusion-pedestal-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-infusing-earth-catalyst-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-infusing-nature-catalyst-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-infusing-metal-catalyst-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-infusing-nauvium-catalyst-recipe"
+      }
+    },
+    unit = {
+        count = 75,
+        ingredients = AOC["age_tech_table"][5],
+        time = 50
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoc-high-voltage-tech",
+    icon = "__ageofcreation__/img/entities/lightning-rod-icon.png",
+    icon_size = 128,
+    prerequisites = {"aoc-electronics-tech-3","aoc-accumulator-tech","aoc-medium-voltage-tech"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-lightning-rod-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-weather-station-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-transmitting-station-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-huge-electric-pole-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-huge-electric-fuse-recipe"
+      }
+    },
+    unit = {
+        count = 80,
+        ingredients = AOC["age_tech_table"][5],
+        time = 50
+    }
+}})
+
+
+data:extend({{
+  type = "technology",
+  name = "aoc-logistic-system-tech",
+  icon_size = 256, icon_mipmaps = 4,
+  icon = "__base__/graphics/technology/logistic-system.png",
+  prerequisites = {"aoc-bee-helpers-tech", "aoc-electronics-tech-3"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-chest-active-provider-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-chest-requester-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-chest-buffer-recipe"
+    }
+  },
+  unit = {
+      count = 80,
+      ingredients = AOC["age_tech_table"][5],
+      time = 50
+  }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoc-nauvium-tech",
+    icon = "__ageofcreation__/img/items/nauvium-plate.png",
+    icon_size = 64,
+    prerequisites = {"aoc-infusion-tech"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-alchemical-construct-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-mixing-aqua-regia-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-alchemy-nauvium-solution-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-casting-nauvium-plate-recipe"
+      }
+    },
+    unit = {
+        count = 90,
+        ingredients = AOC["age_tech_table"][5],
+        time = 50
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoc-magic-age-tech",
+    icon = "__base__/graphics/icons/production-science-pack.png",
+    icon_size = 64, icon_mipmaps = 4,
+    prerequisites = {"aoc-nauvium-tech"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-science-06-recipe"
+      }
+    },
+    unit = {
+        count = 100,
+        ingredients = AOC["age_tech_table"][5],
+        time = 50
+    }
 }})

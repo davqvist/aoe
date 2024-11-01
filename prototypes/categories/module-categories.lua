@@ -57,6 +57,10 @@ data:extend({
   },
   {
     type = "module-category",
+    name = "aoc-module-lotus"
+  },
+  {
+    type = "module-category",
     name = "aoc-module-maize"
   },
   {

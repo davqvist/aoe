@@ -1,7 +1,8 @@
 local AOC =  require("__ageofcreation__/globals")
 
 local parts = {
-    "aoc-stainless-steel-machine-hull",
+    "aoc-electrum-machine-hull",
+	"aoc-stainless-steel-machine-hull",
     "aoc-steel-machine-hull",
     "engine-unit",
     "aoc-small-motor",

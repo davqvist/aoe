@@ -114,6 +114,11 @@ data.raw['container']['wooden-chest'].inventory_size = 15
 data.raw['item']['iron-chest'].subgroup = "aoc-storage"
 data.raw['item']['iron-chest'].order = "d"
 data.raw['container']['iron-chest'].inventory_size = 40
+data.raw['logistic-container']['logistic-chest-storage'].inventory_size = 40
+data.raw['logistic-container']['logistic-chest-passive-provider'].inventory_size = 40
+data.raw['logistic-container']['logistic-chest-active-provider'].inventory_size = 40
+data.raw['logistic-container']['logistic-chest-requester'].inventory_size = 40
+data.raw['logistic-container']['logistic-chest-buffer'].inventory_size = 40
 data.raw['item']['steel-chest'].subgroup = "aoc-storage"
 data.raw['item']['steel-chest'].order = "f"
 data.raw['container']['steel-chest'].inventory_size = 300
@@ -162,17 +167,7 @@ data.raw['item']['pipe'].subgroup = "aoc-fluid-logistics"
 data.raw['item']['pipe'].order = "a"
 data.raw['item']['pipe-to-ground'].subgroup = "aoc-fluid-logistics"
 data.raw['item']['pipe-to-ground'].order = "b"
-data.raw['pipe-to-ground']['pipe-to-ground'].fluid_box = {
-	base_area = 1,
-	pipe_covers = pipecoverspictures(),
-	pipe_connections = {
-	  { position = { 0, -1 } },
-	  {
-		position = { 0, 1 },
-		max_underground_distance = 16,
-	  },
-	},
-}
+data.raw['pipe-to-ground']['pipe-to-ground'].fluid_box.pipe_connections[2].max_underground_distance = 16
 
 data.raw['item']['valve-inspector'].subgroup = "aoc-fluid-logistics"
 data.raw['item']['valve-inspector'].order = "c"
@@ -197,6 +192,7 @@ data.raw['electric-pole']['medium-electric-pole'].supply_area_distance = 4.5
 data.raw['item']['big-electric-pole'].subgroup = "aoc-poles"
 data.raw['item']['big-electric-pole'].order = "c"
 data.raw['electric-pole']['big-electric-pole'].maximum_wire_distance = 32
+data.raw['electric-pole']['big-electric-pole'].supply_area_distance = 3
 data.raw['item']['po-huge-electric-pole'].subgroup = "aoc-poles"
 data.raw['item']['po-huge-electric-pole'].order = "d"
 data.raw['item']['substation'].subgroup = "aoc-poles"
@@ -229,14 +225,14 @@ data.raw['generator']['steam-turbine'].max_power_output = "10MW"
 data.raw['generator']['steam-turbine'].effectivity = 1
 data.raw['generator']['steam-turbine'].fluid_usage_per_tick = 1.666666667
 
-data.raw['solar-panel-equipment']['solar-panel-equipment'].subgroup = "aoc-power-buildings"
-data.raw['solar-panel-equipment']['solar-panel-equipment'].order = "h"
 data.raw['item']['solar-panel'].subgroup = "aoc-power-buildings"
 data.raw['item']['solar-panel'].order = "i"
 data.raw['solar-panel']['solar-panel'].production = "100kW"
 data.raw['item']['accumulator'].subgroup = "aoc-power-buildings"
 data.raw['item']['accumulator'].order = "a"
 data.raw['accumulator']['accumulator'].energy_source.buffer_capacity = "7MJ"
+data.raw['accumulator']['accumulator'].energy_source.input_flow_limit = "1MW"
+data.raw['accumulator']['accumulator'].energy_source.output_flow_limit = "1MW"
 data.raw['accumulator']['accumulator'].collision_box = {{-1.4, -1.4}, {1.4, 1.4}}
 data.raw['accumulator']['accumulator'].selection_box = {{-1.5, -1.5}, {1.5, 1.5}}
 

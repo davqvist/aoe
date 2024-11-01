@@ -59,7 +59,7 @@ data:extend({{
     icon = "__ageofcreation__/img/items/heating-coil.png",
     icon_size = 64,
     subgroup = "aoc-parts",
-    order = "f",
+    order = "g",
     stack_size = 25
 }})
 
@@ -69,7 +69,7 @@ data:extend({{
     icon = "__ageofcreation__/img/items/cooling-coil.png",
     icon_size = 64,
     subgroup = "aoc-parts",
-    order = "g",
+    order = "h",
     stack_size = 25
 }})
 
@@ -525,6 +525,6 @@ data:extend({{
     icon = "__ageofcreation__/img/items/sensor.png",
     icon_size = 64,
     subgroup = "aoc-parts",
-    order = "h",
+    order = "i",
     stack_size = 100
 }})

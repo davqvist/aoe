@@ -1,6 +1,6 @@
 
 data.raw.lab["lab"].inputs = {}
-for age=1,5 do
+for age=1,6 do
     table.insert(data.raw.lab["lab"].inputs, "aoc-science-" .. string.format("%02d", age) )
 end
 
@@ -9,7 +9,8 @@ local age_tech_cost = {
     {2,1},
     {0,2,1},
     {0,3,2,1},
-    {0,5,3,2,1}
+    {0,5,3,2,1},
+    {0,8,5,3,2,1}
 }
 
 local age_tech_table = {}
