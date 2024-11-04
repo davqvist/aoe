@@ -683,8 +683,8 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "aoc-electrolysis-tech",
-    icon_size = 224,
-    icon = "__angelspetrochem_art__/graphics/entity/electrolyser/electrolyser-north.png",
+    icon = "__angelspetrochem_art__/graphics/icons/electrolyser.png",
+    icon_size = 32,
     prerequisites = {"aoc-sedimentary-stones-tech-1", "aoc-tin-tech-1", "aoc-salt-tech"},
 	  effects = {
       {
@@ -710,8 +710,8 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "aoc-pressure-tech",
-    icon_size = 256,
-    icon = "__angelspetrochem_art__/graphics/entity/air-filter/air-filter.png",
+    icon = "__angelspetrochem_art__/graphics/icons/air-filter.png",
+    icon_size = 32,
     prerequisites = {"aoc-electric-machines-tech"},
 	  effects = {
       {

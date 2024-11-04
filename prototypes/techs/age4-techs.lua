@@ -914,8 +914,8 @@ data:extend({{
 data:extend({{
   type = "technology",
   name = "aoc-fuel-power-tech",
-  icon_size = 224,
-  icon = "__angelspetrochem_art__/graphics/entity/advanced-chemical-plant/advanced-chemical-plant.png",
+  icon = "__angelspetrochem_art__/graphics/icons/advanced-chemical-plant.png",
+  icon_size = 32,
   prerequisites = {"aoc-metallurgy-age-tech", "aoc-fermentation-tech"},
   effects = {
     {

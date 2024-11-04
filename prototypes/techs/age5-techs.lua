@@ -636,8 +636,8 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "aoc-digging-tech-2",
-    icon_size = 160,
-    icon = "__angelsrefining_art__/graphics/entity/liquifier/liquifier.png",
+    icon_size = 32,
+    icon = "__angelsrefining_art__/graphics/icons/liquifier.png",
     prerequisites = {"aoc-phenol-tech", "aoc-digging-tech-1", "aoc-sugar-tech"},
 	  effects = {
       {
