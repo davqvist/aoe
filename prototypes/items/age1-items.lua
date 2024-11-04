@@ -31,7 +31,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-kelp",
 	tier = 1,
-    effect = { speed = {bonus = 0.5} },
+    effect = { speed = 0.5 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -46,7 +46,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-kelp",
 	tier = 2,
-    effect = { speed = {bonus = 1.0} },
+    effect = { speed = 1.0 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -61,7 +61,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-kelp",
 	tier = 3,
-    effect = { speed = {bonus = 1.5} },
+    effect = { speed = 1.5 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -76,7 +76,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-kelp",
 	tier = 4,
-    effect = { speed = {bonus = 2.0} },
+    effect = { speed = 2.0 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -91,7 +91,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-kelp",
 	tier = 5,
-    effect = { speed = {bonus = 2.5} },
+    effect = { speed = 2.5 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -126,7 +126,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-tea",
 	tier = 1,
-    effect = { speed = {bonus = 0.3333} },
+    effect = { speed = 0.3333 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -141,7 +141,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-tea",
 	tier = 2,
-    effect = { speed = {bonus = 0.5} },
+    effect = { speed = 0.5 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -156,7 +156,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-tea",
 	tier = 3,
-    effect = { speed = {bonus = 0.6667} },
+    effect = { speed = 0.6667 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -171,7 +171,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-tea",
 	tier = 4,
-    effect = { speed = {bonus = 0.8333} },
+    effect = { speed = 0.8333 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -186,7 +186,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-tea",
 	tier = 5,
-    effect = { speed = {bonus = 1} },
+    effect = { speed = 1 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -209,6 +209,7 @@ data:extend({{
 			activation_type = "consume",
 			range = 0,
 			cooldown = 3600,
+            ammo_category = "aoc-food",
 			ammo_type =
 			{
 				category = "aoc-food",
@@ -270,7 +271,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-coffee",
 	tier = 1,
-    effect = { speed = {bonus = 0.3333} },
+    effect = { speed = 0.3333 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -285,7 +286,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-coffee",
 	tier = 2,
-    effect = { speed = {bonus = 0.5} },
+    effect = { speed = 0.5 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -300,7 +301,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-coffee",
 	tier = 3,
-    effect = { speed = {bonus = 0.6667} },
+    effect = { speed = 0.6667 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -315,7 +316,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-coffee",
 	tier = 4,
-    effect = { speed = {bonus = 0.8333} },
+    effect = { speed = 0.8333 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -330,7 +331,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-coffee",
 	tier = 5,
-    effect = { speed = {bonus = 1} },
+    effect = { speed = 1 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -353,6 +354,7 @@ data:extend({{
 			activation_type = "consume",
 			range = 0,
 			cooldown = 3600,
+            ammo_category = "aoc-food",
 			ammo_type =
 			{
 				category = "aoc-food",
@@ -474,7 +476,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-flax",
 	tier = 1,
-    effect = { speed = {bonus = 0.5} },
+    effect = { speed = 0.5 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -489,7 +491,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-flax",
 	tier = 1,
-    effect = { productivity = {bonus = 0.09} },
+    effect = { productivity = 0.09 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -504,7 +506,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-flax",
 	tier = 2,
-    effect = { speed = {bonus = 0.9} },
+    effect = { speed = 0.9 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -519,7 +521,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-flax",
 	tier = 2,
-    effect = { productivity = {bonus = 0.13} },
+    effect = { productivity = 0.13 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -534,7 +536,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-flax",
 	tier = 3,
-    effect = { speed = {bonus = 1.25} },
+    effect = { speed = 1.25 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -549,7 +551,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-flax",
 	tier = 3,
-    effect = { productivity = {bonus = 0.17} },
+    effect = { productivity = 0.17 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -564,7 +566,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-flax",
 	tier = 4,
-    effect = { speed = {bonus = 1.57} },
+    effect = { speed = 1.57 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -579,7 +581,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-flax",
 	tier = 4,
-    effect = { productivity = {bonus = 0.21} },
+    effect = { productivity = 0.21 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -594,7 +596,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-flax",
 	tier = 5,
-    effect = { speed = {bonus = 1.87} },
+    effect = { speed = 1.87 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -609,7 +611,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-flax",
 	tier = 5,
-    effect = { productivity = {bonus = 0.25} },
+    effect = { productivity = 0.25 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -632,9 +634,9 @@ data.raw['item']['copper-ore'].icons = { { icon = "__base__/graphics/icons/coppe
 data:extend({{
     type = "item",
     name = "aoc-copper-dust",
-    icons = { { icon = "__angelssmelting__/graphics/icons/powder-copper.png" }, { icon = "__ageofcreation__/img/items/atoms/cu.png" } },
+    icons = { { icon = "__angelssmelting_art__/graphics/icons/powder-copper.png" }, { icon = "__ageofcreation__/img/items/atoms/cu.png" } },
     icon_size = 64,
-    pictures = { { filename = "__angelssmelting__/graphics/icons/powder-copper.png", size = 64, scale = 0.25  } },
+    pictures = { { filename = "__angelssmelting_art__/graphics/icons/powder-copper.png", size = 64, scale = 0.25  } },
     subgroup = "aoc-metals-copper",
     order = "d",
     stack_size = 200
@@ -643,8 +645,8 @@ data:extend({{
 data.raw['item']['copper-plate'].subgroup = "aoc-metals-copper"
 data.raw['item']['copper-plate'].order = "e"
 data.raw['item']['copper-plate'].stack_size = 200
-data.raw['item']['copper-plate'].icons = { { icon = "__angelssmelting__/graphics/icons/plate-copper.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/cu.png", icon_size = 64 } }
-data.raw['item']['copper-plate'].pictures = { { filename = "__angelssmelting__/graphics/icons/plate-copper.png", size = 32, scale = 0.5  } }
+data.raw['item']['copper-plate'].icons = { { icon = "__angelssmelting_art__/graphics/icons/plate-copper.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/cu.png", icon_size = 64 } }
+data.raw['item']['copper-plate'].pictures = { { filename = "__angelssmelting_art__/graphics/icons/plate-copper.png", size = 32, scale = 0.5  } }
 
 data:extend({{
     type = "item",
@@ -671,8 +673,8 @@ data:extend({{
 data.raw['item']['copper-cable'].subgroup = "aoc-metals-copper"
 data.raw['item']['copper-cable'].order = "h"
 data.raw['item']['copper-cable'].stack_size = 200
-data.raw['item']['copper-cable'].icons = { { icon = "__angelssmelting__/graphics/icons/wire-copper.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/cu.png", icon_size = 64 } }
-data.raw['item']['copper-cable'].pictures = { { filename = "__angelssmelting__/graphics/icons/wire-copper.png", size = 32, scale = 0.5  } }
+data.raw['item']['copper-cable'].icons = { { icon = "__angelssmelting_art__/graphics/icons/wire-copper.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/cu.png", icon_size = 64 } }
+data.raw['item']['copper-cable'].pictures = { { filename = "__angelssmelting_art__/graphics/icons/wire-copper.png", size = 32, scale = 0.5  } }
 
 data:extend({{
     type = "item",

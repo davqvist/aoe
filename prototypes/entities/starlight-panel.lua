@@ -26,26 +26,28 @@ data:extend({{
 	max_health = 300,
 	selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-	animation = {
+	graphics_set = {
+    animation = {
       layers = {
         {
-            filename = "__ageofcreation__/img/entities/starlight-panel.png",
-            width = 192,
-            height = 192,
-            frame_count = 1,
-            scale = 0.5
+          filename = "__ageofcreation__/img/entities/starlight-panel.png",
+          width = 192,
+          height = 192,
+          frame_count = 1,
+          scale = 0.5
         }
       }
-    },
+    }
+  },
+  fluid_boxes_off_when_no_fluid_recipe = true,
 	fluid_boxes =
     {
       {
         production_type = "output",
         pipe_picture = angelsmods.petrochem.electrolyserpictures(),
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = {{ type="output", position = {0, 2} }}
-      },
-      off_when_no_fluid_recipe = true
+        volume = 1000,
+        pipe_connections = {{ flow_direction="output", direction = defines.direction.south, position = {0, 1} }}
+      }
     }
 }})

@@ -108,7 +108,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-gravel', amount = 4}
 	},
 	results = {
-        {type = 'item', name = 'aoc-gravel', amount = 1, catalyst_amount = 1},
+        {type = 'item', name = 'aoc-gravel', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1},
         {type = 'item', name = 'aoc-sand', amount = 1}
     },
 	main_product = 'aoc-sand',

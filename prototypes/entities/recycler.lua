@@ -29,7 +29,8 @@ data:extend({{
 	collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
 	source_inventory_size = 1,
   result_inventory_size = 1,
-	animation = {
+	graphics_set = {
+    animation = {
       layers = {
         {
           filename = "__ageofcreation__/img/entities/recycler.png",
@@ -40,4 +41,5 @@ data:extend({{
         }
       }
     }
+  }
 }})

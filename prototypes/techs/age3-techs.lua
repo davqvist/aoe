@@ -23,10 +23,10 @@ data:extend({{
         type = "unlock-recipe",
         recipe = "aoc-crafting-barreling-pump-recipe"
       },
-      {
-        type = "unlock-recipe",
-        recipe = "aoc-crafting-valve-inspector-recipe"
-      }
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "aoc-crafting-valve-inspector-recipe"
+      --}
     },
     unit = {
         count = 20,
@@ -688,7 +688,7 @@ data:extend({{
     type = "technology",
     name = "aoc-bronze-tech-1",
     icon_size = 32,
-    icon = "__angelssmelting__/graphics/icons/plate-bronze.png",
+    icon = "__angelssmelting_art__/graphics/icons/plate-bronze.png",
     prerequisites = {"aoc-agriculture-science-alternate-tech","aoc-tin-tech-1"},
 	  effects = {
       {

@@ -26,10 +26,10 @@ data:extend({{
 	crafting_speed = 0.5,
 	energy_source = {
       type = "burner",
-      fuel_category = "chemical",
+      fuel_categories = {"chemical"},
       effectivity = 1,
       fuel_inventory_size = 1,
-      emissions_per_minute = 12,
+      emissions_per_minute = {pollution = 12},
       light_flicker = {color = {0,0,0}},
       smoke =
       {
@@ -60,41 +60,41 @@ data:extend({{
   max_health = 300,
 	selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
 	collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
-	animation = {
+	graphics_set = {
+    animation = {
       layers = {
         {
           filename = "__ageofcreation__/img/entities/gene-lab.png",
           width = 256,
           height = 256,
           frame_count = 1,
-		      scale = 0.625
+          scale = 0.625
         }
       }
-    },
+    }
+  },
+  fluid_boxes_off_when_no_fluid_recipe = true,
 	fluid_boxes =
     {
       {
         production_type = "input",
         pipe_picture = assembler2pipepictures(),
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = {{ type="input", position = {-3, -1} }}
+        volume = 1000,
+        pipe_connections = {{ flow_direction="input", direction = defines.direction.west, position = {-2, -1} }}
       },{
         production_type = "input",
         pipe_picture = assembler2pipepictures(),
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = {{ type="input", position = {-3, 1} }}
+        volume = 1000,
+        pipe_connections = {{ flow_direction="input", direction = defines.direction.west, position = {-2, 1} }}
       },{
         production_type = "output",
         pipe_picture = assembler2pipepictures(),
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = {{ type="output", position = {3, 0} }}
-      },
-      off_when_no_fluid_recipe = true
+        volume = 1000,
+        pipe_connections = {{ flow_direction="output", direction = defines.direction.east, position = {2, 0} }}
+      }
     }
 }})
 
@@ -116,7 +116,7 @@ data:extend({{
 	crafting_speed = 1,
 	energy_source = {
     type = "electric",
-    emissions_per_minute = 10,
+    emissions_per_minute = {pollution = 10},
     usage_priority = "secondary-input",
 	  drain = "15kW"
   },
@@ -133,40 +133,40 @@ data:extend({{
 	max_health = 300,
 	selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
 	collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
-	animation = {
-    layers = {
-      {
-        filename = "__ageofcreation__/img/entities/gene-lab.png",
-        width = 256,
-        height = 256,
-        frame_count = 1,
-        scale = 0.625
+	graphics_set = {
+    animation = {
+      layers = {
+        {
+          filename = "__ageofcreation__/img/entities/gene-lab.png",
+          width = 256,
+          height = 256,
+          frame_count = 1,
+          scale = 0.625
+        }
       }
     }
   },
+  fluid_boxes_off_when_no_fluid_recipe = true,
 	fluid_boxes =
     {
       {
         production_type = "input",
         pipe_picture = assembler2pipepictures(),
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = {{ type="input", position = {-3, -1} }}
+        volume = 1000,
+        pipe_connections = {{ flow_direction="input", direction = defines.direction.west, position = {-2, -1} }}
       },{
         production_type = "input",
         pipe_picture = assembler2pipepictures(),
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = {{ type="input", position = {-3, 1} }}
+        volume = 1000,
+        pipe_connections = {{ flow_direction="input", direction = defines.direction.west, position = {-2, 1} }}
       },{
         production_type = "output",
         pipe_picture = assembler2pipepictures(),
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = {{ type="output", position = {3, 0} }}
-      },
-      off_when_no_fluid_recipe = true
+        volume = 1000,
+        pipe_connections = {{ flow_direction="output", direction = defines.direction.east, position = {2, 0} }}
+      }
     }
 }})

@@ -3,7 +3,7 @@ data:extend({{
     name = "aoc-burner-crusher",
     icons = {
       {
-        icon = "__angelsrefining__/graphics/icons/powderizer-ico.png",
+        icon = "__angelsrefining_art__/graphics/icons/powderizer-ico.png",
         icon_size = 32
       },
       {
@@ -26,10 +26,10 @@ data:extend({{
 	crafting_speed = 0.5,
 	energy_source = {
     type = "burner",
-    fuel_category = "chemical",
+    fuel_categories = {"chemical"},
     effectivity = 1,
     fuel_inventory_size = 1,
-    emissions_per_minute = 12,
+    emissions_per_minute = {pollution = 12},
     light_flicker = {color = {0,0,0}},
     smoke =
     {
@@ -44,7 +44,7 @@ data:extend({{
 	allowed_effects = nil,
   icons = {
     {
-      icon = "__angelsrefining__/graphics/icons/powderizer-ico.png",
+      icon = "__angelsrefining_art__/graphics/icons/powderizer-ico.png",
       icon_size = 32
     },
     {
@@ -60,18 +60,20 @@ data:extend({{
 	max_health = 300,
 	selection_box = {{-1.0, -1.0}, {1.0, 1.0}},
 	collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
-	animation = {
-    filename = "__angelsrefining__/graphics/entity/ore-powderizer/powderizer-lr.png",
-    priority = "extra-high",
-    width = 128,
-    height = 128,
-    frame_count = 36,
-    line_length = 6,
-    shift = { 0, 0 },
-    animation_speed = 0.5
+	graphics_set = {
+    animation = {
+      filename = "__angelsrefining_art__/graphics/entity/ore-powderizer/powderizer-lr.png",
+      priority = "extra-high",
+      width = 128,
+      height = 128,
+      frame_count = 36,
+      line_length = 6,
+      shift = { 0, 0 },
+      animation_speed = 0.5
+    }
   },
   working_sound = {
-    sound = { filename = "__angelsrefining__/sound/ore-powderizer.ogg" },
+    sound = { filename = "__angelsrefining_art__/sound/ore-powderizer.ogg" },
     idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     apparent_volume = 2,
   }
@@ -80,7 +82,7 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-crusher",
-    icon = "__angelsrefining__/graphics/icons/powderizer-ico.png",
+    icon = "__angelsrefining_art__/graphics/icons/powderizer-ico.png",
     icon_size = 32,
     icon_mipmaps = 1,
     subgroup = "aoc-processing-buildings",
@@ -96,7 +98,7 @@ data:extend({{
 	crafting_speed = 1,
 	energy_source = {
     type = "electric",
-    emissions_per_minute = 10,
+    emissions_per_minute = {pollution = 10},
     usage_priority = "secondary-input",
 	  drain = "7kW",
   },
@@ -105,7 +107,7 @@ data:extend({{
 	module_specification = {
     module_slots = 3
   },
-  icon = "__angelsrefining__/graphics/icons/powderizer-ico.png",
+  icon = "__angelsrefining_art__/graphics/icons/powderizer-ico.png",
   icon_size = 32,
   icon_mipmaps = 1,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -114,18 +116,20 @@ data:extend({{
 	max_health = 300,
 	selection_box = {{-1.0, -1.0}, {1.0, 1.0}},
 	collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
-	animation = {
-    filename = "__angelsrefining__/graphics/entity/ore-powderizer/powderizer-lr.png",
-    priority = "extra-high",
-    width = 128,
-    height = 128,
-    frame_count = 36,
-    line_length = 6,
-    shift = { 0, 0 },
-    animation_speed = 0.5
+	graphics_set = {
+    animation = {
+      filename = "__angelsrefining_art__/graphics/entity/ore-powderizer/powderizer-lr.png",
+      priority = "extra-high",
+      width = 128,
+      height = 128,
+      frame_count = 36,
+      line_length = 6,
+      shift = { 0, 0 },
+      animation_speed = 0.5
+    }
   },
   working_sound = {
-    sound = { filename = "__angelsrefining__/sound/ore-powderizer.ogg" },
+    sound = { filename = "__angelsrefining_art__/sound/ore-powderizer.ogg" },
     idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     apparent_volume = 2,
   }

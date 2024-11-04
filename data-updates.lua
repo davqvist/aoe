@@ -25,8 +25,8 @@ for _, preset in pairs(data.raw["map-gen-presets"]["default"]) do
   	if preset and preset.basic_settings then
 		if not preset.basic_settings.autoplace_controls then preset.basic_settings.autoplace_controls = {} end
 		for _, resource in pairs(disabled_resources) do
-			data.raw.resource[resource] = nil
-			data.raw["autoplace-control"][resource] = nil
+			--data.raw.resource[resource] = nil
+			--data.raw["autoplace-control"][resource] = nil
 			preset.basic_settings.autoplace_controls[resource] = nil
 		end
 		if not preset.basic_settings.autoplace_controls["stone"] then preset.basic_settings.autoplace_controls["stone"] = {} end
@@ -40,8 +40,8 @@ for _, type in pairs({"unit-spawner", "unit", "turret"}) do
 	for _, entity in pairs(data.raw[type]) do
 	  if ((entity.subgroup == "enemies") and entity.autoplace and (entity.autoplace.force == "enemy")) then
 		entity.autoplace.richness_multiplier = nil
-		entity.autoplace.richness_expression = {expression_id="literal-number:1", literal_value=0, type = "literal-number"}
-		entity.autoplace.probability_expression = {expression_id="literal-number:1", literal_value=0, type = "literal-number"}
+		entity.autoplace.richness_expression = 0
+		entity.autoplace.probability_expression = 0
 	  end
 	end
 end

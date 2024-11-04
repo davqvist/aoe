@@ -25,7 +25,7 @@ data:extend({{
     mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg",volume = 0.8},
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
-    vehicle_impact_sound = sounds.car_stone_impact,
+    impact_category = "stone",
     working_sound = {
       sound =
       {
@@ -60,10 +60,10 @@ data:extend({{
 	  crafting_speed = 1,
     energy_source = {
       type = "burner",
-      fuel_category = "chemical",
+      fuel_categories = {"chemical"},
       effectivity = 1,
       fuel_inventory_size = 1,
-      emissions_per_minute = 2,
+      emissions_per_minute = {pollution = 12},
       light_flicker =
       {
         color = {0,0,0},
@@ -82,33 +82,34 @@ data:extend({{
         }
       }
     },
-    animation = {
-      layers = {
-        {
-          filename = "__ageofcreation__/img/entities/kiln.png",
-          width = 192,
-          height = 192,
-          frame_count = 1,
-		      scale = 0.5
+    graphics_set = {
+      animation = {
+        layers = {
+          {
+            filename = "__ageofcreation__/img/entities/kiln.png",
+            width = 192,
+            height = 192,
+            frame_count = 1,
+            scale = 0.5
+          }
         }
       }
     },
-	fluid_boxes = {
+    fluid_boxes_off_when_no_fluid_recipe = true,
+	  fluid_boxes = {
       {
         production_type = "input",
         pipe_picture = assembler2pipepictures(),
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = {{ type="input", position = {-2, 0} }}
+        volume = 1000,
+        pipe_connections = {{ flow_direction="input", direction = defines.direction.west, position = {-1, 0} }}
       },
 	  {
         production_type = "output",
         pipe_picture = assembler2pipepictures(),
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = {{ type="output", position = {2, 0} }}
-      },
-      off_when_no_fluid_recipe = true
+        volume = 1000,
+        pipe_connections = {{ flow_direction="output", direction = defines.direction.east, position = {1, 0} }}
+      }
     }
 }})

@@ -25,33 +25,40 @@ data:extend({{
 	max_health = 300,
 	selection_box = {{-4.0, -4.0}, {4.0, 4.0}},
 	collision_box = {{-3.9, -3.9}, {3.9, 3.9}},
-	animation = {
+	graphics_set = {
+    animation = {
       layers = {
         {
           filename = "__ageofcreation__/img/entities/barn.png",
           width = 256,
           height = 256,
           frame_count = 1,
-		  scale = 1
+          scale = 1
         }
       }
-    },
+    }
+  },
+  fluid_boxes_off_when_no_fluid_recipe = true,
 	fluid_boxes =
     {
       {
         production_type = "input",
         pipe_picture = assembler2pipepictures(),
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = {{ type="input", position = {-4.5, -1.5} }, { type="input", position = {-4.5, 1.5} }}
+        volume = 1000,
+        pipe_connections = {
+          { flow_direction="input", direction = defines.direction.west, position = {-3.5, -1.5} },
+          { flow_direction="input", direction = defines.direction.west, position = {-3.5, 1.5} }
+        }
       },{
         production_type = "output",
         pipe_picture = assembler2pipepictures(),
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = {{ type="output", position = {4.5, -1.5} }, { type="output", position = {4.5, 1.5} }}
-      },
-      off_when_no_fluid_recipe = true
+        volume = 1000,
+        pipe_connections = {
+          { flow_direction="output", direction = defines.direction.east, position = {3.5, -1.5} },
+          { flow_direction="output", direction = defines.direction.east, position = {3.5, 1.5} }
+        }
+      }
     }
 }})

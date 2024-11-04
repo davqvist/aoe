@@ -12,7 +12,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-basalt', amount = 1},
 		{type = 'item', name = 'aoc-gabbro', amount = 1},
 		{type = 'item', name = 'aoc-granite', amount = 1},
-		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.98}
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.98}
     },
 	icon = data.raw.item["aoc-stones-igneous"].icon,
 	icon_size = data.raw.item["aoc-stones-igneous"].icon_size,
@@ -34,7 +34,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-tin-ore', amount = 4},
 		{type = 'item', name = 'aoc-tungsten-ore', amount = 3},
 		{type = 'item', name = 'aoc-quartz-ore', amount = 2},
-		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.85}
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.85}
     },
 	main_product = 'aoc-tin-ore',
 	energy_required = 8,
@@ -53,7 +53,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-manganese-ore', amount = 4},
 		{type = 'item', name = 'aoc-gold-ore', amount = 3},
 		{type = 'item', name = 'aoc-diamond', amount = 2},
-		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.85}
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.85}
     },
 	main_product = 'aoc-manganese-ore',
 	energy_required = 8,
@@ -72,7 +72,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-quartz-ore', amount = 4},
 		{type = 'item', name = 'aoc-tin-ore', amount = 3},
 		{type = 'item', name = 'uranium-ore', amount = 2},
-		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.85}
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.85}
     },
 	main_product = 'aoc-quartz-ore',
 	energy_required = 8,
@@ -184,7 +184,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-gneiss', amount = 1},
 		{type = 'item', name = 'aoc-slate', amount = 1},
 		{type = 'item', name = 'aoc-marble', amount = 1},
-		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.98}
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.98}
     },
 	icon = data.raw.item["aoc-stones-metamorphic"].icon,
 	icon_size = data.raw.item["aoc-stones-metamorphic"].icon_size,
@@ -206,7 +206,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-magnesium-ore', amount = 4},
 		{type = 'item', name = 'aoc-apatite', amount = 3},
 		{type = 'item', name = 'aoc-garnet', amount = 2},
-		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.85}
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.85}
     },
 	main_product = 'aoc-magnesium-ore',
 	energy_required = 8,
@@ -225,7 +225,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-aluminium-ore', amount = 4},
 		{type = 'item', name = 'aoc-mica', amount = 3},
 		{type = 'item', name = 'aoc-magnesium-ore', amount = 2},
-		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.85}
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.85}
     },
 	main_product = 'aoc-aluminium-ore',
 	energy_required = 8,
@@ -244,7 +244,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-chromium-ore', amount = 4},
 		{type = 'item', name = 'aoc-aluminium-ore', amount = 3},
 		{type = 'item', name = 'aoc-mica', amount = 2},
-		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.85}
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.85}
     },
 	main_product = 'aoc-chromium-ore',
 	energy_required = 8,
@@ -353,7 +353,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-limestone', amount = 1},
 		{type = 'item', name = 'aoc-sandstone', amount = 1},
 		{type = 'item', name = 'aoc-shale', amount = 1},
-		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.98}
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.98}
     },
 	icon = data.raw.item["aoc-stones-sedimentary"].icon,
 	icon_size = data.raw.item["aoc-stones-sedimentary"].icon_size,
@@ -375,7 +375,7 @@ data:extend({{
 		{type = 'item', name = 'iron-ore', amount = 4},
 		{type = 'item', name = 'aoc-nickel-ore', amount = 3},
 		{type = 'item', name = 'copper-ore', amount = 2},
-		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.85}
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.85}
     },
 	main_product = 'iron-ore',
 	energy_required = 8,
@@ -394,7 +394,7 @@ data:extend({{
 		{type = 'item', name = 'copper-ore', amount = 4},
 		{type = 'item', name = 'aoc-zinc-ore', amount = 3},
 		{type = 'item', name = 'iron-ore', amount = 2},
-		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.85}
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.85}
     },
 	main_product = 'copper-ore',
 	energy_required = 8,
@@ -413,7 +413,7 @@ data:extend({{
 		{type = 'item', name = 'coal', amount = 4},
 		{type = 'item', name = 'aoc-lead-ore', amount = 3},
 		{type = 'item', name = 'aoc-silver-ore', amount = 2},
-		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.85}
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.85}
     },
 	main_product = 'coal',
 	energy_required = 8,
@@ -595,6 +595,7 @@ data:extend({{
 	energy_required = 1
 }})
 
+--[[
 data:extend({{
 	name = 'aoc-crafting-medium-electric-fuse-recipe',
 	type = 'recipe',
@@ -607,7 +608,8 @@ data:extend({{
 		{type = 'item', name = 'po-medium-electric-fuse', amount = 1}
     },
 	energy_required = 1
-}})
+)
+--]]
 
 data:extend({{
 	name = 'aoc-crafting-big-electric-pole-recipe',
@@ -623,6 +625,7 @@ data:extend({{
 	energy_required = 1
 }})
 
+--[[
 data:extend({{
 	name = 'aoc-crafting-big-electric-fuse-recipe',
 	type = 'recipe',
@@ -635,8 +638,8 @@ data:extend({{
 		{type = 'item', name = 'po-big-electric-fuse', amount = 1}
     },
 	energy_required = 1
-}})
-
+})
+	
 data:extend({{
 	name = 'aoc-crafting-transformer-recipe',
 	type = 'recipe',
@@ -652,6 +655,7 @@ data:extend({{
     },
 	energy_required = 1
 }})
+--]]
 
 data:extend({{
     name = 'aoc-chemistry-methane-co2-recipe',
@@ -1027,7 +1031,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'iron-plate', amount = 6},
-		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.8}
     },
 	main_product = 'iron-plate',
 	energy_required = 3,
@@ -1127,7 +1131,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'copper-plate', amount = 6},
-		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.8}
     },
 	main_product = 'copper-plate',
 	energy_required = 3,
@@ -1227,7 +1231,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoc-tin-plate', amount = 6},
-		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.8}
     },
 	main_product = 'aoc-tin-plate',
 	energy_required = 3,
@@ -1327,7 +1331,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoc-aluminium-plate', amount = 6},
-		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.8}
     },
 	main_product = 'aoc-aluminium-plate',
 	energy_required = 3,
@@ -1427,7 +1431,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoc-lead-plate', amount = 6},
-		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.8}
     },
 	main_product = 'aoc-lead-plate',
 	energy_required = 3,
@@ -1543,7 +1547,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoc-silver-plate', amount = 6},
-		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.8}
     },
 	main_product = 'aoc-silver-plate',
 	energy_required = 3,
@@ -1658,7 +1662,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoc-nickel-plate', amount = 6},
-		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.8}
     },
 	main_product = 'aoc-nickel-plate',
 	energy_required = 3,
@@ -1774,7 +1778,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoc-gold-plate', amount = 6},
-		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.8}
     },
 	main_product = 'aoc-gold-plate',
 	energy_required = 3,
@@ -1889,7 +1893,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoc-zinc-plate', amount = 6},
-		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.8}
     },
 	main_product = 'aoc-zinc-plate',
 	energy_required = 3,
@@ -2004,7 +2008,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoc-chromium-plate', amount = 6},
-		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.8}
     },
 	main_product = 'aoc-chromium-plate',
 	energy_required = 3,
@@ -2119,7 +2123,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoc-tungsten-plate', amount = 6},
-		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.7}
+		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.7}
     },
 	main_product = 'aoc-tungsten-plate',
 	energy_required = 3,
@@ -2521,7 +2525,7 @@ data:extend({{
 	},
 	results = {
 	  {type = 'fluid', name = 'aoc-noble-gasses', amount = 5},
-	  {type = 'item', name = 'aoc-carbon-activated', amount = 1, probability = 0.92, catalyst_amount = 1}
+	  {type = 'item', name = 'aoc-carbon-activated', amount = 1, probability = 0.92, ignored_by_stats = 1, ignored_by_productivity = 1}
 	},
 	main_product = 'aoc-noble-gasses',
 	energy_required = 1,
@@ -2585,7 +2589,7 @@ data:extend({{
 	results = {
 		{type = 'fluid', name = 'aoc-wastewater', amount = 200},
 		{type = 'item', name = 'aoc-tailings-dust', amount = 2},
-		{type = 'item', name = 'aoc-carbon-activated', amount = 1, probability = 0.96, catalyst_amount = 1}
+		{type = 'item', name = 'aoc-carbon-activated', amount = 1, probability = 0.96, ignored_by_stats = 1, ignored_by_productivity = 1}
     },
 	main_product = 'aoc-tailings-dust',
 	energy_required = 4,
@@ -2629,7 +2633,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'steel-plate', amount = 6},
-		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.8}
     },
 	main_product = 'steel-plate',
 	energy_required = 3,
@@ -2650,7 +2654,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoc-stainless-steel', amount = 4},
-		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.8}
     },
 	main_product = 'aoc-stainless-steel',
 	energy_required = 3,
@@ -2668,7 +2672,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoc-solder', amount = 6},
-		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.8}
     },
 	main_product = 'aoc-solder',
 	energy_required = 3,
@@ -2686,7 +2690,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoc-brass', amount = 6},
-		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.8}
     },
 	main_product = 'aoc-brass',
 	energy_required = 3,
@@ -2717,7 +2721,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoc-electrum', amount = 6},
-		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.8}
     },
 	main_product = 'aoc-electrum',
 	energy_required = 3,
@@ -2735,7 +2739,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoc-bronze-plate', amount = 6},
-		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.8}
     },
 	main_product = 'aoc-bronze-plate',
 	energy_required = 3,
@@ -2799,7 +2803,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'wood', amount = 8},
         {type = 'item', name = 'aoc-wood-pulp', amount = 1},
-		{type = 'item', name = 'aoc-saw-blade-diamond', amount = 1, catalyst_amount = 1, probability = 0.99}
+		{type = 'item', name = 'aoc-saw-blade-diamond', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.99}
     },
 	main_product = 'wood',
 	icons = combine_icons_tiny( get_icons( data.raw.item["wood"] ), get_icons( data.raw.item["aoc-saw-blade-diamond"] ) ),
@@ -2817,7 +2821,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoc-silicon-wafer', amount = 4},
-		{type = 'item', name = 'aoc-saw-blade-diamond', amount = 1, catalyst_amount = 1, probability = 0.99}
+		{type = 'item', name = 'aoc-saw-blade-diamond', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.99}
     },
 	icons = combine_icons_tiny( get_icons( data.raw["item"]['aoc-silicon-wafer'] ), get_icons( data.raw["item"]["aoc-saw-blade-diamond"] ) ),
 	main_product = 'aoc-silicon-wafer',
@@ -2945,6 +2949,7 @@ data:extend({{
 	energy_required = 0.5
 }})
 
+--[[
 data:extend({{
 	name = 'aoc-crafting-long-fast-inserter-recipe',
 	type = 'recipe',
@@ -2958,7 +2963,8 @@ data:extend({{
         {type = 'item', name = 'filter-inserter', amount = 3}
     },
 	energy_required = 0.5
-}})
+})
+--]]
 
 data:extend({{
 	name = 'aoc-crafting-cleanroom-assembling-machine-recipe',
@@ -3459,7 +3465,7 @@ data:extend({{
 	results = {
         {type = 'fluid', name = 'aoc-polyethylene', amount = 100},
 		{type = 'fluid', name = 'aoc-warm-air', amount = 400},
-		{type = 'item', name = 'aoc-chromium-ore', amount = 1, probability = 0.9, catalyst_amount = 1}
+		{type = 'item', name = 'aoc-chromium-ore', amount = 1, probability = 0.9, ignored_by_stats = 1, ignored_by_productivity = 1}
     },
 	energy_required = 10,
 	main_product = 'aoc-polyethylene',

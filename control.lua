@@ -1,8 +1,8 @@
 function init_recipes()
-	if global.infusing == nil then global.infusing = {} end
-    for _, recipe in pairs(game.get_filtered_recipe_prototypes({{filter = "category", category = "aoc-category-infusing"}})) do
+	if storage.infusing == nil then storage.infusing = {} end
+    for _, recipe in pairs(prototypes.get_recipe_filtered({{filter = "category", category = "aoc-category-infusing"}})) do
 		for _, ingredient in pairs(recipe.ingredients) do
-			global.infusing[ingredient.name] = recipe.name
+			storage.infusing[ingredient.name] = recipe.name
 		end
 	end
 end
@@ -24,7 +24,7 @@ script.on_event(defines.events.on_player_created,
 	player.remove_item{name = "wood", count = 1}
 	player.remove_item{name = "stone-furnace", count = 1}
 	player.remove_item{name = "iron-plate", count = 8}
-	player.remove_item{name = "burner-ore-crusher", count = 1}
+	--player.remove_item{name = "burner-ore-crusher", count = 1}
   end
 )
 
@@ -43,10 +43,10 @@ function update_gui(entity)
 	for _, player in pairs(game.players) do
 		local g = player.gui.screen[entity]
 		if g then
-			for tick, temprod in pairs(global.lightningtick) do
+			for tick, temprod in pairs(storage.lightningtick) do
 				if temprod and temprod.valid and temprod.unit_number == g.tags.rod_id then 
-					g["main-container"]["weather-stations"].caption = {"", {"entity-name.aoc-weather-station"}, ": ", global.weather_stations[g.tags.rod_id]}
-					g["main-container"]["transmitting-stations"].caption = {"", {"entity-name.aoc-transmitting-station"}, ": ", global.transmitting_stations[g.tags.rod_id]}
+					g["main-container"]["weather-stations"].caption = {"", {"entity-name.aoc-weather-station"}, ": ", storage.weather_stations[g.tags.rod_id]}
+					g["main-container"]["transmitting-stations"].caption = {"", {"entity-name.aoc-transmitting-station"}, ": ", storage.transmitting_stations[g.tags.rod_id]}
 					g["main-container"]["next-strike"].caption = {"", {"age-of-creation.next-strike"}, ": ", math.floor((tick-game.tick)/60), "s"}
 					g["main-container"]["strike-interval"].caption = {"", {"age-of-creation.strike-interval"}, ": ", math.floor(lightning_rod_tick_delay(g.tags.rod_id)/60), "s"}
 					g["main-container"]["strike-power"].caption = {"", {"age-of-creation.strike-power"}, ": ", string.format("%.2f GW",60*lightning_rod_power(g.tags.rod_id)/1000000000)}
@@ -100,7 +100,7 @@ script.on_event(defines.events.on_gui_click,
 
 script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_entity}, 
   function(event)
-    local entity = event.created_entity
+    local entity = event.entity
 	if(entity.name == "aoc-tree-farm") then 
 		handleBuilt( event, "treefarms" )
 	end
@@ -111,7 +111,7 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 		handleBuilt( event, "farms" )
 	end
 	if(entity.name == "aoc-lightning-rod") then
-		if global.lightningtick == nil then global.lightningtick = {} end
+		if storage.lightningtick == nil then storage.lightningtick = {} end
 		entity.power_production = 0
 		entity.electric_buffer_size = 0
 		handleBuilt( event, "lightning_rods" )
@@ -127,12 +127,6 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 	end
 	if(entity.name == "aoc-wind-turbine") then
 		handleWindTurbineBuilt(event)
-	end
-	if(entity.type == "inserter" and entity.name ~= "burner-inserter") then
-	    if( entity.get_control_behavior() or next(entity.circuit_connected_entities.red) or next(entity.circuit_connected_entities.green) or entity.get_filter(1) ) then
-			return
-		else entity.inserter_filter_mode = "blacklist"
-		end
 	end
   end
 )
@@ -162,13 +156,13 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
   function(event)
     local entity = event.entity
 	if(entity.name == "aoc-wind-turbine") then 
-		handleMined(event, global.wind_turbines, global.wind_turbine_generators, nil)
+		handleMined(event, storage.wind_turbines, storage.wind_turbine_generators, nil)
 	end
 	if(entity.name == "aoc-metallurgy-beacon") then 
-		handleMined(event, global.metal_beacons, global.metal_beacon_beacons, nil)
+		handleMined(event, storage.metal_beacons, storage.metal_beacon_beacons, nil)
 	end
 	if(entity.name == "aoc-infusion-table") then 
-		local to_drop = handleMined(event, global.infusion_tables, global.infusion_table_machines, "assembler")
+		local to_drop = handleMined(event, storage.infusion_tables, storage.infusion_table_machines, "assembler")
 		if to_drop.name ~= nil then drop( event, to_drop ) end
 	end
 	if(entity.name == "aoc-lightning-rod") then 
@@ -181,27 +175,27 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 
 script.on_nth_tick(149,
   function()
-	if global.lightning_rods then
-		for unit, lightning_rod in pairs(global.lightning_rods) do
+	if storage.lightning_rods then
+		for unit, lightning_rod in pairs(storage.lightning_rods) do
 			if lightning_rod.valid and lightning_rod.name == "aoc-lightning-rod" then
-				if global.weather_stations == nil then global.weather_stations = {} end
-				if global.transmitting_stations == nil then global.transmitting_stations = {} end
+				if storage.weather_stations == nil then storage.weather_stations = {} end
+				if storage.transmitting_stations == nil then storage.transmitting_stations = {} end
 				local found_weather_stations = lightning_rod.surface.find_entities_filtered({name="aoc-weather-station", area={{lightning_rod.position.x-12, lightning_rod.position.y-10}, {lightning_rod.position.x+12, lightning_rod.position.y+14}}})
 				local found_transmitting_stations = lightning_rod.surface.find_entities_filtered({name="aoc-transmitting-station", area={{lightning_rod.position.x-12, lightning_rod.position.y-10}, {lightning_rod.position.x+12, lightning_rod.position.y+14}}})
-				global.weather_stations[unit] = #found_weather_stations
-				global.transmitting_stations[unit] = #found_transmitting_stations
+				storage.weather_stations[unit] = #found_weather_stations
+				storage.transmitting_stations[unit] = #found_transmitting_stations
 				local found = false
-				if global.lightningtick == nil then global.lightningtick = {} end
-				for tick, temprod in pairs(global.lightningtick) do
+				if storage.lightningtick == nil then storage.lightningtick = {} end
+				for tick, temprod in pairs(storage.lightningtick) do
 					if temprod and temprod.valid and temprod.unit_number == lightning_rod.unit_number then found = true end
 				end
 				if found == false then
-					global.lightningtick[game.tick+lightning_rod_tick_delay(unit)] = lightning_rod
+					storage.lightningtick[game.tick+lightning_rod_tick_delay(unit)] = lightning_rod
 				end
 			else
-				global.lightning_rods[unit]=nil
-				global.weather_stations[unit]=nil
-				global.transmitting_stations[unit]=nil
+				storage.lightning_rods[unit]=nil
+				storage.weather_stations[unit]=nil
+				storage.transmitting_stations[unit]=nil
 			end
 		end
 	end
@@ -209,10 +203,10 @@ script.on_nth_tick(149,
 )
 script.on_nth_tick(101,
   function()
-	if global.wind_turbines then
-		for unit, wind_turbine in pairs(global.wind_turbines) do
+	if storage.wind_turbines then
+		for unit, wind_turbine in pairs(storage.wind_turbines) do
 			if wind_turbine.valid and wind_turbine.name == "aoc-wind-turbine" then
-				local gen = global.wind_turbine_generators[unit]
+				local gen = storage.wind_turbine_generators[unit]
 				if wind_turbine.crafting_progress>0 then
 					local x = game.tick / 10000
 					local wind = (math.sin(2 * x) + math.sin(math.pi * x) + math.sin(math.exp(1) * x)) / 3
@@ -224,8 +218,8 @@ script.on_nth_tick(101,
 					gen.electric_buffer_size = 0
 				end
 			else 
-				global.wind_turbines[unit]=nil
-				global.wind_turbine_generators[unit]=nil
+				storage.wind_turbines[unit]=nil
+				storage.wind_turbine_generators[unit]=nil
 			end
 		end
 	end
@@ -238,27 +232,27 @@ script.on_nth_tick(31,
 )
 script.on_nth_tick(39,
   function()
-	if global.starlight_panels then
-		if global.day == nil then global.day = game.get_surface(1).daytime >= 0.45 and game.get_surface(1).daytime <= 0.55 end
-		if global.day and game.get_surface(1).daytime >= 0.45 and game.get_surface(1).daytime <= 0.55 then
-			for unit, starlightpanel in pairs(global.starlight_panels) do
+	if storage.starlight_panels then
+		if storage.day == nil then storage.day = game.get_surface(1).daytime >= 0.45 and game.get_surface(1).daytime <= 0.55 end
+		if storage.day and game.get_surface(1).daytime >= 0.45 and game.get_surface(1).daytime <= 0.55 then
+			for unit, starlightpanel in pairs(storage.starlight_panels) do
 				if starlightpanel.valid and starlightpanel.name == "aoc-starlight-panel" then
-					global.starlight_panels[unit].active = true
+					storage.starlight_panels[unit].active = true
 				else 
-					global.starlight_panels[unit]=nil
+					storage.starlight_panels[unit]=nil
 				end
 			end
-			global.day = false
+			storage.day = false
 		end
-		if not global.day and game.get_surface(1).daytime < 0.45 or game.get_surface(1).daytime > 0.55 then
-			for unit, starlightpanel in pairs(global.starlight_panels) do
+		if not storage.day and game.get_surface(1).daytime < 0.45 or game.get_surface(1).daytime > 0.55 then
+			for unit, starlightpanel in pairs(storage.starlight_panels) do
 				if starlightpanel.valid and starlightpanel.name == "aoc-starlight-panel" then
-					global.starlight_panels[unit].active = false
+					storage.starlight_panels[unit].active = false
 				else 
-					global.starlight_panels[unit]=nil
+					storage.starlight_panels[unit]=nil
 				end
 			end
-			global.day = true
+			storage.day = true
 		end
 	end
   end
@@ -279,10 +273,10 @@ script.on_nth_tick(97,
 		["aoc-metal-boosting-tungsten-recipe"] = "aoc-hidden-tungsten-module"
 	}
 
-	if global.metal_beacons then
-		for unit, metalbeacon in pairs(global.metal_beacons) do
+	if storage.metal_beacons then
+		for unit, metalbeacon in pairs(storage.metal_beacons) do
 			if metalbeacon.valid and metalbeacon.name == "aoc-metallurgy-beacon" then
-				local beac = global.metal_beacon_beacons[unit]
+				local beac = storage.metal_beacon_beacons[unit]
 				beac.active = false
 				if metalbeacon.get_recipe() and recipe_to_module[metalbeacon.get_recipe().name] then
 					local module_slot = beac.get_module_inventory()
@@ -291,8 +285,8 @@ script.on_nth_tick(97,
 					if metalbeacon.status == defines.entity_status.working then beac.active = true end
 				end
 			else 
-				global.metal_beacons[unit]=nil
-				global.metal_beacon_beacons[unit]=nil
+				storage.metal_beacons[unit]=nil
+				storage.metal_beacon_beacons[unit]=nil
 			end
 		end
 	end
@@ -300,10 +294,10 @@ script.on_nth_tick(97,
 )
 script.on_nth_tick(151,
   function()
-	if global.infusion_tables then
-		for unit, infusiontable in pairs(global.infusion_tables) do
+	if storage.infusion_tables then
+		for unit, infusiontable in pairs(storage.infusion_tables) do
 			if infusiontable.valid and infusiontable.name == "aoc-infusion-table" then
-				local itm = global.infusion_table_machines[unit]
+				local itm = storage.infusion_table_machines[unit]
 				if itm.valid and itm.name == "aoc-infusion-table-machine" and itm.crafting_progress == 0 then
 					local pedestals = {}
 					pedestals[1] = infusiontable.surface.find_entity("aoc-infusion-pedestal", {infusiontable.position.x-5, infusiontable.position.y})
@@ -318,10 +312,10 @@ script.on_nth_tick(151,
 						for i, p in pairs( pedestals ) do
 							inv[i] = p.get_inventory(defines.inventory.chest)
 							k[i], v[i] = next( inv[i].get_contents() )
-							if k[i] == nil or global.infusing[k[i]] == nil then flag = false break end
+							if k[i] == nil or storage.infusing[k[i]] == nil then flag = false break end
 						end
-						if flag and global.infusing[k[1]] == global.infusing[k[2]] and global.infusing[k[1]] == global.infusing[k[3]] and global.infusing[k[1]] == global.infusing[k[4]] and itm.force.recipes[global.infusing[k[1]]].enabled then
-							itm.set_recipe( global.infusing[k[1]] )
+						if flag and storage.infusing[k[1]] == storage.infusing[k[2]] and storage.infusing[k[1]] == storage.infusing[k[3]] and storage.infusing[k[1]] == storage.infusing[k[4]] and itm.force.recipes[storage.infusing[k[1]]].enabled then
+							itm.set_recipe( storage.infusing[k[1]] )
 							for i, p in pairs( pedestals ) do
 								inv[i].remove( {name=k[i], count=1} )
 								itm.get_inventory(defines.inventory.assembling_machine_input).insert( {name=k[i], count=1} )
@@ -341,8 +335,8 @@ script.on_nth_tick(151,
 					end
 				end
 			else
-				global.infusion_tables[unit]=nil
-				global.infusion_table_machines[unit]=nil
+				storage.infusion_tables[unit]=nil
+				storage.infusion_table_machines[unit]=nil
 			end
 		end
 	end
@@ -351,63 +345,63 @@ script.on_nth_tick(151,
 
 script.on_event(defines.events.on_tick, 
   function(event)
-	if global.teatick and global.teatick[game.tick] then
-		game.get_player(global.teatick[game.tick]).character_mining_speed_modifier = game.get_player(global.teatick[game.tick]).character_mining_speed_modifier-1
-		game.get_player(global.teatick[game.tick]).character_crafting_speed_modifier = game.get_player(global.teatick[game.tick]).character_crafting_speed_modifier-1
-		global.teatick[game.tick] = nil
+	if storage.teatick and storage.teatick[game.tick] then
+		game.get_player(storage.teatick[game.tick]).character_mining_speed_modifier = game.get_player(storage.teatick[game.tick]).character_mining_speed_modifier-1
+		game.get_player(storage.teatick[game.tick]).character_crafting_speed_modifier = game.get_player(storage.teatick[game.tick]).character_crafting_speed_modifier-1
+		storage.teatick[game.tick] = nil
 	end
-	if global.coffeetick and global.coffeetick[game.tick] then
-		game.get_player(global.coffeetick[game.tick]).character_running_speed_modifier = game.get_player(global.coffeetick[game.tick]).character_running_speed_modifier-1	
-		global.coffeetick[game.tick] = nil
+	if storage.coffeetick and storage.coffeetick[game.tick] then
+		game.get_player(storage.coffeetick[game.tick]).character_running_speed_modifier = game.get_player(storage.coffeetick[game.tick]).character_running_speed_modifier-1	
+		storage.coffeetick[game.tick] = nil
 	end
-	if global.lightningtick and global.lightningtick[game.tick] then
-		local rod = global.lightningtick[game.tick]
+	if storage.lightningtick and storage.lightningtick[game.tick] then
+		local rod = storage.lightningtick[game.tick]
 		if rod and rod.valid then
 		  local power_output = lightning_rod_power(rod.unit_number)
 		  rod.power_production = power_output
 		  rod.electric_buffer_size = power_output
 		end
 	end
-	if global.lightningtick and global.lightningtick[game.tick-600] then
-		local rod = global.lightningtick[game.tick-600]
+	if storage.lightningtick and storage.lightningtick[game.tick-600] then
+		local rod = storage.lightningtick[game.tick-600]
 		if rod and rod.valid then
 		  rod.power_production = 0
 		  rod.electric_buffer_size = 0
-		  global.lightningtick[game.tick-600+lightning_rod_tick_delay(rod.unit_number)] = rod
+		  storage.lightningtick[game.tick-600+lightning_rod_tick_delay(rod.unit_number)] = rod
 		end
-		global.lightningtick[game.tick-600] = nil
+		storage.lightningtick[game.tick-600] = nil
 	end
-	if global.treefarms then
-      for _,treefarm in pairs(global.treefarms) do
+	if storage.treefarms then
+      for _,treefarm in pairs(storage.treefarms) do
   		if treefarm.valid and treefarm.name == "aoc-tree-farm" then
-		  if treefarm.crafting_progress == 1 and treefarm.get_recipe().name == "aoc-tree-farm-tree-recipe" then
+		  if treefarm.get_recipe() and treefarm.get_recipe().name == "aoc-tree-farm-tree-recipe" and treefarm.crafting_progress >= 1-treefarm.crafting_speed/(60*treefarm.get_recipe().energy) then
 			plantTree(treefarm)
 		  end
-		  if treefarm.crafting_progress == 1 and treefarm.get_recipe().name == "aoc-tree-farm-rubber-tree-recipe" then
+		  if treefarm.get_recipe() and treefarm.get_recipe().name == "aoc-tree-farm-rubber-tree-recipe" and treefarm.crafting_progress >= 1-treefarm.crafting_speed/(60*treefarm.get_recipe().energy) then
 			plantRubberTree(treefarm)
 		  end
-		else global.treefarms[_]=nil
+		else storage.treefarms[_]=nil
 	    end
 	  end
 	end
-	if global.forestries then
-      for _,forestry in pairs(global.forestries) do
+	if storage.forestries then
+      for _,forestry in pairs(storage.forestries) do
   		if forestry.valid and forestry.name == "aoc-forestry" then
-		  if forestry.crafting_progress == 1 and forestry.get_recipe().name == "aoc-forestry-log-recipe" then
+		  if forestry.get_recipe() and forestry.get_recipe().name == "aoc-forestry-log-recipe" and forestry.crafting_progress >= 1-forestry.crafting_speed/(60*forestry.get_recipe().energy) then	
 			harvestTree(forestry)
 		  end
-		  if forestry.crafting_progress == 1 and forestry.get_recipe().name == "aoc-forestry-latex-recipe" then
+		  if forestry.get_recipe() and treefarm.get_recipe().name == "aoc-forestry-latex-recipe" and forestry.crafting_progress >= 1-forestry.crafting_speed/(60*forestry.get_recipe().energy) then
 			tapTree(forestry, "name", "aoc-rubber-tree")
 		  end
-		  if forestry.crafting_progress == 1 and forestry.get_recipe().name == "aoc-forestry-resin-recipe" then
+		  if forestry.get_recipe() and forestry.get_recipe().name == "aoc-forestry-resin-recipe" and forestry.crafting_progress >= 1-forestry.crafting_speed/(60*forestry.get_recipe().energy) then
 			tapTree(forestry, "type", "tree")
 		  end
-		else global.forestries[_]=nil
+		else storage.forestries[_]=nil
 		end
 	  end
     end
-	if global.farms then
-      for _,farm in pairs(global.farms) do
+	if storage.farms then
+      for _,farm in pairs(storage.farms) do
 		if farm.valid and farm.name == "aoc-farm-reservoir" then
 			check_module_dying( farm, "aoc%-farm%-reservoir%-fish%-eggs%-recipe", 0.02 )
 		elseif farm.valid and farm.name == "aoc-farm-chicken-coop" then
@@ -417,7 +411,7 @@ script.on_event(defines.events.on_tick,
 			check_module_dying( farm, "aoc%-farm%-barn%-calf%-recipe", 0.08 )
 		elseif farm.valid and farm.name == "aoc-farm-apiary" then
 			check_module_dying( farm, "aoc%-larva%-.*%-recipe", 0.06 )
-		else global.farms[_]=nil
+		else storage.farms[_]=nil
 		end
 	  end
     end
@@ -425,7 +419,7 @@ script.on_event(defines.events.on_tick,
 )
 
 function check_module_dying( farm, recipename, chance )
-	if farm.crafting_progress == 1 and farm.get_recipe().name:find('^' .. recipename .. '$') ~= nil then
+	if farm.get_recipe() and farm.get_recipe().name:find('^' .. recipename .. '$') ~= nil and farm.crafting_progress >= 1-farm.crafting_speed/(60*farm.get_recipe().energy) then
 		if( math.random()<=chance ) then
 			local inv = farm.get_module_inventory()
 			local k, v = next( inv.get_contents() )
@@ -449,63 +443,63 @@ function check_module_dying( farm, recipename, chance )
 end
 
 function lightning_rod_tick_delay(unit)
-	return math.floor(36000-12000*global.transmitting_stations[unit]/140)
+	return math.floor(36000-12000*storage.transmitting_stations[unit]/140)
 end
 
 function lightning_rod_power(unit)
-	return global.lightning_rods[unit].prototype.max_energy_production + global.lightning_rods[unit].prototype.max_energy_production * global.weather_stations[unit] / 16
+	return storage.lightning_rods[unit].prototype.max_energy_production + storage.lightning_rods[unit].prototype.max_energy_production * storage.weather_stations[unit] / 16
 end
 
 function handleBuilt( event, building )
-	if not global[building] then global[building]={} end
-	local entity = event.created_entity
-	global[building][entity.unit_number] = entity
+	if not storage[building] then storage[building]={} end
+	local entity = event.entity
+	storage[building][entity.unit_number] = entity
 end
 
 function handleInfusionTableBuilt(event)
-	if not global.infusion_tables then global.infusion_tables={} end
-	if not global.infusion_table_machines then global.infusion_table_machines={} end
-	local infusiontable = event.created_entity
+	if not storage.infusion_tables then storage.infusion_tables={} end
+	if not storage.infusion_table_machines then storage.infusion_table_machines={} end
+	local infusiontable = event.entity
 	local infusiontablemachine = game.surfaces[infusiontable.surface.name].create_entity{
 		  name = 'aoc-infusion-table-machine',
 		  position = infusiontable.position,
 		  force = infusiontable.force
 	  }
-	global.infusion_tables[infusiontable.unit_number] = infusiontable
-	global.infusion_table_machines[infusiontable.unit_number] = infusiontablemachine
+	storage.infusion_tables[infusiontable.unit_number] = infusiontable
+	storage.infusion_table_machines[infusiontable.unit_number] = infusiontablemachine
 end
 
 function handleMetalBeaconBuilt(event)
-	if not global.metal_beacons then global.metal_beacons={} end
-	if not global.metal_beacon_beacons then global.metal_beacon_beacons={} end
-	local metalbeacon = event.created_entity
+	if not storage.metal_beacons then storage.metal_beacons={} end
+	if not storage.metal_beacon_beacons then storage.metal_beacon_beacons={} end
+	local metalbeacon = event.entity
 	local metalbeaconbeacon = game.surfaces[metalbeacon.surface.name].create_entity{
 		  name = 'aoc-metallurgy-beacon-beacon',
 		  position = metalbeacon.position,
 		  force = metalbeacon.force
 	  }
-	global.metal_beacons[metalbeacon.unit_number] = metalbeacon
-	global.metal_beacon_beacons[metalbeacon.unit_number] = metalbeaconbeacon
+	storage.metal_beacons[metalbeacon.unit_number] = metalbeacon
+	storage.metal_beacon_beacons[metalbeacon.unit_number] = metalbeaconbeacon
 end
 
 function handleStarlightPanelBuilt(event)
-  if not global.starlight_panels then global.starlight_panels={} end
-  local starlight_panel = event.created_entity
+  if not storage.starlight_panels then storage.starlight_panels={} end
+  local starlight_panel = event.entity
   starlight_panel.active = false
-  global.starlight_panels[starlight_panel.unit_number] = starlight_panel
+  storage.starlight_panels[starlight_panel.unit_number] = starlight_panel
 end
 
 function handleWindTurbineBuilt(event)
-  if not global.wind_turbines then global.wind_turbines={} end
-  if not global.wind_turbine_generators then global.wind_turbine_generators={} end
-  local wind_turbine = event.created_entity
+  if not storage.wind_turbines then storage.wind_turbines={} end
+  if not storage.wind_turbine_generators then storage.wind_turbine_generators={} end
+  local wind_turbine = event.entity
   local kinetic_generator = game.surfaces[wind_turbine.surface.name].create_entity{
 		name = 'aoc-wind-turbine-kinetic-generator',
 		position = wind_turbine.position,
 		force = wind_turbine.force
 	}
-  global.wind_turbines[wind_turbine.unit_number] = wind_turbine
-  global.wind_turbine_generators[wind_turbine.unit_number] = kinetic_generator
+  storage.wind_turbines[wind_turbine.unit_number] = wind_turbine
+  storage.wind_turbine_generators[wind_turbine.unit_number] = kinetic_generator
 end
 
 function handleMined(event, main_entities, sub_entities, drop)
@@ -525,8 +519,8 @@ end
 function plantTree(treefarm)
   local area = 7
   local surface = treefarm.surface
-  local x = math.random(treefarm.position.x-area, treefarm.position.x+area)+1.5
-  local y = math.random(treefarm.position.y-area, treefarm.position.y+area)+1.5
+  local x = math.random(treefarm.position.x-area, treefarm.position.x+area)+0.5
+  local y = math.random(treefarm.position.y-area, treefarm.position.y+area)+0.5
   local tree_nr = math.random(1,9)
   if surface.can_place_entity({name="tree-0" .. tree_nr, position={x,y}}) then
 	surface.create_entity({name="tree-0" .. tree_nr, position={x,y}})
@@ -537,8 +531,8 @@ function plantRubberTree(treefarm)
   local area = 7
   local surface = treefarm.surface
   for i=1,10 do
-	local x = math.random(treefarm.position.x-area, treefarm.position.x+area)+1.5
-	local y = math.random(treefarm.position.y-area, treefarm.position.y+area)+1.5
+	local x = math.random(treefarm.position.x-area, treefarm.position.x+area)+0.5
+	local y = math.random(treefarm.position.y-area, treefarm.position.y+area)+0.5
 	if surface.can_place_entity({name="aoc-rubber-tree", position={x,y}}) then
 		surface.create_entity({name="aoc-rubber-tree", position={x,y}})
 		break
@@ -574,15 +568,15 @@ script.on_event(defines.events.on_script_trigger_effect,
     function(event)
 		local p = event.target_entity.player
         if p and event.effect_id == "aoc-trigger-tea" then
-			if global.teatick == nil then global.teatick = {} end
-			global.teatick[game.tick+3600] = p.index
+			if storage.teatick == nil then storage.teatick = {} end
+			storage.teatick[game.tick+3600] = p.index
 			p.character_mining_speed_modifier = p.character_mining_speed_modifier+1
 			p.character_crafting_speed_modifier = p.character_crafting_speed_modifier+1
 			p.remove_item{name="aoc-tea", count=1}
 		end
 		if p and event.effect_id == "aoc-trigger-coffee" then
-			if global.coffeetick == nil then global.coffeetick = {} end
-			global.coffeetick[game.tick+3600] = p.index
+			if storage.coffeetick == nil then storage.coffeetick = {} end
+			storage.coffeetick[game.tick+3600] = p.index
 			p.character_running_speed_modifier = p.character_running_speed_modifier+1
 			p.remove_item{name="aoc-coffee", count=1}
 		end

@@ -83,7 +83,7 @@ data:extend({{
 	crafting_speed = 1,
 	energy_source = {
     type = "electric",
-    emissions_per_minute = 10,
+    emissions_per_minute = {pollution = 10},
     usage_priority = "secondary-input",
 	    drain = "1MW"
     },
@@ -99,53 +99,55 @@ data:extend({{
 	max_health = 500,
     collision_box = {{-0.5, -0.5}, {0.5, 0.5}},
     selection_box = {{0, 0}, {0, 0}},
-	idle_animation = {
-        layers = {
-            {
-                filename = "__ageofcreation__/img/entities/infusion-pedestal.png",
-                width = 192,
-                height = 192,
-                scale = 0.1666667
+	graphics_set = {
+        idle_animation = {
+            layers = {
+                {
+                    filename = "__ageofcreation__/img/entities/infusion-pedestal.png",
+                    width = 192,
+                    height = 192,
+                    scale = 0.1666667
+                }
             }
-        }
-    },
-    animation = {
-        layers = {
-            {
-                filename = "__ageofcreation__/img/entities/infusion-table-laser-vertical.png",
-                width = 12,
-                height = 33,
-                shift = util.by_pixel(3, -96),
-                scale = 6,
-                draw_as_glow = true,
-                tint = {255, 0, 0}
-            },
-            {
-                filename = "__ageofcreation__/img/entities/infusion-table-laser-vertical.png",
-                width = 12,
-                height = 33,
-                shift = util.by_pixel(3, 96),
-                scale = 6,
-                draw_as_glow = true,
-                tint = {255, 0, 0}
-            },
-            {
-                filename = "__ageofcreation__/img/entities/infusion-table-laser-horizontal.png",
-                width = 33,
-                height = 12,
-                shift = util.by_pixel(-96, 3),
-                scale = 6,
-                draw_as_glow = true,
-                tint = {255, 0, 0}
-            },
-            {
-                filename = "__ageofcreation__/img/entities/infusion-table-laser-horizontal.png",
-                width = 33,
-                height = 12,
-                shift = util.by_pixel(96, 3),
-                scale = 6,
-                draw_as_glow = true,
-                tint = {255, 0, 0}
+        },
+        animation = {
+            layers = {
+                {
+                    filename = "__ageofcreation__/img/entities/infusion-table-laser-vertical.png",
+                    width = 12,
+                    height = 33,
+                    shift = util.by_pixel(3, -96),
+                    scale = 6,
+                    draw_as_glow = true,
+                    tint = {255, 0, 0}
+                },
+                {
+                    filename = "__ageofcreation__/img/entities/infusion-table-laser-vertical.png",
+                    width = 12,
+                    height = 33,
+                    shift = util.by_pixel(3, 96),
+                    scale = 6,
+                    draw_as_glow = true,
+                    tint = {255, 0, 0}
+                },
+                {
+                    filename = "__ageofcreation__/img/entities/infusion-table-laser-horizontal.png",
+                    width = 33,
+                    height = 12,
+                    shift = util.by_pixel(-96, 3),
+                    scale = 6,
+                    draw_as_glow = true,
+                    tint = {255, 0, 0}
+                },
+                {
+                    filename = "__ageofcreation__/img/entities/infusion-table-laser-horizontal.png",
+                    width = 33,
+                    height = 12,
+                    shift = util.by_pixel(96, 3),
+                    scale = 6,
+                    draw_as_glow = true,
+                    tint = {255, 0, 0}
+                }
             }
         }
     },

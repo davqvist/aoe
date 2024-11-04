@@ -1,7 +1,7 @@
 data:extend({{
     type = "item",
     name = "aoc-advanced-chemical-plant",
-    icon = "__angelspetrochem__/graphics/icons/separator.png",
+    icon = "__angelspetrochem_art__/graphics/icons/separator.png",
     icon_size = 32,
     subgroup = "aoc-specific-buildings",
     order = "p",
@@ -16,7 +16,7 @@ data:extend({{
   crafting_speed = 2,
   energy_source = {
     type = "electric",
-    emissions_per_minute = 10,
+    emissions_per_minute = {pollution = 10},
     usage_priority = "secondary-input",
 	drain = "29kW"
   },
@@ -25,77 +25,74 @@ data:extend({{
   module_specification = {
     module_slots = 3
   },
-  icon = "__angelspetrochem__/graphics/icons/separator.png",
+  icon = "__angelspetrochem_art__/graphics/icons/separator.png",
   icon_size = 32,
   flags = { "placeable-neutral", "placeable-player", "player-creation" },
   minable = { hardness = 1, mining_time = 0.2, result = "aoc-advanced-chemical-plant" },
   max_health = 300,
   selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
   collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
-  animation = {
-    layers = {
-        {
-            filename = "__angelspetrochem__/graphics/entity/separator/separator.png",
-            width = 224,
-            height = 224,
-            frame_count = 1,
-            shift = { 0, 0 }
-        }
-    },
-  },
+  graphics_set = {
+    animation = {
+      layers = {
+          {
+              filename = "__angelspetrochem_art__/graphics/entity/separator/separator.png",
+              width = 224,
+              height = 224,
+              frame_count = 1,
+              shift = { 0, 0 }
+          }
+      }
+    }
+ },
   working_sound = {
-    sound = { filename = "__angelspetrochem__/sound/separator.ogg", volume = 0.65 },
+    sound = { filename = "__angelspetrochem_art__/sound/separator.ogg", volume = 0.65 },
     idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     audible_distance_modifier = 0.5,
     apparent_volume = 2.5,
   },
+  fluid_boxes_off_when_no_fluid_recipe = true,
   fluid_boxes = {
     {
       production_type = "input",
-      base_area = 10,
-      base_level = -1,
+      volume = 1000,
       pipe_covers = pipecoverspictures(),
-      pipe_connections = {{ type="input", position = {2, 3} }}
+      pipe_connections = {{ flow_direction="input", direction = defines.direction.south, position = {2, 2} }}
     },{
       production_type = "input",
-      base_area = 10,
-      base_level = -1,
+      volume = 1000,
       pipe_covers = pipecoverspictures(),
-      pipe_connections = {{ type="input", position = {3, 0} }}
+      pipe_connections = {{ flow_direction="input", direction = defines.direction.east, position = {2, 0} }}
     },{
       production_type = "input",
-      base_area = 10,
-      base_level = -1,
+      volume = 1000,
       pipe_covers = pipecoverspictures(),
-      pipe_connections = {{ type="input", position = {0, 3} }}
+      pipe_connections = {{ flow_direction="input", direction = defines.direction.south, position = {0, 2} }}
     },{
       production_type = "input",
-      base_area = 10,
-      base_level = -1,
+      volume = 1000,
       pipe_covers = pipecoverspictures(),
-      pipe_connections = {{ type="input", position = {-3, 0} }}
+      pipe_connections = {{ flow_direction="input", direction = defines.direction.west, position = {-2, 0} }}
     },{
       production_type = "input",
-      base_area = 10,
-      base_level = -1,
+      volume = 1000,
       pipe_covers = pipecoverspictures(),
-      pipe_connections = {{ type="input", position = {-2, 3} }}
+      pipe_connections = {{ flow_direction="input", direction = defines.direction.south, position = {-2, 2} }}
     },{
       production_type = "output",
-      base_level = 1,
+      volume = 1000,
       pipe_covers = pipecoverspictures(),
-      pipe_connections = {{ type="output", position = {2, -3} }}
+      pipe_connections = {{ flow_direction="output", direction = defines.direction.north, position = {2, -2} }}
     },{
       production_type = "output",
-      base_level = 1,
+      volume = 1000,
       pipe_covers = pipecoverspictures(),
-      pipe_connections = {{ type="output", position = {0, -3} }}
+      pipe_connections = {{ flow_direction="output", direction = defines.direction.south, position = {0, -2} }}
     },{
       production_type = "output",
-      base_level = 1,
+      volume = 1000,
       pipe_covers = pipecoverspictures(),
-      pipe_connections = {{ type="output", position = {-2, -3} }}
-    },
-    off_when_no_fluid_recipe = true
+      pipe_connections = {{ flow_direction="output", direction = defines.direction.south, position = {-2, -2} }}
+    }
   }
 }})

@@ -77,13 +77,14 @@ data:extend({{
   name = "aoc-dna-construction",
   icons = {
     {
-      icon = "__NPBees2__/graphics/dynamic/syringe-fluid.png",
-      tint = bee_globals["aoc-royal-jelly"].color
+      icon = "__NPBees2_art__/graphics/dynamic/syringe-fluid.png",
+      tint = bee_globals["aoc-royal-jelly"].color,
+      icon_size = 32
     },{
-      icon = "__NPBees2__/graphics/dynamic/syringe-base.png"
+      icon = "__NPBees2_art__/graphics/dynamic/syringe-base.png",
+      icon_size = 32
     }
   },
-  icon_size = 32,
   subgroup = "aoc-bees-bots",
   order = "c",
   stack_size = 10
@@ -93,13 +94,14 @@ data:extend({{
   name = "aoc-dna-logistic",
   icons = {
     {
-      icon = "__NPBees2__/graphics/dynamic/syringe-fluid.png",
-      tint = bee_globals["aoc-honey"].color
+      icon = "__NPBees2_art__/graphics/dynamic/syringe-fluid.png",
+      tint = bee_globals["aoc-honey"].color,
+      icon_size = 32
     },{
-      icon = "__NPBees2__/graphics/dynamic/syringe-base.png"
+      icon = "__NPBees2_art__/graphics/dynamic/syringe-base.png",
+      icon_size = 32
     }
   },
-  icon_size = 32,
   subgroup = "aoc-bees-bots",
   order = "d",
   stack_size = 10
@@ -203,7 +205,7 @@ data:extend({{
 data:extend({{
   type = "item",
   name = "aoc-honey",
-  icon = "__NPBees2__/graphics/icon/honey.png",
+  icon = "__NPBees2_art__/graphics/icon/honey.png",
   icon_size = 32,
   subgroup = "aoc-bees-items",
   order = "b",
@@ -212,7 +214,7 @@ data:extend({{
 data:extend({{
   type = "item",
   name = "aoc-syringe",
-  icon = "__NPBees2__/graphics/icon/empty-syringe.png",
+  icon = "__NPBees2_art__/graphics/icon/empty-syringe.png",
   icon_size = 32,
   subgroup = "aoc-bees-items",
   order = "c",
@@ -221,7 +223,7 @@ data:extend({{
 data:extend({{
   type = "fluid",
   name = "aoc-royal-jelly",
-  icon = "__NPBees2__/graphics/icon/royal-jelly.png",
+  icon = "__NPBees2_art__/graphics/icon/royal-jelly.png",
   icon_size = 32,
   subgroup = "aoc-fluids-flora-fauna",
   order = "f",
@@ -234,14 +236,13 @@ data:extend({{
   name = "aoc-bee-aoc-honey-module-1",
   icons = {
     { 
-      icon = "__NPBees2__/graphics/dynamic/bee-base.png",
+      icon = "__NPBees2_art__/graphics/dynamic/bee-base.png",
       icon_size = 32
     },{
-      icon = "__NPBees2__/graphics/dynamic/bee-stripes.png",
+      icon = "__NPBees2_art__/graphics/dynamic/bee-stripes.png",
       tint = {0, 0, 255},
       icon_size = 32
-    },
-    { 
+    },{ 
       icon = "__ageofcreation__/img/items/rarity/common.png",
       icon_size = 64
     }
@@ -251,7 +252,7 @@ data:extend({{
   stack_size = 20,
   category = "aoc-module-drone",
   tier = 1,
-  effect = { speed = {bonus = 0.02} },
+  effect = { speed = 0.02 },
   limitation = {},
   limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -260,25 +261,23 @@ data:extend({{
   name = "aoc-bee-aoc-honey-module-2",
   icons = {
     { 
-      icon = "__NPBees2__/graphics/dynamic/bee-base.png",
+      icon = "__NPBees2_art__/graphics/dynamic/bee-base.png",
       icon_size = 32
     },{
-      icon = "__NPBees2__/graphics/dynamic/bee-stripes.png",
+      icon = "__NPBees2_art__/graphics/dynamic/bee-stripes.png",
       tint = {0, 0, 255},
       icon_size = 32
-    },
-    { 
+    },{ 
       icon = "__ageofcreation__/img/items/rarity/uncommon.png",
       icon_size = 64
     }
   },
-  icon_size = 32,
   subgroup = "aoc-bees-modules",
   order = "a2",
   stack_size = 20,
   category = "aoc-module-drone",
   tier = 2,
-  effect = { speed = {bonus = 0.04} },
+  effect = { speed = 0.04 },
   limitation = {},
   limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -287,25 +286,23 @@ data:extend({{
   name = "aoc-bee-aoc-honey-module-3",
   icons = {
     { 
-      icon = "__NPBees2__/graphics/dynamic/bee-base.png",
+      icon = "__NPBees2_art__/graphics/dynamic/bee-base.png",
       icon_size = 32
     },{
-      icon = "__NPBees2__/graphics/dynamic/bee-stripes.png",
+      icon = "__NPBees2_art__/graphics/dynamic/bee-stripes.png",
       tint = {0, 0, 255},
       icon_size = 32
-    },
-    { 
+    },{ 
       icon = "__ageofcreation__/img/items/rarity/rare.png",
       icon_size = 64
     }
   },
-  icon_size = 32,
   subgroup = "aoc-bees-modules",
   order = "a3",
   stack_size = 20,
   category = "aoc-module-drone",
   tier = 3,
-  effect = { speed = {bonus = 0.06} },
+  effect = { speed = 0.06 },
   limitation = {},
   limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -314,25 +311,23 @@ data:extend({{
   name = "aoc-bee-aoc-honey-module-4",
   icons = {
     { 
-      icon = "__NPBees2__/graphics/dynamic/bee-base.png",
+      icon = "__NPBees2_art__/graphics/dynamic/bee-base.png",
       icon_size = 32
     },{
-      icon = "__NPBees2__/graphics/dynamic/bee-stripes.png",
+      icon = "__NPBees2_art__/graphics/dynamic/bee-stripes.png",
       tint = {0, 0, 255},
       icon_size = 32
-    },
-    { 
+    },{ 
       icon = "__ageofcreation__/img/items/rarity/epic.png",
       icon_size = 64
     }
   },
-  icon_size = 32,
   subgroup = "aoc-bees-modules",
   order = "a4",
   stack_size = 20,
   category = "aoc-module-drone",
   tier = 4,
-  effect = { speed = {bonus = 0.08} },
+  effect = { speed = 0.08 },
   limitation = {},
   limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -341,25 +336,23 @@ data:extend({{
   name = "aoc-bee-aoc-honey-module-5",
   icons = {
     { 
-      icon = "__NPBees2__/graphics/dynamic/bee-base.png",
+      icon = "__NPBees2_art__/graphics/dynamic/bee-base.png",
       icon_size = 32
     },{
-      icon = "__NPBees2__/graphics/dynamic/bee-stripes.png",
+      icon = "__NPBees2_art__/graphics/dynamic/bee-stripes.png",
       tint = {0, 0, 255},
       icon_size = 32
-    },
-    { 
+    },{
       icon = "__ageofcreation__/img/items/rarity/legendary.png",
       icon_size = 64
     }
   },
-  icon_size = 32,
   subgroup = "aoc-bees-modules",
   order = "a5",
   stack_size = 20,
   category = "aoc-module-drone",
   tier = 5,
-  effect = { speed = {bonus = 0.1} },
+  effect = { speed = 0.1 },
   limitation = {},
   limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -600,7 +593,7 @@ data:extend({{
   },
   results = {
     {type = 'item', name = 'aoc-bee-aoc-honey-module-1', amount = 1, probability = 0.3},
-    {type = 'item', name = 'aoc-frame-untreated', amount = 1, probability = 0.7, catalyst_amount = 1 }
+    {type = 'item', name = 'aoc-frame-untreated', amount = 1, probability = 0.7, ignored_by_stats = 1, ignored_by_productivity = 1 }
   },
   main_product = 'aoc-bee-aoc-honey-module-1',
   icons = combine_icons_tiny( get_icons( data.raw["module"]['aoc-bee-aoc-honey-module-1'] ), get_icons( data.raw["item"]["aoc-frame-untreated"] ) ),
@@ -619,7 +612,7 @@ data:extend({{
   },
   results = {
     {type = 'item', name = 'aoc-bee-aoc-honey-module-1', amount = 1, probability = 0.3},
-    {type = 'item', name = 'aoc-frame-impregnated', amount = 1, probability = 0.85, catalyst_amount = 1 }
+    {type = 'item', name = 'aoc-frame-impregnated', amount = 1, probability = 0.85, ignored_by_stats = 1, ignored_by_productivity = 1 }
   },
   main_product = 'aoc-bee-aoc-honey-module-1',
   icons = combine_icons_tiny( get_icons( data.raw["module"]['aoc-bee-aoc-honey-module-1'] ), get_icons( data.raw["item"]["aoc-frame-impregnated"] ) ),
@@ -638,7 +631,7 @@ data:extend({{
   },
   results = {
     {type = 'item', name = 'aoc-bee-aoc-honey-module-1', amount = 1, probability = 0.45},
-    {type = 'item', name = 'aoc-frame-sweet', amount = 1, probability = 0.82, catalyst_amount = 1 }
+    {type = 'item', name = 'aoc-frame-sweet', amount = 1, probability = 0.82, ignored_by_stats = 1, ignored_by_productivity = 1 }
   },
   main_product = 'aoc-bee-aoc-honey-module-1',
   icons = combine_icons_tiny( get_icons( data.raw["module"]['aoc-bee-aoc-honey-module-1'] ), get_icons( data.raw["item"]["aoc-frame-sweet"] ) ),
@@ -657,7 +650,7 @@ data:extend({{
   },
   results = {
     {type = 'item', name = 'aoc-bee-aoc-honey-module-1', amount = 1, probability = 0.15},
-    {type = 'item', name = 'aoc-frame-plastic', amount = 1, probability = 0.85, catalyst_amount = 1 }
+    {type = 'item', name = 'aoc-frame-plastic', amount = 1, probability = 0.85, ignored_by_stats = 1, ignored_by_productivity = 1 }
   },
   main_product = 'aoc-bee-aoc-honey-module-1',
   icons = combine_icons_tiny( get_icons( data.raw["module"]['aoc-bee-aoc-honey-module-1'] ), get_icons( data.raw["item"]["aoc-frame-plastic"] ) ),
@@ -685,13 +678,14 @@ for name, bee in pairs(bee_globals) do
     name = "aoc-larva-" .. name,
     icons = {
       {
-        icon = "__NPBees2__/graphics/dynamic/larva-base.png"
+        icon = "__NPBees2_art__/graphics/dynamic/larva-base.png",
+        icon_size = 32
       },{
-        icon = "__NPBees2__/graphics/dynamic/larva-stripes.png",
-        tint = bee.color
+        icon = "__NPBees2_art__/graphics/dynamic/larva-stripes.png",
+        tint = bee.color,      
+        icon_size = 32
       }
     },
-    icon_size = 32,
     subgroup = "aoc-bees-" .. name,
     order = "a",
     stack_size = 100,
@@ -702,13 +696,14 @@ for name, bee in pairs(bee_globals) do
     name = "aoc-queen-" .. name,
     icons = {
       {
-        icon = "__NPBees2__/graphics/dynamic/queen-base.png"
+        icon = "__NPBees2_art__/graphics/dynamic/queen-base.png",
+        icon_size = 32
       },{
-        icon = "__NPBees2__/graphics/dynamic/queen-stripes.png",
-        tint = bee.color
+        icon = "__NPBees2_art__/graphics/dynamic/queen-stripes.png",
+        tint = bee.color,
+        icon_size = 32
       }
     },
-    icon_size = 32,
     subgroup = "aoc-bees-" .. name,
     order = "b",
     stack_size = 100,
@@ -719,13 +714,14 @@ for name, bee in pairs(bee_globals) do
     name = "aoc-bee-" .. name,
     icons = {
       {
-        icon = "__NPBees2__/graphics/dynamic/bee-base.png"
+        icon = "__NPBees2_art__/graphics/dynamic/bee-base.png",
+        icon_size = 32
       },{
-        icon = "__NPBees2__/graphics/dynamic/bee-stripes.png",
-        tint = bee.color
+        icon = "__NPBees2_art__/graphics/dynamic/bee-stripes.png",
+        tint = bee.color,
+        icon_size = 32
       }
     },
-    icon_size = 32,
     subgroup = "aoc-bees-" .. name,
     order = "c",
     stack_size = 100,
@@ -736,11 +732,11 @@ for name, bee in pairs(bee_globals) do
     name = "aoc-comb-" .. name,
     icons = {
       {
-        icon = "__NPBees2__/graphics/dynamic/comb.png",
-        tint = bee.color
+        icon = "__NPBees2_art__/graphics/dynamic/comb.png",
+        tint = bee.color,
+        icon_size = 32
       }
     },
-    icon_size = 32,
     subgroup = "aoc-bees-" .. name,
     order = "d",
     stack_size = 200,
@@ -751,13 +747,14 @@ for name, bee in pairs(bee_globals) do
     name = "aoc-dna-" .. name,
     icons = {
       {
-        icon = "__NPBees2__/graphics/dynamic/syringe-fluid.png",
-        tint = bee.color
+        icon = "__NPBees2_art__/graphics/dynamic/syringe-fluid.png",
+        tint = bee.color,
+        icon_size = 32
       },{
-        icon = "__NPBees2__/graphics/dynamic/syringe-base.png"
+        icon = "__NPBees2_art__/graphics/dynamic/syringe-base.png",
+        icon_size = 32
       }
     },
-    icon_size = 32,
     subgroup = "aoc-bees-" .. name,
     order = "e",
     stack_size = 10,
@@ -807,7 +804,7 @@ for name, bee in pairs(bee_globals) do
       },
       results = {
         {type = 'item', name = 'aoc-queen-' .. name, amount = 1, probability = bee.chance},
-        {type = 'item', name = 'aoc-queen-' .. bee.parents[1], amount = 1, probability = 1-bee.chance, catalyst_amount = 1}
+        {type = 'item', name = 'aoc-queen-' .. bee.parents[1], amount = 1, probability = 1-bee.chance, ignored_by_stats = 1, ignored_by_productivity = 1}
       },
       main_product = 'aoc-queen-' .. name,
       energy_required = 60,
@@ -824,7 +821,7 @@ for name, bee in pairs(bee_globals) do
       },
       results = {
         {type = 'item', name = 'aoc-queen-' .. name, amount = 1, probability = bee.chance},
-        {type = 'item', name = 'aoc-queen-' .. bee.parents[2], amount = 1, probability = 1-bee.chance, catalyst_amount = 1}
+        {type = 'item', name = 'aoc-queen-' .. bee.parents[2], amount = 1, probability = 1-bee.chance, ignored_by_stats = 1, ignored_by_productivity = 1}
       },
       main_product = 'aoc-queen-' .. name,
       energy_required = 60,
@@ -842,8 +839,8 @@ for name, bee in pairs(bee_globals) do
       },
       results = {
         {type = 'item', name = 'aoc-queen-' .. name, amount = 1, probability = bee.chance+0.05},
-        {type = 'item', name = 'aoc-queen-' .. bee.parents[1], amount = 1, probability = 1-bee.chance-0.05, catalyst_amount = 1},
-        {type = 'item', name = 'aoc-frame-mutating', amount = 1, probability = 0.8, catalyst_amount = 1 }
+        {type = 'item', name = 'aoc-queen-' .. bee.parents[1], amount = 1, probability = 1-bee.chance-0.05, ignored_by_stats = 1, ignored_by_productivity = 1},
+        {type = 'item', name = 'aoc-frame-mutating', amount = 1, probability = 0.8, ignored_by_stats = 1, ignored_by_productivity = 1}
       },
       icons = combine_icons_tiny( get_icons( data.raw["item"]['aoc-queen-' .. name] ), get_icons( data.raw["item"]["aoc-frame-mutating"] ) ),
       main_product = 'aoc-queen-' .. name,
@@ -862,8 +859,8 @@ for name, bee in pairs(bee_globals) do
       },
       results = {
         {type = 'item', name = 'aoc-queen-' .. name, amount = 1, probability = bee.chance+0.05},
-        {type = 'item', name = 'aoc-queen-' .. bee.parents[2], amount = 1, probability = 1-bee.chance-0.05, catalyst_amount = 1 },
-        {type = 'item', name = 'aoc-frame-mutating', amount = 1, probability = 0.8, catalyst_amount = 1 }
+        {type = 'item', name = 'aoc-queen-' .. bee.parents[2], amount = 1, probability = 1-bee.chance-0.05, ignored_by_stats = 1, ignored_by_productivity = 1},
+        {type = 'item', name = 'aoc-frame-mutating', amount = 1, probability = 0.8, ignored_by_stats = 1, ignored_by_productivity = 1}
       },
       icons = combine_icons_tiny( get_icons( data.raw["item"]['aoc-queen-' .. name] ), get_icons( data.raw["item"]["aoc-frame-mutating"] ) ),
       main_product = 'aoc-queen-' .. name,
@@ -961,7 +958,7 @@ for name, bee in pairs(bee_globals) do
     },
     results = {
       {type = 'item', name = 'aoc-comb-' .. name, amount = 2},
-      {type = 'item', name = 'aoc-frame-untreated', amount = 1, probability = 0.9, catalyst_amount = 1 }
+      {type = 'item', name = 'aoc-frame-untreated', amount = 1, probability = 0.9, ignored_by_stats = 1, ignored_by_productivity = 1 }
     },
     main_product = 'aoc-comb-' .. name,
     icons = combine_icons_tiny( get_icons( data.raw["item"]['aoc-comb-' .. name] ), get_icons( data.raw["item"]["aoc-frame-untreated"] ) ),
@@ -980,7 +977,7 @@ for name, bee in pairs(bee_globals) do
     },
     results = {
       {type = 'item', name = 'aoc-comb-' .. name, amount = 2},
-      {type = 'item', name = 'aoc-frame-impregnated', amount = 1, probability = 0.95, catalyst_amount = 1 }
+      {type = 'item', name = 'aoc-frame-impregnated', amount = 1, probability = 0.95, ignored_by_stats = 1, ignored_by_productivity = 1 }
     },
     main_product = 'aoc-comb-' .. name,
     icons = combine_icons_tiny( get_icons( data.raw["item"]['aoc-comb-' .. name] ), get_icons( data.raw["item"]["aoc-frame-impregnated"] ) ),
@@ -999,7 +996,7 @@ for name, bee in pairs(bee_globals) do
     },
     results = {
       {type = 'item', name = 'aoc-comb-' .. name, amount = 3},
-      {type = 'item', name = 'aoc-frame-sweet', amount = 1, probability = 0.94, catalyst_amount = 1 }
+      {type = 'item', name = 'aoc-frame-sweet', amount = 1, probability = 0.94, ignored_by_stats = 1, ignored_by_productivity = 1 }
     },
     main_product = 'aoc-comb-' .. name,
     icons = combine_icons_tiny( get_icons( data.raw["item"]['aoc-comb-' .. name] ), get_icons( data.raw["item"]["aoc-frame-sweet"] ) ),

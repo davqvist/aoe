@@ -43,7 +43,7 @@ data:extend({{
     },
     results = {
         {type = 'fluid', name = 'crude-oil', amount = 75},
-		{type = 'item', name = 'iron-ore', amount = 1, probability = 0.9, catalyst_amount = 1}
+		{type = 'item', name = 'iron-ore', amount = 1, probability = 0.9, ignored_by_stats = 1, ignored_by_productivity = 1}
     },
 	main_product = 'crude-oil',
     energy_required = 5,
@@ -93,7 +93,7 @@ data:extend({{
     },
     results = {
         {type = 'fluid', name = 'crude-oil', amount = 100},
-		{type = 'item', name = 'iron-ore', amount = 1, probability = 0.9, catalyst_amount = 1}
+		{type = 'item', name = 'iron-ore', amount = 1, probability = 0.9, ignored_by_stats = 1, ignored_by_productivity = 1}
     },
 	main_product = 'crude-oil',
     energy_required = 6,
@@ -115,7 +115,7 @@ data:extend({{
         {type = 'fluid', name = 'heavy-oil', amount = 10},
 		{type = 'item', name = 'sulfur', amount = 2}
     },
-	icons = data.raw.fluid["crude-oil"].icons,
+	icon = data.raw.fluid["crude-oil"].icon,
     subgroup = "aoc-petrochem-fluids",
     order = "a1",
     energy_required = 5,
@@ -679,34 +679,6 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoc-crafting-red-wire-rubber-recipe',
-	type = 'recipe',
-	enabled = false,
-	ingredients = {
-		{type = 'item', name = 'copper-cable', amount = 8},
-		{type = 'item', name = 'aoc-rubber', amount = 1}
-	},
-	results = {
-        {type = 'item', name = 'red-wire', amount = 8}
-    },
-	energy_required = 1
-}})
-
-data:extend({{
-	name = 'aoc-crafting-green-wire-rubber-recipe',
-	type = 'recipe',
-	enabled = false,
-	ingredients = {
-		{type = 'item', name = 'copper-cable', amount = 8},
-		{type = 'item', name = 'aoc-rubber', amount = 1}
-	},
-	results = {
-        {type = 'item', name = 'green-wire', amount = 8}
-    },
-	energy_required = 1
-}})
-
-data:extend({{
 	name = 'aoc-crafting-rubber-belt-rubber-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -762,7 +734,7 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoc-crafting-stack-inserter-recipe',
+	name = 'aoc-crafting-bulk-inserter-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
@@ -772,13 +744,14 @@ data:extend({{
 		{type = 'item', name = 'aoc-rubber', amount = 1}
 	},
 	results = {
-        {type = 'item', name = 'stack-inserter', amount = 3}
+        {type = 'item', name = 'bulk-inserter', amount = 3}
     },
 	energy_required = 0.5
 }})
 
+--[[
 data:extend({{
-	name = 'aoc-crafting-long-stack-inserter-recipe',
+	name = 'aoc-crafting-long-bulk-inserter-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
@@ -788,10 +761,11 @@ data:extend({{
 		{type = 'item', name = 'aoc-rubber', amount = 1}
 	},
 	results = {
-        {type = 'item', name = 'stack-filter-inserter', amount = 3}
+        {type = 'item', name = 'bulk-filter-inserter', amount = 3}
     },
 	energy_required = 0.5
 }})
+--]]
 
 data:extend({{
     name = 'aoc-chemistry-acetic-acid-recipe',
@@ -1197,6 +1171,7 @@ data:extend({{
     energy_required = 5
 }})
 
+--[[
 data:extend({{
     name = 'aoc-crafting-huge-electric-pole-recipe',
     type = 'recipe',
@@ -1224,6 +1199,7 @@ data:extend({{
     },
     energy_required = 1
 }})
+--]]
 
 data:extend({{
     name = 'aoc-crafting-battery-equipment-recipe',
@@ -1304,7 +1280,7 @@ data:extend({{
         {type = 'item', name = 'electronic-circuit', amount = 3}
     },
     results = {
-        {type = 'item', name = 'logistic-chest-storage', amount = 1}
+        {type = 'item', name = 'storage-chest', amount = 1}
     },
     energy_required = 1
 }})
@@ -1318,7 +1294,7 @@ data:extend({{
         {type = 'item', name = 'advanced-circuit', amount = 3}
     },
     results = {
-        {type = 'item', name = 'logistic-chest-passive-provider', amount = 1}
+        {type = 'item', name = 'passive-provider-chest', amount = 1}
     },
     energy_required = 1
 }})
@@ -1332,7 +1308,7 @@ data:extend({{
         {type = 'item', name = 'advanced-circuit', amount = 3}
     },
     results = {
-        {type = 'item', name = 'logistic-chest-active-provider', amount = 1}
+        {type = 'item', name = 'active-provider-chest', amount = 1}
     },
     energy_required = 1
 }})
@@ -1346,7 +1322,7 @@ data:extend({{
         {type = 'item', name = 'processing-unit', amount = 3}
     },
     results = {
-        {type = 'item', name = 'logistic-chest-requester', amount = 1}
+        {type = 'item', name = 'requester-chest', amount = 1}
     },
     energy_required = 1
 }})
@@ -1360,7 +1336,7 @@ data:extend({{
         {type = 'item', name = 'processing-unit', amount = 3}
     },
     results = {
-        {type = 'item', name = 'logistic-chest-buffer', amount = 1}
+        {type = 'item', name = 'buffer-chest', amount = 1}
     },
     energy_required = 1
 }})
@@ -1548,7 +1524,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoc-silicon-doped-wafer', amount = 4},
-		{type = 'item', name = 'aoc-saw-blade-diamond', amount = 1, catalyst_amount = 1, probability = 0.99}
+		{type = 'item', name = 'aoc-saw-blade-diamond', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.99}
     },
 	icons = combine_icons_tiny( get_icons( data.raw["item"]['aoc-silicon-doped-wafer'] ), get_icons( data.raw["item"]["aoc-saw-blade-diamond"] ) ),
 	main_product = 'aoc-silicon-doped-wafer',
@@ -1612,7 +1588,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'fluid', name = 'aoc-phosgene', amount = 20},
-		{type = 'item', name = 'aoc-carbon-activated', amount = 1, probability = 0.96, catalyst_amount = 1}
+		{type = 'item', name = 'aoc-carbon-activated', amount = 1, probability = 0.96, ignored_by_stats = 1, ignored_by_productivity = 1}
     },
     main_product = 'aoc-phosgene',
 	energy_required = 2,
@@ -1845,8 +1821,8 @@ data:extend({{
 		{type = 'item', name = 'advanced-circuit', amount = 8},
 		{type = 'item', name = 'aoc-epoxy-resin-solid', amount = 2},
 		{type = 'item', name = 'aoc-integrated-circuit', amount = 2},
-		{type = 'item', name = 'red-wire', amount = 4},
-		{type = 'item', name = 'green-wire', amount = 4}
+		{type = 'item', name = 'copper-wire', amount = 8},
+		{type = 'item', name = 'aoc-rubber', amount = 1}
 	},
 	results = {
         {type = 'item', name = 'processing-unit', amount = 2}
@@ -1943,7 +1919,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoc-nauvium-plate', amount = 6},
-		{type = 'item', name = 'aoc-mold', amount = 1, catalyst_amount = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.8}
     },
 	main_product = 'aoc-nauvium-plate',
 	energy_required = 3,

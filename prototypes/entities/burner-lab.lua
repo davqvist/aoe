@@ -42,13 +42,13 @@ data:extend({{
         },
         {
           filename = "__base__/graphics/entity/lab/lab-integration.png",
-          width = 122,
-          height = 81,
-          frame_count = 1,
+          width = 242,
+          height = 162,
           line_length = 1,
           repeat_count = 33,
           animation_speed = 1 / 3,
-          shift = util.by_pixel(0, 15.5)
+          shift = util.by_pixel(0, 15.5),
+          scale = 0.5
         },
         {
           filename = "__ageofcreation__/img/entities/burner-lab-light.png",
@@ -63,13 +63,13 @@ data:extend({{
         },
         {
           filename = "__base__/graphics/entity/lab/lab-shadow.png",
-          width = 122,
-          height = 68,
-          frame_count = 1,
+          width = 242,
+          height = 136,
           line_length = 1,
           repeat_count = 33,
           animation_speed = 1 / 3,
           shift = util.by_pixel(13, 11),
+          scale = 0.5,
           draw_as_shadow = true
         }
       }
@@ -87,18 +87,18 @@ data:extend({{
         },
         {
           filename = "__base__/graphics/entity/lab/lab-integration.png",
-          width = 122,
-          height = 81,
-          frame_count = 1,
-          shift = util.by_pixel(0, 15.5)
+          width = 242,
+          height = 162,
+          shift = util.by_pixel(0, 15.5),
+          scale = 0.5
         },
         {
           filename = "__base__/graphics/entity/lab/lab-shadow.png",
-          width = 122,
-          height = 68,
-          frame_count = 1,
+          width = 242,
+          height = 136,
           shift = util.by_pixel(13, 11),
-          draw_as_shadow = true
+          draw_as_shadow = true,
+          scale = 0.5
         }
       }
     },
@@ -113,15 +113,15 @@ data:extend({{
       fade_in_ticks = 4,
       fade_out_ticks = 20
     },
-    vehicle_impact_sound = sounds.generic_impact,
+    impact_category = "metal",
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
     energy_source = {
       type = "burner",
-      fuel_category = "chemical",
+      fuel_categories = {"chemical"},
       effectivity = 1,
       fuel_inventory_size = 1,
-      emissions_per_minute = 12,
+      emissions_per_minute = {pollution = 12},
       light_flicker = {color = {0,0,0}},
       smoke =
       {

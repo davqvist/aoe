@@ -20,7 +20,7 @@ data:extend({{
     collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     energy_source = { type = "void" },
-    energy_usage_per_tick = "1KW",
+    energy_usage_per_tick = "1kW",
 	always_on = true,
     light = {intensity = 0.5, size = 25, color = {r=1.0, g=0.85, b=0.0}},
     light_when_colored = {intensity = 0.5, size = 25, color = {r=1.0, g=0.85, b=0.0}},

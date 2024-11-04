@@ -288,7 +288,7 @@ data:extend({{
 		{type = 'fluid', name = 'aoc-bacteria', amount = 100}
     },
     results = {
-        {type = 'fluid', name = 'aoc-bacteria', amount = 200, catalyst_amount = 100}
+        {type = 'fluid', name = 'aoc-bacteria', amount = 200, ignored_by_stats = 100, ignored_by_productivity = 100}
     },
     energy_required = 30,
 	category = 'aoc-category-gene-lab'
@@ -804,7 +804,7 @@ data:extend({{
         {type = 'item', name = 'aoc-gravel', amount = 4},
         {type = 'item', name = 'aoc-iron-dust', amount = 2},
         {type = 'item', name = 'aoc-copper-dust', amount = 1},
-        {type = 'item', name = 'aoc-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.95}
+        {type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.95}
     },
 	main_product = 'aoc-copper-dust',
 	energy_required = 8,
@@ -980,7 +980,7 @@ data:extend({{
         {type = 'item', name = 'aoc-silt', amount = 3},
         {type = 'item', name = 'aoc-kelp', amount = 1, probability = 0.5},
         {type = 'item', name = 'raw-fish', amount = 1, probability = 0.05},
-        {type = 'item', name = 'aoc-fiber-mesh', amount = 1, catalyst_amount = 1, probability = 0.98}
+        {type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.98}
     },
 	main_product = 'aoc-soil',
     energy_required = 16,

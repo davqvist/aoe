@@ -300,7 +300,7 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'aoc-chicken', amount = 1, probability = 0.4},
-		{type = 'item', name = 'aoc-bedding', amount = 1, catalyst_amount = 1, probability = 0.975}
+		{type = 'item', name = 'aoc-bedding', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.975}
     },
     energy_required = 15,
 	main_product = 'aoc-chicken',
@@ -318,7 +318,7 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'aoc-egg', amount = 7},
-		{type = 'item', name = 'aoc-chicken', amount = 2, catalyst_amount = 2, probability = 0.85}
+		{type = 'item', name = 'aoc-chicken', amount = 2, ignored_by_stats = 2, ignored_by_productivity = 2, probability = 0.85}
     },
     energy_required = 15,
 	main_product = 'aoc-egg',
@@ -429,8 +429,8 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'aoc-wool', amount = 2},
-		{type = 'item', name = 'aoc-sheep', amount = 3, catalyst_amount = 3},
-		{type = 'item', name = 'aoc-sheep', amount = 1, catalyst_amount = 1, probability = 0.9}
+		{type = 'item', name = 'aoc-sheep', amount = 3, ignored_by_stats = 3, ignored_by_productivity = 3},
+		{type = 'item', name = 'aoc-sheep', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.9}
     },
     energy_required = 10,
 	main_product = 'aoc-wool',
@@ -448,7 +448,7 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'aoc-lamb', amount = 1},
-		{type = 'item', name = 'aoc-sheep', amount = 2, catalyst_amount = 2, probability = 0.85}
+		{type = 'item', name = 'aoc-sheep', amount = 2, ignored_by_stats = 2, ignored_by_productivity = 2, probability = 0.85}
     },
     energy_required = 35,
 	main_product = 'aoc-lamb',
@@ -562,8 +562,8 @@ data:extend({{
     },
     results = {
         {type = 'fluid', name = 'aoc-milk', amount = 250},
-		{type = 'item', name = 'aoc-cow', amount = 3, catalyst_amount = 3},
-		{type = 'item', name = 'aoc-cow', amount = 1, catalyst_amount = 1, probability = 0.9}
+		{type = 'item', name = 'aoc-cow', amount = 3, ignored_by_stats = 3, ignored_by_productivity = 3},
+		{type = 'item', name = 'aoc-cow', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.9}
     },
     energy_required = 16,
 	main_product = 'aoc-milk',
@@ -583,8 +583,8 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'aoc-calf', amount = 1},
-		{type = 'item', name = 'aoc-ox', amount = 1, catalyst_amount = 1, probability = 0.9},
-		{type = 'item', name = 'aoc-cow', amount = 1, catalyst_amount = 1, probability = 0.85}
+		{type = 'item', name = 'aoc-ox', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.9},
+		{type = 'item', name = 'aoc-cow', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.85}
     },
     energy_required = 40,
 	main_product = 'aoc-calf',
@@ -734,7 +734,7 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'aoc-resin', amount = 2},
-		{type = 'item', name = 'aoc-spruce-tree', amount = 1, probability = 0.8, catalyst_amount = 1 }
+		{type = 'item', name = 'aoc-spruce-tree', amount = 1, probability = 0.8, ignored_by_stats = 1, ignored_by_productivity = 1 }
     },
 	main_product = 'aoc-resin',
     energy_required = 8,
@@ -749,7 +749,7 @@ data:extend({{
         {type = 'item', name = 'aoc-spruce-tree', amount = 1},
     },
 	results = {
-        {type = 'item', name = 'aoc-log', amount = 1},	
+        {type = 'item', name = 'aoc-log', amount = 1},
         {type = 'item', name = 'aoc-leaves', amount = 6}
     },
 	energy_required = 5,
@@ -1092,7 +1092,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'wood', amount = 8},
         {type = 'item', name = 'aoc-wood-pulp', amount = 1},
-		{type = 'item', name = 'aoc-saw-blade-iron', amount = 1, catalyst_amount = 1, probability = 0.94}
+		{type = 'item', name = 'aoc-saw-blade-iron', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.94}
     },
 	main_product = 'wood',
 	icons = combine_icons_tiny( get_icons( data.raw.item["wood"] ), get_icons( data.raw.item["aoc-saw-blade-iron"] ) ),
@@ -1112,7 +1112,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'wood', amount = 8},
         {type = 'item', name = 'aoc-wood-pulp', amount = 1},
-		{type = 'item', name = 'aoc-saw-blade-steel', amount = 1, catalyst_amount = 1, probability = 0.97}
+		{type = 'item', name = 'aoc-saw-blade-steel', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.97}
     },
 	main_product = 'wood',
 	icons = combine_icons_tiny( get_icons( data.raw.item["wood"] ), get_icons( data.raw.item["aoc-saw-blade-steel"] ) ),
@@ -1222,7 +1222,7 @@ data:extend({{
         {type = 'item', name = 'aoc-kelp-module-1', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoc-kelp-module-1', amount=1, probability = 0.512, catalyst_amount = 1},
+        {type = 'item', name = 'aoc-kelp-module-1', amount=1, probability = 0.512, ignored_by_stats = 1, ignored_by_productivity = 1},
         {type = 'item', name = 'aoc-kelp-module-2', amount=1, probability = 0.256},
         {type = 'item', name = 'aoc-kelp-module-3', amount=1, probability = 0.064},
         {type = 'item', name = 'aoc-kelp-module-4', amount=1, probability = 0.016},
@@ -1277,7 +1277,7 @@ data:extend({{
 		{type = 'fluid', name = 'aoc-fish-water', amount = 400}
     },
     results = {
-        {type = 'item', name = 'aoc-fish-module-1', amount=1, probability = 0.25, catalyst_amount=1},
+        {type = 'item', name = 'aoc-fish-module-1', amount=1, probability = 0.25, ignored_by_stats = 1, ignored_by_productivity = 1},
 		{type = 'item', name = 'aoc-fish-module-2', amount=1, probability = 0.5},
         {type = 'item', name = 'aoc-fish-module-3', amount=1, probability = 0.05}
     },
@@ -1696,7 +1696,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-tin-plate', amount = 5}
     },
     results = {
-        {type = 'item', name = 'empty-barrel', amount = 1}
+        {type = 'item', name = 'barrel', amount = 1}
     },
     energy_required = 0.5
 }})
@@ -1715,6 +1715,7 @@ data:extend({{
     energy_required = 5
 }})
 
+--[[
 data:extend({{
     name = 'aoc-crafting-valve-inspector-recipe',
     type = 'recipe',
@@ -1774,6 +1775,7 @@ data:extend({{
     },
     energy_required = 2
 }})
+--]]
 
 data:extend({{
     name = 'aoc-crafting-chemical-plant-recipe',
@@ -1834,7 +1836,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-yeast', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoc-yeast', amount = 2, catalyst_amount = 1}
+        {type = 'item', name = 'aoc-yeast', amount = 2, ignored_by_stats = 1, ignored_by_productivity = 1}
     },
     energy_required = 30,
 	category = 'aoc-category-gene-lab'

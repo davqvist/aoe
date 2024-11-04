@@ -45,7 +45,7 @@ data:extend({{
           width = 64,
           height = 592,
           frame_count = 1,
-		  scale = 1
+          scale = 1
         }
     }
   }

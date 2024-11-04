@@ -20,7 +20,7 @@ data:extend({{
     minable = {mining_time = 0.5, result = "aoc-rubber-tree-seedling"},
 	mined_sound = sounds.tree_leaves,
 	mining_sound = data.raw["utility-sounds"].default.mining_wood,
-    vehicle_impact_sound = sounds.tree_impact,
+    impact_category = "wood",
     max_health = 50,
     collision_box = {{-0.1, -0.1}, {0.1, 0.1}},
     selection_box = {{-1.0, -2.0}, {1.0, 0.5}},

@@ -24,15 +24,15 @@ data:extend({{
 	max_health = 300,
 	selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-	radius_visualisation_specification =
-    {
-      sprite = { 
-        filename = "__base__/graphics/entity/pumpjack/pumpjack-radius-visualization.png", 
-        size = 12
-      },
-      distance = 7
+	radius_visualisation_specification = {
+    sprite = { 
+      filename = "__base__/graphics/entity/pumpjack/pumpjack-radius-visualization.png", 
+      size = 12
     },
-	animation = {
+    distance = 7
+  },
+  graphics_set = {
+	  animation = {
       layers = {
         {
           filename = "__ageofcreation__/img/entities/tree-farm.png",
@@ -43,4 +43,5 @@ data:extend({{
         }
       }
     }
+  }
 }})

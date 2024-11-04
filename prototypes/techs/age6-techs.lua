@@ -22,7 +22,7 @@ data:extend({{
 data:extend({{
   type = "technology",
   name = "aoc-mercury-tech",
-  icon = "__angelssmelting__/graphics/icons/molten-silicon.png", icon_size = 64, icon_mipmaps = 4,
+  icon = "__angelssmelting_art__/graphics/icons/molten-silicon.png", icon_size = 64, icon_mipmaps = 4,
   prerequisites = {"aoc-starlight-tech"},
   effects = {
     {

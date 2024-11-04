@@ -100,7 +100,7 @@ data:extend({{
     type = "technology",
     name = "aoc-electric-boiling-tech",
     icon_size = 32,
-    icon = "__angelspetrochem__/graphics/icons/electric-boiler.png",
+    icon = "__angelspetrochem_art__/graphics/icons/electric-boiler.png",
     prerequisites = {"aoc-coal-liquefaction-tech"},
     effects = {
         {
@@ -241,7 +241,7 @@ data:extend({{
     type = "technology",
     name = "aoc-rubber-tech",
     icon_size = 32,
-    icon = "__angelspetrochem__/graphics/icons/solid-rubber.png",
+    icon = "__angelspetrochem_art__/graphics/icons/solid-rubber.png",
     prerequisites = {"aoc-oil-cracking-tech-1", "aoc-circuit-network-tech"},
     effects = {
         {
@@ -271,14 +271,6 @@ data:extend({{
         {
             type = "unlock-recipe",
             recipe = "aoc-crafting-bedding-rubber-recipe"
-        },
-        {
-            type = "unlock-recipe",
-            recipe = "aoc-crafting-red-wire-rubber-recipe"
-        },
-        {
-            type = "unlock-recipe",
-            recipe = "aoc-crafting-green-wire-rubber-recipe"
         },
         {
           type = "unlock-recipe",
@@ -325,20 +317,20 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoc-stack-inserters-tech",
+    name = "aoc-bulk-inserters-tech",
     icon_size = 256,
     icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/stack-inserter.png",
+    icon = "__base__/graphics/technology/bulk-inserter.png",
     prerequisites = {"aoc-rubber-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoc-crafting-stack-inserter-recipe"
+        recipe = "aoc-crafting-bulk-inserter-recipe"
       },
-      {
-        type = "unlock-recipe",
-        recipe = "aoc-crafting-long-stack-inserter-recipe"
-      }
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "aoc-crafting-long-bulk-inserter-recipe"
+      --}
     },
     unit = {
         count = 40,
@@ -645,7 +637,7 @@ data:extend({{
     type = "technology",
     name = "aoc-digging-tech-2",
     icon_size = 160,
-    icon = "__angelsrefining__/graphics/entity/liquifier/liquifier.png",
+    icon = "__angelsrefining_art__/graphics/entity/liquifier/liquifier.png",
     prerequisites = {"aoc-phenol-tech", "aoc-digging-tech-1", "aoc-sugar-tech"},
 	  effects = {
       {
@@ -669,13 +661,14 @@ data:extend({{
     name = "aoc-bees-tech",
     icons = {
       {
-        icon = "__NPBees2__/graphics/dynamic/bee-base.png"
+        icon = "__NPBees2_art__/graphics/dynamic/bee-base.png",
+        icon_size = 32
       },{
-        icon = "__NPBees2__/graphics/dynamic/bee-stripes.png",
-        tint = {255, 255, 0}
+        icon = "__NPBees2_art__/graphics/dynamic/bee-stripes.png",
+        tint = {255, 255, 0},
+        icon_size = 32
       }
     },
-    icon_size = 32,
     prerequisites = {"aoc-lubricant-tech", "aoc-acetone-tech", "aoc-radar-tech"},
 	  effects = {
       {
@@ -762,10 +755,10 @@ data:extend({{
     name = "aoc-drones-tech-1",
     icons = {
       { 
-        icon = "__NPBees2__/graphics/dynamic/bee-base.png",
+        icon = "__NPBees2_art__/graphics/dynamic/bee-base.png",
         icon_size = 32
       },{
-        icon = "__NPBees2__/graphics/dynamic/bee-stripes.png",
+        icon = "__NPBees2_art__/graphics/dynamic/bee-stripes.png",
         tint = {0, 0, 255},
         icon_size = 32
       }
@@ -949,7 +942,7 @@ data:extend({{
   type = "technology",
   name = "aoc-electronics-tech-3",
   icon_size = 256, icon_mipmaps = 4,
-  icon = "__base__/graphics/technology/advanced-electronics-2.png",
+  icon = "__base__/graphics/technology/processing-unit.png",
   prerequisites = {"aoc-rubber-tech", "aoc-epoxy-tech", "aoc-silicon-tech-2", "aoc-electronics-tech-2"},
   effects = {
     {
@@ -1046,14 +1039,14 @@ data:extend({{
         type = "unlock-recipe",
         recipe = "aoc-crafting-transmitting-station-recipe"
       },
-      {
-        type = "unlock-recipe",
-        recipe = "aoc-crafting-huge-electric-pole-recipe"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "aoc-crafting-huge-electric-fuse-recipe"
-      }
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "aoc-crafting-huge-electric-pole-recipe"
+      --},
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "aoc-crafting-huge-electric-fuse-recipe"
+      --}
     },
     unit = {
         count = 80,

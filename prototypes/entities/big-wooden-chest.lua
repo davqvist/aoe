@@ -27,7 +27,7 @@ data:extend({{
     inventory_size = 100,
     open_sound = { filename = "__base__/sound/wooden-chest-open.ogg", volume = 0.6 },
     close_sound = { filename = "__base__/sound/wooden-chest-close.ogg", volume = 0.6 },
-    vehicle_impact_sound = sounds.car_wood_impact(0.5),
+    impact_category = "wood",
     picture =
     {
       layers =

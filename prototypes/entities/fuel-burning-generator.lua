@@ -1,7 +1,7 @@
 data:extend({{
     type = "item",
     name = "aoc-fuel-burning-generator",
-    icon = "__angelspetrochem__/graphics/icons/advanced-chemical-plant.png",
+    icon = "__angelspetrochem_art__/graphics/icons/advanced-chemical-plant.png",
     icon_size = 32,
     icon_mipmaps = 1,
     subgroup = "aoc-power-buildings",
@@ -13,7 +13,7 @@ data:extend({{
 data:extend({{
   type = "generator",
   name = "aoc-fuel-burning-generator",
-  icon = "__angelspetrochem__/graphics/icons/advanced-chemical-plant.png",
+  icon = "__angelspetrochem_art__/graphics/icons/advanced-chemical-plant.png",
   icon_size = 32,
   icon_mipmaps = 1,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -28,13 +28,12 @@ data:extend({{
   fluid_box = {
     production_type = "input-output",
     pipe_covers = pipecoverspictures(),
-    base_area = 10,
-    base_level = -1,
+    volume = 1000,
     pipe_connections = {
-        { type = "input-output", position = {0, 4} },
-        { type = "input-output", position = {0, -4} }
+      { flow_direction = "input-output", direction = defines.direction.south, position = {0, 3} },
+      { flow_direction = "input-output", direction = defines.direction.north, position = {0, -3} }
     }
-  }, 
+  },
   energy_source = {
     type = "electric",
     usage_priority = "secondary-output"
@@ -44,7 +43,7 @@ data:extend({{
   horizontal_animation = {
     layers = {
       {
-        filename = "__angelspetrochem__/graphics/entity/advanced-chemical-plant/advanced-chemical-plant.png",
+        filename = "__angelspetrochem_art__/graphics/entity/advanced-chemical-plant/advanced-chemical-plant.png",
         width = 224,
         height = 224,
         frame_count = 16,
@@ -58,7 +57,7 @@ data:extend({{
   vertical_animation = {
     layers = {
       {
-        filename = "__angelspetrochem__/graphics/entity/advanced-chemical-plant/advanced-chemical-plant.png",
+        filename = "__angelspetrochem_art__/graphics/entity/advanced-chemical-plant/advanced-chemical-plant.png",
         width = 224,
         height = 224,
         frame_count = 16,
@@ -81,7 +80,7 @@ data:extend({{
     }
   },
   working_sound = {
-    sound = { filename = "__angelspetrochem__/sound/gas-refinery.ogg", volume = 0.45 },
+    sound = { filename = "__angelspetrochem_art__/sound/gas-refinery.ogg", volume = 0.45 },
     idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     audible_distance_modifier = 0.5,
     apparent_volume = 2.5,

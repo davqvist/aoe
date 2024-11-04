@@ -2,7 +2,7 @@ data:extend({{
     type = "item",
     name = "aoc-metallurgy-beacon",
     icons = {{
-        icon = "__angelssmelting__/graphics/icons/blast-furnace.png",
+        icon = "__angelssmelting_art__/graphics/icons/blast-furnace.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -20,7 +20,7 @@ data:extend({{
   crafting_speed = 1,
   energy_source = {
     type = "electric",
-    emissions_per_minute = 10,
+    emissions_per_minute = {pollution = 10},
     usage_priority = "secondary-input",
 	  drain = "180kW"
   },
@@ -28,7 +28,7 @@ data:extend({{
   allowed_effects = nil,
   module_specification = { module_slots = 0 },
   icons = {{
-    icon = "__angelssmelting__/graphics/icons/blast-furnace.png",
+    icon = "__angelssmelting_art__/graphics/icons/blast-furnace.png",
     icon_size = 64,
     icon_mipmaps = 4,
     scale = 0.5,
@@ -45,78 +45,80 @@ data:extend({{
     },
     distance = 25
   },
-  animation = {
-    layers = {
-        {
-        filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-base.png",
-        priority = "high",
-        width = 164,
-        height = 189,
-        shift = util.by_pixel(0, -14)
-        },
-        {
-        filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-shadow.png",
-        priority = "high",
-        width = 224,
-        height = 124,
-        shift = util.by_pixel(30, 20),
-        draw_as_shadow = true
-        }
-    }
-  },
-  working_visualisations = {
-    {
-        fadeout = true,
-        north_position = { 0, 0 },
-        east_position = { 0, 0 },
-        south_position = { 0, 0 },
-        west_position = { 0, 0 },
-        animation = {
-        filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-fire.png",
-        priority = "high",
-        width = 12,
-        height = 25,
-        line_length = 8,
-        frame_count = 48,
-        animation_speed = 0.5,
-        shift = util.by_pixel(4, 29),
-        draw_as_glow = true
-        },
+  graphics_set = {
+    animation = {
+      layers = {
+          {
+          filename = "__angelssmelting_art__/graphics/entity/blast-furnace/blast-furnace-base.png",
+          priority = "high",
+          width = 164,
+          height = 189,
+          shift = util.by_pixel(0, -14)
+          },
+          {
+          filename = "__angelssmelting_art__/graphics/entity/blast-furnace/blast-furnace-shadow.png",
+          priority = "high",
+          width = 224,
+          height = 124,
+          shift = util.by_pixel(30, 20),
+          draw_as_shadow = true
+          }
+      }
     },
-    {
-        fadeout = true,
-        north_position = { 0, 0 },
-        east_position = { 0, 0 },
-        south_position = { 0, 0 },
-        west_position = { 0, 0 },
-        effect = "flicker",
-        animation = {
-        filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-glow.png",
-        priority = "high",
-        width = 60,
-        height = 43,
-        blend_mode = "additive",
-        shift = util.by_pixel(5, 39),
-        draw_as_glow = true,
-        scale = 0.75,
-        },
-    },
-    {
-        fadeout = true,
-        north_position = { 0, 0 },
-        east_position = { 0, 0 },
-        south_position = { 0, 0 },
-        west_position = { 0, 0 },
-        effect = "flicker",
-        animation = {
-        filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-working-light.png",
-        priority = "high",
-        width = 164,
-        height = 189,
-        blend_mode = "additive",
-        shift = util.by_pixel(0, -14),
-        draw_as_glow = true
-        }
+    working_visualisations = {
+      {
+          fadeout = true,
+          north_position = { 0, 0 },
+          east_position = { 0, 0 },
+          south_position = { 0, 0 },
+          west_position = { 0, 0 },
+          animation = {
+          filename = "__angelssmelting_art__/graphics/entity/blast-furnace/blast-furnace-fire.png",
+          priority = "high",
+          width = 12,
+          height = 25,
+          line_length = 8,
+          frame_count = 48,
+          animation_speed = 0.5,
+          shift = util.by_pixel(4, 29),
+          draw_as_glow = true
+          },
+      },
+      {
+          fadeout = true,
+          north_position = { 0, 0 },
+          east_position = { 0, 0 },
+          south_position = { 0, 0 },
+          west_position = { 0, 0 },
+          effect = "flicker",
+          animation = {
+          filename = "__angelssmelting_art__/graphics/entity/blast-furnace/blast-furnace-glow.png",
+          priority = "high",
+          width = 60,
+          height = 43,
+          blend_mode = "additive",
+          shift = util.by_pixel(5, 39),
+          draw_as_glow = true,
+          scale = 0.75,
+          },
+      },
+      {
+          fadeout = true,
+          north_position = { 0, 0 },
+          east_position = { 0, 0 },
+          south_position = { 0, 0 },
+          west_position = { 0, 0 },
+          effect = "flicker",
+          animation = {
+          filename = "__angelssmelting_art__/graphics/entity/blast-furnace/blast-furnace-working-light.png",
+          priority = "high",
+          width = 164,
+          height = 189,
+          blend_mode = "additive",
+          shift = util.by_pixel(0, -14),
+          draw_as_glow = true
+          }
+      }
     }
   },
   working_sound = {
@@ -133,15 +135,10 @@ data:extend({{
   energy_source = { type = 'void'},
   energy_usage = '1W',
 	allowed_effects = {'productivity'},
-	module_specification = {
-    module_slots = 1,
-    module_info_icon_shift = {0, 0},
-    module_info_multi_row_initial_height_modifier = -0.3,
-    module_info_max_icons_per_row = 2
-  },
+	module_slots = 1,
 	icon = "__ageofcreation__/img/entities/empty.png",
 	icon_size = 128,
-	flags = { "placeable-neutral", "placeable-player", "not-on-map", "hidden", "hide-alt-info" },
+	flags = { "placeable-neutral", "placeable-player", "not-on-map", "hide-alt-info" },
 	minable = nil,
 	max_health = 1,
 	selection_box = {{-0, -0}, {0, 0}},

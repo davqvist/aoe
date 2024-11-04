@@ -24,7 +24,8 @@ end
 
 for _, technology in pairs(data.raw.technology) do
   if ((string.sub(technology.name, 1, 4) ~= "aoc-") and (technologies_to_keep[technology.name] == nil) ) then
-	technology.enabled = false
+	  technology.enabled = false
     technology.hidden = true
+    technology.unit ={ count = 1, ingredients = {{"aoc-science-01", 1}}, time = 1}
   end
 end

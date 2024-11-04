@@ -41,7 +41,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-maize",
 	tier = 1,
-    effect = { speed = {bonus = 0.25} },
+    effect = { speed = 0.25 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -56,7 +56,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-maize",
 	tier = 1,
-    effect = { speed = {bonus = -0.12}, productivity = {bonus = 0.15} },
+    effect = { speed = -0.12, productivity = 0.15 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -71,7 +71,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-maize",
 	tier = 2,
-    effect = { speed = {bonus = 0.45} },
+    effect = { speed = 0.45 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -86,7 +86,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-maize",
 	tier = 2,
-    effect = { speed = {bonus = -0.12}, productivity = {bonus = 0.3} },
+    effect = { speed = -0.12, productivity = 0.3 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -101,7 +101,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-maize",
 	tier = 3,
-    effect = { speed = {bonus = 0.65} },
+    effect = { speed = 0.65 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -116,7 +116,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-maize",
 	tier = 3,
-    effect = { speed = {bonus = -0.12}, productivity = {bonus = 0.45} },
+    effect = { speed = -0.12, productivity = 0.45 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -131,7 +131,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-maize",
 	tier = 4,
-    effect = { speed = {bonus = 0.85} },
+    effect = { speed = 0.85 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -146,7 +146,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-maize",
 	tier = 4,
-    effect = { speed = {bonus = -0.12}, productivity = {bonus = 0.6} },
+    effect = { speed = -0.12, productivity = 0.6 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -161,7 +161,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-maize",
 	tier = 5,
-    effect = { speed = {bonus = 1.05} },
+    effect = { speed = 1.05 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -176,7 +176,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-maize",
 	tier = 5,
-    effect = { speed = {bonus = -0.12}, productivity = {bonus = 0.75} },
+    effect = { speed = -0.12, productivity = 0.75 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -211,7 +211,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-soybean",
 	tier = 1,
-    effect = { speed = {bonus = 0.15}, productivity = {bonus = 0.03} },
+    effect = { speed = 0.15, productivity = 0.03 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -226,7 +226,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-soybean",
 	tier = 2,
-    effect = { speed = {bonus = 0.25}, productivity = {bonus = 0.06} },
+    effect = { speed = 0.25, productivity = 0.06 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -241,7 +241,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-soybean",
 	tier = 3,
-    effect = { speed = {bonus = 0.35}, productivity = {bonus = 0.09} },
+    effect = { speed = 0.35, productivity = 0.09 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -256,7 +256,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-soybean",
 	tier = 4,
-    effect = { speed = {bonus = 0.45}, productivity = {bonus = 0.12} },
+    effect = { speed = 0.45, productivity = 0.12 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -271,7 +271,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-soybean",
 	tier = 5,
-    effect = { speed = {bonus = 0.55}, productivity = {bonus = 0.15} },
+    effect = { speed = 0.55, productivity = 0.15 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -306,7 +306,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-spruce-tree",
 	tier = 1,
-    effect = { speed = {bonus = 0.03}, productivity = {bonus = 0.03} },
+    effect = { speed = 0.03, productivity = 0.03 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -321,7 +321,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-spruce-tree",
 	tier = 2,
-    effect = { speed = {bonus = 0.06}, productivity = {bonus = 0.06} },
+    effect = { speed = 0.06, productivity = 0.06 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -336,7 +336,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-spruce-tree",
 	tier = 3,
-    effect = { speed = {bonus = 0.09}, productivity = {bonus = 0.09} },
+    effect = { speed = 0.09, productivity = 0.09 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -351,7 +351,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-spruce-tree",
 	tier = 4,
-    effect = { speed = {bonus = 0.12}, productivity = {bonus = 0.12} },
+    effect = { speed = 0.12, productivity = 0.12 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -366,7 +366,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-spruce-tree",
 	tier = 5,
-    effect = { speed = {bonus = 0.15}, productivity = {bonus = 0.15} },
+    effect = { speed = 0.15, productivity = 0.15 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -380,7 +380,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-rubber-tree",
 	tier = 1,
-    effect = { speed = {bonus = 0.03}, productivity = {bonus = 0.03} },
+    effect = { speed = 0.03, productivity = 0.03 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -394,7 +394,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-rubber-tree",
 	tier = 2,
-    effect = { speed = {bonus = 0.06}, productivity = {bonus = 0.06} },
+    effect = { speed = 0.06, productivity = 0.06 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -408,7 +408,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-rubber-tree",
 	tier = 3,
-    effect = { speed = {bonus = 0.09}, productivity = {bonus = 0.09} },
+    effect = { speed = 0.09, productivity = 0.09 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -422,7 +422,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-rubber-tree",
 	tier = 4,
-    effect = { speed = {bonus = 0.12}, productivity = {bonus = 0.12} },
+    effect = { speed = 0.12, productivity = 0.12 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -436,7 +436,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-rubber-tree",
 	tier = 5,
-    effect = { speed = {bonus = 0.15}, productivity = {bonus = 0.15} },
+    effect = { speed = 0.15, productivity = 0.15 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -471,7 +471,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-apple-tree",
 	tier = 1,
-    effect = { speed = {bonus = 0.03}, productivity = {bonus = 0.03} },
+    effect = { speed = 0.03, productivity = 0.03 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -486,7 +486,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-apple-tree",
 	tier = 2,
-    effect = { speed = {bonus = 0.06}, productivity = {bonus = 0.06} },
+    effect = { speed = 0.06, productivity = 0.06 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -501,7 +501,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-apple-tree",
 	tier = 3,
-    effect = { speed = {bonus = 0.09}, productivity = {bonus = 0.09} },
+    effect = { speed = 0.09, productivity = 0.09 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -516,7 +516,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-apple-tree",
 	tier = 4,
-    effect = { speed = {bonus = 0.12}, productivity = {bonus = 0.12} },
+    effect = { speed = 0.12, productivity = 0.12 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -531,7 +531,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-apple-tree",
 	tier = 5,
-    effect = { speed = {bonus = 0.15}, productivity = {bonus = 0.15} },
+    effect = { speed = 0.15, productivity = 0.15 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -576,7 +576,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-olive-tree",
 	tier = 1,
-    effect = { speed = {bonus = 0.03}, productivity = {bonus = 0.03} },
+    effect = { speed = 0.03, productivity = 0.03 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -591,7 +591,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-olive-tree",
 	tier = 2,
-    effect = { speed = {bonus = 0.06}, productivity = {bonus = 0.06} },
+    effect = { speed = 0.06, productivity = 0.06 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -606,7 +606,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-olive-tree",
 	tier = 3,
-    effect = { speed = {bonus = 0.09}, productivity = {bonus = 0.09} },
+    effect = { speed = 0.09, productivity = 0.09 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -621,7 +621,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-olive-tree",
 	tier = 4,
-    effect = { speed = {bonus = 0.12}, productivity = {bonus = 0.12} },
+    effect = { speed = 0.12, productivity = 0.12 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -636,7 +636,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-olive-tree",
 	tier = 5,
-    effect = { speed = {bonus = 0.15}, productivity = {bonus = 0.15} },
+    effect = { speed = 0.15, productivity = 0.15 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -731,7 +731,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-chicken",
 	tier = 1,
-    effect = { productivity = {bonus = 0.04} },
+    effect = { productivity = 0.04 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -746,7 +746,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-chicken",
 	tier = 1,
-    effect = { productivity = {bonus = 0.04} },
+    effect = { productivity = 0.04 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -761,7 +761,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-chicken",
 	tier = 2,
-    effect = { productivity = {bonus = 0.06} },
+    effect = { productivity = 0.06 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -776,7 +776,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-chicken",
 	tier = 3,
-    effect = { productivity = {bonus = 0.08} },
+    effect = { productivity = 0.08 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -791,7 +791,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-chicken",
 	tier = 4,
-    effect = { productivity = {bonus = 0.10} },
+    effect = { productivity = 0.10 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -806,7 +806,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-chicken",
 	tier = 5,
-    effect = { productivity = {bonus = 0.12} },
+    effect = { productivity = 0.12 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -881,7 +881,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-sheep",
 	tier = 1,
-    effect = { speed = {bonus = -0.04}, productivity = {bonus = 0.06} },
+    effect = { speed = -0.04, productivity = 0.06 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -896,7 +896,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-sheep",
 	tier = 2,
-    effect = { speed = {bonus = -0.06}, productivity = {bonus = 0.09} },
+    effect = { speed = -0.06, productivity = 0.09 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -911,7 +911,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-sheep",
 	tier = 3,
-    effect = { speed = {bonus = -0.08}, productivity = {bonus = 0.12} },
+    effect = { speed = -0.08, productivity = 0.12 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -926,7 +926,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-sheep",
 	tier = 4,
-    effect = { speed = {bonus = -0.1}, productivity = {bonus = 0.15} },
+    effect = { speed = -0.1, productivity = 0.15 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -941,7 +941,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-sheep",
 	tier = 5,
-    effect = { speed = {bonus = -0.12}, productivity = {bonus = 0.18} },
+    effect = { speed = -0.12, productivity = 0.18 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -996,7 +996,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-ox",
 	tier = 1,
-    effect = { speed = {bonus = 0.2} },
+    effect = { speed = 0.2 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -1011,7 +1011,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-ox",
 	tier = 2,
-    effect = { speed = {bonus = 0.35} },
+    effect = { speed = 0.35 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -1026,7 +1026,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-ox",
 	tier = 3,
-    effect = { speed = {bonus = 0.5} },
+    effect = { speed = 0.5 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -1041,7 +1041,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-ox",
 	tier = 4,
-    effect = { speed = {bonus = 0.65} },
+    effect = { speed = 0.65 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -1056,7 +1056,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-ox",
 	tier = 5,
-    effect = { speed = {bonus = 0.8} },
+    effect = { speed = 0.8 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -1081,7 +1081,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-cow",
 	tier = 1,
-    effect = { speed = {bonus = -0.04}, productivity = {bonus = 0.03} },
+    effect = { speed = -0.04, productivity = 0.03 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -1096,7 +1096,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-cow",
 	tier = 2,
-    effect = { speed = {bonus = -0.08}, productivity = {bonus = 0.06} },
+    effect = { speed = -0.08, productivity = 0.06 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -1111,7 +1111,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-cow",
 	tier = 3,
-    effect = { speed = {bonus = -0.12}, productivity = {bonus = 0.09} },
+    effect = { speed = -0.12, productivity = 0.09 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -1126,7 +1126,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-cow",
 	tier = 4,
-    effect = { speed = {bonus = -0.16}, productivity = {bonus = 0.12} },
+    effect = { speed = -0.16, productivity = 0.12 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -1141,7 +1141,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-cow",
 	tier = 5,
-    effect = { speed = {bonus = -0.2}, productivity = {bonus = 0.15} },
+    effect = { speed = -0.2, productivity = 0.15 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -1179,7 +1179,7 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-soda-ash",
-    icon = "__angelspetrochem__/graphics/icons/solid-sodium-carbonate.png",
+    icon = "__angelspetrochem_art__/graphics/icons/solid-sodium-carbonate.png",
     icon_size = 32,
     subgroup = "aoc-chemicals",
     order = "e",
@@ -1216,13 +1216,13 @@ data:extend({{
     stack_size = 200
 }})
 
-data.raw['item']['empty-barrel'].subgroup = "aoc-storage"
-data.raw['item']['empty-barrel'].order = "g"
+data.raw['item']['barrel'].subgroup = "aoc-storage"
+data.raw['item']['barrel'].order = "g"
 
 data:extend({{
     type = "item",
     name = "aoc-bronze-plate",
-    icon = "__angelssmelting__/graphics/icons/plate-bronze.png",
+    icon = "__angelssmelting_art__/graphics/icons/plate-bronze.png",
     icon_size = 32,
     subgroup = "aoc-metals-alloys",
     order = "a",

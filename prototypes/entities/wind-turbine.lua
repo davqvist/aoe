@@ -25,7 +25,8 @@ data:extend({{
 	max_health = 300,
 	selection_box = {{-1.5, -0.5}, {1.5, 2.5}},
 	collision_box = {{-1.4, -0.4}, {1.4, 2.4}},
-	animation = {
+	graphics_set = {
+    animation = {
       layers = {
         {
           filename = "__ageofcreation__/img/entities/wind-turbine.png",
@@ -36,6 +37,7 @@ data:extend({{
         }
       }
     }
+  }
 }})
 
 data:extend({{
@@ -54,13 +56,14 @@ data:extend({{
 	module_specification = { module_slots = 0 },
 	icon = "__ageofcreation__/img/entities/empty.png",
 	icon_size = 128,
-	flags = { "placeable-neutral", "placeable-player", "not-on-map", "hidden", "hide-alt-info" },
+	flags = { "placeable-neutral", "placeable-player", "not-on-map", "hide-alt-info" },
 	minable = nil,
 	max_health = 1,
 	selection_box = {{-0, -0}, {0, 0}},
 	collision_box = {{-0, -0}, {0, 0}},
 	selectable_in_game = false,
-  animation = {
+  graphics_set = {
+    animation = {
       layers = {
         {
           filename = "__ageofcreation__/img/entities/empty.png",
@@ -71,4 +74,5 @@ data:extend({{
         }
       }
     }
+  }
 }})

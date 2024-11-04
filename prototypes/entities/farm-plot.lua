@@ -1,7 +1,7 @@
 data:extend({{
     type = "item",
     name = "aoc-farm-plot",
-    icon = "__angelsbioprocessing__/graphics/icons/basic-farm.png",
+    icon = "__angelsbioprocessing_art__/graphics/icons/basic-farm.png",
     icon_size = 32,
     subgroup = "aoc-flora-farms",
     order = "b",
@@ -18,7 +18,7 @@ data:extend({{
 	energy_usage = "1kW",
 	module_specification = { module_slots = 6 },
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-  icon = "__angelsbioprocessing__/graphics/icons/basic-farm.png",
+  icon = "__angelsbioprocessing_art__/graphics/icons/basic-farm.png",
   icon_size = 32,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoc-farm-plot" },
@@ -28,7 +28,7 @@ data:extend({{
 	animation = {
     layers = {
       {
-        filename = "__angelsbioprocessing__/graphics/entity/crop-farm/farm-base.png",
+        filename = "__angelsbioprocessing_art__/graphics/entity/crop-farm/farm-base.png",
         width = 224,
         height = 224,
         line_length = 1,
@@ -37,7 +37,7 @@ data:extend({{
         scale = 1.8
       },
       {
-        filename = "__angelsbioprocessing__/graphics/entity/crop-farm/field-basic.png",
+        filename = "__angelsbioprocessing_art__/graphics/entity/crop-farm/field-basic.png",
         width = 224,
         height = 224,
         line_length = 1,
@@ -47,29 +47,30 @@ data:extend({{
       }
     }
   },
-  working_visualisations = {
-    {
-      apply_recipe_tint = "primary",
-      animation = {
-        filename = "__angelsbioprocessing__/graphics/entity/crop-farm/field-animation-1.png",
-        line_length = 6,
-        frame_count = 36,
-        width = 224,
-        height = 224,
-        shift = { 0, 0 },
-        animation_speed = 0.005,
-        scale = 1.8
+  graphics_set = {
+    working_visualisations = {
+      {
+        apply_recipe_tint = "primary",
+        animation = {
+            filename = "__angelsbioprocessing_art__/graphics/entity/crop-farm/field-animation-1.png",
+            line_length = 6,
+            frame_count = 36,
+            width = 224,
+            height = 224,
+            shift = { 0, 0 },
+            animation_speed = 0.005,
+            scale = 1.8
+          }
       },
     },
   },
+  fluid_boxes_off_when_no_fluid_recipe = true,
 	fluid_boxes = {
     {
       production_type = "input",
-      base_area = 10,
-      base_level = -1,
-      pipe_connections = {{ type="input", position = {0, -5} }}
-    },
-    off_when_no_fluid_recipe = true
+      volume = 1000,
+      pipe_connections = {{ flow_direction="input", direction = defines.direction.north, position = {0, -4} }}
+    }
   },
   working_sound = {
     sound = { filename = "__base__/sound/chemical-plant.ogg" },

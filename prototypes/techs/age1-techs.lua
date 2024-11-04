@@ -123,7 +123,7 @@ data:extend({{
     type = "technology",
     name = "aoc-digging-tech-1",
     icon_size = 160,
-    icon = "__angelsrefining__/graphics/entity/liquifier/liquifier.png",
+    icon = "__angelsrefining_art__/graphics/entity/liquifier/liquifier.png",
     prerequisites = {"aoc-fluid-handling-tech-1"},
 	  effects = {
 	    {
@@ -442,7 +442,7 @@ data:extend({{
     type = "technology",
     name = "aoc-copper-tech-1",
     icon_size = 32,
-    icon = "__angelssmelting__/graphics/icons/plate-copper.png",
+    icon = "__angelssmelting_art__/graphics/icons/plate-copper.png",
     prerequisites = {"aoc-water-filtering-tech"},
 	  effects = {
       {

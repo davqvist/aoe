@@ -26,14 +26,6 @@ data:extend({{
     icon = "__base__/graphics/technology/circuit-network.png",
     prerequisites = {"aoc-electronics-tech-1"},
 	  effects = {
-      {
-        type = "unlock-recipe",
-        recipe = "aoc-crafting-red-wire-recipe"
-      },
-	    {
-        type = "unlock-recipe",
-        recipe = "aoc-crafting-green-wire-recipe"
-      },
 	    {
         type = "unlock-recipe",
         recipe = "aoc-crafting-arithmetic-combinator-recipe"
@@ -81,10 +73,10 @@ data:extend({{
         type = "unlock-recipe",
         recipe = "aoc-crafting-small-electric-pole-recipe"
       },
-	    {
-        type = "unlock-recipe",
-        recipe = "aoc-crafting-small-electric-fuse-recipe"
-      }
+	    --{
+      --  type = "unlock-recipe",
+      --  recipe = "aoc-crafting-small-electric-fuse-recipe"
+      --}
     },
     unit = {
         count = 25,
@@ -367,7 +359,7 @@ data:extend({{
     type = "technology",
     name = "aoc-optics-tech",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/optics.png",
+    icon = "__base__/graphics/technology/lamp.png",
     prerequisites = {"aoc-low-voltage-tech"},
 	  effects = {
       {
@@ -569,7 +561,7 @@ data:extend({{
     type = "technology",
     name = "aoc-tin-tech-1",
     icon_size = 32,
-    icon = "__angelssmelting__/graphics/icons/plate-tin.png",
+    icon = "__angelssmelting_art__/graphics/icons/plate-tin.png",
     prerequisites = {"aoc-igneous-stones-tech-1"},
 	  effects = {
       {
@@ -604,7 +596,7 @@ data:extend({{
     type = "technology",
     name = "aoc-aluminium-tech-1",
     icon_size = 32,
-    icon = "__angelssmelting__/graphics/icons/plate-aluminium.png",
+    icon = "__angelssmelting_art__/graphics/icons/plate-aluminium.png",
     prerequisites = {"aoc-metamorphic-stones-tech-1"},
 	  effects = {
       {
@@ -692,7 +684,7 @@ data:extend({{
     type = "technology",
     name = "aoc-electrolysis-tech",
     icon_size = 224,
-    icon = "__angelspetrochem__/graphics/entity/electrolyser/electrolyser-north.png",
+    icon = "__angelspetrochem_art__/graphics/entity/electrolyser/electrolyser-north.png",
     prerequisites = {"aoc-sedimentary-stones-tech-1", "aoc-tin-tech-1", "aoc-salt-tech"},
 	  effects = {
       {
@@ -719,7 +711,7 @@ data:extend({{
     type = "technology",
     name = "aoc-pressure-tech",
     icon_size = 256,
-    icon = "__angelspetrochem__/graphics/entity/air-filter/air-filter.png",
+    icon = "__angelspetrochem_art__/graphics/entity/air-filter/air-filter.png",
     prerequisites = {"aoc-electric-machines-tech"},
 	  effects = {
       {

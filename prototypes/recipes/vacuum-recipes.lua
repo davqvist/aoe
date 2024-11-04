@@ -10,7 +10,7 @@ for _, recipe in pairs(data.raw.recipe) do
                 icons = combine_icons_tiny( get_icons( data.raw[result.type][result.name] ), data.raw['fluid']['aoc-vacuum'].icons )
                 main_product = result.name
             end
-            if not result.catalyst_amount then
+            if not result.ignored_by_productivity then
                 local new_amount = math.floor(result.amount*1.1)
                 table.insert(new_results,{type = result.type, name = result.name, amount = new_amount})
                 if result.amount*1.1-new_amount > 0 then

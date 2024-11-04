@@ -41,7 +41,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-lotus",
 	tier = 1,
-    effect = { productivity = {bonus = 0.06} },
+    effect = { productivity = 0.06 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -56,7 +56,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-lotus",
 	tier = 2,
-    effect = { productivity = {bonus = 0.12} },
+    effect = { productivity = 0.12 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -71,7 +71,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-lotus",
 	tier = 3,
-    effect = { productivity = {bonus = 0.18} },
+    effect = { productivity = 0.18 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -86,7 +86,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-lotus",
 	tier = 4,
-    effect = { productivity = {bonus = 0.24} },
+    effect = { productivity = 0.24 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -101,7 +101,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-lotus",
 	tier = 5,
-    effect = { productivity = {bonus = 0.30} },
+    effect = { productivity = 0.30 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})

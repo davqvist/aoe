@@ -1,7 +1,7 @@
 data:extend({{
     type = "item",
     name = "aoc-casting-unit",
-    icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
+    icon = "__angelssmelting_art__/graphics/icons/induction-furnace.png",
     icon_size = 64,
     icon_mipmaps = 4,
     scale = 0.5,
@@ -18,7 +18,7 @@ data:extend({{
 	crafting_speed = 1,
 	energy_source = {
     type = "electric",
-    emissions_per_minute = 10,
+    emissions_per_minute = {pollution = 10},
     usage_priority = "secondary-input",
 	  drain = "40kW"
   },
@@ -27,7 +27,7 @@ data:extend({{
 	module_specification ={
     module_slots = 3
   },
-  icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
+  icon = "__angelssmelting_art__/graphics/icons/induction-furnace.png",
   icon_size = 64,
   icon_mipmaps = 4,
   scale = 0.5,
@@ -36,100 +36,99 @@ data:extend({{
 	max_health = 300,
 	selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
 	collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
-	animation = {
-    layers = {
+  graphics_set = {
+    animation = {
+      layers = {
+        {
+          filename = "__angelssmelting_art__/graphics/entity/induction-furnace/induction-furnace-base.png",
+          priority = "high",
+          width = 170,
+          height = 192,
+          line_length = 6,
+          frame_count = 36,
+          animation_speed = 0.5,
+          shift = util.by_pixel(0.5, -5.5)
+        },
+        {
+          filename = "__angelssmelting_art__/graphics/entity/induction-furnace/induction-furnace-shadow.png",
+          priority = "high",
+          width = 216,
+          height = 170,
+          line_length = 6,
+          frame_count = 36,
+          animation_speed = 0.5,
+          draw_as_shadow = true,
+          shift = util.by_pixel(24, 9)
+        },
+      }
+    },
+    working_visualisations = {
       {
-        filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace-base.png",
-        priority = "high",
-        width = 170,
-        height = 192,
-        line_length = 6,
-        frame_count = 36,
-        animation_speed = 0.5,
-        shift = util.by_pixel(0.5, -5.5)
+        apply_recipe_tint = "primary",
+        always_draw = true,
+        animation = {
+          filename = "__angelssmelting_art__/graphics/entity/induction-furnace/induction-furnace-working-recipe-tint-mask.png",
+          priority = "high",
+          width = 170,
+          height = 192,
+          line_length = 6,
+          frame_count = 36,
+          animation_speed = 0.5,
+          shift = util.by_pixel(0.5, -5.5)
+        }
       },
       {
-        filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace-shadow.png",
-        priority = "high",
-        width = 216,
-        height = 170,
-        line_length = 6,
-        frame_count = 36,
-        animation_speed = 0.5,
-        draw_as_shadow = true,
-        shift = util.by_pixel(24, 9)
+        always_draw = true,
+        north_animation = {
+          filename = "__angelssmelting_art__/graphics/entity/induction-furnace/vertical-pipe-shadow-patch.png",
+          priority = "high",
+          width = 64,
+          height = 64,
+          repeat_count = 36,
+          draw_as_shadow = true,
+          shift = { 2, -2 }
+        }
       },
+      {
+        always_draw = true,
+        animation = {
+          filename = "__angelssmelting_art__/graphics/entity/induction-furnace/induction-furnace-working-lights.png",
+          priority = "high",
+          width = 170,
+          height = 192,
+          line_length = 6,
+          frame_count = 36,
+          animation_speed = 0.5,
+          shift = util.by_pixel(0.5, -5.5),
+          draw_as_light = true
+        }
+      }
     }
   },
-  working_visualisations = {
-    {
-      apply_recipe_tint = "primary",
-      always_draw = true,
-      animation = {
-        filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace-working-recipe-tint-mask.png",
-        priority = "high",
-        width = 170,
-        height = 192,
-        line_length = 6,
-        frame_count = 36,
-        animation_speed = 0.5,
-        shift = util.by_pixel(0.5, -5.5)
-      }
-    },
-    {
-      always_draw = true,
-      north_animation = {
-        filename = "__angelssmelting__/graphics/entity/induction-furnace/vertical-pipe-shadow-patch.png",
-        priority = "high",
-        width = 64,
-        height = 64,
-        repeat_count = 36,
-        draw_as_shadow = true,
-        shift = { 2, -2 }
-      }
-    },
-    {
-      always_draw = true,
-      animation = {
-        filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace-working-lights.png",
-        priority = "high",
-        width = 170,
-        height = 192,
-        line_length = 6,
-        frame_count = 36,
-        animation_speed = 0.5,
-        shift = util.by_pixel(0.5, -5.5),
-        draw_as_light = true
-      }
-    },
-  },
+  fluid_boxes_off_when_no_fluid_recipe = true,
 	fluid_boxes = {
     {
       production_type = "input",
       pipe_picture = assembler2pipepictures(),
       pipe_covers = pipecoverspictures(),
-      base_area = 10,
-      base_level = -1,
-      pipe_connections = {{ type="input", position = {3, 0} }}
+      volume = 1000,
+      pipe_connections = {{ flow_direction="input", direction = defines.direction.east, position = {2, 0} }}
     },{
       production_type = "input",
       pipe_picture = assembler2pipepictures(),
       pipe_covers = pipecoverspictures(),
-      base_area = 10,
-      base_level = -1,
-      pipe_connections = {{ type="input", position = {3, -2} }}
+      volume = 1000,
+      pipe_connections = {{ flow_direction="input", direction = defines.direction.east, position = {2, -2} }}
     },{
       production_type = "input",
       pipe_picture = assembler2pipepictures(),
       pipe_covers = pipecoverspictures(),
-      base_area = 10,
-      base_level = -1,
-      pipe_connections = {{ type="input", position = {3, 2} }}
-    },
-    off_when_no_fluid_recipe = true
+      volume = 1000,
+      pipe_connections = {{ flow_direction="input", direction = defines.direction.east, position = {2, 2} }}
+    }
   },
   working_sound = {
-    sound = { filename = "__angelssmelting__/sound/induction-furnace.ogg", volume = 0.45 },
+    sound = { filename = "__angelssmelting_art__/sound/induction-furnace.ogg", volume = 0.45 },
     idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     audible_distance_modifier = 0.5,
     apparent_volume = 2.5,

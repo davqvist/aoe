@@ -26,10 +26,10 @@ data:extend({{
 	crafting_speed = 0.5,
 	energy_source = {
     type = "burner",
-    fuel_category = "chemical",
+    fuel_categories = {"chemical"},
     effectivity = 1,
     fuel_inventory_size = 1,
-    emissions_per_minute = 12,
+    emissions_per_minute = {pollution = 12},
     light_flicker = {color = {0,0,0}},
     smoke =
     {
@@ -60,14 +60,16 @@ data:extend({{
 	max_health = 300,
 	selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
 	collision_box = {{-1.9, -1.9}, {1.9, 1.9}},
-	animation = {
-    layers = {
-      {
-        filename = "__ageofcreation__/img/entities/sawmill.png",
-        width = 192,
-        height = 192,
-        frame_count = 1,
-		    scale = 0.6666666
+	graphics_set = {
+    animation = {
+      layers = {
+        {
+          filename = "__ageofcreation__/img/entities/sawmill.png",
+          width = 192,
+          height = 192,
+          frame_count = 1,
+          scale = 0.6666666
+        }
       }
     }
   }
@@ -91,7 +93,7 @@ data:extend({{
 	crafting_speed = 1,
 	energy_source = {
     type = "electric",
-    emissions_per_minute = 10,
+    emissions_per_minute = {pollution = 10},
     usage_priority = "secondary-input",
 	  drain = "9kW"
   },
@@ -108,7 +110,8 @@ data:extend({{
 	max_health = 300,
 	selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
 	collision_box = {{-1.9, -1.9}, {1.9, 1.9}},
-	animation = {
+	graphics_set = {
+    animation = {
       layers = {
         {
           filename = "__ageofcreation__/img/entities/sawmill.png",
@@ -119,4 +122,5 @@ data:extend({{
         }
       }
     }
+  }
 }})

@@ -3,7 +3,7 @@ data:extend({{
     name = "aoc-pocket-hive-equipment",
     take_result = "aoc-pocket-hive-equipment",
     sprite = {
-      filename = "__NPBees2__/graphics/icon/logistic-hive.png",
+      filename = "__NPBees2_art__/graphics/icon/logistic-hive.png",
       width = 32,
       height = 32,
       scale = 3,
@@ -67,10 +67,10 @@ data:extend({{
     power = '300kW',
     burner = {
 		type = 'burner',
-		emissions_per_minute = 6,
+		emissions_per_minute = {pollution = 6},
 		fuel_inventory_size = 4,
 		burnt_inventory_size = 4,
-		fuel_category = 'chemical'
+		fuel_categories = {'chemical'}
 	},
     energy_source = {
 		type = 'electric',

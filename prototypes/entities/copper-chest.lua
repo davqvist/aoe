@@ -27,7 +27,7 @@ data:extend({{
     inventory_size = 160,
     open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume = 0.43 },
     close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.43 },
-    vehicle_impact_sound = sounds.generic_impact,
+    impact_category = "metal",
     picture =
     {
       layers =

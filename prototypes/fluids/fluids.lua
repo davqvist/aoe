@@ -23,7 +23,7 @@ data:extend({{
     icon_size = 64,
     subgroup = "aoc-fuel-fluids",
     order = "a",
-    heat_capacity = "15KJ",
+    heat_capacity = "15kJ",
     base_color = {r=0.8, g=0.4, b=0.25},
     flow_color = {r=0.8, g=0.6, b=0.25},
     default_temperature = 1000,
@@ -89,7 +89,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-hydrogen",
-    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/hydrogen.png", 72 }, "HHH" ),
+    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem_art__/graphics/icons/molecules/hydrogen.png", 72 }, "HHH" ),
     subgroup = "aoc-simple-gasses",
     order = "a",
 	base_color = {r=1.0, g=1.0, b=1.0},
@@ -102,7 +102,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-oxygen",
-    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/oxygen.png", 72 }, "OOO" ),
+    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem_art__/graphics/icons/molecules/oxygen.png", 72 }, "OOO" ),
     subgroup = "aoc-simple-gasses",
     order = "b",
 	base_color = {r=1.0, g=0.0, b=0.0},
@@ -114,7 +114,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-nitrogen",
-    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/nitrogen.png", 64 }, "NNN" ),
+    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem_art__/graphics/icons/molecules/nitrogen.png", 64 }, "NNN" ),
     subgroup = "aoc-simple-gasses",
     order = "c",
 	base_color = {r=0.25, g=0.37, b=0.45},
@@ -126,7 +126,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-chlorine",
-    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/chlorine.png", 72 }, "ClClCl" ),
+    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem_art__/graphics/icons/molecules/chlorine.png", 72 }, "ClClCl" ),
     subgroup = "aoc-simple-gasses",
     order = "d",
 	base_color = {r=0.0, g=1.0, b=0.0},
@@ -162,7 +162,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-hydrogen-chloride",
-    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/hydrogen-chloride.png", 72 }, "ClClH" ),
+    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem_art__/graphics/icons/molecules/hydrogen-chloride.png", 72 }, "ClClH" ),
     subgroup = "aoc-compound-gasses",
     order = "d",
 	base_color = {r=0.5, g=1.0, b=0.5},
@@ -174,7 +174,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-ammonia",
-    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/ammonia.png", 72 }, "NNH" ),
+    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem_art__/graphics/icons/molecules/ammonia.png", 72 }, "NNH" ),
     subgroup = "aoc-compound-gasses",
     order = "g",
 	base_color = {r=0.0, g=0.0, b=0.7},
@@ -186,7 +186,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-nitric-oxide",
-    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/nitric-oxide.png", 72 }, "NNO" ),
+    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem_art__/graphics/icons/molecules/nitric-oxide.png", 72 }, "NNO" ),
     subgroup = "aoc-compound-gasses",
     order = "h",
 	base_color = {r=0.2, g=0.0, b=0.7},
@@ -198,7 +198,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-dinitrogen-tetroxide",
-    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/dinitrogen-tetroxide.png", 72 }, "NNO" ),
+    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem_art__/graphics/icons/molecules/dinitrogen-tetroxide.png", 72 }, "NNO" ),
     subgroup = "aoc-compound-gasses",
     order = "i",
 	base_color = {r=0.2, g=0.0, b=0.7},
@@ -219,13 +219,13 @@ data:extend({{
     gas = true
 }})
 
-data.raw.fluid["liquid-sulfuric-acid"].subgroup = "aoc-fluids-acids"
-data.raw.fluid["liquid-sulfuric-acid"].order = "a"
+data.raw.fluid["sulfuric-acid"].subgroup = "aoc-fluids-acids"
+data.raw.fluid["sulfuric-acid"].order = "a"
 
 data:extend({{
     type = "fluid",
     name = "aoc-hydrochloric-acid",
-    icons = angelsmods.functions.create_liquid_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/hydrochloric-acid.png", 72 }, "ClHO" ),
+    icons = angelsmods.functions.create_liquid_fluid_icon( { "__angelspetrochem_art__/graphics/icons/molecules/hydrochloric-acid.png", 72 }, "ClHO" ),
     subgroup = "aoc-fluids-acids",
     order = "b",
 	base_color = {r=0.5, g=1.0, b=0.7},
@@ -247,7 +247,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-nitric-acid",
-    icons = angelsmods.functions.create_liquid_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/nitric-acid.png", 72 }, "NHO" ),
+    icons = angelsmods.functions.create_liquid_fluid_icon( { "__angelspetrochem_art__/graphics/icons/molecules/nitric-acid.png", 72 }, "NHO" ),
     subgroup = "aoc-fluids-acids",
     order = "d",
 	base_color = {r=0.4, g=0.2, b=0.7},
@@ -258,7 +258,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-acetic-acid",
-    icons = angelsmods.functions.create_liquid_fluid_icon( { "__angelsbioprocessing__/graphics/icons/molecule-acetic-acid.png", 72 }, "COH" ),
+    icons = angelsmods.functions.create_liquid_fluid_icon( { "__angelsbioprocessing_art__/graphics/icons/molecule-acetic-acid.png", 72 }, "COH" ),
     subgroup = "aoc-fluids-acids",
     order = "e",
 	base_color = {r=0.65, g=0.65, b=0.65},
@@ -280,7 +280,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-carbon-monoxide",
-    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/carbon-monoxide.png", 72 }, "CCOc" ),
+    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem_art__/graphics/icons/molecules/carbon-monoxide.png", 72 }, "CCOc" ),
     subgroup = "aoc-compound-gasses",
     order = "a",
 	base_color = {r=0.0, g=0.0, b=0.0},
@@ -292,7 +292,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-carbon-dioxide",
-    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/carbon-dioxide.png", 72 }, "COcOc" ),
+    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem_art__/graphics/icons/molecules/carbon-dioxide.png", 72 }, "COcOc" ),
     subgroup = "aoc-compound-gasses",
     order = "b",
 	base_color = {r=0.0, g=0.0, b=0.0},
@@ -304,7 +304,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-methane",
-    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/methane.png", 72 }, "CHH" ),
+    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem_art__/graphics/icons/molecules/methane.png", 72 }, "CHH" ),
     subgroup = "aoc-compound-gasses",
     order = "c",
 	base_color = {r=0.7, g=0.7, b=0.7},
@@ -316,7 +316,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-sulfur-dioxide",
-    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/sulfur-dioxide.png", 72 }, "SOO" ),
+    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem_art__/graphics/icons/molecules/sulfur-dioxide.png", 72 }, "SOO" ),
     subgroup = "aoc-compound-gasses",
     order = "e",
 	base_color = {r=0.8, g=0.8, b=0.0},
@@ -328,7 +328,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-hydrogen-sulfide",
-    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/hydrogen-sulfide.png", 72 }, "SHH" ),
+    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem_art__/graphics/icons/molecules/hydrogen-sulfide.png", 72 }, "SHH" ),
     subgroup = "aoc-compound-gasses",
     order = "f",
 	base_color = {r=0.6, g=0.8, b=0.0},
@@ -447,7 +447,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-ethanol",
-    icons = angelsmods.functions.create_liquid_fluid_icon( { "__angelsbioprocessing__/graphics/icons/molecule-ethanol.png", 72 }, "COH"),
+    icons = angelsmods.functions.create_liquid_fluid_icon( { "__angelsbioprocessing_art__/graphics/icons/molecule-ethanol.png", 72 }, "COH"),
     subgroup = "aoc-fuel-fluids",
     order = "b",
 	base_color = {r=0.27, g=0.4, b=0.43},
@@ -459,7 +459,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-methanol",
-    icons = angelsmods.functions.create_liquid_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/methanol.png", 72 }, "COH"),
+    icons = angelsmods.functions.create_liquid_fluid_icon( { "__angelspetrochem_art__/graphics/icons/molecules/methanol.png", 72 }, "COH"),
     subgroup = "aoc-fuel-fluids",
     order = "c",
 	base_color = {r=0.27, g=0.4, b=0.43},
@@ -519,7 +519,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-glycerol",
-    icons = angelsmods.functions.create_liquid_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/glycerol.png", 72 }, "COH" ),
+    icons = angelsmods.functions.create_liquid_fluid_icon( { "__angelspetrochem_art__/graphics/icons/molecules/glycerol.png", 72 }, "COH" ),
     subgroup = "aoc-fluids-flora-fauna",
     order = "e",
 	base_color = {r=0.35, g=0.3, b=0.12},
@@ -564,7 +564,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-iron-molten",
-    icons = { { icon = "__angelssmelting__/graphics/icons/molten-iron.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/fe.png", icon_size = 64 } },
+    icons = { { icon = "__angelssmelting_art__/graphics/icons/molten-iron.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/fe.png", icon_size = 64 } },
     subgroup = "aoc-fluids-molten",
     order = "a",
 	base_color = {r=0.47, g=0.52, b=0.55},
@@ -586,7 +586,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-copper-molten",
-    icons = { { icon = "__angelssmelting__/graphics/icons/molten-copper.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/cu.png", icon_size = 64 } },
+    icons = { { icon = "__angelssmelting_art__/graphics/icons/molten-copper.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/cu.png", icon_size = 64 } },
     subgroup = "aoc-fluids-molten",
     order = "b",
 	base_color = {r=0.56, g=0.35, b=0.29},
@@ -608,7 +608,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-tin-molten",
-    icons = { { icon = "__angelssmelting__/graphics/icons/molten-tin.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/sn.png", icon_size = 64 } },
+    icons = { { icon = "__angelssmelting_art__/graphics/icons/molten-tin.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/sn.png", icon_size = 64 } },
     subgroup = "aoc-fluids-molten",
     order = "c",
 	base_color = {r=0.35, g=0.47, b=0.34},
@@ -630,7 +630,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-aluminium-molten",
-    icons = { { icon = "__angelssmelting__/graphics/icons/molten-aluminium.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/al.png", icon_size = 64 } },
+    icons = { { icon = "__angelssmelting_art__/graphics/icons/molten-aluminium.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/al.png", icon_size = 64 } },
     subgroup = "aoc-fluids-molten",
     order = "d",
 	base_color = {r=0.64, g=0.57, b=0.31},
@@ -652,7 +652,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-lead-molten",
-    icons = { { icon = "__angelssmelting__/graphics/icons/molten-lead.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/pb.png", icon_size = 64 } },
+    icons = { { icon = "__angelssmelting_art__/graphics/icons/molten-lead.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/pb.png", icon_size = 64 } },
     subgroup = "aoc-fluids-molten",
     order = "e",
 	base_color = {r=0.33, g=0.28, b=0.32},
@@ -674,7 +674,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-silver-molten",
-    icons = { { icon = "__angelssmelting__/graphics/icons/molten-silver.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/ag.png", icon_size = 64 } },
+    icons = { { icon = "__angelssmelting_art__/graphics/icons/molten-silver.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/ag.png", icon_size = 64 } },
     subgroup = "aoc-fluids-molten",
     order = "f",
 	base_color = {r=0.54, g=0.59, b=0.63},
@@ -696,7 +696,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-nickel-molten",
-    icons = { { icon = "__angelssmelting__/graphics/icons/molten-nickel.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/ni.png", icon_size = 64 } },
+    icons = { { icon = "__angelssmelting_art__/graphics/icons/molten-nickel.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/ni.png", icon_size = 64 } },
     subgroup = "aoc-fluids-molten",
     order = "g",
 	base_color = {r=0.23, g=0.42, b=0.40},
@@ -718,7 +718,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-gold-molten",
-    icons = { { icon = "__angelssmelting__/graphics/icons/molten-gold.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/au.png", icon_size = 64 } },
+    icons = { { icon = "__angelssmelting_art__/graphics/icons/molten-gold.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/au.png", icon_size = 64 } },
     subgroup = "aoc-fluids-molten",
     order = "h",
 	base_color = {r=0.75, g=0.63, b=0.09},
@@ -740,7 +740,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-zinc-molten",
-    icons = { { icon = "__angelssmelting__/graphics/icons/molten-zinc.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/zn.png", icon_size = 64 } },
+    icons = { { icon = "__angelssmelting_art__/graphics/icons/molten-zinc.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/zn.png", icon_size = 64 } },
     subgroup = "aoc-fluids-molten",
     order = "i",
 	base_color = {r=0.38, g=0.60, b=0.58},
@@ -762,7 +762,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-chromium-molten",
-    icons = { { icon = "__angelssmelting__/graphics/icons/molten-chrome.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/cr.png", icon_size = 64 } },
+    icons = { { icon = "__angelssmelting_art__/graphics/icons/molten-chrome.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/cr.png", icon_size = 64 } },
     subgroup = "aoc-fluids-molten",
     order = "j",
 	base_color = {r=0.68, g=0.62, b=0.73},
@@ -847,7 +847,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-ethane",
-    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/ethane.png", 72 }, "CHH" ),
+    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem_art__/graphics/icons/molecules/ethane.png", 72 }, "CHH" ),
     subgroup = "aoc-petrochem-fluids",
     order = "g",
 	base_color = {r=0.38, g=0.38, b=0.38},
@@ -859,7 +859,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-ethylene",
-    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/ethylene.png", 72 }, "CHH" ),
+    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem_art__/graphics/icons/molecules/ethylene.png", 72 }, "CHH" ),
     subgroup = "aoc-petrochem-fluids",
     order = "h",
 	base_color = {r=0.43, g=0.43, b=0.43},
@@ -871,7 +871,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-polyethylene",
-    icons = angelsmods.functions.create_liquid_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/polyethylene_rotated.png", 72, { -10, 0 }, 32 / 72 }, "CHH" ),
+    icons = angelsmods.functions.create_liquid_fluid_icon( { "__angelspetrochem_art__/graphics/icons/molecules/polyethylene_rotated.png", 72, { -10, 0 }, 32 / 72 }, "CHH" ),
     subgroup = "aoc-petrochem-fluids",
     order = "i",
 	base_color = {r=0.48, g=0.48, b=0.48},
@@ -894,7 +894,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-propylene",
-    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/propene.png", 72 }, "CHH" ),
+    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem_art__/graphics/icons/molecules/propene.png", 72 }, "CHH" ),
     subgroup = "aoc-petrochem-fluids",
     order = "k",
 	base_color = {r=0.43, g=0.43, b=0.43},
@@ -906,7 +906,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-butane",
-    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/butane.png", 72 }, "CHH" ),
+    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem_art__/graphics/icons/molecules/butane.png", 72 }, "CHH" ),
     subgroup = "aoc-petrochem-fluids",
     order = "l",
 	base_color = {r=0.38, g=0.38, b=0.38},
@@ -930,7 +930,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-butadiene",
-    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/butadiene.png", 72 }, "CHH" ),
+    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem_art__/graphics/icons/molecules/butadiene.png", 72 }, "CHH" ),
     subgroup = "aoc-petrochem-fluids",
     order = "n",
 	base_color = {r=0.48, g=0.48, b=0.48},
@@ -941,7 +941,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-benzene",
-    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/benzene.png", 72 }, "CHH" ),
+    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem_art__/graphics/icons/molecules/benzene.png", 72 }, "CHH" ),
     subgroup = "aoc-petrochem-fluids",
     order = "o",
 	base_color = {r=0.43, g=0.43, b=0.43},
@@ -976,7 +976,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-acetone",
-    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/acetone.png", 72 }, "COH" ),
+    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem_art__/graphics/icons/molecules/acetone.png", 72 }, "COH" ),
     subgroup = "aoc-petrochem-fluids-2",
     order = "a",
 	base_color = {r=0.65, g=0.65, b=0.65},
@@ -1022,7 +1022,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-phenol",
-    icons = angelsmods.functions.create_liquid_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/phenol.png", 72 }, "COH" ),
+    icons = angelsmods.functions.create_liquid_fluid_icon( { "__angelspetrochem_art__/graphics/icons/molecules/phenol.png", 72 }, "COH" ),
     subgroup = "aoc-petrochem-fluids-2",
     order = "e",
 	base_color = {r=0.56, g=0.36, b=0.2},
@@ -1033,7 +1033,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-bisphenol-a",
-    icons = angelsmods.functions.create_liquid_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/bisphenol_a.png", 72 }, "COH" ),
+    icons = angelsmods.functions.create_liquid_fluid_icon( { "__angelspetrochem_art__/graphics/icons/molecules/bisphenol_a.png", 72 }, "COH" ),
     subgroup = "aoc-petrochem-fluids-2",
     order = "f",
 	base_color = {r=0.66, g=0.41, b=0.22},
@@ -1044,7 +1044,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-epichlorohydrin",
-    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/epichlorohydrin.png", 72 }, "CHCl" ),
+    icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem_art__/graphics/icons/molecules/epichlorohydrin.png", 72 }, "CHCl" ),
     subgroup = "aoc-petrochem-fluids-2",
     order = "g",
 	base_color = {r=0.3, g=1.0, b=0.5},
@@ -1070,7 +1070,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-styrene",
-    icons = angelsmods.functions.create_liquid_fluid_icon( { "__angelspetrochem__/graphics/icons/molecules/styrene.png", 72 }, "CHH" ),
+    icons = angelsmods.functions.create_liquid_fluid_icon( { "__angelspetrochem_art__/graphics/icons/molecules/styrene.png", 72 }, "CHH" ),
     subgroup = "aoc-fluids-rubber",
     order = "b",
 	base_color = {r=0.48, g=0.48, b=0.48},
@@ -1115,7 +1115,7 @@ data:extend({{
     type = "fluid",
     name = "aoc-nauvium-solution",
     --icons = angelsmods.functions.create_viscous_liquid_fluid_icon( nil, { { 173, 59, 193 }, { 173, 59, 193 } }),
-    icons = { { icon = "__angelssmelting__/graphics/icons/molten-titanium.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/nv.png", icon_size = 64 } },
+    icons = { { icon = "__angelssmelting_art__/graphics/icons/molten-titanium.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/nv.png", icon_size = 64 } },
     subgroup = "aoc-fluids-magic-metals",
     order = "a",
 	base_color = {r=0.68, g=0.23, b=0.76},
@@ -1138,7 +1138,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-mercury",
-    icons = { { icon = "__angelssmelting__/graphics/icons/molten-silicon.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/hg.png", icon_size = 64 } },
+    icons = { { icon = "__angelssmelting_art__/graphics/icons/molten-silicon.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/hg.png", icon_size = 64 } },
     subgroup = "aoc-fluids-magic-metals",
     order = "b",
 	base_color = {r=0.75, g=0.75, b=0.75},

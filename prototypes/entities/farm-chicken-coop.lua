@@ -25,27 +25,28 @@ data:extend({{
 	max_health = 300,
 	selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
 	collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
-	animation = {
+	graphics_set = {
+    animation = {
       layers = {
         {
           filename = "__ageofcreation__/img/entities/chicken-coop.png",
           width = 192,
           height = 192,
           frame_count = 1,
-		  scale = 0.833333
+          scale = 0.833333
         }
       }
-    },
+    }
+  },
+  fluid_boxes_off_when_no_fluid_recipe = true,
 	fluid_boxes =
     {
       {
         production_type = "input",
         pipe_picture = assembler2pipepictures(),
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = {{ type="input", position = {-3, 0} }}
-      },
-      off_when_no_fluid_recipe = true
+        volume = 1000,
+        pipe_connections = {{ flow_direction="input", direction = defines.direction.west, position = {-2, 0} }}
+      }
     }
 }})

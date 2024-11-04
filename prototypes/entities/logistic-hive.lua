@@ -1,7 +1,7 @@
 data:extend({{
     type = "item",
     name = "aoc-logistic-hive",
-    icon = "__NPBees2__/graphics/icon/logistic-hive.png",
+    icon = "__NPBees2_art__/graphics/icon/logistic-hive.png",
     icon_size = 32,
     subgroup = "aoc-bees-buildings",
     order = "d",
@@ -16,7 +16,7 @@ data:extend({{
 	crafting_speed = 1,
 	energy_source = {
       type = "electric",
-      emissions_per_minute = 10,
+      emissions_per_minute = {pollution = 10},
       usage_priority = "secondary-input",
       input_flow_limit = '1MW',
 	  buffer_capacity = '20MJ'
@@ -32,7 +32,7 @@ data:extend({{
     material_slots_count = 4,
     stationing_offset = {0, -1.25},
     charging_offsets = {},
-	icon = "__NPBees2__/graphics/icon/logistic-hive.png",
+	icon = "__NPBees2_art__/graphics/icon/logistic-hive.png",
 	icon_size = 32,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoc-logistic-hive" },
@@ -40,14 +40,14 @@ data:extend({{
 	selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
 	base = {
-        filename = '__NPBees2__/graphics/entity/bee-hive-idle.png',
+        filename = '__NPBees2_art__/graphics/entity/bee-hive-idle.png',
         width = 256,
         height = 256,
         shift = {0.4375, -0.53125},
         scale = 0.5,
     },
     base_patch = {
-        filename = '__NPBees2__/graphics/nothing.png',
+        filename = '__NPBees2_art__/graphics/nothing.png',
         priority = 'medium',
         width = 32,
         height = 32,
@@ -55,7 +55,7 @@ data:extend({{
         shift = {0, 0}
     },
     base_animation = {
-        filename = '__NPBees2__/graphics/entity/bee-hive.png',
+        filename = '__NPBees2_art__/graphics/entity/bee-hive.png',
         priority = 'medium',
         width = 256,
         height = 256,
@@ -65,7 +65,7 @@ data:extend({{
         scale = 0.5,
     },
     door_animation_up = {
-        filename = '__NPBees2__/graphics/nothing.png',
+        filename = '__NPBees2_art__/graphics/nothing.png',
         priority = 'medium',
         width = 32,
         height = 32,
@@ -73,7 +73,7 @@ data:extend({{
         shift = {0, 0}
     },
     door_animation_down = {
-        filename = '__NPBees2__/graphics/nothing.png',
+        filename = '__NPBees2_art__/graphics/nothing.png',
         priority = 'medium',
         width = 32,
         height = 32,
@@ -89,10 +89,10 @@ data:extend({{
         scale = 1.5,
         animation_speed = 0.5
     },
-    vehicle_impact_sound =  {filename = '__base__/sound/car-metal-impact.ogg', volume = 0.65},
+    impact_category = "metal",
     working_sound = {
         sound = {
-            filename = '__NPBees2__/sound/logistic-bee.ogg',
+            filename = '__NPBees2_art__/sound/logistic-bee.ogg',
             volume = 0.5
         },
         audible_distance_modifier = 0.5,

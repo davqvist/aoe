@@ -14,9 +14,9 @@ data.raw['item']['steel-plate'].icon_mipmaps = 4
 data.raw.lab['aoc-burner-lab'].inputs[#data.raw.lab['aoc-burner-lab'].inputs] = nil
 data.raw.lab['lab'].inputs[#data.raw.lab['lab']] = nil
 
-data.raw['fish']['alien-fish-1'].autoplace = nil
-data.raw['fish']['alien-fish-2'].autoplace = nil
-data.raw['fish']['alien-fish-3'].autoplace = nil
+--data.raw['fish']['alien-fish-1'].autoplace = nil
+--data.raw['fish']['alien-fish-2'].autoplace = nil
+--data.raw['fish']['alien-fish-3'].autoplace = nil
 
 data.raw['fluid']['light-oil'].hidden = false
 data.raw['fluid']['heavy-oil'].hidden = false
@@ -24,9 +24,9 @@ data.raw['fluid']['petroleum-gas'].hidden = false
 
 -- Power Overload
 
-data.raw['electric-pole']['po-huge-electric-pole'].supply_area_distance = 2.5
-data.raw['electric-pole']['po-hidden-electric-pole-in'].maximum_wire_distance = 18
-data.raw['electric-pole']['po-hidden-electric-pole-out'].maximum_wire_distance = 18
+--data.raw['electric-pole']['po-huge-electric-pole'].supply_area_distance = 2.5
+--data.raw['electric-pole']['po-hidden-electric-pole-in'].maximum_wire_distance = 18
+--data.raw['electric-pole']['po-hidden-electric-pole-out'].maximum_wire_distance = 18
 
 -- AAI Loader
 
@@ -85,7 +85,7 @@ if mods["aai-loaders"] then
         ingredients = {
             {type = 'item', name = 'fast-underground-belt', amount = 1},
             {type = 'item', name = 'advanced-circuit', amount = 6},
-            {type = 'item', name = 'stack-inserter', amount = 6}
+            {type = 'item', name = 'bulk-inserter', amount = 6}
         },
         results = {
             {type = 'item', name = 'aai-fast-loader', amount = 1}
@@ -106,7 +106,7 @@ if mods["aai-loaders"] then
               icon_size = 256, tint = {255, 24, 38}
             }
         },
-        prerequisites = {"aoc-stack-inserters-tech","aoc-logistics-tech-2","aoc-loader-tech"},
+        prerequisites = {"aoc-bulk-inserters-tech","aoc-logistics-tech-2","aoc-loader-tech"},
         effects = {
             {
                 type = "unlock-recipe",
@@ -647,6 +647,7 @@ if mods["underground-pipe-pack"] then
         end
     end
 else
+    --[[
     table.insert( data.raw["technology"]["aoc-fluid-handling-tech-2"].effects, {
         type = "unlock-recipe",
         recipe = "aoc-crafting-valve-return-recipe"
@@ -659,6 +660,7 @@ else
         type = "unlock-recipe",
         recipe = "aoc-crafting-valve-underflow-recipe"
     } )
+    --]]
 end
 
 -- Beekeeping 

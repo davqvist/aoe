@@ -1,7 +1,7 @@
 data:extend({{
     type = "item",
     name = "aoc-forestry",
-    icon = "__angelsbioprocessing__/graphics/icons/bio-arboretum.png",
+    icon = "__angelsbioprocessing_art__/graphics/icons/bio-arboretum.png",
     icon_size = 32,
     subgroup = "aoc-flora-buildings",
     order = "c",
@@ -20,7 +20,7 @@ data:extend({{
 	module_specification = {
     module_slots = 3
   },
-  icon = "__angelsbioprocessing__/graphics/icons/bio-arboretum.png",
+  icon = "__angelsbioprocessing_art__/graphics/icons/bio-arboretum.png",
   icon_size = 32,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoc-forestry" },
@@ -34,70 +34,72 @@ data:extend({{
 	  },
     distance = 10
   },
-  animation = {
-    layers = {
+  graphics_set = {
+    animation = {
+      layers = {
+        {
+          filename = "__angelsbioprocessing_art__/graphics/entity/trees/bio-arboretum-shadow.png",
+          width = 224,
+          height = 256,
+          line_length = 1,
+          frame_count = 1,
+          shift = { 0, -0.30 },
+          scale = 0.6
+        },
+        {
+          filename = "__angelsbioprocessing_art__/graphics/entity/trees/bio-arboretum-base.png",
+          width = 224,
+          height = 256,
+          line_length = 1,
+          frame_count = 1,
+          shift = { 0, -0.30 },
+          scale = 0.6
+        },
+        {
+          filename = "__angelsbioprocessing_art__/graphics/entity/trees/bio-arboretum-pipes.png",
+          width = 224,
+          height = 256,
+          line_length = 1,
+          frame_count = 1,
+          shift = { 0, -0.30 },
+          scale = 0.6
+        },
+        {
+          filename = "__angelsbioprocessing_art__/graphics/entity/trees/bio-arboretum-off.png",
+          width = 224,
+          height = 256,
+          line_length = 1,
+          frame_count = 1,
+          shift = { 0, -0.30 },
+          scale = 0.6
+        }
+      }
+    },
+    working_visualisations = {
       {
-        filename = "__angelsbioprocessing__/graphics/entity/trees/bio-arboretum-shadow.png",
-        width = 224,
-        height = 256,
-        line_length = 1,
-        frame_count = 1,
-        shift = { 0, -0.30 },
-        scale = 0.6
-      },
-      {
-        filename = "__angelsbioprocessing__/graphics/entity/trees/bio-arboretum-base.png",
-        width = 224,
-        height = 256,
-        line_length = 1,
-        frame_count = 1,
-        shift = { 0, -0.30 },
-        scale = 0.6
-      },
-      {
-        filename = "__angelsbioprocessing__/graphics/entity/trees/bio-arboretum-pipes.png",
-        width = 224,
-        height = 256,
-        line_length = 1,
-        frame_count = 1,
-        shift = { 0, -0.30 },
-        scale = 0.6
-      },
-      {
-        filename = "__angelsbioprocessing__/graphics/entity/trees/bio-arboretum-off.png",
-        width = 224,
-        height = 256,
-        line_length = 1,
-        frame_count = 1,
-        shift = { 0, -0.30 },
-        scale = 0.6
+        apply_recipe_tint = "primary",
+        animation = {
+          filename = "__angelsbioprocessing_art__/graphics/entity/trees/bio-arboretum-on.png",
+          blend_mode = "additive",
+          width = 224,
+          height = 256,
+          line_length = 1,
+          frame_count = 1,
+          shift = { 0, -0.30 },
+          scale = 0.6
+        },
+        light = { intensity = 1, size = 8, color = { r = 0.5, g = 1.0, b = 0.5 } },
       }
     }
   },
-  working_visualisations = {
-    {
-      apply_recipe_tint = "primary",
-      animation = {
-        filename = "__angelsbioprocessing__/graphics/entity/trees/bio-arboretum-on.png",
-        blend_mode = "additive",
-        width = 224,
-        height = 256,
-        line_length = 1,
-        frame_count = 1,
-        shift = { 0, -0.30 },
-        scale = 0.6
-      },
-      light = { intensity = 1, size = 8, color = { r = 0.5, g = 1.0, b = 0.5 } },
-    }
-  },
+  fluid_boxes_off_when_no_fluid_recipe = true,
 	fluid_boxes = {
     {
       production_type = "output",
       pipe_covers = pipecoverspictures(),
-      base_level = 1,
-      pipe_connections = {{ type="output", position = {0, 2} }}
-    },
-    off_when_no_fluid_recipe = true
+      volume = 1000,
+      pipe_connections = {{ flow_direction="output", direction = defines.direction.south, position = {0, 1} }}
+    }
   },
   working_sound = {
     sound = { filename = "__base__/sound/chemical-plant.ogg" },

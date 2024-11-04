@@ -13,11 +13,11 @@ local parts = {
 
 for _, recipe in pairs(data.raw.recipe) do
   local flag = false
-  if recipe.ingredients then	
+  if recipe.ingredients then
 	for _, part in pairs(parts) do 
 	  for _, ingredient in pairs(recipe.ingredients) do
-	    if ingredient.name == part and flag == false then
-		  if recipe.results and recipe.results[1] then
+	    if ingredient.amount>0 and ingredient.name == part and flag == false then
+		  if recipe.results and recipe.results[1] and recipe.results[1].amount>0 then
 			data:extend({{
 				name = 'aoc-recycling-' .. recipe.results[1].name .. '-recipe',
 				type = 'recipe',
