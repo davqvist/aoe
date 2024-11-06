@@ -4,8 +4,19 @@ local hit_effects = require ("__base__/prototypes/entity/hit-effects")
 data:extend({{
     type = "item",
     name = "aoc-burner-lab",
-    icon = "__ageofcreation__/img/entities/burner-lab-icon.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icons = {
+      {
+        icon = "__ageofcreation__/img/entities/burner-lab-icon.png",
+        icon_size = 64,
+        icon_mipmaps = 4
+      },
+      {
+        icon = "__ageofcreation__/img/items/other/fire.png",
+        icon_size = 64,
+        scale = 0.25,
+        shift = {-12,8}
+      }
+    },
     subgroup = "aoc-processing-buildings",
     order = "l",
     place_result = "aoc-burner-lab",
@@ -15,8 +26,19 @@ data:extend({{
 data:extend({{
     type = "lab",
     name = "aoc-burner-lab",
-    icon = "__ageofcreation__/img/entities/burner-lab-icon.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icons = {
+      {
+        icon = "__ageofcreation__/img/entities/burner-lab-icon.png",
+        icon_size = 64,
+        icon_mipmaps = 4
+      },
+      {
+        icon = "__ageofcreation__/img/items/other/fire.png",
+        icon_size = 64,
+        scale = 0.25,
+        shift = {-12,8}
+      }
+    },
     flags = {"placeable-player", "player-creation"},
     minable = {mining_time = 0.2, result = "aoc-burner-lab"},
     max_health = 300,

@@ -79,7 +79,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-small-motor', amount = 3}
 	},
 	results = {
-        {type = 'item', name = 'aoc-burner-crusher', amount = 1}
+        {type = 'item', name = 'burner-crusher', amount = 1}
     },
 	energy_required = 5
 }})
@@ -97,7 +97,7 @@ data:extend({{
     },
 	main_product = 'aoc-iron-dust',
 	energy_required = 4,
-	category = 'aoc-category-crushing'
+	category = 'crushing'
 }})
 
 data:extend({{
@@ -113,7 +113,7 @@ data:extend({{
     },
 	main_product = 'aoc-sand',
 	energy_required = 4,
-	category = 'aoc-category-crushing'
+	category = 'crushing'
 }})
 
 data:extend({{

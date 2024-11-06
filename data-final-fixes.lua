@@ -1,6 +1,6 @@
 require("__ageofcreation__/prototypes/recipes/fluid-voiding")
 require("__ageofcreation__/prototypes/recipes/item-voiding")
---require("__ageofcreation__/prototypes/recipes/recycling")
+require("__ageofcreation__/prototypes/recipes/recycling")
 
 for _, recipe in pairs(data.raw.recipe) do
     recipe.always_show_products = true

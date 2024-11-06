@@ -496,22 +496,17 @@ data:extend({{
     stack_size = 200
 }})
 
-data:extend({{
-    type = "item",
-    name = "aoc-tungsten-ore",
-    icons = { { icon = "__angelssmelting_art__/graphics/icons/ore-tungsten.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/w.png", icon_size = 64 } },
-    pictures = { { filename = "__angelssmelting_art__/graphics/icons/ore-tungsten.png", size = 32, scale = 0.5  } },
-    subgroup = "aoc-metals-tungsten",
-    order = "a",
-    stack_size = 200
-}})
+data.raw['item']['tungsten-ore'].subgroup = "aoc-metals-tungsten"
+data.raw['item']['tungsten-ore'].order = "a"
+data.raw['item']['tungsten-ore'].stack_size = 200
+data.raw['item']['tungsten-ore'].icons = { { icon = "__space-age__/graphics/icons/tungsten-ore.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/w.png", icon_size = 64 } }
 
 data:extend({{
     type = "item",
     name = "aoc-tungsten-processed",
-    icons = { { icon = "__angelssmelting_art__/graphics/icons/processed-tungsten.png" }, { icon = "__ageofcreation__/img/items/atoms/w.png" } },
+    icons = { { icon = "__angelssmelting_art__/graphics/icons/processed-titanium.png" }, { icon = "__ageofcreation__/img/items/atoms/w.png" } },
     icon_size = 64,
-    pictures = { { filename = "__angelssmelting_art__/graphics/icons/processed-tungsten.png", size = 64, scale = 0.25  } },
+    pictures = { { filename = "__angelssmelting_art__/graphics/icons/processed-titanium.png", size = 64, scale = 0.25  } },
     subgroup = "aoc-metals-tungsten",
     order = "b",
     stack_size = 200
@@ -520,9 +515,9 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-tungsten-reduced",
-    icons = { { icon = "__angelssmelting_art__/graphics/icons/pellet-tungsten.png" }, { icon = "__ageofcreation__/img/items/atoms/w.png" } },
+    icons = { { icon = "__angelssmelting_art__/graphics/icons/pellet-titanium.png" }, { icon = "__ageofcreation__/img/items/atoms/w.png" } },
     icon_size = 64,
-    pictures = { { filename = "__angelssmelting_art__/graphics/icons/pellet-tungsten.png", size = 64, scale = 0.25  } },
+    pictures = { { filename = "__angelssmelting_art__/graphics/icons/pellet-titanium.png", size = 64, scale = 0.25  } },
     subgroup = "aoc-metals-tungsten",
     order = "c",
     stack_size = 200
@@ -531,23 +526,19 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-tungsten-dust",
-    icons = { { icon = "__angelssmelting_art__/graphics/icons/powder-tungsten.png" }, { icon = "__ageofcreation__/img/items/atoms/w.png" } },
+    icons = { { icon = "__angelssmelting_art__/graphics/icons/powder-titanium.png" }, { icon = "__ageofcreation__/img/items/atoms/w.png" } },
     icon_size = 64,
-    pictures = { { filename = "__angelssmelting_art__/graphics/icons/powder-tungsten.png", size = 64, scale = 0.25  } },
+    pictures = { { filename = "__angelssmelting_art__/graphics/icons/powder-titanium.png", size = 64, scale = 0.25  } },
     subgroup = "aoc-metals-tungsten",
     order = "d",
     stack_size = 200
 }})
 
-data:extend({{
-    type = "item",
-    name = "aoc-tungsten-plate",
-    icons = { { icon = "__angelssmelting_art__/graphics/icons/plate-tungsten.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/w.png", icon_size = 64 } },
-    pictures = { { filename = "__angelssmelting_art__/graphics/icons/plate-tungsten.png", size = 32, scale = 0.5  } },
-    subgroup = "aoc-metals-tungsten",
-    order = "e",
-    stack_size = 200
-}})
+data.raw['item']['tungsten-plate'].subgroup = "aoc-metals-tungsten"
+data.raw['item']['tungsten-plate'].order = "e"
+data.raw['item']['tungsten-plate'].stack_size = 200
+data.raw['item']['tungsten-plate'].icons = { { icon = "__space-age__/graphics/icons/tungsten-plate.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/w.png", icon_size = 64 } }
+data.raw['item']['tungsten-plate'].pictures = { { filename = "__space-age__/graphics/icons/tungsten-plate.png", size = 64, icon_mipmaps = 4, scale = 0.25  } }
 
 data:extend({{
     type = "item",
@@ -1151,7 +1142,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-hidden-tungsten-module",
-    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoc-paper"] ), get_icons( data.raw["item"]["aoc-tungsten-plate"] ) ),
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoc-paper"] ), get_icons( data.raw["item"]["tungsten-plate"] ) ),
 	subgroup = "aoc-hidden",
     order = "k",
     stack_size = 1,
@@ -1165,7 +1156,7 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-tungsten-research",
-    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoc-paper"] ), get_icons( data.raw["item"]["aoc-tungsten-plate"] ) ),
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoc-paper"] ), get_icons( data.raw["item"]["tungsten-plate"] ) ),
     subgroup = "aoc-metals-tungsten",
     order = "z",
     stack_size = 10

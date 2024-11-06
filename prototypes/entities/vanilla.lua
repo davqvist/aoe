@@ -240,3 +240,7 @@ data.raw['item']['small-lamp'].subgroup = "aoc-decoration"
 data.raw['item']['small-lamp'].order = "b"
 data.raw['item']['landfill'].subgroup = "aoc-decoration"
 data.raw['item']['landfill'].order = "c"
+
+data.raw['item']['recycler'].subgroup = "aoc-voiding-buildings"
+data.raw['item']['recycler'].order = "a"
+data.raw['furnace']['recycler'].energy_source = { type = "void" }

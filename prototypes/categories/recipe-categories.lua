@@ -23,10 +23,6 @@ data:extend({
   },
   {
     type = "recipe-category",
-    name = "aoc-category-burning"
-  },
-  {
-    type = "recipe-category",
     name = "aoc-category-casting"
   },
   {
@@ -90,61 +86,57 @@ data:extend({
   },
   {
     type = "recipe-category",
-    name = "aoc-category-crushing"
-  },
-  {
-    type = "recipe-category",
-    name = "aoc-category-crushing-iron",
+    name = "crushing-iron",
     modules = { "aoc-module-iron" }
   },
   {
     type = "recipe-category",
-    name = "aoc-category-crushing-copper",
+    name = "crushing-copper",
     modules = { "aoc-module-copper" }
   },
   {
     type = "recipe-category",
-    name = "aoc-category-crushing-tin",
+    name = "crushing-tin",
     modules = { "aoc-module-tin" }
   },
   {
     type = "recipe-category",
-    name = "aoc-category-crushing-aluminium",
+    name = "crushing-aluminium",
     modules = { "aoc-module-aluminium" }
   },
   {
     type = "recipe-category",
-    name = "aoc-category-crushing-lead",
+    name = "crushing-lead",
     modules = { "aoc-module-lead" }
   },
   {
     type = "recipe-category",
-    name = "aoc-category-crushing-silver",
+    name = "crushing-silver",
     modules = { "aoc-module-silver" }
   },
   {
     type = "recipe-category",
-    name = "aoc-category-crushing-nickel",
+    name = "crushing-nickel",
     modules = { "aoc-module-nickel" }
   },
   {
     type = "recipe-category",
-    name = "aoc-category-crushing-gold",
+    name = "crushing-gold",
     modules = { "aoc-module-gold" }
   },
   {
     type = "recipe-category",
-    name = "aoc-category-crushing-zinc",
+    name = "crushing-zinc",
     modules = { "aoc-module-zinc" }
   },
   {
     type = "recipe-category",
-    name = "aoc-category-crushing-chromium",
+    name = "crushing-chromium",
     modules = { "aoc-module-chromium" }
   },
   {
     type = "recipe-category",
-    name = "aoc-category-crushing-tungsten",
+    name = "crushing-tungsten",
     modules = { "aoc-module-tungsten" }
   },
   {

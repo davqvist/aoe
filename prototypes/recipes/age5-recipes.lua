@@ -56,7 +56,7 @@ data:extend({{
 	enabled = false,
 	ingredients = {
 		{type = 'item', name = 'aoc-stainless-steel-machine-hull', amount = 10},
-		{type = 'item', name = 'aoc-tungsten-plate', amount = 100},
+		{type = 'item', name = 'tungsten-plate', amount = 100},
 		{type = 'item', name = 'pipe', amount = 100},
 		{type = 'item', name = 'storage-tank', amount = 5}
     },

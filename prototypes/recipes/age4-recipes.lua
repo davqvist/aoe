@@ -32,7 +32,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoc-tin-ore', amount = 4},
-		{type = 'item', name = 'aoc-tungsten-ore', amount = 3},
+		{type = 'item', name = 'tungsten-ore', amount = 3},
 		{type = 'item', name = 'aoc-quartz-ore', amount = 2},
 		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.85}
     },
@@ -542,7 +542,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-sand', amount = 2}
     },
 	energy_required = 1,
-	category = 'aoc-category-crushing'
+	category = 'crushing'
 }})
 
 data:extend({{
@@ -985,7 +985,7 @@ data:extend({{
     },
 	main_product = 'aoc-iron-dust',
 	energy_required = 4,
-	category = 'aoc-category-crushing-iron'
+	category = 'crushing-iron'
 }})
 
 data:extend({{
@@ -1085,7 +1085,7 @@ data:extend({{
     },
 	main_product = 'aoc-copper-dust',
 	energy_required = 4,
-	category = 'aoc-category-crushing-copper'
+	category = 'crushing-copper'
 }})
 
 data:extend({{
@@ -1185,7 +1185,7 @@ data:extend({{
     },
 	main_product = 'aoc-tin-dust',
 	energy_required = 4,
-	category = 'aoc-category-crushing-tin'
+	category = 'crushing-tin'
 }})
 
 data:extend({{
@@ -1285,7 +1285,7 @@ data:extend({{
     },
 	main_product = 'aoc-aluminium-dust',
 	energy_required = 4,
-	category = 'aoc-category-crushing-aluminium'
+	category = 'crushing-aluminium'
 }})
 
 data:extend({{
@@ -1385,7 +1385,7 @@ data:extend({{
     },
 	main_product = 'aoc-lead-dust',
 	energy_required = 4,
-	category = 'aoc-category-crushing-lead'
+	category = 'crushing-lead'
 }})
 
 data:extend({{
@@ -1500,7 +1500,7 @@ data:extend({{
     },
 	main_product = 'aoc-silver-dust',
 	energy_required = 4,
-	category = 'aoc-category-crushing-silver'
+	category = 'crushing-silver'
 }})
 
 data:extend({{
@@ -1616,7 +1616,7 @@ data:extend({{
     },
 	main_product = 'aoc-nickel-dust',
 	energy_required = 4,
-	category = 'aoc-category-crushing-nickel'
+	category = 'crushing-nickel'
 }})
 
 data:extend({{
@@ -1731,7 +1731,7 @@ data:extend({{
     },
 	main_product = 'aoc-gold-dust',
 	energy_required = 4,
-	category = 'aoc-category-crushing-gold'
+	category = 'crushing-gold'
 }})
 
 data:extend({{
@@ -1847,7 +1847,7 @@ data:extend({{
     },
 	main_product = 'aoc-zinc-dust',
 	energy_required = 4,
-	category = 'aoc-category-crushing-zinc'
+	category = 'crushing-zinc'
 }})
 
 data:extend({{
@@ -1962,7 +1962,7 @@ data:extend({{
     },
 	main_product = 'aoc-chromium-dust',
 	energy_required = 4,
-	category = 'aoc-category-crushing-chromium'
+	category = 'crushing-chromium'
 }})
 
 data:extend({{
@@ -2035,7 +2035,7 @@ data:extend({{
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoc-tungsten-ore', amount = 4}
+		{type = 'item', name = 'tungsten-ore', amount = 4}
     },
     results = {
         {type = 'item', name = 'aoc-tungsten-processed', amount = 6},
@@ -2077,7 +2077,7 @@ data:extend({{
     },
 	main_product = 'aoc-tungsten-dust',
 	energy_required = 8,
-	category = 'aoc-category-crushing-tungsten'
+	category = 'crushing-tungsten'
 }})
 
 data:extend({{
@@ -2122,10 +2122,10 @@ data:extend({{
 		{type = 'item', name = 'aoc-mold', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoc-tungsten-plate', amount = 6},
+		{type = 'item', name = 'tungsten-plate', amount = 6},
 		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.7}
     },
-	main_product = 'aoc-tungsten-plate',
+	main_product = 'tungsten-plate',
 	energy_required = 3,
 	category = 'aoc-category-casting-tungsten'
 }})
@@ -2139,7 +2139,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-tungsten-dust', amount = 1}
 	},
 	results = {
-		{type = 'item', name = 'aoc-tungsten-plate', amount = 1}
+		{type = 'item', name = 'tungsten-plate', amount = 1}
     },
 	energy_required = 2.4,
 	category = 'smelting'
@@ -2281,7 +2281,7 @@ data:extend({{
         {type = 'item', name = 'aoc-hydrogen-cyanide', amount = 2}
     },
     energy_required = 4,
-	category = 'aoc-category-crushing'
+	category = 'crushing'
 }})
 
 data:extend({{
@@ -2394,7 +2394,7 @@ data:extend({{
 	subgroup = "aoc-stone",
 	order = "r1",
 	energy_required = 3,
-	category = 'aoc-category-crushing'
+	category = 'crushing'
 }})
 
 data:extend({{
@@ -2610,7 +2610,7 @@ data:extend({{
         {type = 'item', name = 'aoc-gold-ore', amount = 1, probability = 0.04},
         {type = 'item', name = 'aoc-zinc-ore', amount = 1, probability = 0.04},
         {type = 'item', name = 'aoc-chromium-ore', amount = 1, probability = 0.04},
-        {type = 'item', name = 'aoc-tungsten-ore', amount = 1, probability = 0.04},
+        {type = 'item', name = 'tungsten-ore', amount = 1, probability = 0.04},
         {type = 'item', name = 'aoc-nauvium-ore', amount = 1, probability = 0.02}
     },
 	icon = data.raw.item["aoc-tailings-dust"].icon,
@@ -2618,7 +2618,7 @@ data:extend({{
 	subgroup = "aoc-metals-rest",
 	order = "k1",
 	energy_required = 3,
-	category = 'aoc-category-crushing'
+	category = 'crushing'
 }})
 
 data:extend({{
@@ -3315,7 +3315,7 @@ data:extend({{
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoc-tungsten-plate', amount = 80},
+		{type = 'item', name = 'tungsten-plate', amount = 80},
 		{type = 'item', name = 'aoc-paper', amount = 1},
 		{type = 'item', name = 'aoc-feather', amount = 1}
 	},
@@ -3349,7 +3349,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-stainless-steel-machine-hull', amount = 2},
 		{type = 'item', name = 'stone-wall', amount = 8},
 		{type = 'item', name = 'aoc-mica', amount = 8},
-		{type = 'item', name = 'aoc-tungsten-plate', amount = 12}
+		{type = 'item', name = 'tungsten-plate', amount = 12}
 	},
 	results = {
 		{type = 'item', name = 'electric-furnace', amount = 1}

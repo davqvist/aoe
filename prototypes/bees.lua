@@ -19,7 +19,7 @@ local bee_globals = {
   ["aoc-aluminium-ore"] = {["color"] = {196, 175, 78}, ["amount"] = 0.3, ["offspring"] = 3, ["technology"] = "aoc-bees-aluminium-ore-tech", ["chance"] = 0.05, ["parents"] = {"copper-ore", "aoc-clay"}},
   ["aoc-magnesium-ore"] = {["color"] = {174, 169, 158}, ["amount"] = 0.3, ["offspring"] = 3, ["technology"] = "aoc-bees-magnesium-ore-tech", ["chance"] = 0.05, ["parents"] = {"aoc-aluminium-ore", "aoc-silt"}},
   ["aoc-mica"] = {["color"] = {218, 210, 199}, ["amount"] = 0.2, ["offspring"] = 3, ["technology"] = "aoc-bees-mica-tech", ["chance"] = 0.04, ["parents"] = {"aoc-magnesium-ore", "aoc-quartz-ore"}},
-  ["aoc-tungsten-ore"] = {["color"] = {138, 89, 46}, ["amount"] = 0.15, ["offspring"] = 3, ["technology"] = "aoc-bees-tungsten-ore-tech", ["chance"] = 0.03, ["parents"] = {"aoc-tin-ore", "aoc-gravel"}},
+  ["tungsten-ore"] = {["color"] = {143, 133, 169}, ["amount"] = 0.15, ["offspring"] = 3, ["technology"] = "aoc-bees-tungsten-ore-tech", ["chance"] = 0.03, ["parents"] = {"aoc-tin-ore", "aoc-gravel"}},
   ["aoc-gold-ore"] = {["color"] = {255, 215, 95}, ["amount"] = 0.15, ["offspring"] = 3, ["technology"] = "aoc-bees-gold-ore-tech", ["chance"] = 0.03, ["parents"] = {"aoc-manganese-ore", "copper-ore"}},
   ["aoc-diamond"] = {["color"] = {52, 204, 230}, ["amount"] = 0.1, ["offspring"] = 3, ["technology"] = "aoc-bees-diamond-tech", ["chance"] = 0.02, ["parents"] = {"aoc-gold-ore", "coal"}},
   ["uranium-ore"] = {["color"] = {0, 179, 0}, ["amount"] = 0.1, ["offspring"] = 3, ["technology"] = "aoc-bees-uranium-ore-tech", ["chance"] = 0.02, ["parents"] = {"aoc-quartz-ore", "aoc-tin-ore"}},

@@ -243,7 +243,7 @@ data:extend({{
     name = "aoc-tin-gear",
     icons = { { icon = "__ageofcreation__/img/items/tin-gear.png" }, { icon = "__ageofcreation__/img/items/atoms/sn.png" } },
     icon_size = 64,
-    pictures = { { filename = "__ageofcreation__/img/items/tin-gear.png", size = 64, scale = 0.25  } },
+    pictures = { { filename = "__ageofcreation__/img/items/tin-gear.png", size = 64, scale = 0.5  } },
     subgroup = "aoc-metals-tin",
     order = "g",
     stack_size = 200

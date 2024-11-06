@@ -773,7 +773,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-tungsten-slurry",
-    icons = angelsmods.functions.create_viscous_liquid_fluid_icon({ icon = "__ageofcreation__/img/items/atoms/w.png", icon_size = 64, shift = {0,0}, scale = 0.5 }, { { 141, 85, 35 }, { 141, 85, 35 } }),
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon({ icon = "__ageofcreation__/img/items/atoms/w.png", icon_size = 64, shift = {0,0}, scale = 0.5 }, { { 143, 133, 169 }, { 40, 32, 51 } }),
     subgroup = "aoc-fluids-slurry",
     order = "k",
 	base_color = {r=0.55, g=0.33, b=0.14},
@@ -784,7 +784,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-tungsten-molten",
-    icons = { { icon = "__ageofcreation__/img/fluids/molten-tungsten.png", icon_size = 64 }, { icon = "__ageofcreation__/img/items/atoms/w.png", icon_size = 64 } },
+    icons = { { icon = "__angelssmelting_art__/graphics/icons/molten-titanium.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/w.png", icon_size = 64 } },
     subgroup = "aoc-fluids-molten",
     order = "k",
 	base_color = {r=0.55, g=0.33, b=0.14},
@@ -1115,7 +1115,7 @@ data:extend({{
     type = "fluid",
     name = "aoc-nauvium-solution",
     --icons = angelsmods.functions.create_viscous_liquid_fluid_icon( nil, { { 173, 59, 193 }, { 173, 59, 193 } }),
-    icons = { { icon = "__angelssmelting_art__/graphics/icons/molten-titanium.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/nv.png", icon_size = 64 } },
+    icons = { { icon = "__ageofcreation__/img/fluids/molten-nauvium.png", icon_size = 64 }, { icon = "__ageofcreation__/img/items/atoms/nv.png", icon_size = 64 } },
     subgroup = "aoc-fluids-magic-metals",
     order = "a",
 	base_color = {r=0.68, g=0.23, b=0.76},

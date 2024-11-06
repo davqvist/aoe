@@ -193,7 +193,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-soy-flour', amount = 1}
     },
 	energy_required = 1,
-	category = 'aoc-category-crushing'
+	category = 'crushing'
 }})
 
 data:extend({{
@@ -252,7 +252,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-soy-flour', amount = 1}
     },
 	energy_required = 1,
-	category = 'aoc-category-crushing'
+	category = 'crushing'
 }})
 
 data:extend({{
@@ -1164,7 +1164,7 @@ data:extend({{
         {type = 'item', name = 'aoc-bone-meal', amount = 4}
     },
     energy_required = 4,
-	category = 'aoc-category-crushing'
+	category = 'crushing'
 }})
 
 data:extend({{

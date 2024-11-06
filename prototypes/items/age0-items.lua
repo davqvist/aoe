@@ -83,8 +83,8 @@ data:extend({{
 data.raw['item']['iron-plate'].subgroup = "aoc-metals-iron"
 data.raw['item']['iron-plate'].order = "e"
 data.raw['item']['iron-plate'].stack_size = 200
-data.raw['item']['iron-plate'].icons = { { icon = "__angelssmelting_art__/graphics/icons/plate-iron.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/fe.png", icon_size = 64 } }
-data.raw['item']['iron-plate'].pictures = { { filename = "__angelssmelting_art__/graphics/icons/plate-iron.png", size = 32, scale = 0.5 } }
+data.raw['item']['iron-plate'].icons = { { icon = "__base__/graphics/icons/iron-plate.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/fe.png", icon_size = 64 } }
+data.raw['item']['iron-plate'].pictures = { { filename = "__base__/graphics/icons/iron-plate.png", size = 64, mipmap_count = 4, scale = 0.5 } }
 
 data.raw['item']['iron-stick'].subgroup = "aoc-metals-iron"
 data.raw['item']['iron-stick'].order = "f"
@@ -96,7 +96,7 @@ data.raw['item']['iron-gear-wheel'].subgroup = "aoc-metals-iron"
 data.raw['item']['iron-gear-wheel'].order = "g"
 data.raw['item']['iron-gear-wheel'].stack_size = 200
 data.raw['item']['iron-gear-wheel'].icons = { { icon = "__base__/graphics/icons/iron-gear-wheel.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/fe.png", icon_size = 64 } }
-data.raw['item']['iron-gear-wheel'].pictures = { { filename = "__base__/graphics/icons/iron-gear-wheel.png", size = 64, mipmap_count = 4, scale = 0.25  } }
+data.raw['item']['iron-gear-wheel'].pictures = { { filename = "__base__/graphics/icons/iron-gear-wheel.png", size = 64, mipmap_count = 4, scale = 0.5  } }
 
 data.raw['item']['stone'].subgroup = "aoc-stone"
 data.raw['item']['stone'].order = "a"

@@ -1,136 +1,59 @@
-data:extend({{
-    type = "item",
-    name = "aoc-burner-crusher",
-    icons = {
-      {
-        icon = "__angelsrefining_art__/graphics/icons/powderizer-ico.png",
-        icon_size = 32
-      },
-      {
-        icon = "__ageofcreation__/img/items/other/fire.png",
-        icon_size = 64,
-        scale = 0.25,
-        shift = {-12,8}
-      }
-    },
-    subgroup = "aoc-processing-buildings",
-    order = "g",
-    place_result = "aoc-burner-crusher",
-    stack_size = 25,
-}})
-
-data:extend({{
-  type = "assembling-machine",
-  name = "aoc-burner-crusher",
-	crafting_categories = {"aoc-category-crushing"},
-	crafting_speed = 0.5,
-	energy_source = {
-    type = "burner",
-    fuel_categories = {"chemical"},
-    effectivity = 1,
-    fuel_inventory_size = 1,
-    emissions_per_minute = {pollution = 12},
-    light_flicker = {color = {0,0,0}},
-    smoke =
-    {
-      {
-        name = "smoke",
-        deviation = {0.1, 0.1},
-        frequency = 3
-      }
-    }
-  },
-	energy_usage = "100kW",
-	allowed_effects = nil,
-  icons = {
-    {
-      icon = "__angelsrefining_art__/graphics/icons/powderizer-ico.png",
-      icon_size = 32
-    },
-    {
-      icon = "__ageofcreation__/img/items/other/fire.png",
-      icon_size = 64,
-      scale = 0.25,
-      shift = {-12,8}
-    }
-  },
-	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoc-burner-crusher" },
-  fast_replaceable_group = "crusher",
-	max_health = 300,
-	selection_box = {{-1.0, -1.0}, {1.0, 1.0}},
-	collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
-	graphics_set = {
-    animation = {
-      filename = "__angelsrefining_art__/graphics/entity/ore-powderizer/powderizer-lr.png",
-      priority = "extra-high",
-      width = 128,
-      height = 128,
-      frame_count = 36,
-      line_length = 6,
-      shift = { 0, 0 },
-      animation_speed = 0.5
-    }
-  },
-  working_sound = {
-    sound = { filename = "__angelsrefining_art__/sound/ore-powderizer.ogg" },
-    idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-    apparent_volume = 2,
+data.raw['item']['crusher'].subgroup = "aoc-processing-buildings"
+data.raw['item']['crusher'].order = "g"
+data.raw['assembling-machine']['crusher'].crafting_categories = {"crushing","crushing-iron","crushing-copper","crushing-tin","crushing-aluminium","crushing-lead","crushing-silver","crushing-nickel","crushing-gold","crushing-zinc","crushing-chromium","crushing-tungsten"}
+data.raw['assembling-machine']['crusher'].surface_conditions = nil
+data.raw['assembling-machine']['crusher'].energy_usage = "140kW"
+data.raw['assembling-machine']['crusher'].energy_source.drain = "7kW"
+data.raw['item']['burner-crusher'] = table.deepcopy( data.raw['item']['crusher'] )
+data.raw['item']['burner-crusher'].name = 'burner-crusher'
+data.raw['item']['burner-crusher'].place_result = "burner-crusher"
+data.raw['assembling-machine']['burner-crusher'] = table.deepcopy( data.raw['assembling-machine']['crusher'] )
+data.raw['assembling-machine']['burner-crusher'].name = 'burner-crusher'
+data.raw['assembling-machine']['burner-crusher'].minable = { hardness = 1, mining_time = 0.2, result = "burner-crusher" }
+data.raw['item']['burner-crusher'].subgroup = "aoc-processing-buildings"
+data.raw['item']['burner-crusher'].order = "h"
+data.raw['assembling-machine']['burner-crusher'].crafting_speed = 0.5
+data.raw['assembling-machine']['burner-crusher'].surface_conditions = nil
+data.raw['assembling-machine']['burner-crusher'].energy_usage = "100kW"
+data.raw['assembling-machine']['burner-crusher'].energy_source = {
+  type = "burner",
+  fuel_categories = {"chemical"},
+  effectivity = 1,
+  fuel_inventory_size = 1,
+  emissions_per_minute = {pollution = 12},
+  light_flicker = {color = {0,0,0}},
+  smoke =
+  {
+	{
+	  name = "smoke",
+	  deviation = {0.1, 0.1},
+	  frequency = 3
+	}
   }
-}})
-
-data:extend({{
-    type = "item",
-    name = "aoc-crusher",
-    icon = "__angelsrefining_art__/graphics/icons/powderizer-ico.png",
-    icon_size = 32,
-    icon_mipmaps = 1,
-    subgroup = "aoc-processing-buildings",
-    order = "h",
-    place_result = "aoc-crusher",
-    stack_size = 25,
-}})
-
-data:extend({{
-  type = "assembling-machine",
-  name = "aoc-crusher",
-	crafting_categories = {"aoc-category-crushing","aoc-category-crushing-iron","aoc-category-crushing-copper","aoc-category-crushing-tin","aoc-category-crushing-aluminium","aoc-category-crushing-lead","aoc-category-crushing-silver","aoc-category-crushing-nickel","aoc-category-crushing-gold","aoc-category-crushing-zinc","aoc-category-crushing-chromium","aoc-category-crushing-tungsten"},
-	crafting_speed = 1,
-	energy_source = {
-    type = "electric",
-    emissions_per_minute = {pollution = 10},
-    usage_priority = "secondary-input",
-	  drain = "7kW",
+}
+data.raw['item']['burner-crusher'].icons = {
+  {
+    icon = "__space-age__/graphics/icons/crusher.png",
+    icon_size = 64,
+    icon_mipmaps = 4
   },
-	energy_usage = "140kW",
-	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-	module_specification = {
-    module_slots = 3
-  },
-  icon = "__angelsrefining_art__/graphics/icons/powderizer-ico.png",
-  icon_size = 32,
-  icon_mipmaps = 1,
-	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoc-crusher" },
-  fast_replaceable_group = "crusher",
-	max_health = 300,
-	selection_box = {{-1.0, -1.0}, {1.0, 1.0}},
-	collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
-	graphics_set = {
-    animation = {
-      filename = "__angelsrefining_art__/graphics/entity/ore-powderizer/powderizer-lr.png",
-      priority = "extra-high",
-      width = 128,
-      height = 128,
-      frame_count = 36,
-      line_length = 6,
-      shift = { 0, 0 },
-      animation_speed = 0.5
-    }
-  },
-  working_sound = {
-    sound = { filename = "__angelsrefining_art__/sound/ore-powderizer.ogg" },
-    idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-    apparent_volume = 2,
+  {
+    icon = "__ageofcreation__/img/items/other/fire.png",
+    icon_size = 64,
+    scale = 0.25,
+    shift = {-12,8}
   }
-}})
+}
+data.raw['assembling-machine']['burner-crusher'].icons = {
+  {
+    icon = "__space-age__/graphics/icons/crusher.png",
+    icon_size = 64,
+    icon_mipmaps = 4
+  },
+  {
+    icon = "__ageofcreation__/img/items/other/fire.png",
+    icon_size = 64,
+    scale = 0.25,
+    shift = {-12,8}
+  }
+}

@@ -774,7 +774,7 @@ data:extend({{
         {type = 'item', name = 'aoc-small-motor', amount = 6}
     },
 	results = {
-        {type = 'item', name = 'aoc-recycler', amount = 1}
+        {type = 'item', name = 'recycler', amount = 1}
     },
     energy_required = 5
 }})
@@ -808,7 +808,7 @@ data:extend({{
     },
 	main_product = 'aoc-copper-dust',
 	energy_required = 8,
-	category = 'aoc-category-crushing'
+	category = 'crushing'
 }})
 
 data:extend({{
@@ -916,20 +916,6 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoc-gas-vent', amount = 1}
-    },
-	energy_required = 5
-}})
-
-data:extend({{
-	name = 'aoc-crafting-burner-recipe',
-	type = 'recipe',
-	enabled = false,
-	ingredients = {
-		{type = 'item', name = 'iron-plate', amount = 20},
-		{type = 'item', name = 'stone-furnace', amount = 5}
-	},
-	results = {
-		{type = 'item', name = 'aoc-burner', amount = 1}
     },
 	energy_required = 5
 }})

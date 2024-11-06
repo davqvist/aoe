@@ -328,7 +328,7 @@ data:extend({{
 		{type = 'item', name = 'engine-unit', amount = 2}
 	},
 	results = {
-        {type = 'item', name = 'aoc-crusher', amount = 1}
+        {type = 'item', name = 'crusher', amount = 1}
     },
 	energy_required = 5
 }})
@@ -823,7 +823,7 @@ data:extend({{
     },
 	main_product = 'aoc-iron-dust',
 	energy_required = 1,
-	category = 'aoc-category-crushing'
+	category = 'crushing'
 }})
 
 data:extend({{
@@ -839,7 +839,7 @@ data:extend({{
     },
 	main_product = 'aoc-copper-dust',
 	energy_required = 1,
-	category = 'aoc-category-crushing'
+	category = 'crushing'
 }})
 
 data:extend({{
@@ -855,7 +855,7 @@ data:extend({{
     },
 	main_product = 'aoc-coal-dust',
 	energy_required = 1,
-	category = 'aoc-category-crushing'
+	category = 'crushing'
 }})
 
 data:extend({{
@@ -884,7 +884,7 @@ data:extend({{
     },
 	main_product = 'aoc-quartz-dust',
 	energy_required = 1,
-	category = 'aoc-category-crushing'
+	category = 'crushing'
 }})
 
 data:extend({{
@@ -900,7 +900,7 @@ data:extend({{
     },
 	main_product = 'aoc-tin-dust',
 	energy_required = 1,
-	category = 'aoc-category-crushing'
+	category = 'crushing'
 }})
 
 data:extend({{
@@ -985,7 +985,7 @@ data:extend({{
     },
 	main_product = 'aoc-manganese-dust',
 	energy_required = 1,
-	category = 'aoc-category-crushing'
+	category = 'crushing'
 }})
 
 data:extend({{
@@ -1016,7 +1016,7 @@ data:extend({{
     },
 	main_product = 'aoc-aluminium-dust',
 	energy_required = 1,
-	category = 'aoc-category-crushing'
+	category = 'crushing'
 }})
 
 data:extend({{
@@ -1060,7 +1060,7 @@ data:extend({{
     },
 	main_product = 'aoc-magnesium-dust',
 	energy_required = 1,
-	category = 'aoc-category-crushing'
+	category = 'crushing'
 }})
 
 data:extend({{

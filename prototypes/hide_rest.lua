@@ -4,7 +4,11 @@ local item_has_recipe = {}
 local fluid_has_recipe = {}
 
 for _, recipe in pairs(data.raw.recipe) do
-  if ((recipe.name:sub(1, 4) ~= "aoc-" and recipe.name:find('^fill%-.*%-barrel$') == nil and recipe.name:find('^empty%-.*%-barrel$') == nil ) and (recipes_to_keep[recipe.name] == nil) ) then
+  if ((recipe.name:sub(1, 4) ~= "aoc-" and 
+       recipe.name:find('^fill%-.*%-barrel$') == nil and
+       recipe.name:find('^fill%-.*%-barrel$') == nil and
+       recipe.name:find('recycling$') == nil )
+       and (recipes_to_keep[recipe.name] == nil) ) then
 	  recipe.enabled = false
     recipe.hidden = true
 	  if (recipe.normal ~= nil) then

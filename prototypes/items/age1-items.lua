@@ -645,8 +645,8 @@ data:extend({{
 data.raw['item']['copper-plate'].subgroup = "aoc-metals-copper"
 data.raw['item']['copper-plate'].order = "e"
 data.raw['item']['copper-plate'].stack_size = 200
-data.raw['item']['copper-plate'].icons = { { icon = "__angelssmelting_art__/graphics/icons/plate-copper.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/cu.png", icon_size = 64 } }
-data.raw['item']['copper-plate'].pictures = { { filename = "__angelssmelting_art__/graphics/icons/plate-copper.png", size = 32, scale = 0.5  } }
+data.raw['item']['copper-plate'].icons = { { icon ="__base__/graphics/icons/copper-plate.png", icon_size = 64 }, { icon = "__ageofcreation__/img/items/atoms/cu.png", icon_size = 64 } }
+data.raw['item']['copper-plate'].pictures = { { filename = "__base__/graphics/icons/copper-plate.png", size = 64, mipmap_count = 4, scale = 0.5  } }
 
 data:extend({{
     type = "item",
@@ -664,7 +664,7 @@ data:extend({{
     name = "aoc-copper-gear",
     icons = { { icon = "__ageofcreation__/img/items/copper-gear.png" }, { icon = "__ageofcreation__/img/items/atoms/cu.png" } },
     icon_size = 64,
-    pictures = { { filename = "__ageofcreation__/img/items/copper-gear.png", size = 64, scale = 0.25  } },
+    pictures = { { filename = "__ageofcreation__/img/items/copper-gear.png", size = 64, scale = 0.5  } },
     subgroup = "aoc-metals-copper",
     order = "g",
     stack_size = 200

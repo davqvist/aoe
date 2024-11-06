@@ -22,8 +22,8 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "aoc-recycling-tech",
-    icon_size = 192,
-    icon = "__ageofcreation__/img/entities/recycler.png",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__quality__/graphics/technology/recycling.png",
     prerequisites = {},
 	  effects = {
       {
@@ -41,14 +41,10 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "aoc-voiding-tech",
-    icon_size = 256,
-    icon = "__ageofcreation__/img/entities/burner.png",
+    icon = "__angelsrefining_art__/graphics/icons/clarifier.png",
+    icon_size = 64, icon_mipmaps = 4,
     prerequisites = {"aoc-recycling-tech"},
 	  effects = {
-      {
-        type = "unlock-recipe",
-        recipe = "aoc-crafting-burner-recipe"
-      },
       {
         type = "unlock-recipe",
         recipe = "aoc-crafting-gas-vent-recipe"
