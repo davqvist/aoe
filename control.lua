@@ -65,7 +65,7 @@ script.on_event(defines.events.on_gui_opened,
 			root.force_auto_center()
 			local titlebar = root.add{type = "flow", direction = "horizontal"}
         	titlebar.drag_target = root
-			titlebar.add{type = "sprite-button",style = "close_button",sprite = "utility/close_white",hovered_sprite = "utility/close_black",clicked_sprite = "utility/close_black",tags = {parent_gui = "aoc-lightning-rod",action = "close-gui"}}
+			titlebar.add{type = "sprite-button",style = "close_button",sprite = "utility/close",hovered_sprite = "utility/close_black",clicked_sprite = "utility/close_black",tags = {parent_gui = "aoc-lightning-rod",action = "close-gui"}}
 			titlebar.add{type = "label",caption = {"entity-name.aoc-lightning-rod"},style = "frame_title",ignored_by_interaction = true}
 			local main_container = root.add{type = "frame",name = "main-container",direction = "vertical",style = "inside_shallow_frame"}
 			main_container.add{type = "label",name="weather-stations",caption ={"entity-name.aoc-weather-station"},style = "subheader_caption_label"}
@@ -210,7 +210,7 @@ script.on_nth_tick(101,
 				if wind_turbine.crafting_progress>0 then
 					local x = game.tick / 10000
 					local wind = (math.sin(2 * x) + math.sin(math.pi * x) + math.sin(math.exp(1) * x)) / 3
-					local power_output = gen.prototype.max_energy_production * (1 + 0.5 * wind)
+					local power_output = gen.prototype.get_max_energy_production() * (1 + 0.5 * wind)
 					gen.power_production = power_output
 					gen.electric_buffer_size = power_output
 				else 
@@ -447,7 +447,7 @@ function lightning_rod_tick_delay(unit)
 end
 
 function lightning_rod_power(unit)
-	return storage.lightning_rods[unit].prototype.max_energy_production + storage.lightning_rods[unit].prototype.max_energy_production * storage.weather_stations[unit] / 16
+	return storage.lightning_rods[unit].prototype.get_max_energy_production() + storage.lightning_rods[unit].prototype.get_max_energy_production() * storage.weather_stations[unit] / 16
 end
 
 function handleBuilt( event, building )

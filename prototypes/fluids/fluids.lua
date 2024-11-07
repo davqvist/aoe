@@ -16,19 +16,8 @@ data:extend({{
 	default_temperature = 20
 }})
 
-data:extend({{
-    type = "fluid",
-    name = "aoc-lava",
-    icon = "__ageofcreation__/img/fluids/lava.png",
-    icon_size = 64,
-    subgroup = "aoc-fuel-fluids",
-    order = "a",
-    heat_capacity = "15kJ",
-    base_color = {r=0.8, g=0.4, b=0.25},
-    flow_color = {r=0.8, g=0.6, b=0.25},
-    default_temperature = 1000,
-    fuel_value = "100kJ"
-}})
+data.raw['fluid']['lava'].subgroup = "aoc-fuel-fluids"
+data.raw['fluid']['lava'].order = "a"
 
 data:extend({{
     type = "fluid",

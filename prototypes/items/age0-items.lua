@@ -1,15 +1,5 @@
 data:extend({{
     type = "item",
-    name = "aoc-tree-seedling",
-    icon = "__ageofcreation__/img/items/tree-seedling.png",
-    icon_size = 64,
-    subgroup = "aoc-flora-wood",
-    order = "a",
-    stack_size = 100
-}})
-
-data:extend({{
-    type = "item",
     name = "aoc-log",
     icon = "__ageofcreation__/img/items/log.png",
     icon_size = 64,

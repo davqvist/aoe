@@ -749,7 +749,6 @@ data:extend({{
 	energy_required = 0.5
 }})
 
---[[
 data:extend({{
 	name = 'aoc-crafting-long-bulk-inserter-recipe',
 	type = 'recipe',
@@ -761,11 +760,10 @@ data:extend({{
 		{type = 'item', name = 'aoc-rubber', amount = 1}
 	},
 	results = {
-        {type = 'item', name = 'bulk-filter-inserter', amount = 3}
+        {type = 'item', name = 'bulk-long-handed-inserter', amount = 3}
     },
 	energy_required = 0.5
 }})
---]]
 
 data:extend({{
     name = 'aoc-chemistry-acetic-acid-recipe',

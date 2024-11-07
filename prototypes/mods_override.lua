@@ -6,13 +6,15 @@ data.raw['item']['wood'].subgroup = "aoc-flora-wood"
 data.raw['item']['wood'].order = "e"
 data.raw['capsule']['raw-fish'].subgroup = "aoc-fauna-fish"
 data.raw['capsule']['raw-fish'].order = "a"
+data.raw['capsule']['raw-fish'].spoil_result = nil
+data.raw['capsule']['raw-fish'].spoil_ticks = 0
 
 data.raw['item']['steel-plate'].icon = "__base__/graphics/icons/steel-plate.png"
 data.raw['item']['steel-plate'].icon_size = 64
 data.raw['item']['steel-plate'].icon_mipmaps = 4
 
-data.raw.lab['aoc-burner-lab'].inputs[#data.raw.lab['aoc-burner-lab'].inputs] = nil
-data.raw.lab['lab'].inputs[#data.raw.lab['lab']] = nil
+--data.raw.lab['aoc-burner-lab'].inputs[#data.raw.lab['aoc-burner-lab'].inputs] = nil
+--data.raw.lab['lab'].inputs[#data.raw.lab['lab']] = nil
 
 --data.raw['fish']['alien-fish-1'].autoplace = nil
 --data.raw['fish']['alien-fish-2'].autoplace = nil
@@ -646,21 +648,11 @@ if mods["underground-pipe-pack"] then
             if conn3.max_underground_distance then conn3.max_underground_distance = 32 end
         end
     end
-else
-    --[[
+else 
     table.insert( data.raw["technology"]["aoc-fluid-handling-tech-2"].effects, {
         type = "unlock-recipe",
-        recipe = "aoc-crafting-valve-return-recipe"
+        recipe = "aoc-crafting-configurable-valve-recipe"
     } )
-    table.insert( data.raw["technology"]["aoc-fluid-handling-tech-2"].effects, {
-        type = "unlock-recipe",
-        recipe = "aoc-crafting-valve-overflow-recipe"
-    } )
-    table.insert( data.raw["technology"]["aoc-fluid-handling-tech-2"].effects, {
-        type = "unlock-recipe",
-        recipe = "aoc-crafting-valve-underflow-recipe"
-    } )
-    --]]
 end
 
 -- Beekeeping 

@@ -559,7 +559,7 @@ data:extend({{
   enabled = false,
   ingredients = {
     {type = 'item', name = 'wood', amount = 4},
-    {type = 'item', name = 'aoc-carbon-fiber-mesh', amount = 1}
+    {type = 'item', name = 'carbon-fiber', amount = 1}
   },
   results = {
     {type = 'item', name = 'aoc-frame-mutating', amount = 1}

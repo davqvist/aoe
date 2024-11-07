@@ -304,9 +304,9 @@ data:extend({{
 		{type = 'item', name = 'aoc-gneiss', amount = 6}
 	},
 	results = {
-		{type = 'fluid', name = 'aoc-lava', amount = 60}
+		{type = 'fluid', name = 'lava', amount = 60}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoc-lava"] ), get_icons( data.raw.item["aoc-gneiss"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.fluid["lava"] ), get_icons( data.raw.item["aoc-gneiss"] ) ),
 	energy_required = 2,
 	category = 'aoc-category-melting'
 }})
@@ -319,9 +319,9 @@ data:extend({{
 		{type = 'item', name = 'aoc-slate', amount = 6}
 	},
 	results = {
-		{type = 'fluid', name = 'aoc-lava', amount = 60}
+		{type = 'fluid', name = 'lava', amount = 60}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoc-lava"] ), get_icons( data.raw.item["aoc-slate"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.fluid["lava"] ), get_icons( data.raw.item["aoc-slate"] ) ),
 	energy_required = 2,
 	category = 'aoc-category-melting'
 }})
@@ -334,9 +334,9 @@ data:extend({{
 		{type = 'item', name = 'aoc-marble', amount = 6}
 	},
 	results = {
-		{type = 'fluid', name = 'aoc-lava', amount = 60}
+		{type = 'fluid', name = 'lava', amount = 60}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoc-lava"] ), get_icons( data.raw.item["aoc-marble"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.fluid["lava"] ), get_icons( data.raw.item["aoc-marble"] ) ),
 	energy_required = 2,
 	category = 'aoc-category-melting'
 }})
@@ -476,9 +476,9 @@ data:extend({{
 		{type = 'item', name = 'aoc-limestone', amount = 6}
 	},
 	results = {
-		{type = 'fluid', name = 'aoc-lava', amount = 60}
+		{type = 'fluid', name = 'lava', amount = 60}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoc-lava"] ), get_icons( data.raw.item["aoc-limestone"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.fluid["lava"] ), get_icons( data.raw.item["aoc-limestone"] ) ),
 	energy_required = 2,
 	category = 'aoc-category-melting'
 }})
@@ -492,9 +492,9 @@ data:extend({{
 		{type = 'item', name = 'aoc-sandstone', amount = 6}
 	},
 	results = {
-		{type = 'fluid', name = 'aoc-lava', amount = 60}
+		{type = 'fluid', name = 'lava', amount = 60}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoc-lava"] ), get_icons( data.raw.item["aoc-sandstone"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.fluid["lava"] ), get_icons( data.raw.item["aoc-sandstone"] ) ),
 	energy_required = 2,
 	category = 'aoc-category-melting'
 }})
@@ -507,9 +507,9 @@ data:extend({{
 		{type = 'item', name = 'aoc-shale', amount = 6}
 	},
 	results = {
-		{type = 'fluid', name = 'aoc-lava', amount = 60}
+		{type = 'fluid', name = 'lava', amount = 60}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoc-lava"] ), get_icons( data.raw.item["aoc-shale"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.fluid["lava"] ), get_icons( data.raw.item["aoc-shale"] ) ),
 	energy_required = 2,
 	category = 'aoc-category-melting'
 }})
@@ -2423,9 +2423,9 @@ data:extend({{
 		{type = 'fluid', name = 'aoc-vacuum', amount = 100}
     },
     results = {
-        {type = 'item', name = 'aoc-carbon', amount = 1}
+        {type = 'item', name = 'carbon', amount = 1}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-carbon"] ), get_icons( data.raw.item["coal"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.item["carbon"] ), get_icons( data.raw.item["coal"] ) ),
     energy_required = 5,
 	category = 'aoc-category-high-pressure-heating'
 }})
@@ -2439,9 +2439,9 @@ data:extend({{
 		{type = 'fluid', name = 'aoc-vacuum', amount = 100}
     },
     results = {
-        {type = 'item', name = 'aoc-carbon', amount = 1}
+        {type = 'item', name = 'carbon', amount = 1}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-carbon"] ), get_icons( data.raw.item["aoc-charcoal"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.item["carbon"] ), get_icons( data.raw.item["aoc-charcoal"] ) ),
     energy_required = 5,
 	category = 'aoc-category-high-pressure-heating'
 }})
@@ -2486,11 +2486,11 @@ data:extend({{
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoc-carbon', amount = 5},
+		{type = 'item', name = 'carbon', amount = 5},
 		{type = 'fluid', name = 'aoc-nitrogen', amount = 50}
     },
     results = {
-        {type = 'item', name = 'aoc-carbon-fiber-mesh', amount = 1}
+        {type = 'item', name = 'carbon-fiber', amount = 1}
     },
 	category = 'advanced-crafting',
     energy_required = 5
@@ -2501,7 +2501,7 @@ data:extend({{
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoc-carbon', amount = 5},
+		{type = 'item', name = 'carbon', amount = 5},
 		{type = 'fluid', name = 'aoc-hydrochloric-acid', amount = 50},
 		{type = 'fluid', name = 'aoc-nitrogen', amount = 50},
 		{type = 'item', name = 'aoc-caustic-soda', amount = 3},
@@ -2553,7 +2553,7 @@ data:extend({{
 	enabled = false,
 	ingredients = {
 		{type = 'item', name = 'engine-unit', amount = 1},
-		{type = 'item', name = 'aoc-carbon-fiber-mesh', amount = 20},
+		{type = 'item', name = 'carbon-fiber', amount = 20},
 	},
 	results = {
         {type = 'item', name = 'aoc-rotor-carbon', amount = 1}
@@ -2949,7 +2949,6 @@ data:extend({{
 	energy_required = 0.5
 }})
 
---[[
 data:extend({{
 	name = 'aoc-crafting-long-fast-inserter-recipe',
 	type = 'recipe',
@@ -2960,11 +2959,10 @@ data:extend({{
 		{type = 'item', name = 'electronic-circuit', amount = 4}
 	},
 	results = {
-        {type = 'item', name = 'filter-inserter', amount = 3}
+        {type = 'item', name = 'fast-long-handed-inserter', amount = 3}
     },
 	energy_required = 0.5
-})
---]]
+}})
 
 data:extend({{
 	name = 'aoc-crafting-cleanroom-assembling-machine-recipe',
@@ -3001,7 +2999,7 @@ data:extend({{
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoc-carbon', amount = 2},
+		{type = 'item', name = 'carbon', amount = 2},
 		{type = 'item', name = 'aoc-nickel-plate', amount = 1},
 		{type = 'item', name = 'aoc-chromium-plate', amount = 1},
 		{type = 'item', name = 'aoc-tin-plate', amount = 1},

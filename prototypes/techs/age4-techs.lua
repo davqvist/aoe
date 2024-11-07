@@ -1268,10 +1268,10 @@ data:extend({{
         type = "unlock-recipe",
         recipe = "aoc-crafting-fast-inserter-recipe"
       },
-      --{
-      --  type = "unlock-recipe",
-      --  recipe = "aoc-crafting-long-fast-inserter-recipe"
-      --}
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-long-fast-inserter-recipe"
+      }
     },
     unit = {
         count = 40,

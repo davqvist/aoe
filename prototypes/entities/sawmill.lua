@@ -3,8 +3,8 @@ data:extend({{
     name = "aoc-burner-sawmill",
     icons = {
       {
-        icon = "__ageofcreation__/img/entities/sawmill.png",
-        icon_size = 192
+        icon = "__ageofcreation__/img/entities/sawmill_icon.png",
+        icon_size = 128
       },
       {
         icon = "__ageofcreation__/img/items/other/fire.png",
@@ -44,8 +44,8 @@ data:extend({{
 	allowed_effects = nil,
   icons = {
     {
-      icon = "__ageofcreation__/img/entities/sawmill.png",
-      icon_size = 192
+      icon = "__ageofcreation__/img/entities/sawmill_icon.png",
+      icon_size = 128
     },
     {
       icon = "__ageofcreation__/img/items/other/fire.png",
@@ -64,11 +64,42 @@ data:extend({{
     animation = {
       layers = {
         {
-          filename = "__ageofcreation__/img/entities/sawmill.png",
-          width = 192,
-          height = 192,
-          frame_count = 1,
-          scale = 0.6666666
+          filename = "__ageofcreation__/img/entities/sawmill_animation_1.png",
+          width = 460,
+          height = 500,
+          scale = 0.285
+        },
+        {
+          filename = "__ageofcreation__/img/entities/sawmill_shadow.png",
+          width = 700,
+          height = 700,
+          draw_as_shadow = true,
+          scale = 0.285,
+        }
+      }
+    },
+    working_visualisations = {
+      {
+        always_draw = true,
+        animation = {
+          filename = "__ageofcreation__/img/entities/sawmill_animation_1.png",
+          priority = "high",
+          width = 460,
+          height = 500,
+          line_length = 8,
+          frame_count = 64,
+          scale = 0.285,
+          animation_speed = 1
+        }
+      },
+      {
+        animation = {
+          always_draw = true,
+          filename = "__ageofcreation__/img/entities/sawmill_shadow.png",
+          width = 700,
+          height = 700,
+          draw_as_shadow = true,
+          scale = 0.285
         }
       }
     }
@@ -78,8 +109,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-sawmill",
-    icon = "__ageofcreation__/img/entities/sawmill.png",
-    icon_size = 192,
+    icon = "__ageofcreation__/img/entities/sawmill_icon.png",
+    icon_size = 128,
     subgroup = "aoc-flora-buildings",
     order = "e",
     place_result = "aoc-sawmill",
@@ -102,8 +133,8 @@ data:extend({{
 	module_specification = {
     module_slots = 3
   },
-	icon = "__ageofcreation__/img/entities/sawmill.png",
-	icon_size = 192,
+  icon = "__ageofcreation__/img/entities/sawmill_icon.png",
+  icon_size = 128,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoc-sawmill" },
   fast_replaceable_group = "sawmill",
@@ -114,11 +145,42 @@ data:extend({{
     animation = {
       layers = {
         {
-          filename = "__ageofcreation__/img/entities/sawmill.png",
-          width = 192,
-          height = 192,
-          frame_count = 1,
-		      scale = 0.6666666
+          filename = "__ageofcreation__/img/entities/sawmill_animation_1.png",
+          width = 460,
+          height = 500,
+          scale = 0.285
+        },
+        {
+          filename = "__ageofcreation__/img/entities/sawmill_shadow.png",
+          width = 700,
+          height = 700,
+          draw_as_shadow = true,
+          scale = 0.285,
+        }
+      }
+    },
+    working_visualisations = {
+      {
+        always_draw = true,
+        animation = {
+          filename = "__ageofcreation__/img/entities/sawmill_animation_1.png",
+          priority = "high",
+          width = 460,
+          height = 500,
+          line_length = 8,
+          frame_count = 64,
+          scale = 0.285,
+          animation_speed = 1
+        }
+      },
+      {
+        animation = {
+          always_draw = true,
+          filename = "__ageofcreation__/img/entities/sawmill_shadow.png",
+          width = 700,
+          height = 700,
+          draw_as_shadow = true,
+          scale = 0.285
         }
       }
     }

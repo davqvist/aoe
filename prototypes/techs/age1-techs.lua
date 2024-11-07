@@ -248,7 +248,7 @@ data:extend({{
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoc-tree-farm-rubber-tree-recipe"
+        recipe = "aoc-crafting-forestry-recipe"
       },
 	    {
         type = "unlock-recipe",

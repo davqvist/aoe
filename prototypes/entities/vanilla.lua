@@ -76,38 +76,103 @@ data.raw['item']['inserter'].subgroup = "aoc-inserter"
 data.raw['item']['inserter'].order = "b"
 data.raw['inserter']['inserter'].rotation_speed = 0.0166667
 data.raw['inserter']['inserter'].extension_speed = 0.04
-data.raw['inserter']['inserter'].filter_count = 1
 data.raw['item']['long-handed-inserter'].subgroup = "aoc-inserter"
 data.raw['item']['long-handed-inserter'].order = "c"
 data.raw['inserter']['long-handed-inserter'].rotation_speed = 0.0166667
 data.raw['inserter']['long-handed-inserter'].extension_speed = 0.04
-data.raw['inserter']['long-handed-inserter'].filter_count = 1
 data.raw['inserter']['long-handed-inserter'].fast_replaceable_group = "long-handed-inserter"
 data.raw['item']['fast-inserter'].subgroup = "aoc-inserter"
 data.raw['item']['fast-inserter'].order = "d"
 data.raw['inserter']['fast-inserter'].rotation_speed = 0.0333333
 data.raw['inserter']['fast-inserter'].extension_speed = 0.08
-data.raw['inserter']['fast-inserter'].filter_count = 5
---data.raw['item']['filter-inserter'].subgroup = "aoc-inserter"
---data.raw['item']['filter-inserter'].order = "e"
---data.raw['inserter']['filter-inserter'].rotation_speed = 0.0333333
---data.raw['inserter']['filter-inserter'].extension_speed = 0.08
---data.raw['inserter']['filter-inserter'].pickup_position = {0, -2}
---data.raw['inserter']['filter-inserter'].insert_position = {0, 2.2}
---data.raw['inserter']['filter-inserter'].fast_replaceable_group = "long-handed-inserter"
+data.raw['item']['fast-long-handed-inserter'] = table.deepcopy( data.raw['item']['fast-inserter'] )
+data.raw['item']['fast-long-handed-inserter'].name = 'fast-long-handed-inserter'
+data.raw['item']['fast-long-handed-inserter'].place_result = "fast-long-handed-inserter"
+data.raw['item']['fast-long-handed-inserter'].subgroup = "aoc-inserter"
+data.raw['item']['fast-long-handed-inserter'].order = "e"
+data.raw['item']['fast-long-handed-inserter'].icons = combine_icons( get_icons( data.raw["item"]["fast-inserter"] ),
+  {
+    {
+      icon = "__ageofcreation__/img/items/long-handed-inserter-base.png",
+      icon_size = 64,
+      icon_mipmaps = 4
+    }
+  }
+)
+data.raw['inserter']['fast-long-handed-inserter'] = table.deepcopy( data.raw['inserter']['fast-inserter'] )
+data.raw['inserter']['fast-long-handed-inserter'].name = 'fast-long-handed-inserter'
+data.raw['inserter']['fast-long-handed-inserter'].minable = { hardness = 1, mining_time = 0.2, result = "fast-long-handed-inserter" }
+data.raw['inserter']['fast-long-handed-inserter'].rotation_speed = 0.0333333
+data.raw['inserter']['fast-long-handed-inserter'].extension_speed = 0.08
+data.raw['inserter']['fast-long-handed-inserter'].pickup_position = {0, -2}
+data.raw['inserter']['fast-long-handed-inserter'].insert_position = {0, 2.2}
+data.raw['inserter']['fast-long-handed-inserter'].fast_replaceable_group = "long-handed-inserter"
+data.raw['inserter']['fast-long-handed-inserter'].next_upgrade = 'bulk-long-handed-inserter'
+data.raw['inserter']['fast-long-handed-inserter'].platform_picture = {
+  sheet = {
+    filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-platform.png",
+    priority = "extra-high",
+    width = 105,
+    height = 79,
+    shift = util.by_pixel(1.5, 7.5-1),
+    scale = 0.5
+  }
+}
+data.raw['inserter']['fast-long-handed-inserter'].icons = combine_icons( get_icons( data.raw["item"]["fast-inserter"] ),
+  {
+    {
+      icon = "__ageofcreation__/img/items/long-handed-inserter-base.png",
+      icon_size = 64,
+      icon_mipmaps = 4
+    }
+  }
+)
 data.raw['item']['bulk-inserter'].subgroup = "aoc-inserter"
 data.raw['item']['bulk-inserter'].order = "f"
 data.raw['inserter']['bulk-inserter'].rotation_speed = 0.0466667
 data.raw['inserter']['bulk-inserter'].extension_speed = 0.12
-data.raw['inserter']['bulk-inserter'].filter_count = 5
---data.raw['item']['stack-filter-inserter'].subgroup = "aoc-inserter"
---data.raw['item']['stack-filter-inserter'].order = "g"
---data.raw['inserter']['stack-filter-inserter'].rotation_speed = 0.0466667
---data.raw['inserter']['stack-filter-inserter'].extension_speed = 0.12
---data.raw['inserter']['stack-filter-inserter'].pickup_position = {0, -2}
---data.raw['inserter']['stack-filter-inserter'].insert_position = {0, 2.2}
---data.raw['inserter']['stack-filter-inserter'].fast_replaceable_group = "long-handed-inserter"
-
+data.raw['item']['bulk-long-handed-inserter'] = table.deepcopy( data.raw['item']['bulk-inserter'] )
+data.raw['item']['bulk-long-handed-inserter'].name = 'bulk-long-handed-inserter'
+data.raw['item']['bulk-long-handed-inserter'].place_result = "bulk-long-handed-inserter"
+data.raw['item']['bulk-long-handed-inserter'].subgroup = "aoc-inserter"
+data.raw['item']['bulk-long-handed-inserter'].order = "g"
+data.raw['item']['bulk-long-handed-inserter'].icons = combine_icons( get_icons( data.raw["item"]["bulk-inserter"] ),
+  {
+    {
+      icon = "__ageofcreation__/img/items/long-handed-inserter-base.png",
+      icon_size = 64,
+      icon_mipmaps = 4
+    }
+  }
+)
+data.raw['inserter']['bulk-long-handed-inserter'] = table.deepcopy( data.raw['inserter']['bulk-inserter'] )
+data.raw['inserter']['bulk-long-handed-inserter'].name = 'bulk-long-handed-inserter'
+data.raw['inserter']['bulk-long-handed-inserter'].minable = { hardness = 1, mining_time = 0.2, result = "bulk-long-handed-inserter" }
+data.raw['inserter']['bulk-long-handed-inserter'].rotation_speed = 0.0466667
+data.raw['inserter']['bulk-long-handed-inserter'].extension_speed = 0.12
+data.raw['inserter']['bulk-long-handed-inserter'].pickup_position = {0, -2}
+data.raw['inserter']['bulk-long-handed-inserter'].insert_position = {0, 2.2}
+data.raw['inserter']['bulk-long-handed-inserter'].fast_replaceable_group = "long-handed-inserter"
+data.raw['inserter']['bulk-long-handed-inserter'].next_upgrade = nil
+data.raw['inserter']['bulk-long-handed-inserter'].platform_picture = {
+  sheet = {
+    filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-platform.png",
+    priority = "extra-high",
+    width = 105,
+    height = 79,
+    shift = util.by_pixel(1.5, 7.5-1),
+    scale = 0.5
+  }
+}
+data.raw['inserter']['bulk-long-handed-inserter'].icons = combine_icons( get_icons( data.raw["item"]["bulk-inserter"] ),
+  {
+    {
+      icon = "__ageofcreation__/img/items/long-handed-inserter-base.png",
+      icon_size = 64,
+      icon_mipmaps = 4
+    }
+  }
+)
 data.raw['item']['wooden-chest'].subgroup = "aoc-storage"
 data.raw['item']['wooden-chest'].order = "a"
 data.raw['container']['wooden-chest'].inventory_size = 15
@@ -168,20 +233,13 @@ data.raw['item']['pipe'].order = "a"
 data.raw['item']['pipe-to-ground'].subgroup = "aoc-fluid-logistics"
 data.raw['item']['pipe-to-ground'].order = "b"
 data.raw['pipe-to-ground']['pipe-to-ground'].fluid_box.pipe_connections[2].max_underground_distance = 16
-
---data.raw['item']['valve-inspector'].subgroup = "aoc-fluid-logistics"
---data.raw['item']['valve-inspector'].order = "c"
---data.raw['item']['valve-return'].subgroup = "aoc-fluid-logistics"
---data.raw['item']['valve-return'].order = "d"
---data.raw['item']['valve-overflow'].subgroup = "aoc-fluid-logistics"
---data.raw['item']['valve-overflow'].order = "e"
---data.raw['item']['valve-underflow'].subgroup = "aoc-fluid-logistics"
---data.raw['item']['valve-underflow'].order = "f"
+data.raw['item']['configurable-valve'].subgroup = "aoc-fluid-logistics"
+data.raw['item']['configurable-valve'].order = "c"
 data.raw['item']['offshore-pump'].subgroup = "aoc-fluid-logistics"
-data.raw['item']['offshore-pump'].order = "g"
+data.raw['item']['offshore-pump'].order = "d"
 data.raw['offshore-pump']['offshore-pump'].pumping_speed = 16.6666666666
 data.raw['item']['pump'].subgroup = "aoc-fluid-logistics"
-data.raw['item']['pump'].order = "h"
+data.raw['item']['pump'].order = "e"
 
 data.raw['item']['small-electric-pole'].subgroup = "aoc-poles"
 data.raw['item']['small-electric-pole'].order = "a"
@@ -244,3 +302,6 @@ data.raw['item']['landfill'].order = "c"
 data.raw['item']['recycler'].subgroup = "aoc-voiding-buildings"
 data.raw['item']['recycler'].order = "a"
 data.raw['furnace']['recycler'].energy_source = { type = "void" }
+data.raw['item']['agricultural-tower'].subgroup = "aoc-flora-buildings"
+data.raw['item']['agricultural-tower'].order = "b"
+data.raw['agricultural-tower']['agricultural-tower'].energy_source = { type = "void" }

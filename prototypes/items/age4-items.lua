@@ -677,24 +677,12 @@ data:extend({{
     stack_size = 200
 }})
 
-data:extend({{
-    type = "item",
-    name = "aoc-carbon",
-    icons = { { icon = "__angelspetrochem_art__/graphics/icons/solid-carbon.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/c.png", icon_size = 64 } },
-    subgroup = "aoc-coal",
-    order = "e",
-    stack_size = 200
-}})
-
-data:extend({{
-    type = "item",
-    name = "aoc-carbon-fiber-mesh",
-    icons = { { icon = "__ageofcreation__/img/items/carbon-fiber-mesh.png" }, { icon = "__ageofcreation__/img/items/atoms/c.png" } },
-    icon_size = 64,
-    subgroup = "aoc-coal",
-    order = "f",
-    stack_size = 200
-}})
+data.raw['item']['carbon'].subgroup = "aoc-coal"
+data.raw['item']['carbon'].order = "e"
+data.raw['item']['carbon'].stack_size = 200
+data.raw['item']['carbon-fiber'].subgroup = "aoc-coal"
+data.raw['item']['carbon-fiber'].order = "f"
+data.raw['item']['carbon-fiber'].stack_size = 200
 
 data:extend({{
     type = "item",

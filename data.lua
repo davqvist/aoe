@@ -32,6 +32,36 @@ for _, tree in pairs(data.raw.tree) do
 	end
 end 
 
+data.raw.plant['tree-plant'].minable.results = {
+	{type = "item", name = "aoc-log", amount = 1},
+	{type = "item", name = "aoc-leaves", amount = 4}
+}
+
+local rubber_tree_plant = util.table.deepcopy(data.raw["tree"]["tree-04"])
+rubber_tree_plant.type = "plant"
+rubber_tree_plant.name = "aoc-rubber-tree-plant"
+rubber_tree_plant.flags = {"placeable-neutral", "placeable-off-grid", "breaths-air"}
+rubber_tree_plant.hidden_in_factoriopedia = false
+rubber_tree_plant.factoriopedia_alternative = nil
+rubber_tree_plant.map_color = {0.19, 0.39, 0.19, 0.40}
+rubber_tree_plant.agricultural_tower_tint =
+{
+  primary = {r = 0.7, g =  1.0, b = 0.2,a =  1},
+  secondary = {r = 0.561, g = 0.613, b = 0.308, a = 1.000}, -- #8f4f4eff
+}
+rubber_tree_plant.minable =
+{
+  mining_particle = "wooden-particle",
+  mining_time = 0.5,
+  results = {{type = "item", name = "aoc-rubber-tree-seedling", amount = 1}},
+}
+rubber_tree_plant.variation_weights = { 1, 1, 1, 1, 1, 1, 1, 1, 0.3, 0.3, 0.0, 0.0}
+rubber_tree_plant.growth_ticks = 36000
+rubber_tree_plant.surface_conditions = { {property = "pressure", min = 1000, max = 1000}}  -- only Nauvis (doesn't work yet)
+rubber_tree_plant.autoplace = nil
+rubber_tree_plant.localised_name = nil
+data:extend({rubber_tree_plant})
+
 for _, rock in pairs(data.raw['simple-entity']) do
 	if ( (rock.minable ~= nil) and (rock.minable.results ~= nil) and (rock.minable.results[1].name == "stone") ) then
 		if( (rock.minable.results[1].amount_min ~= nil) and (rock.minable.results[1].amount_max ~= nil) ) then

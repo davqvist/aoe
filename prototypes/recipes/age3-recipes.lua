@@ -678,7 +678,7 @@ data:extend({{
 	ingredients = {
 		{type = 'item', name = 'aoc-clay', amount = 100},
 		{type = 'item', name = 'aoc-leaves', amount = 50},
-		{type = 'item', name = 'aoc-tree-seedling', amount = 10},
+		{type = 'item', name = 'tree-seed', amount = 10},
 		{type = 'item', name = 'aoc-quartz-dust', amount = 10},
 		{type = 'fluid', name = 'aoc-bacteria', amount = 200}
     },
@@ -696,7 +696,7 @@ data:extend({{
     type = 'recipe',
     enabled = false,
 	ingredients = {
-        {type = 'item', name = 'aoc-tree-seedling', amount = 1},
+        {type = 'item', name = 'tree-seed', amount = 1},
         {type = 'fluid', name = 'water', amount = 400}
     },
     results = {
@@ -711,7 +711,7 @@ data:extend({{
     type = 'recipe',
     enabled = false,
 	ingredients = {
-        {type = 'item', name = 'aoc-tree-seedling', amount = 1},
+        {type = 'item', name = 'tree-seed', amount = 1},
         {type = 'item', name = 'aoc-loam', amount = 2},
         {type = 'fluid', name = 'water', amount = 200}
     },
@@ -750,7 +750,7 @@ data:extend({{
     },
 	results = {
         {type = 'item', name = 'aoc-log', amount = 1},
-        {type = 'item', name = 'aoc-leaves', amount = 6}
+        {type = 'item', name = 'aoc-leaves', amount = 4}
     },
 	energy_required = 5,
 	main_product = 'aoc-log',
@@ -764,7 +764,7 @@ data:extend({{
 	ingredients = {
         {type = 'fluid', name = 'water', amount = 1000},
         {type = 'item', name = 'aoc-spruce-tree', amount = 1},
-        {type = 'item', name = 'aoc-tree-seedling', amount = 1},
+        {type = 'item', name = 'tree-seed', amount = 1},
         {type = 'item', name = 'aoc-loam', amount = 4}
     },
     results = {
@@ -1715,9 +1715,8 @@ data:extend({{
     energy_required = 5
 }})
 
---[[
 data:extend({{
-    name = 'aoc-crafting-valve-inspector-recipe',
+    name = 'aoc-crafting-configurable-valve-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -1726,56 +1725,10 @@ data:extend({{
 		{type = 'item', name = 'aoc-aluminium-plate', amount = 3}
     },
     results = {
-        {type = 'item', name = 'valve-inspector', amount = 1}
+        {type = 'item', name = 'configurable-valve', amount = 1}
     },
     energy_required = 2
 }})
-
-data:extend({{
-    name = 'aoc-crafting-valve-return-recipe',
-    type = 'recipe',
-    enabled = false,
-	ingredients = {
-		{type = 'item', name = 'pipe', amount = 5},
-		{type = 'item', name = 'electronic-circuit', amount = 1},
-		{type = 'item', name = 'aoc-aluminium-plate', amount = 3}
-    },
-    results = {
-        {type = 'item', name = 'valve-return', amount = 1}
-    },
-    energy_required = 2
-}})
-
-data:extend({{
-    name = 'aoc-crafting-valve-overflow-recipe',
-    type = 'recipe',
-    enabled = false,
-	ingredients = {
-		{type = 'item', name = 'pipe', amount = 5},
-		{type = 'item', name = 'electronic-circuit', amount = 1},
-		{type = 'item', name = 'aoc-aluminium-plate', amount = 3}
-    },
-    results = {
-        {type = 'item', name = 'valve-overflow', amount = 1}
-    },
-    energy_required = 2
-}})
-
-data:extend({{
-    name = 'aoc-crafting-valve-underflow-recipe',
-    type = 'recipe',
-    enabled = false,
-	ingredients = {
-		{type = 'item', name = 'pipe', amount = 5},
-		{type = 'item', name = 'electronic-circuit', amount = 1},
-		{type = 'item', name = 'aoc-aluminium-plate', amount = 3}
-    },
-    results = {
-        {type = 'item', name = 'valve-underflow', amount = 1}
-    },
-    energy_required = 2
-}})
---]]
 
 data:extend({{
     name = 'aoc-crafting-chemical-plant-recipe',

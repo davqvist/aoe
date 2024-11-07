@@ -403,7 +403,9 @@ data:extend({{
     icon_size = 64,
     subgroup = "aoc-flora-rubber",
     order = "a",
-    stack_size = 100
+    stack_size = 100,
+    place_result = "aoc-rubber-tree-plant",
+    localised_name = {"item-name.aoc-rubber-tree-seedling"}
 }})
 
 data:extend({{

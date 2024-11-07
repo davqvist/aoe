@@ -372,9 +372,19 @@ data:extend({{
 }})
 
 data:extend({{
+    type = "item",
+    name = "aoc-rubber-tree",
+    icon = "__ageofcreation__/img/items/rubber-tree.png",
+    icon_size = 256,
+    subgroup = "aoc-flora-rubber",
+    order = "b",
+    stack_size = 100
+}})
+
+data:extend({{
     type = "module",
     name = "aoc-rubber-tree-module-1",
-    icons = { { icon = "__ageofcreation__/img/entities/rubber-tree.png", icon_size = 256 }, { icon = "__ageofcreation__/img/items/rarity/common.png", icon_size = 64 } },
+    icons = { { icon = "__ageofcreation__/img/items/rubber-tree.png", icon_size = 256 }, { icon = "__ageofcreation__/img/items/rarity/common.png", icon_size = 64 } },
     subgroup = "aoc-flora-rubber",
     order = "b1",
     stack_size = 20,
@@ -388,7 +398,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-rubber-tree-module-2",
-    icons = { { icon = "__ageofcreation__/img/entities/rubber-tree.png", icon_size = 256 }, { icon = "__ageofcreation__/img/items/rarity/uncommon.png", icon_size = 64 } },
+    icons = { { icon = "__ageofcreation__/img/items/rubber-tree.png", icon_size = 256 }, { icon = "__ageofcreation__/img/items/rarity/uncommon.png", icon_size = 64 } },
     subgroup = "aoc-flora-rubber",
     order = "b2",
     stack_size = 20,
@@ -402,7 +412,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-rubber-tree-module-3",
-    icons = { { icon = "__ageofcreation__/img/entities/rubber-tree.png", icon_size = 256 }, { icon = "__ageofcreation__/img/items/rarity/rare.png", icon_size = 64 } },
+    icons = { { icon = "__ageofcreation__/img/items/rubber-tree.png", icon_size = 256 }, { icon = "__ageofcreation__/img/items/rarity/rare.png", icon_size = 64 } },
     subgroup = "aoc-flora-rubber",
     order = "b3",
     stack_size = 20,
@@ -416,7 +426,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-rubber-tree-module-4",
-    icons = { { icon = "__ageofcreation__/img/entities/rubber-tree.png", icon_size = 256 }, { icon = "__ageofcreation__/img/items/rarity/epic.png", icon_size = 64 } },
+    icons = { { icon = "__ageofcreation__/img/items/rubber-tree.png", icon_size = 256 }, { icon = "__ageofcreation__/img/items/rarity/epic.png", icon_size = 64 } },
     subgroup = "aoc-flora-rubber",
     order = "b4",
     stack_size = 20,
@@ -430,7 +440,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-rubber-tree-module-5",
-    icons = { { icon = "__ageofcreation__/img/entities/rubber-tree.png", icon_size = 256 }, { icon = "__ageofcreation__/img/items/rarity/legendary.png", icon_size = 64 } },
+    icons = { { icon = "__ageofcreation__/img/items/rubber-tree.png", icon_size = 256 }, { icon = "__ageofcreation__/img/items/rarity/legendary.png", icon_size = 64 } },
     subgroup = "aoc-flora-rubber",
     order = "b5",
     stack_size = 20,

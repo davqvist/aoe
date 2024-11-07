@@ -327,10 +327,10 @@ data:extend({{
         type = "unlock-recipe",
         recipe = "aoc-crafting-bulk-inserter-recipe"
       },
-      --{
-      --  type = "unlock-recipe",
-      --  recipe = "aoc-crafting-long-bulk-inserter-recipe"
-      --}
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-long-bulk-inserter-recipe"
+      }
     },
     unit = {
         count = 40,
@@ -1023,8 +1023,8 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "aoc-high-voltage-tech",
-    icon = "__ageofcreation__/img/entities/lightning-rod-icon.png",
-    icon_size = 128,
+    icon = "__space-age__/graphics/icons/lightning-rod.png",
+    icon_size = 64, icon_mipmaps = 4,
     prerequisites = {"aoc-electronics-tech-3","aoc-accumulator-tech","aoc-medium-voltage-tech"},
 	  effects = {
       {

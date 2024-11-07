@@ -49,7 +49,7 @@ data:extend({{
 		{type = 'item', name = 'wood', amount = 40}
 	},
 	results = {
-        {type = 'item', name = 'aoc-tree-seedling', amount = 1}
+        {type = 'item', name = 'tree-seed', amount = 1}
     },
 	energy_required = 10,
 	category = 'aoc-category-handcrafting'
@@ -200,55 +200,6 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoc-tree-farm-tree-recipe',
-	type = 'recipe',
-	enabled = true,
-	ingredients = {
-		{type = 'item', name = 'aoc-tree-seedling', amount = 1}
-	},
-	results = {
-        {type = 'item', name = 'aoc-tree-farm', amount = 1, probability = 0}
-    },
-	energy_required = 10,
-	icon = data.raw.item["aoc-tree-farm"].icon,
-    icon_size = data.raw.item["aoc-tree-farm"].icon_size,
-	main_product = "",
-	category = 'aoc-category-growing',
-	subgroup = 'aoc-other'
-}})
-
-data:extend({{
-	name = 'aoc-crafting-forestry-recipe',
-	type = 'recipe',
-	enabled = true,
-	ingredients = {
-		{type = 'item', name = 'stone-brick', amount = 20},
-		{type = 'item', name = 'wood', amount = 50}
-	},
-	results = {
-        {type = 'item', name = 'aoc-forestry', amount = 1}
-    },
-	energy_required = 5
-}})
-
-data:extend({{
-	name = 'aoc-forestry-log-recipe',
-	type = 'recipe',
-	enabled = true,
-	ingredients = {},
-	results = {
-        {type = 'item', name = 'aoc-log', amount = 1},	
-        {type = 'item', name = 'aoc-leaves', amount = 6}
-    },
-	energy_required = 5,
-	icon = data.raw.item["aoc-log"].icon,
-    icon_size = data.raw.item["aoc-log"].icon_size,
-	main_product = "",
-	category = 'aoc-category-harvesting',
-	subgroup = 'aoc-other'
-}})
-
-data:extend({{
 	name = 'aoc-crafting-greenhouse-recipe',
 	type = 'recipe',
 	enabled = true,
@@ -271,7 +222,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-leaves', amount = 2}
 	},
 	results = {
-        {type = 'item', name = 'aoc-tree-seedling', amount = 1}
+        {type = 'item', name = 'tree-seed', amount = 1}
     },
 	energy_required = 3,
 	category = 'aoc-category-greenhouse'
@@ -437,15 +388,17 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoc-crafting-tree-farm-recipe',
+	name = 'aoc-crafting-agricultural-tower-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
-		{type = 'item', name = 'aoc-tree-seedling', amount = 1},
-		{type = 'item', name = 'aoc-soil', amount = 100}
+		{type = 'item', name = 'iron-stick', amount = 10},
+		{type = 'item', name = 'aoc-soil', amount = 50},
+		{type = 'item', name = 'aoc-glass', amount = 10},
+		{type = 'item', name = 'wood', amount = 20}
 	},
 	results = {
-        {type = 'item', name = 'aoc-tree-farm', amount = 1}
+        {type = 'item', name = 'agricultural-tower', amount = 1}
     },
 	energy_required = 5
 }})

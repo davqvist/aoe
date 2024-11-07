@@ -295,21 +295,17 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoc-tree-farm-rubber-tree-recipe',
+	name = 'aoc-crafting-forestry-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoc-rubber-tree-seedling', amount = 1}
+		{type = 'item', name = 'stone-brick', amount = 20},
+		{type = 'item', name = 'wood', amount = 50}
 	},
 	results = {
-        {type = 'item', name = 'aoc-rubber-tree', amount = 1, probability = 0}
+        {type = 'item', name = 'aoc-forestry', amount = 1}
     },
-	energy_required = 10,
-	icon = data.raw.item["aoc-rubber-tree"].icon,
-    icon_size = data.raw.item["aoc-rubber-tree"].icon_size,
-	main_product = "",
-	category = 'aoc-category-growing',
-	subgroup = 'aoc-other'
+	energy_required = 5
 }})
 
 data:extend({{
@@ -354,7 +350,7 @@ data:extend({{
 	ingredients = {
 		{type = 'item', name = 'aoc-wood-pulp', amount = 20},
 		{type = 'item', name = 'aoc-resin', amount = 8},
-		{type = 'item', name = 'aoc-tree-seedling', amount = 1},
+		{type = 'item', name = 'tree-seed', amount = 1},
 		{type = 'fluid', name = 'aoc-bacteria', amount = 50}
     },
     results = {

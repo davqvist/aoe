@@ -84,6 +84,7 @@ for _, furnace in pairs(furnaces_to_change) do
         pipe_connections = {{ flow_direction="output", direction = defines.direction.east, position = {1, 0} }}
       }
     }
+	furnacecopy.fluid_boxes_off_when_no_fluid_recipe = true
     data.raw.furnace[furnace] = nil
     data:extend({ furnacecopy })
 end
