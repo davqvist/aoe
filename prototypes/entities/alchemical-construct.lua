@@ -22,9 +22,7 @@ data:extend({{
   },
   energy_usage = "500kW",
   allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-  module_specification = {
-    module_slots = 3
-  },
+  module_slots = 3,
   icon = "__ageofcreation__/img/entities/alchemical-construct.png",
   icon_size = 192,
   flags = { "placeable-neutral", "placeable-player", "player-creation" },

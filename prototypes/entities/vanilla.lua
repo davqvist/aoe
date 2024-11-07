@@ -40,13 +40,13 @@ data.raw['item']['assembling-machine-2'].order = "j"
 data.raw['assembling-machine']['assembling-machine-2'].energy_usage = "200kW"
 data.raw['assembling-machine']['assembling-machine-2'].energy_source.drain = "10kW"
 data.raw['assembling-machine']['assembling-machine-2'].crafting_speed = 1
-data.raw['assembling-machine']['assembling-machine-2'].module_specification = { module_slots = 3 }
+data.raw['assembling-machine']['assembling-machine-2'].module_slots = 3
 data.raw['item']['assembling-machine-3'].subgroup = "aoc-processing-buildings"
 data.raw['item']['assembling-machine-3'].order = "k"
 data.raw['assembling-machine']['assembling-machine-3'].energy_usage = "500kW"
 data.raw['assembling-machine']['assembling-machine-3'].energy_source.drain = "25kW"
 data.raw['assembling-machine']['assembling-machine-3'].crafting_speed = 2
-data.raw['assembling-machine']['assembling-machine-3'].module_specification = { module_slots = 3 }
+data.raw['assembling-machine']['assembling-machine-3'].module_slots = 3
 data.raw['assembling-machine']['assembling-machine-3'].crafting_categories = {"basic-crafting", "crafting", "advanced-crafting", "crafting-with-fluid", "aoc-category-intricate-crafting", "aoc-category-vacuum-crafting"}
 
 data.raw['item']['lab'].subgroup = "aoc-processing-buildings"

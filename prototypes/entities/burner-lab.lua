@@ -156,5 +156,10 @@ data:extend({{
     },
     energy_usage = "60kW",
     researching_speed = 0.5,
-    inputs = {"aoc-science-01","aoc-science-02"}
+    inputs = {"aoc-science-01","aoc-science-02"},
+    icons_positioning =
+    {
+      {inventory_index = defines.inventory.lab_modules, shift = {0, 0.9}},
+      {inventory_index = defines.inventory.lab_input, shift = {0, 0}, max_icons_per_row = 4, separation_multiplier = 1/1.1}
+    }
 }})

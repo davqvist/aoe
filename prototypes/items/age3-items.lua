@@ -34,7 +34,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-maize-module-1a",
-    icons = { { icon = "__ageofcreation__/img/items/maize.png" }, { icon = "__ageofcreation__/img/items/rarity/common.png" }, { icon = "__ageofcreation__/img/items/rarity/speed.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/maize.png" }, { icon = "__base__/graphics/icons/quality-normal.png", scale = 0.2, shift = {-8,8} }, { icon = "__ageofcreation__/img/items/quality/speed.png" } },
     icon_size = 64,
     subgroup = "aoc-flora-maize",
     order = "b1a",
@@ -49,7 +49,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-maize-module-1b",
-    icons = { { icon = "__ageofcreation__/img/items/maize.png" }, { icon = "__ageofcreation__/img/items/rarity/common.png" }, { icon = "__ageofcreation__/img/items/rarity/production.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/maize.png" }, { icon = "__base__/graphics/icons/quality-normal.png", scale = 0.2, shift = {-8,8} }, { icon = "__ageofcreation__/img/items/quality/production.png" } },
     icon_size = 64,
     subgroup = "aoc-flora-maize",
     order = "b1b",
@@ -64,7 +64,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-maize-module-2a",
-    icons = { { icon = "__ageofcreation__/img/items/maize.png" }, { icon = "__ageofcreation__/img/items/rarity/uncommon.png" }, { icon = "__ageofcreation__/img/items/rarity/speed.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/maize.png" }, { icon = "__quality__/graphics/icons/quality-uncommon.png", scale = 0.2, shift = {-8,8} }, { icon = "__ageofcreation__/img/items/quality/speed.png" } },
     icon_size = 64,
     subgroup = "aoc-flora-maize",
     order = "b2a",
@@ -79,7 +79,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-maize-module-2b",
-    icons = { { icon = "__ageofcreation__/img/items/maize.png" }, { icon = "__ageofcreation__/img/items/rarity/uncommon.png" }, { icon = "__ageofcreation__/img/items/rarity/production.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/maize.png" }, { icon = "__quality__/graphics/icons/quality-uncommon.png", scale = 0.2, shift = {-8,8} }, { icon = "__ageofcreation__/img/items/quality/production.png" } },
     icon_size = 64,
     subgroup = "aoc-flora-maize",
     order = "b2b",
@@ -94,7 +94,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-maize-module-3a",
-    icons = { { icon = "__ageofcreation__/img/items/maize.png" }, { icon = "__ageofcreation__/img/items/rarity/rare.png" }, { icon = "__ageofcreation__/img/items/rarity/speed.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/maize.png" }, { icon = "__quality__/graphics/icons/quality-rare.png", scale = 0.2, shift = {-8,8} }, { icon = "__ageofcreation__/img/items/quality/speed.png" } },
     icon_size = 64,
     subgroup = "aoc-flora-maize",
     order = "b3a",
@@ -109,7 +109,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-maize-module-3b",
-    icons = { { icon = "__ageofcreation__/img/items/maize.png" }, { icon = "__ageofcreation__/img/items/rarity/rare.png" }, { icon = "__ageofcreation__/img/items/rarity/production.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/maize.png" }, { icon = "__quality__/graphics/icons/quality-rare.png", scale = 0.2, shift = {-8,8} }, { icon = "__ageofcreation__/img/items/quality/production.png" } },
     icon_size = 64,
     subgroup = "aoc-flora-maize",
     order = "b3b",
@@ -124,7 +124,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-maize-module-4a",
-    icons = { { icon = "__ageofcreation__/img/items/maize.png" }, { icon = "__ageofcreation__/img/items/rarity/epic.png" }, { icon = "__ageofcreation__/img/items/rarity/speed.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/maize.png" }, { icon = "__quality__/graphics/icons/quality-epic.png", scale = 0.2, shift = {-8,8} }, { icon = "__ageofcreation__/img/items/quality/speed.png" } },
     icon_size = 64,
     subgroup = "aoc-flora-maize",
     order = "b4a",
@@ -139,7 +139,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-maize-module-4b",
-    icons = { { icon = "__ageofcreation__/img/items/maize.png" }, { icon = "__ageofcreation__/img/items/rarity/epic.png" }, { icon = "__ageofcreation__/img/items/rarity/production.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/maize.png" }, { icon = "__quality__/graphics/icons/quality-epic.png", scale = 0.2, shift = {-8,8} }, { icon = "__ageofcreation__/img/items/quality/production.png" } },
     icon_size = 64,
     subgroup = "aoc-flora-maize",
     order = "b4b",
@@ -154,7 +154,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-maize-module-5a",
-    icons = { { icon = "__ageofcreation__/img/items/maize.png" }, { icon = "__ageofcreation__/img/items/rarity/legendary.png" }, { icon = "__ageofcreation__/img/items/rarity/speed.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/maize.png" }, { icon = "__quality__/graphics/icons/quality-legendary.png", scale = 0.2, shift = {-8,8} }, { icon = "__ageofcreation__/img/items/quality/speed.png" } },
     icon_size = 64,
     subgroup = "aoc-flora-maize",
     order = "b5a",
@@ -169,7 +169,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-maize-module-5b",
-    icons = { { icon = "__ageofcreation__/img/items/maize.png" }, { icon = "__ageofcreation__/img/items/rarity/legendary.png" }, { icon = "__ageofcreation__/img/items/rarity/production.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/maize.png" }, { icon = "__quality__/graphics/icons/quality-legendary.png", scale = 0.2, shift = {-8,8} }, { icon = "__ageofcreation__/img/items/quality/production.png" } },
     icon_size = 64,
     subgroup = "aoc-flora-maize",
     order = "b5b",
@@ -204,7 +204,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-soybeans-module-1",
-    icons = { { icon = "__ageofcreation__/img/items/soybeans.png" }, { icon = "__ageofcreation__/img/items/rarity/common.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/soybeans.png" }, { icon = "__base__/graphics/icons/quality-normal.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-flora-soybean",
     order = "b1",
@@ -219,7 +219,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-soybeans-module-2",
-    icons = { { icon = "__ageofcreation__/img/items/soybeans.png" }, { icon = "__ageofcreation__/img/items/rarity/uncommon.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/soybeans.png" }, { icon = "__quality__/graphics/icons/quality-uncommon.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-flora-soybean",
     order = "b2",
@@ -234,7 +234,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-soybeans-module-3",
-    icons = { { icon = "__ageofcreation__/img/items/soybeans.png" }, { icon = "__ageofcreation__/img/items/rarity/rare.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/soybeans.png" }, { icon = "__quality__/graphics/icons/quality-rare.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-flora-soybean",
     order = "b3",
@@ -249,7 +249,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-soybeans-module-4",
-    icons = { { icon = "__ageofcreation__/img/items/soybeans.png" }, { icon = "__ageofcreation__/img/items/rarity/epic.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/soybeans.png" }, { icon = "__quality__/graphics/icons/quality-epic.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-flora-soybean",
     order = "b4",
@@ -264,7 +264,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-soybeans-module-5",
-    icons = { { icon = "__ageofcreation__/img/items/soybeans.png" }, { icon = "__ageofcreation__/img/items/rarity/legendary.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/soybeans.png" }, { icon = "__quality__/graphics/icons/quality-legendary.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-flora-soybean",
     order = "b5",
@@ -299,7 +299,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-spruce-tree-module-1",
-    icons = { { icon = data.raw.tree["tree-01"].icon }, { icon = "__ageofcreation__/img/items/rarity/common.png" } },
+    icons = { { icon = data.raw.tree["tree-01"].icon }, { icon = "__base__/graphics/icons/quality-normal.png", scale = 0.2, shift = {-8,8} } },
     icon_size = data.raw.tree["tree-01"].icon_size,
     subgroup = "aoc-flora-wood",
     order = "b1",
@@ -314,7 +314,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-spruce-tree-module-2",
-    icons = { { icon = data.raw.tree["tree-01"].icon }, { icon = "__ageofcreation__/img/items/rarity/uncommon.png" } },
+    icons = { { icon = data.raw.tree["tree-01"].icon }, { icon = "__quality__/graphics/icons/quality-uncommon.png", scale = 0.2, shift = {-8,8} } },
     icon_size = data.raw.tree["tree-01"].icon_size,
     subgroup = "aoc-flora-wood",
     order = "b2",
@@ -329,7 +329,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-spruce-tree-module-3",
-    icons = { { icon = data.raw.tree["tree-01"].icon }, { icon = "__ageofcreation__/img/items/rarity/rare.png" } },
+    icons = { { icon = data.raw.tree["tree-01"].icon }, { icon = "__quality__/graphics/icons/quality-rare.png", scale = 0.2, shift = {-8,8} } },
     icon_size = data.raw.tree["tree-01"].icon_size,
     subgroup = "aoc-flora-wood",
     order = "b3",
@@ -344,7 +344,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-spruce-tree-module-4",
-    icons = { { icon = data.raw.tree["tree-01"].icon }, { icon = "__ageofcreation__/img/items/rarity/epic.png" } },
+    icons = { { icon = data.raw.tree["tree-01"].icon }, { icon = "__quality__/graphics/icons/quality-epic.png", scale = 0.2, shift = {-8,8} } },
     icon_size = data.raw.tree["tree-01"].icon_size,
     subgroup = "aoc-flora-wood",
     order = "b4",
@@ -359,7 +359,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-spruce-tree-module-5",
-    icons = { { icon = data.raw.tree["tree-01"].icon }, { icon = "__ageofcreation__/img/items/rarity/legendary.png" } },
+    icons = { { icon = data.raw.tree["tree-01"].icon }, { icon = "__quality__/graphics/icons/quality-legendary.png", scale = 0.2, shift = {-8,8} } },
     icon_size = data.raw.tree["tree-01"].icon_size,
     subgroup = "aoc-flora-wood",
     order = "b5",
@@ -384,7 +384,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-rubber-tree-module-1",
-    icons = { { icon = "__ageofcreation__/img/items/rubber-tree.png", icon_size = 256 }, { icon = "__ageofcreation__/img/items/rarity/common.png", icon_size = 64 } },
+    icons = { { icon = "__ageofcreation__/img/items/rubber-tree.png", icon_size = 256 }, { icon = "__base__/graphics/icons/quality-normal.png", icon_size = 64, scale = 0.2, shift = {-8,8} } },
     subgroup = "aoc-flora-rubber",
     order = "b1",
     stack_size = 20,
@@ -398,7 +398,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-rubber-tree-module-2",
-    icons = { { icon = "__ageofcreation__/img/items/rubber-tree.png", icon_size = 256 }, { icon = "__ageofcreation__/img/items/rarity/uncommon.png", icon_size = 64 } },
+    icons = { { icon = "__ageofcreation__/img/items/rubber-tree.png", icon_size = 256 }, { icon = "__quality__/graphics/icons/quality-uncommon.png", icon_size = 64, scale = 0.2, shift = {-8,8} } },
     subgroup = "aoc-flora-rubber",
     order = "b2",
     stack_size = 20,
@@ -412,7 +412,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-rubber-tree-module-3",
-    icons = { { icon = "__ageofcreation__/img/items/rubber-tree.png", icon_size = 256 }, { icon = "__ageofcreation__/img/items/rarity/rare.png", icon_size = 64 } },
+    icons = { { icon = "__ageofcreation__/img/items/rubber-tree.png", icon_size = 256 }, { icon = "__quality__/graphics/icons/quality-rare.png", icon_size = 64, scale = 0.2, shift = {-8,8} } },
     subgroup = "aoc-flora-rubber",
     order = "b3",
     stack_size = 20,
@@ -426,7 +426,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-rubber-tree-module-4",
-    icons = { { icon = "__ageofcreation__/img/items/rubber-tree.png", icon_size = 256 }, { icon = "__ageofcreation__/img/items/rarity/epic.png", icon_size = 64 } },
+    icons = { { icon = "__ageofcreation__/img/items/rubber-tree.png", icon_size = 256 }, { icon = "__quality__/graphics/icons/quality-epic.png", icon_size = 64, scale = 0.2, shift = {-8,8} } },
     subgroup = "aoc-flora-rubber",
     order = "b4",
     stack_size = 20,
@@ -440,7 +440,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-rubber-tree-module-5",
-    icons = { { icon = "__ageofcreation__/img/items/rubber-tree.png", icon_size = 256 }, { icon = "__ageofcreation__/img/items/rarity/legendary.png", icon_size = 64 } },
+    icons = { { icon = "__ageofcreation__/img/items/rubber-tree.png", icon_size = 256 }, { icon = "__quality__/graphics/icons/quality-legendary.png", icon_size = 64, scale = 0.2, shift = {-8,8} } },
     subgroup = "aoc-flora-rubber",
     order = "b5",
     stack_size = 20,
@@ -474,7 +474,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-apple-tree-module-1",
-    icons = { { icon = data.raw.tree["tree-05"].icon }, { icon = "__ageofcreation__/img/items/rarity/common.png" } },
+    icons = { { icon = data.raw.tree["tree-05"].icon }, { icon = "__base__/graphics/icons/quality-normal.png", scale = 0.2, shift = {-8,8} } },
     icon_size = data.raw.tree["tree-05"].icon_size,
     subgroup = "aoc-flora-apple",
     order = "b1",
@@ -489,7 +489,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-apple-tree-module-2",
-    icons = { { icon = data.raw.tree["tree-05"].icon }, { icon = "__ageofcreation__/img/items/rarity/uncommon.png" } },
+    icons = { { icon = data.raw.tree["tree-05"].icon }, { icon = "__quality__/graphics/icons/quality-uncommon.png", scale = 0.2, shift = {-8,8} } },
     icon_size = data.raw.tree["tree-05"].icon_size,
     subgroup = "aoc-flora-apple",
     order = "b2",
@@ -504,7 +504,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-apple-tree-module-3",
-    icons = { { icon = data.raw.tree["tree-05"].icon }, { icon = "__ageofcreation__/img/items/rarity/rare.png" } },
+    icons = { { icon = data.raw.tree["tree-05"].icon }, { icon = "__quality__/graphics/icons/quality-rare.png", scale = 0.2, shift = {-8,8} } },
     icon_size = data.raw.tree["tree-05"].icon_size,
     subgroup = "aoc-flora-apple",
     order = "b3",
@@ -519,7 +519,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-apple-tree-module-4",
-    icons = { { icon = data.raw.tree["tree-05"].icon }, { icon = "__ageofcreation__/img/items/rarity/epic.png" } },
+    icons = { { icon = data.raw.tree["tree-05"].icon }, { icon = "__quality__/graphics/icons/quality-epic.png", scale = 0.2, shift = {-8,8} } },
     icon_size = data.raw.tree["tree-05"].icon_size,
     subgroup = "aoc-flora-apple",
     order = "b4",
@@ -534,7 +534,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-apple-tree-module-5",
-    icons = { { icon = data.raw.tree["tree-05"].icon }, { icon = "__ageofcreation__/img/items/rarity/legendary.png" } },
+    icons = { { icon = data.raw.tree["tree-05"].icon }, { icon = "__quality__/graphics/icons/quality-legendary.png", scale = 0.2, shift = {-8,8} } },
     icon_size = data.raw.tree["tree-05"].icon_size,
     subgroup = "aoc-flora-apple",
     order = "b5",
@@ -579,7 +579,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-olive-tree-module-1",
-    icons = { { icon = data.raw.tree["tree-08"].icon }, { icon = "__ageofcreation__/img/items/rarity/common.png" } },
+    icons = { { icon = data.raw.tree["tree-08"].icon }, { icon = "__base__/graphics/icons/quality-normal.png", scale = 0.2, shift = {-8,8} } },
     icon_size = data.raw.tree["tree-08"].icon_size,
     subgroup = "aoc-flora-olive",
     order = "b1",
@@ -594,7 +594,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-olive-tree-module-2",
-    icons = { { icon = data.raw.tree["tree-08"].icon }, { icon = "__ageofcreation__/img/items/rarity/uncommon.png" } },
+    icons = { { icon = data.raw.tree["tree-08"].icon }, { icon = "__quality__/graphics/icons/quality-uncommon.png", scale = 0.2, shift = {-8,8} } },
     icon_size = data.raw.tree["tree-08"].icon_size,
     subgroup = "aoc-flora-olive",
     order = "b2",
@@ -609,7 +609,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-olive-tree-module-3",
-    icons = { { icon = data.raw.tree["tree-08"].icon }, { icon = "__ageofcreation__/img/items/rarity/rare.png" } },
+    icons = { { icon = data.raw.tree["tree-08"].icon }, { icon = "__quality__/graphics/icons/quality-rare.png", scale = 0.2, shift = {-8,8} } },
     icon_size = data.raw.tree["tree-08"].icon_size,
     subgroup = "aoc-flora-olive",
     order = "b3",
@@ -624,7 +624,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-olive-tree-module-4",
-    icons = { { icon = data.raw.tree["tree-08"].icon }, { icon = "__ageofcreation__/img/items/rarity/epic.png" } },
+    icons = { { icon = data.raw.tree["tree-08"].icon }, { icon = "__quality__/graphics/icons/quality-epic.png", scale = 0.2, shift = {-8,8} } },
     icon_size = data.raw.tree["tree-08"].icon_size,
     subgroup = "aoc-flora-olive",
     order = "b4",
@@ -639,7 +639,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-olive-tree-module-5",
-    icons = { { icon = data.raw.tree["tree-08"].icon }, { icon = "__ageofcreation__/img/items/rarity/legendary.png" } },
+    icons = { { icon = data.raw.tree["tree-08"].icon }, { icon = "__quality__/graphics/icons/quality-legendary.png", scale = 0.2, shift = {-8,8} } },
     icon_size = data.raw.tree["tree-08"].icon_size,
     subgroup = "aoc-flora-olive",
     order = "b5",
@@ -734,22 +734,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-chicken-module-1",
-    icons = { { icon = "__ageofcreation__/img/items/chicken.png" }, { icon = "__ageofcreation__/img/items/rarity/common.png" } },
-    icon_size = 64,
-    subgroup = "aoc-fauna-chicken",
-    order = "b1",
-    stack_size = 20,
-	category = "aoc-module-chicken",
-	tier = 1,
-    effect = { productivity = 0.04 },
-	limitation = {},
-	limitation_message_key = "item-not-allowed-in-this-container-item"
-}})
-
-data:extend({{
-    type = "module",
-    name = "aoc-chicken-module-1",
-    icons = { { icon = "__ageofcreation__/img/items/chicken.png" }, { icon = "__ageofcreation__/img/items/rarity/common.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/chicken.png" }, { icon = "__base__/graphics/icons/quality-normal.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-fauna-chicken",
     order = "b1",
@@ -764,7 +749,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-chicken-module-2",
-    icons = { { icon = "__ageofcreation__/img/items/chicken.png" }, { icon = "__ageofcreation__/img/items/rarity/uncommon.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/chicken.png" }, { icon = "__quality__/graphics/icons/quality-uncommon.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-fauna-chicken",
     order = "b2",
@@ -779,7 +764,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-chicken-module-3",
-    icons = { { icon = "__ageofcreation__/img/items/chicken.png" }, { icon = "__ageofcreation__/img/items/rarity/rare.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/chicken.png" }, { icon = "__quality__/graphics/icons/quality-rare.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-fauna-chicken",
     order = "b3",
@@ -794,7 +779,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-chicken-module-4",
-    icons = { { icon = "__ageofcreation__/img/items/chicken.png" }, { icon = "__ageofcreation__/img/items/rarity/epic.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/chicken.png" }, { icon = "__quality__/graphics/icons/quality-epic.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-fauna-chicken",
     order = "b4",
@@ -809,7 +794,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-chicken-module-5",
-    icons = { { icon = "__ageofcreation__/img/items/chicken.png" }, { icon = "__ageofcreation__/img/items/rarity/legendary.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/chicken.png" }, { icon = "__quality__/graphics/icons/quality-legendary.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-fauna-chicken",
     order = "b5",
@@ -884,7 +869,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-sheep-module-1",
-    icons = { { icon = "__ageofcreation__/img/items/sheep.png" }, { icon = "__ageofcreation__/img/items/rarity/common.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/sheep.png" }, { icon = "__base__/graphics/icons/quality-normal.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-fauna-sheep",
     order = "b1",
@@ -899,7 +884,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-sheep-module-2",
-    icons = { { icon = "__ageofcreation__/img/items/sheep.png" }, { icon = "__ageofcreation__/img/items/rarity/uncommon.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/sheep.png" }, { icon = "__quality__/graphics/icons/quality-uncommon.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-fauna-sheep",
     order = "b2",
@@ -914,7 +899,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-sheep-module-3",
-    icons = { { icon = "__ageofcreation__/img/items/sheep.png" }, { icon = "__ageofcreation__/img/items/rarity/rare.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/sheep.png" }, { icon = "__quality__/graphics/icons/quality-rare.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-fauna-sheep",
     order = "b3",
@@ -929,7 +914,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-sheep-module-4",
-    icons = { { icon = "__ageofcreation__/img/items/sheep.png" }, { icon = "__ageofcreation__/img/items/rarity/epic.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/sheep.png" }, { icon = "__quality__/graphics/icons/quality-epic.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-fauna-sheep",
     order = "b4",
@@ -944,7 +929,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-sheep-module-5",
-    icons = { { icon = "__ageofcreation__/img/items/sheep.png" }, { icon = "__ageofcreation__/img/items/rarity/legendary.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/sheep.png" }, { icon = "__quality__/graphics/icons/quality-legendary.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-fauna-sheep",
     order = "b5",
@@ -999,7 +984,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-ox-module-1",
-    icons = { { icon = "__ageofcreation__/img/items/ox.png" }, { icon = "__ageofcreation__/img/items/rarity/common.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/ox.png" }, { icon = "__base__/graphics/icons/quality-normal.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-fauna-cow",
     order = "b1",
@@ -1014,7 +999,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-ox-module-2",
-    icons = { { icon = "__ageofcreation__/img/items/ox.png" }, { icon = "__ageofcreation__/img/items/rarity/uncommon.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/ox.png" }, { icon = "__quality__/graphics/icons/quality-uncommon.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-fauna-cow",
     order = "b2",
@@ -1029,7 +1014,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-ox-module-3",
-    icons = { { icon = "__ageofcreation__/img/items/ox.png" }, { icon = "__ageofcreation__/img/items/rarity/rare.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/ox.png" }, { icon = "__quality__/graphics/icons/quality-rare.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-fauna-cow",
     order = "b3",
@@ -1044,7 +1029,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-ox-module-4",
-    icons = { { icon = "__ageofcreation__/img/items/ox.png" }, { icon = "__ageofcreation__/img/items/rarity/epic.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/ox.png" }, { icon = "__quality__/graphics/icons/quality-epic.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-fauna-cow",
     order = "b4",
@@ -1059,7 +1044,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-ox-module-5",
-    icons = { { icon = "__ageofcreation__/img/items/ox.png" }, { icon = "__ageofcreation__/img/items/rarity/legendary.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/ox.png" }, { icon = "__quality__/graphics/icons/quality-legendary.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-fauna-cow",
     order = "b5",
@@ -1084,7 +1069,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-cow-module-1",
-    icons = { { icon = "__ageofcreation__/img/items/cow.png" }, { icon = "__ageofcreation__/img/items/rarity/common.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/cow.png" }, { icon = "__base__/graphics/icons/quality-normal.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-fauna-cow",
     order = "c1",
@@ -1099,7 +1084,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-cow-module-2",
-    icons = { { icon = "__ageofcreation__/img/items/cow.png" }, { icon = "__ageofcreation__/img/items/rarity/uncommon.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/cow.png" }, { icon = "__quality__/graphics/icons/quality-uncommon.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-fauna-cow",
     order = "c2",
@@ -1114,7 +1099,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-cow-module-3",
-    icons = { { icon = "__ageofcreation__/img/items/cow.png" }, { icon = "__ageofcreation__/img/items/rarity/rare.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/cow.png" }, { icon = "__quality__/graphics/icons/quality-rare.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-fauna-cow",
     order = "c3",
@@ -1129,7 +1114,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-cow-module-4",
-    icons = { { icon = "__ageofcreation__/img/items/cow.png" }, { icon = "__ageofcreation__/img/items/rarity/epic.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/cow.png" }, { icon = "__quality__/graphics/icons/quality-epic.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-fauna-cow",
     order = "c4",
@@ -1144,7 +1129,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-cow-module-5",
-    icons = { { icon = "__ageofcreation__/img/items/cow.png" }, { icon = "__ageofcreation__/img/items/rarity/legendary.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/cow.png" }, { icon = "__quality__/graphics/icons/quality-legendary.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-fauna-cow",
     order = "c5",

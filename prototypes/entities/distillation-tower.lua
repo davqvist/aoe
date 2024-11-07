@@ -23,9 +23,7 @@ data:extend({{
   },
   energy_usage = "1.4MW",
   allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-  module_specification = {
-    module_slots = 3
-  },
+  module_slots = 3,
   icon = "__angelspetrochem_art__/graphics/icons/gas-refinery.png",
   icon_size = 64,
   icon_mipmaps = 4,

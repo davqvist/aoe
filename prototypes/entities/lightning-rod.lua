@@ -22,7 +22,7 @@ data:extend({{
   energy_production = '1GW',
   energy_usage = "0kW",
   allowed_effects = {},
-  module_specification = { module_slots = 0 },
+  module_slots = 0,
   icon = "__space-age__/graphics/icons/lightning-rod.png",
   icon_size = 64, icon_mipmap = 4,
   flags = { "placeable-neutral", "placeable-player", "player-creation" },

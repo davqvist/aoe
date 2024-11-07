@@ -34,7 +34,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-lotus-flower-module-1",
-    icons = { { icon = data.raw.item["aoc-lotus-flower"].icon }, { icon = "__ageofcreation__/img/items/rarity/common.png" } },
+    icons = { { icon = data.raw.item["aoc-lotus-flower"].icon }, { icon = "__base__/graphics/icons/quality-normal.png", scale = 0.2, shift = {-8,8} } },
     icon_size = data.raw.item["aoc-lotus-flower"].icon_size,
     subgroup = "aoc-flora-lotus",
     order = "b1",
@@ -49,7 +49,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-lotus-flower-module-2",
-    icons = { { icon = data.raw.item["aoc-lotus-flower"].icon }, { icon = "__ageofcreation__/img/items/rarity/uncommon.png" } },
+    icons = { { icon = data.raw.item["aoc-lotus-flower"].icon }, { icon = "__quality__/graphics/icons/quality-uncommon.png", scale = 0.2, shift = {-8,8} } },
     icon_size = data.raw.item["aoc-lotus-flower"].icon_size,
     subgroup = "aoc-flora-lotus",
     order = "b2",
@@ -64,7 +64,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-lotus-flower-module-3",
-    icons = { { icon = data.raw.item["aoc-lotus-flower"].icon }, { icon = "__ageofcreation__/img/items/rarity/rare.png" } },
+    icons = { { icon = data.raw.item["aoc-lotus-flower"].icon }, { icon = "__quality__/graphics/icons/quality-rare.png", scale = 0.2, shift = {-8,8} } },
     icon_size = data.raw.item["aoc-lotus-flower"].icon_size,
     subgroup = "aoc-flora-lotus",
     order = "b3",
@@ -79,7 +79,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-lotus-flower-module-4",
-    icons = { { icon = data.raw.item["aoc-lotus-flower"].icon }, { icon = "__ageofcreation__/img/items/rarity/epic.png" } },
+    icons = { { icon = data.raw.item["aoc-lotus-flower"].icon }, { icon = "__quality__/graphics/icons/quality-epic.png", scale = 0.2, shift = {-8,8} } },
     icon_size = data.raw.item["aoc-lotus-flower"].icon_size,
     subgroup = "aoc-flora-lotus",
     order = "b4",
@@ -94,7 +94,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-lotus-flower-module-5",
-    icons = { { icon = data.raw.item["aoc-lotus-flower"].icon }, { icon = "__ageofcreation__/img/items/rarity/legendary.png" } },
+    icons = { { icon = data.raw.item["aoc-lotus-flower"].icon }, { icon = "__quality__/graphics/icons/quality-legendary.png", scale = 0.2, shift = {-8,8} } },
     icon_size = data.raw.item["aoc-lotus-flower"].icon_size,
     subgroup = "aoc-flora-lotus",
     order = "b5",

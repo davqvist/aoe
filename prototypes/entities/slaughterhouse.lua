@@ -22,9 +22,7 @@ data:extend({{
   },
 	energy_usage = "180kW",
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-	module_specification = {
-    module_slots = 3
-  },
+	module_slots = 3,
   icon = "__angelsbioprocessing_art__/graphics/icons/bio-butchery.png",
   icon_size = 32,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },

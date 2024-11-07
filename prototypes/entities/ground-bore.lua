@@ -125,9 +125,7 @@ data:extend({{
   },
 	energy_usage = "210kW",
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-	module_specification ={
-    module_slots = 3
-  },
+	module_slots = 3,
   icon = "__angelsrefining_art__/graphics/icons/liquifier.png",
   icon_size = 32,
   icon_mipmaps = 1,

@@ -23,9 +23,7 @@ data:extend({{
   },
 	energy_usage = "280kW",
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-	module_specification = {
-    module_slots = 3
-  },
+	module_slots = 3,
   icon = "__angelsrefining_art__/graphics/icons/ore-sorting-facility.png",
   icon_size = 64,
   icon_mipmaps = 4,

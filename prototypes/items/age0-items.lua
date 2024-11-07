@@ -1,3 +1,8 @@
+
+data.raw['item']['tree-seed'].subgroup = "aoc-flora-wood"
+data.raw['item']['tree-seed'].order = "a"
+data.raw['item']['tree-seed'].stack_size = 20
+
 data:extend({{
     type = "item",
     name = "aoc-log",

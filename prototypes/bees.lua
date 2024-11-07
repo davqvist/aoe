@@ -243,8 +243,10 @@ data:extend({{
       tint = {0, 0, 255},
       icon_size = 32
     },{ 
-      icon = "__ageofcreation__/img/items/rarity/common.png",
-      icon_size = 64
+      icon = "__base__/graphics/icons/quality-normal.png",
+      icon_size = 64,
+      scale = 0.25, 
+      shift = {-8,8}
     }
   },
   subgroup = "aoc-bees-modules",
@@ -268,8 +270,10 @@ data:extend({{
       tint = {0, 0, 255},
       icon_size = 32
     },{ 
-      icon = "__ageofcreation__/img/items/rarity/uncommon.png",
-      icon_size = 64
+      icon = "__quality__/graphics/icons/quality-uncommon.png",
+      icon_size = 64,
+      scale = 0.25, 
+      shift = {-8,8}
     }
   },
   subgroup = "aoc-bees-modules",
@@ -293,8 +297,10 @@ data:extend({{
       tint = {0, 0, 255},
       icon_size = 32
     },{ 
-      icon = "__ageofcreation__/img/items/rarity/rare.png",
-      icon_size = 64
+      icon = "__quality__/graphics/icons/quality-rare.png",
+      icon_size = 64,
+      scale = 0.25, 
+      shift = {-8,8}
     }
   },
   subgroup = "aoc-bees-modules",
@@ -318,8 +324,10 @@ data:extend({{
       tint = {0, 0, 255},
       icon_size = 32
     },{ 
-      icon = "__ageofcreation__/img/items/rarity/epic.png",
-      icon_size = 64
+      icon = "__quality__/graphics/icons/quality-epic.png",
+      icon_size = 64,
+      scale = 0.25, 
+      shift = {-8,8}
     }
   },
   subgroup = "aoc-bees-modules",
@@ -343,8 +351,10 @@ data:extend({{
       tint = {0, 0, 255},
       icon_size = 32
     },{
-      icon = "__ageofcreation__/img/items/rarity/legendary.png",
-      icon_size = 64
+      icon = "__quality__/graphics/icons/quality-legendary.png",
+      icon_size = 64,
+      scale = 0.25, 
+      shift = {-8,8}
     }
   },
   subgroup = "aoc-bees-modules",

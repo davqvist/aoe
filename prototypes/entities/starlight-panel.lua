@@ -17,7 +17,7 @@ data:extend({{
 	energy_source = { type = "void" },
 	energy_usage = "1kW",
 	allowed_effects = {},
-	module_specification = {},
+	module_slots = 0,
   fixed_recipe = "aoc-starlight-starlight-recipe",
   icon = "__ageofcreation__/img/entities/starlight-panel.png",
   icon_size = 192,

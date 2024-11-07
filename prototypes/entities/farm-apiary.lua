@@ -17,9 +17,7 @@ data:extend({{
     energy_source = { type = "void" },
 	  energy_usage = "1kW",
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-    module_specification ={
-      module_slots = 10
-    },
+    module_slots = 10,
     icon = '__NPBees2_art__/graphics/icon/apiary.png',
 	  icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },

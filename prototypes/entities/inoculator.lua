@@ -22,9 +22,7 @@ data:extend({{
     },
     energy_usage = "3MW",
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-    module_specification = {
-       module_slots = 3
-    },
+    module_slots = 3,
     icon = '__NPBees2_art__/graphics/icon/genetic-transposer.png',
     icon_size = 32,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },

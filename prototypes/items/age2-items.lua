@@ -417,7 +417,7 @@ data.raw['capsule']['raw-fish'].stack_size = 200
 data:extend({{
     type = "module",
     name = "aoc-fish-module-1",
-    icons = { { icon = data.raw.capsule["raw-fish"].icon }, { icon = "__ageofcreation__/img/items/rarity/common.png" } },
+    icons = { { icon = data.raw.capsule["raw-fish"].icon }, { icon = "__base__/graphics/icons/quality-normal.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
 	icon_mipmaps = data.raw.capsule["raw-fish"].icon_mipmaps,
     subgroup = "aoc-fauna-fish",
@@ -433,7 +433,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-fish-module-2",
-    icons = { { icon = data.raw.capsule["raw-fish"].icon }, { icon = "__ageofcreation__/img/items/rarity/uncommon.png" } },
+    icons = { { icon = data.raw.capsule["raw-fish"].icon }, { icon = "__quality__/graphics/icons/quality-uncommon.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
 	icon_mipmaps = data.raw.capsule["raw-fish"].icon_mipmaps,
     subgroup = "aoc-fauna-fish",
@@ -449,7 +449,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-fish-module-3",
-    icons = { { icon = data.raw.capsule["raw-fish"].icon }, { icon = "__ageofcreation__/img/items/rarity/rare.png" } },
+    icons = { { icon = data.raw.capsule["raw-fish"].icon }, { icon = "__quality__/graphics/icons/quality-rare.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
 	icon_mipmaps = data.raw.capsule["raw-fish"].icon_mipmaps,
     subgroup = "aoc-fauna-fish",
@@ -465,7 +465,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-fish-module-4",
-    icons = { { icon = data.raw.capsule["raw-fish"].icon }, { icon = "__ageofcreation__/img/items/rarity/epic.png" } },
+    icons = { { icon = data.raw.capsule["raw-fish"].icon }, { icon = "__quality__/graphics/icons/quality-epic.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
 	icon_mipmaps = data.raw.capsule["raw-fish"].icon_mipmaps,
     subgroup = "aoc-fauna-fish",
@@ -481,7 +481,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-fish-module-5",
-    icons = { { icon = data.raw.capsule["raw-fish"].icon }, { icon = "__ageofcreation__/img/items/rarity/legendary.png" } },
+    icons = { { icon = data.raw.capsule["raw-fish"].icon }, { icon = "__quality__/graphics/icons/quality-legendary.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
 	icon_mipmaps = data.raw.capsule["raw-fish"].icon_mipmaps,
     subgroup = "aoc-fauna-fish",

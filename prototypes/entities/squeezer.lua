@@ -152,9 +152,7 @@ data:extend({{
     },
 	energy_usage = "350kW",
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-	module_specification = {
-    module_slots = 3
-  },
+	module_slots = 3,
   icon = "__angelssmelting_art__/graphics/icons/chemical-furnace.png",
   icon_size = 64,
   icon_mipmaps = 4,

@@ -101,9 +101,6 @@ script.on_event(defines.events.on_gui_click,
 script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_entity}, 
   function(event)
     local entity = event.entity
-	if(entity.name == "aoc-tree-farm") then 
-		handleBuilt( event, "treefarms" )
-	end
 	if(entity.name == "aoc-forestry") then 
 		handleBuilt( event, "forestries" )
 	end
@@ -371,30 +368,14 @@ script.on_event(defines.events.on_tick,
 		end
 		storage.lightningtick[game.tick-600] = nil
 	end
-	if storage.treefarms then
-      for _,treefarm in pairs(storage.treefarms) do
-  		if treefarm.valid and treefarm.name == "aoc-tree-farm" then
-		  if treefarm.get_recipe() and treefarm.get_recipe().name == "aoc-tree-farm-tree-recipe" and treefarm.crafting_progress >= 1-treefarm.crafting_speed/(60*treefarm.get_recipe().energy) then
-			plantTree(treefarm)
-		  end
-		  if treefarm.get_recipe() and treefarm.get_recipe().name == "aoc-tree-farm-rubber-tree-recipe" and treefarm.crafting_progress >= 1-treefarm.crafting_speed/(60*treefarm.get_recipe().energy) then
-			plantRubberTree(treefarm)
-		  end
-		else storage.treefarms[_]=nil
-	    end
-	  end
-	end
 	if storage.forestries then
       for _,forestry in pairs(storage.forestries) do
   		if forestry.valid and forestry.name == "aoc-forestry" then
-		  if forestry.get_recipe() and forestry.get_recipe().name == "aoc-forestry-log-recipe" and forestry.crafting_progress >= 1-forestry.crafting_speed/(60*forestry.get_recipe().energy) then	
-			harvestTree(forestry)
-		  end
-		  if forestry.get_recipe() and treefarm.get_recipe().name == "aoc-forestry-latex-recipe" and forestry.crafting_progress >= 1-forestry.crafting_speed/(60*forestry.get_recipe().energy) then
-			tapTree(forestry, "name", "aoc-rubber-tree")
+		  if forestry.get_recipe() and forestry.get_recipe().name == "aoc-forestry-latex-recipe" and forestry.crafting_progress >= 1-forestry.crafting_speed/(60*forestry.get_recipe().energy) then
+			tapTree(forestry, "name", "aoc-rubber-tree-plant")
 		  end
 		  if forestry.get_recipe() and forestry.get_recipe().name == "aoc-forestry-resin-recipe" and forestry.crafting_progress >= 1-forestry.crafting_speed/(60*forestry.get_recipe().energy) then
-			tapTree(forestry, "type", "tree")
+			tapTree(forestry, "name", "tree-plant")
 		  end
 		else storage.forestries[_]=nil
 		end
@@ -516,43 +497,6 @@ function handleMined(event, main_entities, sub_entities, drop)
   end
 end
 
-function plantTree(treefarm)
-  local area = 7
-  local surface = treefarm.surface
-  local x = math.random(treefarm.position.x-area, treefarm.position.x+area)+0.5
-  local y = math.random(treefarm.position.y-area, treefarm.position.y+area)+0.5
-  local tree_nr = math.random(1,9)
-  if surface.can_place_entity({name="tree-0" .. tree_nr, position={x,y}}) then
-	surface.create_entity({name="tree-0" .. tree_nr, position={x,y}})
-  end
-end 
-
-function plantRubberTree(treefarm)
-  local area = 7
-  local surface = treefarm.surface
-  for i=1,10 do
-	local x = math.random(treefarm.position.x-area, treefarm.position.x+area)+0.5
-	local y = math.random(treefarm.position.y-area, treefarm.position.y+area)+0.5
-	if surface.can_place_entity({name="aoc-rubber-tree", position={x,y}}) then
-		surface.create_entity({name="aoc-rubber-tree", position={x,y}})
-		break
-	end
-  end
-end 
-
-function harvestTree(forestry)
-  local area = 10
-  local surface = forestry.surface
-  local x = math.random(forestry.position.x-area+1, forestry.position.x+area-1)
-  local y = math.random(forestry.position.y-area+1, forestry.position.y+area-1)
-  local entity = nil
-  local temp = surface.find_entities_filtered({position={x,y}, type="tree", radius=1.5})
-  if temp ~= nil then entity = temp[1] end
-  if entity == nil then forestry.crafting_progress = 0 else
-    entity.destroy()
-  end
-end
-
 function tapTree(forestry, what, tree)
   local area = 10
   local surface = forestry.surface
@@ -561,7 +505,7 @@ function tapTree(forestry, what, tree)
   local entity = nil
   local temp = surface.find_entities_filtered({position={x,y}, [what]=tree, radius=2.5})
   if temp ~= nil then entity = temp[1] end
-  if entity == nil then forestry.crafting_progress = 0 end
+  if entity == nil or game.tick < entity.tick_grown then forestry.crafting_progress = 0 end
 end
 
 script.on_event(defines.events.on_script_trigger_effect,

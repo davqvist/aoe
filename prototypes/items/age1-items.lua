@@ -24,7 +24,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-kelp-module-1",
-    icons = { { icon = "__ageofcreation__/img/items/kelp.png" }, { icon = "__ageofcreation__/img/items/rarity/common.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/kelp.png" }, { icon = "__base__/graphics/icons/quality-normal.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-flora-kelp",
     order = "a1",
@@ -39,7 +39,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-kelp-module-2",
-    icons = { { icon = "__ageofcreation__/img/items/kelp.png" }, { icon = "__ageofcreation__/img/items/rarity/uncommon.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/kelp.png" }, { icon = "__quality__/graphics/icons/quality-uncommon.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-flora-kelp",
     order = "a2",
@@ -54,7 +54,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-kelp-module-3",
-    icons = { { icon = "__ageofcreation__/img/items/kelp.png" }, { icon = "__ageofcreation__/img/items/rarity/rare.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/kelp.png" }, { icon = "__quality__/graphics/icons/quality-rare.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-flora-kelp",
     order = "a3",
@@ -69,7 +69,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-kelp-module-4",
-    icons = { { icon = "__ageofcreation__/img/items/kelp.png" }, { icon = "__ageofcreation__/img/items/rarity/epic.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/kelp.png" }, { icon = "__quality__/graphics/icons/quality-epic.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-flora-kelp",
     order = "a4",
@@ -84,7 +84,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-kelp-module-5",
-    icons = { { icon = "__ageofcreation__/img/items/kelp.png" }, { icon = "__ageofcreation__/img/items/rarity/legendary.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/kelp.png" }, { icon = "__quality__/graphics/icons/quality-legendary.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-flora-kelp",
     order = "a5",
@@ -119,7 +119,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-tea-leaves-module-1",
-    icons = { { icon = "__ageofcreation__/img/items/tea-leaves.png" }, { icon = "__ageofcreation__/img/items/rarity/common.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/tea-leaves.png" }, { icon = "__base__/graphics/icons/quality-normal.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-flora-drinks",
     order = "b1",
@@ -134,7 +134,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-tea-leaves-module-2",
-    icons = { { icon = "__ageofcreation__/img/items/tea-leaves.png" }, { icon = "__ageofcreation__/img/items/rarity/uncommon.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/tea-leaves.png" }, { icon = "__quality__/graphics/icons/quality-uncommon.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-flora-drinks",
     order = "b2",
@@ -149,7 +149,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-tea-leaves-module-3",
-    icons = { { icon = "__ageofcreation__/img/items/tea-leaves.png" }, { icon = "__ageofcreation__/img/items/rarity/rare.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/tea-leaves.png" }, { icon = "__quality__/graphics/icons/quality-rare.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-flora-drinks",
     order = "b3",
@@ -164,7 +164,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-tea-leaves-module-4",
-    icons = { { icon = "__ageofcreation__/img/items/tea-leaves.png" }, { icon = "__ageofcreation__/img/items/rarity/epic.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/tea-leaves.png" }, { icon = "__quality__/graphics/icons/quality-epic.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-flora-drinks",
     order = "b4",
@@ -179,7 +179,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-tea-leaves-module-5",
-    icons = { { icon = "__ageofcreation__/img/items/tea-leaves.png" }, { icon = "__ageofcreation__/img/items/rarity/legendary.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/tea-leaves.png" }, { icon = "__quality__/graphics/icons/quality-legendary.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-flora-drinks",
     order = "b5",
@@ -264,7 +264,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-coffee-plant-module-1",
-    icons = { { icon = "__ageofcreation__/img/items/coffee-plant.png" }, { icon = "__ageofcreation__/img/items/rarity/common.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/coffee-plant.png" }, { icon = "__base__/graphics/icons/quality-normal.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-flora-drinks",
     order = "f1",
@@ -279,7 +279,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-coffee-plant-module-2",
-    icons = { { icon = "__ageofcreation__/img/items/coffee-plant.png" }, { icon = "__ageofcreation__/img/items/rarity/uncommon.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/coffee-plant.png" }, { icon = "__quality__/graphics/icons/quality-uncommon.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-flora-drinks",
     order = "f2",
@@ -294,7 +294,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-coffee-plant-module-3",
-    icons = { { icon = "__ageofcreation__/img/items/coffee-plant.png" }, { icon = "__ageofcreation__/img/items/rarity/rare.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/coffee-plant.png" }, { icon = "__quality__/graphics/icons/quality-rare.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-flora-drinks",
     order = "f3",
@@ -309,7 +309,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-coffee-plant-module-4",
-    icons = { { icon = "__ageofcreation__/img/items/coffee-plant.png" }, { icon = "__ageofcreation__/img/items/rarity/epic.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/coffee-plant.png" }, { icon = "__quality__/graphics/icons/quality-epic.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-flora-drinks",
     order = "f4",
@@ -324,7 +324,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-coffee-plant-module-5",
-    icons = { { icon = "__ageofcreation__/img/items/coffee-plant.png" }, { icon = "__ageofcreation__/img/items/rarity/legendary.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/coffee-plant.png" }, { icon = "__quality__/graphics/icons/quality-legendary.png", scale = 0.2, shift = {-8,8} } },
     icon_size = 64,
     subgroup = "aoc-flora-drinks",
     order = "f5",
@@ -403,8 +403,8 @@ data:extend({{
     icon_size = 64,
     subgroup = "aoc-flora-rubber",
     order = "a",
-    stack_size = 100,
-    place_result = "aoc-rubber-tree-plant",
+    stack_size = 20,
+    plant_result = "aoc-rubber-tree-plant",
     localised_name = {"item-name.aoc-rubber-tree-seedling"}
 }})
 
@@ -471,7 +471,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-flax-module-1a",
-    icons = { { icon = "__ageofcreation__/img/items/flax.png" }, { icon = "__ageofcreation__/img/items/rarity/common.png" }, { icon = "__ageofcreation__/img/items/rarity/speed.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/flax.png" }, { icon = "__base__/graphics/icons/quality-normal.png", scale = 0.2, shift = {-8,8} }, { icon = "__ageofcreation__/img/items/quality/speed.png" } },
     icon_size = 64,
     subgroup = "aoc-flora-flax",
     order = "b1a",
@@ -486,7 +486,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-flax-module-1b",
-    icons = { { icon = "__ageofcreation__/img/items/flax.png" }, { icon = "__ageofcreation__/img/items/rarity/common.png" }, { icon = "__ageofcreation__/img/items/rarity/production.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/flax.png" }, { icon = "__base__/graphics/icons/quality-normal.png", scale = 0.2, shift = {-8,8} }, { icon = "__ageofcreation__/img/items/quality/production.png" } },
     icon_size = 64,
     subgroup = "aoc-flora-flax",
     order = "b1b",
@@ -501,7 +501,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-flax-module-2a",
-    icons = { { icon = "__ageofcreation__/img/items/flax.png" }, { icon = "__ageofcreation__/img/items/rarity/uncommon.png" }, { icon = "__ageofcreation__/img/items/rarity/speed.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/flax.png" }, { icon = "__quality__/graphics/icons/quality-uncommon.png", scale = 0.2, shift = {-8,8} }, { icon = "__ageofcreation__/img/items/quality/speed.png" } },
     icon_size = 64,
     subgroup = "aoc-flora-flax",
     order = "b2a",
@@ -516,7 +516,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-flax-module-2b",
-    icons = { { icon = "__ageofcreation__/img/items/flax.png" }, { icon = "__ageofcreation__/img/items/rarity/uncommon.png" }, { icon = "__ageofcreation__/img/items/rarity/production.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/flax.png" }, { icon = "__quality__/graphics/icons/quality-uncommon.png", scale = 0.2, shift = {-8,8} }, { icon = "__ageofcreation__/img/items/quality/production.png" } },
     icon_size = 64,
     subgroup = "aoc-flora-flax",
     order = "b2b",
@@ -531,7 +531,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-flax-module-3a",
-    icons = { { icon = "__ageofcreation__/img/items/flax.png" }, { icon = "__ageofcreation__/img/items/rarity/rare.png" }, { icon = "__ageofcreation__/img/items/rarity/speed.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/flax.png" }, { icon = "__quality__/graphics/icons/quality-rare.png", scale = 0.2, shift = {-8,8} }, { icon = "__ageofcreation__/img/items/quality/speed.png" } },
     icon_size = 64,
     subgroup = "aoc-flora-flax",
     order = "b3a",
@@ -546,7 +546,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-flax-module-3b",
-    icons = { { icon = "__ageofcreation__/img/items/flax.png" }, { icon = "__ageofcreation__/img/items/rarity/rare.png" }, { icon = "__ageofcreation__/img/items/rarity/production.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/flax.png" }, { icon = "__quality__/graphics/icons/quality-rare.png", scale = 0.2, shift = {-8,8} }, { icon = "__ageofcreation__/img/items/quality/production.png" } },
     icon_size = 64,
     subgroup = "aoc-flora-flax",
     order = "b3b",
@@ -561,7 +561,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-flax-module-4a",
-    icons = { { icon = "__ageofcreation__/img/items/flax.png" }, { icon = "__ageofcreation__/img/items/rarity/epic.png" }, { icon = "__ageofcreation__/img/items/rarity/speed.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/flax.png" }, { icon = "__quality__/graphics/icons/quality-epic.png", scale = 0.2, shift = {-8,8} }, { icon = "__ageofcreation__/img/items/quality/speed.png" } },
     icon_size = 64,
     subgroup = "aoc-flora-flax",
     order = "b4a",
@@ -576,7 +576,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-flax-module-4b",
-    icons = { { icon = "__ageofcreation__/img/items/flax.png" }, { icon = "__ageofcreation__/img/items/rarity/epic.png" }, { icon = "__ageofcreation__/img/items/rarity/production.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/flax.png" }, { icon = "__quality__/graphics/icons/quality-epic.png", scale = 0.2, shift = {-8,8} }, { icon = "__ageofcreation__/img/items/quality/production.png" } },
     icon_size = 64,
     subgroup = "aoc-flora-flax",
     order = "b4b",
@@ -591,7 +591,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-flax-module-5a",
-    icons = { { icon = "__ageofcreation__/img/items/flax.png" }, { icon = "__ageofcreation__/img/items/rarity/legendary.png" }, { icon = "__ageofcreation__/img/items/rarity/speed.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/flax.png" }, { icon = "__quality__/graphics/icons/quality-legendary.png", scale = 0.2, shift = {-8,8} }, { icon = "__ageofcreation__/img/items/quality/speed.png" } },
     icon_size = 64,
     subgroup = "aoc-flora-flax",
     order = "b5a",
@@ -606,7 +606,7 @@ data:extend({{
 data:extend({{
     type = "module",
     name = "aoc-flax-module-5b",
-    icons = { { icon = "__ageofcreation__/img/items/flax.png" }, { icon = "__ageofcreation__/img/items/rarity/legendary.png" }, { icon = "__ageofcreation__/img/items/rarity/production.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/flax.png" }, { icon = "__quality__/graphics/icons/quality-legendary.png", scale = 0.2, shift = {-8,8} }, { icon = "__ageofcreation__/img/items/quality/production.png" } },
     icon_size = 64,
     subgroup = "aoc-flora-flax",
     order = "b5b",

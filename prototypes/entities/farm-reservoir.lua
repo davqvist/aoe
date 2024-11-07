@@ -16,7 +16,7 @@ data:extend({{
 	crafting_speed = 0.5,
 	energy_source = { type = "void" },
 	energy_usage = "1kW",
-	module_specification = { module_slots = 4 },
+	module_slots = 4,
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
   icon = "__angelsbioprocessing_art__/graphics/icons/bio-refugium-fish.png",
   icon_size = 32,

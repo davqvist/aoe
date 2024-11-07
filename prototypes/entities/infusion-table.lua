@@ -89,9 +89,7 @@ data:extend({{
     },
 	energy_usage = "20MW",
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-	module_specification = {
-        module_slots = 3
-    },
+	module_slots = 3,
     icon = "__ageofcreation__/img/entities/infusion-table.png",
     icon_size = 256,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },

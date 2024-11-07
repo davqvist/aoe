@@ -16,7 +16,7 @@ data:extend({{
 	crafting_speed = 0.5,
 	energy_source = { type = "void" },
 	energy_usage = "1kW",
-	module_specification = { module_slots = 5 },
+	module_slots = 5,
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
 	icon = "__ageofcreation__/img/entities/barn.png",
 	icon_size = 256,

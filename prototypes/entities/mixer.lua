@@ -26,9 +26,7 @@ data:extend({{
   },
 	energy_usage = "130kW",
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-	module_specification = {
-    module_slots = 3
-  },
+	module_slots = 3,
 	icons = {{
     icon = "__angelssmelting_art__/graphics/icons/powder-mixer-ico.png",
     icon_size = 64,

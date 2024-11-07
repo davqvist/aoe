@@ -26,7 +26,7 @@ data:extend({{
   },
   energy_usage = "3.6MW",
   allowed_effects = nil,
-  module_specification = { module_slots = 0 },
+  module_slots = 0,
   icons = {{
     icon = "__angelssmelting_art__/graphics/icons/blast-furnace.png",
     icon_size = 64,
