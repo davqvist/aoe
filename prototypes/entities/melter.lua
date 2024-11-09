@@ -63,18 +63,18 @@ data:extend({{
           shift = util.by_pixel(12, 9)
         }
       }
-    }
-  },
-  working_visualisations = {
-    {
-      always_draw = true,
-      animation = {
-        filename = "__angelssmelting_art__/graphics/entity/casting-machine/casting-machine-light.png",
-        priority = "high",
-        width = 111,
-        height = 104,
-        shift = util.by_pixel(1, -2),
-        draw_as_light = true
+    },
+    working_visualisations = {
+      {
+        always_draw = true,
+        animation = {
+          filename = "__angelssmelting_art__/graphics/entity/casting-machine/casting-machine-light.png",
+          priority = "high",
+          width = 111,
+          height = 104,
+          shift = util.by_pixel(1, -2),
+          draw_as_light = true
+        }
       }
     }
   },

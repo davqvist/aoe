@@ -28,7 +28,6 @@ for _, preset in pairs(data.raw["map-gen-presets"]["default"]) do
   	if preset and preset.basic_settings then
 		if not preset.basic_settings.autoplace_controls then preset.basic_settings.autoplace_controls = {} end
 		for _, resource in pairs(disabled_resources) do
-			print( resource )
 			for _, planet in pairs(planets) do
 				data.raw["planet"][planet].map_gen_settings.autoplace_controls[resource] = nil
 				data.raw["planet"][planet].map_gen_settings.autoplace_settings.entity.settings[resource] = nil
@@ -57,24 +56,16 @@ end
 
 data.raw["map-settings"]["map-settings"].pollution.enabled = false
 
-local module_mapping = {}
-for _, module in pairs(data.raw['module']) do
-  if module_mapping[module.category] == nil then module_mapping[module.category] = {} end
-  table.insert(module_mapping[module.category], module.name)
-end
-
 for _, recipe in pairs(data.raw.recipe) do
+  recipe.allow_productivity = true
   if recipe.category then
 	local rc = data.raw['recipe-category'][recipe.category]
-	if rc.modules then
+	if rc and rc.modules then
       for _, mc in pairs(rc.modules) do
-	    if module_mapping[mc] then
-		  for _, m in pairs(module_mapping[mc]) do 
-	        if data.raw['module'][m].limitation == nil then data.raw['module'][m].limitation = {} end
-	        table.insert(data.raw['module'][m].limitation, recipe.name)
-	      end
-		end
+		if recipe.allowed_module_categories == nil then recipe.allowed_module_categories = {} end
+		table.insert(recipe.allowed_module_categories, mc)
       end
 	end
+  else recipe.allowed_module_categories = {'speed','efficiency','productivity'}
   end
 end

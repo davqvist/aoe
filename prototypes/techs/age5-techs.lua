@@ -624,6 +624,10 @@ data:extend({{
       {
         type = "unlock-recipe",
         recipe = "aoc-chemistry-explosives-toluene-recipe"
+      },
+      {
+        type = "cliff-deconstruction-enabled",
+        modifier = true
       }
     },
     unit = {
@@ -741,6 +745,18 @@ data:extend({{
     {
       type = "unlock-recipe",
       recipe = "aoc-crafting-chest-passive-provider-recipe"
+    },
+    {
+      type = "create-ghost-on-entity-death",
+      modifier = true
+    },
+    {
+      type = "character-logistic-requests",
+      modifier = true
+    },
+    {
+      type = "character-logistic-trash-slots",
+      modifier = 30
     }
   },
   unit = {

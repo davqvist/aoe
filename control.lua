@@ -404,19 +404,18 @@ function check_module_dying( farm, recipename, chance )
 		if( math.random()<=chance ) then
 			local inv = farm.get_module_inventory()
 			local k, v = next( inv.get_contents() )
-			if k ~= nil then 
-				inv.remove( {name=k, count=1} )
+			if v ~= nil then 
+				local stack, index = inv.find_item_stack(v.name)
+				inv.remove( {name=v.name, count=1} )
 				local irp = farm.surface.find_entity("item-request-proxy", farm.position)
 				if irp then
-					local requests = irp.item_requests
-					if requests[k] then
-						requests[k] = requests[k]+1
-					else 
-						requests[k]=1
+					local requests = irp.insert_plan
+					if requests then
+						table.insert( requests, {id={name=v.name},items={in_inventory={{inventory=defines.inventory.assembling_machine_modules,stack=index-1,count=1}}}})
 					end
-					irp.item_requests = requests
+					irp.insert_plan = requests
 				else 
-					farm.surface.create_entity{name="item-request-proxy", position=farm.position, force=farm.force, target=farm, modules={[k]=1}}
+					farm.surface.create_entity{name="item-request-proxy", position=farm.position, force=farm.force, target=farm, modules={{id={name=v.name},items={in_inventory={{inventory=defines.inventory.assembling_machine_modules,stack=index-1,count=1}}}}}}
 				end
 			end
 		end

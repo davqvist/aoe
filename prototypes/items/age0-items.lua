@@ -69,7 +69,7 @@ data:extend({{
     name = "aoc-iron-dust",
     icons = { { icon = "__angelssmelting_art__/graphics/icons/powder-iron.png" }, { icon = "__ageofcreation__/img/items/atoms/fe.png" } },
     icon_size = 64,
-    pictures = { { filename = "__angelssmelting_art__/graphics/icons/powder-iron.png", size = 64, scale = 0.25 } },
+    pictures = { { filename = "__angelssmelting_art__/graphics/icons/powder-iron.png", size = 64, scale = 0.5 } },
     subgroup = "aoc-metals-iron",
     order = "d",
     stack_size = 200
@@ -85,7 +85,7 @@ data.raw['item']['iron-stick'].subgroup = "aoc-metals-iron"
 data.raw['item']['iron-stick'].order = "f"
 data.raw['item']['iron-stick'].stack_size = 200
 data.raw['item']['iron-stick'].icons = { { icon = "__angelssmelting_art__/graphics/icons/rod-iron.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/fe.png", icon_size = 64 } }
-data.raw['item']['iron-stick'].pictures = { { filename = "__angelssmelting_art__/graphics/icons/rod-iron.png", size = 32, scale = 0.5 } }
+data.raw['item']['iron-stick'].pictures = { { filename = "__angelssmelting_art__/graphics/icons/rod-iron.png", size = 32 } }
 
 data.raw['item']['iron-gear-wheel'].subgroup = "aoc-metals-iron"
 data.raw['item']['iron-gear-wheel'].order = "g"

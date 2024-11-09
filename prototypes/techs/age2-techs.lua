@@ -27,12 +27,20 @@ data:extend({{
     prerequisites = {"aoc-electronics-tech-1"},
 	  effects = {
 	    {
+        type = "unlock-circuit-network",
+        modifier = true
+      },
+      {
         type = "unlock-recipe",
         recipe = "aoc-crafting-arithmetic-combinator-recipe"
       },
 	    {
         type = "unlock-recipe",
         recipe = "aoc-crafting-decider-combinator-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-selector-combinator-recipe"
       },
 	    {
         type = "unlock-recipe",
@@ -45,6 +53,10 @@ data:extend({{
 	    {
         type = "unlock-recipe",
         recipe = "aoc-crafting-programmable-speaker-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-display-panel-recipe"
       }
     },
     unit = {

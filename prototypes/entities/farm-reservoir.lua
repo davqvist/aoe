@@ -47,19 +47,19 @@ data:extend({{
           scale = 1.86
         }
       }
-    }
-  },
-  working_visualisations = {
-    {
-      animation = {
-        filename = "__angelsbioprocessing_art__/graphics/entity/bio-refugium/bio-refugium-fish.png",
-        width = 288,
-        height = 288,
-        line_length = 7,
-        frame_count = 49,
-        shift = { 0, 0 },
-        animation_speed = 49 / 90,
-        scale = 1.86
+    },
+    working_visualisations = {
+      {
+        animation = {
+          filename = "__angelsbioprocessing_art__/graphics/entity/bio-refugium/bio-refugium-fish.png",
+          width = 288,
+          height = 288,
+          line_length = 7,
+          frame_count = 49,
+          shift = { 0, 0 },
+          animation_speed = 49 / 90,
+          scale = 1.86
+        }
       }
     }
   },

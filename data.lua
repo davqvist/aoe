@@ -80,3 +80,19 @@ for _, rock in pairs(data.raw['simple-entity']) do
 		end
 	end
 end 
+
+data.raw.shortcut['undo'].technology_to_unlock = 'aoc-bee-helpers-tech'
+data.raw.shortcut['redo'].technology_to_unlock = 'aoc-bee-helpers-tech'
+data.raw.shortcut['copy'].technology_to_unlock = 'aoc-bee-helpers-tech'
+data.raw.shortcut['cut'].technology_to_unlock = 'aoc-bee-helpers-tech'
+data.raw.shortcut['paste'].technology_to_unlock = 'aoc-bee-helpers-tech'
+data.raw.shortcut['import-string'].technology_to_unlock = 'aoc-bee-helpers-tech'
+data.raw.shortcut['give-blueprint'].technology_to_unlock = 'aoc-bee-helpers-tech'
+data.raw.shortcut['give-blueprint-book'].technology_to_unlock = 'aoc-bee-helpers-tech'
+data.raw.shortcut['give-deconstruction-planner'].technology_to_unlock = 'aoc-bee-helpers-tech'
+data.raw.shortcut['give-upgrade-planner'].technology_to_unlock = 'aoc-bee-helpers-tech'
+data.raw.shortcut['toggle-personal-roboport'].technology_to_unlock = 'aoc-bee-helpers-tech'
+data.raw.shortcut['give-copper-wire'].technology_to_unlock = 'aoc-copper-tech-1'
+data.raw.shortcut['give-red-wire'].technology_to_unlock = 'aoc-circuit-network-tech'
+data.raw.shortcut['give-green-wire'].technology_to_unlock = 'aoc-circuit-network-tech'
+

@@ -481,6 +481,20 @@ data:extend({{
 }})
 
 data:extend({{
+	name = 'aoc-crafting-selector-combinator-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'copper-cable', amount = 5},
+		{type = 'item', name = 'electronic-circuit', amount = 4}
+	},
+	results = {
+        {type = 'item', name = 'selector-combinator', amount = 1}
+    },
+	energy_required = 0.5
+}})
+
+data:extend({{
 	name = 'aoc-crafting-power-switch-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -505,6 +519,21 @@ data:extend({{
 	},
 	results = {
         {type = 'item', name = 'programmable-speaker', amount = 1}
+    },
+	energy_required = 0.5
+}})
+
+data:extend({{
+	name = 'aoc-crafting-display-panel-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'copper-cable', amount = 5},
+		{type = 'item', name = 'electronic-circuit', amount = 1},
+		{type = 'item', name = 'aoc-glass', amount = 2}
+	},
+	results = {
+        {type = 'item', name = 'display-panel', amount = 1}
     },
 	energy_required = 0.5
 }})
@@ -683,7 +712,7 @@ data:extend({{
 	enabled = false,
 	ingredients = {
 		{type = 'item', name = 'aoc-stones-sedimentary', amount = 6},
-		{type = 'fluid', name = 'aoc-pressure', amount = 50}
+		{type = 'fluid', name = 'aoc-pressure', amount = 40}
 	},
 	results = {
 		{type = 'item', name = 'aoc-stones-metamorphic', amount = 6}
@@ -699,7 +728,7 @@ data:extend({{
 	enabled = false,
 	ingredients = {
 		{type = 'item', name = 'aoc-stones-igneous', amount = 6},
-		{type = 'fluid', name = 'aoc-pressure', amount = 50}
+		{type = 'fluid', name = 'aoc-pressure', amount = 40}
 	},
 	results = {
 		{type = 'item', name = 'aoc-stones-metamorphic', amount = 6}

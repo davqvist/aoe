@@ -153,7 +153,7 @@ data:extend({{
           width = 128,
           height = 128,
           frame_count = 1,
-		  scale = 0.25
+		      scale = 0.25
         }
       }
     }

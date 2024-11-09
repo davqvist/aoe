@@ -75,13 +75,16 @@ for _, furnace in pairs(furnaces_to_change) do
         pipe_picture = assembler2pipepictures(),
         pipe_covers = pipecoverspictures(),
 		volume = 1000,
-        pipe_connections = {{ flow_direction="input", direction = defines.direction.west, position = {-1, 0} }}
+        pipe_connections = {
+			{ flow_direction="input-output", direction = defines.direction.west, position = {-1, 0} },
+			{ flow_direction="input-output", direction = defines.direction.east, position = {1, 0} }
+		}
       },{
         production_type = "output",
         pipe_picture = assembler2pipepictures(),
         pipe_covers = pipecoverspictures(),
 		volume = 1000,
-        pipe_connections = {{ flow_direction="output", direction = defines.direction.east, position = {1, 0} }}
+        pipe_connections = {{ flow_direction="output", direction = defines.direction.north, position = {0, -1} }}
       }
     }
 	furnacecopy.fluid_boxes_off_when_no_fluid_recipe = true

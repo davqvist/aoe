@@ -858,7 +858,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'copper-cable', amount = 3}
     },
-	energy_required = 0.4
+	energy_required = 1
 }})
 
 data:extend({{

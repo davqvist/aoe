@@ -25,29 +25,29 @@ data:extend({{
 	max_health = 300,
 	selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
 	collision_box = {{-4.4, -4.4}, {4.4, 4.4}},
-	animation = {
-    layers = {
-      {
-        filename = "__angelsbioprocessing_art__/graphics/entity/crop-farm/farm-base.png",
-        width = 224,
-        height = 224,
-        line_length = 1,
-        frame_count = 1,
-        shift = { 0, 0 },
-        scale = 1.8
-      },
-      {
-        filename = "__angelsbioprocessing_art__/graphics/entity/crop-farm/field-basic.png",
-        width = 224,
-        height = 224,
-        line_length = 1,
-        frame_count = 1,
-        shift = { 0, 0 },
-        scale = 1.8
-      }
-    }
-  },
   graphics_set = {
+    animation = {
+      layers = {
+        {
+          filename = "__angelsbioprocessing_art__/graphics/entity/crop-farm/farm-base.png",
+          width = 224,
+          height = 224,
+          line_length = 1,
+          frame_count = 1,
+          shift = { 0, 0 },
+          scale = 1.8
+        },
+        {
+          filename = "__angelsbioprocessing_art__/graphics/entity/crop-farm/field-basic.png",
+          width = 224,
+          height = 224,
+          line_length = 1,
+          frame_count = 1,
+          shift = { 0, 0 },
+          scale = 1.8
+        }
+      }
+    },
     working_visualisations = {
       {
         apply_recipe_tint = "primary",
@@ -61,8 +61,8 @@ data:extend({{
             animation_speed = 0.005,
             scale = 1.8
           }
-      },
-    },
+      }
+    }
   },
   fluid_boxes_off_when_no_fluid_recipe = true,
 	fluid_boxes = {

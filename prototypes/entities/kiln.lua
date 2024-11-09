@@ -52,8 +52,8 @@ data:extend({{
         percent = 30
       }
     },
-    collision_box = {{-1.5, -1.5}, {1.5, 1.5}},
-    selection_box = {{-1.4, -1.4}, {1.4, 1.4}},
+    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     crafting_categories = {"aoc-category-kiln-smelting","aoc-category-kiln-smelting-iron","aoc-category-kiln-smelting-copper","aoc-category-kiln-smelting-tin","aoc-category-kiln-smelting-aluminium","aoc-category-kiln-smelting-lead","aoc-category-kiln-smelting-silver","aoc-category-kiln-smelting-nickel","aoc-category-kiln-smelting-gold","aoc-category-kiln-smelting-zinc","aoc-category-kiln-smelting-chromium","aoc-category-kiln-smelting-tungsten"},
     energy_usage = "125kW",
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
@@ -101,15 +101,17 @@ data:extend({{
         production_type = "input",
         pipe_picture = assembler2pipepictures(),
         pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = {{ flow_direction="input", direction = defines.direction.west, position = {-1, 0} }}
-      },
-	  {
+		    volume = 1000,
+        pipe_connections = {
+          { flow_direction="input-output", direction = defines.direction.west, position = {-1, 0} },
+          { flow_direction="input-output", direction = defines.direction.east, position = {1, 0} }
+        }
+      },{
         production_type = "output",
         pipe_picture = assembler2pipepictures(),
         pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = {{ flow_direction="output", direction = defines.direction.east, position = {1, 0} }}
+		    volume = 1000,
+        pipe_connections = {{ flow_direction="output", direction = defines.direction.north, position = {0, -1} }}
       }
     }
 }})
