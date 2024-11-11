@@ -442,8 +442,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-paper",
-    icon = "__ageofcreation__/img/items/paper.png",
-    icon_size = 64,
+    icon = "__angelsbioprocessing_art__/graphics/icons/solid-paper.png",
+    icon_size = 32,
     subgroup = "aoc-flora-wood",
     order = "l",
     stack_size = 200

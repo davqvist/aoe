@@ -5,8 +5,7 @@ local fluid_has_recipe = {}
 
 for _, recipe in pairs(data.raw.recipe) do
   if recipe.name:sub(1, 4) ~= "aoc-" and 
-    recipe.name:find('^fill%-.*%-barrel$') == nil and
-    recipe.name:find('^fill%-.*%-barrel$') == nil and
+    recipe.name:find('%-barrel$') == nil and
     recipe.name:find('recycling$') == nil then
     if recipes_to_keep[recipe.name] == nil then
       data.raw.recipe[_] = nil
@@ -15,7 +14,7 @@ for _, recipe in pairs(data.raw.recipe) do
       recipe.hidden = true
     end
   end
-  if recipe and (recipe.name:find('^fill%-.*%-barrel$') ~= nil or recipe.name:find('^empty%-.*%-barrel$') ~= nil ) then
+  if recipe and recipe.name:find('%-barrel$') ~= nil then
     recipe.enabled = true
     recipe.hide_from_player_crafting = true
   end

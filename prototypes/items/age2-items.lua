@@ -56,8 +56,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-heating-coil",
-    icon = "__ageofcreation__/img/items/heating-coil.png",
-    icon_size = 64,
+    icon = "__angelssmelting_art__/graphics/icons/wire-coil-copper.png",
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-parts",
     order = "g",
     stack_size = 25
@@ -66,8 +66,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-cooling-coil",
-    icon = "__ageofcreation__/img/items/cooling-coil.png",
-    icon_size = 64,
+    icon = "__angelssmelting_art__/graphics/icons/wire-coil-silver.png",
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-parts",
     order = "h",
     stack_size = 25
@@ -86,8 +86,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-brick",
-    icon = "__ageofcreation__/img/items/brick.png",
-    icon_size = 64,
+    icon = "__angelssmelting_art__/graphics/icons/brick-clay-raw.png",
+    icon_size = 32,
     subgroup = "aoc-construction",
     order = "b",
     stack_size = 200

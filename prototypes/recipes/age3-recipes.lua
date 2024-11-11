@@ -1185,6 +1185,23 @@ data:extend({{
 }})
 
 data:extend({{
+    name = 'aoc-farm-plot-grass-2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-soil', amount = 4},
+        {type = 'item', name = 'aoc-loam', amount = 1},
+        {type = 'fluid', name = 'water', amount = 200}
+    },
+    results = {
+        {type = 'item', name = 'aoc-grass', amount = 3}
+    },
+    energy_required = 12,
+    icons = combine_icons_tiny( get_icons( data.raw.item["aoc-grass"] ), get_icons( data.raw.item["aoc-loam"] ) ),
+	category = 'aoc-category-farm-plot-rest'
+}})
+
+data:extend({{
 	name = 'aoc-mixing-fish-water-recipe',
 	type = 'recipe',
 	enabled = false,

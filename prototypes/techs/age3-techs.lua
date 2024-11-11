@@ -260,7 +260,7 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoc-hay-tech",
+    name = "aoc-hay-tech-1",
     icon_size = 64,
     icon = "__ageofcreation__/img/items/hay-bale.png",
     prerequisites = {"aoc-agriculture-age-tech","aoc-flax-tech-1"},
@@ -294,11 +294,30 @@ data:extend({{
 }})
 
 data:extend({{
+  type = "technology",
+  name = "aoc-hay-tech-2",
+  icon_size = 64,
+  icon = "__ageofcreation__/img/items/hay-bale.png",
+  prerequisites = {"aoc-fertilizer-tech-1","aoc-hay-tech-1"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-plot-grass-2-recipe"
+    }
+  },
+  unit = {
+      count = 45,
+      ingredients = AOC["age_tech_table"][3],
+      time = 30
+  }
+}})
+
+data:extend({{
     type = "technology",
     name = "aoc-chicken-tech",
     icon_size = 64,
     icon = "__ageofcreation__/img/items/chicken.png",
-    prerequisites = {"aoc-maize-tech-1", "aoc-lime-tech-1", "aoc-hay-tech", "aoc-aluminium-tech-1"},
+    prerequisites = {"aoc-maize-tech-1", "aoc-lime-tech-1", "aoc-hay-tech-1", "aoc-aluminium-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",

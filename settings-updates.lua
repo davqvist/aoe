@@ -60,8 +60,13 @@ if data.raw["bool-setting"]["angels-enable-tech"] then
     data.raw["bool-setting"]["angels-enable-tech"].hidden = true
     data.raw["bool-setting"]["angels-enable-tech"].forced_value = false
 end
+if data.raw["string-setting"]["angels-enable-auto-barreling"] then
+    data.raw["string-setting"]["angels-enable-auto-barreling"].hidden = true
+    data.raw["string-setting"]["angels-enable-auto-barreling"].default_value = "Enabled+Hidden"
+    data.raw["string-setting"]["angels-enable-auto-barreling"].allowed_values = {"Enabled+Hidden"}
+end
 
--- AAI Loaders
+-- AAI Loaderss
 
 if data.raw["string-setting"]["aai-loaders-mode"] then
     data.raw["string-setting"]["aai-loaders-mode"].hidden = true

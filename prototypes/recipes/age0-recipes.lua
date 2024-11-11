@@ -252,7 +252,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoc-flask', amount = 1}
     },
-	energy_required = 0.8
+	energy_required = 2
 }})
 
 data:extend({{

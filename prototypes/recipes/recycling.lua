@@ -1,4 +1,43 @@
 local AOC =  require("__ageofcreation__/globals")
+local item_void_blacklist = { "aoc-slag", "aoc-tailings-dust" }
+
+local parts = {
+    "aoc-electrum-machine-hull",
+	"aoc-stainless-steel-machine-hull",
+    "aoc-steel-machine-hull",
+    "engine-unit",
+    "aoc-small-motor",
+	"angels-storage-tank-3",
+	"aoc-bronze-cable",
+	"copper-cable"
+}
+
+for _, recipe in pairs(data.raw.recipe) do
+  local flag = false
+  if recipe.name:find('%-recycling$') == nil then
+	if recipe.ingredients then	
+	  for _, part in pairs(parts) do
+		for _, ingredient in pairs(recipe.ingredients) do
+		  if ingredient.name == part and flag == false then
+			if recipe.results and recipe.results[1] then
+				data.raw.recipe[recipe.results[1].name .. '-recycling'].ingredients = {
+					{type = recipe.results[1].type, name = recipe.results[1].name, amount = recipe.results[1].amount}
+				}
+				data.raw.recipe[recipe.results[1].name .. '-recycling'].results = {
+					{type = 'item', name = ingredient.name, amount=math.ceil(ingredient.amount/2)}
+				}
+			  	flag = true
+			end
+		  end
+		end
+	  end
+	end
+  end
+end
+
+for _, i in pairs(item_void_blacklist) do
+	data.raw.recipe[i .. '-recycling'] = nil
+end
 
 for _, m in pairs(data.raw.module) do
   if string.sub(m.name,1,string.len("aoc-hidden-"))~="aoc-hidden-" and string.sub(m.name,1,string.len("aoc-"))=="aoc-" then 

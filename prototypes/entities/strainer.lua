@@ -45,7 +45,10 @@ data:extend({{
         pipe_picture = assembler2pipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = {{ flow_direction="input", direction = defines.direction.west, position = {-0.5, 0.5} }},
+        pipe_connections = {
+          { flow_direction="input-output", direction = defines.direction.west, position = {-0.5, 0.5} },
+          { flow_direction="input-output", direction = defines.direction.east, position = {0.5, 0.5} }
+        },
         secondary_draw_orders = { north = -1 }
       }
     }
