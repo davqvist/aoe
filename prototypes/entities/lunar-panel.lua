@@ -1,17 +1,17 @@
 data:extend({{
     type = "item",
-    name = "aoc-starlight-panel",
-    icon = "__ageofcreation__/img/entities/starlight-panel.png",
+    name = "aoc-lunar-panel",
+    icon = "__ageofcreation__/img/entities/lunar-panel.png",
     icon_size = 192,
     subgroup = "aoc-magic-buildings",
     order = "d",
-    place_result = "aoc-starlight-panel",
+    place_result = "aoc-lunar-panel",
     stack_size = 25,
 }})
 
 data:extend({{
   type = "assembling-machine",
-  name = "aoc-starlight-panel",
+  name = "aoc-lunar-panel",
 	crafting_categories = {"aoc-category-starlight"},
 	crafting_speed = 1,
 	energy_source = { type = "void" },
@@ -19,10 +19,10 @@ data:extend({{
 	allowed_effects = {},
 	module_slots = 0,
   fixed_recipe = "aoc-starlight-starlight-recipe",
-  icon = "__ageofcreation__/img/entities/starlight-panel.png",
+  icon = "__ageofcreation__/img/entities/lunar-panel.png",
   icon_size = 192,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
-	minable = { hardness = 1, mining_time = 0.2, result = "aoc-starlight-panel" },
+	minable = { hardness = 1, mining_time = 0.2, result = "aoc-lunar-panel" },
 	max_health = 300,
 	selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
@@ -30,7 +30,7 @@ data:extend({{
     animation = {
       layers = {
         {
-          filename = "__ageofcreation__/img/entities/starlight-panel.png",
+          filename = "__ageofcreation__/img/entities/lunar-panel.png",
           width = 192,
           height = 192,
           frame_count = 1,

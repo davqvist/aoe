@@ -106,9 +106,15 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-flora-fermentation",
+    name = "aoc-flora-misc",
     group = "aoc-flora",
     order = "e"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-flora-fermentation",
+    group = "aoc-flora",
+    order = "f"
   },
   {
 	  type = "item-subgroup",

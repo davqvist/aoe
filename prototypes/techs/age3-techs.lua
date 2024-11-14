@@ -314,7 +314,7 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoc-chicken-tech",
+    name = "aoc-chicken-tech-1",
     icon_size = 64,
     icon = "__ageofcreation__/img/items/chicken.png",
     prerequisites = {"aoc-maize-tech-1", "aoc-lime-tech-1", "aoc-hay-tech-1", "aoc-aluminium-tech-1"},
@@ -353,10 +353,10 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoc-sheep-tech",
+    name = "aoc-sheep-tech-1",
     icon_size = 64,
     icon = "__ageofcreation__/img/items/sheep.png",
-    prerequisites = {"aoc-chicken-tech"},
+    prerequisites = {"aoc-chicken-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -396,10 +396,10 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoc-cow-tech",
+    name = "aoc-cow-tech-1",
     icon_size = 64,
     icon = "__ageofcreation__/img/items/cow.png",
-    prerequisites = {"aoc-sheep-tech","aoc-soybeans-tech-1"},
+    prerequisites = {"aoc-sheep-tech-1","aoc-soybeans-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -446,7 +446,7 @@ data:extend({{
     name = "aoc-fertilizer-tech-1",
     icon_size = 64,
     icon = "__ageofcreation__/img/items/fertilizer.png",
-    prerequisites = {"aoc-chicken-tech"},
+    prerequisites = {"aoc-chicken-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -604,7 +604,7 @@ data:extend({{
     name = "aoc-agriculture-science-alternate-tech",
     icon_size = 64,
     icon = "__ageofcreation__/img/items/science-pack-3.png",
-    prerequisites = {"aoc-cow-tech"},
+    prerequisites = {"aoc-cow-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",

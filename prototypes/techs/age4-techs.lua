@@ -449,8 +449,8 @@ data:extend({{
 data:extend({{
   type = "technology",
   name = "aoc-iron-tech",
-  icon_size = 32,
-  icon = "__angelssmelting_art__/graphics/icons/plate-iron.png",
+  icon_size = 64, icon_mipmaps = 4,
+  icon = "__base__/graphics/icons/iron-plate.png",
   prerequisites = {"aoc-advanced-metal-processing-tech", "aoc-basic-chemistry-tech"},
   effects = {
     {
@@ -488,8 +488,8 @@ data:extend({{
 data:extend({{
   type = "technology",
   name = "aoc-copper-tech-2",
-  icon_size = 32,
-  icon = "__angelssmelting_art__/graphics/icons/plate-copper.png",
+  icon_size = 64, icon_mipmaps = 4,
+  icon = "__base__/graphics/icons/copper-plate.png",
   prerequisites = {"aoc-advanced-metal-processing-tech", "aoc-basic-chemistry-tech", "aoc-copper-tech-1"},
   effects = {
     {
@@ -871,8 +871,8 @@ data:extend({{
 data:extend({{
   type = "technology",
   name = "aoc-tungsten-tech",
-  icon_size = 32,
-  icon = "__angelssmelting_art__/graphics/icons/plate-tungsten.png",
+  icon_size = 64, icon_mipmaps = 4,
+  icon = "__space-age__/graphics/icons/tungsten-plate.png",
   prerequisites = {"aoc-advanced-metal-processing-tech", "aoc-basic-chemistry-tech", "aoc-igneous-stones-tech-2"},
   effects = {
     {
@@ -1573,4 +1573,116 @@ data:extend({{
         ingredients = AOC["age_tech_table"][4],
         time = 40
     }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-animal-food-tech",
+  icon_size = 64,
+  icon = "__ageofcreation__/img/items/animal-food.png",
+  prerequisites = {"aoc-sulfur-tech", "aoc-maize-tech-2", "aoc-soybeans-tech-2", "aoc-fermentation-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-mixing-animal-food-recipe"
+    }
+  },
+  unit = {
+      count = 25,
+      ingredients = AOC["age_tech_table"][4],
+      time = 35
+  }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoc-chicken-tech-2",
+    icon_size = 64,
+    icon = "__ageofcreation__/img/items/chicken.png",
+    prerequisites = {"aoc-chicken-tech-1", "aoc-animal-food-tech"},
+	  effects = {
+	    {
+        type = "unlock-recipe",
+        recipe = "aoc-farm-chicken-coop-chicken-2-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoc-farm-chicken-coop-egg-2-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoc-farm-chicken-coop-chicken-module-2-recipe"
+      }
+    },
+    unit = {
+        count = 30,
+        ingredients = AOC["age_tech_table"][4],
+        time = 35
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoc-sheep-tech-2",
+    icon_size = 64,
+    icon = "__ageofcreation__/img/items/sheep.png",
+    prerequisites = {"aoc-sheep-tech-1", "aoc-animal-food-tech"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-farm-barn-sheep-2-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoc-farm-barn-wool-2-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoc-farm-barn-lamb-2-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-farm-barn-sheep-module-2-recipe"
+      }
+    },
+    unit = {
+        count = 35,
+        ingredients = AOC["age_tech_table"][4],
+        time = 35
+    }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-cow-tech-2",
+  icon_size = 64,
+  icon = "__ageofcreation__/img/items/cow.png",
+  prerequisites = {"aoc-cow-tech-1","aoc-animal-food-tech", "aoc-basic-chemistry-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-barn-cow-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-barn-milk-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-barn-calf-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-barn-cow-module-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-high-pressure-leather-2-recipe"
+    }
+  },
+  unit = {
+      count = 40,
+      ingredients = AOC["age_tech_table"][4],
+      time = 35
+  }
 }})

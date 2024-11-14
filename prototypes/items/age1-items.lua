@@ -11,6 +11,10 @@ data:extend({{
     durability_description_value = "description.science-pack-remaining-amount-value"
 }})
 
+data.raw['item']['landfill'].subgroup = "aoc-decoration"
+data.raw['item']['landfill'].order = "c"
+data.raw['item']['landfill'].stack_size = 509
+
 data:extend({{
     type = "item",
     name = "aoc-kelp",
@@ -648,7 +652,7 @@ data:extend({{
 data.raw['item']['copper-plate'].subgroup = "aoc-metals-copper"
 data.raw['item']['copper-plate'].order = "e"
 data.raw['item']['copper-plate'].stack_size = 200
-data.raw['item']['copper-plate'].icons = { { icon ="__base__/graphics/icons/copper-plate.png", icon_size = 64 }, { icon = "__ageofcreation__/img/items/atoms/cu.png", icon_size = 64 } }
+data.raw['item']['copper-plate'].icons = { { icon ="__base__/graphics/icons/copper-plate.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/cu.png", icon_size = 64 } }
 data.raw['item']['copper-plate'].pictures = { { filename = "__base__/graphics/icons/copper-plate.png", size = 64, mipmap_count = 4, scale = 0.5  } }
 
 data:extend({{
@@ -656,7 +660,7 @@ data:extend({{
     name = "aoc-copper-rod",
     icons = { { icon = "__ageofcreation__/img/items/copper-rod.png" }, { icon = "__ageofcreation__/img/items/atoms/cu.png" } },
     icon_size = 64,
-    pictures = { { filename = "__ageofcreation__/img/items/copper-rod.png", size = 64, scale = 0.25  } },
+    pictures = { { filename = "__ageofcreation__/img/items/copper-rod.png", size = 64, scale = 0.5  } },
     subgroup = "aoc-metals-copper",
     order = "f",
     stack_size = 200

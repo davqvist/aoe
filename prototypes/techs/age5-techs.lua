@@ -242,7 +242,7 @@ data:extend({{
     name = "aoc-rubber-tech",
     icon_size = 32,
     icon = "__angelspetrochem_art__/graphics/icons/solid-rubber.png",
-    prerequisites = {"aoc-oil-cracking-tech-1", "aoc-circuit-network-tech"},
+    prerequisites = {"aoc-oil-cracking-tech-1"},
     effects = {
         {
           type = "unlock-recipe",

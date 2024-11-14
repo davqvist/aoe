@@ -119,7 +119,7 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 	if(entity.name == "aoc-infusion-table") then
 		handleInfusionTableBuilt(event)
 	end
-	if(entity.name == "aoc-starlight-panel") then
+	if(entity.name == "aoc-lunar-panel") then
 		handleStarlightPanelBuilt(event)
 	end
 	if(entity.name == "aoc-wind-turbine") then
@@ -233,7 +233,7 @@ script.on_nth_tick(39,
 		if storage.day == nil then storage.day = game.get_surface(1).daytime >= 0.45 and game.get_surface(1).daytime <= 0.55 end
 		if storage.day and game.get_surface(1).daytime >= 0.45 and game.get_surface(1).daytime <= 0.55 then
 			for unit, starlightpanel in pairs(storage.starlight_panels) do
-				if starlightpanel.valid and starlightpanel.name == "aoc-starlight-panel" then
+				if starlightpanel.valid and starlightpanel.name == "aoc-lunar-panel" then
 					storage.starlight_panels[unit].active = true
 				else 
 					storage.starlight_panels[unit]=nil
@@ -243,7 +243,7 @@ script.on_nth_tick(39,
 		end
 		if not storage.day and game.get_surface(1).daytime < 0.45 or game.get_surface(1).daytime > 0.55 then
 			for unit, starlightpanel in pairs(storage.starlight_panels) do
-				if starlightpanel.valid and starlightpanel.name == "aoc-starlight-panel" then
+				if starlightpanel.valid and starlightpanel.name == "aoc-lunar-panel" then
 					storage.starlight_panels[unit].active = false
 				else 
 					storage.starlight_panels[unit]=nil

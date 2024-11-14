@@ -1103,7 +1103,6 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-nauvium-solution",
-    --icons = angelsmods.functions.create_viscous_liquid_fluid_icon( nil, { { 173, 59, 193 }, { 173, 59, 193 } }),
     icons = { { icon = "__ageofcreation__/img/fluids/molten-nauvium.png", icon_size = 64 }, { icon = "__ageofcreation__/img/items/atoms/nv.png", icon_size = 64 } },
     subgroup = "aoc-fluids-magic-metals",
     order = "a",
@@ -1132,5 +1131,28 @@ data:extend({{
     order = "b",
 	base_color = {r=0.75, g=0.75, b=0.75},
 	flow_color = {r=0.75, g=0.75, b=0.75},
+	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoc-alchemical-reducing-fluid",
+    icon = "__ageofcreation__/img/fluids/alchemical-reducing-fluid.png",
+    icon_size = 64,
+    subgroup = "aoc-fluids-magic-rest",
+    order = "b",
+	base_color = {r=0.5, g=0.3, b=0.45},
+	flow_color = {r=0.5, g=0.3, b=0.45},
+	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoc-platinum-solution",
+    icons = { { icon = "__angelssmelting_art__/graphics/icons/molten-platinum.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/pt.png", icon_size = 64 } },
+    subgroup = "aoc-fluids-magic-metals",
+    order = "c",
+	base_color = {r=0.68, g=0.23, b=0.76},
+	flow_color = {r=0.68, g=0.23, b=0.76},
 	default_temperature = 20
 }})

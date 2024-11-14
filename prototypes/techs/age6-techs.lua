@@ -4,12 +4,12 @@ data:extend({{
   type = "technology",
   name = "aoc-starlight-tech",
   icon_size = 192,
-  icon = "__ageofcreation__/img/entities/starlight-panel.png",
+  icon = "__ageofcreation__/img/entities/lunar-panel.png",
   prerequisites = {"aoc-magic-age-tech"},
   effects = {
     {
       type = "unlock-recipe",
-      recipe = "aoc-crafting-starlight-panel-recipe"
+      recipe = "aoc-crafting-lunar-panel-recipe"
     }
   },
   unit = {
@@ -46,6 +46,10 @@ data:extend({{
   effects = {
     {
       type = "unlock-recipe",
+      recipe = "aoc-gene-lab-lotus-flower-seeds-recipe"
+    },
+    {
+      type = "unlock-recipe",
       recipe = "aoc-farm-reservoir-lotus-flower-recipe"
     },
     {
@@ -78,6 +82,84 @@ data:extend({{
     {
       type = "unlock-recipe",
       recipe = "aoc-farm-reservoir-lotus-flower-module-2-recipe"
+    }
+  },
+  unit = {
+      count = 60,
+      ingredients = AOC["age_tech_table"][6],
+      time = 50
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-alchemy-tech",
+  icon = "__ageofcreation__/img/entities/alchemical-construct.png",
+  icon_size = 192,
+  prerequisites = {"aoc-mercury-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-chemistry-alchemical-reducing-fluid-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-alchemy-copper-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-alchemy-nickel-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-alchemy-iron-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-alchemy-manganese-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-alchemy-chromium-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-alchemy-silver-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-alchemy-magnesium-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-alchemy-gold-recipe"
+    }
+  },
+  unit = {
+      count = 50,
+      ingredients = AOC["age_tech_table"][6],
+      time = 50
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-platinum-tech",
+  icon = "__angelssmelting_art__/graphics/icons/plate-platinum.png",
+  icon_size = 32,
+  prerequisites = {"aoc-alchemy-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-alchemy-platinum-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-alchemy-platinum-solution-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-casting-platinum-plate-recipe"
     }
   },
   unit = {

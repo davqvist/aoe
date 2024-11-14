@@ -58,7 +58,7 @@ data.raw["map-settings"]["map-settings"].pollution.enabled = false
 
 for _, recipe in pairs(data.raw.recipe) do
   recipe.allow_productivity = true
-  if recipe.category then
+  if recipe.category and recipe.category.modules then
 	local rc = data.raw['recipe-category'][recipe.category]
 	if rc and rc.modules then
       for _, mc in pairs(rc.modules) do

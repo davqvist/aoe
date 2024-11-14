@@ -437,8 +437,8 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "aoc-copper-tech-1",
-    icon_size = 32,
-    icon = "__angelssmelting_art__/graphics/icons/plate-copper.png",
+    icon_size = 64, icon_mipmaps = 4,
+    icon = "__base__/graphics/icons/copper-plate.png",
     prerequisites = {"aoc-water-filtering-tech"},
 	  effects = {
       {

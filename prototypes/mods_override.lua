@@ -6,8 +6,6 @@ data.raw['item']['wood'].subgroup = "aoc-flora-wood"
 data.raw['item']['wood'].order = "e"
 data.raw['capsule']['raw-fish'].subgroup = "aoc-fauna-fish"
 data.raw['capsule']['raw-fish'].order = "a"
-data.raw['capsule']['raw-fish'].spoil_result = nil
-data.raw['capsule']['raw-fish'].spoil_ticks = 0
 
 data.raw['item']['steel-plate'].icon = "__base__/graphics/icons/steel-plate.png"
 data.raw['item']['steel-plate'].icon_size = 64

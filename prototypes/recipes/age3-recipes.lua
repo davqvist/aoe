@@ -1299,7 +1299,7 @@ data:extend({{
         {type = 'item', name = 'aoc-fish-module-3', amount=1, probability = 0.05}
     },
 	main_product = 'aoc-fish-module-2',
-    energy_required = 150,
+    energy_required = 200,
 	category = 'aoc-category-farm-reservoir-fish'
 }})
 
@@ -1338,7 +1338,7 @@ data:extend({{
         {type = 'item', name = 'aoc-flax-module-4b', amount=1, probability = 0.01}
     },
 	main_product = "aoc-flax-module-2a",
-    energy_required = 150,
+    energy_required = 130,
 	category = 'aoc-category-farm-plot-flax'
 }})
 
@@ -1361,7 +1361,7 @@ data:extend({{
         {type = 'item', name = 'aoc-flax-module-4b', amount=1, probability = 0.03}
     },
 	main_product = "aoc-flax-module-2b",
-    energy_required = 150,
+    energy_required = 130,
 	category = 'aoc-category-farm-plot-flax'
 }})
 
@@ -1400,7 +1400,7 @@ data:extend({{
         {type = 'item', name = 'aoc-tea-leaves-module-4', amount=1, probability = 0.02}
 	},
 	main_product = 'aoc-tea-leaves-module-2',
-    energy_required = 120,
+    energy_required = 160,
 	category = 'aoc-category-farm-plot-tea'
 }})
 
@@ -1438,7 +1438,7 @@ data:extend({{
         {type = 'item', name = 'aoc-coffee-plant-module-4', amount=1, probability = 0.02}
 	},
 	main_product = 'aoc-coffee-plant-module-2',
-    energy_required = 120,
+    energy_required = 160,
 	category = 'aoc-category-farm-plot-coffee'
 }})
 
@@ -1512,7 +1512,7 @@ data:extend({{
         {type = 'item', name = 'aoc-maize-module-4b', amount=1, probability = 0.01}
     },
 	main_product = "aoc-maize-module-2a",
-    energy_required = 130,
+    energy_required = 180,
 	category = 'aoc-category-farm-plot-maize'
 }})
 
@@ -1536,7 +1536,7 @@ data:extend({{
         {type = 'item', name = 'aoc-maize-module-4b', amount=1, probability = 0.03}
     },
 	main_product = "aoc-maize-module-2b",
-    energy_required = 200,
+    energy_required = 180,
 	category = 'aoc-category-farm-plot-maize'
 }})
 
@@ -1573,7 +1573,7 @@ data:extend({{
         {type = 'item', name = 'aoc-soybeans-module-4', amount=1, probability = 0.01}
     },
 	main_product = "aoc-soybeans-module-2",
-    energy_required = 150,
+    energy_required = 200,
 	category = 'aoc-category-farm-plot-soybean'
 }})
 
@@ -1823,7 +1823,8 @@ data:extend({{
     },
     results = {
         {type = 'fluid', name = 'aoc-ethanol', amount = 200},
-		{type = 'fluid', name = 'aoc-carbon-dioxide', amount = 50}
+		{type = 'fluid', name = 'aoc-carbon-dioxide', amount = 50},
+        {type = 'item', name = 'yumako-mash', amount = 2}
     },
 	main_product = 'aoc-ethanol',
     energy_required = 5,

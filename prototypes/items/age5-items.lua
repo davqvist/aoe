@@ -171,8 +171,8 @@ data:extend({{
     name = "aoc-industrial-fertilizer",
     icon = "__ageofcreation__/img/items/industrial-fertilizer.png",
     icon_size = 64,
-    subgroup = "aoc-fauna-items",
-    order = "e",
+    subgroup = "aoc-flora-misc",
+    order = "b",
     stack_size = 200
 }})
 
@@ -246,6 +246,6 @@ data:extend({{
     icons = { { icon = "__ageofcreation__/img/items/nauvium-plate.png", icon_size = 64 }, { icon = "__ageofcreation__/img/items/atoms/nv.png", icon_size = 64 } },
     pictures = { { filename = "__ageofcreation__/img/items/nauvium-plate.png", size = 64, scale = 0.5  } },
     subgroup = "aoc-magic-metals",
-    order = "a",
+    order = "b",
     stack_size = 200
 }})

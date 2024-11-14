@@ -150,7 +150,7 @@ data:extend({{
     name = "aoc-coal-dust",
     icons = { { icon = "__ageofcreation__/img/items/coal-dust.png" }, { icon = "__ageofcreation__/img/items/atoms/c.png" } },
     icon_size = 64,
-    pictures = { { filename = "__ageofcreation__/img/items/coal-dust.png", size = 64, scale = 0.25  } },
+    pictures = { { filename = "__ageofcreation__/img/items/coal-dust.png", size = 64, scale = 0.5  } },
     subgroup = "aoc-coal",
     order = "b",
     stack_size = 200
@@ -161,7 +161,7 @@ data:extend({{
     name = "aoc-graphite-rod",
     icons = { { icon = "__ageofcreation__/img/items/graphite-rod.png" }, { icon = "__ageofcreation__/img/items/atoms/c.png" } },
     icon_size = 64,
-    pictures = { { filename = "__ageofcreation__/img/items/graphite-rod.png", size = 64, scale = 0.25  } },
+    pictures = { { filename = "__ageofcreation__/img/items/graphite-rod.png", size = 64, scale = 0.5  } },
     subgroup = "aoc-coal",
     order = "c",
     stack_size = 200
@@ -236,7 +236,7 @@ data:extend({{
     name = "aoc-tin-rod",
     icons = { { icon = "__ageofcreation__/img/items/tin-rod.png" }, { icon = "__ageofcreation__/img/items/atoms/sn.png" } },
     icon_size = 64,
-    pictures = { { filename = "__ageofcreation__/img/items/tin-rod.png", size = 64, scale = 0.25  } },
+    pictures = { { filename = "__ageofcreation__/img/items/tin-rod.png", size = 64, scale = 0.5  } },
     subgroup = "aoc-metals-tin",
     order = "f",
     stack_size = 200
@@ -319,7 +319,7 @@ data:extend({{
     type = "item",
     name = "aoc-aluminium-rod",
     icons = { { icon = "__angelssmelting_art__/graphics/icons/rod-aluminium.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/al.png", icon_size = 64 } },
-    pictures = { { filename = "__angelssmelting_art__/graphics/icons/rod-aluminium.png", size = 32, scale = 0.5  } },
+    pictures = { { filename = "__angelssmelting_art__/graphics/icons/rod-aluminium.png", size = 32  } },
     subgroup = "aoc-metals-aluminium",
     order = "f",
     stack_size = 200
@@ -417,6 +417,8 @@ data.raw['item']['hazard-concrete'].stack_size = 500
 data.raw['capsule']['raw-fish'].subgroup = "aoc-fauna-fish"
 data.raw['capsule']['raw-fish'].order = "a"
 data.raw['capsule']['raw-fish'].stack_size = 200
+data.raw['capsule']['raw-fish'].spoil_result = nil
+data.raw['capsule']['raw-fish'].spoil_ticks = 0
 
 data:extend({{
     type = "module",

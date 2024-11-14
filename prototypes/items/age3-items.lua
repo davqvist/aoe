@@ -556,6 +556,15 @@ data:extend({{
     stack_size = 200
 }})
 
+data.raw['item']['yumako-mash'] = table.deepcopy(data.raw['capsule']['yumako-mash'])
+data.raw['item']['yumako-mash'].type = "item"
+data.raw['capsule']['yumako-mash'] = nil
+data.raw['item']['yumako-mash'].subgroup = "aoc-flora-apple"
+data.raw['item']['yumako-mash'].order = "d"
+data.raw['item']['yumako-mash'].stack_size = 200
+data.raw['item']['yumako-mash'].spoil_result = nil
+data.raw['item']['yumako-mash'].spoil_ticks = 0
+
 data:extend({{
     type = "item",
     name = "aoc-olive-tree-seeds",
@@ -685,7 +694,7 @@ data:extend({{
     type = "item",
     name = "aoc-saw-blade-iron",
     icons = { { icon = "__ageofcreation__/img/items/iron-saw-blade.png", icon_size = 64 }, { icon = "__ageofcreation__/img/items/atoms/fe.png", icon_size = 64 } },
-    pictures = { { filename = "__ageofcreation__/img/items/iron-saw-blade.png", size = 64, scale = 0.25  } },
+    pictures = { { filename = "__ageofcreation__/img/items/iron-saw-blade.png", size = 64, scale = 0.5  } },
     subgroup = "aoc-metals-iron",
     order = "f",
     stack_size = 100
@@ -1166,8 +1175,8 @@ data:extend({{
     name = "aoc-fertilizer",
     icon = "__ageofcreation__/img/items/fertilizer.png",
     icon_size = 64,
-    subgroup = "aoc-fauna-items",
-    order = "d",
+    subgroup = "aoc-flora-misc",
+    order = "a",
     stack_size = 200
 }})
 

@@ -105,3 +105,23 @@ data:extend({{
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
+
+data:extend({{
+    type = "item",
+    name = "aoc-platinum-ore",
+    icons = { { icon = "__angelssmelting_art__/graphics/icons/ore-platinum.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/pt.png", icon_size = 64 } },
+    pictures = { { filename = "__angelssmelting_art__/graphics/icons/ore-platinum.png", size = 32 } },
+    subgroup = "aoc-magic-metals",
+    order = "c",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-platinum-plate",
+    icons = { { icon = "__angelssmelting_art__/graphics/icons/plate-platinum.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/pt.png", icon_size = 64 } },
+    pictures = { { filename = "__angelssmelting_art__/graphics/icons/plate-platinum.png", size = 32 } },
+    subgroup = "aoc-magic-metals",
+    order = "d",
+    stack_size = 200
+}})

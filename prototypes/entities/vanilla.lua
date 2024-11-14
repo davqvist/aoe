@@ -17,6 +17,8 @@ data.raw['item']['electric-mining-drill'].subgroup = "aoc-processing-buildings"
 data.raw['item']['electric-mining-drill'].order = "f"
 data.raw['mining-drill']['electric-mining-drill'].mining_speed = 1
 data.raw['mining-drill']['electric-mining-drill'].energy_usage = "140kW"
+data.raw['mining-drill']['electric-mining-drill'].allowed_module_categories = {'speed','efficiency','productivity'}
+data.raw['mining-drill']['big-mining-drill'].allowed_module_categories = {'speed','efficiency','productivity'}
 data.raw['item']['assembling-machine-1'].subgroup = "aoc-processing-buildings"
 data.raw['item']['assembling-machine-1'].order = "i"
 data.raw['assembling-machine']['assembling-machine-1'].energy_source = {
@@ -53,6 +55,7 @@ data.raw['item']['lab'].subgroup = "aoc-processing-buildings"
 data.raw['item']['lab'].order = "m"
 data.raw['lab']['lab'].fast_replaceable_group = "lab"
 data.raw['lab']['lab'].energy_usage = "84kW"
+data.raw['lab']['lab'].allowed_module_categories = {'speed','efficiency','productivity'}
 
 data.raw['item']['radar'].subgroup = "aoc-other-buildings"
 data.raw['item']['radar'].order = "a"
@@ -129,7 +132,7 @@ data.raw['inserter']['fast-long-handed-inserter'].icons = combine_icons( get_ico
 )
 data.raw['item']['bulk-inserter'].subgroup = "aoc-inserter"
 data.raw['item']['bulk-inserter'].order = "f"
-data.raw['inserter']['bulk-inserter'].rotation_speed = 0.0466667
+data.raw['inserter']['bulk-inserter'].rotation_speed = 0.05
 data.raw['inserter']['bulk-inserter'].extension_speed = 0.12
 data.raw['item']['bulk-long-handed-inserter'] = table.deepcopy( data.raw['item']['bulk-inserter'] )
 data.raw['item']['bulk-long-handed-inserter'].name = 'bulk-long-handed-inserter'
@@ -148,7 +151,7 @@ data.raw['item']['bulk-long-handed-inserter'].icons = combine_icons( get_icons( 
 data.raw['inserter']['bulk-long-handed-inserter'] = table.deepcopy( data.raw['inserter']['bulk-inserter'] )
 data.raw['inserter']['bulk-long-handed-inserter'].name = 'bulk-long-handed-inserter'
 data.raw['inserter']['bulk-long-handed-inserter'].minable = { hardness = 1, mining_time = 0.2, result = "bulk-long-handed-inserter" }
-data.raw['inserter']['bulk-long-handed-inserter'].rotation_speed = 0.0466667
+data.raw['inserter']['bulk-long-handed-inserter'].rotation_speed = 0.05
 data.raw['inserter']['bulk-long-handed-inserter'].extension_speed = 0.12
 data.raw['inserter']['bulk-long-handed-inserter'].pickup_position = {0, -2}
 data.raw['inserter']['bulk-long-handed-inserter'].insert_position = {0, 2.2}
@@ -296,8 +299,6 @@ data.raw['accumulator']['accumulator'].selection_box = {{-1.5, -1.5}, {1.5, 1.5}
 
 data.raw['item']['small-lamp'].subgroup = "aoc-decoration"
 data.raw['item']['small-lamp'].order = "b"
-data.raw['item']['landfill'].subgroup = "aoc-decoration"
-data.raw['item']['landfill'].order = "c"
 
 data.raw['item']['recycler'].subgroup = "aoc-voiding-buildings"
 data.raw['item']['recycler'].order = "a"
