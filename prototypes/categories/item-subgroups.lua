@@ -520,6 +520,12 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
+    name = "aoc-magic-research",
+    group = "aoc-magic",
+    order = "e"
+  },
+  {
+	  type = "item-subgroup",
     name = "aoc-other",
     group = "other",
     order = "a"

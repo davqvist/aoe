@@ -51,7 +51,7 @@ function combine_icons( icons1, icons2 )
     return new_icons
 end
 
-function get_icons( thing, addition )
+function get_icons( thing, addition, scale )
     local new_icons = {{}}
     if thing and thing.icons then
         new_icons = table.deepcopy(thing.icons)
@@ -63,6 +63,11 @@ function get_icons( thing, addition )
         for _, ic in pairs(new_icons) do
             if thing.icon_mipmaps and not ic.icon_mipmaps then
                 ic.icon_mipmaps = thing.icon_mipmaps
+            end
+        end
+        for _, ic in pairs(new_icons) do
+            if thing.scale and not ic.scale then
+                ic.scale = thing.scale
             end
         end
     else

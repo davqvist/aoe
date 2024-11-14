@@ -125,3 +125,53 @@ data:extend({{
     order = "d",
     stack_size = 200
 }})
+
+data:extend({{
+    type = "item",
+    name = "aoc-meal",
+    icon = "__ageofcreation__/img/items/meal.png",
+    icon_size = 64,
+    subgroup = "aoc-magic-research",
+    order = "a",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "capsule",
+    name = "aoc-scroll",
+    icon = "__ageofcreation__/img/items/scroll.png",
+    icon_size = 64,
+    subgroup = "aoc-magic-research",
+    order = "b",
+    stack_size = 20,
+	capsule_action =
+	{
+		type = "use-on-self",
+		uses_stack = false,
+		attack_parameters =
+		{
+			type = "projectile",
+			activation_type = "consume",
+			range = 0,
+			cooldown = 3600,
+            ammo_category = "aoc-food",
+			ammo_type =
+			{
+				category = "aoc-food",
+				action =
+				{
+					type = "direct",
+					action_delivery =
+					{
+						type = "instant",
+						target_effects =
+						{
+							type = "script",
+							effect_id = "aoc-trigger-scroll"
+						}
+					}
+				}
+			}
+		}
+	}
+}})

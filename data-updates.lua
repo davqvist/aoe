@@ -1,5 +1,6 @@
 require("__ageofcreation__/prototypes/hide_rest")
 require("__ageofcreation__/prototypes/mods_override")
+require("__ageofcreation__/prototypes/research")
 
 local disabled_resources = {
 	"coal","crude-oil","iron-ore","copper-ore","uranium-ore",

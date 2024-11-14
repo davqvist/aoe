@@ -5,6 +5,10 @@ function init_recipes()
 			storage.infusing[ingredient.name] = recipe.name
 		end
 	end
+    if storage.unlocking == nil then storage.unlocking = {} end
+    for _, recipe in pairs(prototypes.get_recipe_filtered({{filter = "category", category = "aoc-category-unlocking"}})) do
+		storage.unlocking[recipe.name] = true
+	end
 end
 
 script.on_init(
@@ -121,6 +125,9 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 	end
 	if(entity.name == "aoc-lunar-panel") then
 		handleStarlightPanelBuilt(event)
+	end
+	if(entity.name == "aoc-escritoire") then
+		handleBuilt( event, "escritoires" )
 	end
 	if(entity.name == "aoc-wind-turbine") then
 		handleWindTurbineBuilt(event)
@@ -351,6 +358,13 @@ script.on_event(defines.events.on_tick,
 		game.get_player(storage.coffeetick[game.tick]).character_running_speed_modifier = game.get_player(storage.coffeetick[game.tick]).character_running_speed_modifier-1	
 		storage.coffeetick[game.tick] = nil
 	end
+	if storage.scrolltick and storage.scrolltick[game.tick] then
+		for name, status in pairs( storage.unlocking ) do
+			game.get_player(storage.scrolltick[game.tick]).force.recipes[name].enabled = false
+		end
+		storage.scrolltick[game.tick] = nil
+	end
+	
 	if storage.lightningtick and storage.lightningtick[game.tick] then
 		local rod = storage.lightningtick[game.tick]
 		if rod and rod.valid then
@@ -396,6 +410,14 @@ script.on_event(defines.events.on_tick,
 		end
 	  end
     end
+	if storage.escritoires then
+	  for _,escritoire in pairs(storage.escritoires) do
+		if escritoire.valid then
+			check_research(escritoire)
+		else storage.escritoires[_]=nil
+		end
+	  end
+	end
   end
 )
 
@@ -496,6 +518,20 @@ function handleMined(event, main_entities, sub_entities, drop)
   end
 end
 
+function check_research( escritoire )
+	if escritoire.get_recipe() and escritoire.get_recipe().category == "aoc-category-unlocking" and escritoire.crafting_progress >= 1-escritoire.crafting_speed/(60*escritoire.get_recipe().energy) then
+		local recipe = string.match(escritoire.get_recipe().name, "^aoc%-unlocking%-.*%-tech%-?%d?%-(.*)$")
+		if escritoire.force.recipes[recipe] then 
+			escritoire.force.recipes[recipe].enabled = true
+			local message = {"", {"age-of-creation.message_researched", prototypes.recipe[recipe].localised_name}}
+			for _, player in pairs(escritoire.force.players) do
+				player.print(message)
+			end
+			escritoire.crafting_progress = 0
+		end
+	end
+end
+
 function tapTree(forestry, what, tree)
   local area = 10
   local surface = forestry.surface
@@ -522,6 +558,20 @@ script.on_event(defines.events.on_script_trigger_effect,
 			storage.coffeetick[game.tick+3600] = p.index
 			p.character_running_speed_modifier = p.character_running_speed_modifier+1
 			p.remove_item{name="aoc-coffee", count=1}
+		end
+		if p and event.effect_id == "aoc-trigger-scroll" then
+			if storage.scrolltick == nil then storage.scrolltick = {} end
+			storage.scrolltick[game.tick+3600] = p.index
+			local flag = false
+			for name, status in pairs( storage.unlocking ) do
+				local tech = string.match(name, "^aoc%-unlocking%-(.*%-tech%-?%d?)%-")
+				local recipe = string.match(name, "^aoc%-unlocking%-.*%-tech%-?%d?%-(.*)$")
+				if not p.force.recipes[recipe].enabled and p.force.technologies[tech].researched then
+					flag = true
+					p.force.recipes[name].enabled = true
+				end
+			end
+			if flag then p.remove_item{name="aoc-scroll", count=1} end
 		end
 	end
 )

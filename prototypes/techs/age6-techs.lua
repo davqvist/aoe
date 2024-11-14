@@ -2,10 +2,49 @@ local AOC =  require("__ageofcreation__/globals")
 
 data:extend({{
   type = "technology",
+  name = "aoc-magic-research-tech",
+  icon_size = 128,
+  icon = "__ageofcreation__/img/entities/escritoire.png",
+  prerequisites = {"aoc-magic-age-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-escritoire-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-smelting-meal-fish-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-smelting-meal-poultry-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-smelting-meal-meat-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-researching-scroll-tea-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-researching-scroll-coffee-recipe"
+    }
+  },
+  unit = {
+      count = 20,
+      ingredients = AOC["age_tech_table"][6],
+      time = 50
+  }
+}})
+
+data:extend({{
+  type = "technology",
   name = "aoc-starlight-tech",
   icon_size = 192,
   icon = "__ageofcreation__/img/entities/lunar-panel.png",
-  prerequisites = {"aoc-magic-age-tech"},
+  prerequisites = {"aoc-magic-research-tech"},
   effects = {
     {
       type = "unlock-recipe",
