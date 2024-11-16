@@ -35,7 +35,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-kelp",
 	tier = 1,
-    effect = { speed = 0.5 },
+    effect = { speed = 0.4 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -50,7 +50,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-kelp",
 	tier = 2,
-    effect = { speed = 1.0 },
+    effect = { speed = 0.8 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -65,7 +65,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-kelp",
 	tier = 3,
-    effect = { speed = 1.5 },
+    effect = { speed = 1.2 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -80,7 +80,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-kelp",
 	tier = 4,
-    effect = { speed = 2.0 },
+    effect = { speed = 1.6 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -95,7 +95,7 @@ data:extend({{
     stack_size = 20,
 	category = "aoc-module-kelp",
 	tier = 5,
-    effect = { speed = 2.5 },
+    effect = { speed = 2.0 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})

@@ -19,7 +19,7 @@ data:extend({
     order = "b",
     indent = 1,
     dependencies = { "aoc-tat-aoc" },
-    trigger = { type = "dependencies-met" },
+    trigger = { type = "build-entity", entity = "burner-mining-drill" },
     tag = "[item=aoc-science-01]",
     --image = ""
   },
@@ -81,6 +81,21 @@ data:extend({
       technology = "aoc-petrochem-age-tech"
     },
     tag = "[item=aoc-science-05]",
+    --image = ""
+  },
+  {
+    type = "tips-and-tricks-item",
+    name = "aoc-tat-science-06",
+    category = "AOC",
+    order = "g",
+    indent = 1,
+    dependencies = { "aoc-tat-science-05" },
+    trigger =
+    {
+      type = "research",
+      technology = "aoc-magic-age-tech"
+    },
+    tag = "[item=aoc-science-06]",
     --image = ""
   }
 })

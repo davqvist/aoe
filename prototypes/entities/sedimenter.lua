@@ -64,9 +64,16 @@ data:extend({{
 	fluid_boxes = {
     {
       production_type = "input",
+      pipe_picture = assembler2pipepictures(),
       pipe_covers = pipecoverspictures(),
       volume = 1000,
       pipe_connections = {{ flow_direction="input", direction = defines.direction.west, position = {-2, 0} }}
+    },{
+      production_type = "output",
+      pipe_picture = assembler2pipepictures(),
+      pipe_covers = pipecoverspictures(),
+      volume = 1000,
+      pipe_connections = {{ flow_direction="output", direction = defines.direction.east, position = {2, 0} }}
     }
   },
   working_sound = {

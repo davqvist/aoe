@@ -1214,11 +1214,11 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoc-trains-tech",
+    name = "aoc-trains-tech-1",
     icon_size = 256,
     icon_mipmaps = 4,
     icon = "__base__/graphics/technology/automated-rail-transportation.png",
-    prerequisites = {"aoc-solder-tech"},
+    prerequisites = {"aoc-bronze-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -1250,7 +1250,27 @@ data:extend({{
       }
     },
     unit = {
-        count = 50,
+        count = 35,
+        ingredients = AOC["age_tech_table"][4],
+        time = 35
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoc-trains-tech-2",
+    icon_size = 256,
+    icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/automated-rail-transportation.png",
+    prerequisites = {"aoc-solder-tech", "aoc-trains-tech-1"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-rail-solder-recipe"
+      }
+    },
+    unit = {
+        count = 40,
         ingredients = AOC["age_tech_table"][4],
         time = 35
     }
@@ -1585,6 +1605,10 @@ data:extend({{
     {
       type = "unlock-recipe",
       recipe = "aoc-mixing-animal-food-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-mixing-animal-food-mash-recipe"
     }
   },
   unit = {

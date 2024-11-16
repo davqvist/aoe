@@ -596,6 +596,7 @@ data:extend({{
 data.raw['item']['uranium-ore'].subgroup = "aoc-metals-rest"
 data.raw['item']['uranium-ore'].order = "j"
 data.raw['item']['uranium-ore'].icons = { { icon = "__base__/graphics/icons/uranium-ore.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/u.png", icon_size = 64 } }
+data.raw['item']['uranium-ore'].stack_size = 200
 
 data:extend({{
     type = "item",

@@ -959,7 +959,7 @@ data:extend({{
   name = "aoc-electronics-tech-3",
   icon_size = 256, icon_mipmaps = 4,
   icon = "__base__/graphics/technology/processing-unit.png",
-  prerequisites = {"aoc-rubber-tech", "aoc-epoxy-tech", "aoc-silicon-tech-2", "aoc-electronics-tech-2"},
+  prerequisites = {"aoc-rubber-tech", "aoc-epoxy-tech", "aoc-silicon-tech-2", "aoc-electronics-tech-2", "aoc-electrum-tech"},
   effects = {
     {
       type = "unlock-recipe",

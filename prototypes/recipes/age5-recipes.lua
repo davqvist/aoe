@@ -1498,7 +1498,7 @@ data:extend({{
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoc-coke', amount = 2},
+		{type = 'item', name = 'aoc-coke', amount = 1},
 		{type = 'item', name = 'aoc-quartz-dust', amount = 4},
 		{type = 'item', name = 'aoc-sand', amount = 1},
 		{type = 'item', name = 'aoc-phosphate', amount = 1}

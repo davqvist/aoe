@@ -59,14 +59,14 @@ data.raw["map-settings"]["map-settings"].pollution.enabled = false
 
 for _, recipe in pairs(data.raw.recipe) do
   recipe.allow_productivity = true
-  if recipe.category and recipe.category.modules then
+  if recipe.category then
 	local rc = data.raw['recipe-category'][recipe.category]
 	if rc and rc.modules then
       for _, mc in pairs(rc.modules) do
 		if recipe.allowed_module_categories == nil then recipe.allowed_module_categories = {} end
 		table.insert(recipe.allowed_module_categories, mc)
       end
+	else recipe.allowed_module_categories = {'speed','efficiency','productivity'}
 	end
-  else recipe.allowed_module_categories = {'speed','efficiency','productivity'}
   end
 end

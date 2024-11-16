@@ -1180,7 +1180,7 @@ data:extend({{
 	results = {
 		{type = 'item', name = 'aoc-fertilizer', amount = 7}
     },
-	energy_required = 3.5,
+	energy_required = 7,
 	category = 'aoc-category-mixing'
 }})
 

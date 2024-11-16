@@ -23,8 +23,8 @@ data:extend({{
   fluid_usage_per_tick = 10,
   burns_fluid = true,
   scale_fluid_usage = true,
-  collision_box = {{-3.5, -3.5}, {3.5, 3.5}},
-  selection_box = {{-3.4, -3.4}, {3.4, 3.4}},
+  selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+  collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
   fluid_box = {
     production_type = "input-output",
     pipe_covers = pipecoverspictures(),
