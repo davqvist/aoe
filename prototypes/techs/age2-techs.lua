@@ -69,8 +69,8 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "aoc-low-voltage-tech",
-    icon_size = 64, icon_mipmaps = 4,
-    icon = "__base__/graphics/icons/steam-engine.png",
+    icon = "__base__/graphics/technology/steam-power.png",
+    icon_size = 256,
     prerequisites = {"aoc-electric-age-tech"},
 	  effects = {
       {
@@ -780,7 +780,7 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoc-concrete-tech",
+    name = "aoc-concrete-tech-1",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/concrete.png",
     prerequisites = {"aoc-igneous-stones-tech-1", "aoc-metamorphic-stones-tech-1", "aoc-lime-tech-1"},
@@ -829,7 +829,7 @@ data:extend({{
     name = "aoc-fish-tech-1",
     icon_size = 64, icon_mipmaps = 4,
     icon = "__base__/graphics/icons/fish.png",
-    prerequisites = {"aoc-salt-tech", "aoc-concrete-tech"},
+    prerequisites = {"aoc-salt-tech", "aoc-concrete-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",

@@ -1259,18 +1259,29 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "aoc-trains-tech-2",
+    icon = "__elevated-rails__/graphics/technology/elevated-rail.png",
     icon_size = 256,
-    icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/automated-rail-transportation.png",
-    prerequisites = {"aoc-solder-tech", "aoc-trains-tech-1"},
+    prerequisites = {"aoc-solder-tech", "aoc-trains-tech-1", "aoc-concrete-tech-2", "aoc-brass-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
         recipe = "aoc-crafting-rail-solder-recipe"
-      }
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-rail-support-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-rail-ramp-recipe"
+      },
+      {
+        type = "rail-planner-allow-elevated-rails",
+        modifier = true
+      },
     },
     unit = {
-        count = 40,
+        count = 50,
         ingredients = AOC["age_tech_table"][4],
         time = 35
     }
@@ -1709,4 +1720,27 @@ data:extend({{
       ingredients = AOC["age_tech_table"][4],
       time = 35
   }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoc-concrete-tech-2",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/concrete.png",
+    prerequisites = {"aoc-concrete-tech-1", "aoc-steel-tech-3"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-mixing-refined-concrete-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-refined-hazard-concrete-recipe"
+      }
+    },
+    unit = {
+        count = 30,
+        ingredients = AOC["age_tech_table"][4],
+        time = 35
+    }
 }})

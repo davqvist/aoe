@@ -226,6 +226,12 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
+    name = "aoc-trains",
+    group = "logistics",
+    order = "h"
+  },
+  {
+	  type = "item-subgroup",
     name = "aoc-decoration",
     group = "logistics",
     order = "h"

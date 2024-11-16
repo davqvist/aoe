@@ -2952,6 +2952,36 @@ data:extend({{
 }})
 
 data:extend({{
+	name = 'aoc-crafting-rail-ramp-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "refined-concrete", amount = 100},
+        {type = "item", name = "rail", amount = 8},
+        {type = "item", name = "aoc-brass-rod", amount = 20}
+	},
+	results = {
+		{type = 'item', name = 'rail-ramp', amount = 1}
+    },
+	energy_required = 1
+}})
+
+data:extend({{
+	name = 'aoc-crafting-rail-support-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'refined-concrete', amount = 20},
+		{type = 'item', name = 'aoc-brass-rod', amount = 10},
+		{type = 'item', name = 'aoc-steel-rod', amount = 10}
+	},
+	results = {
+		{type = 'item', name = 'rail-support', amount = 1}
+    },
+	energy_required = 1
+}})
+
+data:extend({{
 	name = 'aoc-crafting-fast-inserter-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -3950,4 +3980,35 @@ data:extend({{
     },
 	energy_required = 6,
 	category = 'aoc-category-high-pressure-heating'
+}})
+
+data:extend({{
+	name = 'aoc-mixing-refined-concrete-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-cement', amount = 1},
+		{type = 'fluid', name = 'water', amount = 20},
+		{type = 'item', name = 'aoc-sand', amount = 3},
+		{type = 'item', name = 'aoc-gravel', amount = 4},
+		{type = 'item', name = 'aoc-steel-rod', amount = 4}
+	},
+	results = {
+        {type = 'item', name = 'refined-concrete', amount = 4}
+    },
+	energy_required = 2.4,
+	category = 'aoc-category-mixing'
+}})
+
+data:extend({{
+	name = 'aoc-crafting-refined-hazard-concrete-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'refined-concrete', amount = 5}
+	},
+	results = {
+        {type = 'item', name = 'refined-hazard-concrete', amount = 5}
+    },
+	energy_required = 0.2
 }})

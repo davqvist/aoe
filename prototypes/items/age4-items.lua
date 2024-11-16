@@ -1168,3 +1168,38 @@ data:extend({{
     order = "d",
     stack_size = 200
 }})
+
+data.raw['item']['refined-concrete'].subgroup = "aoc-construction"
+data.raw['item']['refined-concrete'].order = "g"
+data.raw['item']['refined-concrete'].stack_size = 500
+data.raw['item']['refined-hazard-concrete'].subgroup = "aoc-construction"
+data.raw['item']['refined-hazard-concrete'].order = "h"
+data.raw['item']['refined-hazard-concrete'].stack_size = 500
+
+data.raw['rail-planner']['rail'].subgroup = "aoc-trains"
+data.raw['rail-planner']['rail'].order = "a"
+data.raw['rail-planner']['rail'].stack_size = 200
+data.raw['rail-planner']['rail-ramp'].subgroup = "aoc-trains"
+data.raw['rail-planner']['rail-ramp'].order = "b"
+data.raw['rail-planner']['rail-ramp'].stack_size = 10
+data.raw['item']['rail-support'].subgroup = "aoc-trains"
+data.raw['item']['rail-support'].order = "c"
+data.raw['item']['rail-support'].stack_size = 20
+data.raw['item']['train-stop'].subgroup = "aoc-trains"
+data.raw['item']['train-stop'].order = "d"
+data.raw['item']['train-stop'].stack_size = 20
+data.raw['item']['rail-signal'].subgroup = "aoc-trains"
+data.raw['item']['rail-signal'].order = "e"
+data.raw['item']['rail-signal'].stack_size = 50
+data.raw['item']['rail-chain-signal'].subgroup = "aoc-trains"
+data.raw['item']['rail-chain-signal'].order = "f"
+data.raw['item']['rail-chain-signal'].stack_size = 50
+data.raw['item-with-entity-data']['locomotive'].subgroup = "aoc-trains"
+data.raw['item-with-entity-data']['locomotive'].order = "g"
+data.raw['item-with-entity-data']['locomotive'].stack_size = 10
+data.raw['item-with-entity-data']['cargo-wagon'].subgroup = "aoc-trains"
+data.raw['item-with-entity-data']['cargo-wagon'].order = "h"
+data.raw['item-with-entity-data']['cargo-wagon'].stack_size = 20
+data.raw['item-with-entity-data']['fluid-wagon'].subgroup = "aoc-trains"
+data.raw['item-with-entity-data']['fluid-wagon'].order = "i"
+data.raw['item-with-entity-data']['fluid-wagon'].stack_size = 20
