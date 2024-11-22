@@ -57,7 +57,7 @@ data:extend({
   },
   {
     type = "module-category",
-    name = "aoc-module-lotus"
+    name = "aoc-module-lotus-flower"
   },
   {
     type = "module-category",
@@ -69,7 +69,7 @@ data:extend({
   },
   {
     type = "module-category",
-    name = "aoc-module-soybean"
+    name = "aoc-module-soybeans"
   },
   {
     type = "module-category",

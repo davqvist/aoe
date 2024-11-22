@@ -229,7 +229,7 @@ data:extend({
   {
     type = "recipe-category",
     name = "aoc-category-farm-plot-soybean",
-	  modules = { "aoc-module-soybean" }
+	  modules = { "aoc-module-soybeans" }
   },
   {
     type = "recipe-category",
@@ -268,7 +268,7 @@ data:extend({
   {
     type = "recipe-category",
     name = "aoc-category-farm-reservoir-lotus",
-	  modules = { "aoc-module-lotus" }
+	  modules = { "aoc-module-lotus-flower" }
   },
   {
     type = "recipe-category",

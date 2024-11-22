@@ -88,7 +88,7 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-flora-soybean",
+    name = "aoc-flora-soybeans",
     group = "aoc-flora",
     order = "c08"
   },
