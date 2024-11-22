@@ -123,7 +123,7 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoc-tree-cultivation-tech",
+    name = "aoc-tree-cultivation-tech-1",
     icon = data.raw.tree["tree-01"].icon,
     icon_size = data.raw.tree["tree-01"].icon_size,
     prerequisites = {"aoc-agriculture-age-tech", "aoc-lime-tech-1", "aoc-latex-tech"},
@@ -170,7 +170,7 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoc-fruit-tree-cultivation-tech",
+    name = "aoc-fruit-tree-cultivation-tech-1",
     icon = data.raw.tree["tree-05"].icon,
     icon_size = data.raw.tree["tree-05"].icon_size,
     prerequisites = {"aoc-agriculture-age-tech"},
@@ -232,7 +232,7 @@ data:extend({{
     name = "aoc-tree-cutting-tech-1",
     icon = "__ageofcreation__/img/items/steel-saw-blade.png",
     icon_size = 64,
-    prerequisites = {"aoc-tree-cultivation-tech"},
+    prerequisites = {"aoc-tree-cultivation-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -623,7 +623,7 @@ data:extend({{
     name = "aoc-maize-tech-2",
     icon_size = 64,
     icon = "__ageofcreation__/img/items/maize.png",
-    prerequisites = {"aoc-agriculture-science-alternate-tech", "aoc-fertilizer-tech-1", "aoc-maize-tech-1"},
+    prerequisites = {"aoc-fertilizer-tech-1", "aoc-maize-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -643,7 +643,7 @@ data:extend({{
       }
     },
     unit = {
-        count = 50,
+        count = 40,
         ingredients = AOC["age_tech_table"][3],
         time = 30
     }
@@ -654,7 +654,7 @@ data:extend({{
     name = "aoc-soybeans-tech-2",
     icon_size = 64,
     icon = "__ageofcreation__/img/items/soybeans.png",
-    prerequisites = {"aoc-agriculture-science-alternate-tech","aoc-fertilizer-tech-1","aoc-soybeans-tech-1"},
+    prerequisites = {"aoc-fertilizer-tech-1", "aoc-soybeans-tech-1"},
 	  effects = {
 	    {
         type = "unlock-recipe",
@@ -666,7 +666,7 @@ data:extend({{
       }
     },
     unit = {
-        count = 50,
+        count = 40,
         ingredients = AOC["age_tech_table"][3],
         time = 30
     }
@@ -677,7 +677,7 @@ data:extend({{
     name = "aoc-sugar-tech",
     icon_size = 64,
     icon = "__ageofcreation__/img/items/sugar.png",
-    prerequisites = {"aoc-fruit-tree-cultivation-tech","aoc-maize-tech-2"},
+    prerequisites = {"aoc-fruit-tree-cultivation-tech-1","aoc-maize-tech-2"},
 	  effects = {
 	    {
         type = "unlock-recipe",
@@ -782,6 +782,84 @@ data:extend({{
         ingredients = AOC["age_tech_table"][3],
         time = 30
     }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-tree-cultivation-tech-2",
+  icon = data.raw.tree["tree-01"].icon,
+  icon_size = data.raw.tree["tree-01"].icon_size,
+  prerequisites = {"aoc-tree-cultivation-tech-1", "aoc-fertilizer-tech-1"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-plot-spruce-tree-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-plot-resin-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-plot-spruce-tree-module-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-plot-rubber-tree-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-plot-rubber-tree-module-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-forestry-rubber-tree-2-recipe"
+    }
+  },
+  unit = {
+      count = 40,
+      ingredients = AOC["age_tech_table"][3],
+      time = 30
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-fruit-tree-cultivation-tech-2",
+  icon = data.raw.tree["tree-05"].icon,
+  icon_size = data.raw.tree["tree-05"].icon_size,
+  prerequisites = {"aoc-fruit-tree-cultivation-tech-1", "aoc-fertilizer-tech-1"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-plot-apple-tree-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-plot-apple-tree-module-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-plot-apple-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-plot-olive-tree-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-plot-olive-tree-module-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-plot-olive-2-recipe"
+    }
+  },
+  unit = {
+      count = 40,
+      ingredients = AOC["age_tech_table"][3],
+      time = 30
+  }
 }})
 
 data:extend({{

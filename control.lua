@@ -129,6 +129,9 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 	if(entity.name == "aoc-escritoire") then
 		handleBuilt( event, "escritoires" )
 	end
+	if(entity.name == "aoc-cauldron") then
+		handleBuilt( event, "cauldrons" )
+	end
 	if(entity.name == "aoc-wind-turbine") then
 		handleWindTurbineBuilt(event)
 	end
@@ -184,8 +187,8 @@ script.on_nth_tick(149,
 			if lightning_rod.valid and lightning_rod.name == "aoc-lightning-rod" then
 				if storage.weather_stations == nil then storage.weather_stations = {} end
 				if storage.transmitting_stations == nil then storage.transmitting_stations = {} end
-				local found_weather_stations = lightning_rod.surface.find_entities_filtered({name="aoc-weather-station", area={{lightning_rod.position.x-12, lightning_rod.position.y-10}, {lightning_rod.position.x+12, lightning_rod.position.y+14}}})
-				local found_transmitting_stations = lightning_rod.surface.find_entities_filtered({name="aoc-transmitting-station", area={{lightning_rod.position.x-12, lightning_rod.position.y-10}, {lightning_rod.position.x+12, lightning_rod.position.y+14}}})
+				local found_weather_stations = lightning_rod.surface.find_entities_filtered({name="aoc-weather-station", area={{lightning_rod.position.x-12, lightning_rod.position.y-12}, {lightning_rod.position.x+12, lightning_rod.position.y+12}}})
+				local found_transmitting_stations = lightning_rod.surface.find_entities_filtered({name="aoc-transmitting-station", area={{lightning_rod.position.x-12, lightning_rod.position.y-12}, {lightning_rod.position.x+12, lightning_rod.position.y+12}}})
 				storage.weather_stations[unit] = #found_weather_stations
 				storage.transmitting_stations[unit] = #found_transmitting_stations
 				local found = false
@@ -418,6 +421,14 @@ script.on_event(defines.events.on_tick,
 		end
 	  end
 	end
+	if storage.cauldrons then
+	  for _,cauldron in pairs(storage.cauldrons) do
+		if cauldron.valid then
+			check_players(cauldron)
+		else storage.cauldrons[_]=nil
+		end
+	  end
+	end
   end
 )
 
@@ -528,6 +539,41 @@ function check_research( escritoire )
 				player.print(message)
 			end
 			escritoire.crafting_progress = 0
+		end
+	end
+end
+
+function check_players( cauldron )
+	if cauldron.get_recipe() and cauldron.get_recipe().category == "aoc-category-brewing" and cauldron.crafting_progress >= 1-cauldron.crafting_speed/(60*cauldron.get_recipe().energy) then
+		local flag = false
+		local recipe = string.match(cauldron.get_recipe().name, "^aoc%-brewing%-%d%d%-(.*)$")
+		if cauldron.force.recipes[recipe] then 
+			local chance = string.match(cauldron.get_recipe().name, "^aoc%-brewing%-(%d%d)%-.*$")
+			chance = chance/100
+			local surface = cauldron.surface
+			local temp = surface.find_entities_filtered({type="character", area={{cauldron.position.x-8, cauldron.position.y-8}, {cauldron.position.x+8, cauldron.position.y+8}}})
+			if temp ~= nil and #temp > 0 then 
+				local armor = temp[1].get_inventory(defines.inventory.character_armor)
+				if armor and #armor > 0 and armor[1].valid_for_read and armor[1].grid then
+					if armor[1].name == 'aoc-robe' then chance = chance+0.05 end
+					local grid = armor[1].grid.get_contents()
+					if grid['aoc-ring-equipment'] then chance = chance+grid['aoc-ring-equipment']*0.01 end
+					if grid['aoc-necklace-equipment'] then chance = chance+grid['aoc-necklace-equipment']*0.05 end
+					if math.random() < chance then 
+						flag = true
+						cauldron.force.recipes[recipe].enabled = true
+						cauldron.force.recipes[cauldron.get_recipe().name].enabled = false
+						local message = {"", {"age-of-creation.message_researched", prototypes.recipe[recipe].localised_name}}
+						for _, player in pairs(cauldron.force.players) do
+							player.print(message)
+						end
+					end
+				end
+			end 
+		end
+		if not flag then
+			cauldron.crafting_progress = 0
+			cauldron.get_output_inventory().insert({name = "aoc-experiment-good", count = 1})
 		end
 	end
 end

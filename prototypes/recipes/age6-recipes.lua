@@ -442,3 +442,187 @@ data:extend({{
 	energy_required = 40,
 	category = 'aoc-category-researching'
 }})
+
+data:extend({{
+	name = 'aoc-brewing-00-aoc-alchemy-ambrosia-recipe',
+	type = 'recipe',
+	enabled = true,
+	hidden = true,
+	ingredients = {
+        {type = 'fluid', name = 'aoc-royal-jelly', amount = 50},
+		{type = 'item', name = 'aoc-lotus-flower', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoc-ambrosia', amount = 1}
+    },
+	category = 'aoc-category-brewing',
+	energy_required = 5
+}})
+
+data:extend({{
+	name = 'aoc-alchemy-ambrosia-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-honey', amount = 4},
+		{type = 'item', name = 'aoc-lotus-flower', amount = 4},
+		{type = 'item', name = 'aoc-flask', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoc-ambrosia', amount = 1}
+    },
+	category = 'aoc-category-alchemy',
+	energy_required = 2
+}})
+
+data:extend({{
+	name = 'aoc-brewing-00-aoc-alchemy-ichor-recipe',
+	type = 'recipe',
+	enabled = true,
+	hidden = true,
+	ingredients = {
+        {type = 'fluid', name = 'aoc-hydrochloric-acid', amount = 50},
+		{type = 'item', name = 'aoc-meat', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoc-ichor', amount = 1}
+    },
+	category = 'aoc-category-brewing',
+	energy_required = 5
+}})
+
+data:extend({{
+	name = 'aoc-alchemy-ichor-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'aoc-hydrochloric-acid', amount = 40},
+		{type = 'item', name = 'aoc-meat', amount = 4},
+		{type = 'item', name = 'aoc-flask', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoc-ichor', amount = 1}
+    },
+	category = 'aoc-category-alchemy',
+	energy_required = 2
+}})
+
+data:extend({{
+	name = 'aoc-brewing-00-aoc-freezing-ice-recipe',
+	type = 'recipe',
+	enabled = true,
+	hidden = true,
+	ingredients = {
+        {type = 'fluid', name = 'water', amount = 50},
+		{type = 'item', name = 'aoc-cooling-coil', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'ice', amount = 1}
+    },
+	category = 'aoc-category-brewing',
+	energy_required = 5
+}})
+
+data:extend({{
+	name = 'aoc-freezing-ice-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'water', amount = 50},
+	},
+	results = {
+		{type = 'item', name = 'ice', amount = 1}
+    },
+	category = 'aoc-category-freezing',
+	energy_required = 5
+}})
+
+data:extend({{
+	name = 'aoc-brewing-00-freezing-obsidian-recipe',
+	type = 'recipe',
+	enabled = true,
+	hidden = true,
+	ingredients = {
+        {type = 'fluid', name = 'lava', amount = 50},
+		{type = 'item', name = 'ice', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoc-obsidian', amount = 1}
+    },
+	category = 'aoc-category-brewing',
+	energy_required = 5
+}})
+
+data:extend({{
+	name = 'aoc-freezing-obsidian-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'lava', amount = 50},
+        {type = 'item', name = 'ice', amount = 1},
+	},
+	results = {
+		{type = 'item', name = 'aoc-obsidian', amount = 1}
+    },
+	category = 'aoc-category-freezing',
+	energy_required = 1
+}})
+
+data:extend({{
+	name = 'aoc-crafting-ring-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-electrum', amount = 5},
+		{type = 'item', name = 'aoc-diamond', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoc-ring-equipment', amount = 1}
+    },
+	energy_required = 5,
+	research = 'aoc-electrum'
+}})
+
+data:extend({{
+	name = 'aoc-crafting-necklace-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-silver-plate', amount = 10},
+		{type = 'item', name = 'aoc-garnet', amount = 5}
+	},
+	results = {
+		{type = 'item', name = 'aoc-necklace-equipment', amount = 1}
+    },
+	energy_required = 5,
+	research = 'aoc-silver-plate'
+}})
+
+data:extend({{
+	name = 'aoc-crafting-robe-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-wool', amount = 50},
+		{type = 'item', name = 'aoc-leather', amount = 20},
+		{type = 'item', name = 'aoc-nauvium-plate', amount = 4}
+	},
+	results = {
+		{type = 'item', name = 'aoc-robe', amount = 1}
+    },
+	energy_required = 10
+}})
+
+data:extend({{
+	name = 'aoc-crafting-cauldron-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'item', name = 'tungsten-plate', amount = 40},
+        {type = 'item', name = 'pipe', amount = 10},
+	},
+	results = {
+		{type = 'item', name = 'aoc-cauldron', amount = 1}
+    },
+	energy_required = 5
+}})

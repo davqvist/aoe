@@ -256,45 +256,51 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-construction",
+    name = "aoc-thermal",
     group = "intermediate-products",
     order = "d"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-chemicals",
+    name = "aoc-construction",
     group = "intermediate-products",
     order = "e"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-petrochem",
+    name = "aoc-chemicals",
     group = "intermediate-products",
     order = "f"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-rubber",
+    name = "aoc-petrochem",
     group = "intermediate-products",
     order = "g"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-parts",
+    name = "aoc-rubber",
     group = "intermediate-products",
     order = "h"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-circuits",
+    name = "aoc-parts",
     group = "intermediate-products",
     order = "i"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-science-packs",
+    name = "aoc-circuits",
     group = "intermediate-products",
     order = "j"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-science-packs",
+    group = "intermediate-products",
+    order = "k"
   },
   {
 	  type = "item-subgroup",
@@ -529,6 +535,12 @@ data:extend({
     name = "aoc-magic-research",
     group = "aoc-magic",
     order = "e"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-magic-brewing",
+    group = "aoc-magic",
+    order = "f"
   },
   {
 	  type = "item-subgroup",

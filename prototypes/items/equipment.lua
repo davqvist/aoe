@@ -66,15 +66,55 @@ data:extend({{
     },
     power = '300kW',
     burner = {
-		type = 'burner',
-		emissions_per_minute = {pollution = 6},
-		fuel_inventory_size = 4,
-		burnt_inventory_size = 4,
-		fuel_categories = {'chemical'}
-	},
+      type = 'burner',
+      emissions_per_minute = {pollution = 6},
+      fuel_inventory_size = 4,
+      burnt_inventory_size = 4,
+      fuel_categories = {'chemical'}
+    },
     energy_source = {
-		type = 'electric',
-		usage_priority = 'secondary-output'
-	},
+      type = 'electric',
+      usage_priority = 'secondary-output'
+    },
     categories = {"armor"}
+}})
+
+data:extend({{
+    type = "inventory-bonus-equipment",
+    name = "aoc-ring-equipment",
+    take_result = "aoc-ring-equipment",
+    categories = {"robe"},
+    sprite = {
+      filename = "__ageofcreation__/img/items/ring.png",
+      width = 64,
+      height = 64,
+      priority = "medium",
+      scale = 0.5
+    },
+    shape = {
+      width = 1,
+      height = 1,
+      type = "full"
+    },
+    inventory_size_bonus = 1
+}})
+
+data:extend({{
+    type = "inventory-bonus-equipment",
+    name = "aoc-necklace-equipment",
+    take_result = "aoc-necklace-equipment",
+    categories = {"robe"},
+    sprite = {
+      filename = "__ageofcreation__/img/items/necklace.png",
+      width = 64,
+      height = 64,
+      priority = "medium",
+      scale = 1
+    },
+    shape = {
+      width = 2,
+      height = 2,
+      type = "full"
+    },
+    inventory_size_bonus = 3
 }})

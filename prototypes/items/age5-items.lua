@@ -32,7 +32,7 @@ data:extend({{
     icons = combine_icons_tiny( get_icons( data.raw["item"]["boiler"] ), get_icons( data.raw["armor"]["light-armor"] ) ),
     subgroup = "aoc-equipment",
     order = "a",
-    placed_as_equipment_result = "aoc-portable-boiler-equipment",
+    place_as_equipment_result = "aoc-portable-boiler-equipment",
     stack_size = 20
 }})
 
@@ -42,7 +42,7 @@ data:extend({{
     icons = combine_icons_tiny( get_icons( data.raw["item"]["aoc-logistic-hive"] ), get_icons( data.raw["armor"]["light-armor"] ) ),
     subgroup = "aoc-equipment",
     order = "f",
-    placed_as_equipment_result = "aoc-pocket-hive-equipment",
+    place_as_equipment_result = "aoc-pocket-hive-equipment",
     stack_size = 20
 }})
 

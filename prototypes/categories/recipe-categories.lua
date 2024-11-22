@@ -23,6 +23,10 @@ data:extend({
   },
   {
     type = "recipe-category",
+    name = "aoc-category-brewing"
+  },
+  {
+    type = "recipe-category",
     name = "aoc-category-casting"
   },
   {

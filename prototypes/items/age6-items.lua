@@ -175,3 +175,130 @@ data:extend({{
 		}
 	}
 }})
+
+data:extend({{
+    type = "item",
+    name = "aoc-ambrosia",
+    icon = "__ageofcreation__/img/items/ambrosia.png",
+    icon_size = 64,
+    subgroup = "aoc-magic-brewing",
+    order = "a",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-ichor",
+    icon = "__ageofcreation__/img/items/ichor.png",
+    icon_size = 64,
+    subgroup = "aoc-magic-brewing",
+    order = "b",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-experiment-failed",
+    icons = { { icon = "__angelsbioprocessing_art__/graphics/icons/solid-paper.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/other/failed.png", icon_size = 64, scale = 0.4, shift = {4,-4} } },
+    subgroup = "aoc-magic-brewing",
+    order = "z1",
+    stack_size = 500
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-experiment-helpful",
+    icons = { { icon = "__angelsbioprocessing_art__/graphics/icons/solid-paper.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/other/helpful.png", icon_size = 64, scale = 0.4, shift = {4,-4} } },
+    subgroup = "aoc-magic-brewing",
+    order = "z2",
+    stack_size = 500
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-experiment-good",
+    icons = { { icon = "__angelsbioprocessing_art__/graphics/icons/solid-paper.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/other/good.png", icon_size = 64, scale = 0.4, shift = {4,-4} } },
+    subgroup = "aoc-magic-brewing",
+    order = "z3",
+    stack_size = 500
+}})
+
+data.raw['item']['ice'].subgroup = "aoc-thermal"
+data.raw['item']['ice'].order = "a"
+data.raw['item']['ice'].stack_size = 200
+
+data:extend({{
+    type = "item",
+    name = "aoc-obsidian",
+    icon = "__ageofcreation__/img/items/obsidian.png",
+    icon_size = 64,
+    subgroup = "aoc-thermal",
+    order = "b",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "armor",
+    name = "aoc-robe",
+    icon = "__ageofcreation__/img/items/robe.png",
+    icon_size = 64,
+    subgroup = "aoc-armor",
+    order = "b",
+    inventory_size_bonus = 10,
+    equipment_grid = "tiny-equipment-grid",
+    stack_size = 1,
+    resistances =
+    {
+      {
+        type = "physical",
+        decrease = 5,
+        percent = 5
+      },
+      {
+        type = "acid",
+        decrease = 5,
+        percent = 5
+      },
+      {
+        type = "explosion",
+        decrease = 5,
+        percent = 5
+      },
+      {
+        type = "fire",
+        decrease = 5,
+        percent = 0
+      }
+    },
+    infinite = true
+}})
+
+data:extend({{
+    type = "equipment-grid",
+    name = "tiny-equipment-grid",
+    width = 4,
+    height = 4,
+    equipment_categories = {'robe'}
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-ring-equipment",
+    icon = "__ageofcreation__/img/items/ring.png",
+    icon_size = 64,
+    subgroup = "aoc-equipment",
+    order = "g",
+    place_as_equipment_result = "aoc-ring-equipment",
+    stack_size = 20
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-necklace-equipment",
+    icon = "__ageofcreation__/img/items/necklace.png",
+    icon_size = 64,
+    subgroup = "aoc-equipment",
+    order = "h",
+    place_as_equipment_result = "aoc-necklace-equipment",
+    stack_size = 20
+}})

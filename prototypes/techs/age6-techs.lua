@@ -208,3 +208,49 @@ data:extend({{
   }
 }})
 
+data:extend({{
+  type = "technology",
+  name = "aoc-brewing-tech",
+  icon = "__ageofcreation__/img/entities/cauldron.png",
+  icon_size = 192,
+  prerequisites = {"aoc-magic-age-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-cauldron-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-robe-recipe"
+    }
+  },
+  unit = {
+      count = 20,
+      ingredients = AOC["age_tech_table"][6],
+      time = 50
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-jewelry-tech",
+  icon = "__ageofcreation__/img/items/ring.png",
+  icon_size = 64,
+  prerequisites = {"aoc-brewing-tech", "aoc-magic-research-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-ring-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-necklace-recipe"
+    }
+  },
+  unit = {
+      count = 20,
+      ingredients = AOC["age_tech_table"][6],
+      time = 50
+  }
+}})
+

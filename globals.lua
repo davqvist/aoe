@@ -13,6 +13,15 @@ local age_tech_cost = {
     {0,8,5,3,2,1}
 }
 
+function table.contains(table, element)
+    for _, value in pairs(table) do
+      if value == element then
+        return true
+      end
+    end
+    return false
+end
+
 local age_tech_table = {}
 for age, atc in pairs(age_tech_cost) do
     table.insert(age_tech_table, {})

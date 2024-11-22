@@ -1844,3 +1844,231 @@ data:extend({{
     },
 	energy_required = 4
 }})
+
+data:extend({{
+    name = 'aoc-farm-plot-spruce-tree-2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'tree-seed', amount = 1},
+        {type = 'item', name = 'aoc-loam', amount = 2},
+        {type = 'item', name = 'aoc-bone-meal', amount = 1},
+        {type = 'fluid', name = 'water', amount = 200}
+    },
+    results = {
+        {type = 'item', name = 'aoc-spruce-tree', amount = 1}
+    },
+    energy_required = 5,
+	category = 'aoc-category-farm-plot-spruce-tree'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-resin-2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-spruce-tree', amount = 1},
+        {type = 'item', name = 'aoc-steel-rod', amount = 1},
+        {type = 'fluid', name = 'water', amount = 100}
+    },
+    results = {
+        {type = 'item', name = 'aoc-resin', amount = 2},
+		{type = 'item', name = 'aoc-spruce-tree', amount = 1, probability = 0.9, ignored_by_stats = 1, ignored_by_productivity = 1 }
+    },
+	main_product = 'aoc-resin',
+    energy_required = 7,
+	category = 'aoc-category-farm-plot-spruce-tree'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-spruce-tree-module-2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'water', amount = 1500},
+        {type = 'item', name = 'aoc-spruce-tree-module-1', amount = 1},
+        {type = 'item', name = 'tree-seed', amount = 1},
+        {type = 'item', name = 'aoc-loam', amount = 4},
+        {type = 'item', name = 'aoc-bone-meal', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-spruce-tree-module-1', amount=1, probability = 0.06},
+        {type = 'item', name = 'aoc-spruce-tree-module-2', amount=1, probability = 0.66},
+        {type = 'item', name = 'aoc-spruce-tree-module-3', amount=1, probability = 0.06}
+    },
+	main_product = "aoc-spruce-tree-module-2",
+    energy_required = 55,
+	category = 'aoc-category-farm-plot-spruce-tree'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-rubber-tree-2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-rubber-tree-seedling', amount = 1},
+        {type = 'item', name = 'aoc-loam', amount = 2},
+        {type = 'item', name = 'aoc-bone-meal', amount = 1},
+        {type = 'item', name = 'aoc-slaked-lime', amount = 1},
+        {type = 'fluid', name = 'water', amount = 200}
+    },
+    results = {
+        {type = 'item', name = 'aoc-rubber-tree', amount = 1}
+    },
+    energy_required = 10,
+	category = 'aoc-category-farm-plot-rubber-tree'
+}})
+
+data:extend({{
+	name = 'aoc-forestry-rubber-tree-2-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-rubber-tree', amount = 1},
+		{type = 'item', name = 'aoc-steel-rod', amount = 1}
+    },
+	results = {
+        {type = 'item', name = 'aoc-log', amount = 1},
+		{type = 'item', name = 'aoc-rubber-tree-seedling', amount = 1},
+		{type = 'item', name = 'aoc-rubber-tree-seedling', amount = 1, probability = 0.15},
+        {type = 'fluid', name = 'aoc-latex', amount = 80}
+    },
+	energy_required = 5,
+	main_product = 'aoc-latex',
+	category = 'aoc-category-harvesting',
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-rubber-tree-module-2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'item', name = 'aoc-rubber-tree-module-1', amount = 1},
+        {type = 'item', name = 'aoc-rubber-tree-seedling', amount = 1},
+        {type = 'item', name = 'aoc-slaked-lime', amount = 2},
+        {type = 'item', name = 'aoc-loam', amount = 4},
+        {type = 'item', name = 'aoc-bone-meal', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-rubber-tree-module-1', amount=1, probability = 0.06},
+        {type = 'item', name = 'aoc-rubber-tree-module-2', amount=1, probability = 0.66},
+        {type = 'item', name = 'aoc-rubber-tree-module-3', amount=1, probability = 0.06}
+    },
+	main_product = "aoc-rubber-tree-module-2",
+    energy_required = 85,
+	category = 'aoc-category-farm-plot-rubber-tree'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-apple-tree-2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-apple-tree-seeds', amount = 1},
+        {type = 'item', name = 'aoc-loam', amount = 2},
+        {type = 'item', name = 'aoc-bone-meal', amount = 1},
+        {type = 'fluid', name = 'water', amount = 200}
+    },
+    results = {
+        {type = 'item', name = 'aoc-apple-tree', amount = 1}
+    },
+    energy_required = 12,
+	category = 'aoc-category-farm-plot-apple-tree'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-apple-2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-apple-tree-seeds', amount = 1},
+        {type = 'item', name = 'aoc-loam', amount = 2},
+        {type = 'item', name = 'aoc-bone-meal', amount = 1},
+        {type = 'fluid', name = 'water', amount = 200}
+    },
+    results = {
+        {type = 'item', name = 'aoc-apple', amount = 4}
+    },
+    energy_required = 12,
+	category = 'aoc-category-farm-plot-apple-tree'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-apple-tree-module-2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'water', amount = 1500},
+        {type = 'item', name = 'aoc-apple-tree-module-1', amount = 1},
+        {type = 'item', name = 'aoc-apple-tree-seeds', amount = 1},
+        {type = 'item', name = 'aoc-loam', amount = 4},
+        {type = 'item', name = 'aoc-bone-meal', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-apple-tree-module-1', amount=1, probability = 0.06},
+        {type = 'item', name = 'aoc-apple-tree-module-2', amount=1, probability = 0.66},
+        {type = 'item', name = 'aoc-apple-tree-module-3', amount=1, probability = 0.06}
+    },
+	main_product = "aoc-apple-tree-module-2",
+    energy_required = 110,
+	category = 'aoc-category-farm-plot-apple-tree'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-olive-tree-2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-olive-tree-seeds', amount = 1},
+        {type = 'item', name = 'aoc-loam', amount = 2},
+        {type = 'item', name = 'aoc-wood-pulp', amount = 2},
+        {type = 'item', name = 'aoc-bone-meal', amount = 1},
+        {type = 'fluid', name = 'water', amount = 200}
+    },
+    results = {
+        {type = 'item', name = 'aoc-olive-tree', amount = 1}
+    },
+    energy_required = 12,
+	category = 'aoc-category-farm-plot-olive-tree'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-olive-2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-olive-tree-seeds', amount = 1},
+        {type = 'item', name = 'aoc-loam', amount = 2},
+        {type = 'item', name = 'aoc-wood-pulp', amount = 2},
+        {type = 'item', name = 'aoc-bone-meal', amount = 1},
+        {type = 'fluid', name = 'water', amount = 200}
+    },
+    results = {
+        {type = 'item', name = 'aoc-olive', amount = 8}
+    },
+    energy_required = 12,
+	category = 'aoc-category-farm-plot-olive-tree'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-olive-tree-module-2-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'water', amount = 1500},
+        {type = 'item', name = 'aoc-olive-tree-module-1', amount = 1},
+        {type = 'item', name = 'aoc-olive-tree-seeds', amount = 1},
+        {type = 'item', name = 'aoc-loam', amount = 4},
+        {type = 'item', name = 'aoc-wood-pulp', amount = 4},
+        {type = 'item', name = 'aoc-bone-meal', amount = 4}
+    },
+    results = {
+        {type = 'item', name = 'aoc-olive-tree-module-1', amount=1, probability = 0.06},
+        {type = 'item', name = 'aoc-olive-tree-module-2', amount=1, probability = 0.66},
+        {type = 'item', name = 'aoc-olive-tree-module-3', amount=1, probability = 0.06}
+    },
+	main_product = "aoc-olive-tree-module-2",
+    energy_required = 140,
+	category = 'aoc-category-farm-plot-olive-tree'
+}})

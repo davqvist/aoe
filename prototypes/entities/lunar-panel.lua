@@ -4,7 +4,7 @@ data:extend({{
     icon = "__ageofcreation__/img/entities/lunar-panel.png",
     icon_size = 192,
     subgroup = "aoc-magic-buildings",
-    order = "d",
+    order = "e",
     place_result = "aoc-lunar-panel",
     stack_size = 25,
 }})

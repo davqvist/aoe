@@ -125,6 +125,7 @@ end
 -- AFH
 
 if mods["underground-pipe-pack"] then
+--[[
     data.raw['item']['check-valve'].subgroup = "aoc-fluid-logistics"
     data.raw['item']['check-valve'].order = "d1"
     data.raw['item']['80-overflow-valve'].subgroup = "aoc-fluid-logistics"
@@ -189,7 +190,7 @@ if mods["underground-pipe-pack"] then
         type = "unlock-recipe",
         recipe = "aoc-crafting-valve-underflow-afh-recipe"
     } )
-
+--]]
     data:extend({{
         name = 'aoc-crafting-swivel-joint-recipe',
         type = 'recipe',
@@ -647,11 +648,15 @@ if mods["underground-pipe-pack"] then
         end
     end
 else 
-    table.insert( data.raw["technology"]["aoc-fluid-handling-tech-2"].effects, {
-        type = "unlock-recipe",
-        recipe = "aoc-crafting-configurable-valve-recipe"
-    } )
+    --
 end
+
+-- Configurable Valves
+
+table.insert( data.raw["technology"]["aoc-fluid-handling-tech-2"].effects, {
+    type = "unlock-recipe",
+    recipe = "aoc-crafting-configurable-valve-recipe"
+} )
 
 -- Beekeeping 
 
