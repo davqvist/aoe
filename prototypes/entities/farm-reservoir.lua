@@ -12,7 +12,7 @@ data:extend({{
 data:extend({{
   type = "assembling-machine",
   name = "aoc-farm-reservoir",
-	crafting_categories = {"aoc-category-farm-reservoir-kelp", "aoc-category-farm-reservoir-fish"},
+	crafting_categories = {"aoc-category-farm-reservoir-kelp", "aoc-category-farm-reservoir-fish", "aoc-category-farm-reservoir-lotus"},
 	crafting_speed = 0.5,
 	energy_source = { type = "void" },
 	energy_usage = "1kW",

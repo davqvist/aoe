@@ -1148,6 +1148,19 @@ data:extend({{
 
 data:extend({{
     type = "fluid",
+    name = "aoc-mana",
+    icon = "__ageofcreation__/img/fluids/mana.png",
+    icon_size = 64,
+    subgroup = "aoc-fluids-magic-rest",
+    order = "c",
+	base_color = {r=0.28, g=0.5, b=0.5},
+	flow_color = {r=0.28, g=0.5, b=0.5},
+	default_temperature = 20,
+    fuel_value = "800kJ"
+}})
+
+data:extend({{
+    type = "fluid",
     name = "aoc-platinum-solution",
     icons = { { icon = "__angelssmelting_art__/graphics/icons/molten-platinum.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/pt.png", icon_size = 64 } },
     subgroup = "aoc-fluids-magic-metals",

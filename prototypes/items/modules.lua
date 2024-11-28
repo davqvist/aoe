@@ -25,8 +25,7 @@ local types = {
 for name, type in pairs( types ) do
     for t=1,#tiers do 
         local effect = {}
-        local realname = string.match(name, "(.*)%-.$")
-        local add = string.match(name, "%-(.)$")
+        local realname, add = string.match(name, "(.*)%-(.)$")
         if not realname then
             realname = name
             add = ""

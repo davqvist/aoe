@@ -227,3 +227,27 @@ data:extend({{
     place_as_equipment_result = "aoc-necklace-equipment",
     stack_size = 20
 }})
+
+data:extend({{
+    type = "item",
+    name = "aoc-mana-battery",
+    icon = "__ageofcreation__/img/items/mana-battery.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "aoc-magic-mana",
+    order = "a",
+    stack_size = 50,
+    fuel_value = "8MJ",
+    fuel_category = "aoc-mana",
+    burnt_result = "battery"
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-book",
+    icon = "__ageofcreation__/img/items/book.png",
+    icon_size = 64,
+    subgroup = "aoc-magic-mana",
+    order = "b",
+    stack_size = 200
+}})

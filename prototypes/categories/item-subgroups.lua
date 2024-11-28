@@ -526,19 +526,19 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-magic-alchemy",
+    name = "aoc-magic-research",
     group = "aoc-magic",
     order = "d"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-magic-research",
+    name = "aoc-magic-brewing",
     group = "aoc-magic",
     order = "e"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-magic-brewing",
+    name = "aoc-magic-mana",
     group = "aoc-magic",
     order = "f"
   },

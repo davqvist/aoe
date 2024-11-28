@@ -69,7 +69,6 @@ data:extend({{
     type = 'recipe',
     enabled = false,
 	ingredients = {
-        {type = 'fluid', name = 'water', amount = 200},
         {type = 'fluid', name = 'aoc-starlight', amount = 20},
         {type = 'item', name = 'aoc-lotus-flower-seeds', amount = 1}
     },
@@ -86,7 +85,6 @@ data:extend({{
     type = 'recipe',
     enabled = false,
 	ingredients = {
-        {type = 'fluid', name = 'water', amount = 500},
         {type = 'fluid', name = 'aoc-starlight', amount = 50},
         {type = 'item', name = 'aoc-ammonium-chloride', amount = 3},
         {type = 'item', name = 'aoc-lotus-flower-seeds', amount = 2}
@@ -538,7 +536,7 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoc-brewing-00-freezing-obsidian-recipe',
+	name = 'aoc-brewing-00-aoc-freezing-obsidian-recipe',
 	type = 'recipe',
 	enabled = true,
 	hidden = true,
@@ -625,4 +623,66 @@ data:extend({{
 		{type = 'item', name = 'aoc-cauldron', amount = 1}
     },
 	energy_required = 5
+}})
+
+data:extend({{
+	name = 'aoc-alchemy-mana-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-lotus-flower', amount = 1}
+	},
+	results = {
+		{type = 'fluid', name = 'aoc-mana', amount = 100}
+    },
+	category = 'aoc-category-alchemy',
+	energy_required = 20,
+	research = 'aoc-lotus-flower'
+}})
+
+data:extend({{
+	name = 'aoc-crafting-mana-battery-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'battery', amount = 1},
+		{type = 'fluid', name = 'aoc-mana', amount = 10}
+	},
+	results = {
+		{type = 'item', name = 'aoc-mana-battery', amount = 1}
+    },
+	category = 'crafting-with-fluid',
+	energy_required = 10,
+	research = 'battery'
+}})
+
+data:extend({{
+	name = 'aoc-crafting-book-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-leather', amount = 1},
+		{type = 'item', name = 'aoc-paper', amount = 10}
+	},
+	results = {
+		{type = 'item', name = 'aoc-book', amount = 1}
+    },
+	energy_required = 5,
+	research = 'aoc-leather'
+}})
+
+data:extend({{
+	name = 'aoc-crafting-enchanting-table-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-obsidian', amount = 50},
+		{type = 'item', name = 'aoc-nauvium-catalyst', amount = 10},
+		{type = 'item', name = 'aoc-book', amount = 10}
+	},
+	results = {
+		{type = 'item', name = 'aoc-enchanting-table', amount = 1}
+    },
+	energy_required = 5,
+	research = 'aoc-obsidian'
 }})

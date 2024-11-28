@@ -254,3 +254,72 @@ data:extend({{
   }
 }})
 
+data:extend({{
+  type = "technology",
+  name = "aoc-mana-tech",
+  icon = "__ageofcreation__/img/fluids/mana.png",
+  icon_size = 64,
+  prerequisites = {"aoc-lotus-flower-tech-1"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-alchemy-mana-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-mana-battery-recipe"
+    }
+  },
+  unit = {
+      count = 50,
+      ingredients = AOC["age_tech_table"][6],
+      time = 50
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-enchanting-tech",
+  icon = "__ageofcreation__/img/entities/enchanting-table.png",
+  icon_size = 192,
+  prerequisites = {"aoc-mana-tech", "aoc-jewelry-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-aoc-ring-equipment-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-aoc-necklace-equipment-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-aoc-pocket-hive-equipment-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-aoc-portable-boiler-equipment-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-solar-panel-equipment-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-battery-equipment-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-book-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-enchanting-table-recipe"
+    }
+  },
+  unit = {
+      count = 60,
+      ingredients = AOC["age_tech_table"][6],
+      time = 50
+  }
+}})

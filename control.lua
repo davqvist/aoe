@@ -544,11 +544,22 @@ function check_research( escritoire )
 end
 
 function check_players( cauldron )
+	local equipment = {
+		['aoc-ring-equipment'] = 0.01,
+		['aoc-ring-equipment-2'] = 0.015,
+		['aoc-ring-equipment-3'] = 0.02,
+		['aoc-ring-equipment-4'] = 0.025,
+		['aoc-ring-equipment-5'] = 0.03,
+		['aoc-necklace-equipment'] = 0.05,
+		['aoc-necklace-equipment-2'] = 0.075,
+		['aoc-necklace-equipment-3'] = 0.1,
+		['aoc-necklace-equipment-4'] = 0.125,
+		['aoc-necklace-equipment-5'] = 0.15,
+	}
 	if cauldron.get_recipe() and cauldron.get_recipe().category == "aoc-category-brewing" and cauldron.crafting_progress >= 1-cauldron.crafting_speed/(60*cauldron.get_recipe().energy) then
 		local flag = false
-		local recipe = string.match(cauldron.get_recipe().name, "^aoc%-brewing%-%d%d%-(.*)$")
+		local chance, recipe = string.match(cauldron.get_recipe().name, "^aoc%-brewing%-(%d%d)%-(.*)$")
 		if cauldron.force.recipes[recipe] then 
-			local chance = string.match(cauldron.get_recipe().name, "^aoc%-brewing%-(%d%d)%-.*$")
 			chance = chance/100
 			local surface = cauldron.surface
 			local temp = surface.find_entities_filtered({type="character", area={{cauldron.position.x-8, cauldron.position.y-8}, {cauldron.position.x+8, cauldron.position.y+8}}})
@@ -556,9 +567,9 @@ function check_players( cauldron )
 				local armor = temp[1].get_inventory(defines.inventory.character_armor)
 				if armor and #armor > 0 and armor[1].valid_for_read and armor[1].grid then
 					if armor[1].name == 'aoc-robe' then chance = chance+0.05 end
-					local grid = armor[1].grid.get_contents()
-					if grid['aoc-ring-equipment'] then chance = chance+grid['aoc-ring-equipment']*0.01 end
-					if grid['aoc-necklace-equipment'] then chance = chance+grid['aoc-necklace-equipment']*0.05 end
+					for k, v in pairs( armor[1].grid.get_contents() ) do
+						if equipment[v.name] then chance = chance+v.count*equipment[v.name] end
+					end
 					if math.random() < chance then 
 						flag = true
 						cauldron.force.recipes[recipe].enabled = true
@@ -610,8 +621,7 @@ script.on_event(defines.events.on_script_trigger_effect,
 			storage.scrolltick[game.tick+3600] = p.index
 			local flag = false
 			for name, status in pairs( storage.unlocking ) do
-				local tech = string.match(name, "^aoc%-unlocking%-(.*%-tech%-?%d?)%-")
-				local recipe = string.match(name, "^aoc%-unlocking%-.*%-tech%-?%d?%-(.*)$")
+				local tech, recipe = string.match(name, "^aoc%-unlocking%-(.*%-tech%-?%d?)%-(.*)$")
 				if not p.force.recipes[recipe].enabled and p.force.technologies[tech].researched then
 					flag = true
 					p.force.recipes[name].enabled = true

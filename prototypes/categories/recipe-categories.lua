@@ -208,6 +208,10 @@ data:extend({
   },
   {
     type = "recipe-category",
+    name = "aoc-category-enchanting"
+  },
+  {
+    type = "recipe-category",
     name = "aoc-category-farm-plot-flax",
 	  modules = { "aoc-module-flax" }
   },

@@ -1,11 +1,11 @@
 require("__ageofcreation__/globals")
 
-local research_techs = { 'aoc-starlight-tech', 'aoc-lotus-flower-tech-1', 'aoc-lotus-flower-tech-2', 'aoc-mercury-tech', 'aoc-alchemy-tech', 'aoc-platinum-tech', 'aoc-jewelry-tech' }
+local research_techs = { 'aoc-starlight-tech', 'aoc-lotus-flower-tech-1', 'aoc-lotus-flower-tech-2', 'aoc-mercury-tech', 'aoc-alchemy-tech', 'aoc-platinum-tech', 'aoc-jewelry-tech', 'aoc-mana-tech', 'aoc-enchanting-tech' }
 
 for t, technology in pairs(research_techs) do
     if data.raw.technology[technology] and data.raw.technology[technology].effects then
         for r, recipes in pairs(data.raw.technology[technology].effects) do
-            if recipes.recipe and data.raw.recipe[recipes.recipe] then
+            if recipes.recipe and data.raw.recipe[recipes.recipe] and data.raw.recipe[recipes.recipe].research then
                 data:extend({{
                     name = 'aoc-unlocking-' .. technology .. '-' .. recipes.recipe,
                     type = 'recipe',
