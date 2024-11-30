@@ -68,5 +68,6 @@ for _, recipe in pairs(data.raw.recipe) do
       end
 	else recipe.allowed_module_categories = {'speed','efficiency','productivity'}
 	end
+  else recipe.allowed_module_categories = {'speed','efficiency','productivity'}
   end
 end

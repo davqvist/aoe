@@ -969,7 +969,7 @@ data:extend({{
         {type = 'fluid', name = 'water', amount = 1000},
         {type = 'item', name = 'aoc-iron-dust', amount = 2},
         {type = 'item', name = 'aoc-clay', amount = 4},
-        {type = 'item', name = 'aoc-puree', amount = 4},
+        {type = 'item', name = 'aoc-puree', amount = 2},
         {type = 'item', name = 'aoc-caustic-soda', amount = 3},
         {type = 'item', name = 'aoc-mica', amount = 1}
     },

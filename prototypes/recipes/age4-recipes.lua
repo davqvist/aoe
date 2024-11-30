@@ -2914,8 +2914,7 @@ data:extend({{
 	enabled = false,
 	ingredients = {
 		{type = 'item', name = 'electronic-circuit', amount = 5},
-		{type = 'item', name = 'aoc-bronze-rod', amount = 10},
-		{type = 'item', name = 'aoc-solder', amount = 2}
+		{type = 'item', name = 'aoc-bronze-rod', amount = 10}
 	},
 	results = {
 		{type = 'item', name = 'train-stop', amount = 1}
@@ -3055,7 +3054,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoc-resistor', amount = 8}
     },
-	energy_required = 2,
+	energy_required = 8,
 	category = 'aoc-category-intricate-crafting'
 }})
 
@@ -3071,7 +3070,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoc-diode', amount = 10}
     },
-	energy_required = 2.5,
+	energy_required = 10,
 	category = 'aoc-category-intricate-crafting'
 }})
 
@@ -3087,7 +3086,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoc-capacitor', amount = 10}
     },
-	energy_required = 2.5,
+	energy_required = 10,
 	category = 'aoc-category-intricate-crafting'
 }})
 
@@ -3102,7 +3101,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoc-transistor', amount = 8}
     },
-	energy_required = 2,
+	energy_required = 8,
 	category = 'aoc-category-intricate-crafting'
 }})
 
@@ -3119,7 +3118,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoc-inductor', amount = 8}
     },
-	energy_required = 2,
+	energy_required = 8,
 	category = 'aoc-category-intricate-crafting'
 }})
 

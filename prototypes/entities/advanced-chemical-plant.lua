@@ -85,12 +85,12 @@ data:extend({{
       production_type = "output",
       volume = 1000,
       pipe_covers = pipecoverspictures(),
-      pipe_connections = {{ flow_direction="output", direction = defines.direction.south, position = {0, -2} }}
+      pipe_connections = {{ flow_direction="output", direction = defines.direction.north, position = {0, -2} }}
     },{
       production_type = "output",
       volume = 1000,
       pipe_covers = pipecoverspictures(),
-      pipe_connections = {{ flow_direction="output", direction = defines.direction.south, position = {-2, -2} }}
+      pipe_connections = {{ flow_direction="output", direction = defines.direction.north, position = {-2, -2} }}
     }
   }
 }})
