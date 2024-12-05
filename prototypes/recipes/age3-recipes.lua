@@ -1206,7 +1206,7 @@ data:extend({{
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoc-quicklime', amount = 2},
+		{type = 'item', name = 'aoc-quicklime', amount = 1},
 		{type = 'fluid', name = 'aoc-brine', amount = 100}
 	},
 	results = {

@@ -113,7 +113,8 @@ data:extend({{
   ingredients = {
     {type = 'item', name = 'aoc-syringe', amount = 1},
     {type = 'fluid', name = 'aoc-bacteria', amount = 100},
-    {type = 'item', name = 'repair-pack', amount = 10}
+    {type = 'item', name = 'repair-pack', amount = 1},
+    {type = 'item', name = 'electronic-circuit', amount = 4}
   },
   results = {
     {type = 'item', name = 'aoc-dna-construction', amount = 1}
@@ -128,7 +129,8 @@ data:extend({{
   ingredients = {
     {type = 'item', name = 'aoc-syringe', amount = 1},
     {type = 'fluid', name = 'aoc-bacteria', amount = 100},
-    {type = 'item', name = 'iron-chest', amount = 10}
+    {type = 'item', name = 'iron-chest', amount = 1},
+    {type = 'item', name = 'advanced-circuit', amount = 2}
   },
   results = {
     {type = 'item', name = 'aoc-dna-logistic', amount = 1}

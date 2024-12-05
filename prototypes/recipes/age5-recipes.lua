@@ -1819,7 +1819,7 @@ data:extend({{
 		{type = 'item', name = 'advanced-circuit', amount = 8},
 		{type = 'item', name = 'aoc-epoxy-resin-solid', amount = 2},
 		{type = 'item', name = 'aoc-integrated-circuit', amount = 2},
-		{type = 'item', name = 'copper-wire', amount = 8},
+		{type = 'item', name = 'copper-cable', amount = 8},
 		{type = 'item', name = 'aoc-rubber', amount = 1}
 	},
 	results = {

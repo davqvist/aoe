@@ -319,13 +319,13 @@ script.on_nth_tick(151,
 						for i, p in pairs( pedestals ) do
 							inv[i] = p.get_inventory(defines.inventory.chest)
 							k[i], v[i] = next( inv[i].get_contents() )
-							if k[i] == nil or storage.infusing[k[i]] == nil then flag = false break end
+							if v[i] == nil or storage.infusing[v[i].name] == nil then flag = false break end
 						end
-						if flag and storage.infusing[k[1]] == storage.infusing[k[2]] and storage.infusing[k[1]] == storage.infusing[k[3]] and storage.infusing[k[1]] == storage.infusing[k[4]] and itm.force.recipes[storage.infusing[k[1]]].enabled then
-							itm.set_recipe( storage.infusing[k[1]] )
+						if flag and storage.infusing[v[1].name] == storage.infusing[v[2].name] and storage.infusing[v[1].name] == storage.infusing[v[3].name] and storage.infusing[v[1].name] == storage.infusing[v[4].name] and itm.force.recipes[storage.infusing[v[1].name]].enabled then
+							itm.set_recipe( storage.infusing[v[1].name] )
 							for i, p in pairs( pedestals ) do
-								inv[i].remove( {name=k[i], count=1} )
-								itm.get_inventory(defines.inventory.assembling_machine_input).insert( {name=k[i], count=1} )
+								inv[i].remove( {name=v[i].name, count=1} )
+								itm.get_inventory(defines.inventory.assembling_machine_input).insert( {name=v[i].name, count=1} )
 							end
 						end
 					else
@@ -334,11 +334,11 @@ script.on_nth_tick(151,
 				end
 				local out = itm.get_inventory(defines.inventory.assembling_machine_output)
 				local k, v = next( out.get_contents() )
-				if k ~= nil then
+				if v ~= nil then
 					local to = infusiontable.get_inventory(defines.inventory.chest)
-					if to.can_insert({name=k, count=v} ) then
-						local amt = to.insert({name=k, count=v} ) 
-						out.remove( {name=k, count=amt} )
+					if to.can_insert({name=v.name, count=v.count} ) then
+						local amt = to.insert({name=v.name, count=v.count} ) 
+						out.remove( {name=v.name, count=amt} )
 					end
 				end
 			else

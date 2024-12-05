@@ -71,6 +71,13 @@ data:extend({{
         }
       }
     },
+    radius_visualisation_specification = {
+        sprite = {
+              filename = "__base__/graphics/entity/pumpjack/pumpjack-radius-visualization.png", 
+              size = 12
+          },
+        distance = 5.5
+    },
     circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
     circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance
@@ -108,9 +115,9 @@ data:extend({{
                 }
             }
         },
-        animation = {
-            layers = {
-                {
+        working_visualisations = {
+            {
+                animation = {
                     filename = "__ageofcreation__/img/entities/infusion-table-laser-vertical.png",
                     width = 12,
                     height = 33,
@@ -118,8 +125,9 @@ data:extend({{
                     scale = 6,
                     draw_as_glow = true,
                     tint = {255, 0, 0}
-                },
-                {
+                }
+            }, {
+                animation = {
                     filename = "__ageofcreation__/img/entities/infusion-table-laser-vertical.png",
                     width = 12,
                     height = 33,
@@ -127,8 +135,9 @@ data:extend({{
                     scale = 6,
                     draw_as_glow = true,
                     tint = {255, 0, 0}
-                },
-                {
+                }
+            }, {
+                animation = {
                     filename = "__ageofcreation__/img/entities/infusion-table-laser-horizontal.png",
                     width = 33,
                     height = 12,
@@ -136,8 +145,9 @@ data:extend({{
                     scale = 6,
                     draw_as_glow = true,
                     tint = {255, 0, 0}
-                },
-                {
+                }
+            }, {
+                animation = {
                     filename = "__ageofcreation__/img/entities/infusion-table-laser-horizontal.png",
                     width = 33,
                     height = 12,

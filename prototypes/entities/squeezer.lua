@@ -111,7 +111,7 @@ data:extend({{
       production_type = "input",
       pipe_covers = pipecoverspictures(),
       volume = 1000,
-      pipe_connections = {{ flow_direction="output", direction = defines.direction.west, position = {-2, 0} }}
+      pipe_connections = {{ flow_direction="input", direction = defines.direction.west, position = {-2, 0} }}
     },{
       production_type = "output",
       pipe_covers = pipecoverspictures(),
@@ -211,7 +211,7 @@ data:extend({{
       production_type = "input",
       pipe_covers = pipecoverspictures(),
       volume = 1000,
-      pipe_connections = {{ flow_direction="output", direction = defines.direction.west, position = {-2, 0} }}
+      pipe_connections = {{ flow_direction="input", direction = defines.direction.west, position = {-2, 0} }}
     },{
       production_type = "output",
       pipe_covers = pipecoverspictures(),
