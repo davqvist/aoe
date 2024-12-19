@@ -104,6 +104,11 @@ data:extend({{
       volume = 1000,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {{ flow_direction="input", direction = defines.direction.west, position = {-2, 1} }}
+    },{
+      production_type = "output",
+      volume = 1000,
+      pipe_covers = pipecoverspictures(),
+      pipe_connections = {{ flow_direction="output", direction = defines.direction.east, position = {2, 0} }}
     }
   }
 }})

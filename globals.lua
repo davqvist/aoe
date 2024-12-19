@@ -1,6 +1,6 @@
 
 data.raw.lab["lab"].inputs = {}
-for age=1,6 do
+for age=1,7 do
     table.insert(data.raw.lab["lab"].inputs, "aoc-science-" .. string.format("%02d", age) )
 end
 

@@ -4,7 +4,7 @@ require("__ageofcreation__/prototypes/recipes/research")
 
 local disabled_resources = {
 	"coal","crude-oil","iron-ore","copper-ore","uranium-ore",
-	"vulcanus_coal","sulfuric_acid_geyser","tungsten_ore","calcite",
+    "vulcanus_coal","sulfuric_acid_geyser","tungsten_ore","calcite",
 	"scrap",
 	"gleba_stone",
 	"lithium_brine","fluorine_vent","aquilo_crude_oil"
@@ -17,6 +17,23 @@ local disabled_resources = {
 	--"angels-fissure",
 	--"angels-natural-gas"
 }
+
+local noise_exp_to_remove = { 
+	"vulcanus_tungsten_ore_probability",
+	"vulcanus_tungsten_ore_richness",
+	"vulcanus_tungsten_ore_size",
+	"vulcanus_sulfuric_acid_geyser_size",
+	"vulcanus_sulfuric_acid_region",
+	"aquilo_flourine_vent_spots",
+	"aquilo_flourine_vent_probability",
+	"aquilo_flourine_vent_richness",
+	"aquilo_lithium_brine_spots",
+	"aquilo_lithium_brine_probability",
+	"aquilo_lithium_brine_richness"
+}
+for _, ne in pairs( noise_exp_to_remove ) do
+	data.raw["noise-expression"][ne].expression = "1"
+end
 
 local planets = {
 	"nauvis", "vulcanus", "fulgora", "gleba", "aquilo"

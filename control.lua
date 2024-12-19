@@ -618,7 +618,6 @@ script.on_event(defines.events.on_script_trigger_effect,
 		end
 		if p and event.effect_id == "aoc-trigger-scroll" then
 			if storage.scrolltick == nil then storage.scrolltick = {} end
-			storage.scrolltick[game.tick+3600] = p.index
 			local flag = false
 			for name, status in pairs( storage.unlocking ) do
 				local tech, recipe = string.match(name, "^aoc%-unlocking%-(.*%-tech%-?%d?)%-(.*)$")
@@ -627,7 +626,10 @@ script.on_event(defines.events.on_script_trigger_effect,
 					p.force.recipes[name].enabled = true
 				end
 			end
-			if flag then p.remove_item{name="aoc-scroll", count=1} end
+			if flag then 
+				storage.scrolltick[game.tick+3600] = p.index
+				p.remove_item{name="aoc-scroll", count=1}
+			end
 		end
 	end
 )

@@ -96,7 +96,8 @@ data:extend({{
       height = 1,
       type = "full"
     },
-    inventory_size_bonus = 1
+    inventory_size_bonus = 1,
+    localised_description = {"", "+1% ", {"age-of-creation.brewing-chance"} }
 }})
 
 data:extend({{
@@ -116,5 +117,6 @@ data:extend({{
       height = 2,
       type = "full"
     },
-    inventory_size_bonus = 3
+    inventory_size_bonus = 3,
+    localised_description = {"", "+5% ", {"age-of-creation.brewing-chance"} }
 }})

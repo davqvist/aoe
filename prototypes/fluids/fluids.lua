@@ -1102,6 +1102,17 @@ data:extend({{
 
 data:extend({{
     type = "fluid",
+    name = "aoc-vitriol-oil",
+    icons = angelsmods.functions.create_liquid_fluid_icon( nil, "SOH" ),
+    subgroup = "aoc-fluids-magic-chemicals",
+    order = "b",
+	base_color = {r=0.9, g=0.65, b=0},
+	flow_color = {r=0.9, g=0.65, b=0},
+	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
     name = "aoc-nauvium-solution",
     icons = { { icon = "__ageofcreation__/img/fluids/molten-nauvium.png", icon_size = 64 }, { icon = "__ageofcreation__/img/items/atoms/nv.png", icon_size = 64 } },
     subgroup = "aoc-fluids-magic-metals",
@@ -1157,6 +1168,17 @@ data:extend({{
 	flow_color = {r=0.28, g=0.5, b=0.5},
 	default_temperature = 20,
     fuel_value = "800kJ"
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoc-drilling-fluid-magical",
+    icons = angelsmods.functions.create_liquid_fluid_icon( nil, { { 225, 110, 195 }, { 225, 110, 195 }, { 225, 110, 195 } } ),
+    subgroup = "aoc-fluids-magic-rest",
+    order = "d",
+	base_color = {r=0.88, g=0.43, b=0.76},
+	flow_color = {r=0.88, g=0.43, b=0.76},
+	default_temperature = 20
 }})
 
 data:extend({{

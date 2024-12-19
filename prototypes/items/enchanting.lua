@@ -14,7 +14,9 @@ for name, type in pairs( to_enchant ) do
         local item = table.deepcopy( data.raw.item[name] )
         item.icons = get_icons( data.raw.item[name], { icon = "__quality__/graphics/icons/quality-" .. tiers[t] .. ".png", scale = 0.2, shift = {-8,8} } )
         item.localised_name = {"", {"equipment-name." .. item.name}, " (", {"quality-name." .. tiers[t]}, ")" }
-        if brewing_chance[name] then item.localised_description = {"+", tostring(brewing_chance[name]+brewing_chance[name]*(t-1)/2), "% ", {"age-of-creation.brewing-chance"} } end
+        if brewing_chance[name] then 
+            item.localised_description = {"", "+", tostring(brewing_chance[name]+brewing_chance[name]*(t-1)/2), "% ", {"age-of-creation.brewing-chance"} }
+        end
         item.name = item.name .. "-" .. t
         item.place_as_equipment_result = item.name
         data.raw.item[item.name] = item
@@ -52,6 +54,7 @@ for name, type in pairs( to_enchant ) do
         },
         main_product = name .. "-2",
         category = "aoc-category-enchanting",
-        energy_required = 60
+        energy_required = 60,
+	    research = name
     }})
 end

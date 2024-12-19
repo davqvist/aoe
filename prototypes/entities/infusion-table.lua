@@ -92,9 +92,9 @@ data:extend({{
     type = "electric",
     emissions_per_minute = {pollution = 10},
     usage_priority = "secondary-input",
-	    drain = "1MW"
+	    drain = "500kW"
     },
-	energy_usage = "20MW",
+	energy_usage = "10MW",
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
 	module_slots = 3,
     icon = "__ageofcreation__/img/entities/infusion-table.png",

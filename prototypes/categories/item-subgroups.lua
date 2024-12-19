@@ -544,6 +544,24 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
+    name = "aoc-space-buildings",
+    group = "space",
+    order = "a"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-planets",
+    group = "space",
+    order = "b"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-space-stuff",
+    group = "space",
+    order = "c"
+  },
+  {
+	  type = "item-subgroup",
     name = "aoc-other",
     group = "other",
     order = "a"

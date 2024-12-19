@@ -34,3 +34,11 @@ for _, recipe in pairs(data.raw.recipe) do
         end
     end
 end
+
+for p, prot in pairs(defines.prototypes.item) do
+	if data.raw[p] then
+		for i, item in pairs( data.raw[p] ) do
+			if data.raw[p][i].default_import_location then data.raw[p][i].default_import_location = nil end
+		end
+	end
+end

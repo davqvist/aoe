@@ -195,7 +195,8 @@ data:extend({{
         percent = 0
       }
     },
-    infinite = true
+    infinite = true,
+    localised_description = {"", "+5% ", {"age-of-creation.brewing-chance"} }
 }})
 
 data:extend({{
@@ -251,3 +252,99 @@ data:extend({{
     order = "b",
     stack_size = 200
 }})
+
+data:extend({{
+    type = "item",
+    name = "aoc-planet-sun",
+    icon = "__ageofcreation__/img/items/planet-sun.png",
+    icon_size = 64,
+    subgroup = "aoc-planets",
+    order = "a",
+    stack_size = 10
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-planet-mercury",
+    icon = "__ageofcreation__/img/items/planet-mercury.png",
+    icon_size = 64,
+    subgroup = "aoc-planets",
+    order = "b",
+    stack_size = 10
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-planet-venus",
+    icon = "__ageofcreation__/img/items/planet-venus.png",
+    icon_size = 64,
+    subgroup = "aoc-planets",
+    order = "c",
+    stack_size = 10
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-planet-earth",
+    icon = "__ageofcreation__/img/items/planet-earth.png",
+    icon_size = 64,
+    subgroup = "aoc-planets",
+    order = "d",
+    stack_size = 10
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-planet-luna",
+    icon = "__ageofcreation__/img/items/planet-moon.png",
+    icon_size = 64,
+    subgroup = "aoc-planets",
+    order = "e",
+    stack_size = 10
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-planet-mars",
+    icon = "__ageofcreation__/img/items/planet-mars.png",
+    icon_size = 64,
+    subgroup = "aoc-planets",
+    order = "f",
+    stack_size = 10
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-planet-jupiter",
+    icon = "__ageofcreation__/img/items/planet-jupiter.png",
+    icon_size = 64,
+    subgroup = "aoc-planets",
+    order = "g",
+    stack_size = 10
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-planet-saturn",
+    icon = "__ageofcreation__/img/items/planet-saturn.png",
+    icon_size = 64,
+    subgroup = "aoc-planets",
+    order = "h",
+    stack_size = 10
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-planet-space",
+    icon = "__ageofcreation__/img/items/planet-space.png",
+    icon_size = 64,
+    subgroup = "aoc-planets",
+    order = "i",
+    stack_size = 10,
+    rocket_launch_products = {{type = "item", name = "aoc-science-07", amount = 500}},
+    send_to_orbit_mode = "automated"
+}})
+
+data.raw['item']['low-density-structure'].subgroup = "aoc-space-stuff"
+data.raw['item']['low-density-structure'].order = "b"
+data.raw['item']['low-density-structure'].stack_size = 50

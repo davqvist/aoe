@@ -17,6 +17,10 @@ data:extend({{
     },
     {
       type = "unlock-recipe",
+      recipe = "aoc-sawmill-lens-recipe"
+    },
+    {
+      type = "unlock-recipe",
       recipe = "aoc-crafting-night-vision-recipe"
     }
   },
@@ -431,6 +435,219 @@ data:extend({{
 
 data:extend({{
     type = "technology",
+    name = "aoc-kelp-tech-3",
+    icon_size = 64,
+    icon = "__ageofcreation__/img/items/kelp.png",
+    prerequisites = {"aoc-fertilizer-tech-2", "aoc-kelp-tech-2"},
+	  effects = {
+	    {
+        type = "unlock-recipe",
+        recipe = "aoc-farm-reservoir-kelp-3-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-farm-reservoir-kelp-module-3-recipe"
+      }
+    },
+    unit = {
+        count = 50,
+        ingredients = AOC["age_tech_table"][5],
+        time = 40
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoc-flax-tech-3",
+    icon_size = 64,
+    icon = "__ageofcreation__/img/items/flax.png",
+    prerequisites = {"aoc-fertilizer-tech-2", "aoc-flax-tech-2"},
+	  effects = {
+	    {
+        type = "unlock-recipe",
+        recipe = "aoc-farm-plot-flax-3-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-farm-plot-flax-module-3a-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-farm-plot-flax-module-3b-recipe"
+      }
+    },
+    unit = {
+        count = 50,
+        ingredients = AOC["age_tech_table"][5],
+        time = 40
+    }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-drinks-tech-3",
+  icon_size = 64,
+  icon = "__ageofcreation__/img/items/tea.png",
+  prerequisites = {"aoc-fertilizer-tech-2", "aoc-drinks-tech-2"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-plot-tea-leaves-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-plot-tea-leaves-module-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-plot-coffee-plant-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-plot-coffee-plant-module-3-recipe"
+    }
+  },
+  unit = {
+      count = 50,
+      ingredients = AOC["age_tech_table"][5],
+      time = 40
+  }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoc-maize-tech-3",
+    icon_size = 64,
+    icon = "__ageofcreation__/img/items/maize.png",
+    prerequisites = {"aoc-fertilizer-tech-2", "aoc-maize-tech-2"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-farm-plot-maize-3-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoc-farm-plot-maize-magnesium-3-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoc-farm-plot-maize-module-3a-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoc-farm-plot-maize-module-3b-recipe"
+      }
+    },
+    unit = {
+        count = 50,
+        ingredients = AOC["age_tech_table"][5],
+        time = 40
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoc-soybeans-tech-3",
+    icon_size = 64,
+    icon = "__ageofcreation__/img/items/soybeans.png",
+    prerequisites = {"aoc-fertilizer-tech-2", "aoc-soybeans-tech-2"},
+	  effects = {
+	    {
+        type = "unlock-recipe",
+        recipe = "aoc-farm-plot-soybeans-3-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoc-farm-plot-soybeans-module-3-recipe"
+      }
+    },
+    unit = {
+        count = 50,
+        ingredients = AOC["age_tech_table"][5],
+        time = 40
+    }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-tree-cultivation-tech-3",
+  icon = data.raw.tree["tree-01"].icon,
+  icon_size = data.raw.tree["tree-01"].icon_size,
+  prerequisites = {"aoc-tree-cultivation-tech-2", "aoc-digging-tech-2"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-plot-spruce-tree-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-plot-resin-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-plot-spruce-tree-module-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-plot-rubber-tree-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-plot-rubber-tree-module-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-forestry-rubber-tree-3-recipe"
+    }
+  },
+  unit = {
+      count = 50,
+      ingredients = AOC["age_tech_table"][5],
+      time = 40
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-fruit-tree-cultivation-tech-3",
+  icon = data.raw.tree["tree-05"].icon,
+  icon_size = data.raw.tree["tree-05"].icon_size,
+  prerequisites = {"aoc-fruit-tree-cultivation-tech-2", "aoc-digging-tech-2"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-plot-apple-tree-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-plot-apple-tree-module-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-plot-apple-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-plot-olive-tree-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-plot-olive-tree-module-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-plot-olive-3-recipe"
+    }
+  },
+  unit = {
+      count = 50,
+      ingredients = AOC["age_tech_table"][5],
+      time = 40
+  }
+}})
+
+data:extend({{
+    type = "technology",
     name = "aoc-phenol-tech",
     icons = get_icons( data.raw["fluid"]["aoc-phenol"] ),
     prerequisites = {"aoc-phosphate-tech", "aoc-acetone-tech", "aoc-oil-cracking-tech-1"},
@@ -532,7 +749,7 @@ data:extend({{
     name = "aoc-laser-tech",
     icon = "__base__/graphics/technology/laser.png",
     icon_size = 256, icon_mipmaps = 4,
-    prerequisites = {"aoc-electric-engines-tech", "aoc-noble-gasses-tech"},
+    prerequisites = {"aoc-electric-engines-tech", "aoc-noble-gasses-tech", "aoc-equipment-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -583,7 +800,8 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "aoc-petrochem-fuels-tech",
-    icons = get_icons( data.raw["fluid"]["aoc-gasoline-high-octane"] ),
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/rocket-fuel.png",
     prerequisites = {"aoc-oil-cracking-tech-1"},
 	  effects = {
       {
@@ -601,10 +819,14 @@ data:extend({{
       {
         type = "unlock-recipe",
         recipe = "aoc-chemistry-ethyl-tert-butyl-ether-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-chemistry-rocket-fuel-recipe"
       }
     },
     unit = {
-        count = 40,
+        count = 50,
         ingredients = AOC["age_tech_table"][5],
         time = 40
     }
@@ -1055,14 +1277,14 @@ data:extend({{
         type = "unlock-recipe",
         recipe = "aoc-crafting-transmitting-station-recipe"
       },
-      --{
-      --  type = "unlock-recipe",
-      --  recipe = "aoc-crafting-huge-electric-pole-recipe"
-      --},
-      --{
-      --  type = "unlock-recipe",
-      --  recipe = "aoc-crafting-huge-electric-fuse-recipe"
-      --}
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-huge-electric-pole-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-huge-electric-fuse-recipe"
+      }
     },
     unit = {
         count = 80,

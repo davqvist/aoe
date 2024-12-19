@@ -254,23 +254,23 @@ data.raw['item']['big-electric-pole'].subgroup = "aoc-poles"
 data.raw['item']['big-electric-pole'].order = "c"
 data.raw['electric-pole']['big-electric-pole'].maximum_wire_distance = 32
 data.raw['electric-pole']['big-electric-pole'].supply_area_distance = 3
---data.raw['item']['po-huge-electric-pole'].subgroup = "aoc-poles"
---data.raw['item']['po-huge-electric-pole'].order = "d"
+data.raw['item']['po-huge-electric-pole'].subgroup = "aoc-poles"
+data.raw['item']['po-huge-electric-pole'].order = "d"
 data.raw['item']['substation'].subgroup = "aoc-poles"
 data.raw['item']['substation'].order = "e"
---data.raw['item']['po-interface'].subgroup = "aoc-poles"
---data.raw['item']['po-interface'].order = "f"
+data.raw['item']['po-interface'].subgroup = "aoc-poles"
+data.raw['item']['po-interface'].order = "f"
 
---data.raw['item']['po-small-electric-fuse'].subgroup = "aoc-poles"
---data.raw['item']['po-small-electric-fuse'].order = "g"
---data.raw['item']['po-medium-electric-fuse'].subgroup = "aoc-poles"
---data.raw['item']['po-medium-electric-fuse'].order = "h"
---data.raw['item']['po-big-electric-fuse'].subgroup = "aoc-poles"
---data.raw['item']['po-big-electric-fuse'].order = "i"
---data.raw['item']['po-huge-electric-fuse'].subgroup = "aoc-poles"
---data.raw['item']['po-huge-electric-fuse'].order = "j"
---data.raw['item']['po-transformer'].subgroup = "aoc-poles"
---data.raw['item']['po-transformer'].order = "k"
+data.raw['item']['po-small-electric-fuse'].subgroup = "aoc-poles"
+data.raw['item']['po-small-electric-fuse'].order = "g"
+data.raw['item']['po-medium-electric-fuse'].subgroup = "aoc-poles"
+data.raw['item']['po-medium-electric-fuse'].order = "h"
+data.raw['item']['po-big-electric-fuse'].subgroup = "aoc-poles"
+data.raw['item']['po-big-electric-fuse'].order = "i"
+data.raw['item']['po-huge-electric-fuse'].subgroup = "aoc-poles"
+data.raw['item']['po-huge-electric-fuse'].order = "j"
+data.raw['item']['po-transformer'].subgroup = "aoc-poles"
+data.raw['item']['po-transformer'].order = "k"
 	
 data.raw['item']['boiler'].subgroup = "aoc-power-buildings"
 data.raw['item']['boiler'].order = "b"
@@ -306,3 +306,16 @@ data.raw['furnace']['recycler'].energy_source = { type = "void" }
 data.raw['item']['agricultural-tower'].subgroup = "aoc-flora-buildings"
 data.raw['item']['agricultural-tower'].order = "b"
 data.raw['agricultural-tower']['agricultural-tower'].energy_source = { type = "void" }
+
+
+local silocopy = table.deepcopy( data.raw['rocket-silo']['rocket-silo'] )
+silocopy.name = "aoc-rocket-silo-simple"
+silocopy.launch_to_space_platforms = false
+silocopy.minable.result = "aoc-rocket-silo-simple"
+data:extend({ silocopy })
+local silocopy2 = table.deepcopy( data.raw.item['rocket-silo'] )
+silocopy2.name = "aoc-rocket-silo-simple"
+silocopy2.place_result = "aoc-rocket-silo-simple"
+silocopy2.subgroup = "aoc-space-buildings"
+silocopy2.order = "b"
+data:extend({ silocopy2 })

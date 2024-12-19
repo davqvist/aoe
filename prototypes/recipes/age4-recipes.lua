@@ -595,7 +595,6 @@ data:extend({{
 	energy_required = 1
 }})
 
---[[
 data:extend({{
 	name = 'aoc-crafting-medium-electric-fuse-recipe',
 	type = 'recipe',
@@ -608,8 +607,7 @@ data:extend({{
 		{type = 'item', name = 'po-medium-electric-fuse', amount = 1}
     },
 	energy_required = 1
-)
---]]
+}})
 
 data:extend({{
 	name = 'aoc-crafting-big-electric-pole-recipe',
@@ -625,7 +623,6 @@ data:extend({{
 	energy_required = 1
 }})
 
---[[
 data:extend({{
 	name = 'aoc-crafting-big-electric-fuse-recipe',
 	type = 'recipe',
@@ -638,8 +635,8 @@ data:extend({{
 		{type = 'item', name = 'po-big-electric-fuse', amount = 1}
     },
 	energy_required = 1
-})
-	
+}})
+
 data:extend({{
 	name = 'aoc-crafting-transformer-recipe',
 	type = 'recipe',
@@ -655,7 +652,6 @@ data:extend({{
     },
 	energy_required = 1
 }})
---]]
 
 data:extend({{
     name = 'aoc-chemistry-methane-co2-recipe',
@@ -2729,6 +2725,24 @@ data:extend({{
 }})
 
 data:extend({{
+	name = 'aoc-casting-aluminium-bronze-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoc-copper-molten', amount = 18},
+		{type = 'fluid', name = 'aoc-aluminium-molten', amount = 7},
+		{type = 'item', name = 'aoc-mold', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoc-aluminium-bronze', amount = 6},
+		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.9}
+    },
+	main_product = 'aoc-aluminium-bronze',
+	energy_required = 3,
+	category = 'aoc-category-casting'
+}})
+
+data:extend({{
 	name = 'aoc-casting-bronze-plate-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -2825,7 +2839,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw["item"]['aoc-silicon-wafer'] ), get_icons( data.raw["item"]["aoc-saw-blade-diamond"] ) ),
 	main_product = 'aoc-silicon-wafer',
-	energy_required = 1,
+	energy_required = 2,
 	category = 'aoc-category-sawing'
 }})
 

@@ -85,10 +85,10 @@ data:extend({{
         type = "unlock-recipe",
         recipe = "aoc-crafting-small-electric-pole-recipe"
       },
-	    --{
-      --  type = "unlock-recipe",
-      --  recipe = "aoc-crafting-small-electric-fuse-recipe"
-      --}
+	    {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-small-electric-fuse-recipe"
+      }
     },
     unit = {
         count = 25,

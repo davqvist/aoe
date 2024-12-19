@@ -3,6 +3,8 @@ local technologies_to_keep = {['spidertron'] = true, ['exoskeleton-equipment'] =
 local item_has_recipe = {}
 local fluid_has_recipe = {}
 
+data.raw.recipe["scrap-recycling"] = nil
+
 for _, recipe in pairs(data.raw.recipe) do
   if recipe.name:sub(1, 4) ~= "aoc-" and 
     recipe.name:find('%-barrel$') == nil and

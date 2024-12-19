@@ -1012,6 +1012,21 @@ data:extend({{
 }})
 
 data:extend({{
+    name = 'aoc-chemistry-rocket-fuel-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoc-diesel', amount = 80},
+		{type = 'fluid', name = 'aoc-oxygen', amount = 20}
+    },
+    results = {
+        {type = 'item', name = 'rocket-fuel', amount = 1}
+    },
+    energy_required = 8,
+	category = 'aoc-category-advanced-chemistry'
+}})
+
+data:extend({{
     name = 'aoc-chemistry-gasoline-recipe',
     type = 'recipe',
     enabled = false,
@@ -1169,7 +1184,6 @@ data:extend({{
     energy_required = 5
 }})
 
---[[
 data:extend({{
     name = 'aoc-crafting-huge-electric-pole-recipe',
     type = 'recipe',
@@ -1197,7 +1211,6 @@ data:extend({{
     },
     energy_required = 1
 }})
---]]
 
 data:extend({{
     name = 'aoc-crafting-battery-equipment-recipe',
@@ -1241,11 +1254,43 @@ data:extend({{
 }})
 
 data:extend({{
+	name = 'aoc-sawmill-lens-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-garnet', amount = 1},
+		{type = 'item', name = 'aoc-saw-blade-diamond', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoc-lens', amount = 1, probability = 0.9},
+		{type = 'item', name = 'aoc-saw-blade-diamond', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.99}
+    },
+	main_product = 'aoc-lens',
+	energy_required = 4,
+	category = 'aoc-category-sawing'
+}})
+
+data:extend({{
     name = 'aoc-crafting-night-vision-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoc-garnet', amount = 10},
+		{type = 'item', name = 'aoc-lens', amount = 10},
+        {type = 'item', name = 'aoc-aluminium-plate', amount = 10},
+        {type = 'item', name = 'advanced-circuit', amount = 10}
+    },
+    results = {
+        {type = 'item', name = 'night-vision-equipment', amount = 1}
+    },
+    energy_required = 5
+}})
+
+data:extend({{
+    name = 'aoc-crafting-night-vision-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-lens', amount = 10},
         {type = 'item', name = 'aoc-aluminium-plate', amount = 10},
         {type = 'item', name = 'advanced-circuit', amount = 10}
     },
@@ -1434,7 +1479,7 @@ data:extend({{
 	ingredients = {
 		{type = 'item', name = 'electronic-circuit', amount = 4},
 		{type = 'item', name = 'small-lamp', amount = 2},
-		{type = 'item', name = 'aoc-garnet', amount = 2},
+		{type = 'item', name = 'aoc-lens', amount = 2},
 		{type = 'fluid', name = 'aoc-noble-gasses', amount = 10},
 		{type = 'item', name = 'aoc-silicon', amount = 2}
 	},
@@ -1473,6 +1518,21 @@ data:extend({{
 		{type = 'item', name = 'aoc-silicon-wafer', amount = 6}
     },
 	energy_required = 2,
+	category = 'aoc-category-lasering'
+}})
+
+data:extend({{
+	name = 'aoc-lasering-lens-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-garnet', amount = 1},
+        {type = 'fluid', name = 'aoc-noble-gasses', amount = 5}
+	},
+	results = {
+		{type = 'item', name = 'aoc-lens', amount = 1}
+    },
+	energy_required = 4,
 	category = 'aoc-category-lasering'
 }})
 
@@ -1653,7 +1713,6 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoc-soda-ash', amount = 1},
-        {type = 'fluid', name = 'water', amount = 10},
         {type = 'fluid', name = 'aoc-carbon-dioxide', amount = 10}
     },
     main_product = 'aoc-soda-ash',
@@ -1922,6 +1981,541 @@ data:extend({{
 	main_product = 'aoc-nauvium-plate',
 	energy_required = 3,
 	category = 'aoc-category-casting'
+}})
+
+data:extend({{
+    name = 'aoc-farm-reservoir-kelp-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'aoc-fish-water', amount = 100},
+        {type = 'item', name = 'aoc-gypsum', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-kelp', amount = 1}
+    },
+    energy_required = 10,
+	category = 'aoc-category-farm-reservoir-kelp'
+}})
+
+data:extend({{
+    name = 'aoc-farm-reservoir-kelp-module-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'aoc-fish-water', amount = 1000},
+        {type = 'item', name = 'aoc-gypsum', amount = 4},
+        {type = 'item', name = 'aoc-kelp-module-2', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-kelp-module-2', amount=1, probability = 0.512, ignored_by_stats = 1, ignored_by_productivity = 1},
+        {type = 'item', name = 'aoc-kelp-module-3', amount=1, probability = 0.256},
+        {type = 'item', name = 'aoc-kelp-module-4', amount=1, probability = 0.064},
+        {type = 'item', name = 'aoc-kelp-module-5', amount=1, probability = 0.016}
+    },
+	main_product = 'aoc-kelp-module-3',
+    energy_required = 120,
+	category = 'aoc-category-farm-reservoir-kelp'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-flax-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-flax-seed', amount = 4},
+        {type = 'item', name = 'aoc-wood-pulp', amount = 2},
+        {type = 'item', name = 'aoc-leaves', amount = 2},
+        {type = 'item', name = 'aoc-industrial-fertilizer', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-flax', amount = 6}
+    },
+    energy_required = 52,
+	category = 'aoc-category-farm-plot-flax'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-flax-module-3a-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'item', name = 'aoc-flax-module-2a', amount = 2},
+		{type = 'item', name = 'aoc-wood-pulp', amount = 8},
+        {type = 'item', name = 'aoc-leaves', amount = 8},
+        {type = 'item', name = 'aoc-industrial-fertilizer', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-flax-module-3a', amount=1, probability = 0.6},
+        {type = 'item', name = 'aoc-flax-module-3b', amount=1, probability = 0.4},
+        {type = 'item', name = 'aoc-flax-module-4a', amount=1, probability = 0.12},
+        {type = 'item', name = 'aoc-flax-module-4b', amount=1, probability = 0.08},
+        {type = 'item', name = 'aoc-flax-module-5a', amount=1, probability = 0.03},
+        {type = 'item', name = 'aoc-flax-module-5b', amount=1, probability = 0.01}
+    },
+	main_product = "aoc-flax-module-3a",
+    energy_required = 170,
+	category = 'aoc-category-farm-plot-flax'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-flax-module-3b-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'item', name = 'aoc-flax-module-2b', amount = 2},
+		{type = 'item', name = 'aoc-wood-pulp', amount = 8},
+        {type = 'item', name = 'aoc-leaves', amount = 8},
+        {type = 'item', name = 'aoc-industrial-fertilizer', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-flax-module-3a', amount=1, probability = 0.4},
+        {type = 'item', name = 'aoc-flax-module-3b', amount=1, probability = 0.6},
+        {type = 'item', name = 'aoc-flax-module-4a', amount=1, probability = 0.08},
+        {type = 'item', name = 'aoc-flax-module-4b', amount=1, probability = 0.12},
+        {type = 'item', name = 'aoc-flax-module-5a', amount=1, probability = 0.01},
+        {type = 'item', name = 'aoc-flax-module-5b', amount=1, probability = 0.03}
+    },
+	main_product = "aoc-flax-module-3b",
+    energy_required = 170,
+	category = 'aoc-category-farm-plot-flax'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-tea-leaves-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-tea-seed', amount = 2},
+        {type = 'item', name = 'aoc-soil', amount = 6},
+        {type = 'item', name = 'aoc-leaves', amount = 2},
+		{type = 'item', name = 'aoc-industrial-fertilizer', amount = 1},
+        {type = 'fluid', name = 'water', amount = 100}
+		
+    },
+    results = {
+        {type = 'item', name = 'aoc-tea-leaves', amount = 4}
+    },
+    energy_required = 20,
+	category = 'aoc-category-farm-plot-tea'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-tea-leaves-module-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'item', name = 'aoc-tea-leaves-module-2', amount = 1},
+		{type = 'item', name = 'aoc-leaves', amount = 8},
+		{type = 'item', name = 'aoc-industrial-fertilizer', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-tea-leaves-module-3', amount=1, probability = 0.5},
+        {type = 'item', name = 'aoc-tea-leaves-module-4', amount=1, probability = 0.1},
+        {type = 'item', name = 'aoc-tea-leaves-module-5', amount=1, probability = 0.02}
+	},
+	main_product = 'aoc-tea-leaves-module-3',
+    energy_required = 190,
+	category = 'aoc-category-farm-plot-tea'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-coffee-plant-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-coffee-beans', amount = 2},
+        {type = 'item', name = 'aoc-soil', amount = 6},
+        {type = 'item', name = 'aoc-charcoal', amount = 1},
+		{type = 'item', name = 'aoc-industrial-fertilizer', amount = 1},
+        {type = 'fluid', name = 'water', amount = 100}
+    },
+    results = {
+        {type = 'item', name = 'aoc-coffee-plant', amount = 4}
+    },
+    energy_required = 20,
+	category = 'aoc-category-farm-plot-coffee'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-coffee-plant-module-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'item', name = 'aoc-coffee-plant-module-2', amount = 1},
+		{type = 'item', name = 'aoc-charcoal', amount = 4},
+		{type = 'item', name = 'aoc-industrial-fertilizer', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-coffee-plant-module-3', amount=1, probability = 0.5},
+        {type = 'item', name = 'aoc-coffee-plant-module-4', amount=1, probability = 0.1},
+        {type = 'item', name = 'aoc-coffee-plant-module-5', amount=1, probability = 0.02}
+	},
+	main_product = 'aoc-coffee-plant-module-3',
+    energy_required = 190,
+	category = 'aoc-category-farm-plot-coffee'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-maize-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-maize-kernels', amount = 3},
+        {type = 'item', name = 'aoc-loam', amount = 4},
+        {type = 'item', name = 'aoc-industrial-fertilizer', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-maize', amount = 7}
+    },
+    energy_required = 65,
+	category = 'aoc-category-farm-plot-maize'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-maize-magnesium-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-maize-kernels', amount = 3},
+        {type = 'item', name = 'aoc-loam', amount = 6},
+        {type = 'item', name = 'aoc-magnesium-dust', amount = 1},
+        {type = 'item', name = 'aoc-industrial-fertilizer', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-maize', amount = 10}
+    },
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-maize"] ), get_icons( data.raw.item["aoc-magnesium-dust"] ) ),
+    energy_required = 55,
+	category = 'aoc-category-farm-plot-maize'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-maize-module-3a-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'item', name = 'aoc-maize-module-2a', amount = 2},
+        {type = 'item', name = 'aoc-loam', amount = 10},
+        {type = 'item', name = 'aoc-magnesium-dust', amount = 3},
+        {type = 'item', name = 'aoc-industrial-fertilizer', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-maize-module-3a', amount=1, probability = 0.6},
+        {type = 'item', name = 'aoc-maize-module-3b', amount=1, probability = 0.4},
+        {type = 'item', name = 'aoc-maize-module-4a', amount=1, probability = 0.12},
+        {type = 'item', name = 'aoc-maize-module-4b', amount=1, probability = 0.08},
+        {type = 'item', name = 'aoc-maize-module-5a', amount=1, probability = 0.03},
+        {type = 'item', name = 'aoc-maize-module-5b', amount=1, probability = 0.01}
+    },
+	main_product = "aoc-maize-module-3a",
+    energy_required = 220,
+	category = 'aoc-category-farm-plot-maize'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-maize-module-3b-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'item', name = 'aoc-maize-module-2b', amount = 2},
+        {type = 'item', name = 'aoc-loam', amount = 10},
+        {type = 'item', name = 'aoc-magnesium-dust', amount = 3},
+        {type = 'item', name = 'aoc-industrial-fertilizer', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-maize-module-3a', amount=1, probability = 0.4},
+        {type = 'item', name = 'aoc-maize-module-3b', amount=1, probability = 0.6},
+        {type = 'item', name = 'aoc-maize-module-4a', amount=1, probability = 0.08},
+        {type = 'item', name = 'aoc-maize-module-4b', amount=1, probability = 0.12},
+        {type = 'item', name = 'aoc-maize-module-5a', amount=1, probability = 0.01},
+        {type = 'item', name = 'aoc-maize-module-5b', amount=1, probability = 0.03}
+    },
+	main_product = "aoc-maize-module-3b",
+    energy_required = 220,
+	category = 'aoc-category-farm-plot-maize'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-soybeans-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-soybean-seeds', amount = 3},
+		{type = 'item', name = 'aoc-quicklime', amount = 2},
+        {type = 'item', name = 'aoc-loam', amount = 3},
+        {type = 'item', name = 'aoc-industrial-fertilizer', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-soybeans', amount = 8}
+    },
+    energy_required = 60,
+	category = 'aoc-category-farm-plot-soybean'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-soybeans-module-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-soybeans-module-2', amount = 2},
+		{type = 'item', name = 'aoc-quicklime', amount = 4},
+        {type = 'item', name = 'aoc-loam', amount = 4},
+        {type = 'item', name = 'aoc-industrial-fertilizer', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-soybeans-module-3', amount=1},
+        {type = 'item', name = 'aoc-soybeans-module-4', amount=1, probability = 0.1},
+        {type = 'item', name = 'aoc-soybeans-module-5', amount=1, probability = 0.01}
+    },
+	main_product = "aoc-soybeans-module-3",
+    energy_required = 240,
+	category = 'aoc-category-farm-plot-soybean'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-spruce-tree-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'tree-seed', amount = 1},
+        {type = 'item', name = 'aoc-loam', amount = 1},
+        {type = 'item', name = 'aoc-bone-meal', amount = 1},
+        {type = 'item', name = 'aoc-phosphate', amount = 1},
+        {type = 'fluid', name = 'water', amount = 200}
+    },
+    results = {
+        {type = 'item', name = 'aoc-spruce-tree', amount = 1}
+    },
+    energy_required = 4,
+	category = 'aoc-category-farm-plot-spruce-tree'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-resin-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-spruce-tree', amount = 1},
+        {type = 'item', name = 'aoc-steel-rod', amount = 1},
+        {type = 'fluid', name = 'aoc-drilling-fluid', amount = 100}
+    },
+    results = {
+        {type = 'item', name = 'aoc-resin', amount = 2},
+		{type = 'item', name = 'aoc-spruce-tree', amount = 1, probability = 0.95, ignored_by_stats = 1, ignored_by_productivity = 1 }
+    },
+	main_product = 'aoc-resin',
+    energy_required = 6,
+	category = 'aoc-category-farm-plot-spruce-tree'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-spruce-tree-module-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'water', amount = 2000},
+        {type = 'item', name = 'aoc-spruce-tree-module-2', amount = 1},
+        {type = 'item', name = 'tree-seed', amount = 1},
+        {type = 'item', name = 'aoc-loam', amount = 4},
+        {type = 'item', name = 'aoc-bone-meal', amount = 1},
+        {type = 'item', name = 'aoc-phosphate', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-spruce-tree-module-2', amount=1, probability = 0.06},
+        {type = 'item', name = 'aoc-spruce-tree-module-3', amount=1, probability = 0.66},
+        {type = 'item', name = 'aoc-spruce-tree-module-4', amount=1, probability = 0.06}
+    },
+	main_product = "aoc-spruce-tree-module-2",
+    energy_required = 70,
+	category = 'aoc-category-farm-plot-spruce-tree'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-rubber-tree-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-rubber-tree-seedling', amount = 1},
+        {type = 'item', name = 'aoc-loam', amount = 1},
+        {type = 'item', name = 'aoc-bone-meal', amount = 1},
+        {type = 'item', name = 'aoc-phosphate', amount = 1},
+        {type = 'item', name = 'aoc-slaked-lime', amount = 1},
+        {type = 'fluid', name = 'water', amount = 200}
+    },
+    results = {
+        {type = 'item', name = 'aoc-rubber-tree', amount = 1}
+    },
+    energy_required = 8,
+	category = 'aoc-category-farm-plot-rubber-tree'
+}})
+
+data:extend({{
+	name = 'aoc-forestry-rubber-tree-3-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-rubber-tree', amount = 1},
+		{type = 'item', name = 'aoc-steel-rod', amount = 1},
+		{type = 'item', name = 'aoc-clay', amount = 1}
+    },
+	results = {
+        {type = 'item', name = 'aoc-log', amount = 1},
+		{type = 'item', name = 'aoc-rubber-tree-seedling', amount = 1},
+		{type = 'item', name = 'aoc-rubber-tree-seedling', amount = 1, probability = 0.1},
+        {type = 'fluid', name = 'aoc-latex', amount = 110}
+    },
+	energy_required = 5,
+	main_product = 'aoc-latex',
+	category = 'aoc-category-harvesting',
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-rubber-tree-module-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'water', amount = 2000},
+        {type = 'item', name = 'aoc-rubber-tree-module-2', amount = 1},
+        {type = 'item', name = 'aoc-rubber-tree-seedling', amount = 1},
+        {type = 'item', name = 'aoc-slaked-lime', amount = 2},
+        {type = 'item', name = 'aoc-loam', amount = 4},
+        {type = 'item', name = 'aoc-bone-meal', amount = 1},
+        {type = 'item', name = 'aoc-phosphate', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-rubber-tree-module-2', amount=1, probability = 0.06},
+        {type = 'item', name = 'aoc-rubber-tree-module-3', amount=1, probability = 0.66},
+        {type = 'item', name = 'aoc-rubber-tree-module-4', amount=1, probability = 0.06}
+    },
+	main_product = "aoc-rubber-tree-module-3",
+    energy_required = 110,
+	category = 'aoc-category-farm-plot-rubber-tree'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-apple-tree-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-apple-tree-seeds', amount = 1},
+        {type = 'item', name = 'aoc-loam', amount = 2},
+        {type = 'item', name = 'aoc-bone-meal', amount = 1},
+        {type = 'item', name = 'aoc-phosphate', amount = 1},
+        {type = 'fluid', name = 'water', amount = 200}
+    },
+    results = {
+        {type = 'item', name = 'aoc-apple-tree', amount = 1}
+    },
+    energy_required = 9,
+	category = 'aoc-category-farm-plot-apple-tree'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-apple-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-apple-tree-seeds', amount = 1},
+        {type = 'item', name = 'aoc-loam', amount = 2},
+        {type = 'item', name = 'aoc-bone-meal', amount = 1},
+        {type = 'item', name = 'aoc-phosphate', amount = 1},
+        {type = 'fluid', name = 'water', amount = 200}
+    },
+    results = {
+        {type = 'item', name = 'aoc-apple', amount = 4}
+    },
+    energy_required = 9,
+	category = 'aoc-category-farm-plot-apple-tree'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-apple-tree-module-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'water', amount = 2000},
+        {type = 'item', name = 'aoc-apple-tree-module-2', amount = 1},
+        {type = 'item', name = 'aoc-apple-tree-seeds', amount = 1},
+        {type = 'item', name = 'aoc-loam', amount = 4},
+        {type = 'item', name = 'aoc-bone-meal', amount = 1},
+        {type = 'item', name = 'aoc-phosphate', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-apple-tree-module-2', amount=1, probability = 0.06},
+        {type = 'item', name = 'aoc-apple-tree-module-3', amount=1, probability = 0.66},
+        {type = 'item', name = 'aoc-apple-tree-module-4', amount=1, probability = 0.06}
+    },
+	main_product = "aoc-apple-tree-module-3",
+    energy_required = 135,
+	category = 'aoc-category-farm-plot-apple-tree'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-olive-tree-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-olive-tree-seeds', amount = 1},
+        {type = 'item', name = 'aoc-loam', amount = 2},
+        {type = 'item', name = 'aoc-wood-pulp', amount = 2},
+        {type = 'item', name = 'aoc-bone-meal', amount = 1},
+        {type = 'item', name = 'aoc-phosphate', amount = 1},
+        {type = 'fluid', name = 'water', amount = 200}
+    },
+    results = {
+        {type = 'item', name = 'aoc-olive-tree', amount = 1}
+    },
+    energy_required = 9,
+	category = 'aoc-category-farm-plot-olive-tree'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-olive-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-olive-tree-seeds', amount = 1},
+        {type = 'item', name = 'aoc-loam', amount = 2},
+        {type = 'item', name = 'aoc-wood-pulp', amount = 2},
+        {type = 'item', name = 'aoc-bone-meal', amount = 1},
+        {type = 'item', name = 'aoc-phosphate', amount = 1},
+        {type = 'fluid', name = 'water', amount = 200}
+    },
+    results = {
+        {type = 'item', name = 'aoc-olive', amount = 8}
+    },
+    energy_required = 9,
+	category = 'aoc-category-farm-plot-olive-tree'
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-olive-tree-module-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'water', amount = 2000},
+        {type = 'item', name = 'aoc-olive-tree-module-2', amount = 1},
+        {type = 'item', name = 'aoc-olive-tree-seeds', amount = 1},
+        {type = 'item', name = 'aoc-loam', amount = 4},
+        {type = 'item', name = 'aoc-wood-pulp', amount = 4},
+        {type = 'item', name = 'aoc-bone-meal', amount = 1},
+        {type = 'item', name = 'aoc-phosphate', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-olive-tree-module-2', amount=1, probability = 0.06},
+        {type = 'item', name = 'aoc-olive-tree-module-3', amount=1, probability = 0.66},
+        {type = 'item', name = 'aoc-olive-tree-module-4', amount=1, probability = 0.06}
+    },
+	main_product = "aoc-olive-tree-module-3",
+    energy_required = 175,
+	category = 'aoc-category-farm-plot-olive-tree'
 }})
 
 data:extend({{

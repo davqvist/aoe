@@ -24,9 +24,9 @@ data.raw['fluid']['petroleum-gas'].hidden = false
 
 -- Power Overload
 
---data.raw['electric-pole']['po-huge-electric-pole'].supply_area_distance = 2.5
---data.raw['electric-pole']['po-hidden-electric-pole-in'].maximum_wire_distance = 18
---data.raw['electric-pole']['po-hidden-electric-pole-out'].maximum_wire_distance = 18
+data.raw['electric-pole']['po-huge-electric-pole'].supply_area_distance = 2.5
+data.raw['electric-pole']['po-hidden-electric-pole-in'].maximum_wire_distance = 18
+data.raw['electric-pole']['po-hidden-electric-pole-out'].maximum_wire_distance = 18
 
 -- AAI Loader
 

@@ -354,7 +354,8 @@ data:extend({{
 	ingredients = {
 		{type = 'item', name = 'wood', amount = 80},
 		{type = 'item', name = 'aoc-paper', amount = 10},
-		{type = 'item', name = 'aoc-gold-plate', amount = 20}
+		{type = 'item', name = 'aoc-gold-plate', amount = 20},
+		{type = 'item', name = 'aoc-nauvium-catalyst', amount = 10}
 	},
 	results = {
 		{type = 'item', name = 'aoc-escritoire', amount = 1}
@@ -412,7 +413,7 @@ data:extend({{
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoc-paper', amount = 10},
+		{type = 'item', name = 'aoc-paper', amount = 2},
         {type = 'item', name = 'aoc-feather', amount = 1},
         {type = 'item', name = 'aoc-meal', amount = 1},
         {type = 'item', name = 'aoc-tea', amount = 1},
@@ -429,7 +430,7 @@ data:extend({{
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoc-paper', amount = 10},
+		{type = 'item', name = 'aoc-paper', amount = 2},
         {type = 'item', name = 'aoc-feather', amount = 1},
         {type = 'item', name = 'aoc-meal', amount = 1},
         {type = 'item', name = 'aoc-coffee', amount = 1},
@@ -618,6 +619,7 @@ data:extend({{
 	ingredients = {
         {type = 'item', name = 'tungsten-plate', amount = 40},
         {type = 'item', name = 'pipe', amount = 10},
+        {type = 'item', name = 'aoc-nauvium-catalyst', amount = 10}
 	},
 	results = {
 		{type = 'item', name = 'aoc-cauldron', amount = 1}
@@ -685,4 +687,325 @@ data:extend({{
     },
 	energy_required = 5,
 	research = 'aoc-obsidian'
+}})
+
+data:extend({{
+	name = 'aoc-brewing-10-aoc-alchemy-drilling-fluid-magical-recipe',
+	type = 'recipe',
+	enabled = true,
+	hidden = true,
+	ingredients = {
+        {type = 'fluid', name = 'aoc-drilling-fluid', amount = 50},
+		{type = 'item', name = 'sulfur', amount = 1}
+	},
+	results = {
+		{type = 'fluid', name = 'aoc-drilling-fluid-magical', amount = 50}
+    },
+	category = 'aoc-category-brewing',
+	energy_required = 5
+}})
+
+data:extend({{
+	name = 'aoc-alchemy-drilling-fluid-magical-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'aoc-drilling-fluid', amount = 1000},
+		{type = 'fluid', name = 'aoc-vitriol-oil', amount = 50}
+	},
+	results = {
+		{type = 'fluid', name = 'aoc-drilling-fluid-magical', amount = 1000}
+    },
+	category = 'aoc-category-alchemy',
+	energy_required = 4
+}})
+
+data:extend({{
+	name = 'aoc-brewing-00-aoc-alchemy-vitriol-oil-recipe',
+	type = 'recipe',
+	enabled = true,
+	hidden = true,
+	ingredients = {
+        {type = 'fluid', name = 'sulfuric-acid', amount = 50},
+		{type = 'item', name = 'aoc-caustic-soda', amount = 1}
+	},
+	results = {
+		{type = 'fluid', name = 'aoc-vitriol-oil', amount = 50}
+    },
+	category = 'aoc-category-brewing',
+	energy_required = 5
+}})
+
+data:extend({{
+	name = 'aoc-alchemy-vitriol-oil-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'sulfuric-acid', amount = 35},
+		{type = 'fluid', name = 'aoc-caustic-solution', amount = 15}
+	},
+	results = {
+		{type = 'fluid', name = 'aoc-vitriol-oil', amount = 50}
+    },
+	category = 'aoc-category-alchemy',
+	energy_required = 4
+}})
+
+data:extend({{
+    name = 'aoc-ground-bore-nauvium-ore-recipe',
+    type = 'recipe',
+    enabled = false,
+	allow_decomposition = false,
+    ingredients = {
+        {type = 'fluid', name = 'aoc-drilling-fluid-magical', amount = 500},
+		{type = 'item', name = 'aoc-brass-rod', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-nauvium-ore', amount = 1}
+    },
+    energy_required = 4,
+	category = 'aoc-category-digging',
+	research = 'aoc-brass-rod'
+}})
+
+data:extend({{
+	name = 'aoc-crafting-telescope-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-electrum-machine-hull', amount = 16},
+        {type = 'item', name = 'electric-engine-unit', amount = 10},
+        {type = 'item', name = 'aoc-aluminium-plate', amount = 100},
+        {type = 'item', name = 'aoc-lens', amount = 10},
+        {type = 'item', name = 'aoc-platinum-plate', amount = 25}
+	},
+	results = {
+		{type = 'item', name = 'aoc-telescope', amount = 1}
+    },
+	energy_required = 5,
+	research = 'aoc-platinum-plate'
+}})
+
+data:extend({{
+    name = 'aoc-stargazing-sun-recipe',
+    type = 'recipe',
+    enabled = false,
+	allow_decomposition = false,
+    ingredients = {
+        {type = 'fluid', name = 'aoc-starlight', amount = 100},
+		{type = 'fluid', name = 'aoc-gold-molten', amount = 100},
+		{type = 'item', name = 'aoc-lens', amount = 1},
+		{type = 'item', name = 'aoc-scroll', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-planet-sun', amount = 1, probability = 0.1}
+    },
+    energy_required = 30,
+	category = 'aoc-category-stargazing',
+	research = 'aoc-gold-plate'
+}})
+
+data:extend({{
+    name = 'aoc-stargazing-mercury-recipe',
+    type = 'recipe',
+    enabled = false,
+	allow_decomposition = false,
+    ingredients = {
+        {type = 'fluid', name = 'aoc-starlight', amount = 100},
+		{type = 'fluid', name = 'aoc-mercury', amount = 100},
+		{type = 'item', name = 'aoc-lens', amount = 1},
+		{type = 'item', name = 'aoc-scroll', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-planet-mercury', amount = 1, probability = 0.1}
+    },
+    energy_required = 30,
+	category = 'aoc-category-stargazing',
+	research = 'aoc-zinc-plate'
+}})
+
+data:extend({{
+    name = 'aoc-stargazing-venus-recipe',
+    type = 'recipe',
+    enabled = false,
+	allow_decomposition = false,
+    ingredients = {
+        {type = 'fluid', name = 'aoc-starlight', amount = 100},
+		{type = 'fluid', name = 'aoc-silver', amount = 100},
+		{type = 'item', name = 'aoc-lens', amount = 1},
+		{type = 'item', name = 'aoc-scroll', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-planet-venus', amount = 1, probability = 0.1}
+    },
+    energy_required = 30,
+	category = 'aoc-category-stargazing',
+	research = 'aoc-silver-plate'
+}})
+
+data:extend({{
+    name = 'aoc-stargazing-venus-recipe',
+    type = 'recipe',
+    enabled = false,
+	allow_decomposition = false,
+    ingredients = {
+        {type = 'fluid', name = 'aoc-starlight', amount = 100},
+		{type = 'fluid', name = 'aoc-copper-molten', amount = 100},
+		{type = 'item', name = 'aoc-lens', amount = 1},
+		{type = 'item', name = 'aoc-scroll', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-planet-venus', amount = 1, probability = 0.1}
+    },
+    energy_required = 30,
+	category = 'aoc-category-stargazing',
+	research = 'copper-plate'
+}})
+
+data:extend({{
+    name = 'aoc-stargazing-earth-recipe',
+    type = 'recipe',
+    enabled = false,
+	allow_decomposition = false,
+    ingredients = {
+        {type = 'fluid', name = 'aoc-starlight', amount = 100},
+		{type = 'fluid', name = 'crude-oil', amount = 100},
+		{type = 'item', name = 'aoc-lens', amount = 1},
+		{type = 'item', name = 'aoc-scroll', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-planet-earth', amount = 1, probability = 0.1}
+    },
+    energy_required = 30,
+	category = 'aoc-category-stargazing',
+	research = 'plastic-bar'
+}})
+
+data:extend({{
+    name = 'aoc-stargazing-luna-recipe',
+    type = 'recipe',
+    enabled = false,
+	allow_decomposition = false,
+    ingredients = {
+        {type = 'fluid', name = 'aoc-starlight', amount = 100},
+		{type = 'fluid', name = 'aoc-silver-molten', amount = 100},
+		{type = 'item', name = 'aoc-lens', amount = 1},
+		{type = 'item', name = 'aoc-scroll', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-planet-luna', amount = 1, probability = 0.1}
+    },
+    energy_required = 30,
+	category = 'aoc-category-stargazing',
+	research = 'aoc-silver-plate'
+}})
+
+data:extend({{
+    name = 'aoc-stargazing-mars-recipe',
+    type = 'recipe',
+    enabled = false,
+	allow_decomposition = false,
+    ingredients = {
+        {type = 'fluid', name = 'aoc-starlight', amount = 100},
+		{type = 'fluid', name = 'aoc-iron-molten', amount = 100},
+		{type = 'item', name = 'aoc-lens', amount = 1},
+		{type = 'item', name = 'aoc-scroll', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-planet-mars', amount = 1, probability = 0.1}
+    },
+    energy_required = 30,
+	category = 'aoc-category-stargazing',
+	research = 'iron-plate'
+}})
+
+data:extend({{
+    name = 'aoc-stargazing-jupiter-recipe',
+    type = 'recipe',
+    enabled = false,
+	allow_decomposition = false,
+    ingredients = {
+        {type = 'fluid', name = 'aoc-starlight', amount = 100},
+		{type = 'fluid', name = 'aoc-tin-molten', amount = 100},
+		{type = 'item', name = 'aoc-lens', amount = 1},
+		{type = 'item', name = 'aoc-scroll', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-planet-jupiter', amount = 1, probability = 0.1}
+    },
+    energy_required = 30,
+	category = 'aoc-category-stargazing',
+	research = 'aoc-tin-plate'
+}})
+
+data:extend({{
+    name = 'aoc-stargazing-saturn-recipe',
+    type = 'recipe',
+    enabled = false,
+	allow_decomposition = false,
+    ingredients = {
+        {type = 'fluid', name = 'aoc-starlight', amount = 100},
+		{type = 'fluid', name = 'aoc-lead-molten', amount = 100},
+		{type = 'item', name = 'aoc-lens', amount = 1},
+		{type = 'item', name = 'aoc-scroll', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-planet-saturn', amount = 1, probability = 0.1}
+    },
+    energy_required = 30,
+	category = 'aoc-category-stargazing',
+	research = 'aoc-lead-plate'
+}})
+
+data:extend({{
+    name = 'aoc-crafting-space-recipe',
+    type = 'recipe',
+    enabled = false,
+    ingredients = {
+        {type = 'item', name = 'aoc-flask', amount = 500},
+		{type = 'item', name = 'aoc-planet-sun', amount = 1},
+		{type = 'item', name = 'aoc-planet-mercury', amount = 1},
+		{type = 'item', name = 'aoc-planet-venus', amount = 1},
+		{type = 'item', name = 'aoc-planet-earth', amount = 1},
+        {type = 'item', name = 'aoc-planet-luna', amount = 1},
+		{type = 'item', name = 'aoc-planet-mars', amount = 1},
+		{type = 'item', name = 'aoc-planet-jupiter', amount = 1},
+		{type = 'item', name = 'aoc-planet-saturn', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-planet-space', amount = 1}
+    },
+    energy_required = 25,
+	research = 'aoc-flask'
+}})
+
+data:extend({{
+    name = 'aoc-crafting-lds-recipe',
+    type = 'recipe',
+    enabled = false,
+    ingredients = {
+        {type = 'item', name = 'aoc-aluminium-bronze', amount = 10},
+		{type = 'item', name = 'carbon-fiber', amount = 1},
+		{type = 'item', name = 'plastic-bar', amount = 4}
+    },
+    results = {
+        {type = 'item', name = 'low-density-structure', amount = 2}
+    },
+    energy_required = 20
+}})
+
+data:extend({{
+    name = 'aoc-crafting-rocket-silo-simple-recipe',
+    type = 'recipe',
+    enabled = false,
+    ingredients = {
+        {type = 'item', name = 'aoc-stainless-steel', amount = 200},
+		{type = 'item', name = 'electric-engine-unit', amount = 100},
+		{type = 'item', name = 'refined-concrete', amount = 1000},
+		{type = 'item', name = 'processing-unit', amount = 200}
+    },
+    results = {
+        {type = 'item', name = 'aoc-rocket-silo-simple', amount = 1}
+    },
+    energy_required = 60
 }})

@@ -497,6 +497,10 @@ data:extend({
   },
   {
     type = "recipe-category",
+    name = "aoc-category-stargazing"
+  },
+  {
+    type = "recipe-category",
     name = "aoc-category-starlight"
   },
   {

@@ -1943,7 +1943,7 @@ data:extend({{
     type = 'recipe',
     enabled = false,
 	ingredients = {
-        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'fluid', name = 'water', amount = 1500},
         {type = 'item', name = 'aoc-rubber-tree-module-1', amount = 1},
         {type = 'item', name = 'aoc-rubber-tree-seedling', amount = 1},
         {type = 'item', name = 'aoc-slaked-lime', amount = 2},
@@ -2061,7 +2061,7 @@ data:extend({{
         {type = 'item', name = 'aoc-olive-tree-seeds', amount = 1},
         {type = 'item', name = 'aoc-loam', amount = 4},
         {type = 'item', name = 'aoc-wood-pulp', amount = 4},
-        {type = 'item', name = 'aoc-bone-meal', amount = 4}
+        {type = 'item', name = 'aoc-bone-meal', amount = 1}
     },
     results = {
         {type = 'item', name = 'aoc-olive-tree-module-1', amount=1, probability = 0.06},

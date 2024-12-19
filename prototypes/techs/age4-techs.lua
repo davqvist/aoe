@@ -11,22 +11,22 @@ data:extend({{
       type = "unlock-recipe",
       recipe = "aoc-crafting-medium-electric-pole-recipe"
     },
-    --{
-    --  type = "unlock-recipe",
-    --  recipe = "aoc-crafting-medium-electric-fuse-recipe"
-    --},
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-medium-electric-fuse-recipe"
+    },
     {
       type = "unlock-recipe",
       recipe = "aoc-crafting-big-electric-pole-recipe"
     },
-    --{
-    --  type = "unlock-recipe",
-    --  recipe = "aoc-crafting-big-electric-fuse-recipe"
-    --},
-    --{
-    --  type = "unlock-recipe",
-    --  recipe = "aoc-crafting-transformer-recipe"
-    --}
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-big-electric-fuse-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-transformer-recipe"
+    }
   },
   unit = {
       count = 25,
@@ -1138,6 +1138,25 @@ data:extend({{
       {
         type = "unlock-recipe",
         recipe = "aoc-casting-electrum-recipe"
+      }
+    },
+    unit = {
+        count = 20,
+        ingredients = AOC["age_tech_table"][4],
+        time = 35
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoc-aluminium-bronze-tech",
+	  icon = data.raw["item"]["aoc-aluminium-bronze"].icon,
+	  icon_size = data.raw["item"]["aoc-aluminium-bronze"].icon_size,
+    prerequisites = {"aoc-copper-tech-2", "aoc-aluminium-tech-2"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-casting-aluminium-bronze-recipe"
       }
     },
     unit = {

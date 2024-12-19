@@ -102,6 +102,9 @@ data.raw['capsule']['cliff-explosives'].stack_size = 100
 data.raw['item']['electric-engine-unit'].subgroup = "aoc-parts"
 data.raw['item']['electric-engine-unit'].order = "c"
 data.raw['item']['electric-engine-unit'].stack_size = 50
+data.raw['item']['rocket-fuel'].subgroup = "aoc-space-stuff"
+data.raw['item']['rocket-fuel'].order = "a"
+data.raw['item']['rocket-fuel'].stack_size = 10
 
 data:extend({{
     type = "item",

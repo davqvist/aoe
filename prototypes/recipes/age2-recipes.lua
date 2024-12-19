@@ -43,7 +43,6 @@ data:extend({{
 	energy_required = 1
 }})
 
---[[
 data:extend({{
 	name = 'aoc-crafting-small-electric-fuse-recipe',
 	type = 'recipe',
@@ -57,7 +56,6 @@ data:extend({{
     },
 	energy_required = 1
 }})
---]]
 
 data:extend({{
 	name = 'aoc-smelting-steel-recipe',

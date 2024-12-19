@@ -1,0 +1,12 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+Date: 2024-12-19
+  Features:
+    - Added all the tier 3 plant technologies and recipes
+  Changes:
+    - HPH soda ash recipe changed to make it actually work and added output fluid connection to HPH
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+Date: 2024-12-18
+  Features:
+    - Start alpha test

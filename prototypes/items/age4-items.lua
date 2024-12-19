@@ -135,6 +135,16 @@ data:extend({{
 
 data:extend({{
     type = "item",
+    name = "aoc-lens",
+    icon = "__ageofcreation__/img/items/lens.png",
+    icon_size = 64,
+    subgroup = "aoc-glass",
+    order = "e",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
     name = "aoc-apatite",
     icon = "__ageofcreation__/img/items/apatite.png",
     icon_size = 64,
@@ -797,11 +807,21 @@ data:extend({{
 
 data:extend({{
     type = "item",
+    name = "aoc-aluminium-bronze",
+    icon = "__ageofcreation__/img/items/aluminium-bronze.png",
+    icon_size = 64,
+    subgroup = "aoc-metals-alloys",
+    order = "f",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
     name = "aoc-silicon",
     icon = "__angelssmelting_art__/graphics/icons/plate-silicon.png",
     icon_size = 32,
     subgroup = "aoc-metals-alloys",
-    order = "f",
+    order = "g",
     stack_size = 200
 }})
 
@@ -811,7 +831,7 @@ data:extend({{
     icon = "__angelsindustries_art__/graphics/icons/silicon-wafer.png",
     icon_size = 32,
     subgroup = "aoc-metals-alloys",
-    order = "f1",
+    order = "g1",
     stack_size = 200
 }})
 

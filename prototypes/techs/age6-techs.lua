@@ -323,3 +323,100 @@ data:extend({{
       time = 50
   }
 }})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-digging-tech-3",
+  icon_size = 32,
+  icon = "__angelsrefining_art__/graphics/icons/liquifier.png",
+  prerequisites = {"aoc-brewing-tech", "aoc-digging-tech-2"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-ground-bore-nauvium-ore-recipe"
+    }
+  },
+  unit = {
+      count = 35,
+      ingredients = AOC["age_tech_table"][6],
+      time = 50
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-stargazing-tech",
+  icon = "__ageofcreation__/img/entities/telescope.png",
+  icon_size = 192,
+  prerequisites = {"aoc-platinum-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-space-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-telescope-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-stargazing-sun-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-stargazing-mercury-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-stargazing-venus-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-stargazing-earth-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-stargazing-luna-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-stargazing-mars-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-stargazing-jupiter-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-stargazing-saturn-recipe"
+    }
+  },
+  unit = {
+      count = 75,
+      ingredients = AOC["age_tech_table"][6],
+      time = 60
+  }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoc-space-age-tech",
+    icon_size = 64,
+    icon = "__ageofcreation__/img/items/science-pack-7.png",
+    prerequisites = {"aoc-stargazing-tech","aoc-aluminium-bronze-tech"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-lds-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-rocket-silo-simple-recipe"
+      }
+    },
+    unit = {
+        count = 90,
+        ingredients = AOC["age_tech_table"][6],
+        time = 60
+    }
+}})
