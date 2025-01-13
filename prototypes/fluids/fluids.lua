@@ -762,7 +762,7 @@ data:extend({{
 data:extend({{
     type = "fluid",
     name = "aoc-tungsten-slurry",
-    icons = angelsmods.functions.create_viscous_liquid_fluid_icon({ icon = "__ageofcreation__/img/items/atoms/w.png", icon_size = 64, shift = {0,0}, scale = 0.5 }, { { 143, 133, 169 }, { 40, 32, 51 } }),
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon({ icon = "__ageofcreation__/img/items/atoms/w.png", icon_size = 64, shift = {0,0}, scale = 0.5 }, { { 143, 133, 169 }, { 143, 133, 169 } }),
     subgroup = "aoc-fluids-slurry",
     order = "k",
 	base_color = {r=0.55, g=0.33, b=0.14},
@@ -778,6 +778,28 @@ data:extend({{
     order = "k",
 	base_color = {r=0.55, g=0.33, b=0.14},
 	flow_color = {r=0.55, g=0.33, b=0.14},
+	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoc-titanium-slurry",
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon({ icon = "__ageofcreation__/img/items/atoms/ti.png", icon_size = 64, shift = {0,0}, scale = 0.5 }, { { 173, 133, 169 }, { 173, 133, 169 } }),
+    subgroup = "aoc-fluids-slurry",
+    order = "l",
+	base_color = {r=0.75, g=0.33, b=0.14},
+	flow_color = {r=0.75, g=0.33, b=0.14},
+	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoc-titanium-molten",
+    icons = { { icon = "__angelssmelting_art__/graphics/icons/molten-titanium.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/ti.png", icon_size = 64 } },
+    subgroup = "aoc-fluids-molten",
+    order = "l",
+	base_color = {r=0.75, g=0.33, b=0.14},
+	flow_color = {r=0.75, g=0.33, b=0.14},
 	default_temperature = 20
 }})
 

@@ -16,7 +16,7 @@ data:extend({{
 data:extend({{
   type = "assembling-machine",
   name = "aoc-mixer",
-	crafting_categories = {"aoc-category-mixing","aoc-category-mixing-iron","aoc-category-mixing-copper","aoc-category-mixing-tin","aoc-category-mixing-aluminium","aoc-category-mixing-lead","aoc-category-mixing-silver","aoc-category-mixing-nickel","aoc-category-mixing-gold","aoc-category-mixing-zinc","aoc-category-mixing-chromium","aoc-category-mixing-tungsten"},
+	crafting_categories = {"aoc-category-mixing","aoc-category-mixing-iron","aoc-category-mixing-copper","aoc-category-mixing-tin","aoc-category-mixing-aluminium","aoc-category-mixing-lead","aoc-category-mixing-silver","aoc-category-mixing-nickel","aoc-category-mixing-gold","aoc-category-mixing-zinc","aoc-category-mixing-chromium","aoc-category-mixing-tungsten","aoc-category-mixing-titanium"},
 	crafting_speed = 1,
 	energy_source = {
     type = "electric",

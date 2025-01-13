@@ -277,7 +277,8 @@ script.on_nth_tick(97,
 		["aoc-metal-boosting-gold-recipe"] = "aoc-hidden-gold-module",
 		["aoc-metal-boosting-zinc-recipe"] = "aoc-hidden-zinc-module",
 		["aoc-metal-boosting-chromium-recipe"] = "aoc-hidden-chromium-module",
-		["aoc-metal-boosting-tungsten-recipe"] = "aoc-hidden-tungsten-module"
+		["aoc-metal-boosting-tungsten-recipe"] = "aoc-hidden-tungsten-module",
+		["aoc-metal-boosting-titanium-recipe"] = "aoc-hidden-titanium-module"
 	}
 
 	if storage.metal_beacons then
@@ -559,32 +560,37 @@ function check_players( cauldron )
 	if cauldron.get_recipe() and cauldron.get_recipe().category == "aoc-category-brewing" and cauldron.crafting_progress >= 1-cauldron.crafting_speed/(60*cauldron.get_recipe().energy) then
 		local flag = false
 		local chance, recipe = string.match(cauldron.get_recipe().name, "^aoc%-brewing%-(%d%d)%-(.*)$")
-		if cauldron.force.recipes[recipe] then 
-			chance = chance/100
-			local surface = cauldron.surface
-			local temp = surface.find_entities_filtered({type="character", area={{cauldron.position.x-8, cauldron.position.y-8}, {cauldron.position.x+8, cauldron.position.y+8}}})
-			if temp ~= nil and #temp > 0 then 
-				local armor = temp[1].get_inventory(defines.inventory.character_armor)
-				if armor and #armor > 0 and armor[1].valid_for_read and armor[1].grid then
-					if armor[1].name == 'aoc-robe' then chance = chance+0.05 end
-					for k, v in pairs( armor[1].grid.get_contents() ) do
-						if equipment[v.name] then chance = chance+v.count*equipment[v.name] end
-					end
-					if math.random() < chance then 
-						flag = true
-						cauldron.force.recipes[recipe].enabled = true
-						cauldron.force.recipes[cauldron.get_recipe().name].enabled = false
-						local message = {"", {"age-of-creation.message_researched", prototypes.recipe[recipe].localised_name}}
-						for _, player in pairs(cauldron.force.players) do
-							player.print(message)
+		if recipe then
+			if cauldron.force.recipes[recipe] then 
+				chance = chance/100
+				local surface = cauldron.surface
+				local temp = surface.find_entities_filtered({type="character", area={{cauldron.position.x-8, cauldron.position.y-8}, {cauldron.position.x+8, cauldron.position.y+8}}})
+				if temp ~= nil and #temp > 0 then 
+					local armor = temp[1].get_inventory(defines.inventory.character_armor)
+					if armor and #armor > 0 and armor[1].valid_for_read and armor[1].grid then
+						if armor[1].name == 'aoc-robe' then chance = chance+0.05 end
+						for k, v in pairs( armor[1].grid.get_contents() ) do
+							if equipment[v.name] then chance = chance+v.count*equipment[v.name] end
+						end
+						if math.random() < chance then 
+							flag = true
+							cauldron.force.recipes[recipe].enabled = true
+							cauldron.force.recipes[cauldron.get_recipe().name].enabled = false
+							local message = {"", {"age-of-creation.message_researched", prototypes.recipe[recipe].localised_name}}
+							for _, player in pairs(cauldron.force.players) do
+								player.print(message)
+							end
 						end
 					end
 				end
-			end 
-		end
-		if not flag then
+			end
+			if not flag then
+				cauldron.crafting_progress = 0
+				cauldron.get_output_inventory().insert({name = "aoc-experiment-good", count = 1})
+			end
+		else
 			cauldron.crafting_progress = 0
-			cauldron.get_output_inventory().insert({name = "aoc-experiment-good", count = 1})
+			cauldron.get_output_inventory().insert({name = "aoc-experiment-helpful", count = 1})
 		end
 	end
 end

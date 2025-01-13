@@ -13,7 +13,7 @@ data:extend({{
 data:extend({{
   type = "assembling-machine",
   name = "aoc-electrolyzer",
-	crafting_categories = {"aoc-category-electrolyzing","aoc-category-electrolyzing-iron","aoc-category-electrolyzing-copper","aoc-category-electrolyzing-tin","aoc-category-electrolyzing-aluminium","aoc-category-electrolyzing-lead","aoc-category-electrolyzing-silver","aoc-category-electrolyzing-nickel","aoc-category-electrolyzing-gold","aoc-category-electrolyzing-zinc","aoc-category-electrolyzing-chromium","aoc-category-electrolyzing-tungsten"},
+	crafting_categories = {"aoc-category-electrolyzing","aoc-category-electrolyzing-iron","aoc-category-electrolyzing-copper","aoc-category-electrolyzing-tin","aoc-category-electrolyzing-aluminium","aoc-category-electrolyzing-lead","aoc-category-electrolyzing-silver","aoc-category-electrolyzing-nickel","aoc-category-electrolyzing-gold","aoc-category-electrolyzing-zinc","aoc-category-electrolyzing-chromium","aoc-category-electrolyzing-tungsten","aoc-category-electrolyzing-titanium"},
 	crafting_speed = 1,
 	energy_source = {
     type = "electric",

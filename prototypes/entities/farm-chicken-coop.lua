@@ -48,5 +48,6 @@ data:extend({{
         volume = 1000,
         pipe_connections = {{ flow_direction="input", direction = defines.direction.west, position = {-2, 0} }}
       }
-    }
+    },
+    surface_conditions = {{ property = "gravity", min = 0.1 }}
 }})

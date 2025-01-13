@@ -14,7 +14,7 @@ data:extend({{
 data:extend({{
   type = "assembling-machine",
   name = "aoc-casting-unit",
-	crafting_categories = {"aoc-category-casting","aoc-category-casting-iron","aoc-category-casting-copper","aoc-category-casting-tin","aoc-category-casting-aluminium","aoc-category-casting-lead","aoc-category-casting-silver","aoc-category-casting-nickel","aoc-category-casting-gold","aoc-category-casting-zinc","aoc-category-casting-chromium","aoc-category-casting-tungsten"},
+	crafting_categories = {"aoc-category-casting","aoc-category-casting-iron","aoc-category-casting-copper","aoc-category-casting-tin","aoc-category-casting-aluminium","aoc-category-casting-lead","aoc-category-casting-silver","aoc-category-casting-nickel","aoc-category-casting-gold","aoc-category-casting-zinc","aoc-category-casting-chromium","aoc-category-casting-tungsten","aoc-category-casting-titanium"},
 	crafting_speed = 1,
 	energy_source = {
     type = "electric",

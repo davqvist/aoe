@@ -102,7 +102,7 @@ data:extend({{
     request_to_open_door_timeout = 15,
     spawn_and_station_height = -0.1,
     draw_logistic_radius_visualization = true,
-    draw_construction_radius_visualization = false,
+    draw_construction_radius_visualization = true,
     circuit_wire_connection_point = {
         shadow = {green = {0.53125, -0.515625}, red = {0.75, -0.5625}},
         wire = {green = {0.453125, -0.609375}, red = {0.390625, -0.84375}}
@@ -113,4 +113,5 @@ data:extend({{
     default_total_logistic_output_signal = {type = 'virtual', name = 'signal-Y'},
     default_available_construction_output_signal = {type = 'virtual', name = 'signal-Z'},
     default_total_construction_output_signal = {type = 'virtual', name = 'signal-T'},
+    surface_conditions = {{ property = "pressure", min = 10 }}
 }})

@@ -105,6 +105,10 @@ data:extend({
   },
   {
     type = "module-category",
+    name = "aoc-module-titanium"
+  },
+  {
+    type = "module-category",
     name = "aoc-module-tungsten"
   },
   {

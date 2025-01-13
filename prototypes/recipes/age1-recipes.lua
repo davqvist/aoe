@@ -26,6 +26,7 @@ data:extend({{
 		{type = 'item', name = 'pipe', amount = 1}
     },
 	icons = combine_icons_tiny( get_icons( data.raw["item"]["pipe"] ), get_icons( data.raw["item"]["iron-plate"] ) ),
+	auto_recycle = false,
 	energy_required = 0.4
 }})
 
@@ -357,6 +358,7 @@ data:extend({{
         {type = 'item', name = 'aoc-rubber-tree-seedling', amount = 1}
     },
     energy_required = 20,
+	auto_recycle = false,
 	category = 'aoc-category-gene-lab'
 }})
 
@@ -384,6 +386,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoc-rubber-belt', amount = 2}
     },
+	auto_recycle = false,
 	energy_required = 1
 }})
 
@@ -502,6 +505,7 @@ data:extend({{
         {type = 'item', name = 'aoc-flax-seed', amount = 1}
     },
     energy_required = 40,
+	auto_recycle = false,
 	category = 'aoc-category-gene-lab'
 }})
 
@@ -545,6 +549,7 @@ data:extend({{
         {type = 'item', name = 'aoc-flax', amount = 2}
     },
     energy_required = 30,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-flax'
 }})
 
@@ -580,7 +585,8 @@ data:extend({{
         {type = 'item', name = 'aoc-flax-module-3b', amount=1, probability = 0.01}
     },
 	main_product = "aoc-flax-module-1a",
-    energy_required = 90,
+    auto_recycle = false,
+	energy_required = 90,
 	category = 'aoc-category-farm-plot-flax'
 }})
 
@@ -597,6 +603,7 @@ data:extend({{
         {type = 'item', name = 'aoc-tea-seed', amount = 1}
     },
     energy_required = 50,
+	auto_recycle = false,
 	category = 'aoc-category-gene-lab'
 }})
 
@@ -613,6 +620,7 @@ data:extend({{
         {type = 'item', name = 'aoc-coffee-beans', amount = 1}
     },
     energy_required = 50,
+	auto_recycle = false,
 	category = 'aoc-category-gene-lab'
 }})
 
@@ -631,6 +639,7 @@ data:extend({{
         {type = 'item', name = 'aoc-tea-leaves', amount = 2}
     },
     energy_required = 20,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-tea'
 }})
 
@@ -649,7 +658,8 @@ data:extend({{
         {type = 'item', name = 'aoc-tea-leaves-module-3', amount=1, probability = 0.02}
 	},
 	main_product = 'aoc-tea-leaves-module-1',
-    energy_required = 120,
+    auto_recycle = false,
+	energy_required = 120,
 	category = 'aoc-category-farm-plot-tea'
 }})
 
@@ -667,6 +677,7 @@ data:extend({{
         {type = 'item', name = 'aoc-coffee-plant', amount = 2}
     },
     energy_required = 20,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-coffee'
 }})
 
@@ -685,7 +696,8 @@ data:extend({{
         {type = 'item', name = 'aoc-coffee-plant-module-3', amount=1, probability = 0.02}
 	},
 	main_product = 'aoc-coffee-plant-module-1',
-    energy_required = 120,
+    auto_recycle = false,
+	energy_required = 120,
 	category = 'aoc-category-farm-plot-coffee'
 }})
 
@@ -885,6 +897,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'landfill', amount = 1}
     },
+	auto_recycle = false,
 	energy_required = 1
 }})
 
@@ -898,6 +911,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'landfill', amount = 1}
     },
+	auto_recycle = false,
 	energy_required = 1
 }})
 

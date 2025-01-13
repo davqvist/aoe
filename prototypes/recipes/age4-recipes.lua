@@ -2422,7 +2422,8 @@ data:extend({{
         {type = 'item', name = 'carbon', amount = 1}
     },
 	icons = combine_icons_tiny( get_icons( data.raw.item["carbon"] ), get_icons( data.raw.item["coal"] ) ),
-    energy_required = 5,
+  	auto_recycle = false,
+  	energy_required = 5,
 	category = 'aoc-category-high-pressure-heating'
 }})
 
@@ -2438,7 +2439,8 @@ data:extend({{
         {type = 'item', name = 'carbon', amount = 1}
     },
 	icons = combine_icons_tiny( get_icons( data.raw.item["carbon"] ), get_icons( data.raw.item["aoc-charcoal"] ) ),
-    energy_required = 5,
+  	auto_recycle = false,
+  	energy_required = 5,
 	category = 'aoc-category-high-pressure-heating'
 }})
 
@@ -2540,6 +2542,7 @@ data:extend({{
         {type = 'item', name = 'aoc-diamond', amount = 1}
     },
     energy_required = 10,
+	auto_recycle = false,
 	category = 'aoc-category-high-pressure-heating'
 }})
 
@@ -2874,6 +2877,7 @@ data:extend({{
 		{type = 'item', name = 'rail', amount = 4}
     },
 	icons = combine_icons_tiny( get_icons( data.raw["rail-planner"]['rail'] ), get_icons( data.raw["item"]["aoc-solder"] ) ),
+	auto_recycle = false,
 	energy_required = 2
 }})
 
@@ -3199,6 +3203,7 @@ data:extend({{
 	subgroup = "aoc-metals-iron",
     order = "z01",
 	energy_required = 60,
+	hide_from_player_crafting = true,
 	category = 'aoc-category-metal-boosting'
 }})
 
@@ -3215,6 +3220,7 @@ data:extend({{
 	subgroup = "aoc-metals-copper",
     order = "z02",
 	energy_required = 60,
+	hide_from_player_crafting = true,
 	category = 'aoc-category-metal-boosting'
 }})
 
@@ -3231,6 +3237,7 @@ data:extend({{
 	subgroup = "aoc-metals-tin",
     order = "z03",
 	energy_required = 60,
+	hide_from_player_crafting = true,
 	category = 'aoc-category-metal-boosting'
 }})
 
@@ -3247,6 +3254,7 @@ data:extend({{
 	subgroup = "aoc-metals-aluminium",
     order = "z04",
 	energy_required = 60,
+	hide_from_player_crafting = true,
 	category = 'aoc-category-metal-boosting'
 }})
 
@@ -3263,6 +3271,7 @@ data:extend({{
 	subgroup = "aoc-metals-lead",
     order = "z05",
 	energy_required = 60,
+	hide_from_player_crafting = true,
 	category = 'aoc-category-metal-boosting'
 }})
 
@@ -3279,6 +3288,7 @@ data:extend({{
 	subgroup = "aoc-metals-silver",
     order = "z06",
 	energy_required = 60,
+	hide_from_player_crafting = true,
 	category = 'aoc-category-metal-boosting'
 }})
 
@@ -3295,6 +3305,7 @@ data:extend({{
 	subgroup = "aoc-metals-nickel",
     order = "z07",
 	energy_required = 60,
+	hide_from_player_crafting = true,
 	category = 'aoc-category-metal-boosting'
 }})
 
@@ -3311,6 +3322,7 @@ data:extend({{
 	subgroup = "aoc-metals-gold",
     order = "z08",
 	energy_required = 60,
+	hide_from_player_crafting = true,
 	category = 'aoc-category-metal-boosting'
 }})
 
@@ -3327,6 +3339,7 @@ data:extend({{
 	subgroup = "aoc-metals-zinc",
     order = "z09",
 	energy_required = 60,
+	hide_from_player_crafting = true,
 	category = 'aoc-category-metal-boosting'
 }})
 
@@ -3343,6 +3356,7 @@ data:extend({{
 	subgroup = "aoc-metals-chromium",
     order = "z10",
 	energy_required = 60,
+	hide_from_player_crafting = true,
 	category = 'aoc-category-metal-boosting'
 }})
 
@@ -3359,6 +3373,7 @@ data:extend({{
 	subgroup = "aoc-metals-tungsten",
     order = "z11",
 	energy_required = 60,
+	hide_from_player_crafting = true,
 	category = 'aoc-category-metal-boosting'
 }})
 
@@ -3826,6 +3841,7 @@ data:extend({{
         {type = 'item', name = 'aoc-sheep', amount = 1, probability = 0.92}
     },
     energy_required = 60,
+	auto_recycle = false,
 	category = 'aoc-category-farm-barn-sheep'
 }})
 
@@ -3846,8 +3862,9 @@ data:extend({{
 		{type = 'item', name = 'aoc-sheep', amount = 3, ignored_by_stats = 3, ignored_by_productivity = 3},
 		{type = 'item', name = 'aoc-sheep', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.92}
     },
-    energy_required = 10,
-	main_product = 'aoc-wool',
+    main_product = 'aoc-wool',
+	energy_required = 10,
+	auto_recycle = false,
 	category = 'aoc-category-farm-barn-sheep'
 }})
 
@@ -3864,8 +3881,9 @@ data:extend({{
         {type = 'item', name = 'aoc-lamb', amount = 1},
 		{type = 'item', name = 'aoc-sheep', amount = 2, ignored_by_stats = 2, ignored_by_productivity = 2, probability = 0.88}
     },
-    energy_required = 30,
-	main_product = 'aoc-lamb',
+    main_product = 'aoc-lamb',
+	energy_required = 30,
+	auto_recycle = false,
 	category = 'aoc-category-farm-barn-sheep'
 }})
 
@@ -3886,6 +3904,7 @@ data:extend({{
     },
 	main_product = 'aoc-sheep-module-2',
     energy_required = 140,
+	auto_recycle = false,
 	category = 'aoc-category-farm-barn-sheep'
 }})
 
@@ -3906,6 +3925,7 @@ data:extend({{
     },
 	main_product = 'aoc-cow',
     energy_required = 80,
+	auto_recycle = false,
 	category = 'aoc-category-farm-barn-cow'
 }})
 
@@ -3926,8 +3946,9 @@ data:extend({{
 		{type = 'item', name = 'aoc-cow', amount = 3, ignored_by_stats = 3, ignored_by_productivity = 3},
 		{type = 'item', name = 'aoc-cow', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.92}
     },
-    energy_required = 16,
-	main_product = 'aoc-milk',
+    main_product = 'aoc-milk',
+	energy_required = 16,
+	auto_recycle = false,
 	category = 'aoc-category-farm-barn-cow'
 }})
 
@@ -3947,8 +3968,9 @@ data:extend({{
 		{type = 'item', name = 'aoc-ox', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.91},
 		{type = 'item', name = 'aoc-cow', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.86}
     },
-    energy_required = 35,
-	main_product = 'aoc-calf',
+    main_product = 'aoc-calf',
+	energy_required = 35,
+	auto_recycle = false,
 	category = 'aoc-category-farm-barn-cow'
 }})
 
@@ -3974,6 +3996,7 @@ data:extend({{
     },
 	main_product = 'aoc-cow-module-2',
     energy_required = 170,
+	auto_recycle = false,
 	category = 'aoc-category-farm-barn-cow'
 }})
 

@@ -120,6 +120,7 @@ data:extend({{
     {type = 'item', name = 'aoc-dna-construction', amount = 1}
   },
   energy_required = 5,
+  auto_recycle = false,
   category = 'aoc-category-gene-lab'
 }})
 data:extend({{
@@ -136,6 +137,7 @@ data:extend({{
     {type = 'item', name = 'aoc-dna-logistic', amount = 1}
   },
   energy_required = 5,
+  auto_recycle = false,
   category = 'aoc-category-gene-lab'
 }})
 data:extend({{
@@ -463,6 +465,7 @@ data:extend({{
       {type = 'item', name = 'aoc-honey', amount = 2}
     },
     main_product = 'aoc-queen-aoc-honey',
+    auto_recycle = false,
     energy_required = 60,
 	category = 'aoc-category-gene-lab'
 }})
@@ -803,6 +806,7 @@ for name, bee in pairs(bee_globals) do
         {type = 'item', name = 'aoc-dna-' .. name, amount = 1}
       },
       energy_required = 5,
+      auto_recycle = false,
       category = 'aoc-category-gene-lab'
     }})
     data:extend({{
@@ -820,6 +824,7 @@ for name, bee in pairs(bee_globals) do
       },
       main_product = 'aoc-queen-' .. name,
       energy_required = 60,
+      auto_recycle = false,
       category = 'aoc-category-inoculating'
     }})
     data:extend({{
@@ -837,6 +842,7 @@ for name, bee in pairs(bee_globals) do
       },
       main_product = 'aoc-queen-' .. name,
       energy_required = 60,
+      auto_recycle = false,
       category = 'aoc-category-inoculating'
     }})
     data:extend({{
@@ -857,6 +863,7 @@ for name, bee in pairs(bee_globals) do
       icons = combine_icons_tiny( get_icons( data.raw["item"]['aoc-queen-' .. name] ), get_icons( data.raw["item"]["aoc-frame-mutating"] ) ),
       main_product = 'aoc-queen-' .. name,
       energy_required = 60,
+      auto_recycle = false,
       category = 'aoc-category-inoculating'
     }})
     data:extend({{
@@ -877,6 +884,7 @@ for name, bee in pairs(bee_globals) do
       icons = combine_icons_tiny( get_icons( data.raw["item"]['aoc-queen-' .. name] ), get_icons( data.raw["item"]["aoc-frame-mutating"] ) ),
       main_product = 'aoc-queen-' .. name,
       energy_required = 60,
+      auto_recycle = false,
       category = 'aoc-category-inoculating'
     }})
     table.insert( data.raw["technology"][bee.technology].effects, { type = "unlock-recipe", recipe = 'aoc-gene-lab-dna-' .. name .. '-recipe' } )
@@ -896,7 +904,8 @@ for name, bee in pairs(bee_globals) do
       {type = 'item', name = 'aoc-larva-' .. name, amount = bee["offspring"]}
     },
     energy_required =  5,
-    category = 'aoc-category-bees-apiary'
+    auto_recycle = false,
+      category = 'aoc-category-bees-apiary'
   }})
   table.insert( data.raw["technology"][bee.technology].effects, { type = "unlock-recipe", recipe = 'aoc-larva-' .. name .. '-recipe' } )
   data:extend({{
@@ -911,7 +920,8 @@ for name, bee in pairs(bee_globals) do
       {type = 'item', name = 'aoc-larva-' .. name, amount = bee["offspring"]+1}
     },
     energy_required =  5,
-    icons = combine_icons_tiny( get_icons( data.raw["item"]['aoc-larva-' .. name] ), get_icons( data.raw["fluid"]["aoc-royal-jelly"] ) ),
+    auto_recycle = false,
+      icons = combine_icons_tiny( get_icons( data.raw["item"]['aoc-larva-' .. name] ), get_icons( data.raw["fluid"]["aoc-royal-jelly"] ) ),
     category = 'aoc-category-bees-apiary'
   }})
   table.insert( data.raw["technology"][bee.technology].effects, { type = "unlock-recipe", recipe = 'aoc-larva-' .. name .. '-royal-jelly-recipe' } )
@@ -927,6 +937,7 @@ for name, bee in pairs(bee_globals) do
       {type = 'item', name = 'aoc-bee-' .. name, amount = 1}
     },
     energy_required =  12,
+    auto_recycle = false,
     category = 'aoc-category-bees-apiary'
   }})
   table.insert( data.raw["technology"][bee.technology].effects, { type = "unlock-recipe", recipe = 'aoc-bee-' .. name .. '-recipe' } )
@@ -942,6 +953,7 @@ for name, bee in pairs(bee_globals) do
       {type = 'item', name = 'aoc-queen-' .. name, amount = 1}
     },
     energy_required =  12,
+    auto_recycle = false,
     category = 'aoc-category-bees-apiary'
   }})
   table.insert( data.raw["technology"][bee.technology].effects, { type = "unlock-recipe", recipe = 'aoc-queen-' .. name .. '-recipe' } )
@@ -956,7 +968,8 @@ for name, bee in pairs(bee_globals) do
       {type = 'item', name = 'aoc-comb-' .. name, amount = 1}
     },
     energy_required = 60,
-    order = 'd1',
+    auto_recycle = false,
+      order = 'd1',
     category = 'aoc-category-bees-hive'
   }})
   table.insert( data.raw["technology"][bee.technology].effects, { type = "unlock-recipe", recipe = 'aoc-comb-' .. name .. '-recipe' } )
@@ -975,6 +988,7 @@ for name, bee in pairs(bee_globals) do
     main_product = 'aoc-comb-' .. name,
     icons = combine_icons_tiny( get_icons( data.raw["item"]['aoc-comb-' .. name] ), get_icons( data.raw["item"]["aoc-frame-untreated"] ) ),
     energy_required = 60,
+    auto_recycle = false,
     order = 'd2',
     category = 'aoc-category-bees-hive'
   }})
@@ -994,6 +1008,7 @@ for name, bee in pairs(bee_globals) do
     main_product = 'aoc-comb-' .. name,
     icons = combine_icons_tiny( get_icons( data.raw["item"]['aoc-comb-' .. name] ), get_icons( data.raw["item"]["aoc-frame-impregnated"] ) ),
     energy_required = 60,
+    auto_recycle = false,
     order = 'd3',
     category = 'aoc-category-bees-hive'
   }})
@@ -1013,11 +1028,14 @@ for name, bee in pairs(bee_globals) do
     main_product = 'aoc-comb-' .. name,
     icons = combine_icons_tiny( get_icons( data.raw["item"]['aoc-comb-' .. name] ), get_icons( data.raw["item"]["aoc-frame-sweet"] ) ),
     energy_required = 72,
+    auto_recycle = false,
     order = 'd4',
     category = 'aoc-category-bees-hive'
   }})
   table.insert( data.raw["technology"][bee.technology].effects, { type = "unlock-recipe", recipe = 'aoc-comb-' .. name .. '-sweet-recipe' } )
-  local res = {{type = 'item', name = "aoc-beeswax", amount = 1}}
+  local a = 1
+  if name == "aoc-honey" or name == "aoc-royal-jelly" then a = 2 end
+  local res = {{type = 'item', name = "aoc-beeswax", amount = a}}
   local mp = "aoc-beeswax"
   if data.raw.item[name] then
     local amt = math.floor(bee["amount"])
@@ -1039,6 +1057,7 @@ for name, bee in pairs(bee_globals) do
       {type = 'fluid', name = 'aoc-solvent', amount = 2}
     },
     results = res,
+    auto_recycle = false,
     main_product = mp,
     energy_required = 5,
     category = 'aoc-category-squeezing'

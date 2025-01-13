@@ -39,6 +39,7 @@ for p, prot in pairs(defines.prototypes.item) do
 	if data.raw[p] then
 		for i, item in pairs( data.raw[p] ) do
 			if data.raw[p][i].default_import_location then data.raw[p][i].default_import_location = nil end
+            if not data.raw[p][i].weight then data.raw[p][i].weight = 1000/data.raw[p][i].stack_size * kg end
 		end
 	end
 end

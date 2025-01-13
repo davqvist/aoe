@@ -184,6 +184,12 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
+    name = "aoc-modules",
+    group = "production",
+    order = "f"
+  },
+  {
+	  type = "item-subgroup",
     name = "aoc-inserter",
     group = "logistics",
     order = "a"
@@ -508,6 +514,24 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
+    name = "aoc-guns",
+    group = "combat",
+    order = "c"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-ammo",
+    group = "combat",
+    order = "d"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-turrets",
+    group = "combat",
+    order = "e"
+  },
+  {
+	  type = "item-subgroup",
     name = "aoc-magic-buildings",
     group = "aoc-magic",
     order = "a"
@@ -550,15 +574,27 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-planets",
+    name = "aoc-space-platform",
     group = "space",
     order = "b"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-space-stuff",
+    name = "aoc-planets",
     group = "space",
     order = "c"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-space-stuff",
+    group = "space",
+    order = "d"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-asteroids",
+    group = "space",
+    order = "e"
   },
   {
 	  type = "item-subgroup",

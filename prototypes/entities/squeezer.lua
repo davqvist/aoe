@@ -125,6 +125,7 @@ data:extend({{
     audible_distance_modifier = 0.5,
     apparent_volume = 2.5,
   },
+  surface_conditions = {{ property = "gravity", min = 0.1 }}
 }})
 
 data:extend({{

@@ -21,6 +21,7 @@ data:extend({{
     order = "l",
     place_result = "aoc-burner-lab",
     stack_size = 25,
+    surface_conditions = {{ property = "gravity", min = 0.1 }}
 }})
 
 data:extend({{

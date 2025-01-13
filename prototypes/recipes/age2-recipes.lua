@@ -433,6 +433,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'stone-wall', amount = 1}
     },
+	auto_recycle = false,
 	energy_required = 2
 }})
 
@@ -996,6 +997,7 @@ data:extend({{
 		{type = 'item', name = 'pipe', amount = 1}
     },
 	icons = combine_icons_tiny( get_icons( data.raw["item"]["pipe"] ), get_icons( data.raw["item"]["aoc-tin-plate"] ) ),
+	auto_recycle = false,
 	energy_required = 0.4
 }})
 
@@ -1509,7 +1511,7 @@ data:extend({{
     results = {
         {type = 'item', name = 'raw-fish', amount = 2}
     },
-    energy_required = 60,
+    energy_required = 50,
 	category = 'aoc-category-farm-reservoir-fish'
 }})
 

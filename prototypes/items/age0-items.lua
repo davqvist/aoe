@@ -10,7 +10,8 @@ data:extend({{
     icon_size = 64,
     subgroup = "aoc-flora-wood",
     order = "c",
-    stack_size = 200
+    stack_size = 200,
+    flags = { "always-show" }
 }})
 
 data:extend({{
@@ -20,7 +21,8 @@ data:extend({{
     icon_size = 64,
     subgroup = "aoc-flora-wood",
     order = "d",
-    stack_size = 500
+    stack_size = 500,
+    flags = { "always-show" }
 }})
 
 data.raw['item']['wood'].subgroup = "aoc-flora-wood"

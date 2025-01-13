@@ -6,8 +6,14 @@ for _, recipe in pairs(data.raw.recipe) do
         local icons = {}
         local main_product = ''
         for _, result in pairs(recipe.results) do
+            local type = result.type
+            if not data.raw[result.type][result.name] then
+                for p, prot in pairs(defines.prototypes.item) do
+                    if data.raw[p] and data.raw[p][result.name] then type = p end
+                end
+            end
             if _ == 1 then 
-                icons = combine_icons_tiny( get_icons( data.raw[result.type][result.name] ), data.raw['fluid']['aoc-vacuum'].icons )
+                icons = combine_icons_tiny( get_icons( data.raw[type][result.name] ), data.raw['fluid']['aoc-vacuum'].icons )
                 main_product = result.name
             end
             if not result.ignored_by_productivity then

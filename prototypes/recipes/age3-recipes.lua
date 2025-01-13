@@ -28,6 +28,7 @@ data:extend({{
         {type = 'item', name = 'aoc-maize-kernels', amount = 1}
     },
     energy_required = 60,
+    auto_recycle = false,
 	category = 'aoc-category-gene-lab'
 }})
 
@@ -57,6 +58,7 @@ data:extend({{
         {type = 'item', name = 'aoc-maize', amount = 3}
     },
     energy_required = 45,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-maize'
 }})
 
@@ -74,6 +76,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-maize"] ), get_icons( data.raw.item["aoc-magnesium-dust"] ) ),
     energy_required = 35,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-maize'
 }})
 
@@ -97,6 +100,7 @@ data:extend({{
     },
 	main_product = "aoc-maize-module-1a",
     energy_required = 130,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-maize'
 }})
 
@@ -130,6 +134,7 @@ data:extend({{
         {type = 'item', name = 'aoc-soybean-seeds', amount = 1}
     },
     energy_required = 90,
+    auto_recycle = false,
 	category = 'aoc-category-gene-lab'
 }})
 
@@ -160,6 +165,7 @@ data:extend({{
         {type = 'item', name = 'aoc-soybeans', amount = 5}
     },
     energy_required = 60,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-soybean'
 }})
 
@@ -179,6 +185,7 @@ data:extend({{
     },
 	main_product = "aoc-soybeans-module-1",
     energy_required = 150,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-soybean'
 }})
 
@@ -270,6 +277,7 @@ data:extend({{
         {type = 'item', name = 'aoc-egg', amount = 1}
     },
     energy_required = 60,
+    auto_recycle = false,
 	category = 'aoc-category-gene-lab'
 }})
 
@@ -395,6 +403,7 @@ data:extend({{
         {type = 'item', name = 'aoc-lamb', amount = 1}
     },
     energy_required = 120,
+    auto_recycle = false,
 	category = 'aoc-category-gene-lab'
 }})
 
@@ -413,6 +422,7 @@ data:extend({{
         {type = 'item', name = 'aoc-sheep', amount = 1, probability = 0.9}
     },
     energy_required = 70,
+	auto_recycle = false,
 	category = 'aoc-category-farm-barn-sheep'
 }})
 
@@ -433,6 +443,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-sheep', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.9}
     },
     energy_required = 10,
+	auto_recycle = false,
 	main_product = 'aoc-wool',
 	category = 'aoc-category-farm-barn-sheep'
 }})
@@ -451,6 +462,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-sheep', amount = 2, ignored_by_stats = 2, ignored_by_productivity = 2, probability = 0.85}
     },
     energy_required = 35,
+	auto_recycle = false,
 	main_product = 'aoc-lamb',
 	category = 'aoc-category-farm-barn-sheep'
 }})
@@ -507,6 +519,7 @@ data:extend({{
     },
 	main_product = 'aoc-sheep-module-1',
     energy_required = 100,
+	auto_recycle = false,
 	category = 'aoc-category-farm-barn-sheep'
 }})
 
@@ -525,6 +538,7 @@ data:extend({{
         {type = 'item', name = 'aoc-calf', amount = 1}
     },
     energy_required = 150,
+    auto_recycle = false,
 	category = 'aoc-category-gene-lab'
 }})
 
@@ -545,6 +559,7 @@ data:extend({{
     },
 	main_product = 'aoc-cow',
     energy_required = 90,
+	auto_recycle = false,
 	category = 'aoc-category-farm-barn-cow'
 }})
 
@@ -565,8 +580,9 @@ data:extend({{
 		{type = 'item', name = 'aoc-cow', amount = 3, ignored_by_stats = 3, ignored_by_productivity = 3},
 		{type = 'item', name = 'aoc-cow', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.9}
     },
-    energy_required = 16,
-	main_product = 'aoc-milk',
+    main_product = 'aoc-milk',
+	energy_required = 16,
+	auto_recycle = false,
 	category = 'aoc-category-farm-barn-cow'
 }})
 
@@ -586,8 +602,9 @@ data:extend({{
 		{type = 'item', name = 'aoc-ox', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.9},
 		{type = 'item', name = 'aoc-cow', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.85}
     },
-    energy_required = 40,
-	main_product = 'aoc-calf',
+    main_product = 'aoc-calf',
+	energy_required = 40,
+	auto_recycle = false,
 	category = 'aoc-category-farm-barn-cow'
 }})
 
@@ -651,6 +668,7 @@ data:extend({{
     },
 	main_product = 'aoc-cow-module-1',
     energy_required = 120,
+	auto_recycle = false,
 	category = 'aoc-category-farm-barn-cow'
 }})
 
@@ -688,6 +706,7 @@ data:extend({{
     },
 	main_product = 'aoc-apple-tree-seeds',
     energy_required = 40,
+    auto_recycle = false,
 	category = 'aoc-category-gene-lab'
 }})
 
@@ -703,6 +722,7 @@ data:extend({{
         {type = 'item', name = 'aoc-spruce-tree', amount = 1}
     },
     energy_required = 10,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-spruce-tree'
 }})
 
@@ -720,6 +740,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-spruce-tree"] ), get_icons( data.raw.item["aoc-loam"] ) ),
     energy_required = 6,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-spruce-tree'
 }})
 
@@ -738,6 +759,7 @@ data:extend({{
     },
 	main_product = 'aoc-resin',
     energy_required = 8,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-spruce-tree'
 }})
 
@@ -773,6 +795,7 @@ data:extend({{
     },
 	main_product = "aoc-spruce-tree-module-1",
     energy_required = 40,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-spruce-tree'
 }})
 
@@ -790,6 +813,7 @@ data:extend({{
         {type = 'item', name = 'aoc-rubber-tree', amount = 1}
     },
     energy_required = 12,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-rubber-tree'
 }})
 
@@ -829,6 +853,7 @@ data:extend({{
     },
 	main_product = "aoc-rubber-tree-module-1",
     energy_required = 60,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-rubber-tree'
 }})
 
@@ -845,6 +870,7 @@ data:extend({{
         {type = 'item', name = 'aoc-apple-tree', amount = 1}
     },
     energy_required = 15,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-apple-tree'
 }})
 
@@ -861,6 +887,7 @@ data:extend({{
         {type = 'item', name = 'aoc-apple', amount = 4}
     },
     energy_required = 15,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-apple-tree'
 }})
 
@@ -910,6 +937,7 @@ data:extend({{
     },
 	main_product = "aoc-apple-tree-module-1",
     energy_required = 80,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-apple-tree'
 }})
 
@@ -927,6 +955,7 @@ data:extend({{
         {type = 'item', name = 'aoc-olive-tree', amount = 1}
     },
     energy_required = 15,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-olive-tree'
 }})
 
@@ -944,6 +973,7 @@ data:extend({{
         {type = 'item', name = 'aoc-olive', amount = 8}
     },
     energy_required = 15,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-olive-tree'
 }})
 
@@ -994,6 +1024,7 @@ data:extend({{
     },
 	main_product = "aoc-olive-tree-module-1",
     energy_required = 100,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-olive-tree'
 }})
 
@@ -1009,6 +1040,7 @@ data:extend({{
         {type = 'item', name = 'aoc-grass', amount = 2}
     },
     energy_required = 12,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-rest'
 }})
 
@@ -1051,7 +1083,8 @@ data:extend({{
 	results = {
         {type = 'item', name = 'landfill', amount = 1}
     },
-	energy_required = 1
+	auto_recycle = false,
+    energy_required = 1
 }})
 
 data:extend({{
@@ -1131,6 +1164,7 @@ data:extend({{
 	results = {
 		{type = 'item', name = 'aoc-soda-ash', amount = 1}
     },
+    auto_recycle = false,
 	energy_required = 2.4,
 	category = 'smelting'
 }})
@@ -1198,6 +1232,7 @@ data:extend({{
     },
     energy_required = 12,
     icons = combine_icons_tiny( get_icons( data.raw.item["aoc-grass"] ), get_icons( data.raw.item["aoc-loam"] ) ),
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-rest'
 }})
 
@@ -1261,7 +1296,7 @@ data:extend({{
     results = {
         {type = 'item', name = 'raw-fish', amount = 3}
     },
-    energy_required = 60,
+    energy_required = 50,
 	category = 'aoc-category-farm-reservoir-fish'
 }})
 
@@ -1316,6 +1351,7 @@ data:extend({{
         {type = 'item', name = 'aoc-flax', amount = 4}
     },
     energy_required = 42,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-flax'
 }})
 
@@ -1339,6 +1375,7 @@ data:extend({{
     },
 	main_product = "aoc-flax-module-2a",
     energy_required = 130,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-flax'
 }})
 
@@ -1362,6 +1399,7 @@ data:extend({{
     },
 	main_product = "aoc-flax-module-2b",
     energy_required = 130,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-flax'
 }})
 
@@ -1381,6 +1419,7 @@ data:extend({{
         {type = 'item', name = 'aoc-tea-leaves', amount = 3}
     },
     energy_required = 20,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-tea'
 }})
 
@@ -1401,6 +1440,7 @@ data:extend({{
 	},
 	main_product = 'aoc-tea-leaves-module-2',
     energy_required = 160,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-tea'
 }})
 
@@ -1419,6 +1459,7 @@ data:extend({{
         {type = 'item', name = 'aoc-coffee-plant', amount = 3}
     },
     energy_required = 20,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-coffee'
 }})
 
@@ -1439,6 +1480,7 @@ data:extend({{
 	},
 	main_product = 'aoc-coffee-plant-module-2',
     energy_required = 160,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-coffee'
 }})
 
@@ -1471,6 +1513,7 @@ data:extend({{
         {type = 'item', name = 'aoc-maize', amount = 7}
     },
     energy_required = 80,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-maize'
 }})
 
@@ -1489,6 +1532,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-maize"] ), get_icons( data.raw.item["aoc-magnesium-dust"] ) ),
     energy_required = 55,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-maize'
 }})
 
@@ -1513,6 +1557,7 @@ data:extend({{
     },
 	main_product = "aoc-maize-module-2a",
     energy_required = 180,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-maize'
 }})
 
@@ -1537,6 +1582,7 @@ data:extend({{
     },
 	main_product = "aoc-maize-module-2b",
     energy_required = 180,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-maize'
 }})
 
@@ -1554,6 +1600,7 @@ data:extend({{
         {type = 'item', name = 'aoc-soybeans', amount = 6}
     },
     energy_required = 60,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-soybean'
 }})
 
@@ -1574,6 +1621,7 @@ data:extend({{
     },
 	main_product = "aoc-soybeans-module-2",
     energy_required = 200,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-soybean'
 }})
 
@@ -1589,6 +1637,7 @@ data:extend({{
         {type = 'item', name = 'aoc-puree', amount = 1}
     },
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-puree"] ), get_icons( data.raw.item["aoc-apple"] ) ),
+    auto_recycle = false,
     energy_required = 3,
 	category = 'aoc-category-mixing'
 }})
@@ -1605,6 +1654,7 @@ data:extend({{
         {type = 'item', name = 'aoc-puree', amount = 1}
     },
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-puree"] ), get_icons( data.raw.item["aoc-maize-kernels"] ) ),
+    auto_recycle = false,
     energy_required = 3,
 	category = 'aoc-category-mixing'
 }})
@@ -1794,6 +1844,7 @@ data:extend({{
         {type = 'item', name = 'aoc-yeast', amount = 1, probability = 0.1}
     },
     energy_required = 120,
+    auto_recycle = false,
 	category = 'aoc-category-gene-lab'
 }})
 
@@ -1859,6 +1910,7 @@ data:extend({{
         {type = 'item', name = 'aoc-spruce-tree', amount = 1}
     },
     energy_required = 5,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-spruce-tree'
 }})
 
@@ -1877,6 +1929,7 @@ data:extend({{
     },
 	main_product = 'aoc-resin',
     energy_required = 7,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-spruce-tree'
 }})
 
@@ -1898,6 +1951,7 @@ data:extend({{
     },
 	main_product = "aoc-spruce-tree-module-2",
     energy_required = 55,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-spruce-tree'
 }})
 
@@ -1916,6 +1970,7 @@ data:extend({{
         {type = 'item', name = 'aoc-rubber-tree', amount = 1}
     },
     energy_required = 10,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-rubber-tree'
 }})
 
@@ -1957,6 +2012,7 @@ data:extend({{
     },
 	main_product = "aoc-rubber-tree-module-2",
     energy_required = 85,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-rubber-tree'
 }})
 
@@ -1974,6 +2030,7 @@ data:extend({{
         {type = 'item', name = 'aoc-apple-tree', amount = 1}
     },
     energy_required = 12,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-apple-tree'
 }})
 
@@ -1991,6 +2048,7 @@ data:extend({{
         {type = 'item', name = 'aoc-apple', amount = 4}
     },
     energy_required = 12,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-apple-tree'
 }})
 
@@ -2012,6 +2070,7 @@ data:extend({{
     },
 	main_product = "aoc-apple-tree-module-2",
     energy_required = 110,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-apple-tree'
 }})
 
@@ -2030,6 +2089,7 @@ data:extend({{
         {type = 'item', name = 'aoc-olive-tree', amount = 1}
     },
     energy_required = 12,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-olive-tree'
 }})
 
@@ -2048,6 +2108,7 @@ data:extend({{
         {type = 'item', name = 'aoc-olive', amount = 8}
     },
     energy_required = 12,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-olive-tree'
 }})
 
@@ -2070,5 +2131,6 @@ data:extend({{
     },
 	main_product = "aoc-olive-tree-module-2",
     energy_required = 140,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-olive-tree'
 }})

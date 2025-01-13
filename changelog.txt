@@ -1,10 +1,41 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.4
+Date: 2025-01-12
+  Features:
+    - YAFC support (at least til the Magic Age)
+    - Added age 7 tips and tricks entry
+  Changes:
+    - Fixed the landfill stack size typo
+    - Removed water from lotus module recipes so that the recipe actually works
+    - Lowered engine costs for rocket silos
+    - 2 starting combs now yield 2 beeswax
+  Bugfixes:
+    - Fixed a cauldron crash
+    - Logistic Hive construction radius is now properly showing
+    - Gunpowder recipe actually added to Military 1 tech 
+---------------------------------------------------------------------------------------------------
+Version: 0.0.3
+Date: 2025-01-01
+  Features:
+    - Robot Cargo Size and Robot Cargo Speed researches added
+    - Start of age 7
+  Changes:
+    - Now Iron Ore isn't recyclable for real
+    - Leaves and Logs will now show up in filter and selection lists
+    - Set rocket capacity to stack size by default and I will add exceptions over time
+    - Space Data rocket capacity is now 1 as intended
+    - Changed surface conditions of a few entities to prepare for space
+---------------------------------------------------------------------------------------------------
 Version: 0.0.2
-Date: 2024-12-19
+Date: 2024-12-23
   Features:
     - Added all the tier 3 plant technologies and recipes
   Changes:
     - HPH soda ash recipe changed to make it actually work and added output fluid connection to HPH
+    - Fixed the majority of recycling loop holes
+    - Substations can handle up to 1GW now
+    - Hide Metal Boosting and Steam recipes from player crafting that are unlocked from the start
+    - Made T1&2 fish recipes a bit faster
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.1
 Date: 2024-12-18

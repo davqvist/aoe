@@ -13,7 +13,7 @@ data:extend({{
 
 data.raw['item']['landfill'].subgroup = "aoc-decoration"
 data.raw['item']['landfill'].order = "c"
-data.raw['item']['landfill'].stack_size = 509
+data.raw['item']['landfill'].stack_size = 500
 
 data:extend({{
     type = "item",

@@ -662,3 +662,11 @@ table.insert( data.raw["technology"]["aoc-fluid-handling-tech-2"].effects, {
 
 beekeeping.override = true
 beekeeping.problem_in_data_updates = false
+
+-- YAFC
+
+data.script_enabled = data.script_enabled or {}
+table.insert(data.script_enabled, {
+    type = "entity",
+    name = "burner-crusher",
+})

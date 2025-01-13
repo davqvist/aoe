@@ -60,5 +60,6 @@ data:extend({{
           { flow_direction="output", direction = defines.direction.east, position = {3.5, 1.5} }
         }
       }
-    }
+    },
+    surface_conditions = {{ property = "gravity", min = 0.1 }}
 }})

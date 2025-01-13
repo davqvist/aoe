@@ -426,7 +426,8 @@ data:extend({{
 	},
 	results = {
         {type = 'item', name = 'stone-wall', amount = 1}
-    },
+    },	
+	auto_recycle = false,
 	energy_required = 2
 }})
 

@@ -10,7 +10,8 @@ local age_tech_cost = {
     {0,2,1},
     {0,3,2,1},
     {0,5,3,2,1},
-    {0,8,5,3,2,1}
+    {0,8,5,3,2,1},
+    {0,13,8,5,3,2,1}
 }
 
 function table.contains(table, element)

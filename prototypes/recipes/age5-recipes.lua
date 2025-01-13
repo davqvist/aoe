@@ -11,7 +11,8 @@ data:extend({{
         {type = 'fluid', name = 'steam', amount = 50, temperature = 165}
     },
     energy_required = 1,
-	category = 'aoc-category-boiling'
+	hide_from_player_crafting = true,
+    category = 'aoc-category-boiling'
 }})
 
 data:extend({{
@@ -46,6 +47,7 @@ data:extend({{
 		{type = 'item', name = 'iron-ore', amount = 1, probability = 0.9, ignored_by_stats = 1, ignored_by_productivity = 1}
     },
 	main_product = 'crude-oil',
+    auto_recycle = false,
     energy_required = 5,
 	category = 'oil-processing'
 }})
@@ -96,6 +98,7 @@ data:extend({{
 		{type = 'item', name = 'iron-ore', amount = 1, probability = 0.9, ignored_by_stats = 1, ignored_by_productivity = 1}
     },
 	main_product = 'crude-oil',
+    auto_recycle = false,
     energy_required = 6,
 	category = 'oil-processing'
 }})
@@ -688,7 +691,8 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoc-rubber-belt', amount = 4}
     },
-	energy_required = 1
+	auto_recycle = false,
+    energy_required = 1
 }})
 
 data:extend({{
@@ -1716,6 +1720,7 @@ data:extend({{
         {type = 'fluid', name = 'aoc-carbon-dioxide', amount = 10}
     },
     main_product = 'aoc-soda-ash',
+    auto_recycle = false,
 	energy_required = 2,
     category = 'aoc-category-high-pressure-heating'
 }})
@@ -1995,7 +2000,8 @@ data:extend({{
         {type = 'item', name = 'aoc-kelp', amount = 1}
     },
     energy_required = 10,
-	category = 'aoc-category-farm-reservoir-kelp'
+	auto_recycle = false,
+    category = 'aoc-category-farm-reservoir-kelp'
 }})
 
 data:extend({{
@@ -2032,6 +2038,7 @@ data:extend({{
         {type = 'item', name = 'aoc-flax', amount = 6}
     },
     energy_required = 52,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-flax'
 }})
 
@@ -2056,6 +2063,7 @@ data:extend({{
     },
 	main_product = "aoc-flax-module-3a",
     energy_required = 170,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-flax'
 }})
 
@@ -2080,6 +2088,7 @@ data:extend({{
     },
 	main_product = "aoc-flax-module-3b",
     energy_required = 170,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-flax'
 }})
 
@@ -2099,6 +2108,7 @@ data:extend({{
         {type = 'item', name = 'aoc-tea-leaves', amount = 4}
     },
     energy_required = 20,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-tea'
 }})
 
@@ -2119,6 +2129,7 @@ data:extend({{
 	},
 	main_product = 'aoc-tea-leaves-module-3',
     energy_required = 190,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-tea'
 }})
 
@@ -2137,6 +2148,7 @@ data:extend({{
         {type = 'item', name = 'aoc-coffee-plant', amount = 4}
     },
     energy_required = 20,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-coffee'
 }})
 
@@ -2157,6 +2169,7 @@ data:extend({{
 	},
 	main_product = 'aoc-coffee-plant-module-3',
     energy_required = 190,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-coffee'
 }})
 
@@ -2173,6 +2186,7 @@ data:extend({{
         {type = 'item', name = 'aoc-maize', amount = 7}
     },
     energy_required = 65,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-maize'
 }})
 
@@ -2191,6 +2205,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-maize"] ), get_icons( data.raw.item["aoc-magnesium-dust"] ) ),
     energy_required = 55,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-maize'
 }})
 
@@ -2215,6 +2230,7 @@ data:extend({{
     },
 	main_product = "aoc-maize-module-3a",
     energy_required = 220,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-maize'
 }})
 
@@ -2239,6 +2255,7 @@ data:extend({{
     },
 	main_product = "aoc-maize-module-3b",
     energy_required = 220,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-maize'
 }})
 
@@ -2256,6 +2273,7 @@ data:extend({{
         {type = 'item', name = 'aoc-soybeans', amount = 8}
     },
     energy_required = 60,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-soybean'
 }})
 
@@ -2276,6 +2294,7 @@ data:extend({{
     },
 	main_product = "aoc-soybeans-module-3",
     energy_required = 240,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-soybean'
 }})
 
@@ -2294,6 +2313,7 @@ data:extend({{
         {type = 'item', name = 'aoc-spruce-tree', amount = 1}
     },
     energy_required = 4,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-spruce-tree'
 }})
 
@@ -2312,6 +2332,7 @@ data:extend({{
     },
 	main_product = 'aoc-resin',
     energy_required = 6,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-spruce-tree'
 }})
 
@@ -2334,6 +2355,7 @@ data:extend({{
     },
 	main_product = "aoc-spruce-tree-module-2",
     energy_required = 70,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-spruce-tree'
 }})
 
@@ -2353,6 +2375,7 @@ data:extend({{
         {type = 'item', name = 'aoc-rubber-tree', amount = 1}
     },
     energy_required = 8,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-rubber-tree'
 }})
 
@@ -2396,6 +2419,7 @@ data:extend({{
     },
 	main_product = "aoc-rubber-tree-module-3",
     energy_required = 110,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-rubber-tree'
 }})
 
@@ -2414,6 +2438,7 @@ data:extend({{
         {type = 'item', name = 'aoc-apple-tree', amount = 1}
     },
     energy_required = 9,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-apple-tree'
 }})
 
@@ -2432,6 +2457,7 @@ data:extend({{
         {type = 'item', name = 'aoc-apple', amount = 4}
     },
     energy_required = 9,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-apple-tree'
 }})
 
@@ -2454,6 +2480,7 @@ data:extend({{
     },
 	main_product = "aoc-apple-tree-module-3",
     energy_required = 135,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-apple-tree'
 }})
 
@@ -2473,6 +2500,7 @@ data:extend({{
         {type = 'item', name = 'aoc-olive-tree', amount = 1}
     },
     energy_required = 9,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-olive-tree'
 }})
 
@@ -2492,6 +2520,7 @@ data:extend({{
         {type = 'item', name = 'aoc-olive', amount = 8}
     },
     energy_required = 9,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-olive-tree'
 }})
 
@@ -2515,6 +2544,7 @@ data:extend({{
     },
 	main_product = "aoc-olive-tree-module-3",
     energy_required = 175,
+	auto_recycle = false,
 	category = 'aoc-category-farm-plot-olive-tree'
 }})
 

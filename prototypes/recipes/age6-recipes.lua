@@ -60,6 +60,7 @@ data:extend({{
         {type = 'item', name = 'aoc-lotus-flower-seeds', amount = 1, probability = 0.05}
     },
     energy_required = 100,
+	auto_recycle = false,
 	category = 'aoc-category-gene-lab',
 	research = 'aoc-kelp'
 }})
@@ -119,7 +120,6 @@ data:extend({{
     type = 'recipe',
     enabled = false,
 	ingredients = {
-        {type = 'fluid', name = 'water', amount = 200},
         {type = 'fluid', name = 'aoc-starlight', amount = 100},
         {type = 'item', name = 'aoc-soil', amount = 2},
         {type = 'item', name = 'aoc-lotus-flower-seeds', amount = 1}
@@ -137,7 +137,6 @@ data:extend({{
     type = 'recipe',
     enabled = false,
 	ingredients = {
-        {type = 'fluid', name = 'water', amount = 300},
         {type = 'fluid', name = 'aoc-starlight', amount = 150},
         {type = 'item', name = 'aoc-soil', amount = 3},
         {type = 'item', name = 'aoc-lotus-flower-module-1', amount = 1},
@@ -181,6 +180,7 @@ data:extend({{
 		{type = 'item', name = 'copper-ore', amount = 10}
     },
 	energy_required = 10,
+	auto_recycle = false,
 	category = 'aoc-category-alchemy',
 	research = 'aoc-zinc-ore'
 }})
@@ -197,6 +197,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-nickel-ore', amount = 10}
     },
 	energy_required = 10,
+	auto_recycle = false,
 	category = 'aoc-category-alchemy',
 	research = 'copper-ore'
 }})
@@ -213,6 +214,7 @@ data:extend({{
 		{type = 'item', name = 'iron-ore', amount = 10}
     },
 	energy_required = 10,
+	auto_recycle = false,
 	category = 'aoc-category-alchemy',
 	research = 'aoc-nickel-ore'
 }})
@@ -229,6 +231,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-manganese-ore', amount = 10}
     },
 	energy_required = 10,
+	auto_recycle = false,
 	category = 'aoc-category-alchemy',
 	research = 'iron-ore'
 }})
@@ -245,6 +248,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-chromium-ore', amount = 10}
     },
 	energy_required = 10,
+	auto_recycle = false,
 	category = 'aoc-category-alchemy',
 	research = 'aoc-manganese-ore'
 }})
@@ -261,6 +265,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-silver-ore', amount = 10}
     },
 	energy_required = 10,
+	auto_recycle = false,
 	category = 'aoc-category-alchemy',
 	research = 'aoc-tin-ore'
 }})
@@ -277,6 +282,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-magnesium-ore', amount = 10}
     },
 	energy_required = 10,
+	auto_recycle = false,
 	category = 'aoc-category-alchemy',
 	research = 'aoc-aluminium-ore'
 }})
@@ -293,6 +299,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-gold-ore', amount = 10}
     },
 	energy_required = 10,
+	auto_recycle = false,
 	category = 'aoc-category-alchemy',
 	research = 'aoc-lead-ore'
 }})
@@ -309,6 +316,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-platinum-ore', amount = 10}
     },
 	energy_required = 10,
+	auto_recycle = false,
 	category = 'aoc-category-alchemy',
 	research = 'aoc-gold-ore'
 }})
@@ -962,7 +970,7 @@ data:extend({{
     type = 'recipe',
     enabled = false,
     ingredients = {
-        {type = 'item', name = 'aoc-flask', amount = 500},
+        {type = 'item', name = 'aoc-flask', amount = 200},
 		{type = 'item', name = 'aoc-planet-sun', amount = 1},
 		{type = 'item', name = 'aoc-planet-mercury', amount = 1},
 		{type = 'item', name = 'aoc-planet-venus', amount = 1},
@@ -975,12 +983,12 @@ data:extend({{
     results = {
         {type = 'item', name = 'aoc-planet-space', amount = 1}
     },
-    energy_required = 25,
+    energy_required = 20,
 	research = 'aoc-flask'
 }})
 
 data:extend({{
-    name = 'aoc-crafting-lds-recipe',
+    name = 'aoc-crafting-lds-aluminium-bronze-recipe',
     type = 'recipe',
     enabled = false,
     ingredients = {
@@ -991,6 +999,7 @@ data:extend({{
     results = {
         {type = 'item', name = 'low-density-structure', amount = 2}
     },
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["low-density-structure"] ), get_icons( data.raw["item"]["aoc-aluminium-bronze"] ) ),
     energy_required = 20
 }})
 
@@ -1000,7 +1009,7 @@ data:extend({{
     enabled = false,
     ingredients = {
         {type = 'item', name = 'aoc-stainless-steel', amount = 200},
-		{type = 'item', name = 'electric-engine-unit', amount = 100},
+		{type = 'item', name = 'electric-engine-unit', amount = 50},
 		{type = 'item', name = 'refined-concrete', amount = 1000},
 		{type = 'item', name = 'processing-unit', amount = 200}
     },
@@ -1008,4 +1017,20 @@ data:extend({{
         {type = 'item', name = 'aoc-rocket-silo-simple', amount = 1}
     },
     energy_required = 60
+}})
+
+data:extend({{
+    name = 'aoc-crafting-cargo-landing-pad-recipe',
+    type = 'recipe',
+    enabled = false,
+    ingredients = {
+        {type = 'item', name = 'aoc-stainless-steel', amount = 20},
+		{type = 'item', name = 'electric-engine-unit', amount = 20},
+		{type = 'item', name = 'refined-concrete', amount = 200},
+		{type = 'item', name = 'processing-unit', amount = 5}
+    },
+    results = {
+        {type = 'item', name = 'cargo-landing-pad', amount = 1}
+    },
+    energy_required = 5
 }})

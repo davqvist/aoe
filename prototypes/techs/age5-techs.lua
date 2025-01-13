@@ -746,7 +746,7 @@ data:extend({{
 
 data:extend({{
     type = "technology",
-    name = "aoc-laser-tech",
+    name = "aoc-laser-tech-1",
     icon = "__base__/graphics/technology/laser.png",
     icon_size = 256, icon_mipmaps = 4,
     prerequisites = {"aoc-electric-engines-tech", "aoc-noble-gasses-tech", "aoc-equipment-tech-1"},
@@ -775,7 +775,7 @@ data:extend({{
     type = "technology",
     name = "aoc-silicon-tech-2",
     icons = get_icons( data.raw["item"]["aoc-silicon-doped"] ),
-    prerequisites = {"aoc-laser-tech", "aoc-silicon-tech-1", "aoc-phosphate-tech"},
+    prerequisites = {"aoc-laser-tech-1", "aoc-silicon-tech-1", "aoc-phosphate-tech"},
 	  effects = {
       {
         type = "unlock-recipe",

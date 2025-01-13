@@ -17,6 +17,7 @@ require("__ageofcreation__/prototypes/fluids/fluids")
 require("__ageofcreation__/prototypes/recipes/recipes")
 require("__ageofcreation__/prototypes/techs/techs")
 require("__ageofcreation__/prototypes/bees")
+require("__ageofcreation__/prototypes/space/space")
 
 --angelsmods.refining.disable_ore_override = true
 --function angelsmods.functions.move_item(i_name, i_subgroup, i_order, i_type) end

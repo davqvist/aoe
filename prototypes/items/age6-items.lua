@@ -341,10 +341,15 @@ data:extend({{
     subgroup = "aoc-planets",
     order = "i",
     stack_size = 10,
-    rocket_launch_products = {{type = "item", name = "aoc-science-07", amount = 500}},
+    weight = 1 * tons,
+    rocket_launch_products = {{type = "item", name = "aoc-science-07", amount = 200}},
     send_to_orbit_mode = "automated"
 }})
 
 data.raw['item']['low-density-structure'].subgroup = "aoc-space-stuff"
 data.raw['item']['low-density-structure'].order = "b"
 data.raw['item']['low-density-structure'].stack_size = 50
+
+data.raw['item']['cargo-landing-pad'].subgroup = "aoc-space-buildings"
+data.raw['item']['cargo-landing-pad'].order = "d"
+data.raw['item']['cargo-landing-pad'].stack_size = 10

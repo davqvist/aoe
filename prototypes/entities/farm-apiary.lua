@@ -79,6 +79,7 @@ data:extend({{
 		sound = {
 			filename = '__NPBees2_art__/sound/bee-machine.ogg'
 		},
-		audible_distance_modifier = 0.5
+		audible_distance_modifier = 0.5,
+    surface_conditions = {{ property = "gravity", min = 0.1 }}
 	}
   }})

@@ -97,5 +97,20 @@ data:extend({
     },
     tag = "[item=aoc-science-06]",
     --image = ""
+  },
+  {
+    type = "tips-and-tricks-item",
+    name = "aoc-tat-science-07",
+    category = "AOC",
+    order = "h",
+    indent = 1,
+    dependencies = { "aoc-tat-science-06" },
+    trigger =
+    {
+      type = "research",
+      technology = "aoc-space-age-tech"
+    },
+    tag = "[item=aoc-science-07]",
+    --image = ""
   }
 })

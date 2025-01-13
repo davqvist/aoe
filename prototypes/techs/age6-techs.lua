@@ -403,15 +403,19 @@ data:extend({{
     name = "aoc-space-age-tech",
     icon_size = 64,
     icon = "__ageofcreation__/img/items/science-pack-7.png",
-    prerequisites = {"aoc-stargazing-tech","aoc-aluminium-bronze-tech"},
+    prerequisites = {"aoc-stargazing-tech","aoc-aluminium-bronze-tech","aoc-petrochem-fuels-tech"},
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoc-crafting-lds-recipe"
+        recipe = "aoc-crafting-lds-aluminium-bronze-recipe"
       },
       {
         type = "unlock-recipe",
         recipe = "aoc-crafting-rocket-silo-simple-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-cargo-landing-pad-recipe"
       }
     },
     unit = {

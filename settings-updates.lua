@@ -25,6 +25,11 @@ if data.raw["string-setting"]["power-overload-max-power-po-huge-electric-pole"] 
     data.raw["string-setting"]["power-overload-max-power-po-huge-electric-pole"].default_value = "6GW"
     data.raw["string-setting"]["power-overload-max-power-po-huge-electric-pole"].allowed_values = {"6GW"}
 end
+if data.raw["string-setting"]["power-overload-max-power-substation"] then
+    data.raw["string-setting"]["power-overload-max-power-substation"].hidden = true
+    data.raw["string-setting"]["power-overload-max-power-substation"].default_value = "1GW"
+    data.raw["string-setting"]["power-overload-max-power-substation"].allowed_values = {"1GW"}
+end
 if data.raw["string-setting"]["power-overload-max-power-po-small-electric-fuse"] then
     data.raw["string-setting"]["power-overload-max-power-po-small-electric-fuse"].hidden = true
     data.raw["string-setting"]["power-overload-max-power-po-small-electric-fuse"].default_value = "35MW"

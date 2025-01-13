@@ -103,7 +103,8 @@ data:extend({{
         }
       }
     }
-  }
+  },
+  surface_conditions = {{ property = "gravity", min = 0.1 }}
 }})
 
 data:extend({{

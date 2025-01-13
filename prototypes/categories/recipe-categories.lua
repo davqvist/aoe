@@ -86,6 +86,11 @@ data:extend({
   },
   {
     type = "recipe-category",
+    name = "aoc-category-casting-titanium",
+    modules = { "aoc-module-titanium" }
+  },
+  {
+    type = "recipe-category",
     name = "aoc-category-cracking"
   },
   {
@@ -205,6 +210,11 @@ data:extend({
     type = "recipe-category",
     name = "aoc-category-electrolyzing-tungsten",
     modules = { "aoc-module-tungsten" }
+  },
+  {
+    type = "recipe-category",
+    name = "aoc-category-electrolyzing-titanium",
+    modules = { "aoc-module-titanium" }
   },
   {
     type = "recipe-category",
@@ -458,6 +468,11 @@ data:extend({
     type = "recipe-category",
     name = "aoc-category-mixing-tungsten",
     modules = { "aoc-module-tungsten" }
+  },
+  {
+    type = "recipe-category",
+    name = "aoc-category-mixing-titanium",
+    modules = { "aoc-module-titanium" }
   },
   {
     type = "recipe-category",
