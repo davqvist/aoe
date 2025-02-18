@@ -1,4 +1,21 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.5
+Date: 2025-02-05
+  Features:
+    - Support for mods that build and deconstruct entities with scripts, like Construction Drones
+    - Support for Project Cybersyn
+    - Support for Nanobots (except they can't blow up cliffs for now as they have it hard coded in the mod)
+  Changes:
+    - QOL research now also scales the time cost over the ages
+    - Speed Module now properly cost the same as the other modules
+    - Changed some research items related to lotus production
+  Bugfixes:
+    - The laser lens recipe now actually gets unlocked with techs
+    - Recipes researched via magic now don't reset anymore on mod update or adding or removing mods
+    - Enchanting Table now properly only accepts mana
+    - The Infusing Table now properly only buffers 1 item instead of 1 stack
+    - Parametrizing of recipes in buildings turned back on which was accidently turned off
+---------------------------------------------------------------------------------------------------
 Version: 0.0.4
 Date: 2025-01-12
   Features:

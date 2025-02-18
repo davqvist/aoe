@@ -762,6 +762,10 @@ data:extend({{
       {
         type = "unlock-recipe",
         recipe = "aoc-lasering-silicon-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-lasering-lens-recipe"
       }
     },
     unit = {

@@ -651,6 +651,358 @@ else
     --
 end
 
+-- Project Cybersyn 
+
+if mods["cybersyn"] then
+    data.raw['item']['cybersyn-combinator'].subgroup = "aoc-logic"
+    data.raw['item']['cybersyn-combinator'].order = "d1"
+
+    data:extend({{
+        name = 'aoc-cybersyn-combinator-recipe',
+        type = 'recipe',
+        enabled = false,
+        ingredients = {
+            {type = 'item', name = 'electronic-circuit', amount = 5},
+            {type = 'item', name = 'copper-cable', amount = 5}
+        },
+        results = {
+            {type = 'item', name = 'cybersyn-combinator', amount = 1}
+        },
+        energy_required = 2
+    }})
+
+    data:extend({{
+        type = "technology",
+        name = "aoc-cybersyn-tech",
+        icon = "__cybersyn__/graphics/icons/tech.png",
+        icon_size = 256,
+        prerequisites = {"aoc-trains-tech-1", "aoc-circuit-network-tech"},
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "aoc-cybersyn-combinator-recipe"
+            }
+        },
+        unit = {
+            count = 40,
+            ingredients = AOC["age_tech_table"][4],
+            time = 35
+        }
+    }})
+end
+
+-- Nanobots 
+
+if mods["Nanobots2"] then
+    data.raw['gun']['gun-nano-emitter'].subgroup = "aoc-production-tools"
+    data.raw['gun']['gun-nano-emitter'].order = "b1"
+    data.raw['gun']['gun-nano-emitter'].stack_size = 1
+    data.raw['ammo']['ammo-nano-constructors'].subgroup = "aoc-production-tools"
+    data.raw['ammo']['ammo-nano-constructors'].order = "b2"
+    data.raw['ammo']['ammo-nano-constructors'].stack_size = 100
+    data.raw['ammo']['ammo-nano-termites'].subgroup = "aoc-production-tools"
+    data.raw['ammo']['ammo-nano-termites'].order = "b3"
+    data.raw['ammo']['ammo-nano-termites'].stack_size = 100
+
+    data:extend({{
+        type = 'recipe',
+        name = 'aoc-gun-nano-emitter-recipe',
+        enabled = false,
+        energy_required = 30,
+        ingredients = {
+            {type = 'item', name = 'copper-plate', amount = 5},
+            {type = 'item', name = 'iron-plate', amount = 10},
+            {type = 'item', name = 'electronic-circuit', amount = 2}
+        },
+        results = {{type = 'item', name='gun-nano-emitter', amount = 1}}
+    }})
+
+    data:extend({{
+        type = 'recipe',
+        name = 'aoc-ammo-nano-constructors-recipe',
+        enabled = false,
+        energy_required = 1,
+        ingredients = {
+            {type = 'item', name = 'iron-stick', amount = 1},
+            {type = 'item', name = 'repair-pack', amount = 1}
+        },
+        results = {
+            {type = 'item', name = 'ammo-nano-constructors', amount = 1}
+        }
+    }})
+
+    data:extend({{
+        type = 'recipe',
+        name = 'aoc-ammo-nano-termites-recipe',
+        enabled = false,
+        energy_required = 5,
+        ingredients = {
+            {type = 'item', name = 'iron-stick', amount = 1},
+            {type = 'item', name = 'electronic-circuit', amount = 1}
+        },
+        results = {
+            {type = 'item', name = 'ammo-nano-termites', amount = 2}
+        }
+    }})
+
+    data:extend({{
+        type = 'technology',
+        name = 'aoc-nanobots-tech',
+        icon = '__Nanobots2__/graphics/technology/tech-nanobots.png',
+        icon_size = 254,
+        prerequisites = {'aoc-electronics-tech-1'},
+        effects = {
+            {
+                type = 'unlock-recipe',
+                recipe = 'aoc-gun-nano-emitter-recipe'
+            },
+            {
+                type = 'unlock-recipe',
+                recipe = 'aoc-ammo-nano-constructors-recipe'
+            },
+            {
+                type = 'unlock-recipe',
+                recipe = 'aoc-ammo-nano-termites-recipe'
+            }
+        },
+        unit = {
+            count = 30,
+            ingredients = AOC["age_tech_table"][2],
+            time = 25
+        }
+    }})
+
+    local function technology_icon_constant_range()
+        local icons = {
+            {icon = '__Nanobots2__/graphics/technology/tech-nano-range.png', icon_size = 256, icon_mipmaps = 1},
+            {
+                icon = '__core__/graphics/icons/technology/constants/constant-range.png',
+                icon_size = 128,
+                icon_mipmaps = 3,
+                shift = {100, 100}
+            }
+        }
+        return icons
+    end
+    local function technology_icon_constant_movement_speed()
+        local icons = {
+            {icon = '__Nanobots2__/graphics/technology/tech-nano-speed.png', icon_size = 256, icon_mipmaps = 1},
+            {
+                icon = '__core__/graphics/icons/technology/constants/constant-movement-speed.png',
+                icon_size = 128,
+                icon_mipmaps = 3,
+                shift = {100, 100}
+            }
+        }
+        return icons
+    end
+
+    data:extend({{
+        type = 'technology',
+        name = 'aoc-nanobots-range-tech-1',
+        icons = technology_icon_constant_range(),
+        effects = {{type = 'ammo-damage', ammo_category = 'nano-ammo', modifier = 1}},
+        prerequisites = {'aoc-nanobots-tech'},
+        unit = {
+            count = 20,
+            ingredients = AOC["age_tech_table"][2],
+            time = 25
+        },
+        upgrade = true
+    }})
+    
+    data:extend({{
+        type = 'technology',
+        name = 'aoc-nanobots-range-tech-2',
+        icons = technology_icon_constant_range(),
+        effects = {{type = 'ammo-damage', ammo_category = 'nano-ammo', modifier = 1}},
+        prerequisites = {'aoc-tree-cultivation-tech-1', 'aoc-nanobots-range-tech-1'},
+        unit = {
+            count = 20,
+            ingredients = AOC["age_tech_table"][3],
+            time = 30
+        },
+        upgrade = true
+    }})
+    
+    data:extend({{
+        type = 'technology',
+        name = 'aoc-nanobots-range-tech-3',
+        icons = technology_icon_constant_range(),
+        effects = {{type = 'ammo-damage', ammo_category = 'nano-ammo', modifier = 1}},
+        prerequisites = {'aoc-medium-voltage-tech', 'aoc-nanobots-range-tech-2'},
+        unit = {
+            count = 20,
+            ingredients = AOC["age_tech_table"][4],
+            time = 35
+        },
+        upgrade = true
+    }})
+    
+    data:extend({{
+        type = 'technology',
+        name = 'aoc-nanobots-range-tech-4',
+        icons = technology_icon_constant_range(),
+        effects = {{type = 'ammo-damage', ammo_category = 'nano-ammo', modifier = 1}},
+        prerequisites = {'aoc-coal-liquefaction-tech', 'aoc-nanobots-range-tech-3'},
+        unit = {
+            count = 20,
+            ingredients = AOC["age_tech_table"][5],
+            time = 40
+        },
+        upgrade = true
+    }})
+
+    data:extend({{
+        type = 'technology',
+        name = 'aoc-nanobots-speed-tech-1',
+        icons = technology_icon_constant_movement_speed(),
+        effects = {{type = 'gun-speed', ammo_category = 'nano-ammo', modifier = 1}},
+        prerequisites = {'aoc-nanobots-tech'},
+        unit = {
+            count = 20,
+            ingredients = AOC["age_tech_table"][2],
+            time = 25
+        },
+        upgrade = true
+    }})
+    
+    data:extend({{
+        type = 'technology',
+        name = 'aoc-nanobots-speed-tech-2',
+        icons = technology_icon_constant_movement_speed(),
+        effects = {{type = 'gun-speed', ammo_category = 'nano-ammo', modifier = 1}},
+        prerequisites = {'aoc-tree-cultivation-tech-1', 'aoc-nanobots-speed-tech-1'},
+        unit = {
+            count = 20,
+            ingredients = AOC["age_tech_table"][3],
+            time = 30
+        },
+        upgrade = true
+    }})
+    
+    data:extend({{
+        type = 'technology',
+        name = 'aoc-nanobots-speed-tech-3',
+        icons = technology_icon_constant_movement_speed(),
+        effects = {{type = 'gun-speed', ammo_category = 'nano-ammo', modifier = 1}},
+        prerequisites = {'aoc-medium-voltage-tech', 'aoc-nanobots-speed-tech-2'},
+        unit = {
+            count = 20,
+            ingredients = AOC["age_tech_table"][4],
+            time = 35
+        },
+        upgrade = true
+    }})
+    
+    data:extend({{
+        type = 'technology',
+        name = 'aoc-nanobots-speed-tech-4',
+        icons = technology_icon_constant_movement_speed(),
+        effects = {{type = 'gun-speed', ammo_category = 'nano-ammo', modifier = 1}},
+        prerequisites = {'aoc-coal-liquefaction-tech', 'aoc-nanobots-speed-tech-3'},
+        unit = {
+            count = 20,
+            ingredients = AOC["age_tech_table"][5],
+            time = 40
+        },
+        upgrade = true
+    }})
+    
+    data.raw['item']['equipment-bot-chip-items'].subgroup = "aoc-equipment"
+    data.raw['item']['equipment-bot-chip-items'].order = "z1"
+    data.raw['item']['equipment-bot-chip-items'].stack_size = 20
+    data.raw['item']['equipment-bot-chip-launcher'].subgroup = "aoc-equipment"
+    data.raw['item']['equipment-bot-chip-launcher'].order = "z2"
+    data.raw['item']['equipment-bot-chip-launcher'].stack_size = 20
+    data.raw['item']['equipment-bot-chip-trees'].subgroup = "aoc-equipment"
+    data.raw['item']['equipment-bot-chip-trees'].order = "z3"
+    data.raw['item']['equipment-bot-chip-trees'].stack_size = 20
+    data.raw['item']['equipment-bot-chip-feeder'].subgroup = "aoc-equipment"
+    data.raw['item']['equipment-bot-chip-feeder'].order = "z4"
+    data.raw['item']['equipment-bot-chip-feeder'].stack_size = 20
+    data.raw['item']['equipment-bot-chip-nanointerface'].subgroup = "aoc-equipment"
+    data.raw['item']['equipment-bot-chip-nanointerface'].order = "z5"
+    data.raw['item']['equipment-bot-chip-nanointerface'].stack_size = 20
+    
+    data:extend({{
+        type = 'recipe',
+        name = 'aoc-equipment-bot-chip-items-recipe',
+        enabled = false,
+        energy_required = 10,
+        ingredients = {
+            {type = 'item', name = 'processing-unit', amount = 1},
+            {type = 'item', name = 'battery', amount = 1}
+        },
+        results = {{type = 'item', name='equipment-bot-chip-items', amount = 1}}
+    }})
+    data:extend({{
+        type = 'recipe',
+        name = 'aoc-equipment-bot-chip-launcher-recipe',
+        enabled = false,
+        energy_required = 10,
+        ingredients = {
+            {type = 'item', name = 'processing-unit', amount = 1},
+            {type = 'item', name = 'battery', amount = 1}
+        },
+        results = {{type = 'item', name='equipment-bot-chip-launcher', amount = 1}}
+    }})
+    data:extend({{
+        type = 'recipe',
+        name = 'aoc-equipment-bot-chip-trees-recipe',
+        enabled = false,
+        energy_required = 10,
+        ingredients = {
+            {type = 'item', name = 'processing-unit', amount = 1},
+            {type = 'item', name = 'battery', amount = 1}
+        },
+        results = {{type = 'item', name='equipment-bot-chip-trees', amount = 1}}
+    }})
+    data:extend({{
+        type = 'recipe',
+        name = 'aoc-equipment-bot-chip-feeder-recipe',
+        enabled = false,
+        energy_required = 10,
+        ingredients = {
+            {type = 'item', name = 'processing-unit', amount = 1},
+            {type = 'item', name = 'battery', amount = 1}
+        },
+        results = {{type = 'item', name='equipment-bot-chip-feeder', amount = 1}}
+    }})
+    data:extend({{
+        type = 'recipe',
+        name = 'aoc-equipment-bot-chip-nanointerface-recipe',
+        enabled = false,
+        energy_required = 10,
+        ingredients = {
+            {type = 'item', name = 'processing-unit', amount = 1},
+            {type = 'item', name = 'battery', amount = 1}
+        },
+        results = {{type = 'item', name='equipment-bot-chip-nanointerface', amount = 1}}
+    }})
+    
+    table.insert( data.raw["technology"]["aoc-logistic-system-tech"].effects,{
+        type = "unlock-recipe",
+        recipe = "aoc-equipment-bot-chip-items-recipe"
+    })
+    table.insert( data.raw["technology"]["aoc-logistic-system-tech"].effects,{
+        type = "unlock-recipe",
+        recipe = "aoc-equipment-bot-chip-launcher-recipe"
+    })
+    table.insert( data.raw["technology"]["aoc-logistic-system-tech"].effects,{
+        type = "unlock-recipe",
+        recipe = "aoc-equipment-bot-chip-trees-recipe"
+    })
+    table.insert( data.raw["technology"]["aoc-logistic-system-tech"].effects,{
+        type = "unlock-recipe",
+        recipe = "aoc-equipment-bot-chip-feeder-recipe"
+    })
+    table.insert( data.raw["technology"]["aoc-logistic-system-tech"].effects,{
+        type = "unlock-recipe",
+        recipe = "aoc-equipment-bot-chip-nanointerface-recipe"
+    })
+end
+
 -- Configurable Valves
 
 table.insert( data.raw["technology"]["aoc-fluid-handling-tech-2"].effects, {

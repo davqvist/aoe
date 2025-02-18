@@ -2,13 +2,21 @@ function init_recipes()
 	if storage.infusing == nil then storage.infusing = {} end
     for _, recipe in pairs(prototypes.get_recipe_filtered({{filter = "category", category = "aoc-category-infusing"}})) do
 		for _, ingredient in pairs(recipe.ingredients) do
-			storage.infusing[ingredient.name] = recipe.name
+			if not storage.infusing[ingredient.name] then storage.infusing[ingredient.name] = recipe.name end
 		end
 	end
     if storage.unlocking == nil then storage.unlocking = {} end
     for _, recipe in pairs(prototypes.get_recipe_filtered({{filter = "category", category = "aoc-category-unlocking"}})) do
-		storage.unlocking[recipe.name] = true
+		if not storage.unlocking[recipe.name] then storage.unlocking[recipe.name] = true end
 	end
+	if storage.recipes == nil then storage.recipes = {}
+    else
+		for _, player in pairs(game.players) do 
+			for recipe, value in pairs(storage.recipes) do 
+				player.force.recipes[recipe].enabled = value
+			end
+		end
+	end	
 end
 
 script.on_init(
@@ -21,6 +29,12 @@ script.on_init(
   end
 )
 
+script.on_configuration_changed(
+  function()
+	init_recipes()
+  end
+)
+
 script.on_event(defines.events.on_player_created,
   function(event)
     local player = game.players[event.player_index]
@@ -29,12 +43,6 @@ script.on_event(defines.events.on_player_created,
 	player.remove_item{name = "stone-furnace", count = 1}
 	player.remove_item{name = "iron-plate", count = 8}
 	--player.remove_item{name = "burner-ore-crusher", count = 1}
-  end
-)
-
-script.on_configuration_changed(
-  function()
-	init_recipes()
   end
 )
 
@@ -102,7 +110,7 @@ script.on_event(defines.events.on_gui_click,
   end
 )
 
-script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_entity}, 
+script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_entity, defines.events.script_raised_built, defines.events.script_raised_revive, defines.events.on_space_platform_built_entity}, 
   function(event)
     local entity = event.entity
 	if(entity.name == "aoc-forestry") then 
@@ -147,7 +155,7 @@ function drop(event, to_drop)
 			to_drop.amount = to_drop.amount - number
 		end
 	end
-	if( flag == true or event.name == defines.events.on_robot_mined_entity ) then 
+	if( flag == true or event.name ~= defines.events.on_player_mined_entity ) then 
 		local entity = event.entity
 		local ground_item = entity.surface.create_entity{
 			name = "item-on-ground",
@@ -159,7 +167,7 @@ function drop(event, to_drop)
 	end
 end
 
-script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity}, 
+script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity, defines.events.on_entity_died, defines.events.script_raised_destroy, defines.events.on_space_platform_mined_entity}, 
   function(event)
     local entity = event.entity
 	if(entity.name == "aoc-wind-turbine") then 
@@ -324,9 +332,12 @@ script.on_nth_tick(151,
 						end
 						if flag and storage.infusing[v[1].name] == storage.infusing[v[2].name] and storage.infusing[v[1].name] == storage.infusing[v[3].name] and storage.infusing[v[1].name] == storage.infusing[v[4].name] and itm.force.recipes[storage.infusing[v[1].name]].enabled then
 							itm.set_recipe( storage.infusing[v[1].name] )
-							for i, p in pairs( pedestals ) do
-								inv[i].remove( {name=v[i].name, count=1} )
-								itm.get_inventory(defines.inventory.assembling_machine_input).insert( {name=v[i].name, count=1} )
+							local out = itm.get_inventory(defines.inventory.assembling_machine_output)
+							if #out.get_contents() == 0 then
+								for i, p in pairs( pedestals ) do
+									inv[i].remove( {name=v[i].name, count=1} )
+									itm.get_inventory(defines.inventory.assembling_machine_input).insert( {name=v[i].name, count=1} )
+								end
 							end
 						end
 					else
@@ -364,7 +375,10 @@ script.on_event(defines.events.on_tick,
 	end
 	if storage.scrolltick and storage.scrolltick[game.tick] then
 		for name, status in pairs( storage.unlocking ) do
-			game.get_player(storage.scrolltick[game.tick]).force.recipes[name].enabled = false
+			if game.get_player(storage.scrolltick[game.tick]).force.recipes[name] then
+				game.get_player(storage.scrolltick[game.tick]).force.recipes[name].enabled = false
+				storage.recipes[name] = false
+			end
 		end
 		storage.scrolltick[game.tick] = nil
 	end
@@ -535,6 +549,7 @@ function check_research( escritoire )
 		local recipe = string.match(escritoire.get_recipe().name, "^aoc%-unlocking%-.*%-tech%-?%d?%-(.*)$")
 		if escritoire.force.recipes[recipe] then 
 			escritoire.force.recipes[recipe].enabled = true
+			storage.recipes[recipe] = true
 			local message = {"", {"age-of-creation.message_researched", prototypes.recipe[recipe].localised_name}}
 			for _, player in pairs(escritoire.force.players) do
 				player.print(message)
@@ -575,7 +590,9 @@ function check_players( cauldron )
 						if math.random() < chance then 
 							flag = true
 							cauldron.force.recipes[recipe].enabled = true
+							storage.recipes[recipe] = true
 							cauldron.force.recipes[cauldron.get_recipe().name].enabled = false
+							storage.recipes[cauldron.get_recipe().name] = false
 							local message = {"", {"age-of-creation.message_researched", prototypes.recipe[recipe].localised_name}}
 							for _, player in pairs(cauldron.force.players) do
 								player.print(message)
@@ -627,9 +644,10 @@ script.on_event(defines.events.on_script_trigger_effect,
 			local flag = false
 			for name, status in pairs( storage.unlocking ) do
 				local tech, recipe = string.match(name, "^aoc%-unlocking%-(.*%-tech%-?%d?)%-(.*)$")
-				if not p.force.recipes[recipe].enabled and p.force.technologies[tech].researched then
+				if p.force.recipes[name] and p.force.recipes[recipe] and not p.force.recipes[recipe].enabled and p.force.technologies[tech].researched then
 					flag = true
 					p.force.recipes[name].enabled = true
+					storage.recipes[name] = true
 				end
 			end
 			if flag then 

@@ -8,7 +8,8 @@ data.raw.recipe["scrap-recycling"] = nil
 for _, recipe in pairs(data.raw.recipe) do
   if recipe.name:sub(1, 4) ~= "aoc-" and 
     recipe.name:find('%-barrel$') == nil and
-    recipe.name:find('recycling$') == nil then
+    recipe.name:find('recycling$') == nil and 
+    recipe.is_parameter == false then
     if recipes_to_keep[recipe.name] == nil then
       data.raw.recipe[_] = nil
     else 

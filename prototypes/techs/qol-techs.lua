@@ -31,7 +31,7 @@ for age=2,#prereq do
                 unit = {
                     count = 20,
                     ingredients = AOC["age_tech_table"][age],
-                    time = 30
+                    time = 15+5*age
                 }
             }})
         end

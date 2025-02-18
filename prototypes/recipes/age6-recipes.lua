@@ -112,7 +112,7 @@ data:extend({{
     main_product = 'aoc-lotus-flower-seeds',
     energy_required = 6,
 	category = 'aoc-category-greenhouse',
-	research = 'aoc-lotus-flower-seeds'
+	research = 'aoc-lotus-flower'
 }})
 
 data:extend({{
@@ -129,7 +129,7 @@ data:extend({{
     },
     energy_required = 180,
 	category = 'aoc-category-farm-reservoir-lotus',
-	research = 'aoc-lotus-flower-seeds'
+	research = 'aoc-lotus-flower'
 }})
 
 data:extend({{

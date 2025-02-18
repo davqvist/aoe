@@ -107,6 +107,10 @@ data.raw['item']['stone-wall'].subgroup = "aoc-construction"
 data.raw['item']['stone-wall'].order = "c"
 data.raw['item']['stone-wall'].stack_size = 200
 
+data.raw['repair-tool']['repair-pack'].subgroup = "aoc-production-tools"
+data.raw['repair-tool']['repair-pack'].order = "a"
+data.raw['repair-tool']['repair-pack'].stack_size = 100
+
 data:extend({{
     type = "item",
     name = "aoc-gravel",

@@ -160,33 +160,39 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-processing-buildings",
+    name = "aoc-production-tools",
     group = "production",
     order = "b"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-specific-buildings",
+    name = "aoc-processing-buildings",
     group = "production",
     order = "c"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-voiding-buildings",
+    name = "aoc-specific-buildings",
     group = "production",
     order = "d"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-other-buildings",
+    name = "aoc-voiding-buildings",
     group = "production",
     order = "e"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-modules",
+    name = "aoc-other-buildings",
     group = "production",
     order = "f"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-modules",
+    group = "production",
+    order = "g"
   },
   {
 	  type = "item-subgroup",

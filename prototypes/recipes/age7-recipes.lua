@@ -314,12 +314,13 @@ data:extend({{
 	ingredients = {
 		{type = 'item', name = 'aoc-zinc-plate', amount = 10},
 		{type = 'item', name = 'electronic-circuit', amount = 10},
-		{type = 'item', name = 'aoc-diamond-chip', amount = 1}
+		{type = 'item', name = 'aoc-diamond-chip', amount = 4}
 	},
 	results = {
         {type = 'item', name = 'speed-module', amount = 1}
     },
 	energy_required = 20,
+	allow_productivity = false,
 	category = 'aoc-category-intricate-crafting'
 }})
 
@@ -336,6 +337,7 @@ data:extend({{
         {type = 'item', name = 'productivity-module', amount = 1}
     },
 	energy_required = 20,
+	allow_productivity = false,
 	category = 'aoc-category-intricate-crafting'
 }})
 
@@ -352,5 +354,6 @@ data:extend({{
         {type = 'item', name = 'efficiency-module', amount = 1}
     },
 	energy_required = 20,
+	allow_productivity = false,
 	category = 'aoc-category-intricate-crafting'
 }})

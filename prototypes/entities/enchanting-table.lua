@@ -12,11 +12,10 @@ data:extend({{
 data:extend({{
     type = "assembling-machine",
     name = "aoc-enchanting-table",
-	crafting_categories = {"aoc-category-enchanting"},
+	  crafting_categories = {"aoc-category-enchanting"},
     crafting_speed = 1,
     energy_source = {
       type = "fluid",
-      fuel_categories = {"aoc-mana"},
       effectivity = 1,
       burns_fluid = true,
       scale_fluid_usage = true,
@@ -26,6 +25,7 @@ data:extend({{
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = { { flow_direction = "input", direction = defines.direction.south, position = { 0, 1 } } },
+        filter = "aoc-mana"
       }
     },
     energy_usage = "400kW",
