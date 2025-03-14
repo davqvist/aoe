@@ -403,7 +403,7 @@ data:extend({{
     name = "aoc-space-age-tech",
     icon_size = 64,
     icon = "__ageofcreation__/img/items/science-pack-7.png",
-    prerequisites = {"aoc-stargazing-tech","aoc-aluminium-bronze-tech","aoc-petrochem-fuels-tech"},
+    prerequisites = {"aoc-stargazing-tech","aoc-aluminium-bronze-tech","aoc-petrochem-fuels-tech","aoc-concrete-tech-2"},
 	  effects = {
       {
         type = "unlock-recipe",

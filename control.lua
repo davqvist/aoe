@@ -1,4 +1,120 @@
-function init_recipes()
+remote.add_interface("ageofcreation", {
+	milestones_presets = function()
+		return {
+			["Age of Creation"] = {
+				required_mods = {"ageofcreation", "space-age"},
+				milestones = {
+					{type="group", name="Science"},
+					{type="item", name="aoc-science-01", quantity=1},
+					{type="item", name="aoc-science-01", quantity=1000, next="x10"},
+					{type="item", name="aoc-science-02", quantity=1},
+					{type="item", name="aoc-science-02", quantity=1000, next="x10"},
+					{type="item", name="aoc-science-03", quantity=1},
+					{type="item", name="aoc-science-03", quantity=1000, next="x10"},
+					{type="item", name="aoc-science-04", quantity=1},
+					{type="item", name="aoc-science-04", quantity=1000, next="x10"},
+					{type="item", name="aoc-science-05", quantity=1},
+					{type="item", name="aoc-science-05", quantity=1000, next="x10"},
+					{type="item", name="aoc-science-06", quantity=1},
+					{type="item", name="aoc-science-06", quantity=1000, next="x10"},
+					{type="item", name="aoc-science-07", quantity=1},
+					{type="item", name="aoc-science-07", quantity=1000, next="x10"},
+
+					{type="group", name="Farming Age (Age 1)"},
+					{type="item", name="iron-plate", quantity=1},
+					{type="item", name="aoc-glass", quantity=1},
+					{type="item", name="aoc-log", quantity=1},
+					{type="item", name="aoc-kelp", quantity=1},
+					{type="item", name="aoc-tea-leaves", quantity=1},
+					{type="item", name="aoc-coffee-plant", quantity=1},
+					{type="item", name="aoc-latex-rubber", quantity=1},
+					{type="item", name="transport-belt", quantity=1},
+					{type="item", name="transport-belt",  quantity=1000, next="x10"},
+					{type="item", name="aoc-flax", quantity=1},
+					{type="item", name="copper-plate", quantity=1},
+
+					{type="group", name="Electric Age (Age 2)"},
+					{type="item", name="steel-plate", quantity=1},
+					{type="item", name="electronic-circuit", quantity=1},
+					{type="item", name="electronic-circuit", quantity=1000, next="x10"},
+					{type="item", name="aoc-steel-machine-hull", quantity=1},
+					{type="item", name="inserter", quantity=1},
+					{type="item", name="assembling-machine-2", quantity=1},
+					{type="item", name="steel-furnace", quantity=1},
+					{type="item", name="coal", quantity=1},
+					{type="item", name="aoc-aluminium-plate", quantity=1},
+					{type="item", name="aoc-quartz-dust", quantity=1},
+					{type="item", name="aoc-tin-plate", quantity=1},
+					{type="item", name="concrete", quantity=1},
+					{type="item", name="raw-fish", quantity=1},
+
+					{type="group", name="Agriculture Age (Age 3)"},
+					{type="item", name="aoc-spruce-tree", quantity=1},
+					{type="item", name="aoc-rubber-tree", quantity=1},
+					{type="item", name="aoc-apple-tree", quantity=1},
+					{type="item", name="aoc-olive-tree", quantity=1},
+					{type="item", name="aoc-grass", quantity=1},
+					{type="item", name="aoc-maize", quantity=1},
+					{type="item", name="aoc-soybeans", quantity=1},
+					{type="item", name="aoc-chicken", quantity=1},
+					{type="item", name="aoc-fertilizer", quantity=1},
+					{type="item", name="aoc-sheep", quantity=1},
+					{type="item", name="aoc-cow", quantity=1},
+					{type="item", name="aoc-ox", quantity=1},
+					{type="item", name="aoc-bronze-plate", quantity=1},
+
+					{type="group", name="Metallurgy Age (Age 4)"},
+					{type="item", name="rail", quantity=1},
+					{type="item", name="rail", quantity=1000, next="x10"},
+					{type="item", name="aoc-nickel-plate", quantity=1},
+					{type="item", name="aoc-zinc-plate", quantity=1},
+					{type="item", name="aoc-lead-plate", quantity=1},
+					{type="item", name="aoc-silver-plate", quantity=1},
+					{type="item", name="aoc-chromium-plate", quantity=1},
+					{type="item", name="aoc-gold-plate", quantity=1},
+					{type="item", name="tungsten-plate", quantity=1},
+					{type="item", name="aoc-gold-plate", quantity=1},
+					{type="item", name="aoc-diamond", quantity=1},
+					{type="item", name="aoc-solder", quantity=1},
+					{type="item", name="aoc-electrum", quantity=1},
+					{type="item", name="aoc-brass", quantity=1},
+					{type="item", name="aoc-aluminium-bronze", quantity=1},
+					{type="item", name="aoc-silicon", quantity=1},
+					{type="item", name="aoc-stainless-steel", quantity=1},
+					{type="item", name="aoc-animal-food", quantity=1},
+					{type="item", name="fast-inserter", quantity=1},
+					{type="item", name="assembling-machine-3", quantity=1},
+					{type="item", name="advanced-circuit", quantity=1},
+					{type="item", name="advanced-circuit", quantity=1000, next="x10"},
+					{type="item", name="electric-furnace", quantity=1},
+					{type="item", name="plastic-bar", quantity=1},
+
+					{type="group", name= "Petrochem Age (Age 5)"},
+					{type="item", name="light-armor", quantity=1},
+					{type="fluid", name="crude-oil", quantity=1},
+					{type="item", name="aoc-rubber", quantity=1},
+					{type="fluid", name="aoc-drilling-fluid", quantity=1},
+					{type="item", name="aoc-industrial-fertilizer", quantity=1},
+					{type="item", name="bulk-inserter", quantity=1},
+					{type="item", name="fast-transport-belt", quantity=1},
+					{type="item", name="fast-transport-belt", quantity=1000, next="x10"},
+					{type="item", name="electric-engine-unit", quantity=1},
+					{type="item", name="aoc-laser",  quantity=1},
+					{type="item", name="aoc-queen-aoc-honey", quantity=1},
+					{type="item", name="aoc-queen-aoc-royal-jelly", quantity=1},
+					{type="item", name="bee-construction",  quantity=1},
+					{type="item", name="bee-logistic",  quantity=1},
+					{type="item", name="aoc-epoxy-resin-solid",  quantity=1},
+					{type="item", name="processing-unit", quantity=1},
+					{type="item", name="processing-unit", quantity=1000, next="x10"},
+					{type="item", name="aoc-nauvium-plate", quantity=1}
+				}
+			}
+		}
+	end
+})
+
+	function init_recipes()
 	if storage.infusing == nil then storage.infusing = {} end
     for _, recipe in pairs(prototypes.get_recipe_filtered({{filter = "category", category = "aoc-category-infusing"}})) do
 		for _, ingredient in pairs(recipe.ingredients) do
@@ -248,26 +364,17 @@ script.on_nth_tick(31,
 script.on_nth_tick(39,
   function()
 	if storage.starlight_panels then
-		if storage.day == nil then storage.day = game.get_surface(1).daytime >= 0.45 and game.get_surface(1).daytime <= 0.55 end
-		if storage.day and game.get_surface(1).daytime >= 0.45 and game.get_surface(1).daytime <= 0.55 then
-			for unit, starlightpanel in pairs(storage.starlight_panels) do
-				if starlightpanel.valid and starlightpanel.name == "aoc-lunar-panel" then
+		for unit, starlightpanel in pairs(storage.starlight_panels) do
+			if starlightpanel.valid and starlightpanel.name == "aoc-lunar-panel" then
+				local sf = storage.starlight_panels[unit].surface
+				if ( sf.name == "nauvis" and sf.daytime >= 0.45 and sf.daytime <= 0.55 ) or string.match(sf.name, "^platform") then
 					storage.starlight_panels[unit].active = true
 				else 
-					storage.starlight_panels[unit]=nil
-				end
-			end
-			storage.day = false
-		end
-		if not storage.day and game.get_surface(1).daytime < 0.45 or game.get_surface(1).daytime > 0.55 then
-			for unit, starlightpanel in pairs(storage.starlight_panels) do
-				if starlightpanel.valid and starlightpanel.name == "aoc-lunar-panel" then
 					storage.starlight_panels[unit].active = false
-				else 
-					storage.starlight_panels[unit]=nil
 				end
+			else 
+				storage.starlight_panels[unit]=nil
 			end
-			storage.day = true
 		end
 	end
   end
@@ -333,7 +440,8 @@ script.on_nth_tick(151,
 						if flag and storage.infusing[v[1].name] == storage.infusing[v[2].name] and storage.infusing[v[1].name] == storage.infusing[v[3].name] and storage.infusing[v[1].name] == storage.infusing[v[4].name] and itm.force.recipes[storage.infusing[v[1].name]].enabled then
 							itm.set_recipe( storage.infusing[v[1].name] )
 							local out = itm.get_inventory(defines.inventory.assembling_machine_output)
-							if #out.get_contents() == 0 then
+							local tempk, tempv = next( out.get_contents() )
+							if tempv == nil or tempv.count < 2 then
 								for i, p in pairs( pedestals ) do
 									inv[i].remove( {name=v[i].name, count=1} )
 									itm.get_inventory(defines.inventory.assembling_machine_input).insert( {name=v[i].name, count=1} )
@@ -342,15 +450,6 @@ script.on_nth_tick(151,
 						end
 					else
 						itm.set_recipe( nil )
-					end
-				end
-				local out = itm.get_inventory(defines.inventory.assembling_machine_output)
-				local k, v = next( out.get_contents() )
-				if v ~= nil then
-					local to = infusiontable.get_inventory(defines.inventory.chest)
-					if to.can_insert({name=v.name, count=v.count} ) then
-						local amt = to.insert({name=v.name, count=v.count} ) 
-						out.remove( {name=v.name, count=amt} )
 					end
 				end
 			else
@@ -489,10 +588,12 @@ function handleInfusionTableBuilt(event)
 	if not storage.infusion_table_machines then storage.infusion_table_machines={} end
 	local infusiontable = event.entity
 	local infusiontablemachine = game.surfaces[infusiontable.surface.name].create_entity{
-		  name = 'aoc-infusion-table-machine',
-		  position = infusiontable.position,
-		  force = infusiontable.force
-	  }
+		name = 'aoc-infusion-table-machine',
+		position = infusiontable.position,
+		force = infusiontable.force
+	}
+	infusiontable.proxy_target_entity = infusiontablemachine
+	infusiontable.proxy_target_inventory = defines.inventory.assembling_machine_output
 	storage.infusion_tables[infusiontable.unit_number] = infusiontable
 	storage.infusion_table_machines[infusiontable.unit_number] = infusiontablemachine
 end

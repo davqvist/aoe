@@ -310,6 +310,10 @@ data:extend({{
         {
             type = "unlock-recipe",
             recipe = "aoc-crafting-fast-splitter-recipe"
+        },
+        {
+            type = "unlock-recipe",
+            recipe = "aoc-crafting-fast-lane-splitter-recipe"
         }
     },
     unit = {

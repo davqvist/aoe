@@ -28,13 +28,41 @@ data.raw['electric-pole']['po-huge-electric-pole'].supply_area_distance = 2.5
 data.raw['electric-pole']['po-hidden-electric-pole-in'].maximum_wire_distance = 18
 data.raw['electric-pole']['po-hidden-electric-pole-out'].maximum_wire_distance = 18
 
--- AAI Loader
+-- Loaders
 
-if mods["aai-loaders"] then
-    data.raw['item']['aai-loader'].subgroup = "aoc-item-logistics-belts"
-    data.raw['item']['aai-loader'].order = "d1"
-    data.raw['item']['aai-fast-loader'].subgroup = "aoc-item-logistics-belts"
-    data.raw['item']['aai-fast-loader'].order = "d2"
+local loaders = {
+    ['l1'] = 'aai-loader',
+    ['l2'] = 'aai-fast-loader',
+    ['l1_icons'] = {
+        { icon = "__aai-loaders__/graphics/technology/loader-tech-icon.png", icon_size = 256 },
+        { icon = "__aai-loaders__/graphics/technology/loader-tech-icon_mask.png", icon_size = 256, tint = {255, 217, 85} }
+    },
+    ['l2_icons'] = {
+        { icon = "__aai-loaders__/graphics/technology/loader-tech-icon.png", icon_size = 256 },
+        { icon = "__aai-loaders__/graphics/technology/loader-tech-icon_mask.png", icon_size = 256, tint = {255, 24, 38} }
+    }
+    -- blue: {90, 190, 255}
+}
+local loaders_mdrn = {
+    ['l1'] = 'mdrn-loader',
+    ['l2'] = 'fast-mdrn-loader',
+    ['l1_icons'] = {
+        { icon = "__loaders-modernized__/graphics/technology/mdrn-loader-technology-base.png", icon_size = 128 },
+        { icon = "__loaders-modernized__/graphics/technology/mdrn-loader-technology-mask.png", icon_size = 128, tint = {255, 217, 85} }
+    },
+    ['l2_icons'] = {
+        { icon = "__loaders-modernized__/graphics/technology/mdrn-loader-technology-base.png", icon_size = 128 },
+        { icon = "__loaders-modernized__/graphics/technology/mdrn-loader-technology-mask.png", icon_size = 128, tint = {255, 24, 38} }
+    }
+}
+if mods["loaders-modernized"] then
+    loaders = loaders_mdrn
+end
+if mods["aai-loaders"] or mods["loaders-modernized"] then
+    data.raw['item'][loaders.l1].subgroup = "aoc-item-logistics-belts"
+    data.raw['item'][loaders.l1].order = "e1"
+    data.raw['item'][loaders.l2].subgroup = "aoc-item-logistics-belts"
+    data.raw['item'][loaders.l2].order = "e2"
 
     data:extend({{
         name = 'aoc-crafting-loader-recipe',
@@ -46,7 +74,7 @@ if mods["aai-loaders"] then
             {type = 'item', name = 'fast-inserter', amount = 6}
         },
         results = {
-            {type = 'item', name = 'aai-loader', amount = 1}
+            {type = 'item', name = loaders.l1, amount = 1}
         },
         energy_required = 2
     }})
@@ -54,16 +82,7 @@ if mods["aai-loaders"] then
     data:extend({{
         type = "technology",
         name = "aoc-loader-tech",
-        icons = {
-            {
-              icon = "__aai-loaders__/graphics/technology/loader-tech-icon.png" ,
-              icon_size = 256
-            },
-            {
-              icon = "__aai-loaders__/graphics/technology/loader-tech-icon_mask.png",
-              icon_size = 256, tint = {255, 217, 85}
-            }
-        },
+        icons = loaders.l1_icons,
         prerequisites = {"aoc-fast-inserters-tech","aoc-logistics-tech-1"},
         effects = {
             {
@@ -88,7 +107,7 @@ if mods["aai-loaders"] then
             {type = 'item', name = 'bulk-inserter', amount = 6}
         },
         results = {
-            {type = 'item', name = 'aai-fast-loader', amount = 1}
+            {type = 'item', name = loaders.l2, amount = 1}
         },
         energy_required = 2
     }})
@@ -96,16 +115,7 @@ if mods["aai-loaders"] then
     data:extend({{
         type = "technology",
         name = "aoc-fast-loader-tech",
-        icons = {
-            {
-              icon = "__aai-loaders__/graphics/technology/loader-tech-icon.png" ,
-              icon_size = 256
-            },
-            {
-              icon = "__aai-loaders__/graphics/technology/loader-tech-icon_mask.png",
-              icon_size = 256, tint = {255, 24, 38}
-            }
-        },
+        icons = loaders.l2_icons,
         prerequisites = {"aoc-bulk-inserters-tech","aoc-logistics-tech-2","aoc-loader-tech"},
         effects = {
             {
@@ -119,7 +129,6 @@ if mods["aai-loaders"] then
             time = 40
         }
     }})
-      -- blue: {90, 190, 255}
 end
 
 -- AFH
@@ -691,6 +700,111 @@ if mods["cybersyn"] then
     }})
 end
 
+-- BP Shotgun 
+
+if mods["blueprint-shotgun"] then
+    data.raw['gun']['blueprint-shotgun'].subgroup = "aoc-production-tools"
+    data.raw['gun']['blueprint-shotgun'].order = "b1"
+    data.raw['gun']['blueprint-shotgun'].stack_size = 1
+    data.raw['ammo']['item-canister'].subgroup = "aoc-production-tools"
+    data.raw['ammo']['item-canister'].order = "b2"
+    data.raw['ammo']['item-canister'].stack_size = 100
+
+    data:extend({{
+        type = 'recipe',
+        name = 'aoc-blueprint-shotgun-recipe',
+        enabled = false,
+        energy_required = 30,
+        ingredients = {
+            {type = 'item', name = 'copper-plate', amount = 5},
+            {type = 'item', name = 'iron-plate', amount = 10},
+            {type = 'item', name = 'electronic-circuit', amount = 2}
+        },
+        results = {{type = 'item', name='blueprint-shotgun', amount = 1}}
+    }})
+
+    data:extend({{
+        type = 'recipe',
+        name = 'aoc-item-canister-recipe',
+        enabled = false,
+        energy_required = 1,
+        ingredients = {
+            {type = "item", name = "iron-plate", amount = 1},
+            {type = "item", name = "copper-plate", amount = 2},
+            {type = "item", name = "iron-stick", amount = 3}
+        },
+        results = {
+            {type = 'item', name = 'item-canister', amount = 1}
+        }
+    }})
+
+    data:extend({{
+        type = 'technology',
+        name = 'aoc-blueprint-shotgun-tech',
+        icon = "__blueprint-shotgun__/graphics/blueprint-shotgun.png",
+        icon_size = 64,
+        prerequisites = {'aoc-electronics-tech-1'},
+        effects = {
+            {
+                type = 'unlock-recipe',
+                recipe = 'aoc-blueprint-shotgun-recipe'
+            },
+            {
+                type = 'unlock-recipe',
+                recipe = 'aoc-item-canister-recipe'
+            }
+        },
+        unit = {
+            count = 30,
+            ingredients = AOC["age_tech_table"][2],
+            time = 25
+        }
+    }})
+    
+    data:extend({{
+        type = 'technology',
+        name = 'aoc-blueprint-shotgun-upgrade-tech-1',
+        icon = "__blueprint-shotgun__/graphics/blueprint-shotgun.png",
+        icon_size = 64,
+        effects = {{
+            type = "nothing",
+            effect_description = {"blueprint-shotgun.capacity-upgrade"}
+        }, {
+            type = "nothing",
+            effect_description = {"blueprint-shotgun.vacuum-upgrade"}
+        }},
+        prerequisites = {'aoc-tree-cultivation-tech-1', 'aoc-blueprint-shotgun-tech'},
+        unit = {
+            count = 20,
+            ingredients = AOC["age_tech_table"][3],
+            time = 30
+        },
+        upgrade = true
+    }})
+    
+    data:extend({{
+        type = 'technology',
+        name = 'aoc-blueprint-shotgun-upgrade-tech-2',
+        icon = "__blueprint-shotgun__/graphics/blueprint-shotgun.png",
+        icon_size = 64,
+        effects = {{
+            type = "nothing",
+            effect_description = {"blueprint-shotgun.capacity-upgrade"}
+        }, {
+            type = "nothing",
+            effect_description = {"blueprint-shotgun.vacuum-upgrade"}
+        }},
+        prerequisites = {'aoc-medium-voltage-tech', 'aoc-blueprint-shotgun-upgrade-tech-1'},
+        unit = {
+            count = 20,
+            ingredients = AOC["age_tech_table"][4],
+            time = 35
+        },
+        upgrade = true
+    }})
+
+end
+
 -- Nanobots 
 
 if mods["Nanobots2"] then
@@ -1001,6 +1115,51 @@ if mods["Nanobots2"] then
         type = "unlock-recipe",
         recipe = "aoc-equipment-bot-chip-nanointerface-recipe"
     })
+end
+
+-- Bob's Adjustable Inserters
+
+if mods["bobinserters"] then
+    if data.raw.technology["long-inserters-1"] then
+        data.raw.technology["long-inserters-1"].prerequisites = { "aoc-electric-inserters-tech" }
+        data.raw.technology["long-inserters-1"].unit = {
+            count = 40,
+            ingredients = AOC["age_tech_table"][2],
+            time = 25
+        }
+    end
+    if data.raw.technology["long-inserters-2"] then
+        data.raw.technology["long-inserters-2"].prerequisites = { "aoc-logistics-tech-2", "long-inserters-1" }
+        data.raw.technology["long-inserters-2"].unit = {
+            count = 40,
+            ingredients = AOC["age_tech_table"][5],
+            time = 40
+        }
+    end
+    if data.raw.technology["near-inserters"] then
+        data.raw.technology["near-inserters"].prerequisites = { "aoc-logistics-tech-1" }
+        data.raw.technology["near-inserters"].unit = {
+            count = 40,
+            ingredients = AOC["age_tech_table"][1],
+            time = 20
+        }
+    end
+    if data.raw.technology["more-inserters-1"] then
+        data.raw.technology["more-inserters-1"].prerequisites = { "aoc-fast-inserters-tech" }
+        data.raw.technology["more-inserters-1"].unit = {
+            count = 40,
+            ingredients = AOC["age_tech_table"][4],
+            time = 35
+        }
+    end
+    if data.raw.technology["more-inserters-2"] then
+        data.raw.technology["more-inserters-2"].prerequisites = { "aoc-bulk-inserters-tech", "more-inserters-1" }
+        data.raw.technology["more-inserters-2"].unit = {
+            count = 40,
+            ingredients = AOC["age_tech_table"][5],
+            time = 40
+        }
+    end
 end
 
 -- Configurable Valves

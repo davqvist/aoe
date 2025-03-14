@@ -433,6 +433,20 @@ data:extend({{
 }})
 
 data:extend({{
+	name = 'aoc-crafting-lane-splitter-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'transport-belt', amount = 4},
+		{type = 'item', name = 'splitter', amount = 1}
+	},
+	results = {
+        {type = 'item', name = 'lane-splitter', amount = 1}
+    },
+	energy_required = 1
+}})
+
+data:extend({{
 	name = 'aoc-smelting-pulp-paper-recipe',
 	type = 'recipe',
 	enabled = false,

@@ -49,7 +49,7 @@ data:extend({{
 }})
 
 data:extend({{
-    type = "container",
+    type = "proxy-container",
     name = "aoc-infusion-table",
     icon = "__ageofcreation__/img/entities/infusion-table.png",
     icon_size = 256,

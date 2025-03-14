@@ -724,6 +724,20 @@ data:extend({{
 }})
 
 data:extend({{
+	name = 'aoc-crafting-fast-lane-splitter-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'fast-transport-belt', amount = 4},
+		{type = 'item', name = 'fast-splitter', amount = 1}
+	},
+	results = {
+        {type = 'item', name = 'fast-lane-splitter', amount = 1}
+    },
+	energy_required = 1
+}})
+
+data:extend({{
 	name = 'aoc-crafting-fast-underground-belt-recipe',
 	type = 'recipe',
 	enabled = false,

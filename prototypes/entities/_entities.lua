@@ -1,4 +1,6 @@
 require("__ageofcreation__/prototypes/entities/vanilla")
+require("__ageofcreation__/prototypes/entities/lane-splitter")
+
 require("__ageofcreation__/prototypes/entities/advanced-chemical-plant")
 require("__ageofcreation__/prototypes/entities/alchemical-construct")
 require("__ageofcreation__/prototypes/entities/big-wooden-chest")

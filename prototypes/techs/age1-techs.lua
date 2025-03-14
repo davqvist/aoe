@@ -292,6 +292,10 @@ data:extend({{
 	    {
         type = "unlock-recipe",
         recipe = "aoc-crafting-splitter-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-lane-splitter-recipe"
       }
     },
     unit = {

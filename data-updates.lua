@@ -22,17 +22,23 @@ local noise_exp_to_remove = {
 	"vulcanus_tungsten_ore_probability",
 	"vulcanus_tungsten_ore_richness",
 	"vulcanus_tungsten_ore_size",
+	"vulcanus_sulfuric_acid_geyser_probability",
 	"vulcanus_sulfuric_acid_geyser_size",
 	"vulcanus_sulfuric_acid_region",
+	"vulcanus_sulfuric_acid_geyser_richness",
+	"gleba_stone_richness",
+	"gleba_stone_probability",
 	"aquilo_flourine_vent_spots",
 	"aquilo_flourine_vent_probability",
 	"aquilo_flourine_vent_richness",
 	"aquilo_lithium_brine_spots",
 	"aquilo_lithium_brine_probability",
-	"aquilo_lithium_brine_richness"
+	"aquilo_lithium_brine_richness",
+	"aquilo_crude_oil_spots",
+	"aquilo_crude_oil_probability"
 }
 for _, ne in pairs( noise_exp_to_remove ) do
-	data.raw["noise-expression"][ne].expression = "1"
+	data.raw["noise-expression"][ne].expression = "0"
 end
 
 local planets = {

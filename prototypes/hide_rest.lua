@@ -1,5 +1,12 @@
 local recipes_to_keep = {['barrel'] = true, ['biter-egg'] = true, ['rocket-part'] = true, ['recipe-unknown'] = true}
-local technologies_to_keep = {['spidertron'] = true, ['exoskeleton-equipment'] = true, ['discharge-defense-equipment'] = true, ['artillery'] = true}
+local technologies_to_keep = {['spidertron'] = 'hidden', ['exoskeleton-equipment'] = 'hidden', ['discharge-defense-equipment'] = 'hidden', ['artillery'] = 'hidden'}
+if mods["bobinserters"] then
+  technologies_to_keep['long-inserters-1'] = true
+  technologies_to_keep['long-inserters-2'] = true
+  technologies_to_keep['near-inserters'] = true
+  technologies_to_keep['more-inserters-1'] = true
+  technologies_to_keep['more-inserters-2'] = true
+end
 local item_has_recipe = {}
 local fluid_has_recipe = {}
 
@@ -9,7 +16,7 @@ for _, recipe in pairs(data.raw.recipe) do
   if recipe.name:sub(1, 4) ~= "aoc-" and 
     recipe.name:find('%-barrel$') == nil and
     recipe.name:find('recycling$') == nil and 
-    recipe.is_parameter == false then
+    not recipe.parameter then
     if recipes_to_keep[recipe.name] == nil then
       data.raw.recipe[_] = nil
     else 
@@ -27,12 +34,13 @@ for _, technology in pairs(data.raw.technology) do
   if string.sub(technology.name, 1, 4) ~= "aoc-" then
     if technologies_to_keep[technology.name] == nil then
       data.raw.technology[_] = nil
-    else 
-	    technology.enabled = false
-      technology.hidden = true
-      technology.prerequisites = nil
-      technology.effects = nil
-      technology.unit = { count = 1, ingredients = {{"aoc-science-01", 1}}, time = 1}
+    else if technologies_to_keep[technology.name] == 'hidden' then
+        technology.enabled = false
+        technology.hidden = true
+        technology.prerequisites = nil
+        technology.effects = nil
+        technology.unit = { count = 1, ingredients = {{"aoc-science-01", 1}}, time = 1}
+      end
     end
   end
 end
