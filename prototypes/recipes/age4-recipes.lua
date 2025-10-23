@@ -654,6 +654,38 @@ data:extend({{
 }})
 
 data:extend({{
+	name = 'aoc-crafting-transformer-high-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-tin-plate', amount = 16},
+        {type = 'item', name = 'copper-cable', amount = 4},
+        {type = 'item', name = 'aoc-bronze-cable', amount = 4},
+        {type = 'item', name = 'electronic-circuit', amount = 4}
+	},
+	results = {
+		{type = 'item', name = 'po-transformer-high', amount = 1}
+    },
+	energy_required = 1
+}})
+
+data:extend({{
+	name = 'aoc-crafting-transformer-low-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-tin-plate', amount = 16},
+        {type = 'item', name = 'copper-cable', amount = 4},
+        {type = 'item', name = 'aoc-bronze-cable', amount = 4},
+        {type = 'item', name = 'electronic-circuit', amount = 4}
+	},
+	results = {
+		{type = 'item', name = 'po-transformer-low', amount = 1}
+    },
+	energy_required = 1
+}})
+
+data:extend({{
     name = 'aoc-chemistry-methane-co2-recipe',
     type = 'recipe',
     enabled = false,
@@ -2476,7 +2508,8 @@ data:extend({{
     },
 	main_product = 'aoc-limestone',
     energy_required = 6,
-	category = 'aoc-category-digging'
+	category = 'aoc-category-digging',
+	surface_conditions = { { property = "pressure", min = 1000, max = 1000 } }
 }})
 
 data:extend({{

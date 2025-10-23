@@ -1120,41 +1120,41 @@ end
 -- Bob's Adjustable Inserters
 
 if mods["bobinserters"] then
-    if data.raw.technology["long-inserters-1"] then
-        data.raw.technology["long-inserters-1"].prerequisites = { "aoc-electric-inserters-tech" }
-        data.raw.technology["long-inserters-1"].unit = {
+    if data.raw.technology["bob-long-inserters-1"] then
+        data.raw.technology["bob-long-inserters-1"].prerequisites = { "aoc-electric-inserters-tech" }
+        data.raw.technology["bob-long-inserters-1"].unit = {
             count = 40,
             ingredients = AOC["age_tech_table"][2],
             time = 25
         }
     end
-    if data.raw.technology["long-inserters-2"] then
-        data.raw.technology["long-inserters-2"].prerequisites = { "aoc-logistics-tech-2", "long-inserters-1" }
-        data.raw.technology["long-inserters-2"].unit = {
+    if data.raw.technology["bob-long-inserters-2"] then
+        data.raw.technology["bob-long-inserters-2"].prerequisites = { "aoc-logistics-tech-2", "bob-long-inserters-1" }
+        data.raw.technology["bob-long-inserters-2"].unit = {
             count = 40,
             ingredients = AOC["age_tech_table"][5],
             time = 40
         }
     end
-    if data.raw.technology["near-inserters"] then
-        data.raw.technology["near-inserters"].prerequisites = { "aoc-logistics-tech-1" }
-        data.raw.technology["near-inserters"].unit = {
+    if data.raw.technology["bob-near-inserters"] then
+        data.raw.technology["bob-near-inserters"].prerequisites = { "aoc-logistics-tech-1" }
+        data.raw.technology["bob-near-inserters"].unit = {
             count = 40,
             ingredients = AOC["age_tech_table"][1],
             time = 20
         }
     end
-    if data.raw.technology["more-inserters-1"] then
-        data.raw.technology["more-inserters-1"].prerequisites = { "aoc-fast-inserters-tech" }
-        data.raw.technology["more-inserters-1"].unit = {
+    if data.raw.technology["bob-more-inserters-1"] then
+        data.raw.technology["bob-more-inserters-1"].prerequisites = { "aoc-fast-inserters-tech" }
+        data.raw.technology["bob-more-inserters-1"].unit = {
             count = 40,
             ingredients = AOC["age_tech_table"][4],
             time = 35
         }
     end
-    if data.raw.technology["more-inserters-2"] then
-        data.raw.technology["more-inserters-2"].prerequisites = { "aoc-bulk-inserters-tech", "more-inserters-1" }
-        data.raw.technology["more-inserters-2"].unit = {
+    if data.raw.technology["bob-more-inserters-2"] then
+        data.raw.technology["bob-more-inserters-2"].prerequisites = { "aoc-bulk-inserters-tech", "bob-more-inserters-1" }
+        data.raw.technology["bob-more-inserters-2"].unit = {
             count = 40,
             ingredients = AOC["age_tech_table"][5],
             time = 40

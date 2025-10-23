@@ -29,6 +29,20 @@ data:extend({{
 }})
 
 data:extend({{
+	name = 'aoc-crafting-piercing-rounds-magazine-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'firearm-magazine', amount = 2},
+		{type = 'item', name = 'aoc-titanium-plate', amount = 1},
+	},
+	results = {
+		{type = 'item', name = 'piercing-rounds-magazine', amount = 2}
+    },
+	energy_required = 6
+}})
+
+data:extend({{
 	name = 'aoc-crafting-submachine-gun-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -68,6 +82,34 @@ data:extend({{
 		{type = 'item', name = 'aoc-firearm-magazine-box', amount = 1}
     },
 	energy_required = 10
+}})
+
+data:extend({{
+	name = 'aoc-smelting-titanium-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-titanium-ore', amount = 5},
+		{type = 'item', name = 'carbon', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoc-titanium-plate', amount = 2}
+    },
+	energy_required = 4.8,
+	category = 'smelting'
+}})
+
+data:extend({{
+	name = 'aoc-crafting-titanium-rod-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-titanium-plate', amount = 1}
+	},
+	results = {
+        {type = 'item', name = 'aoc-titanium-rod', amount = 2}
+    },
+	energy_required = 0.4
 }})
 
 data:extend({{
@@ -356,4 +398,131 @@ data:extend({{
 	energy_required = 20,
 	allow_productivity = false,
 	category = 'aoc-category-intricate-crafting'
+}})
+
+data:extend({{
+	name = 'aoc-melting-water-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'item', name = 'ice', amount = 1}
+	},
+	results = {
+		{type = 'fluid', name = 'water', amount = 50}
+    },
+	category = 'aoc-category-melting',
+	energy_required = 2,
+	allow_productivity = false
+}})
+
+data:extend({{
+	name = 'aoc-melting-dilithium-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-dilithium-crystal', amount = 1},
+		{type = 'fluid', name = 'water', amount = 30}
+	},
+	results = {
+		{type = 'fluid', name = 'thruster-fuel', amount = 120}
+    },
+	category = 'aoc-category-melting',
+	energy_required = 2
+}})
+
+data:extend({{
+	name = 'aoc-freezing-coolant-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'item', name = 'ice', amount = 1},
+		{type = 'fluid', name = 'aoc-vacuum', amount = 100}
+	},
+	results = {
+		{type = 'fluid', name = 'thruster-oxidizer', amount = 120}
+    },
+	category = 'aoc-category-freezing',
+	energy_required = 2
+}})
+
+data:extend({{
+	name = 'aoc-pumping-vacuum-2-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {},
+	results = {
+        {type = 'fluid', name = 'aoc-vacuum', amount = 100}
+    },
+	energy_required = 1,
+	category = 'aoc-category-pumping',
+	surface_conditions = { { property = "gravity", min = 0, max = 0 } }
+}})
+
+data:extend({{
+    name = 'aoc-ground-bore-basalt-recipe',
+    type = 'recipe',
+    enabled = false,
+    allow_decomposition = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-titanium-rod', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-basalt', amount = 4},
+        {type = 'item', name = 'aoc-apatite', amount = 1}
+    },
+	main_product = 'aoc-basalt',
+    energy_required = 4,
+	category = 'aoc-category-digging',
+	surface_conditions = { { property = "pressure", min = 4000, max = 4000 } }
+}})
+
+data:extend({{
+    name = 'aoc-crude-oil-vulcanus-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-coal-dust', amount = 6},
+		{type = 'fluid', name = 'sulfuric-acid', amount = 25},
+		{type = 'item', name = 'aoc-quicklime', amount = 2}
+    },
+    results = {
+        {type = 'fluid', name = 'crude-oil', amount = 75}
+    },
+    auto_recycle = false,
+    energy_required = 6,
+	category = 'oil-processing'
+}})
+
+data:extend({{
+	name = 'aoc-infusing-nauvis-chest-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'steel-chest', amount = 1},
+		{type = 'item', name = 'cargo-landing-pad', amount = 1},
+		{type = 'item', name = 'aoc-teleportation-core', amount = 1},
+		{type = 'item', name = 'aoc-planet-nauvis', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoc-nauvis-chest', amount = 1}
+    },
+	energy_required = 120,
+	category = 'aoc-category-infusing'
+}})
+
+data:extend({{
+	name = 'aoc-infusing-vulcanus-chest-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'steel-chest', amount = 1},
+		{type = 'item', name = 'cargo-landing-pad', amount = 1},
+		{type = 'item', name = 'aoc-teleportation-core', amount = 1},
+		{type = 'item', name = 'aoc-planet-vulcanus', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoc-vulcanus-chest', amount = 1}
+    },
+	energy_required = 120,
+	category = 'aoc-category-infusing'
 }})

@@ -52,7 +52,7 @@ data:extend({{
     icon_size = 64,
     subgroup = "aoc-flora-drinks",
     order = "c",
-    stack_size = 50,
+    stack_size = 20,
 	capsule_action =
 	{
 		type = "use-on-self",
@@ -122,7 +122,7 @@ data:extend({{
     icon_size = 64,
     subgroup = "aoc-flora-drinks",
     order = "g",
-    stack_size = 50,
+    stack_size = 20,
 	capsule_action =
 	{
 		type = "use-on-self",

@@ -346,6 +346,28 @@ data:extend({{
     send_to_orbit_mode = "automated"
 }})
 
+data:extend({{
+    type = "item",
+    name = "aoc-planet-nauvis",
+    icon = "__base__/graphics/icons/nauvis.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "aoc-planets",
+    order = "j",
+    stack_size = 10
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-planet-vulcanus",
+    icon = "__space-age__/graphics/icons/vulcanus.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "aoc-planets",
+    order = "k",
+    stack_size = 10
+}})
+
 data.raw['item']['low-density-structure'].subgroup = "aoc-space-stuff"
 data.raw['item']['low-density-structure'].order = "b"
 data.raw['item']['low-density-structure'].stack_size = 50
@@ -353,3 +375,61 @@ data.raw['item']['low-density-structure'].stack_size = 50
 data.raw['item']['cargo-landing-pad'].subgroup = "aoc-space-buildings"
 data.raw['item']['cargo-landing-pad'].order = "d"
 data.raw['item']['cargo-landing-pad'].stack_size = 10
+
+data:extend({{
+    type = "capsule",
+    name = "aoc-ender-orb",
+    icon = "__ageofcreation__/img/items/ender-orb.png",
+    icon_size = 64,
+    subgroup = "aoc-magic-brewing",
+    order = "c",
+    stack_size = 20,
+	capsule_action =
+	{
+		type = "throw",
+		uses_stack = false,
+		attack_parameters =
+		{
+			type = "projectile",
+			activation_type = "throw",
+			range = 32,
+			cooldown = 60,
+            ammo_category = "capsule",
+			ammo_type =
+			{
+				category = "capsule",
+                target_type = "position",
+				action =
+				{
+					type = "direct",
+					action_delivery =
+					{
+                        type = "projectile",
+                        projectile = "aoc-projectile-ender-orb",
+                        starting_speed = 0.5
+                    }
+                }
+			}
+		}
+	}
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-enderium-plate",
+    icons = { { icon = "__angelssmelting_art__/graphics/icons/plate-cobalt.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/ed.png", icon_size = 64 } },
+    pictures = { { filename = "__angelssmelting_art__/graphics/icons/plate-cobalt.png", size = 32 } },
+    subgroup = "aoc-magic-metals",
+    order = "e",
+    stack_size = 100
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-teleportation-core",
+    icon = "__ageofcreation__/img/items/teleportation-core.png",
+    icon_size = 64,
+    subgroup = "aoc-circuits",
+    order = "d",
+    stack_size = 100
+}})

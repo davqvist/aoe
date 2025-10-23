@@ -15,7 +15,7 @@ data:extend({{
 data:extend({{
     type = "container",
     name = "aoc-medium-wooden-chest",
-	icon = "__ageofcreation__/img/entities/medium-wooden-chest.png",
+	  icon = "__ageofcreation__/img/entities/medium-wooden-chest.png",
     icon_size = 192,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.1, result = "aoc-medium-wooden-chest"},

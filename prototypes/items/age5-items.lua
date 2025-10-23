@@ -105,6 +105,7 @@ data.raw['item']['electric-engine-unit'].stack_size = 50
 data.raw['item']['rocket-fuel'].subgroup = "aoc-space-stuff"
 data.raw['item']['rocket-fuel'].order = "a"
 data.raw['item']['rocket-fuel'].stack_size = 10
+data.raw['item']['rocket-fuel'].fuel_value = "50MJ"
 
 data:extend({{
     type = "item",

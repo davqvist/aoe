@@ -271,6 +271,10 @@ data.raw['item']['po-huge-electric-fuse'].subgroup = "aoc-poles"
 data.raw['item']['po-huge-electric-fuse'].order = "j"
 data.raw['item']['po-transformer'].subgroup = "aoc-poles"
 data.raw['item']['po-transformer'].order = "k"
+data.raw['item']['po-transformer-high'].subgroup = "aoc-poles"
+data.raw['item']['po-transformer-high'].order = "k2"
+data.raw['item']['po-transformer-low'].subgroup = "aoc-poles"
+data.raw['item']['po-transformer-low'].order = "k3"
 	
 data.raw['item']['boiler'].subgroup = "aoc-power-buildings"
 data.raw['item']['boiler'].order = "b"
@@ -307,6 +311,9 @@ data.raw['item']['agricultural-tower'].subgroup = "aoc-flora-buildings"
 data.raw['item']['agricultural-tower'].order = "b"
 data.raw['agricultural-tower']['agricultural-tower'].energy_source = { type = "void" }
 
+data.raw['resource']['calcite'].minable.result = "aoc-limestone"
+data.raw['resource']['calcite'].minable.fluid_amount = 40
+data.raw['resource']['calcite'].minable.required_fluid = "aoc-phosphoric-acid"
 
 local silocopy = table.deepcopy( data.raw['rocket-silo']['rocket-silo'] )
 silocopy.name = "aoc-rocket-silo-simple"

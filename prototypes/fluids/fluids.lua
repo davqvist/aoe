@@ -1213,3 +1213,26 @@ data:extend({{
 	flow_color = {r=0.68, g=0.23, b=0.76},
 	default_temperature = 20
 }})
+
+data:extend({{
+    type = "fluid",
+    name = "aoc-ender-fluid",
+    icon = "__ageofcreation__/img/fluids/ender.png",
+    icon_size = 64,
+    subgroup = "aoc-fluids-magic-rest",
+    order = "e",
+	base_color = {r=0.0, g=0.17, b=0.13},
+	flow_color = {r=0.0, g=0.17, b=0.13},
+	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoc-enderium-solution",
+    icons = { { icon = "__angelssmelting_art__/graphics/icons/molten-cobalt.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/ed.png", icon_size = 64 } },
+    subgroup = "aoc-fluids-magic-metals",
+    order = "d",
+	base_color = {r=0.0, g=0.17, b=0.4},
+	flow_color = {r=0.0, g=0.17, b=0.4},
+	default_temperature = 20
+}})

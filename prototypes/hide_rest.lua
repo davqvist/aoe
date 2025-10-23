@@ -1,11 +1,11 @@
 local recipes_to_keep = {['barrel'] = true, ['biter-egg'] = true, ['rocket-part'] = true, ['recipe-unknown'] = true}
 local technologies_to_keep = {['spidertron'] = 'hidden', ['exoskeleton-equipment'] = 'hidden', ['discharge-defense-equipment'] = 'hidden', ['artillery'] = 'hidden'}
 if mods["bobinserters"] then
-  technologies_to_keep['long-inserters-1'] = true
-  technologies_to_keep['long-inserters-2'] = true
-  technologies_to_keep['near-inserters'] = true
-  technologies_to_keep['more-inserters-1'] = true
-  technologies_to_keep['more-inserters-2'] = true
+  technologies_to_keep['bob-long-inserters-1'] = true
+  technologies_to_keep['bob-long-inserters-2'] = true
+  technologies_to_keep['bob-near-inserters'] = true
+  technologies_to_keep['bob-more-inserters-1'] = true
+  technologies_to_keep['bob-more-inserters-2'] = true
 end
 local item_has_recipe = {}
 local fluid_has_recipe = {}

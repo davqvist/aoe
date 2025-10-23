@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.5
-Date: 2025-03-13
+Date: 2025-10-23
   Features:
     - Support for mods that build and deconstruct entities with scripts, like Construction Drones
     - Support for Nanobots (except they can't blow up cliffs for now as they have it hard coded in the mod)
@@ -9,18 +9,23 @@ Date: 2025-03-13
     - Support for Loaders Modernized
     - Support for Bob's Adjustable Inserters
     - Support for Milestones (first 5 ages)
+    - Added priority transformers
+    - Added magic teleportation techs and progression up to the start of vulcanus 
   Changes:
     - QOL research now also scales the time cost over the ages
     - Speed Module now properly cost the same as the other modules
     - Changed some research items related to lotus production
     - Changed Infusion Table output to new ProxyContainer internally
     - Lunar Panel now always works in space
+    - Resin tapping now also works on naturally spawned trees
+    - Boosted stone and sand digging ratios
   Bugfixes:
     - The laser lens recipe now actually gets unlocked with techs
     - Recipes researched via magic now don't reset anymore on mod update or adding or removing mods
     - Enchanting Table now properly only accepts mana
     - Parametrizing of recipes in buildings turned back on which was accidently turned off
     - Fixed most starting screen animations breaking
+    - Electric boiler now also has the right water to steam ratio
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.4
 Date: 2025-01-12

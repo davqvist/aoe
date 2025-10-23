@@ -1,4 +1,4 @@
-local AOC =  require("__ageofcreation__/globals")
+local AOC = require("__ageofcreation__/globals")
 
 data:extend({{
     type = "technology",

@@ -541,7 +541,8 @@ data:extend({{
 		{type = 'item', name = 'ice', amount = 1}
     },
 	category = 'aoc-category-freezing',
-	energy_required = 5
+	energy_required = 5,
+	allow_productivity = false
 }})
 
 data:extend({{
@@ -773,7 +774,8 @@ data:extend({{
     },
     energy_required = 4,
 	category = 'aoc-category-digging',
-	research = 'aoc-brass-rod'
+	research = 'aoc-brass-rod',
+	surface_conditions = { { property = "pressure", min = 1000, max = 1000 } }
 }})
 
 data:extend({{
@@ -863,8 +865,10 @@ data:extend({{
 		{type = 'item', name = 'aoc-scroll', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoc-planet-venus', amount = 1, probability = 0.1}
+        {type = 'item', name = 'aoc-planet-venus', amount = 1, probability = 0.1},
+        {type = 'item', name = 'aoc-planet-vulcanus', amount = 1, probability = 0.02}
     },
+	main_product = 'aoc-planet-venus',
     energy_required = 30,
 	category = 'aoc-category-stargazing',
 	research = 'copper-plate'
@@ -882,8 +886,10 @@ data:extend({{
 		{type = 'item', name = 'aoc-scroll', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoc-planet-earth', amount = 1, probability = 0.1}
+        {type = 'item', name = 'aoc-planet-earth', amount = 1, probability = 0.1},
+        {type = 'item', name = 'aoc-planet-nauvis', amount = 1, probability = 0.02}
     },
+	main_product = 'aoc-planet-earth',
     energy_required = 30,
 	category = 'aoc-category-stargazing',
 	research = 'plastic-bar'
@@ -1033,4 +1039,113 @@ data:extend({{
         {type = 'item', name = 'cargo-landing-pad', amount = 1}
     },
     energy_required = 5
+}})
+
+data.raw.recipe["rocket-part"].ingredients =
+{
+  {type = "item", name = "electronic-circuit", amount = 1},
+  {type = "item", name = "low-density-structure", amount = 1},
+  {type = "item", name = "rocket-fuel", amount = 1}
+}
+
+data:extend({{
+	name = 'aoc-brewing-15-aoc-alchemy-ender-fluid-recipe',
+	type = 'recipe',
+	enabled = true,
+	hidden = true,
+	ingredients = {
+        {type = 'fluid', name = 'aoc-alchemical-reducing-fluid', amount = 50},
+		{type = 'item', name = 'aoc-obsidian', amount = 1}
+	},
+	results = {
+		{type = 'fluid', name = 'aoc-ender-fluid', amount = 50}
+    },
+	category = 'aoc-category-brewing',
+	energy_required = 5
+}})
+
+data:extend({{
+	name = 'aoc-alchemy-ender-fluid-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-obsidian', amount = 1},
+		{type = 'fluid', name = 'aoc-alchemical-reducing-fluid', amount = 20}
+	},
+	results = {
+		{type = 'fluid', name = 'aoc-ender-fluid', amount = 20}
+    },
+	category = 'aoc-category-alchemy',
+	energy_required = 10
+}})
+
+data:extend({{
+	name = 'aoc-casting-ender-orb-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoc-ender-fluid', amount = 100},
+		{type = 'item', name = 'aoc-mold', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoc-ender-orb', amount = 1},
+		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.9}
+    },
+	main_product = 'aoc-ender-orb',
+	energy_required = 3,
+	category = 'aoc-category-casting',
+	research = 'aoc-obsidian'
+}})
+
+data:extend({{
+	name = 'aoc-alchemy-enderium-solution-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoc-ender-fluid', amount = 25},
+		{type = 'item', name = 'aoc-platinum-ore', amount = 1},
+		{type = 'item', name = 'aoc-nickel-ore', amount = 1}
+	},
+	results = {
+        {type = 'fluid', name = 'aoc-enderium-solution', amount = 25}
+    },
+	energy_required = 5,
+	category = 'aoc-category-alchemy',
+	research = 'aoc-platinum-ore'
+}})
+
+data:extend({{
+	name = 'aoc-casting-enderium-plate-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoc-enderium-solution', amount = 25},
+		{type = 'item', name = 'aoc-mold', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoc-enderium-plate', amount = 1},
+		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.75}
+    },
+	main_product = 'aoc-enderium-plate',
+	energy_required = 3,
+	category = 'aoc-category-casting',
+	research = 'aoc-platinum-ore'
+}})
+
+data:extend({{
+	name = 'aoc-infusing-teleportation-core-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'processing-unit', amount = 1},
+		{type = 'item', name = 'aoc-enderium-plate', amount = 1},
+		{type = 'item', name = 'aoc-nauvium-plate', amount = 1},
+		{type = 'item', name = 'aoc-metal-catalyst', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoc-teleportation-core', amount = 1}
+    },
+	energy_required = 60,
+	category = 'aoc-category-infusing',
+	research = 'aoc-enderium-plate'
 }})

@@ -5,7 +5,7 @@ data:extend({{
     type = 'recipe',
     enabled = true,
 	ingredients = {
-		{type = 'fluid', name = 'water', amount = 50}
+		{type = 'fluid', name = 'water', amount = 5}
     },
     results = {
         {type = 'fluid', name = 'steam', amount = 50, temperature = 165}
@@ -1011,7 +1011,8 @@ data:extend({{
         {type = 'fluid', name = 'crude-oil', amount = 100}
     },
     energy_required = 4,
-	category = 'aoc-category-digging'
+	category = 'aoc-category-digging',
+	surface_conditions = { { property = "pressure", min = 1000, max = 1000 } }
 }})
 
 data:extend({{
@@ -1034,8 +1035,8 @@ data:extend({{
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoc-diesel', amount = 80},
-		{type = 'fluid', name = 'aoc-oxygen', amount = 20}
+		{type = 'fluid', name = 'aoc-diesel', amount = 40},
+		{type = 'fluid', name = 'aoc-oxygen', amount = 10}
     },
     results = {
         {type = 'item', name = 'rocket-fuel', amount = 1}

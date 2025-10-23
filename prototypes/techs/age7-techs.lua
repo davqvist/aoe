@@ -1,4 +1,4 @@
-local AOC =  require("__ageofcreation__/globals")
+local AOC = require("__ageofcreation__/globals")
 
 data:extend({{
   type = "technology",
@@ -30,6 +30,25 @@ data:extend({{
   },
   unit = {
       count = 20,
+      ingredients = AOC["age_tech_table"][7],
+      time = 60
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-military-tech-2",
+  icon_size = 256, icon_mipmaps = 4,
+  icon = "__base__/graphics/technology/military.png",
+  prerequisites = {"aoc-military-tech-1"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-piercing-rounds-magazine-recipe"
+    }
+  },
+  unit = {
+      count = 30,
       ingredients = AOC["age_tech_table"][7],
       time = 60
   }
@@ -109,6 +128,107 @@ data:extend({{
 
 data:extend({{
   type = "technology",
+  name = "aoc-space-travel-tech",
+  icon_size = 256, icon_mipmaps = 4,
+  icon = "__space-age__/graphics/technology/space-platform-thruster.png",
+  prerequisites = {"aoc-asteroid-processing-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-pumping-vacuum-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-melting-water-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-melting-dilithium-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-freezing-coolant-recipe"
+    }
+  },
+  unit = {
+      count = 50,
+      ingredients = AOC["age_tech_table"][7],
+      time = 60
+  }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoc-vulcanus-discovery-tech",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__space-age__/graphics/technology/vulcanus.png",
+    prerequisites = {"aoc-stargazing-tech"},
+    essential = true,
+    effects = {
+      {
+        type = "unlock-space-location",
+        space_location = "vulcanus",
+        use_icon_overlay_constant = true
+      }
+    },
+    research_trigger =
+    {
+      type = "craft-item",
+      item = "aoc-planet-vulcanus"
+    }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-vulcanus-exploration-tech",
+  icon_size = 256, icon_mipmaps = 4,
+  icon = "__space-age__/graphics/technology/vulcanus.png",
+  prerequisites = {"aoc-space-travel-tech","aoc-vulcanus-discovery-tech"},
+  effects = {
+    {
+      type = "mining-with-fluid",
+      modifier = true
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-ground-bore-basalt-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crude-oil-vulcanus-recipe"
+    }
+  },
+  unit = {
+      count = 60,
+      ingredients = AOC["age_tech_table"][7],
+      time = 60
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-vulcanus-logistics-tech",
+  icons = {{icon = "__base__/graphics/icons/steel-chest.png", tint = {255, 128, 0}}},
+  prerequisites = {"aoc-vulcanus-exploration-tech","aoc-teleportation-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-infusing-vulcanus-chest-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-infusing-nauvis-chest-recipe"
+    }
+  },
+  unit = {
+      count = 80,
+      ingredients = AOC["age_tech_table"][7],
+      time = 60
+  }
+}})
+
+data:extend({{
+  type = "technology",
   name = "aoc-titanium-tech",
   icon_size = 32,
   icon = "__angelssmelting_art__/graphics/icons/plate-titanium.png",
@@ -129,6 +249,14 @@ data:extend({{
     {
       type = "unlock-recipe",
       recipe = "aoc-crafting-titanium-research-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-smelting-titanium-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-titanium-rod-recipe"
     }
   },
   unit = {

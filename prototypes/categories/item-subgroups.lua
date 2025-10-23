@@ -604,6 +604,12 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
+    name = "aoc-planet-chests",
+    group = "space",
+    order = "f"
+  },
+  {
+	  type = "item-subgroup",
     name = "aoc-other",
     group = "other",
     order = "a"

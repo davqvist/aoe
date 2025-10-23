@@ -133,7 +133,8 @@ data:extend({{
     },
 	main_product = 'aoc-soil',
     energy_required = 4,
-	category = 'aoc-category-digging'
+	category = 'aoc-category-digging',
+	surface_conditions = { { property = "pressure", min = 1000, max = 1000 } }
 }})
 
 data:extend({{
@@ -146,12 +147,13 @@ data:extend({{
 		{type = 'item', name = 'iron-stick', amount = 1}
     },
     results = {
-        {type = 'item', name = 'stone', amount = 4},
+        {type = 'item', name = 'stone', amount = 6},
         {type = 'item', name = 'aoc-gravel', amount = 1}
     },
 	main_product = 'stone',
-    energy_required = 4,
-	category = 'aoc-category-digging'
+    energy_required = 6,
+	category = 'aoc-category-digging',
+	surface_conditions = { { property = "pressure", min = 1000, max = 1000 } }
 }})
 
 data:extend({{
@@ -164,12 +166,13 @@ data:extend({{
 		{type = 'item', name = 'iron-stick', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoc-sand', amount = 4},
+        {type = 'item', name = 'aoc-sand', amount = 6},
         {type = 'item', name = 'aoc-gravel', amount = 1}
     },
 	main_product = 'aoc-sand',
-    energy_required = 4,
-	category = 'aoc-category-digging'
+    energy_required = 6,
+	category = 'aoc-category-digging',
+	surface_conditions = { { property = "pressure", min = 1000, max = 1000 } }
 }})
 
 data:extend({{

@@ -16,7 +16,7 @@ data:extend({{
 data:extend({{
     type = "container",
     name = "aoc-copper-chest",
-	icon = "__ageofcreation__/img/entities/copper-chest.png",
+	  icon = "__ageofcreation__/img/entities/copper-chest.png",
     icon_size = 192,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.1, result = "aoc-copper-chest"},

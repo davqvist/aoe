@@ -1,4 +1,4 @@
-local AOC =  require("__ageofcreation__/globals")
+local AOC = require("__ageofcreation__/globals")
 
 data:extend({{
   type = "technology",
@@ -203,6 +203,52 @@ data:extend({{
   },
   unit = {
       count = 60,
+      ingredients = AOC["age_tech_table"][6],
+      time = 50
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-enderium-tech",
+  icon = "__angelssmelting_art__/graphics/icons/plate-cobalt.png",
+  icon_size = 32,
+  prerequisites = {"aoc-platinum-tech", "aoc-brewing-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-alchemy-enderium-solution-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-casting-enderium-plate-recipe"
+    }
+  },
+  unit = {
+      count = 70,
+      ingredients = AOC["age_tech_table"][6],
+      time = 50
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-teleportation-tech",
+  icon = "__ageofcreation__/img/items/ender-orb.png",
+  icon_size = 64,
+  prerequisites = {"aoc-enderium-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-casting-ender-orb-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-infusing-teleportation-core-recipe"
+    }
+  },
+  unit = {
+      count = 80,
       ingredients = AOC["age_tech_table"][6],
       time = 50
   }

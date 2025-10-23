@@ -1,116 +1,8 @@
+require("__ageofcreation__/scripts/milestones")
+
 remote.add_interface("ageofcreation", {
 	milestones_presets = function()
-		return {
-			["Age of Creation"] = {
-				required_mods = {"ageofcreation", "space-age"},
-				milestones = {
-					{type="group", name="Science"},
-					{type="item", name="aoc-science-01", quantity=1},
-					{type="item", name="aoc-science-01", quantity=1000, next="x10"},
-					{type="item", name="aoc-science-02", quantity=1},
-					{type="item", name="aoc-science-02", quantity=1000, next="x10"},
-					{type="item", name="aoc-science-03", quantity=1},
-					{type="item", name="aoc-science-03", quantity=1000, next="x10"},
-					{type="item", name="aoc-science-04", quantity=1},
-					{type="item", name="aoc-science-04", quantity=1000, next="x10"},
-					{type="item", name="aoc-science-05", quantity=1},
-					{type="item", name="aoc-science-05", quantity=1000, next="x10"},
-					{type="item", name="aoc-science-06", quantity=1},
-					{type="item", name="aoc-science-06", quantity=1000, next="x10"},
-					{type="item", name="aoc-science-07", quantity=1},
-					{type="item", name="aoc-science-07", quantity=1000, next="x10"},
-
-					{type="group", name="Farming Age (Age 1)"},
-					{type="item", name="iron-plate", quantity=1},
-					{type="item", name="aoc-glass", quantity=1},
-					{type="item", name="aoc-log", quantity=1},
-					{type="item", name="aoc-kelp", quantity=1},
-					{type="item", name="aoc-tea-leaves", quantity=1},
-					{type="item", name="aoc-coffee-plant", quantity=1},
-					{type="item", name="aoc-latex-rubber", quantity=1},
-					{type="item", name="transport-belt", quantity=1},
-					{type="item", name="transport-belt",  quantity=1000, next="x10"},
-					{type="item", name="aoc-flax", quantity=1},
-					{type="item", name="copper-plate", quantity=1},
-
-					{type="group", name="Electric Age (Age 2)"},
-					{type="item", name="steel-plate", quantity=1},
-					{type="item", name="electronic-circuit", quantity=1},
-					{type="item", name="electronic-circuit", quantity=1000, next="x10"},
-					{type="item", name="aoc-steel-machine-hull", quantity=1},
-					{type="item", name="inserter", quantity=1},
-					{type="item", name="assembling-machine-2", quantity=1},
-					{type="item", name="steel-furnace", quantity=1},
-					{type="item", name="coal", quantity=1},
-					{type="item", name="aoc-aluminium-plate", quantity=1},
-					{type="item", name="aoc-quartz-dust", quantity=1},
-					{type="item", name="aoc-tin-plate", quantity=1},
-					{type="item", name="concrete", quantity=1},
-					{type="item", name="raw-fish", quantity=1},
-
-					{type="group", name="Agriculture Age (Age 3)"},
-					{type="item", name="aoc-spruce-tree", quantity=1},
-					{type="item", name="aoc-rubber-tree", quantity=1},
-					{type="item", name="aoc-apple-tree", quantity=1},
-					{type="item", name="aoc-olive-tree", quantity=1},
-					{type="item", name="aoc-grass", quantity=1},
-					{type="item", name="aoc-maize", quantity=1},
-					{type="item", name="aoc-soybeans", quantity=1},
-					{type="item", name="aoc-chicken", quantity=1},
-					{type="item", name="aoc-fertilizer", quantity=1},
-					{type="item", name="aoc-sheep", quantity=1},
-					{type="item", name="aoc-cow", quantity=1},
-					{type="item", name="aoc-ox", quantity=1},
-					{type="item", name="aoc-bronze-plate", quantity=1},
-
-					{type="group", name="Metallurgy Age (Age 4)"},
-					{type="item", name="rail", quantity=1},
-					{type="item", name="rail", quantity=1000, next="x10"},
-					{type="item", name="aoc-nickel-plate", quantity=1},
-					{type="item", name="aoc-zinc-plate", quantity=1},
-					{type="item", name="aoc-lead-plate", quantity=1},
-					{type="item", name="aoc-silver-plate", quantity=1},
-					{type="item", name="aoc-chromium-plate", quantity=1},
-					{type="item", name="aoc-gold-plate", quantity=1},
-					{type="item", name="tungsten-plate", quantity=1},
-					{type="item", name="aoc-gold-plate", quantity=1},
-					{type="item", name="aoc-diamond", quantity=1},
-					{type="item", name="aoc-solder", quantity=1},
-					{type="item", name="aoc-electrum", quantity=1},
-					{type="item", name="aoc-brass", quantity=1},
-					{type="item", name="aoc-aluminium-bronze", quantity=1},
-					{type="item", name="aoc-silicon", quantity=1},
-					{type="item", name="aoc-stainless-steel", quantity=1},
-					{type="item", name="aoc-animal-food", quantity=1},
-					{type="item", name="fast-inserter", quantity=1},
-					{type="item", name="assembling-machine-3", quantity=1},
-					{type="item", name="advanced-circuit", quantity=1},
-					{type="item", name="advanced-circuit", quantity=1000, next="x10"},
-					{type="item", name="electric-furnace", quantity=1},
-					{type="item", name="plastic-bar", quantity=1},
-
-					{type="group", name= "Petrochem Age (Age 5)"},
-					{type="item", name="light-armor", quantity=1},
-					{type="fluid", name="crude-oil", quantity=1},
-					{type="item", name="aoc-rubber", quantity=1},
-					{type="fluid", name="aoc-drilling-fluid", quantity=1},
-					{type="item", name="aoc-industrial-fertilizer", quantity=1},
-					{type="item", name="bulk-inserter", quantity=1},
-					{type="item", name="fast-transport-belt", quantity=1},
-					{type="item", name="fast-transport-belt", quantity=1000, next="x10"},
-					{type="item", name="electric-engine-unit", quantity=1},
-					{type="item", name="aoc-laser",  quantity=1},
-					{type="item", name="aoc-queen-aoc-honey", quantity=1},
-					{type="item", name="aoc-queen-aoc-royal-jelly", quantity=1},
-					{type="item", name="bee-construction",  quantity=1},
-					{type="item", name="bee-logistic",  quantity=1},
-					{type="item", name="aoc-epoxy-resin-solid",  quantity=1},
-					{type="item", name="processing-unit", quantity=1},
-					{type="item", name="processing-unit", quantity=1000, next="x10"},
-					{type="item", name="aoc-nauvium-plate", quantity=1}
-				}
-			}
-		}
+		return ms_data()
 	end
 })
 
@@ -257,21 +149,33 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 		handleBuilt( event, "cauldrons" )
 	end
 	if(entity.name == "aoc-wind-turbine") then
-		handleWindTurbineBuilt(event)
+		handleWindTurbineBuilt( event )
+	end
+	if(entity.name == "aoc-nauvis-chest") then
+		local built = handlePlanetChestBuilt( event, "nauvis" )
+		if not built then return end
+	end
+	if(entity.name == "aoc-vulcanus-chest") then
+		local built = handlePlanetChestBuilt( event, "vulcanus" )
+		if not built then return end
+	end
+	if(entity.name == "cargo-landing-pad") then
+		handleCargoLandingPadBuilt( event, "cargo_landing_pads" )
 	end
   end
 )
 
 function drop(event, to_drop)
-	local flag = false
-	if( event.name == defines.events.on_player_mined_entity ) then 
+	local flag = true
+	if( event.name == defines.events.on_player_mined_entity or event.name == defines.events.on_built_entity ) then 
 		local number = game.players[event.player_index].insert(to_drop)
 		if number < to_drop.amount then 
-			flag = true
 			to_drop.amount = to_drop.amount - number
+		else 
+			flag = false
 		end
 	end
-	if( flag == true or event.name ~= defines.events.on_player_mined_entity ) then 
+	if flag == true then 
 		local entity = event.entity
 		local ground_item = entity.surface.create_entity{
 			name = "item-on-ground",
@@ -300,6 +204,15 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 		for _, player in pairs(game.players) do
 			close_gui(player,entity.name)
 		end
+	end
+	if(entity.name == "aoc-nauvis-chest") then
+		handleMinedSurface(event, storage.planet_chests["nauvis"])
+	end
+	if(entity.name == "aoc-vulcanus-chest") then
+		handleMinedSurface(event, storage.planet_chests["vulcanus"])
+	end
+	if(entity.name == "cargo-landing-pad") then
+		handleMinedSurface(event, storage.cargo_landing_pads)
 	end
   end
 )
@@ -631,6 +544,43 @@ function handleWindTurbineBuilt(event)
   storage.wind_turbine_generators[wind_turbine.unit_number] = kinetic_generator
 end
 
+function handlePlanetChestBuilt(event, planet)
+  if not storage.planet_chests then storage.planet_chests={} end
+  if not storage.planet_chests[planet] then storage.planet_chests[planet]={} end
+  local planetchest = event.entity
+  if storage.planet_chests[planet][planetchest.surface.index] ~= nil or planetchest.surface.index == game.get_surface(planet).index then
+	if event.player_index then
+	  game.get_player(event.player_index).create_local_flying_text{
+		text = {"age-of-creation.once-per-surface"},
+		create_at_cursor = true,
+	  }
+	end
+	drop(event, {name=planetchest.name,amount=1})
+	planetchest.destroy()
+	return false
+  else
+    storage.planet_chests[planet][planetchest.surface.index] = planetchest
+	if storage.cargo_landing_pads and storage.cargo_landing_pads[game.get_surface(planet).index] ~= nil then
+  	  planetchest.proxy_target_entity = storage.cargo_landing_pads[game.get_surface(planet).index]
+  	  planetchest.proxy_target_inventory = defines.inventory.cargo_landing_pad_main
+	end
+  end
+  return true
+end
+
+function handleCargoLandingPadBuilt( event, building )
+	if not storage[building] then storage[building]={} end
+	local entity = event.entity
+	storage[building][entity.surface.index] = entity
+	local sf = game.get_surface(entity.surface.index)
+  	if storage.planet_chests and storage.planet_chests[sf.name] then
+	    for _, pc in pairs(storage.planet_chests[sf.name]) do
+			pc.proxy_target_entity = entity
+			pc.proxy_target_inventory = defines.inventory.cargo_landing_pad_main
+		end
+	end
+end
+
 function handleMined(event, main_entities, sub_entities, drop)
   if not main_entities then main_entities={} end
   if not sub_entities then sub_entities={} end
@@ -643,6 +593,12 @@ function handleMined(event, main_entities, sub_entities, drop)
 	return {name=k,amount=v}
   else ent2.destroy()
   end
+end
+
+function handleMinedSurface(event, main_entities)
+  if not main_entities then main_entities={} end
+  local ent = event.entity
+  main_entities[ent.surface.index] = nil
 end
 
 function check_research( escritoire )
@@ -721,13 +677,22 @@ function tapTree(forestry, what, tree)
   local entity = nil
   local temp = surface.find_entities_filtered({position={x,y}, [what]=tree, radius=2.5})
   if temp ~= nil then entity = temp[1] end
-  if entity == nil or game.tick < entity.tick_grown then forestry.crafting_progress = 0 end
+  if entity == nil and tree == "tree-plant" then 
+	temp = surface.find_entities_filtered({position={x,y}, type="tree", radius=2.5})
+	if temp ~= nil then entity = temp[1] end
+  end
+  if entity == nil or ( entity.type ~= "tree" and game.tick < entity.tick_grown ) then forestry.crafting_progress = 0 end
 end
 
 script.on_event(defines.events.on_script_trigger_effect,
     function(event)
-		local p = event.target_entity.player
-        if p and event.effect_id == "aoc-trigger-tea" then
+		local p = null
+		if event.target_entity and event.target_entity.player then
+			p = event.target_entity.player
+		elseif event.source_entity and event.source_entity.player then
+			p = event.source_entity.player
+		end
+		if p and event.effect_id == "aoc-trigger-tea" then
 			if storage.teatick == nil then storage.teatick = {} end
 			storage.teatick[game.tick+3600] = p.index
 			p.character_mining_speed_modifier = p.character_mining_speed_modifier+1
@@ -754,6 +719,13 @@ script.on_event(defines.events.on_script_trigger_effect,
 			if flag then 
 				storage.scrolltick[game.tick+3600] = p.index
 				p.remove_item{name="aoc-scroll", count=1}
+			end
+		end
+		if p and event.effect_id == "aoc-trigger-ender-orb" then
+			local endpos = p.surface.find_non_colliding_position("character", event.target_position, 5, 1)
+			if endpos then
+				p.teleport(endpos)
+				p.remove_item{name="aoc-ender-orb", count=1}
 			end
 		end
 	end

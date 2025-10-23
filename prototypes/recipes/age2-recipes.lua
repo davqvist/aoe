@@ -1325,7 +1325,8 @@ data:extend({{
         {type = 'fluid', name = 'aoc-air', amount = 100}
     },
 	energy_required = 1,
-	category = 'aoc-category-pumping'
+	category = 'aoc-category-pumping',
+	surface_conditions = {{ property = "gravity", min = 0.1 }}
 }})
 
 data:extend({{
@@ -1337,7 +1338,8 @@ data:extend({{
         {type = 'fluid', name = 'aoc-cold-air', amount = 25}
     },
 	energy_required = 1,
-	category = 'aoc-category-pumping'
+	category = 'aoc-category-pumping',
+	surface_conditions = {{ property = "gravity", min = 0.1 }}
 }})
 
 data:extend({{
@@ -1349,7 +1351,8 @@ data:extend({{
         {type = 'fluid', name = 'aoc-warm-air', amount = 25}
     },
 	energy_required = 1,
-	category = 'aoc-category-pumping'
+	category = 'aoc-category-pumping',
+	surface_conditions = {{ property = "gravity", min = 0.1 }}
 }})
 
 data:extend({{
@@ -1373,7 +1376,8 @@ data:extend({{
         {type = 'fluid', name = 'aoc-vacuum', amount = 10}
     },
 	energy_required = 1,
-	category = 'aoc-category-pumping'
+	category = 'aoc-category-pumping',
+	surface_conditions = {{ property = "gravity", min = 0.1 }}
 }})
 
 data:extend({{
@@ -1385,7 +1389,8 @@ data:extend({{
         {type = 'fluid', name = 'aoc-oxygen', amount = 40}
     },
 	energy_required = 1,
-	category = 'aoc-category-pumping'
+	category = 'aoc-category-pumping',
+	surface_conditions = {{ property = "gravity", min = 0.1 }}
 }})
 
 data:extend({{
@@ -1397,7 +1402,8 @@ data:extend({{
         {type = 'fluid', name = 'aoc-nitrogen', amount = 5}
     },
 	energy_required = 1,
-	category = 'aoc-category-pumping'
+	category = 'aoc-category-pumping',
+	surface_conditions = {{ property = "gravity", min = 0.1 }}
 }})
 
 data:extend({{

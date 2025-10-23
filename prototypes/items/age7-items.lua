@@ -15,7 +15,7 @@ data:extend({{
     type = "item",
     name = "aoc-titanium-ore",
     icons = { { icon = "__ageofcreation__/img/items/titanium-ore.png", icon_size = 64 }, { icon = "__ageofcreation__/img/items/atoms/ti.png", icon_size = 64 } },
-    pictures = { { filename = "__ageofcreation__/img/items/titanium-ore.png", size = 64 } },
+    pictures = { { filename = "__ageofcreation__/img/items/titanium-ore.png", size = 64, scale = 0.5 } },
     subgroup = "aoc-metals-rest",
     order = "g",
     stack_size = 200
@@ -28,6 +28,16 @@ data:extend({{
     pictures = { { filename = "__angelssmelting_art__/graphics/icons/plate-titanium.png", size = 32 } },
     subgroup = "aoc-metals-rest",
     order = "h",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-titanium-rod",
+    icons = { { icon = "__ageofcreation__/img/items/titanium-rod.png", icon_size = 64 }, { icon = "__ageofcreation__/img/items/atoms/ti.png", icon_size = 64 } },
+    pictures = { { filename = "__ageofcreation__/img/items/titanium-rod.png", size = 64, scale = 0.5 } },
+    subgroup = "aoc-metals-rest",
+    order = "h1",
     stack_size = 200
 }})
 
@@ -90,6 +100,9 @@ data:extend({{
 data.raw['ammo']['firearm-magazine'].subgroup = "aoc-ammo"
 data.raw['ammo']['firearm-magazine'].order = "a"
 data.raw['ammo']['firearm-magazine'].stack_size = 200
+data.raw['ammo']['piercing-rounds-magazine'].subgroup = "aoc-ammo"
+data.raw['ammo']['piercing-rounds-magazine'].order = "c"
+data.raw['ammo']['piercing-rounds-magazine'].stack_size = 100
 
 data.raw['item']['rocket-silo'].subgroup = "aoc-space-buildings"
 data.raw['item']['rocket-silo'].order = "c"
@@ -101,6 +114,9 @@ data.raw['item']['space-platform-foundation'].stack_size = 200
 data.raw['item']['asteroid-collector'].subgroup = "aoc-space-platform"
 data.raw['item']['asteroid-collector'].order = "b"
 data.raw['item']['asteroid-collector'].stack_size = 25
+data.raw['item']['thruster'].subgroup = "aoc-space-platform"
+data.raw['item']['thruster'].order = "c"
+data.raw['item']['thruster'].stack_size = 25
 data.raw['space-platform-starter-pack']['space-platform-starter-pack'].subgroup = "aoc-space-stuff"
 data.raw['space-platform-starter-pack']['space-platform-starter-pack'].order = "c"
 data.raw['space-platform-starter-pack']['space-platform-starter-pack'].stack_size = 1

@@ -1,5 +1,5 @@
 
-local AOC =  require("__ageofcreation__/globals")
+local AOC = require("__ageofcreation__/globals")
 
 local bee_globals = {
 	["aoc-honey"] = {["color"] = {255, 255, 0}, ["amount"] = 8, ["offspring"] = 5, ["technology"] = "aoc-bees-tech", ["chance"] = nil, ["parents"] = nil},

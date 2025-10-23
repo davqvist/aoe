@@ -17,6 +17,7 @@ require("__ageofcreation__/prototypes/fluids/fluids")
 require("__ageofcreation__/prototypes/recipes/recipes")
 require("__ageofcreation__/prototypes/techs/techs")
 require("__ageofcreation__/prototypes/bees")
+require("__ageofcreation__/prototypes/projectiles")
 require("__ageofcreation__/prototypes/space/space")
 
 --angelsmods.refining.disable_ore_override = true
@@ -39,6 +40,14 @@ data.raw.plant['tree-plant'].minable.results = {
 	{type = "item", name = "aoc-log", amount = 1},
 	{type = "item", name = "aoc-leaves", amount = 4}
 }
+
+local vulcanus_drops = {'vulcanus-chimney', 'vulcanus-chimney-short', 'vulcanus-chimney-truncated', 'vulcanus-chimney-cold', 'vulcanus-chimney-faded', 'big-volcanic-rock', 'huge-volcanic-rock'}
+for _, vd in pairs(vulcanus_drops) do
+	for i, r in pairs(data.raw['simple-entity'][vd].minable.results) do
+		data.raw['simple-entity'][vd].minable.results[i].name = "aoc-basalt" 
+	end
+end
+
 
 local rubber_tree_plant = util.table.deepcopy(data.raw["tree"]["tree-04"])
 rubber_tree_plant.type = "plant"

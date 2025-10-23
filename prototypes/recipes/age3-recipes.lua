@@ -11,7 +11,8 @@ data:extend({{
         {type = 'fluid', name = 'water', amount = 1000}
     },
     energy_required = 1,
-	category = 'aoc-category-digging'
+	category = 'aoc-category-digging',
+	surface_conditions = { { property = "pressure", min = 1000, max = 1000 } }
 }})
 
 data:extend({{

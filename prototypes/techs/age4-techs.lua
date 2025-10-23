@@ -1,4 +1,4 @@
-local AOC =  require("__ageofcreation__/globals")
+local AOC = require("__ageofcreation__/globals")
 
 data:extend({{
   type = "technology",
@@ -26,6 +26,14 @@ data:extend({{
     {
       type = "unlock-recipe",
       recipe = "aoc-crafting-transformer-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-transformer-high-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-transformer-low-recipe"
     }
   },
   unit = {
