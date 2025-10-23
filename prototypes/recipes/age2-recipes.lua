@@ -657,6 +657,7 @@ data:extend({{
 	subgroup = 'aoc-stone',
 	order = "a1",
 	energy_required = 2,
+	allow_productivity = false,
 	category = 'aoc-category-straining'
 }})
 
@@ -672,6 +673,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.fluid["lava"] ), get_icons( data.raw.item["stone"] ) ),
 	energy_required = 2,
+	allow_productivity = false,
 	category = 'aoc-category-melting'
 }})
 
@@ -687,6 +689,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.fluid["lava"] ), get_icons( data.raw.item["aoc-stones-sedimentary"] ) ),
 	energy_required = 2,
+	allow_productivity = false,
 	category = 'aoc-category-melting'
 }})
 
@@ -702,6 +705,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.fluid["lava"] ), get_icons( data.raw.item["aoc-stones-metamorphic"] ) ),
 	energy_required = 2,
+	allow_productivity = false,
 	category = 'aoc-category-melting'
 }})
 
@@ -718,6 +722,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-metamorphic"] ), get_icons( data.raw.item["aoc-stones-sedimentary"] ) ),
 	energy_required = 2,
+	allow_productivity = false,
 	category = 'aoc-category-high-pressure-heating'
 }})
 
@@ -734,6 +739,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-metamorphic"] ), get_icons( data.raw.item["aoc-stones-igneous"] ) ),
 	energy_required = 2,
+	allow_productivity = false,
 	category = 'aoc-category-high-pressure-heating'
 }})
 
@@ -749,6 +755,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-sedimentary"] ), get_icons( data.raw.item["aoc-stones-metamorphic"] ) ),
 	energy_required = 2,
+	allow_productivity = false,
 	category = 'aoc-category-sedimenting'
 }})
 
@@ -764,6 +771,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-sedimentary"] ), get_icons( data.raw.item["aoc-stones-igneous"] ) ),
 	energy_required = 2,
+	allow_productivity = false,
 	category = 'aoc-category-sedimenting'
 }})
 
@@ -778,6 +786,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-stones-igneous', amount = 6}
     },
 	energy_required = 2,
+	allow_productivity = false,
 	category = 'aoc-category-freezing'
 }})
 

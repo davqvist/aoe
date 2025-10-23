@@ -213,7 +213,7 @@ data:extend({{
     icon = "__ageofcreation__/img/items/ring.png",
     icon_size = 64,
     subgroup = "aoc-equipment",
-    order = "g",
+    order = "h",
     place_as_equipment_result = "aoc-ring-equipment",
     stack_size = 20
 }})
@@ -224,7 +224,7 @@ data:extend({{
     icon = "__ageofcreation__/img/items/necklace.png",
     icon_size = 64,
     subgroup = "aoc-equipment",
-    order = "h",
+    order = "i",
     place_as_equipment_result = "aoc-necklace-equipment",
     stack_size = 20
 }})

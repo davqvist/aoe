@@ -526,3 +526,84 @@ data:extend({{
 	energy_required = 120,
 	category = 'aoc-category-infusing'
 }})
+
+data:extend({{
+	name = 'aoc-infusing-flying-robot-frame-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "electric-engine-unit", amount = 1},
+		{type = "item", name = "battery", amount = 1},
+		{type = "item", name = "aoc-titanium-plate", amount = 1},
+		{type = "item", name = "advanced-circuit", amount = 1}
+	},
+	results = {
+        {type = 'item', name = 'flying-robot-frame', amount = 1}
+    },
+	energy_required = 20,
+	category = 'aoc-category-infusing'
+}})
+
+data:extend({{
+	name = 'aoc-crafting-logistic-robot-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "flying-robot-frame", amount = 1},
+		{type = "item", name = "advanced-circuit", amount = 2},
+		{type = "item", name = "iron-chest", amount = 1}
+	},
+	results = {
+        {type = 'item', name = 'logistic-robot', amount = 1}
+    },
+	energy_required = 1,
+	allow_productivity = false
+}})
+
+data:extend({{
+	name = 'aoc-crafting-construction-robot-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "flying-robot-frame", amount = 1},
+		{type = "item", name = "electronic-circuit", amount = 4},
+		{type = "item", name = "repair-pack", amount = 1}
+	},
+	results = {
+        {type = 'item', name = 'construction-robot', amount = 1}
+    },
+	energy_required = 1,
+	allow_productivity = false
+}})
+
+data:extend({{
+	name = 'aoc-crafting-roboport-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "aoc-electrum-machine-hull", amount = 10},
+		{type = "item", name = "aoc-sensor", amount = 10},
+		{type = "item", name = "aoc-titanium-plate", amount = 10}
+	},
+	results = {
+        {type = 'item', name = 'roboport', amount = 1}
+    },
+	energy_required = 5,
+	allow_productivity = false
+}})
+
+data:extend({{
+	name = 'aoc-crafting-roboport-equipment-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "aoc-electrum-machine-hull", amount = 10},
+		{type = "item", name = "aoc-sensor", amount = 10},
+		{type = "item", name = "aoc-titanium-plate", amount = 10}
+	},
+	results = {
+        {type = 'item', name = 'personal-roboport-equipment', amount = 1}
+    },
+	energy_required = 5,
+	allow_productivity = false
+}})

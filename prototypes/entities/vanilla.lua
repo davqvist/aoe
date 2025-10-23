@@ -326,3 +326,13 @@ silocopy2.place_result = "aoc-rocket-silo-simple"
 silocopy2.subgroup = "aoc-space-buildings"
 silocopy2.order = "b"
 data:extend({ silocopy2 })
+
+data.raw['item']['logistic-robot'].stack_size = 20
+data.raw['item']['construction-robot'].stack_size = 20
+data.raw['logistic-robot']['logistic-robot'].speed = 0.05
+data.raw['construction-robot']['construction-robot'].speed = 0.05
+data.raw['logistic-robot']['logistic-robot'].max_payload_size = 2
+data.raw['construction-robot']['construction-robot'].max_payload_size = 6
+data.raw['item']['personal-roboport-equipment'].subgroup = "aoc-equipment"
+data.raw['item']['personal-roboport-equipment'].order = "g"
+data.raw['roboport-equipment']['personal-roboport-equipment'].robot_limit = 20

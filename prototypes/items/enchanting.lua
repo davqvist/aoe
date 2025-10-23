@@ -2,6 +2,7 @@ local to_enchant = {
     ["aoc-ring-equipment"] = "inventory-bonus-equipment", 
     ["aoc-necklace-equipment"] = "inventory-bonus-equipment",
     ["aoc-pocket-hive-equipment"] = "roboport-equipment",
+    ["personal-roboport-equipment"] = "roboport-equipment",
     ["aoc-portable-boiler-equipment"] = "generator-equipment",
     ["solar-panel-equipment"] = "solar-panel-equipment",
     ["battery-equipment"] = "battery-equipment"

@@ -50,7 +50,7 @@ data:extend({{
     stack_size = 1,
 	category = "aoc-module-titanium",
 	tier = 1,
-    effect = { productivity = 0.05 },
+    effect = { productivity = 0.1 },
 	limitation = {},
 	limitation_message_key = "item-not-allowed-in-this-container-item"
 }})
@@ -180,3 +180,7 @@ data.raw['module']['efficiency-module-2'].stack_size = 50
 data.raw['module']['efficiency-module-3'].subgroup = "aoc-modules"
 data.raw['module']['efficiency-module-3'].order = "d3"
 data.raw['module']['efficiency-module-3'].stack_size = 50
+
+data.raw['item']['flying-robot-frame'].subgroup = "aoc-parts"
+data.raw['item']['flying-robot-frame'].order = "k"
+data.raw['item']['flying-robot-frame'].stack_size = 200

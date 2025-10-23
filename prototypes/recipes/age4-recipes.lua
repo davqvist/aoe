@@ -19,6 +19,7 @@ data:extend({{
 	subgroup = 'aoc-stone',
 	order = "d1",
 	energy_required = 2,
+	allow_productivity = false,
 	category = 'aoc-category-straining'
 }})
 
@@ -91,6 +92,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-sedimentary"] ), get_icons( data.raw.item["aoc-basalt"] ) ),
 	energy_required = 2,
+	allow_productivity = false,
 	category = 'aoc-category-sedimenting'
 }})
 
@@ -106,6 +108,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-sedimentary"] ), get_icons( data.raw.item["aoc-gabbro"] ) ),
 	energy_required = 2,
+	allow_productivity = false,
 	category = 'aoc-category-sedimenting'
 }})
 
@@ -121,6 +124,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-sedimentary"] ), get_icons( data.raw.item["aoc-granite"] ) ),
 	energy_required = 2,
+	allow_productivity = false,
 	category = 'aoc-category-sedimenting'
 }})
 
@@ -137,6 +141,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-metamorphic"] ), get_icons( data.raw.item["aoc-basalt"] ) ),
 	energy_required = 2,
+	allow_productivity = false,
 	category = 'aoc-category-high-pressure-heating'
 }})
 
@@ -153,6 +158,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-metamorphic"] ), get_icons( data.raw.item["aoc-gabbro"] ) ),
 	energy_required = 2,
+	allow_productivity = false,
 	category = 'aoc-category-high-pressure-heating'
 }})
 
@@ -169,6 +175,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-metamorphic"] ), get_icons( data.raw.item["aoc-granite"] ) ),
 	energy_required = 2,
+	allow_productivity = false,
 	category = 'aoc-category-high-pressure-heating'
 }})
 
@@ -191,6 +198,7 @@ data:extend({{
 	subgroup = 'aoc-stone',
 	order = "e1",
 	energy_required = 2,
+	allow_productivity = false,
 	category = 'aoc-category-straining'
 }})
 
@@ -263,6 +271,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-sedimentary"] ), get_icons( data.raw.item["aoc-gneiss"] ) ),
 	energy_required = 2,
+	allow_productivity = false,
 	category = 'aoc-category-sedimenting'
 }})
 
@@ -278,6 +287,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-sedimentary"] ), get_icons( data.raw.item["aoc-slate"] ) ),
 	energy_required = 2,
+	allow_productivity = false,
 	category = 'aoc-category-sedimenting'
 }})
 
@@ -293,6 +303,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-sedimentary"] ), get_icons( data.raw.item["aoc-marble"] ) ),
 	energy_required = 2,
+	allow_productivity = false,
 	category = 'aoc-category-sedimenting'
 }})
 
@@ -308,6 +319,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.fluid["lava"] ), get_icons( data.raw.item["aoc-gneiss"] ) ),
 	energy_required = 2,
+	allow_productivity = false,
 	category = 'aoc-category-melting'
 }})
 
@@ -323,6 +335,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.fluid["lava"] ), get_icons( data.raw.item["aoc-slate"] ) ),
 	energy_required = 2,
+	allow_productivity = false,
 	category = 'aoc-category-melting'
 }})
 
@@ -338,6 +351,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.fluid["lava"] ), get_icons( data.raw.item["aoc-marble"] ) ),
 	energy_required = 2,
+	allow_productivity = false,
 	category = 'aoc-category-melting'
 }})
 
@@ -360,6 +374,7 @@ data:extend({{
 	subgroup = 'aoc-stone',
 	order = "f1",
 	energy_required = 2,
+	allow_productivity = false,
 	category = 'aoc-category-straining'
 }})
 
@@ -433,6 +448,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-metamorphic"] ), get_icons( data.raw.item["aoc-limestone"] ) ),
 	energy_required = 2,
+	allow_productivity = false,
 	category = 'aoc-category-high-pressure-heating'
 }})
 
@@ -449,6 +465,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-metamorphic"] ), get_icons( data.raw.item["aoc-sandstone"] ) ),
 	energy_required = 2,
+	allow_productivity = false,
 	category = 'aoc-category-high-pressure-heating'
 }})
 
@@ -465,6 +482,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-metamorphic"] ), get_icons( data.raw.item["aoc-shale"] ) ),
 	energy_required = 2,
+	allow_productivity = false,
 	category = 'aoc-category-high-pressure-heating'
 }})
 
@@ -480,6 +498,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.fluid["lava"] ), get_icons( data.raw.item["aoc-limestone"] ) ),
 	energy_required = 2,
+	allow_productivity = false,
 	category = 'aoc-category-melting'
 }})
 
@@ -496,6 +515,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.fluid["lava"] ), get_icons( data.raw.item["aoc-sandstone"] ) ),
 	energy_required = 2,
+	allow_productivity = false,
 	category = 'aoc-category-melting'
 }})
 
@@ -511,6 +531,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.fluid["lava"] ), get_icons( data.raw.item["aoc-shale"] ) ),
 	energy_required = 2,
+	allow_productivity = false,
 	category = 'aoc-category-melting'
 }})
 

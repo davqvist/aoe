@@ -865,7 +865,7 @@ data:extend({{
     icon = "__angelsindustries_art__/graphics/icons/resistor.png",
     icon_size = 32,
     subgroup = "aoc-circuits",
-    order = "d",
+    order = "e",
     stack_size = 200
 }})
 
@@ -875,7 +875,7 @@ data:extend({{
     icon = "__ageofcreation__/img/items/diode.png",
     icon_size = 64,
     subgroup = "aoc-circuits",
-    order = "e",
+    order = "f",
     stack_size = 200
 }})
 
@@ -885,7 +885,7 @@ data:extend({{
     icon = "__ageofcreation__/img/items/capacitor.png",
     icon_size = 64,
     subgroup = "aoc-circuits",
-    order = "f",
+    order = "g",
     stack_size = 200
 }})
 
@@ -895,7 +895,7 @@ data:extend({{
     icon = "__angelsindustries_art__/graphics/icons/transistor.png",
     icon_size = 32,
     subgroup = "aoc-circuits",
-    order = "g",
+    order = "h",
     stack_size = 200
 }})
 
@@ -905,7 +905,7 @@ data:extend({{
     icon = "__ageofcreation__/img/items/inductor.png",
     icon_size = 64,
     subgroup = "aoc-circuits",
-    order = "h",
+    order = "i",
     stack_size = 200
 }})
 

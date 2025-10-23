@@ -230,7 +230,7 @@ data:extend({{
     icon = "__angelsindustries_art__/graphics/icons/chip.png",
     icon_size = 32,
     subgroup = "aoc-circuits",
-    order = "i",
+    order = "j",
     stack_size = 200
 }})
 

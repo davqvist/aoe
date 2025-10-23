@@ -1,9 +1,10 @@
 require("__ageofcreation__/globals")
 
-local research_techs = { 'aoc-starlight-tech', 'aoc-lotus-flower-tech-1', 'aoc-lotus-flower-tech-2', 'aoc-mercury-tech', 'aoc-alchemy-tech', 'aoc-platinum-tech', 'aoc-enderium-tech', 'aoc-teleportation-tech', 'aoc-jewelry-tech', 'aoc-mana-tech', 'aoc-enchanting-tech', 'aoc-digging-tech-3', 'aoc-stargazing-tech' }
+local research_techs = { 'aoc-starlight-tech', 'aoc-lotus-flower-tech-1', 'aoc-lotus-flower-tech-2', 'aoc-mercury-tech', 'aoc-alchemy-tech', 'aoc-platinum-tech', 'aoc-enderium-tech', 'aoc-teleportation-tech', 'aoc-jewelry-tech', 'aoc-mana-tech', 'aoc-enchanting-tech', 'aoc-digging-tech-3', 'aoc-stargazing-tech', 'aoc-electronic-robots-tech' }
 
 for t, technology in pairs(research_techs) do
     if data.raw.technology[technology] and data.raw.technology[technology].effects then
+        local to_remove = {}
         for r, recipes in pairs(data.raw.technology[technology].effects) do
             if recipes.recipe and data.raw.recipe[recipes.recipe] and data.raw.recipe[recipes.recipe].research then
                 data:extend({{
@@ -21,13 +22,19 @@ for t, technology in pairs(research_techs) do
                     energy_required = 40,
                     category = 'aoc-category-unlocking'
                 }})
+                table.insert(to_remove,r)
             end
         end
-        data.raw.technology[technology].effects = {{
-            type = "nothing",
-            use_icon_overlay_constant = true,
-            effect_description = {"age-of-creation.technology-research-hidden"}
-        }}
+        for i = #to_remove, 1, -1 do
+            table.remove(data.raw.technology[technology].effects, to_remove[i])
+        end
+        if #to_remove > 0 then
+            table.insert(data.raw.technology[technology].effects,{
+                type = "nothing",
+                use_icon_overlay_constant = true,
+                effect_description = {"age-of-creation.technology-research-hidden"}
+            })
+        end
     end
 end
 

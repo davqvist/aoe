@@ -8,6 +8,7 @@ local qol = {
     { "faster-legs", {{ icon = "__ageofcreation__/img/techs/running-speed.png", icon_size = 256 }}, {{ type = "character-running-speed", modifier = 0.1 }}, 2 },
     { "improved-tools", {{ icon = "__ageofcreation__/img/techs/crafting-speed.png", icon_size = 256 }}, {{ type = "character-crafting-speed", modifier = 0.2 }}, 2 },
     { "increased-knowledge", {{ icon = "__ageofcreation__/img/techs/research-speed.png", icon_size = 256 }}, {{ type = "laboratory-speed", modifier = 0.2 }}, 2 },
+    { "mining-productivity", {{ icon = "__base__/graphics/technology/mining-productivity.png", icon_size = 256, icon_mipmaps = 4 }}, {{ type = "mining-drill-productivity-bonus", modifier = 0.05 }}, 2 },
     { "robot-speed", {{ icon = "__base__/graphics/technology/worker-robots-speed.png", icon_size = 256, icon_mipmaps = 4 }}, {{ type = "worker-robot-speed", modifier = 0.3 }}, 6 },
     { "robot-cargo-size", {{ icon = "__base__/graphics/technology/worker-robots-storage.png", icon_size = 256, icon_mipmaps = 4 }}, {{ type = "worker-robot-storage", modifier = 1 }}, 6 },
     { "physical-projectile-damage", {{ icon = "__base__/graphics/technology/physical-projectile-damage-1.png", icon_size = 256, icon_mipmaps = 4 }}, 

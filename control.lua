@@ -6,11 +6,12 @@ remote.add_interface("ageofcreation", {
 	end
 })
 
-	function init_recipes()
+function init_recipes()
 	if storage.infusing == nil then storage.infusing = {} end
     for _, recipe in pairs(prototypes.get_recipe_filtered({{filter = "category", category = "aoc-category-infusing"}})) do
 		for _, ingredient in pairs(recipe.ingredients) do
-			if not storage.infusing[ingredient.name] then storage.infusing[ingredient.name] = recipe.name end
+			if not storage.infusing[ingredient.name] then storage.infusing[ingredient.name] = { recipe.name }
+			else table.insert(storage.infusing[ingredient.name],recipe.name) end
 		end
 	end
     if storage.unlocking == nil then storage.unlocking = {} end
@@ -21,7 +22,7 @@ remote.add_interface("ageofcreation", {
     else
 		for _, player in pairs(game.players) do 
 			for recipe, value in pairs(storage.recipes) do 
-				player.force.recipes[recipe].enabled = value
+				if player.force.recipes[recipe] then player.force.recipes[recipe].enabled = value else storage.recipes[recipe] = nil end
 			end
 		end
 	end	
@@ -344,14 +345,24 @@ script.on_nth_tick(151,
 						local inv = {}
 						local k = {}
 						local v = {}
+						local r = {}
+						local recipe = null
 						local flag = true
 						for i, p in pairs( pedestals ) do
 							inv[i] = p.get_inventory(defines.inventory.chest)
 							k[i], v[i] = next( inv[i].get_contents() )
 							if v[i] == nil or storage.infusing[v[i].name] == nil then flag = false break end
 						end
-						if flag and storage.infusing[v[1].name] == storage.infusing[v[2].name] and storage.infusing[v[1].name] == storage.infusing[v[3].name] and storage.infusing[v[1].name] == storage.infusing[v[4].name] and itm.force.recipes[storage.infusing[v[1].name]].enabled then
-							itm.set_recipe( storage.infusing[v[1].name] )
+						if flag then
+							for i=1, 4 do
+								for j, p in pairs( storage.infusing[v[i].name] ) do
+									if not r[p] then r[p] = 1 else r[p] = r[p]+1 end
+									if r[p] == 4 then recipe = p end
+								end
+							end
+						end
+						if flag and recipe and itm.force.recipes[recipe].enabled then
+							itm.set_recipe( recipe )
 							local out = itm.get_inventory(defines.inventory.assembling_machine_output)
 							local tempk, tempv = next( out.get_contents() )
 							if tempv == nil or tempv.count < 2 then

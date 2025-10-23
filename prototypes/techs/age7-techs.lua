@@ -268,6 +268,45 @@ data:extend({{
 
 data:extend({{
   type = "technology",
+  name = "aoc-electronic-robots-tech",
+  icon = "__base__/graphics/technology/robotics.png",
+  icon_size = 256, icon_mipmaps = 4,
+  prerequisites = {"aoc-titanium-tech", "aoc-bee-helpers-tech", "aoc-enchanting-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-infusing-flying-robot-frame-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-logistic-robot-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-construction-robot-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-roboport-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-roboport-equipment-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-personal-roboport-equipment-2-recipe"
+    }
+  },
+  unit = {
+      count = 70,
+      ingredients = AOC["age_tech_table"][7],
+      time = 60
+  }
+}})
+
+data:extend({{
+  type = "technology",
   name = "aoc-laser-tech-2",
   icon = "__base__/graphics/technology/laser.png",
   icon_size = 256, icon_mipmaps = 4,
