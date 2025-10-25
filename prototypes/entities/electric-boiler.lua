@@ -20,7 +20,7 @@ data:extend({{
     usage_priority = "secondary-input",
     drain = "0kW"
   },
-  energy_usage = "2MW",
+  energy_usage = "3MW",
   fixed_recipe = "aoc-boiling-steam-recipe",
   icon = "__angelspetrochem_art__/graphics/icons/electric-boiler.png",
   icon_size = 32,

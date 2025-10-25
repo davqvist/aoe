@@ -375,7 +375,7 @@ data:extend({{
   name = "aoc-digging-tech-3",
   icon_size = 32,
   icon = "__angelsrefining_art__/graphics/icons/liquifier.png",
-  prerequisites = {"aoc-brewing-tech", "aoc-digging-tech-2"},
+  prerequisites = {"aoc-brewing-tech", "aoc-magic-research-tech", "aoc-digging-tech-2"},
   effects = {
     {
       type = "unlock-recipe",
@@ -469,4 +469,30 @@ data:extend({{
         ingredients = AOC["age_tech_table"][6],
         time = 60
     }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-thermal-power-tech",
+  icons = {{
+      icon = "__angelsrefining_art__/graphics/icons/thermal-extractor.png",
+      icon_size = 32,
+      icon_mipmaps = 1
+  }},
+  prerequisites = {"aoc-brewing-tech", "aoc-magic-research-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-thermopile-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-steam-turbine-recipe"
+    }
+  },
+  unit = {
+      count = 35,
+      ingredients = AOC["age_tech_table"][6],
+      time = 50
+  }
 }})

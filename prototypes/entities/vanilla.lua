@@ -278,17 +278,18 @@ data.raw['item']['po-transformer-low'].order = "k3"
 	
 data.raw['item']['boiler'].subgroup = "aoc-power-buildings"
 data.raw['item']['boiler'].order = "b"
-data.raw['boiler']['boiler'].energy_consumption = "1.5MW"
+data.raw['boiler']['boiler'].energy_consumption = "2.4MW"
 data.raw['item']['steam-engine'].subgroup = "aoc-power-buildings"
 data.raw['item']['steam-engine'].order = "d"
-data.raw['generator']['steam-engine'].max_power_output = "450kW"
+data.raw['generator']['steam-engine'].max_power_output = "500kW"
 data.raw['generator']['steam-engine'].effectivity = 0.833333333
-data.raw['generator']['steam-engine'].fluid_usage_per_tick = 0.2083333333
+data.raw['generator']['steam-engine'].fluid_usage_per_tick = 0.3333333333
 data.raw['item']['steam-turbine'].subgroup = "aoc-power-buildings"
 data.raw['item']['steam-turbine'].order = "e"
-data.raw['generator']['steam-turbine'].max_power_output = "10MW"
+data.raw['generator']['steam-turbine'].max_power_output = "9.6MW"
 data.raw['generator']['steam-turbine'].effectivity = 1
 data.raw['generator']['steam-turbine'].fluid_usage_per_tick = 1.666666667
+data.raw['generator']['steam-turbine'].maximum_temperature = 495
 
 data.raw['item']['solar-panel'].subgroup = "aoc-power-buildings"
 data.raw['item']['solar-panel'].order = "i"

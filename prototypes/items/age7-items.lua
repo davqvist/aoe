@@ -184,3 +184,10 @@ data.raw['module']['efficiency-module-3'].stack_size = 50
 data.raw['item']['flying-robot-frame'].subgroup = "aoc-parts"
 data.raw['item']['flying-robot-frame'].order = "k"
 data.raw['item']['flying-robot-frame'].stack_size = 200
+
+data.raw['armor']['heavy-armor'].subgroup = "aoc-armor"
+data.raw['armor']['heavy-armor'].order = "c"
+data.raw['armor']['heavy-armor'].inventory_size_bonus = 20
+data.raw['armor']['heavy-armor'].equipment_grid = "medium-equipment-grid"
+data.raw['item']['exoskeleton-equipment'].subgroup = "aoc-equipment"
+data.raw['item']['exoskeleton-equipment'].order = "j"

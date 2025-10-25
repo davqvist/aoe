@@ -1,20 +1,12 @@
-local to_enchant = {
-    ["aoc-ring-equipment"] = "inventory-bonus-equipment", 
-    ["aoc-necklace-equipment"] = "inventory-bonus-equipment",
-    ["aoc-pocket-hive-equipment"] = "roboport-equipment",
-    ["personal-roboport-equipment"] = "roboport-equipment",
-    ["aoc-portable-boiler-equipment"] = "generator-equipment",
-    ["solar-panel-equipment"] = "solar-panel-equipment",
-    ["battery-equipment"] = "battery-equipment"
-}
-local brewing_chance = {["aoc-ring-equipment"] = 1, ["aoc-necklace-equipment"] = 5}
-local tiers = {"normal","uncommon","rare","epic","legendary"}
+local AOC = require("__ageofcreation__/globals")
 
-for name, type in pairs( to_enchant ) do
-    for t=2,#tiers do 
+local brewing_chance = {["aoc-ring-equipment"] = 1, ["aoc-necklace-equipment"] = 5}
+
+for name, type in pairs( AOC["to_enchant"] ) do
+    for t=2,#AOC["tiers"] do 
         local item = table.deepcopy( data.raw.item[name] )
-        item.icons = get_icons( data.raw.item[name], { icon = "__quality__/graphics/icons/quality-" .. tiers[t] .. ".png", scale = 0.2, shift = {-8,8} } )
-        item.localised_name = {"", {"equipment-name." .. item.name}, " (", {"quality-name." .. tiers[t]}, ")" }
+        item.icons = get_icons( data.raw.item[name], { icon = "__quality__/graphics/icons/quality-" .. AOC["tiers"][t] .. ".png", scale = 0.2, shift = {-8,8} } )
+        item.localised_name = {"", {"equipment-name." .. item.name}, " (", {"quality-name." .. AOC["tiers"][t]}, ")" }
         if brewing_chance[name] then 
             item.localised_description = {"", "+", tostring(brewing_chance[name]+brewing_chance[name]*(t-1)/2), "% ", {"age-of-creation.brewing-chance"} }
         end
@@ -22,11 +14,12 @@ for name, type in pairs( to_enchant ) do
         item.place_as_equipment_result = item.name
         data.raw.item[item.name] = item
         local equipment = table.deepcopy( data.raw[type][name] )
-        equipment.sprite = { layers = { data.raw[type][name].sprite, { filename = "__quality__/graphics/icons/quality-" .. tiers[t] .. ".png", width = 64, height = 64, scale = 0.2, shift = {-8,8} } } }
-        equipment.localised_name = {"", {"equipment-name." .. equipment.name}, " (", {"quality-name." .. tiers[t]}, ")" }
+        equipment.sprite = { layers = { data.raw[type][name].sprite, { filename = "__quality__/graphics/icons/quality-" .. AOC["tiers"][t] .. ".png", width = 64, height = 64, scale = 0.2, shift = {-8,8} } } }
+        equipment.localised_name = {"", {"equipment-name." .. equipment.name}, " (", {"quality-name." .. AOC["tiers"][t]}, ")" }
         equipment.name = equipment.name .. "-" .. t
         equipment.take_result = equipment.name
         if type == "roboport-equipment" then equipment.robot_limit = equipment.robot_limit+equipment.robot_limit*(t-1)/2 end
+        if type == "movement-bonus-equipment" then equipment.movement_bonus = equipment.movement_bonus+equipment.movement_bonus*(t-1)/6 end
         if type == "battery-equipment" then 
             local amount, unit = string.match(equipment.energy_source.buffer_capacity, "(%d+)(.*)$")
             equipment.energy_source.buffer_capacity = tostring(amount+amount*(t-1)/2) .. unit

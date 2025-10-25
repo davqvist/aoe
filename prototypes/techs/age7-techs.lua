@@ -392,3 +392,30 @@ data:extend({{
       time = 60
   }
 }})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-equipment-tech-2",
+  icon_size = 256, icon_mipmaps = 4,
+  icon = "__base__/graphics/technology/armor-making.png",
+  prerequisites = {"aoc-titanium-tech", "aoc-equipment-tech-1"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-heavy-armor-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-exoskeleton-equipment-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-exoskeleton-equipment-2-recipe"
+    }
+  },
+  unit = {
+      count = 60,
+      ingredients = AOC["age_tech_table"][7],
+      time = 60
+  }
+}})

@@ -524,6 +524,10 @@ data:extend({
   },
   {
     type = "recipe-category",
+    name = "aoc-category-thermo"
+  },
+  {
+    type = "recipe-category",
     name = "aoc-category-unlocking"
   },
   {

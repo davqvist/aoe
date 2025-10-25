@@ -249,7 +249,7 @@ data:extend({{
     ingredients = {
         {type = 'item', name = 'low-density-structure', amount = 20},
 		{type = 'item', name = 'processing-unit', amount = 5},
-		{type = 'item', name = 'electric-engine-unit', amount = 10}
+		{type = 'item', name = 'electric-engine-unit', amount = 5}
     },
     results = {
         {type = 'item', name = 'asteroid-collector', amount = 1}
@@ -606,4 +606,33 @@ data:extend({{
     },
 	energy_required = 5,
 	allow_productivity = false
+}})
+
+data:extend({{
+    name = 'aoc-crafting-heavy-armor-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-titanium-plate', amount = 50},
+        {type = 'item', name = 'low-density-structure', amount = 10}
+    },
+    results = {
+        {type = 'item', name = 'heavy-armor', amount = 1}
+    },
+    energy_required = 5
+}})
+
+data:extend({{
+    name = 'aoc-crafting-exoskeleton-equipment-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = "item", name = "electric-engine-unit", amount = 4},
+		{type = 'item', name = 'aoc-titanium-plate', amount = 30},
+        {type = 'item', name = 'processing-unit', amount = 5}
+    },
+    results = {
+        {type = 'item', name = 'exoskeleton-equipment', amount = 1}
+    },
+    energy_required = 5
 }})

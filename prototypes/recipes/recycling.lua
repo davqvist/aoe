@@ -53,3 +53,13 @@ for _, m in pairs(data.raw.module) do
 	}
   end
 end
+
+for _, e in pairs(AOC["to_enchant"]) do
+	for t=2,#AOC["tiers"] do 
+		local lower = ""
+		if t>2 then lower = "-" .. (t-1) end
+		data.raw.recipe[_ .. '-' .. t .. '-recycling'].results = {
+			{type = 'item', name = _ .. lower, amount=1}
+		}
+	end
+end

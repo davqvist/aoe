@@ -5,10 +5,10 @@ data:extend({{
     type = 'recipe',
     enabled = true,
 	ingredients = {
-		{type = 'fluid', name = 'water', amount = 5}
+		{type = 'fluid', name = 'water', amount = 8}
     },
     results = {
-        {type = 'fluid', name = 'steam', amount = 50, temperature = 165}
+        {type = 'fluid', name = 'steam', amount = 80, temperature = 165}
     },
     energy_required = 1,
 	hide_from_player_crafting = true,
@@ -2368,7 +2368,7 @@ data:extend({{
         {type = 'item', name = 'aoc-spruce-tree-module-3', amount=1, probability = 0.66},
         {type = 'item', name = 'aoc-spruce-tree-module-4', amount=1, probability = 0.06}
     },
-	main_product = "aoc-spruce-tree-module-2",
+	main_product = "aoc-spruce-tree-module-3",
     energy_required = 70,
 	auto_recycle = false,
 	category = 'aoc-category-farm-plot-spruce-tree'

@@ -2627,7 +2627,7 @@ data:extend({{
 	icon_size = data.raw.item["aoc-rotor-carbon"].icon_size,
 	energy_required = 3000,
 	subgroup = 'aoc-power-buildings',
-	order = 'd2',
+	order = 'g2',
 	category = 'aoc-category-rotor'
 }})
 

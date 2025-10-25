@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.5
-Date: 2025-10-23
+Date: 2025-10-24
   Features:
     - Support for mods that build and deconstruct entities with scripts, like Construction Drones
     - Support for Nanobots (except they can't blow up cliffs for now as they have it hard coded in the mod)
@@ -11,7 +11,7 @@ Date: 2025-10-23
     - Support for Milestones (first 5 ages)
     - Added priority transformers
     - Added mining productivity techs throughout the ages
-    - Added magic teleportation techs and progression up to the start of vulcanus 
+    - And most importantly: added thermal power, magic teleportation techs and age 7 progression up to the start of vulcanus 
   Changes:
     - QOL research now also scales the time cost over the ages
     - Speed Module now properly cost the same as the other modules
@@ -22,13 +22,14 @@ Date: 2025-10-23
     - Boosted stone and sand digging ratios
     - Buffed Titanium Metallurgy Beacon module
     - Disallowing productivity modules in all the rock cycle recipes
+    - Enchanted gear recycles now into lower rarity gear
   Bugfixes:
     - The laser lens recipe now actually gets unlocked with techs
     - Recipes researched via magic now don't reset anymore on mod update or adding or removing mods
     - Enchanting Table now properly only accepts mana
     - Parametrizing of recipes in buildings turned back on which was accidently turned off
-    - Fixed most starting screen animations breaking
-    - Electric boiler now also has the right water to steam ratio
+    - Fixed most starting screen animations breaking (some still break, but not high priority rn)
+    - Fixed the steam engine / boiler math, now steam engines produce the actual power that they promise
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.4
 Date: 2025-01-12

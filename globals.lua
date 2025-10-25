@@ -14,6 +14,19 @@ local age_tech_cost = {
     {0,13,8,5,3,2,1}
 }
 
+local tiers = {"normal","uncommon","rare","epic","legendary"}
+
+local to_enchant = {
+    ["aoc-ring-equipment"] = "inventory-bonus-equipment", 
+    ["aoc-necklace-equipment"] = "inventory-bonus-equipment",
+    ["aoc-pocket-hive-equipment"] = "roboport-equipment",
+    ["personal-roboport-equipment"] = "roboport-equipment",
+    ["aoc-portable-boiler-equipment"] = "generator-equipment",
+    ["solar-panel-equipment"] = "solar-panel-equipment",
+    ["battery-equipment"] = "battery-equipment",
+    ["exoskeleton-equipment"] = "movement-bonus-equipment"
+}
+
 function table.contains(table, element)
     for _, value in pairs(table) do
       if value == element then
@@ -89,4 +102,6 @@ end
 
 return {
     ["age_tech_table"] = age_tech_table,
+    ["to_enchant"] = to_enchant,
+    ["tiers"] = tiers,
 }

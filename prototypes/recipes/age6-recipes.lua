@@ -1149,3 +1149,53 @@ data:extend({{
 	category = 'aoc-category-infusing',
 	research = 'aoc-enderium-plate'
 }})
+
+data:extend({{
+	name = 'aoc-thermopile-recipe',
+	type = 'recipe',
+	enabled = true,
+	ingredients = {
+		{type = 'item', name = 'ice', amount = 1},
+		{type = 'fluid', name = 'lava', amount = 50},
+	},
+	results = {
+		{type = 'item', name = 'aoc-obsidian', amount = 1, probability = 0.05},
+		{type = 'fluid', name = 'steam', amount = 50, temperature = 495}
+    },
+	main_product = 'steam',
+	energy_required = 1,
+	category = 'aoc-category-thermo'
+}})
+
+data:extend({{
+    name = 'aoc-crafting-thermopile-recipe',
+    type = 'recipe',
+    enabled = false,
+    ingredients = {
+        {type = 'item', name = 'aoc-electrum-machine-hull', amount = 12},
+		{type = 'item', name = 'angels-storage-tank-2', amount = 2},
+		{type = 'item', name = 'tungsten-plate', amount = 40},
+		{type = 'item', name = 'aoc-obsidian', amount = 10}
+    },
+    results = {
+        {type = 'item', name = 'aoc-thermopile', amount = 1}
+    },
+    energy_required = 5,
+	research = 'angels-storage-tank-2'
+}})
+
+data:extend({{
+	name = 'aoc-crafting-steam-turbine-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'pipe', amount = 20},
+		{type = 'item', name = 'tungsten-plate', amount = 20},
+		{type = 'item', name = 'engine-unit', amount = 2}
+	},
+	results = {
+		{type = 'item', name = 'steam-turbine', amount = 1}
+    },
+	energy_required = 2,
+	research = 'engine-unit'
+}})
