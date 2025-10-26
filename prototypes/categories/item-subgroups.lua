@@ -610,6 +610,18 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
+    name = "aoc-aliens",
+    group = "enemies",
+    order = "a"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-runes",
+    group = "enemies",
+    order = "b"
+  },
+  {
+	  type = "item-subgroup",
     name = "aoc-other",
     group = "other",
     order = "a"

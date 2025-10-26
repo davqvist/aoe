@@ -508,6 +508,10 @@ data:extend({
   },
   {
     type = "recipe-category",
+    name = "aoc-category-spawning"
+  },
+  {
+    type = "recipe-category",
     name = "aoc-category-squeezing"
   },
   {

@@ -856,6 +856,10 @@ data:extend({{
         recipe = "aoc-chemistry-explosives-toluene-recipe"
       },
       {
+        type = "unlock-recipe",
+        recipe = "aoc-mixing-gunpowder-recipe"
+      },
+      {
         type = "cliff-deconstruction-enabled",
         modifier = true
       }
@@ -1377,4 +1381,27 @@ data:extend({{
         ingredients = AOC["age_tech_table"][5],
         time = 50
     }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-military-tech-1",
+  icon_size = 256, icon_mipmaps = 4,
+  icon = "__base__/graphics/technology/military.png",
+  prerequisites = {"aoc-explosives-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-firearm-magazine-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-pistol-recipe"
+    }
+  },
+  unit = {
+    count = 50,
+    ingredients = AOC["age_tech_table"][5],
+    time = 40
+}
 }})

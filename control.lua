@@ -47,7 +47,8 @@ script.on_configuration_changed(
 script.on_event(defines.events.on_player_created,
   function(event)
     local player = game.players[event.player_index]
-    player.insert{name = "burner-crusher", count = 1}
+    player.insert{name = "burner-mining-drill", count = 1}
+    player.insert{name = "burner-crusher", count = 2}
 	player.remove_item{name = "wood", count = 1}
 	player.remove_item{name = "stone-furnace", count = 1}
 	player.remove_item{name = "iron-plate", count = 8}
@@ -183,7 +184,7 @@ function drop(event, to_drop)
 			position = entity.position,
 			stack = to_drop}
 		if ground_item and ground_item.valid then
-			ground_item.order_deconstruction(entity.force)
+			if event.force then ground_item.order_deconstruction(event.force) else ground_item.order_deconstruction(entity.force) end
 		end
 	end
 end
@@ -214,6 +215,12 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 	end
 	if(entity.name == "cargo-landing-pad") then
 		handleMinedSurface(event, storage.cargo_landing_pads)
+	end
+	if event.loot then
+		for _, l in pairs(event.loot.get_contents()) do
+			drop(event, l)
+		end
+		event.loot.clear()
 	end
   end
 )

@@ -1162,6 +1162,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-obsidian', amount = 1, probability = 0.05},
 		{type = 'fluid', name = 'steam', amount = 50, temperature = 495}
     },
+	hide_from_player_crafting = true,
 	main_product = 'steam',
 	energy_required = 1,
 	category = 'aoc-category-thermo'
@@ -1198,4 +1199,53 @@ data:extend({{
     },
 	energy_required = 2,
 	research = 'engine-unit'
+}})
+
+data:extend({{
+	name = 'aoc-brewing-10-aoc-gene-lab-mutagen-recipe',
+	type = 'recipe',
+	enabled = true,
+	hidden = true,
+	ingredients = {
+        {type = 'fluid', name = 'aoc-coal-tar', amount = 50},
+		{type = 'item', name = 'uranium-ore', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoc-mutagen', amount = 1}
+    },
+	category = 'aoc-category-brewing',
+	energy_required = 5
+}})
+
+data:extend({{
+	name = 'aoc-gene-lab-mutagen-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'aoc-coal-tar', amount = 50},
+        {type = 'fluid', name = 'aoc-mana', amount = 10},
+		{type = 'item', name = 'uranium-ore', amount = 4}
+	},
+	results = {
+		{type = 'item', name = 'aoc-mutagen', amount = 1}
+    },
+	category = 'aoc-category-gene-lab',
+	energy_required = 25
+}})
+
+data:extend({{
+	name = 'aoc-gene-lab-biter-egg-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-egg', amount = 1},
+		{type = 'item', name = 'aoc-mutagen', amount = 1},
+		{type = 'fluid', name = 'aoc-bacteria', amount = 400}
+	},
+	results = {
+		{type = 'item', name = 'biter-egg', amount = 1, probability = 0.05}
+    },
+	category = 'aoc-category-gene-lab',
+	energy_required = 25,
+	research = 'aoc-mutagen'
 }})

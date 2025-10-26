@@ -2576,3 +2576,47 @@ data:extend({{
     },
 	energy_required = 4
 }})
+
+data:extend({{
+	name = 'aoc-mixing-gunpowder-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-coal-dust', amount = 1},
+		{type = 'item', name = 'sulfur', amount = 1},
+		{type = 'fluid', name = 'aoc-brine', amount = 20}
+	},
+	results = {
+		{type = 'item', name = 'aoc-gunpowder', amount = 4}
+    },
+	energy_required = 2,
+	category = 'aoc-category-mixing'
+}})
+
+data:extend({{
+	name = 'aoc-crafting-firearm-magazine-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-lead-plate', amount = 2},
+		{type = 'item', name = 'aoc-gunpowder', amount = 1},
+	},
+	results = {
+		{type = 'item', name = 'firearm-magazine', amount = 1}
+    },
+	energy_required = 2
+}})
+
+data:extend({{
+	name = 'aoc-crafting-pistol-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'steel-plate', amount = 10},
+		{type = 'item', name = 'aoc-steel-gear', amount = 2},
+	},
+	results = {
+		{type = 'item', name = 'pistol', amount = 1}
+    },
+	energy_required = 5
+}})

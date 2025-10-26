@@ -1288,7 +1288,7 @@ data:extend({{
 	},
 	results = {
         {type = 'item', name = 'aoc-coke', amount = 1},
-        {type = 'fluid', name = 'aoc-carbon-dioxide', amount = 20}
+        {type = 'fluid', name = 'aoc-coal-tar', amount = 20}
     },
 	main_product = 'aoc-coke',
 	energy_required = 2.4,

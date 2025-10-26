@@ -337,3 +337,12 @@ data.raw['construction-robot']['construction-robot'].max_payload_size = 6
 data.raw['item']['personal-roboport-equipment'].subgroup = "aoc-equipment"
 data.raw['item']['personal-roboport-equipment'].order = "g"
 data.raw['roboport-equipment']['personal-roboport-equipment'].robot_limit = 20
+
+--data.raw['assembling-machine']['captive-biter-spawner'].energy_source = { type = "void" }
+--data.raw['assembling-machine']['captive-biter-spawner'].fixed_recipe = "aoc-biter-egg-recipe"
+--data.raw['assembling-machine']['captive-biter-spawner'].flags = {"placeable-neutral", "placeable-player", "player-creation"}
+--data.raw['assembling-machine']['captive-biter-spawner'].surface_conditions = { { property = "pressure", min = 4000, max = 4000 } }
+data.raw['unit']['small-biter'].loot = { { item = "aoc-small-biter-corpse" } }
+data.raw['unit']['medium-biter'].loot = { { item = "aoc-medium-biter-corpse" } }
+data.raw['unit']['big-biter'].loot = { { item = "aoc-big-biter-corpse" } }
+data.raw['unit']['behemoth-biter'].loot = { { item = "aoc-behemoth-biter-corpse" } }

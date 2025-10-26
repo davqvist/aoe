@@ -253,3 +253,20 @@ data:extend({{
     order = "b",
     stack_size = 200
 }})
+
+data.raw['gun']['pistol'].subgroup = "aoc-guns"
+data.raw['gun']['pistol'].order = "a"
+data.raw['gun']['pistol'].stack_size = 10
+data.raw['ammo']['firearm-magazine'].subgroup = "aoc-ammo"
+data.raw['ammo']['firearm-magazine'].order = "a"
+data.raw['ammo']['firearm-magazine'].stack_size = 200
+
+data:extend({{
+    type = "item",
+    name = "aoc-gunpowder",
+    icon = "__ageofcreation__/img/items/gunpowder.png",
+    icon_size = 64,
+    subgroup = "aoc-petrochem",
+    order = "e",
+    stack_size = 200
+}})

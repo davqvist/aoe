@@ -986,6 +986,17 @@ data:extend({{
 
 data:extend({{
     type = "fluid",
+    name = "aoc-coal-tar",
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon( nil, { { 035, 035, 035 }, { 035, 035, 035 }, { 020, 020, 020 }, { 020, 020, 020 } } ),
+    subgroup = "aoc-petrochem-fluids",
+    order = "r",
+	base_color = {r=0.2, g=0.2, b=0.2},
+	flow_color = {r=0.2, g=0.2, b=0.2},
+	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
     name = "aoc-acetone",
     icons = angelsmods.functions.create_gas_fluid_icon( { "__angelspetrochem_art__/graphics/icons/molecules/acetone.png", 72 }, "COH" ),
     subgroup = "aoc-petrochem-fluids-2",

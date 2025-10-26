@@ -2,19 +2,11 @@ local AOC = require("__ageofcreation__/globals")
 
 data:extend({{
   type = "technology",
-  name = "aoc-military-tech-1",
+  name = "aoc-military-tech-2",
   icon_size = 256, icon_mipmaps = 4,
   icon = "__base__/graphics/technology/military.png",
-  prerequisites = {"aoc-space-age-tech"},
+  prerequisites = {"aoc-space-age-tech", "aoc-military-tech-1"},
   effects = {
-    {
-      type = "unlock-recipe",
-      recipe = "aoc-mixing-gunpowder-recipe"
-    },
-    {
-      type = "unlock-recipe",
-      recipe = "aoc-crafting-firearm-magazine-recipe"
-    },
     {
       type = "unlock-recipe",
       recipe = "aoc-crafting-submachine-gun-recipe"
@@ -26,29 +18,14 @@ data:extend({{
     {
       type = "unlock-recipe",
       recipe = "aoc-crafting-firearm-magazine-box-recipe"
-    }
-  },
-  unit = {
-      count = 20,
-      ingredients = AOC["age_tech_table"][7],
-      time = 60
-  }
-}})
-
-data:extend({{
-  type = "technology",
-  name = "aoc-military-tech-2",
-  icon_size = 256, icon_mipmaps = 4,
-  icon = "__base__/graphics/technology/military.png",
-  prerequisites = {"aoc-military-tech-1"},
-  effects = {
+    },
     {
       type = "unlock-recipe",
       recipe = "aoc-crafting-piercing-rounds-magazine-recipe"
     }
   },
   unit = {
-      count = 30,
+      count = 20,
       ingredients = AOC["age_tech_table"][7],
       time = 60
   }
@@ -135,6 +112,10 @@ data:extend({{
   effects = {
     {
       type = "unlock-recipe",
+      recipe = "aoc-crafting-thruster-recipe"
+    },
+    {
+      type = "unlock-recipe",
       recipe = "aoc-pumping-vacuum-2-recipe"
     },
     {
@@ -200,6 +181,53 @@ data:extend({{
   },
   unit = {
       count = 60,
+      ingredients = AOC["age_tech_table"][7],
+      time = 60
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-alien-life-tech-2",
+  icon_size = 64, icon_mipmaps = 4,
+  icon = "__base__/graphics/icons/big-biter.png",
+  prerequisites = {"aoc-vulcanus-exploration-tech","aoc-alien-life-tech-1","aoc-enchanting-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-spawner-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-infusing-life-catalyst-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-rune-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-rune-life-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-rune-speed-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-spawning-biter-egg-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-spawning-biter-egg-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-spawning-biter-egg-3-recipe"
+    }
+  },
+  unit = {
+      count = 70,
       ingredients = AOC["age_tech_table"][7],
       time = 60
   }

@@ -433,3 +433,138 @@ data:extend({{
     order = "d",
     stack_size = 100
 }})
+
+data:extend({{
+    type = "item",
+    name = "aoc-mutagen",
+    icon = "__ageofcreation__/img/items/mutagen.png",
+    icon_size = 64,
+    subgroup = "aoc-aliens",
+    order = "a",
+    stack_size = 100
+}})
+
+data.raw['item']['biter-egg'].subgroup = "aoc-aliens"
+data.raw['item']['biter-egg'].order = "b"
+data.raw['item']['biter-egg'].stack_size = 100
+data.raw['item']['biter-egg'].spoil_ticks = 60
+data.raw['item']['biter-egg'].spoil_to_trigger_result.trigger.action_delivery.source_effects[1].entity_name = "small-biter"
+data.raw['item']['biter-egg'].spoil_to_trigger_result.trigger.action_delivery.source_effects[1].non_colliding_fail_result.action_delivery.source_effects[1].entity_name = "small-biter"
+
+data:extend({{
+    type = "item",
+    name = "aoc-medium-biter-egg",
+    icons = {
+        {
+            icon = "__space-age__/graphics/icons/biter-egg-1.png",
+            icon_size = 64,
+            icon_mipmaps = 4,
+            tint = {0.8, 0.5, 0.6, 0.4}
+        }
+    },
+    pictures = {
+        { size = 64, filename = "__space-age__/graphics/icons/biter-egg.png", scale = 0.5, mipmap_count = 4, tint = {0.8, 0.5, 0.6, 0.4} },
+        { size = 64, filename = "__space-age__/graphics/icons/biter-egg-1.png", scale = 0.5, mipmap_count = 4, tint = {0.8, 0.5, 0.6, 0.4} },
+        { size = 64, filename = "__space-age__/graphics/icons/biter-egg-2.png", scale = 0.5, mipmap_count = 4, tint = {0.8, 0.5, 0.6, 0.4} },
+        { size = 64, filename = "__space-age__/graphics/icons/biter-egg-3.png", scale = 0.5, mipmap_count = 4, tint = {0.8, 0.5, 0.6, 0.4} }
+    },
+    subgroup = "aoc-aliens",
+    order = "b2",
+    stack_size = 100,
+    spoil_ticks = 60,
+    spoil_to_trigger_result = table.deepcopy( data.raw['item']['biter-egg'].spoil_to_trigger_result )
+}})
+data.raw['item']['aoc-medium-biter-egg'].spoil_to_trigger_result.trigger.action_delivery.source_effects[1].entity_name = "medium-biter"
+data.raw['item']['aoc-medium-biter-egg'].spoil_to_trigger_result.trigger.action_delivery.source_effects[1].non_colliding_fail_result.action_delivery.source_effects[1].entity_name = "medium-biter"
+
+data:extend({{
+    type = "item",
+    name = "aoc-big-biter-egg",
+    icons = {
+        {
+            icon = "__space-age__/graphics/icons/biter-egg-2.png",
+            icon_size = 64,
+            icon_mipmaps = 4,
+            tint = {0.4, 0.4, 1, 0.4}
+        }
+    },
+    pictures = {
+        { size = 64, filename = "__space-age__/graphics/icons/biter-egg.png", scale = 0.5, mipmap_count = 4, tint = {0.4, 0.4, 1, 0.4} },
+        { size = 64, filename = "__space-age__/graphics/icons/biter-egg-1.png", scale = 0.5, mipmap_count = 4, tint = {0.4, 0.4, 1, 0.4} },
+        { size = 64, filename = "__space-age__/graphics/icons/biter-egg-2.png", scale = 0.5, mipmap_count = 4, tint = {0.4, 0.4, 1, 0.4} },
+        { size = 64, filename = "__space-age__/graphics/icons/biter-egg-3.png", scale = 0.5, mipmap_count = 4, tint = {0.4, 0.4, 1, 0.4} }
+    },
+    subgroup = "aoc-aliens",
+    order = "b3",
+    stack_size = 100,
+    spoil_ticks = 60,
+    spoil_to_trigger_result = table.deepcopy( data.raw['item']['biter-egg'].spoil_to_trigger_result )
+}})
+data.raw['item']['aoc-big-biter-egg'].spoil_to_trigger_result.trigger.action_delivery.source_effects[1].entity_name = "big-biter"
+data.raw['item']['aoc-big-biter-egg'].spoil_to_trigger_result.trigger.action_delivery.source_effects[1].non_colliding_fail_result.action_delivery.source_effects[1].entity_name = "big-biter"
+
+data:extend({{
+    type = "item",
+    name = "aoc-behemoth-biter-egg",
+    icons = {
+        {
+            icon = "__space-age__/graphics/icons/biter-egg-3.png",
+            icon_size = 64,
+            icon_mipmaps = 4,
+            tint = {0.61, 0.71, 0.13}
+        }
+    },
+    pictures = {
+        { size = 64, filename = "__space-age__/graphics/icons/biter-egg.png", scale = 0.5, mipmap_count = 4, tint = {0.61, 0.71, 0.13} },
+        { size = 64, filename = "__space-age__/graphics/icons/biter-egg-1.png", scale = 0.5, mipmap_count = 4, tint = {0.61, 0.71, 0.13} },
+        { size = 64, filename = "__space-age__/graphics/icons/biter-egg-2.png", scale = 0.5, mipmap_count = 4, tint = {0.61, 0.71, 0.13} },
+        { size = 64, filename = "__space-age__/graphics/icons/biter-egg-3.png", scale = 0.5, mipmap_count = 4, tint = {0.61, 0.71, 0.13} }
+    },
+    subgroup = "aoc-aliens",
+    order = "b4",
+    stack_size = 100,
+    spoil_ticks = 60,
+    spoil_to_trigger_result = table.deepcopy( data.raw['item']['biter-egg'].spoil_to_trigger_result )
+}})
+data.raw['item']['aoc-behemoth-biter-egg'].spoil_to_trigger_result.trigger.action_delivery.source_effects[1].entity_name = "behemoth-biter"
+data.raw['item']['aoc-behemoth-biter-egg'].spoil_to_trigger_result.trigger.action_delivery.source_effects[1].non_colliding_fail_result.action_delivery.source_effects[1].entity_name = "behemoth-biter"
+
+data:extend({{
+    type = "item",
+    name = "aoc-small-biter-corpse",
+    icon_size = 64, icon_mipmaps = 4,
+    icon = "__base__/graphics/icons/small-biter-corpse.png",
+    subgroup = "aoc-aliens",
+    order = "c",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-medium-biter-corpse",
+    icon_size = 64, icon_mipmaps = 4,
+    icon = "__base__/graphics/icons/medium-biter-corpse.png",
+    subgroup = "aoc-aliens",
+    order = "c2",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-big-biter-corpse",
+    icon_size = 64, icon_mipmaps = 4,
+    icon = "__base__/graphics/icons/big-biter-corpse.png",
+    subgroup = "aoc-aliens",
+    order = "c3",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-behemoth-biter-corpse",
+    icon_size = 64, icon_mipmaps = 4,
+    icon = "__base__/graphics/icons/behemoth-biter-corpse.png",
+    subgroup = "aoc-aliens",
+    order = "c4",
+    stack_size = 200
+}})

@@ -4,7 +4,7 @@ data:extend({{
     icons = {
       {
         icon = "__ageofcreation__/img/entities/genelab-icon.png",
-        icon_size = 128
+        icon_size = 64
       },
       {
         icon = "__ageofcreation__/img/items/other/fire.png",
@@ -25,27 +25,27 @@ data:extend({{
 	crafting_categories = {"aoc-category-gene-lab"},
 	crafting_speed = 0.5,
 	energy_source = {
-      type = "burner",
-      fuel_categories = {"chemical"},
-      effectivity = 1,
-      fuel_inventory_size = 1,
-      emissions_per_minute = {pollution = 12},
-      light_flicker = {color = {0,0,0}},
-      smoke =
+    type = "burner",
+    fuel_categories = {"chemical"},
+    effectivity = 1,
+    fuel_inventory_size = 1,
+    emissions_per_minute = {pollution = 12},
+    light_flicker = {color = {0,0,0}},
+    smoke =
+    {
       {
-        {
-          name = "smoke",
-          deviation = {0.1, 0.1},
-          frequency = 3
-        }
+        name = "smoke",
+        deviation = {0.1, 0.1},
+        frequency = 3
       }
-    },
+    }
+  },
 	energy_usage = "220kW",
 	allowed_effects = nil,
   icons = {
     {
       icon = "__ageofcreation__/img/entities/genelab-icon.png",
-      icon_size = 128
+      icon_size = 64
     },
     {
       icon = "__ageofcreation__/img/items/other/fire.png",
@@ -134,7 +134,7 @@ data:extend({{
     type = "item",
     name = "aoc-gene-lab",
     icon = "__ageofcreation__/img/entities/genelab-icon.png",
-    icon_size = 128,
+    icon_size = 64,
     subgroup = "aoc-specific-buildings",
     order = "g",
     place_result = "aoc-gene-lab",
@@ -156,7 +156,7 @@ data:extend({{
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
 	module_slots = 3,
   icon = "__ageofcreation__/img/entities/genelab-icon.png",
-  icon_size = 128,
+  icon_size = 64,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoc-gene-lab" },
   fast_replaceable_group = "gene-lab",

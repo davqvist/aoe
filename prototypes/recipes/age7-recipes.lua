@@ -1,34 +1,4 @@
 data:extend({{
-	name = 'aoc-mixing-gunpowder-recipe',
-	type = 'recipe',
-	enabled = false,
-	ingredients = {
-		{type = 'item', name = 'aoc-coal-dust', amount = 1},
-		{type = 'item', name = 'sulfur', amount = 1},
-		{type = 'fluid', name = 'aoc-brine', amount = 20}
-	},
-	results = {
-		{type = 'item', name = 'aoc-gunpowder', amount = 4}
-    },
-	energy_required = 2,
-	category = 'aoc-category-mixing'
-}})
-
-data:extend({{
-	name = 'aoc-crafting-firearm-magazine-recipe',
-	type = 'recipe',
-	enabled = false,
-	ingredients = {
-		{type = 'item', name = 'aoc-lead-plate', amount = 2},
-		{type = 'item', name = 'aoc-gunpowder', amount = 1},
-	},
-	results = {
-		{type = 'item', name = 'firearm-magazine', amount = 1}
-    },
-	energy_required = 2
-}})
-
-data:extend({{
 	name = 'aoc-crafting-piercing-rounds-magazine-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -253,6 +223,21 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'asteroid-collector', amount = 1}
+    },
+    energy_required = 5
+}})
+
+data:extend({{
+    name = 'aoc-crafting-thruster-recipe',
+    type = 'recipe',
+    enabled = false,
+    ingredients = {
+        {type = 'item', name = 'low-density-structure', amount = 40},
+		{type = 'item', name = 'processing-unit', amount = 10},
+		{type = 'item', name = 'aoc-electric-boiler', amount = 2}
+    },
+    results = {
+        {type = 'item', name = 'thruster', amount = 1}
     },
     energy_required = 5
 }})
@@ -588,8 +573,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'roboport', amount = 1}
     },
-	energy_required = 5,
-	allow_productivity = false
+	energy_required = 5
 }})
 
 data:extend({{
@@ -604,8 +588,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'personal-roboport-equipment', amount = 1}
     },
-	energy_required = 5,
-	allow_productivity = false
+	energy_required = 5
 }})
 
 data:extend({{
@@ -635,4 +618,305 @@ data:extend({{
         {type = 'item', name = 'exoskeleton-equipment', amount = 1}
     },
     energy_required = 5
+}})
+
+data:extend({{
+	name = 'aoc-spawning-biter-egg-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-rune', amount = 2},
+		{type = 'item', name = 'aoc-rune-life', amount = 2},
+		{type = 'item', name = 'aoc-rune-speed', amount = 2}
+	},
+	results = {
+		{type = 'item', name = 'biter-egg', amount = 1}
+    },
+	category = 'aoc-category-spawning',
+	result_is_always_fresh = true,
+	energy_required = 30,
+	research = 'aoc-rune'
+}})
+
+data:extend({{
+	name = 'aoc-spawning-medium-biter-egg-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-rune', amount = 2},
+		{type = 'item', name = 'aoc-rune-life', amount = 3},
+		{type = 'item', name = 'aoc-rune-speed', amount = 2}
+	},
+	results = {
+		{type = 'item', name = 'aoc-medium-biter-egg', amount = 1}
+    },
+	category = 'aoc-category-spawning',
+	result_is_always_fresh = true,
+	energy_required = 30,
+	research = 'aoc-rune'
+}})
+
+data:extend({{
+	name = 'aoc-spawning-big-biter-egg-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-rune', amount = 2},
+		{type = 'item', name = 'aoc-rune-life', amount = 4},
+		{type = 'item', name = 'aoc-rune-speed', amount = 2}
+	},
+	results = {
+		{type = 'item', name = 'aoc-big-biter-egg', amount = 1}
+    },
+	category = 'aoc-category-spawning',
+	result_is_always_fresh = true,
+	energy_required = 30,
+	research = 'aoc-rune'
+}})
+
+data:extend({{
+	name = 'aoc-spawning-behemoth-biter-egg-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-rune', amount = 2},
+		{type = 'item', name = 'aoc-rune-life', amount = 5},
+		{type = 'item', name = 'aoc-rune-speed', amount = 2}
+	},
+	results = {
+		{type = 'item', name = 'aoc-behemoth-biter-egg', amount = 1}
+    },
+	category = 'aoc-category-spawning',
+	result_is_always_fresh = true,
+	energy_required = 30,
+	research = 'aoc-rune'
+}})
+
+data:extend({{
+	name = 'aoc-spawning-biter-egg-2-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-rune', amount = 2},
+		{type = 'item', name = 'aoc-rune-life', amount = 2},
+		{type = 'item', name = 'aoc-rune-speed', amount = 4}
+	},
+	results = {
+		{type = 'item', name = 'biter-egg', amount = 1}
+    },
+	category = 'aoc-category-spawning',
+	result_is_always_fresh = true,
+	energy_required = 25,
+	research = 'aoc-rune'
+}})
+
+data:extend({{
+	name = 'aoc-spawning-medium-biter-egg-2-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-rune', amount = 2},
+		{type = 'item', name = 'aoc-rune-life', amount = 3},
+		{type = 'item', name = 'aoc-rune-speed', amount = 4}
+	},
+	results = {
+		{type = 'item', name = 'aoc-medium-biter-egg', amount = 1}
+    },
+	category = 'aoc-category-spawning',
+	result_is_always_fresh = true,
+	energy_required = 25,
+	research = 'aoc-rune'
+}})
+
+data:extend({{
+	name = 'aoc-spawning-big-biter-egg-2-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-rune', amount = 2},
+		{type = 'item', name = 'aoc-rune-life', amount = 4},
+		{type = 'item', name = 'aoc-rune-speed', amount = 4}
+	},
+	results = {
+		{type = 'item', name = 'aoc-big-biter-egg', amount = 1}
+    },
+	category = 'aoc-category-spawning',
+	result_is_always_fresh = true,
+	energy_required = 25,
+	research = 'aoc-rune'
+}})
+
+data:extend({{
+	name = 'aoc-spawning-behemoth-biter-egg-2-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-rune', amount = 2},
+		{type = 'item', name = 'aoc-rune-life', amount = 5},
+		{type = 'item', name = 'aoc-rune-speed', amount = 8}
+	},
+	results = {
+		{type = 'item', name = 'aoc-behemoth-biter-egg', amount = 1}
+    },
+	category = 'aoc-category-spawning',
+	result_is_always_fresh = true,
+	energy_required = 25,
+	research = 'aoc-rune'
+}})
+
+data:extend({{
+	name = 'aoc-spawning-biter-egg-3-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-rune', amount = 2},
+		{type = 'item', name = 'aoc-rune-life', amount = 2},
+		{type = 'item', name = 'aoc-rune-speed', amount = 8}
+	},
+	results = {
+		{type = 'item', name = 'biter-egg', amount = 1}
+    },
+	category = 'aoc-category-spawning',
+	result_is_always_fresh = true,
+	energy_required = 20,
+	research = 'aoc-rune'
+}})
+
+data:extend({{
+	name = 'aoc-spawning-medium-biter-egg-3-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-rune', amount = 2},
+		{type = 'item', name = 'aoc-rune-life', amount = 3},
+		{type = 'item', name = 'aoc-rune-speed', amount = 8}
+	},
+	results = {
+		{type = 'item', name = 'aoc-medium-biter-egg', amount = 1}
+    },
+	category = 'aoc-category-spawning',
+	result_is_always_fresh = true,
+	energy_required = 20,
+	research = 'aoc-rune'
+}})
+
+data:extend({{
+	name = 'aoc-spawning-big-biter-egg-3-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-rune', amount = 2},
+		{type = 'item', name = 'aoc-rune-life', amount = 4},
+		{type = 'item', name = 'aoc-rune-speed', amount = 8}
+	},
+	results = {
+		{type = 'item', name = 'aoc-big-biter-egg', amount = 1}
+    },
+	category = 'aoc-category-spawning',
+	result_is_always_fresh = true,
+	energy_required = 20,
+	research = 'aoc-rune'
+}})
+
+data:extend({{
+	name = 'aoc-spawning-behemoth-biter-egg-3-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-rune', amount = 2},
+		{type = 'item', name = 'aoc-rune-life', amount = 5},
+		{type = 'item', name = 'aoc-rune-speed', amount = 8}
+	},
+	results = {
+		{type = 'item', name = 'aoc-behemoth-biter-egg', amount = 1}
+    },
+	category = 'aoc-category-spawning',
+	result_is_always_fresh = true,
+	energy_required = 20,
+	research = 'aoc-rune'
+}})
+
+data:extend({{
+	name = 'aoc-infusing-life-catalyst-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-chicken', amount = 1},
+		{type = 'item', name = 'aoc-sheep', amount = 1},
+		{type = 'item', name = 'aoc-cow', amount = 1},
+		{type = 'item', name = 'aoc-small-biter-corpse', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoc-life-catalyst', amount = 1}
+    },
+	energy_required = 60,
+	category = 'aoc-category-infusing',
+	research = 'aoc-small-biter-corpse'
+}})
+
+data:extend({{
+	name = 'aoc-crafting-spawner-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "aoc-electrum-machine-hull", amount = 20},
+		{type = "item", name = "aoc-life-catalyst", amount = 5},
+		{type = "item", name = "aoc-diamond", amount = 50},
+		{type = "item", name = "aoc-platinum-plate", amount = 50}
+	},
+	results = {
+        {type = 'item', name = 'aoc-spawner', amount = 1}
+    },
+	energy_required = 5,
+	research = 'aoc-life-catalyst'
+}})
+
+data:extend({{
+	name = 'aoc-enchanting-rune-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "aoc-basalt", amount = 1},
+		{type = "item", name = "aoc-gypsum", amount = 1}
+	},
+	results = {
+		{type = 'item', name = "aoc-rune", amount=10}
+	},
+	category = "aoc-category-enchanting",
+	energy_required = 10,
+	research = 'aoc-basalt'
+}})
+
+data:extend({{
+	name = 'aoc-enchanting-rune-life-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "aoc-basalt", amount = 1},
+		{type = "item", name = "aoc-gypsum", amount = 1},
+		{type = "item", name = "aoc-limestone", amount = 1}
+	},
+	results = {
+		{type = 'item', name = "aoc-rune-life", amount=10}
+	},
+	category = "aoc-category-enchanting",
+	energy_required = 10,
+	research = 'aoc-basalt'
+}})
+
+data:extend({{
+	name = 'aoc-enchanting-rune-speed-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "aoc-basalt", amount = 1},
+		{type = "item", name = "aoc-gypsum", amount = 1},
+		{type = "item", name = "aoc-limestone", amount = 1}
+	},
+	results = {
+		{type = 'item', name = "aoc-rune-speed", amount=10}
+	},
+	category = "aoc-category-enchanting",
+	energy_required = 10,
+	research = 'aoc-basalt'
 }})

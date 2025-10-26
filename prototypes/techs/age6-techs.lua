@@ -325,6 +325,25 @@ data:extend({{
 
 data:extend({{
   type = "technology",
+  name = "aoc-alien-life-tech-1",
+  icon_size = 64, icon_mipmaps = 4,
+  icon = "__base__/graphics/icons/big-biter.png",
+  prerequisites = {"aoc-mana-tech", "aoc-brewing-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-gene-lab-biter-egg-recipe"
+    }
+  },
+  unit = {
+      count = 60,
+      ingredients = AOC["age_tech_table"][6],
+      time = 50
+  }
+}})
+
+data:extend({{
+  type = "technology",
   name = "aoc-enchanting-tech",
   icon = "__ageofcreation__/img/entities/enchanting-table.png",
   icon_size = 192,

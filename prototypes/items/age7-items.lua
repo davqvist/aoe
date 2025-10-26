@@ -87,19 +87,6 @@ data.raw['item']['promethium-asteroid-chunk'].subgroup = "aoc-asteroids"
 data.raw['item']['promethium-asteroid-chunk'].order = "d"
 data.raw['item']['promethium-asteroid-chunk'].stack_size = 1
 
-data:extend({{
-    type = "item",
-    name = "aoc-gunpowder",
-    icon = "__ageofcreation__/img/items/gunpowder.png",
-    icon_size = 64,
-    subgroup = "aoc-petrochem",
-    order = "e",
-    stack_size = 200
-}})
-
-data.raw['ammo']['firearm-magazine'].subgroup = "aoc-ammo"
-data.raw['ammo']['firearm-magazine'].order = "a"
-data.raw['ammo']['firearm-magazine'].stack_size = 200
 data.raw['ammo']['piercing-rounds-magazine'].subgroup = "aoc-ammo"
 data.raw['ammo']['piercing-rounds-magazine'].order = "c"
 data.raw['ammo']['piercing-rounds-magazine'].stack_size = 100
@@ -132,10 +119,6 @@ data:extend({{
     rocket_launch_products = {{type = "item", name = "aoc-titanium-plate", amount = 200}},
     send_to_orbit_mode = "automated"
 }})
-
-data.raw['gun']['pistol'].subgroup = "aoc-guns"
-data.raw['gun']['pistol'].order = "a"
-data.raw['gun']['pistol'].stack_size = 10
 data.raw['gun']['submachine-gun'].subgroup = "aoc-guns"
 data.raw['gun']['submachine-gun'].order = "b"
 data.raw['gun']['submachine-gun'].stack_size = 10
@@ -191,3 +174,61 @@ data.raw['armor']['heavy-armor'].inventory_size_bonus = 20
 data.raw['armor']['heavy-armor'].equipment_grid = "medium-equipment-grid"
 data.raw['item']['exoskeleton-equipment'].subgroup = "aoc-equipment"
 data.raw['item']['exoskeleton-equipment'].order = "j"
+
+data:extend({{
+    type = "item",
+    name = "aoc-rune",
+    icon = "__ageofcreation__/img/items/rune.png",
+    icon_size = 64,
+    subgroup = "aoc-runes",
+    order = "a",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-rune-life",
+    icons = {
+        {
+            icon = "__ageofcreation__/img/items/rune.png",
+            icon_size = 64
+        },
+        {
+            icon = "__ageofcreation__/img/items/rune-life.png",
+            icon_size = 64
+        }
+    },
+    subgroup = "aoc-runes",
+    order = "b",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-rune-speed",
+    icons = {
+        {
+            icon = "__ageofcreation__/img/items/rune.png",
+            icon_size = 64
+        },
+        {
+            icon = "__ageofcreation__/img/items/rune-speed.png",
+            icon_size = 64
+        }
+    },
+    subgroup = "aoc-runes",
+    order = "c",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-life-catalyst",
+    icon = "__ageofcreation__/img/items/life-catalyst.png",
+    icon_size = 64,
+    subgroup = "aoc-magic-catalysts",
+    order = "e",
+    stack_size = 200,
+	fuel_value = "100MJ",
+	fuel_category = "aoc-life"
+}})
