@@ -310,9 +310,21 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-science-packs",
+    name = "aoc-nuclear",
     group = "intermediate-products",
     order = "k"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-nuclear-fuel",
+    group = "intermediate-products",
+    order = "l"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-science-packs",
+    group = "intermediate-products",
+    order = "l"
   },
   {
 	  type = "item-subgroup",

@@ -920,3 +920,545 @@ data:extend({{
 	energy_required = 10,
 	research = 'aoc-basalt'
 }})
+
+data:extend({{
+	name = 'aoc-centrifuging-uranium-ore-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "uranium-ore", amount = 4}
+	},
+	results = {
+		{type = 'item', name = "uranium-238", amount = 1, probability = 0.88 },
+		{type = 'item', name = "uranium-235", amount = 1, probability = 0.1 },
+		{type = 'item', name = "aoc-uranium-233", amount = 1, probability = 0.02 }
+	},
+	icons = data.raw.item["uranium-ore"].icons,
+	subgroup = "aoc-metals-rest",
+	order = "f2",
+	category = "centrifuging",
+	energy_required = 12
+}})
+
+data:extend({{
+	name = 'aoc-centrifuging-fuel-cell-uranium-233-depleted-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "aoc-fuel-cell-uranium-233-depleted", amount = 1}
+	},
+	results = {
+		{type = 'item', name = "aoc-fuel-cell-empty", amount = 1},
+		{type = 'item', name = "aoc-plutonium-242", amount = 4},
+		{type = 'item', name = "aoc-plutonium-239", amount = 1, probability = 0.5},
+		{type = 'item', name = "aoc-plutonium-241", amount = 1, probability = 0.5},
+		{type = 'item', name = "aoc-americium-243", amount = 3}
+	},
+	icons = data.raw.item["aoc-fuel-cell-uranium-233-depleted"].icons,
+	subgroup = "aoc-nuclear-fuel",
+	order = "b3",
+	category = "centrifuging",
+    allow_productivity = false,
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoc-centrifuging-fuel-cell-uranium-233-depleted-2-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "aoc-fuel-cell-uranium-233-depleted-2", amount = 1}
+	},
+	results = {
+		{type = 'item', name = "aoc-fuel-cell-empty-2", amount = 1},
+		{type = 'item', name = "aoc-neptunium-236", amount = 4},
+		{type = 'item', name = "aoc-neptunium-237", amount = 1},
+		{type = 'item', name = "aoc-plutonium-242", amount = 2},
+		{type = 'item', name = "aoc-americium-243", amount = 1}
+	},
+	icons = data.raw.item["aoc-fuel-cell-uranium-233-depleted-2"].icons,
+	subgroup = "aoc-nuclear-fuel",
+	order = "c3",
+	category = "centrifuging",
+    allow_productivity = false,
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoc-centrifuging-fuel-cell-uranium-235-depleted-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "depleted-uranium-fuel-cell", amount = 1}
+	},
+	results = {
+		{type = 'item', name = "aoc-fuel-cell-empty", amount = 1},
+		{type = 'item', name = "uranium-238", amount = 4},
+		{type = 'item', name = "aoc-neptunium-237", amount = 2},
+		{type = 'item', name = "aoc-plutonium-239", amount = 1},
+		{type = 'item', name = "aoc-plutonium-241", amount = 1}
+	},
+	icons = data.raw.item["depleted-uranium-fuel-cell"].icons,
+	subgroup = "aoc-nuclear-fuel",
+	order = "d3",
+	category = "centrifuging",
+    allow_productivity = false,
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoc-centrifuging-fuel-cell-uranium-235-depleted-2-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "aoc-fuel-cell-uranium-235-depleted-2", amount = 1}
+	},
+	results = {
+		{type = 'item', name = "aoc-fuel-cell-empty-2", amount = 1},
+		{type = 'item', name = "uranium-238", amount = 2},
+		{type = 'item', name = "aoc-neptunium-237", amount = 2},
+		{type = 'item', name = "aoc-plutonium-239", amount = 1},
+		{type = 'item', name = "aoc-plutonium-242", amount = 3}
+	},
+	icons = data.raw.item["aoc-fuel-cell-uranium-235-depleted-2"].icons,
+	subgroup = "aoc-nuclear-fuel",
+	order = "e3",
+	category = "centrifuging",
+    allow_productivity = false,
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoc-centrifuging-fuel-cell-neptunium-236-depleted-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "aoc-fuel-cell-neptunium-236-depleted", amount = 1}
+	},
+	results = {
+		{type = 'item', name = "aoc-fuel-cell-empty", amount = 1},
+		{type = 'item', name = "aoc-americium-243", amount_min = 3, amount_max = 4},
+		{type = 'item', name = "aoc-neptunium-237", amount = 1},
+		{type = 'item', name = "aoc-americium-242", amount = 1},
+		{type = 'item', name = "aoc-plutonium-242", amount_min = 3, amount_max = 4}
+	},
+	icons = data.raw.item["aoc-fuel-cell-neptunium-236-depleted"].icons,
+	subgroup = "aoc-nuclear-fuel",
+	order = "f3",
+	category = "centrifuging",
+    allow_productivity = false,
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoc-centrifuging-fuel-cell-neptunium-236-depleted-2-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "aoc-fuel-cell-neptunium-236-depleted-2", amount = 1}
+	},
+	results = {
+		{type = 'item', name = "aoc-fuel-cell-empty-2", amount = 1},
+		{type = 'item', name = "uranium-238", amount = 2},
+		{type = 'item', name = "aoc-plutonium-242", amount = 4},
+		{type = 'item', name = "aoc-plutonium-238", amount = 1},
+		{type = 'item', name = "aoc-plutonium-239", amount = 1}
+	},
+	icons = data.raw.item["aoc-fuel-cell-neptunium-236-depleted-2"].icons,
+	subgroup = "aoc-nuclear-fuel",
+	order = "g3",
+	category = "centrifuging",
+    allow_productivity = false,
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoc-centrifuging-fuel-cell-plutonium-239-depleted-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "aoc-fuel-cell-plutonium-239-depleted", amount = 1}
+	},
+	results = {
+		{type = 'item', name = "aoc-fuel-cell-empty", amount = 1},
+		{type = 'item', name = "aoc-curium-246", amount = 3},
+		{type = 'item', name = "aoc-plutonium-239", amount = 1},
+		{type = 'item', name = "aoc-curium-243", amount = 1},
+		{type = 'item', name = "aoc-plutonium-242", amount = 3}
+	},
+	icons = data.raw.item["aoc-fuel-cell-plutonium-239-depleted"].icons,
+	subgroup = "aoc-nuclear-fuel",
+	order = "h3",
+	category = "centrifuging",
+    allow_productivity = false,
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoc-centrifuging-fuel-cell-plutonium-239-depleted-2-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "aoc-fuel-cell-plutonium-239-depleted-2", amount = 1}
+	},
+	results = {
+		{type = 'item', name = "aoc-fuel-cell-empty-2", amount = 1},
+		{type = 'item', name = "aoc-curium-246", amount = 3},
+		{type = 'item', name = "aoc-curium-245", amount = 1},
+		{type = 'item', name = "aoc-americium-242", amount = 3},
+		{type = 'item', name = "aoc-americium-241", amount = 1}
+	},
+	icons = data.raw.item["aoc-fuel-cell-plutonium-239-depleted-2"].icons,
+	subgroup = "aoc-nuclear-fuel",
+	order = "i3",
+	category = "centrifuging",
+    allow_productivity = false,
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoc-centrifuging-fuel-cell-plutonium-241-depleted-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "aoc-fuel-cell-plutonium-241-depleted", amount = 1}
+	},
+	results = {
+		{type = 'item', name = "aoc-fuel-cell-empty", amount = 1},
+		{type = 'item', name = "aoc-curium-246", amount = 5},
+		{type = 'item', name = "aoc-americium-243", amount_min = 1, amount_max = 2},
+		{type = 'item', name = "aoc-plutonium-242", amount_min = 1, amount_max = 2}
+	},
+	icons = data.raw.item["aoc-fuel-cell-plutonium-241-depleted"].icons,
+	subgroup = "aoc-nuclear-fuel",
+	order = "j3",
+	category = "centrifuging",
+    allow_productivity = false,
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoc-centrifuging-fuel-cell-plutonium-241-depleted-2-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "aoc-fuel-cell-plutonium-241-depleted-2", amount = 1}
+	},
+	results = {
+		{type = 'item', name = "aoc-fuel-cell-empty-2", amount = 1},
+		{type = 'item', name = "aoc-curium-246", amount = 3},
+		{type = 'item', name = "aoc-curium-245", amount = 1},
+		{type = 'item', name = "aoc-americium-242", amount = 3},
+		{type = 'item', name = "aoc-americium-241", amount = 1}
+	},
+	icons = data.raw.item["aoc-fuel-cell-plutonium-241-depleted-2"].icons,
+	subgroup = "aoc-nuclear-fuel",
+	order = "k3",
+	category = "centrifuging",
+    allow_productivity = false,
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoc-centrifuging-fuel-cell-americium-242-depleted-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "aoc-fuel-cell-americium-242-depleted", amount = 1}
+	},
+	results = {
+		{type = 'item', name = "aoc-fuel-cell-empty", amount = 1},
+		{type = 'item', name = "aoc-curium-247", amount = 1},
+		{type = 'item', name = "aoc-curium-246", amount = 5},
+		{type = 'item', name = "aoc-curium-245", amount = 1},
+		{type = 'item', name = "aoc-curium-243", amount = 1}
+	},
+	icons = data.raw.item["aoc-fuel-cell-americium-242-depleted"].icons,
+	subgroup = "aoc-nuclear-fuel",
+	order = "l3",
+	category = "centrifuging",
+    allow_productivity = false,
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoc-centrifuging-fuel-cell-americium-242-depleted-2-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "aoc-fuel-cell-americium-242-depleted-2", amount = 1}
+	},
+	results = {
+		{type = 'item', name = "aoc-fuel-cell-empty-2", amount = 1},
+		{type = 'item', name = "aoc-curium-247", amount = 1},
+		{type = 'item', name = "aoc-curium-246", amount = 4},
+		{type = 'item', name = "aoc-curium-245", amount = 2},
+		{type = 'item', name = "aoc-berkelium-247", amount = 1}
+	},
+	icons = data.raw.item["aoc-fuel-cell-americium-242-depleted-2"].icons,
+	subgroup = "aoc-nuclear-fuel",
+	order = "m3",
+	category = "centrifuging",
+    allow_productivity = false,
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoc-centrifuging-fuel-cell-curium-243-depleted-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "aoc-fuel-cell-curium-243-depleted", amount = 1}
+	},
+	results = {
+		{type = 'item', name = "aoc-fuel-cell-empty", amount = 1},
+		{type = 'item', name = "aoc-berkelium-247", amount = 2},
+		{type = 'item', name = "aoc-curium-246", amount = 4},
+		{type = 'item', name = "aoc-berkelium-248", amount = 1},
+		{type = 'item', name = "aoc-californium-249", amount = 1}
+	},
+	icons = data.raw.item["aoc-fuel-cell-curium-243-depleted"].icons,
+	subgroup = "aoc-nuclear-fuel",
+	order = "n3",
+	category = "centrifuging",
+    allow_productivity = false,
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoc-centrifuging-fuel-cell-curium-243-depleted-2-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "aoc-fuel-cell-curium-243-depleted-2", amount = 1}
+	},
+	results = {
+		{type = 'item', name = "aoc-fuel-cell-empty-2", amount = 1},
+		{type = 'item', name = "aoc-berkelium-247", amount = 3},
+		{type = 'item', name = "aoc-curium-246", amount = 3},
+		{type = 'item', name = "aoc-berkelium-248", amount = 1},
+		{type = 'item', name = "aoc-californium-249", amount = 1}
+	},
+	icons = data.raw.item["aoc-fuel-cell-curium-243-depleted-2"].icons,
+	subgroup = "aoc-nuclear-fuel",
+	order = "o3",
+	category = "centrifuging",
+    allow_productivity = false,
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoc-centrifuging-fuel-cell-curium-245-depleted-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "aoc-fuel-cell-curium-245-depleted", amount = 1}
+	},
+	results = {
+		{type = 'item', name = "aoc-fuel-cell-empty", amount = 1},
+		{type = 'item', name = "aoc-berkelium-247", amount_min = 4, amount_max = 5},
+		{type = 'item', name = "aoc-californium-252", amount_min = 1, amount_max = 2},
+		{type = 'item', name = "aoc-berkelium-248", amount = 1},
+		{type = 'item', name = "aoc-californium-249", amount = 1}
+	},
+	icons = data.raw.item["aoc-fuel-cell-curium-245-depleted"].icons,
+	subgroup = "aoc-nuclear-fuel",
+	order = "p3",
+	category = "centrifuging",
+    allow_productivity = false,
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoc-centrifuging-fuel-cell-curium-245-depleted-2-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "aoc-fuel-cell-curium-245-depleted-2", amount = 1}
+	},
+	results = {
+		{type = 'item', name = "aoc-fuel-cell-empty-2", amount = 1},
+		{type = 'item', name = "aoc-berkelium-247", amount= 5},
+		{type = 'item', name = "aoc-californium-251", amount = 1},
+		{type = 'item', name = "aoc-berkelium-248", amount = 1},
+		{type = 'item', name = "aoc-californium-249", amount = 1}
+	},
+	icons = data.raw.item["aoc-fuel-cell-curium-245-depleted-2"].icons,
+	subgroup = "aoc-nuclear-fuel",
+	order = "q3",
+	category = "centrifuging",
+    allow_productivity = false,
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoc-centrifuging-fuel-cell-curium-247-depleted-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "aoc-fuel-cell-curium-247-depleted", amount = 1}
+	},
+	results = {
+		{type = 'item', name = "aoc-fuel-cell-empty", amount = 1},
+		{type = 'item', name = "aoc-berkelium-247", amount_min = 2, amount_max = 3},
+		{type = 'item', name = "aoc-berkelium-248", amount = 1},
+		{type = 'item', name = "aoc-californium-252", amount_min = 3, amount_max = 4},
+		{type = 'item', name = "aoc-californium-251", amount = 1}
+	},
+	icons = data.raw.item["aoc-fuel-cell-curium-247-depleted"].icons,
+	subgroup = "aoc-nuclear-fuel",
+	order = "r3",
+	category = "centrifuging",
+    allow_productivity = false,
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoc-centrifuging-fuel-cell-curium-247-depleted-2-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "aoc-fuel-cell-curium-247-depleted-2", amount = 1}
+	},
+	results = {
+		{type = 'item', name = "aoc-fuel-cell-empty-2", amount = 1},
+		{type = 'item', name = "aoc-californium-249", amount = 1},
+		{type = 'item', name = "aoc-berkelium-248", amount = 1},
+		{type = 'item', name = "aoc-californium-252", amount = 3},
+		{type = 'item', name = "aoc-californium-251", amount = 3}
+	},
+	icons = data.raw.item["aoc-fuel-cell-curium-247-depleted-2"].icons,
+	subgroup = "aoc-nuclear-fuel",
+	order = "s3",
+	category = "centrifuging",
+    allow_productivity = false,
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoc-centrifuging-fuel-cell-berkelium-248-depleted-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "aoc-fuel-cell-berkelium-248-depleted", amount = 1}
+	},
+	results = {
+		{type = 'item', name = "aoc-fuel-cell-empty", amount = 1},
+		{type = 'item', name = "aoc-californium-252", amount = 6},
+		{type = 'item', name = "aoc-californium-251", amount = 1},
+		{type = 'item', name = "aoc-californium-249", amount = 1}
+	},
+	icons = data.raw.item["aoc-fuel-cell-berkelium-248-depleted"].icons,
+	subgroup = "aoc-nuclear-fuel",
+	order = "t3",
+	category = "centrifuging",
+    allow_productivity = false,
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoc-centrifuging-fuel-cell-berkelium-248-depleted-2-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "aoc-fuel-cell-berkelium-248-depleted-2", amount = 1}
+	},
+	results = {
+		{type = 'item', name = "aoc-fuel-cell-empty-2", amount = 1},
+		{type = 'item', name = "aoc-californium-252", amount = 6},
+		{type = 'item', name = "aoc-californium-251", amount = 1},
+		{type = 'item', name = "aoc-californium-250", amount = 1}
+	},
+	icons = data.raw.item["aoc-fuel-cell-berkelium-248-depleted-2"].icons,
+	subgroup = "aoc-nuclear-fuel",
+	order = "u3",
+	category = "centrifuging",
+    allow_productivity = false,
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoc-centrifuging-fuel-cell-californium-249-depleted-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "aoc-fuel-cell-californium-249-depleted", amount = 1}
+	},
+	results = {
+		{type = 'item', name = "aoc-fuel-cell-empty", amount = 1},
+		{type = 'item', name = "aoc-californium-252", amount = 3},
+		{type = 'item', name = "aoc-californium-251", amount = 1},
+		{type = 'item', name = "aoc-californium-250", amount = 3},
+		--{type = 'item', name = "aoc-actinium", amount = 1}
+	},
+	icons = data.raw.item["aoc-fuel-cell-californium-249-depleted"].icons,
+	subgroup = "aoc-nuclear-fuel",
+	order = "v3",
+	category = "centrifuging",
+    allow_productivity = false,
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoc-centrifuging-fuel-cell-californium-249-depleted-2-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "aoc-fuel-cell-californium-249-depleted-2", amount = 1}
+	},
+	results = {
+		{type = 'item', name = "aoc-fuel-cell-empty-2", amount = 1},
+		{type = 'item', name = "aoc-californium-252", amount = 1},
+		{type = 'item', name = "aoc-californium-251", amount = 2},
+		{type = 'item', name = "aoc-californium-250", amount = 4},
+		--{type = 'item', name = "aoc-actinium", amount = 1}
+	},
+	icons = data.raw.item["aoc-fuel-cell-californium-249-depleted-2"].icons,
+	subgroup = "aoc-nuclear-fuel",
+	order = "w3",
+	category = "centrifuging",
+    allow_productivity = false,
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoc-centrifuging-fuel-cell-californium-251-depleted-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "aoc-fuel-cell-californium-251-depleted", amount = 1}
+	},
+	results = {
+		{type = 'item', name = "aoc-fuel-cell-empty", amount = 1},
+		{type = 'item', name = "aoc-californium-252", amount = 5},
+		{type = 'item', name = "aoc-californium-251", amount = 2},
+		--{type = 'item', name = "aoc-actinium", amount = 1}
+	},
+	icons = data.raw.item["aoc-fuel-cell-californium-249-depleted"].icons,
+	subgroup = "aoc-nuclear-fuel",
+	order = "x3",
+	category = "centrifuging",
+    allow_productivity = false,
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoc-centrifuging-fuel-cell-californium-251-depleted-2-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = "item", name = "aoc-fuel-cell-californium-251-depleted-2", amount = 1}
+	},
+	results = {
+		{type = 'item', name = "aoc-fuel-cell-empty-2", amount = 1},
+		{type = 'item', name = "aoc-californium-252", amount = 4},
+		{type = 'item', name = "aoc-californium-251", amount = 2},
+		--{type = 'item', name = "aoc-actinium", amount = 2}
+	},
+	icons = data.raw.item["aoc-fuel-cell-californium-251-depleted-2"].icons,
+	subgroup = "aoc-nuclear-fuel",
+	order = "y3",
+	category = "centrifuging",
+    allow_productivity = false,
+	energy_required = 20
+}})

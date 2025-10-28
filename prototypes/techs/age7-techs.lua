@@ -36,7 +36,7 @@ data:extend({{
   name = "aoc-space-platform-tech",
   icon_size = 256, icon_mipmaps = 4,
   icon = "__base__/graphics/technology/rocket-silo.png",
-  prerequisites = {"aoc-military-tech-1"},
+  prerequisites = {"aoc-military-tech-2"},
   effects = {
     {
       type = "unlock-recipe",
@@ -443,6 +443,326 @@ data:extend({{
   },
   unit = {
       count = 60,
+      ingredients = AOC["age_tech_table"][7],
+      time = 60
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-nuclear-power-tech",
+  icon_size = 256, icon_mipmaps = 4,
+  icon = "__base__/graphics/technology/nuclear-power.png",
+  prerequisites = {"aoc-space-age-tech"},
+  effects = {
+    -- crafting nuclear reactor
+    -- crafting nuclear tiles
+    -- crafting fuel rods
+    -- crafting heat cells
+  },
+  unit = {
+      count = 25,
+      ingredients = AOC["age_tech_table"][7],
+      time = 60
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-uranium-tech",
+  icon_size = 64, icon_mipmaps = 4,
+  icon = "__base__/graphics/icons/uranium-235.png",
+  prerequisites = {"aoc-nuclear-power-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-centrifuging-uranium-ore-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-aoc-fuel-cell-uranium-233-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-aoc-fuel-cell-uranium-233-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-uranium-fuel-cell-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-aoc-fuel-cell-uranium-235-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-centrifuging-fuel-cell-uranium-233-depleted-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-centrifuging-fuel-cell-uranium-233-depleted-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-centrifuging-fuel-cell-uranium-235-depleted-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-centrifuging-fuel-cell-uranium-235-depleted-2-recipe"
+    }
+  },
+  unit = {
+      count = 35,
+      ingredients = AOC["age_tech_table"][7],
+      time = 60
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-neptunium-tech",
+  icon_size = 64,
+  icon = "__ageofcreation__/img/items/np236.png",
+  prerequisites = {"aoc-uranium-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-aoc-fuel-cell-neptunium-236-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-aoc-fuel-cell-neptunium-236-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-centrifuging-fuel-cell-neptunium-236-depleted-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-centrifuging-fuel-cell-neptunium-236-depleted-2-recipe"
+    }
+  },
+  unit = {
+      count = 45,
+      ingredients = AOC["age_tech_table"][7],
+      time = 60
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-plutonium-tech",
+  icon_size = 64,
+  icon = "__ageofcreation__/img/items/pu241.png",
+  prerequisites = {"aoc-uranium-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-aoc-fuel-cell-plutonium-239-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-aoc-fuel-cell-plutonium-239-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-aoc-fuel-cell-plutonium-241-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-aoc-fuel-cell-plutonium-241-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-centrifuging-fuel-cell-plutonium-239-depleted-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-centrifuging-fuel-cell-plutonium-239-depleted-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-centrifuging-fuel-cell-plutonium-241-depleted-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-centrifuging-fuel-cell-plutonium-241-depleted-2-recipe"
+    }
+  },
+  unit = {
+      count = 45,
+      ingredients = AOC["age_tech_table"][7],
+      time = 60
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-americium-tech",
+  icon_size = 64,
+  icon = "__ageofcreation__/img/items/am242.png",
+  prerequisites = {"aoc-plutonium-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-aoc-fuel-cell-americium-242-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-aoc-fuel-cell-americium-242-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-centrifuging-fuel-cell-americium-242-depleted-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-centrifuging-fuel-cell-americium-242-depleted-2-recipe"
+    }
+  },
+  unit = {
+      count = 55,
+      ingredients = AOC["age_tech_table"][7],
+      time = 60
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-curium-tech",
+  icon_size = 64,
+  icon = "__ageofcreation__/img/items/cm246.png",
+  prerequisites = {"aoc-americium-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-aoc-fuel-cell-curium-243-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-aoc-fuel-cell-curium-243-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-aoc-fuel-cell-curium-245-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-aoc-fuel-cell-curium-245-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-aoc-fuel-cell-curium-247-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-aoc-fuel-cell-curium-247-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-centrifuging-fuel-cell-curium-243-depleted-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-centrifuging-fuel-cell-curium-243-depleted-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-centrifuging-fuel-cell-curium-245-depleted-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-centrifuging-fuel-cell-curium-245-depleted-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-centrifuging-fuel-cell-curium-247-depleted-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-centrifuging-fuel-cell-curium-247-depleted-2-recipe"
+    }
+  },
+  unit = {
+      count = 65,
+      ingredients = AOC["age_tech_table"][7],
+      time = 60
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-berkelium-tech",
+  icon_size = 64,
+  icon = "__ageofcreation__/img/items/bk247.png",
+  prerequisites = {"aoc-curium-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-aoc-fuel-cell-berkelium-248-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-aoc-fuel-cell-berkelium-248-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-centrifuging-fuel-cell-berkelium-248-depleted-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-centrifuging-fuel-cell-berkelium-248-depleted-2-recipe"
+    }
+  },
+  unit = {
+      count = 75,
+      ingredients = AOC["age_tech_table"][7],
+      time = 60
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-californium-tech",
+  icon_size = 64,
+  icon = "__ageofcreation__/img/items/cf251.png",
+  prerequisites = {"aoc-curium-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-aoc-fuel-cell-californium-249-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-aoc-fuel-cell-californium-249-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-aoc-fuel-cell-californium-251-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-aoc-fuel-cell-californium-251-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-centrifuging-fuel-cell-californium-249-depleted-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-centrifuging-fuel-cell-californium-249-depleted-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-centrifuging-fuel-cell-californium-251-depleted-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-centrifuging-fuel-cell-californium-251-depleted-2-recipe"
+    }
+  },
+  unit = {
+      count = 75,
       ingredients = AOC["age_tech_table"][7],
       time = 60
   }
