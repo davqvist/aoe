@@ -160,39 +160,45 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-production-tools",
+    name = "aoc-nuclearpower-buildings",
     group = "production",
     order = "b"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-processing-buildings",
+    name = "aoc-production-tools",
     group = "production",
     order = "c"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-specific-buildings",
+    name = "aoc-processing-buildings",
     group = "production",
     order = "d"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-voiding-buildings",
+    name = "aoc-specific-buildings",
     group = "production",
     order = "e"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-other-buildings",
+    name = "aoc-voiding-buildings",
     group = "production",
     order = "f"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-modules",
+    name = "aoc-other-buildings",
     group = "production",
     order = "g"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-modules",
+    group = "production",
+    order = "h"
   },
   {
 	  type = "item-subgroup",
@@ -517,6 +523,12 @@ data:extend({
     name = "aoc-fluids-magic-rest",
     group = "fluids",
     order = "p"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-fluids-aliens",
+    group = "fluids",
+    order = "q"
   },
   {
 	  type = "item-subgroup",

@@ -30,6 +30,7 @@ data:extend({{
   max_health = 300,
   selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
   collision_box = {{-1.9, -1.9}, {1.9, 1.9}},
+  gui_mode = "all",
   radius_visualisation_specification = {
     sprite = {
       filename = "__base__/graphics/entity/pumpjack/pumpjack-radius-visualization.png",

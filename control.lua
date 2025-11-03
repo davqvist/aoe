@@ -1,4 +1,5 @@
 require("__ageofcreation__/scripts/milestones")
+require("__ageofcreation__/scripts/nuclear")
 
 remote.add_interface("ageofcreation", {
 	milestones_presets = function()
@@ -61,10 +62,19 @@ function close_gui(player,gui)
     if g then g.destroy() end
 end
 
+function table.contains_tile(table, element)
+    for _, value in pairs(table) do
+      if value.position.x == element.position.x and value.position.y == element.position.y then
+        return true
+      end
+    end
+    return false
+end
+
 function update_gui(entity)
 	for _, player in pairs(game.players) do
 		local g = player.gui.screen[entity]
-		if g then
+		if g and entity == "aoc-lightning-rod" then
 			for tick, temprod in pairs(storage.lightningtick) do
 				if temprod and temprod.valid and temprod.unit_number == g.tags.rod_id then 
 					g["main-container"]["weather-stations"].caption = {"", {"entity-name.aoc-weather-station"}, ": ", storage.weather_stations[g.tags.rod_id]}
@@ -75,13 +85,23 @@ function update_gui(entity)
 				end
 			end
 		end
+		g = player.gui.relative["aoc-nuclear-reactor-relative"]
+		if g and entity == "aoc-nuclear-reactor" and storage.reactortiles and storage.reactortiles[g.tags.reactor_id] then
+			g["main-container"]["formed"].caption = {"", {"age-of-creation.reactor-formed"}, ": [color=#6666ff]", storage.reactortiles[g.tags.reactor_id].formed, "[/color]"}
+			g["main-container"]["tiles"].caption = {"", {"age-of-creation.reactor-tiles"}, ": ", storage.reactortiles[g.tags.reactor_id].amount}
+			g["main-container"]["heatbase"].caption = {"", {"age-of-creation.reactor-heatbase"}, ": ", storage.reactortiles[g.tags.reactor_id].heatbase}
+			g["main-container"]["heatmult"].caption = {"", {"age-of-creation.reactor-heatmult"}, ": ", storage.reactortiles[g.tags.reactor_id].heatmult}
+			g["main-container"]["heatsum"].caption = {"", {"age-of-creation.reactor-heatsum"}, ": [color=#ff3333]", storage.reactortiles[g.tags.reactor_id].heatbase * storage.reactortiles[g.tags.reactor_id].heatmult, "[/color]"}
+			g["main-container"]["heatsink"].caption = {"", {"age-of-creation.reactor-heatsink"}, ": [color=#ff3333]", storage.reactortiles[g.tags.reactor_id].heatsink, "[/color]"}
+			g["main-container"]["power"].caption = {"", {"age-of-creation.reactor-power"}, ": [color=#00ff00]", string.format("%.2f MW",storage.reactortiles[g.tags.reactor_id].power), "[/color]"}
+		end
 	end
 end
 
 script.on_event(defines.events.on_gui_opened,
   function(event)
-    if event.gui_type == defines.gui_type.entity and event.entity and event.entity.name == "aoc-lightning-rod" then
-		local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index)
+	if event.gui_type == defines.gui_type.entity and event.entity and event.entity.name == "aoc-lightning-rod" then
 		if not player.gui.screen["aoc-lightning-rod"] then 
 			local root = player.gui.screen.add{type = "frame",name = "aoc-lightning-rod",direction = "vertical",tags = {rod_id = event.entity.unit_number}}
 			root.force_auto_center()
@@ -101,6 +121,24 @@ script.on_event(defines.events.on_gui_opened,
 		end
 		update_gui("aoc-lightning-rod")
 	end
+    if event.gui_type == defines.gui_type.entity and event.entity and event.entity.name == "aoc-nuclear-reactor" then
+		local frame = player.gui.relative.add {
+            type = "frame",
+            name = "aoc-nuclear-reactor-relative",
+            anchor = { gui = defines.relative_gui_type.assembling_machine_gui, position = defines.relative_gui_position.right},
+            visible = true,
+			tags = {reactor_id = event.entity.unit_number}
+        }
+		local main_container = frame.add{type = "frame",name = "main-container",direction = "vertical",style = "inside_shallow_frame"}
+		main_container.add{type = "label",name="formed",caption ={"age-of-creation.reactor-formed"},style = "subheader_caption_label"}
+		main_container.add{type = "label",name="tiles",caption ={"age-of-creation.reactor-tiles"},style = "subheader_caption_label"}
+		main_container.add{type = "label",name="heatbase",caption ={"age-of-creation.reactor-heatbase"},style = "subheader_caption_label"}
+		main_container.add{type = "label",name="heatmult",caption ={"age-of-creation.reactor-heatmult"},style = "subheader_caption_label"}
+		main_container.add{type = "label",name="heatsum",caption ={"age-of-creation.reactor-heatsum"},style = "subheader_caption_label"}
+		main_container.add{type = "label",name="heatsink",caption ={"age-of-creation.reactor-heatsink"},style = "subheader_caption_label"}
+		main_container.add{type = "label",name="power",caption ={"age-of-creation.reactor-power"},style = "subheader_caption_label"}
+		update_gui("aoc-nuclear-reactor")
+	end
   end
 )
 
@@ -110,6 +148,9 @@ script.on_event(defines.events.on_gui_closed,
 	if name == "aoc-lightning-rod" then
 		close_gui(game.get_player(event.player_index),name)
     end
+	local player = game.get_player(event.player_index)
+	local frame = player.gui.relative["aoc-nuclear-reactor-relative"]
+	if frame ~= nil then frame.destroy() end
   end
 )
 
@@ -149,6 +190,10 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 	end
 	if(entity.name == "aoc-cauldron") then
 		handleBuilt( event, "cauldrons" )
+	end
+	if(entity.name == "aoc-nuclear-reactor") then
+		handleReactorBuilt(event)
+		--handleBuilt( event, "reactors" )
 	end
 	if(entity.name == "aoc-wind-turbine") then
 		handleWindTurbineBuilt( event )
@@ -193,16 +238,19 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
   function(event)
     local entity = event.entity
 	if(entity.name == "aoc-wind-turbine") then 
-		handleMined(event, storage.wind_turbines, storage.wind_turbine_generators, nil)
+		handleMined(event, storage.wind_turbines, storage.wind_turbine_generators, nil, nil)
 	end
 	if(entity.name == "aoc-metallurgy-beacon") then 
-		handleMined(event, storage.metal_beacons, storage.metal_beacon_beacons, nil)
+		handleMined(event, storage.metal_beacons, storage.metal_beacon_beacons, nil, nil)
+	end
+	if(entity.name == "aoc-nuclear-reactor") then 
+		handleMined(event, storage.reactors, storage.reactor_beacons, storage.reactor_gens, nil)
 	end
 	if(entity.name == "aoc-infusion-table") then 
-		local to_drop = handleMined(event, storage.infusion_tables, storage.infusion_table_machines, "assembler")
+		local to_drop = handleMined(event, storage.infusion_tables, storage.infusion_table_machines, nil, "assembler")
 		if to_drop.name ~= nil then drop( event, to_drop ) end
 	end
-	if(entity.name == "aoc-lightning-rod") then 
+	if(entity.name == "aoc-lightning-rod") then
 		for _, player in pairs(game.players) do
 			close_gui(player,entity.name)
 		end
@@ -224,7 +272,107 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 	end
   end
 )
-
+script.on_nth_tick(157,
+  function()
+	if storage.reactors then
+		for unit, reactor in pairs(storage.reactors) do
+			if reactor.valid and reactor.name == "aoc-nuclear-reactor" then
+				if storage.reactortiles == nil then storage.reactortiles = {} end
+				if storage.reactortiles[unit] == nil then storage.reactortiles[unit] = {} end
+				local tiles = reactor.surface.find_tiles_filtered({name={"refined-hazard-concrete-left", "refined-hazard-concrete-right"}, area={{reactor.position.x-2, reactor.position.y-2}, {reactor.position.x+2, reactor.position.y+2}}})
+				local foundtiles = {}
+				for _, t in pairs(tiles) do
+					table.insert(foundtiles,t)
+				end
+				storage.reactortiles[unit].heatbase = 0
+				local heatdata = heat_data()
+				if reactor.burner and reactor.burner.currently_burning and heatdata[reactor.burner.currently_burning.name.name] then
+					storage.reactortiles[unit].heatbase = heatdata[reactor.burner.currently_burning.name.name]
+				end
+				local flag = false
+				storage.reactortiles[unit].heatmult = 0
+				storage.reactortiles[unit].heatsink = 0
+				storage.reactortiles[unit].power = 0
+				storage.reactortiles[unit].speed = 0
+				if #tiles == 25 then
+					flag = true
+					while #tiles>0 and flag do
+						local t = table.remove(tiles,#tiles)
+						local direction = {}
+						local count = {}
+						direction[1] = reactor.surface.get_tile(t.position.x-1,t.position.y)
+						count[1] = reactor.surface.count_entities_filtered({name={"stone-wall","gate"},position={t.position.x+0.5-1,t.position.y+0.5}})
+						direction[2] = reactor.surface.get_tile(t.position.x+1,t.position.y)
+						count[2] = reactor.surface.count_entities_filtered({name={"stone-wall","gate"},position={t.position.x+0.5+1,t.position.y+0.5}})
+						direction[3] = reactor.surface.get_tile(t.position.x,t.position.y-1)
+						count[3] = reactor.surface.count_entities_filtered({name={"stone-wall","gate"},position={t.position.x+0.5,t.position.y+0.5-1}})
+						direction[4] = reactor.surface.get_tile(t.position.x,t.position.y+1)
+						count[4] = reactor.surface.count_entities_filtered({name={"stone-wall","gate"},position={t.position.x+0.5,t.position.y+0.5+1}})
+						local ent = reactor.surface.find_entities({{t.position.x,t.position.y},{t.position.x+1,t.position.y+1}})
+						if ent and ent[1] and ent[1].name == "aoc-reactor-fuel-cell" then
+							local connected = reactor.surface.count_entities_filtered({name="aoc-reactor-fuel-cell",area={{t.position.x-1,t.position.y-1},{t.position.x+2,t.position.y+2}}})
+							storage.reactortiles[unit].heatmult = storage.reactortiles[unit].heatmult + (connected*(connected+1)/2)
+							storage.reactortiles[unit].power = storage.reactortiles[unit].power + connected
+							storage.reactortiles[unit].speed = storage.reactortiles[unit].speed + 1
+						end
+						local sink = sink_data()
+						for i, s in pairs(sink) do
+							if ent and ent[1] and ent[1].name == "aoc-reactor-sink-" .. i then
+								local flag = true
+								for j, c in pairs(s.connected) do 
+									local con = reactor.surface.count_entities_filtered({name=c,area={{t.position.x-1,t.position.y-1},{t.position.x+2,t.position.y+2}}})
+									if con<s.connected_amount[j] then flag = false end
+								end
+								if flag then
+									storage.reactortiles[unit].heatsink = storage.reactortiles[unit].heatsink + s.heat
+								end
+							end
+						end
+						for _, d in pairs( direction ) do
+							if count[_]==0 then
+								if d and ( d.name == "refined-hazard-concrete-left" or d.name == "refined-hazard-concrete-right" ) then
+									if table.contains_tile(foundtiles, d) == false then
+										if #foundtiles < 1000 then
+											table.insert(tiles,d)
+											table.insert(foundtiles,d)
+										else flag = false end
+									end
+								else 
+									flag = false
+								end
+							end
+						end 
+					end
+				end
+				local beac = storage.reactor_beacons[unit]
+				beac.active = false
+				local module_slot = beac.get_module_inventory()
+				module_slot.clear()
+					if storage.reactortiles[unit].speed>1 then
+					module_slot.insert( {name = "aoc-hidden-reactor-module", count = storage.reactortiles[unit].speed-1} )
+					beac.active = true
+				end
+				storage.reactortiles[unit].formed = flag
+				reactor.active = flag
+				if reactor.active and storage.reactortiles[unit].heatbase * storage.reactortiles[unit].heatmult > storage.reactortiles[unit].heatsink then 
+					reactor.active = false
+				end
+				storage.reactortiles[unit].amount = #foundtiles
+				storage.reactortiles[unit].power = storage.reactortiles[unit].power * math.sqrt(#foundtiles) / 10
+				storage.reactor_gens[unit].power_production = 0
+				storage.reactor_gens[unit].electric_buffer_size = 0
+				if reactor.active then
+					storage.reactor_gens[unit].power_production = storage.reactortiles[unit].power / 60 * 1000000
+					storage.reactor_gens[unit].electric_buffer_size = storage.reactortiles[unit].power * 1000000
+				end
+			else
+				storage.reactors[unit]=nil
+				storage.reactortiles[unit]=nil
+			end
+		end
+	end
+  end
+)
 script.on_nth_tick(149,
   function()
 	if storage.lightning_rods then
@@ -280,6 +428,7 @@ script.on_nth_tick(101,
 script.on_nth_tick(31,
   function()
 	update_gui("aoc-lightning-rod")
+	update_gui("aoc-nuclear-reactor")
   end
 )
 script.on_nth_tick(39,
@@ -325,7 +474,7 @@ script.on_nth_tick(97,
 				if metalbeacon.get_recipe() and recipe_to_module[metalbeacon.get_recipe().name] then
 					local module_slot = beac.get_module_inventory()
 					module_slot.clear()
-					module_slot.insert( {name = recipe_to_module[metalbeacon.get_recipe().name], amount = 1} )
+					module_slot.insert( {name = recipe_to_module[metalbeacon.get_recipe().name], count = 1} )
 					if metalbeacon.status == defines.entity_status.working then beac.active = true end
 				end
 			else 
@@ -542,24 +691,44 @@ function handleMetalBeaconBuilt(event)
 	storage.metal_beacon_beacons[metalbeacon.unit_number] = metalbeaconbeacon
 end
 
+function handleReactorBuilt(event)
+	if not storage.reactors then storage.reactors={} end
+	if not storage.reactor_beacons then storage.reactor_beacons={} end
+	if not storage.reactor_gens then storage.reactor_gens={} end
+	local reactor = event.entity
+	local reactorbeacon = game.surfaces[reactor.surface.name].create_entity{
+		name = 'aoc-reactor-beacon',
+		position = reactor.position,
+		force = reactor.force
+	}
+	local reactorgen = game.surfaces[reactor.surface.name].create_entity{
+		name = 'aoc-reactor-generator',
+		position = reactor.position,
+		force = reactor.force
+	}
+	storage.reactors[reactor.unit_number] = reactor
+	storage.reactor_beacons[reactor.unit_number] = reactorbeacon
+	storage.reactor_gens[reactor.unit_number] = reactorgen
+end
+
 function handleStarlightPanelBuilt(event)
-  if not storage.starlight_panels then storage.starlight_panels={} end
-  local starlight_panel = event.entity
-  starlight_panel.active = false
-  storage.starlight_panels[starlight_panel.unit_number] = starlight_panel
+	if not storage.starlight_panels then storage.starlight_panels={} end
+	local starlight_panel = event.entity
+	starlight_panel.active = false
+	storage.starlight_panels[starlight_panel.unit_number] = starlight_panel
 end
 
 function handleWindTurbineBuilt(event)
-  if not storage.wind_turbines then storage.wind_turbines={} end
-  if not storage.wind_turbine_generators then storage.wind_turbine_generators={} end
-  local wind_turbine = event.entity
-  local kinetic_generator = game.surfaces[wind_turbine.surface.name].create_entity{
+	if not storage.wind_turbines then storage.wind_turbines={} end
+	if not storage.wind_turbine_generators then storage.wind_turbine_generators={} end
+	local wind_turbine = event.entity
+	local kinetic_generator = game.surfaces[wind_turbine.surface.name].create_entity{
 		name = 'aoc-wind-turbine-kinetic-generator',
 		position = wind_turbine.position,
 		force = wind_turbine.force
-	}
-  storage.wind_turbines[wind_turbine.unit_number] = wind_turbine
-  storage.wind_turbine_generators[wind_turbine.unit_number] = kinetic_generator
+	}  
+	storage.wind_turbines[wind_turbine.unit_number] = wind_turbine
+	storage.wind_turbine_generators[wind_turbine.unit_number] = kinetic_generator
 end
 
 function handlePlanetChestBuilt(event, planet)
@@ -599,17 +768,21 @@ function handleCargoLandingPadBuilt( event, building )
 	end
 end
 
-function handleMined(event, main_entities, sub_entities, drop)
+function handleMined(event, main_entities, sub_entities, sub_entities2, drop)
   if not main_entities then main_entities={} end
   if not sub_entities then sub_entities={} end
+  if not sub_entities2 then sub_entities2={} end
   local ent = event.entity
   local ent2 = sub_entities[ent.unit_number]
+  local ent3 = sub_entities2[ent.unit_number]
   local k, v
   if( drop == "assembler" ) then
 	k, v = next( ent2.get_inventory(defines.inventory.assembling_machine_output).get_contents() )
 	ent2.destroy()
 	return {name=k,amount=v}
-  else ent2.destroy()
+  else 
+	ent2.destroy()
+	ent3.destroy()
   end
 end
 

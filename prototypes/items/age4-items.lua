@@ -1190,11 +1190,8 @@ data:extend({{
 }})
 
 data.raw['item']['refined-concrete'].subgroup = "aoc-construction"
-data.raw['item']['refined-concrete'].order = "g"
+data.raw['item']['refined-concrete'].order = "h"
 data.raw['item']['refined-concrete'].stack_size = 500
-data.raw['item']['refined-hazard-concrete'].subgroup = "aoc-construction"
-data.raw['item']['refined-hazard-concrete'].order = "h"
-data.raw['item']['refined-hazard-concrete'].stack_size = 500
 
 data.raw['rail-planner']['rail'].subgroup = "aoc-trains"
 data.raw['rail-planner']['rail'].order = "a"

@@ -4089,16 +4089,3 @@ data:extend({{
 	energy_required = 2.4,
 	category = 'aoc-category-mixing'
 }})
-
-data:extend({{
-	name = 'aoc-crafting-refined-hazard-concrete-recipe',
-	type = 'recipe',
-	enabled = false,
-	ingredients = {
-		{type = 'item', name = 'refined-concrete', amount = 5}
-	},
-	results = {
-        {type = 'item', name = 'refined-hazard-concrete', amount = 5}
-    },
-	energy_required = 0.2
-}})

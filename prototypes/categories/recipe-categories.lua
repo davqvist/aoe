@@ -476,6 +476,11 @@ data:extend({
   },
   {
     type = "recipe-category",
+    name = "aoc-category-nuclear",
+    modules = { "aoc-module-nuclear-reactor" }
+  },
+  {
+    type = "recipe-category",
     name = "aoc-category-pumping"
   },
   {

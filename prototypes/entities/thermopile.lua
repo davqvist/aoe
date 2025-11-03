@@ -13,13 +13,13 @@ data:extend({{
 }})
 
 data:extend({{
-    type = "assembling-machine",
-    name = "aoc-thermopile",
+  type = "assembling-machine",
+  name = "aoc-thermopile",
 	crafting_categories = {"aoc-category-thermo"},
 	crafting_speed = 1,
 	energy_source = { type = "void" },
 	energy_usage = "1kW",
-    fixed_recipe = "aoc-thermopile-recipe",
+  fixed_recipe = "aoc-thermopile-recipe",
 	allowed_effects = {},
 	module_slots = 0,
 	icons = {{

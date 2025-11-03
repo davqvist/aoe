@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.5
-Date: 2025-10-26
+Date: 2025-11-02
   Features:
     - Support for mods that build and deconstruct entities with scripts, like Construction Drones
     - Support for Nanobots (except they can't blow up cliffs for now as they have it hard coded in the mod)
@@ -11,7 +11,7 @@ Date: 2025-10-26
     - Support for Milestones (first 5 ages)
     - Added priority transformers
     - Added mining productivity techs throughout the ages
-    - And most importantly: added thermal power, alien life and magic teleportation techs to age 6 and lots of age 7 progression 
+    - And most importantly: added thermal power, alien life and magic teleportation techs to age 6 and lots of age 7 progression
   Changes:
     - QOL research now also scales the time cost over the ages
     - Speed Module now properly cost the same as the other modules
@@ -24,6 +24,7 @@ Date: 2025-10-26
     - Disallowing productivity modules in all the rock cycle recipes
     - Enchanted gear recycles now into lower rarity gear
     - You start the game now with 2 Burner Mining Drills and Crushers which should lessen the early game grind
+    - The kiln coke recipe now yields coal tar as byproduct instead of CO2
   Bugfixes:
     - The laser lens recipe now actually gets unlocked with techs
     - Recipes researched via magic now don't reset anymore on mod update or adding or removing mods

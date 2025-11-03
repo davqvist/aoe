@@ -343,6 +343,10 @@ data:extend({{
     {
       type = "unlock-recipe",
       recipe = "aoc-lasering-diamond-chip-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-laser-turret-recipe"
     }
   },
   unit = {
@@ -455,10 +459,78 @@ data:extend({{
   icon = "__base__/graphics/technology/nuclear-power.png",
   prerequisites = {"aoc-space-age-tech"},
   effects = {
-    -- crafting nuclear reactor
-    -- crafting nuclear tiles
-    -- crafting fuel rods
-    -- crafting heat cells
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-nuclear-reactor-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-refined-hazard-concrete-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-gate-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-freezing-coolant-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-reactor-fuel-cell-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-reactor-sink-water-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-reactor-sink-coolant-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-reactor-sink-quartz-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-reactor-sink-apatite-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-reactor-sink-enderium-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-reactor-sink-lead-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-reactor-sink-aluminium-bronze-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-reactor-sink-brass-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-reactor-sink-bronze-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-reactor-sink-copper-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-reactor-sink-tin-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-reactor-sink-aluminium-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-reactor-sink-zinc-recipe"
+    }
   },
   unit = {
       count = 25,
@@ -766,4 +838,27 @@ data:extend({{
       ingredients = AOC["age_tech_table"][7],
       time = 60
   }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoc-alien-age-tech",
+    icon_size = 64,
+    icon = "__ageofcreation__/img/items/science-pack-8.png",
+    prerequisites = {"aoc-alien-life-tech-2"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-slaughterhouse-small-biter-corpse-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-science-08-recipe"
+      }
+    },
+    unit = {
+        count = 80,
+        ingredients = AOC["age_tech_table"][7],
+        time = 60
+    }
 }})

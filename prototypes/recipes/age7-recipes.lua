@@ -1462,3 +1462,316 @@ data:extend({{
     allow_productivity = false,
 	energy_required = 20
 }})
+
+data:extend({{
+	name = 'aoc-nuclear-coolant-recipe',
+	type = 'recipe',
+	enabled = true,
+	ingredients = {
+		{type = "fluid", name = "thruster-oxidizer", amount = 100}
+	},
+	results = {},
+	icon = data.raw.fluid["thruster-oxidizer"].icon,
+	subgroup = "aoc-nuclearpower-buildings",
+	order = "d",
+	category = "aoc-category-nuclear",
+    allow_productivity = false,
+	hide_from_player_crafting = true,
+	energy_required = 100
+}})
+
+data:extend({{
+	name = 'aoc-crafting-nuclear-reactor-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-electrum-machine-hull', amount = 50},
+		{type = 'item', name = 'concrete', amount = 500},
+		{type = 'item', name = 'aoc-stainless-steel', amount = 400},
+		{type = 'item', name = 'aoc-lead-plate', amount = 400},
+		{type = 'item', name = 'tungsten-plate', amount = 400}
+	},
+	results = {
+		{type = 'item', name = 'aoc-nuclear-reactor', amount = 1}
+    },
+	energy_required = 20
+}})
+
+data:extend({{
+	name = 'aoc-crafting-reactor-fuel-cell-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-stainless-steel', amount = 10},
+		{type = 'item', name = 'aoc-glass', amount = 25},
+		{type = 'item', name = 'aoc-graphite-rod', amount = 25}
+	},
+	results = {
+		{type = 'item', name = 'aoc-reactor-fuel-cell', amount = 1}
+    },
+	energy_required = 2
+}})
+
+data:extend({{
+	name = 'aoc-crafting-reactor-sink-water-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-stainless-steel', amount = 10},
+		{type = 'fluid', name = 'water', amount = 5000}
+	},
+	results = {
+		{type = 'item', name = 'aoc-reactor-sink-water', amount = 1}
+    },
+	category = 'crafting-with-fluid',
+	energy_required = 2
+}})
+
+data:extend({{
+	name = 'aoc-crafting-reactor-sink-coolant-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-stainless-steel', amount = 10},
+		{type = 'fluid', name = 'thruster-oxidizer', amount = 5000}
+	},
+	results = {
+		{type = 'item', name = 'aoc-reactor-sink-coolant', amount = 1}
+    },
+	category = 'crafting-with-fluid',
+	energy_required = 2
+}})
+
+data:extend({{
+	name = 'aoc-crafting-reactor-sink-quartz-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-stainless-steel', amount = 10},
+		{type = 'item', name = 'aoc-quartz-dust', amount = 25}
+	},
+	results = {
+		{type = 'item', name = 'aoc-reactor-sink-quartz', amount = 1}
+    },
+	energy_required = 2
+}})
+
+data:extend({{
+	name = 'aoc-crafting-reactor-sink-apatite-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-stainless-steel', amount = 10},
+		{type = 'item', name = 'aoc-apatite', amount = 25}
+	},
+	results = {
+		{type = 'item', name = 'aoc-reactor-sink-apatite', amount = 1}
+    },
+	energy_required = 2
+}})
+
+data:extend({{
+	name = 'aoc-crafting-reactor-sink-enderium-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-stainless-steel', amount = 10},
+		{type = 'item', name = 'aoc-enderium-plate', amount = 25}
+	},
+	results = {
+		{type = 'item', name = 'aoc-reactor-sink-enderium', amount = 1}
+    },
+	energy_required = 2
+}})
+
+data:extend({{
+	name = 'aoc-crafting-reactor-sink-lead-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-stainless-steel', amount = 10},
+		{type = 'item', name = 'aoc-lead-plate', amount = 25}
+	},
+	results = {
+		{type = 'item', name = 'aoc-reactor-sink-lead', amount = 1}
+    },
+	energy_required = 2
+}})
+
+data:extend({{
+	name = 'aoc-crafting-reactor-sink-aluminium-bronze-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-stainless-steel', amount = 10},
+		{type = 'item', name = 'aoc-aluminium-bronze', amount = 25}
+	},
+	results = {
+		{type = 'item', name = 'aoc-reactor-sink-aluminium-bronze', amount = 1}
+    },
+	energy_required = 2
+}})
+
+data:extend({{
+	name = 'aoc-crafting-reactor-sink-brass-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-stainless-steel', amount = 10},
+		{type = 'item', name = 'aoc-brass', amount = 25}
+	},
+	results = {
+		{type = 'item', name = 'aoc-reactor-sink-brass', amount = 1}
+    },
+	energy_required = 2
+}})
+
+data:extend({{
+	name = 'aoc-crafting-reactor-sink-bronze-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-stainless-steel', amount = 10},
+		{type = 'item', name = 'aoc-bronze-plate', amount = 25}
+	},
+	results = {
+		{type = 'item', name = 'aoc-reactor-sink-bronze', amount = 1}
+    },
+	energy_required = 2
+}})
+
+data:extend({{
+	name = 'aoc-crafting-reactor-sink-copper-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-stainless-steel', amount = 10},
+		{type = 'item', name = 'copper-plate', amount = 25}
+	},
+	results = {
+		{type = 'item', name = 'aoc-reactor-sink-copper', amount = 1}
+    },
+	energy_required = 2
+}})
+
+data:extend({{
+	name = 'aoc-crafting-reactor-sink-tin-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-stainless-steel', amount = 10},
+		{type = 'item', name = 'aoc-tin-plate', amount = 25}
+	},
+	results = {
+		{type = 'item', name = 'aoc-reactor-sink-tin', amount = 1}
+    },
+	energy_required = 2
+}})
+
+data:extend({{
+	name = 'aoc-crafting-reactor-sink-aluminium-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-stainless-steel', amount = 10},
+		{type = 'item', name = 'aoc-aluminium-plate', amount = 25}
+	},
+	results = {
+		{type = 'item', name = 'aoc-reactor-sink-aluminium', amount = 1}
+    },
+	energy_required = 2
+}})
+
+data:extend({{
+	name = 'aoc-crafting-reactor-sink-zinc-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-stainless-steel', amount = 10},
+		{type = 'item', name = 'aoc-zinc-plate', amount = 25}
+	},
+	results = {
+		{type = 'item', name = 'aoc-reactor-sink-zinc', amount = 1}
+    },
+	energy_required = 2
+}})
+
+data:extend({{
+	name = 'aoc-crafting-gate-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'stone-wall', amount = 2},
+		{type = 'item', name = 'electronic-circuit', amount = 5}
+	},
+	results = {
+        {type = 'item', name = 'gate', amount = 1}
+    },
+	energy_required = 2
+}})
+
+data:extend({{
+	name = 'aoc-crafting-refined-hazard-concrete-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'refined-concrete', amount = 5},
+		{type = 'item', name = 'aoc-lead-plate', amount = 2}
+	},
+	results = {
+        {type = 'item', name = 'refined-hazard-concrete', amount = 1}
+    },
+	energy_required = 0.2
+}})
+
+data:extend({{
+    name = 'aoc-slaughterhouse-small-biter-corpse-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-small-biter-corpse', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-alien-brain', amount = 1},
+		{type = 'item', name = 'aoc-bones', amount = 2},
+		{type = 'item', name = 'aoc-alien-chitin', amount = 2},
+		{type = 'item', name = 'aoc-alien-gland', amount = 4},
+		{type = 'fluid', name = 'aoc-alien-blood', amount = 40}
+    },
+    energy_required = 4,
+	subgroup = 'aoc-aliens',
+	order = "cz",
+	icon = data.raw.item["aoc-small-biter-corpse"].icon,
+	icon_size = data.raw.item["aoc-small-biter-corpse"].icon_size,
+	category = 'aoc-category-slaughtering'
+}})
+
+data:extend({{
+	name = 'aoc-crafting-laser-turret-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-laser', amount = 2},
+		{type = 'item', name = 'battery', amount = 10},
+		{type = 'item', name = 'aoc-electrum-machine-hull', amount = 2},
+		{type = 'item', name = 'electric-engine-unit', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'laser-turret', amount = 1}
+    },
+	energy_required = 5
+}})
+
+data:extend({{
+	name = 'aoc-crafting-science-08-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-flask', amount = 1},
+		{type = 'item', name = 'aoc-alien-brain', amount = 1}
+	},
+	results = {
+        {type = 'item', name = 'aoc-science-08', amount = 1}
+    },
+	energy_required = 4
+}})

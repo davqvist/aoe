@@ -18,6 +18,8 @@ function ms_data()
                 {type="item", name="aoc-science-06", quantity=1000, next="x10"},
                 {type="item", name="aoc-science-07", quantity=1},
                 {type="item", name="aoc-science-07", quantity=1000, next="x10"},
+                {type="item", name="aoc-science-08", quantity=1},
+                {type="item", name="aoc-science-08", quantity=1000, next="x10"},
 
                 {type="group", name="Farming Age (Age 1)"},
                 {type="item", name="iron-plate", quantity=1},

@@ -1759,10 +1759,6 @@ data:extend({{
       {
         type = "unlock-recipe",
         recipe = "aoc-mixing-refined-concrete-recipe"
-      },
-	    {
-        type = "unlock-recipe",
-        recipe = "aoc-crafting-refined-hazard-concrete-recipe"
       }
     },
     unit = {

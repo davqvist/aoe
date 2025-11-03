@@ -698,6 +698,8 @@ if mods["cybersyn"] then
             time = 35
         }
     }})
+
+    if data.raw['shortcut']['cybersyn-toggle-gui'] then data.raw['shortcut']['cybersyn-toggle-gui'].technology_to_unlock = "aoc-cybersyn-tech" end
 end
 
 -- BP Shotgun 

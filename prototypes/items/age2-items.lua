@@ -403,15 +403,15 @@ data:extend({{
     icon = "__ageofcreation__/img/items/cement.png",
     icon_size = 64,
     subgroup = "aoc-construction",
-    order = "d",
+    order = "e",
     stack_size = 200
 }})
 
 data.raw['item']['concrete'].subgroup = "aoc-construction"
-data.raw['item']['concrete'].order = "e"
+data.raw['item']['concrete'].order = "f"
 data.raw['item']['concrete'].stack_size = 500
 data.raw['item']['hazard-concrete'].subgroup = "aoc-construction"
-data.raw['item']['hazard-concrete'].order = "f"
+data.raw['item']['hazard-concrete'].order = "g"
 data.raw['item']['hazard-concrete'].stack_size = 500
 
 data.raw['capsule']['raw-fish'].subgroup = "aoc-fauna-fish"

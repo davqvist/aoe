@@ -1046,3 +1046,58 @@ data:extend({{
     order = "y2",
     stack_size = 200
 }})
+
+data:extend({{
+    type = "module",
+    name = "aoc-hidden-reactor-module",
+    icons = combine_icons_tiny( get_icons( data.raw["item"]["aoc-paper"] ), get_icons( data.raw["item"]["aoc-nuclear-reactor"] ) ),
+	subgroup = "aoc-hidden",
+    order = "m",
+    stack_size = 1,
+	category = "aoc-module-nuclear-reactor",
+	tier = 1,
+    effect = { speed = 1, consumption = 1 },
+	limitation = {},
+	limitation_message_key = "item-not-allowed-in-this-container-item"
+}})
+
+data.raw['item']['gate'].subgroup = "aoc-construction"
+data.raw['item']['gate'].order = "d"
+data.raw['item']['gate'].stack_size = 200
+data.raw['item']['refined-hazard-concrete'].subgroup = "aoc-construction"
+data.raw['item']['refined-hazard-concrete'].order = "i"
+data.raw['item']['refined-hazard-concrete'].stack_size = 500
+
+data:extend({{
+    type = "item",
+    name = "aoc-alien-brain",
+    icon = "__ageofcreation__/img/items/alien-brain.png",
+    icon_size = 64,
+    subgroup = "aoc-aliens",
+    order = "d",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-alien-chitin",
+    icon = "__ageofcreation__/img/items/alien-chitin.png",
+    icon_size = 64,
+    subgroup = "aoc-aliens",
+    order = "e",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-alien-gland",
+    icon = "__ageofcreation__/img/items/alien-gland.png",
+    icon_size = 64,
+    subgroup = "aoc-aliens",
+    order = "f",
+    stack_size = 200
+}})
+
+data.raw['item']['laser-turret'].subgroup = "aoc-turrets"
+data.raw['item']['laser-turret'].order = "b"
+data.raw['item']['laser-turret'].stack_size = 25

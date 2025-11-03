@@ -69,6 +69,10 @@ data:extend({
   },
   {
     type = "module-category",
+    name = "aoc-module-nuclear-reactor"
+  },
+  {
+    type = "module-category",
     name = "aoc-module-soybeans"
   },
   {

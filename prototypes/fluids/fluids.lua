@@ -1247,3 +1247,15 @@ data:extend({{
 	flow_color = {r=0.0, g=0.17, b=0.4},
 	default_temperature = 20
 }})
+
+data:extend({{
+    type = "fluid",
+    name = "aoc-alien-blood",
+    icon = "__ageofcreation__/img/fluids/alien-blood.png",
+    icon_size = 64,
+    subgroup = "aoc-fluids-aliens",
+    order = "a",
+	base_color = {r=0.2, g=0.28, b=0},
+	flow_color = {r=0.2, g=0.28, b=0},
+	default_temperature = 20
+}})
