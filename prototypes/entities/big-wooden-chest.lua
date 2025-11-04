@@ -1,5 +1,4 @@
 require ("__base__/prototypes/entity/pipecovers")
-require ("circuit-connector-sprites")
 local sounds = require("__base__/prototypes/entity/sounds")
 
 data:extend({{

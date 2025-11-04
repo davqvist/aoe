@@ -762,49 +762,23 @@ if mods["blueprint-shotgun"] then
             time = 25
         }
     }})
-    
-    data:extend({{
-        type = 'technology',
-        name = 'aoc-blueprint-shotgun-upgrade-tech-1',
-        icon = "__blueprint-shotgun__/graphics/blueprint-shotgun.png",
-        icon_size = 64,
-        effects = {{
-            type = "nothing",
-            effect_description = {"blueprint-shotgun.capacity-upgrade"}
-        }, {
-            type = "nothing",
-            effect_description = {"blueprint-shotgun.vacuum-upgrade"}
-        }},
-        prerequisites = {'aoc-tree-cultivation-tech-1', 'aoc-blueprint-shotgun-tech'},
-        unit = {
+
+    if data.raw.technology["blueprint-shotgun-upgrade-1"] then
+        data.raw.technology["blueprint-shotgun-upgrade-1"].prerequisites = {'aoc-tree-cultivation-tech-1', 'aoc-blueprint-shotgun-tech'}
+        data.raw.technology["blueprint-shotgun-upgrade-1"].unit = {
             count = 20,
             ingredients = AOC["age_tech_table"][3],
             time = 30
-        },
-        upgrade = true
-    }})
-    
-    data:extend({{
-        type = 'technology',
-        name = 'aoc-blueprint-shotgun-upgrade-tech-2',
-        icon = "__blueprint-shotgun__/graphics/blueprint-shotgun.png",
-        icon_size = 64,
-        effects = {{
-            type = "nothing",
-            effect_description = {"blueprint-shotgun.capacity-upgrade"}
-        }, {
-            type = "nothing",
-            effect_description = {"blueprint-shotgun.vacuum-upgrade"}
-        }},
-        prerequisites = {'aoc-medium-voltage-tech', 'aoc-blueprint-shotgun-upgrade-tech-1'},
-        unit = {
+        }
+    end
+    if data.raw.technology["blueprint-shotgun-upgrade-2"] then
+        data.raw.technology["blueprint-shotgun-upgrade-2"].prerequisites = {'aoc-medium-voltage-tech', "blueprint-shotgun-upgrade-1"}
+        data.raw.technology["blueprint-shotgun-upgrade-2"].unit = {
             count = 20,
             ingredients = AOC["age_tech_table"][4],
             time = 35
-        },
-        upgrade = true
-    }})
-
+        }
+    end
 end
 
 -- Nanobots 

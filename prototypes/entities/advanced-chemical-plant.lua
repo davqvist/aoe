@@ -28,6 +28,9 @@ data:extend({{
   flags = { "placeable-neutral", "placeable-player", "player-creation" },
   minable = { hardness = 1, mining_time = 0.2, result = "aoc-advanced-chemical-plant" },
   max_health = 300,
+  circuit_wire_connection_point = circuit_connector_definitions["assembling-machine"].points,
+  circuit_connector_sprites = circuit_connector_definitions["assembling-machine"].sprites,
+  circuit_wire_max_distance = default_circuit_wire_max_distance,
   selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
   collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
   graphics_set = {

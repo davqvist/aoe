@@ -107,7 +107,30 @@ function ms_data()
                 {type="item", name="aoc-epoxy-resin-solid",  quantity=1},
                 {type="item", name="processing-unit", quantity=1},
                 {type="item", name="processing-unit", quantity=1000, next="x10"},
-                {type="item", name="aoc-nauvium-plate", quantity=1}
+                {type="item", name="aoc-nauvium-plate", quantity=1},
+
+                {type="group", name= "Magic Age (Age 6)"},
+                {type="fluid", name="aoc-drilling-fluid-magical", quantity=1},
+                {type="fluid", name="aoc-starlight", quantity=1},
+                {type="item", name="ice", quantity=1},
+                {type="item", name="aoc-lotus-flower", quantity=1},
+                {type="fluid", name="aoc-mana", quantity=1},
+                {type="item", name="aoc-platinum-plate", quantity=1},
+                {type="item", name="aoc-enderium-plate", quantity=1},
+                {type="item", name="aoc-teleportation-core", quantity=1},
+                {type="item", name="aoc-planet-space", quantity=1},
+
+                {type="group", name= "Space Age (Age 7)"},
+                {type="item", name="aoc-titanium-plate", quantity=1},
+                {type="item", name="productivity-module", quantity=1},
+                {type="item", name="aoc-nuclear-reactor", quantity=1},
+                {type="item", name="uranium-238", quantity=1},
+                {type="item_consumption", name="space-platform-starter-pack", quantity=1},
+                {type="item", name="construction-robot", quantity=1},
+                {type="item", name="logistic-robot", quantity=1},
+                {type="fluid", name="thruster-fuel", quantity=1},
+                {type="item", name="aoc-life-catalyst", quantity=1},
+                {type="item", name="aoc-vulcanus-chest", quantity=1}
             }
         }
     }

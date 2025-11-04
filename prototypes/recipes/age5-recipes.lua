@@ -595,13 +595,14 @@ data:extend({{
 	ingredients = {
 		{type = 'fluid', name = 'aoc-styrene', amount = 10},
 		{type = 'fluid', name = 'aoc-butadiene', amount = 20},
+		{type = 'fluid', name = 'aoc-latex', amount = 5},
 		{type = 'item', name = 'sulfur', amount = 1}
     },
     results = {
         {type = 'fluid', name = 'aoc-liquid-rubber', amount = 30}
     },
     energy_required = 3,
-	category = 'chemistry'
+	category = 'aoc-category-advanced-chemistry'
 }})
 
 data:extend({{
@@ -656,6 +657,7 @@ data:extend({{
     enabled = false,
 	ingredients = {
 		{type = 'fluid', name = 'aoc-isoprene', amount = 60},
+		{type = 'fluid', name = 'aoc-latex', amount = 5},
 		{type = 'item', name = 'sulfur', amount = 2}
     },
     results = {
@@ -1125,6 +1127,34 @@ data:extend({{
     icons = combine_icons_tiny( get_icons( data.raw["capsule"]["cliff-explosives"] ), get_icons( data.raw["fluid"]["aoc-toluene"] ) ),
     energy_required = 4,
 	category = 'aoc-category-advanced-chemistry'
+}})
+
+data:extend({{
+    name = 'aoc-crafting-grenade-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-gunpowder', amount = 20},
+		{type = 'item', name = 'iron-plate', amount = 4}
+    },
+    results = {
+        {type = 'item', name = 'grenade', amount = 1}
+    },
+    energy_required = 4
+}})
+
+data:extend({{
+    name = 'aoc-crafting-land-mine-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-gunpowder', amount = 20},
+		{type = 'item', name = 'steel-plate', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'land-mine', amount = 2}
+    },
+    energy_required = 4
 }})
 
 data:extend({{

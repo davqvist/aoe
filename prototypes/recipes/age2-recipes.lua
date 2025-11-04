@@ -1430,7 +1430,7 @@ data:extend({{
         {type = 'fluid', name = 'aoc-carbon-dioxide', amount = 15}
     },
 	main_product = 'aoc-cement',
-	energy_required = 2.4,
+	energy_required = 4.8,
 	category = 'aoc-category-kiln-smelting'
 }})
 
@@ -1447,7 +1447,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'concrete', amount = 8}
     },
-	energy_required = 2.4,
+	energy_required = 4.8,
 	category = 'aoc-category-mixing'
 }})
 

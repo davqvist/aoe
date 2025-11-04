@@ -49,7 +49,7 @@ data:extend({{
 data:extend({{
     type = "simple-entity-with-owner",
     name = "aoc-reactor-fuel-cell",
-	icon = "__ageofcreation__/img/entities/reactor-fuel-cell.png",
+	  icon = "__ageofcreation__/img/entities/reactor-fuel-cell.png",
     icon_size = 256,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { hardness = 1, mining_time = 0.2, result = "aoc-reactor-fuel-cell" },

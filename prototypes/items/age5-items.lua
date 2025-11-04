@@ -96,6 +96,12 @@ data:extend({{
     stack_size = 200
 }})
 
+data.raw['capsule']['grenade'].subgroup = "aoc-combat-helpers"
+data.raw['capsule']['grenade'].order = "a"
+data.raw['capsule']['grenade'].stack_size = 100
+data.raw['item']['land-mine'].subgroup = "aoc-combat-helpers"
+data.raw['item']['land-mine'].order = "b"
+data.raw['item']['land-mine'].stack_size = 200
 data.raw['capsule']['cliff-explosives'].subgroup = "aoc-petrochem"
 data.raw['capsule']['cliff-explosives'].order = "d"
 data.raw['capsule']['cliff-explosives'].stack_size = 100

@@ -14,7 +14,9 @@ local qol = {
     { "physical-projectile-damage", {{ icon = "__base__/graphics/technology/physical-projectile-damage-1.png", icon_size = 256, icon_mipmaps = 4 }}, 
         {{ type = "ammo-damage", ammo_category = "bullet", modifier = 0.2 }, { type = "ammo-damage", ammo_category = "shotgun-shell", modifier = 0.2 }, { type = "turret-attack", turret_id = "gun-turret", modifier = 0.2 }}, 6 },
     { "weapon-shooting-speed", {{ icon = "__base__/graphics/technology/weapon-shooting-speed-1.png", icon_size = 256, icon_mipmaps = 4 }}, 
-        {{ type = "gun-speed", ammo_category = "bullet", modifier = 0.2 }, { type = "gun-speed", ammo_category = "shotgun-shell", modifier = 0.2 }}, 6 }
+        {{ type = "gun-speed", ammo_category = "bullet", modifier = 0.2 }, { type = "gun-speed", ammo_category = "shotgun-shell", modifier = 0.2 }}, 6 },
+    { "stronger-explosives", {{ icon = "__base__/graphics/technology/stronger-explosives-3.png", icon_size = 256, icon_mipmaps = 4 }}, 
+        {{ type = "ammo-damage", ammo_category = "grenade", modifier = 0.1 }, { type = "ammo-damage", ammo_category = "landmine", modifier = 0.1 }, { type = "ammo-damage", ammo_category = "rocket", modifier = 0.1 }}, 6 }
 }
 local prereq = { "", "aoc-steel-tech-1", "aoc-tree-cultivation-tech-1", "aoc-medium-voltage-tech", "aoc-coal-liquefaction-tech", "aoc-magic-research-tech", "aoc-military-tech-2" }
 

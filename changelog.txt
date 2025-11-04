@@ -1,4 +1,20 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.6
+Date: 2025-11-04
+  Features:
+    - Milestones support for ages 6 and 7 (go to the settings and reset preset to update)
+    - added wire connection support to most custom buildings
+    - added grenade and landmine recipe
+    - added stronger explosives QOL research
+  Changes:
+    - doubled Cement and Concrete crafting time
+    - changed "Better Glass" localization to "Improved Glass"
+    - require latex for rubber recipes to make rubber tree farming not obsolete
+    - added note in the tips&tricks section on how to get more nauvium in age 6
+  Bugfixes:
+    - fixed Blueprint Shotgun integration
+    - localized Wind Turbine Generator for power production graphs
+---------------------------------------------------------------------------------------------------
 Version: 0.0.5
 Date: 2025-11-02
   Features:

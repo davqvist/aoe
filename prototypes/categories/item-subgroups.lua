@@ -556,9 +556,15 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-turrets",
+    name = "aoc-combat-helpers",
     group = "combat",
     order = "e"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-turrets",
+    group = "combat",
+    order = "f"
   },
   {
 	  type = "item-subgroup",

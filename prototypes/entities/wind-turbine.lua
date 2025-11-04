@@ -22,7 +22,10 @@ data:extend({{
 	icon_size = 256,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoc-wind-turbine" },
-	max_health = 300,
+	circuit_wire_connection_point = circuit_connector_definitions["assembling-machine"].points,
+  circuit_connector_sprites = circuit_connector_definitions["assembling-machine"].sprites,
+  circuit_wire_max_distance = default_circuit_wire_max_distance,
+  max_health = 300,
 	selection_box = {{-1.5, -0.5}, {1.5, 2.5}},
 	collision_box = {{-1.4, -0.4}, {1.4, 2.4}},
 	graphics_set = {

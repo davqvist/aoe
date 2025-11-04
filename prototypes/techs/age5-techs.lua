@@ -860,6 +860,14 @@ data:extend({{
         recipe = "aoc-mixing-gunpowder-recipe"
       },
       {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-grenade-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-land-mine-recipe"
+      },
+      {
         type = "cliff-deconstruction-enabled",
         modifier = true
       }
