@@ -573,7 +573,7 @@ data:extend({{
     type = "technology",
     name = "aoc-tin-tech-1",
     icon_size = 32,
-    icon = "__angelssmelting_art__/graphics/icons/plate-tin.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/plate-tin.png",
     prerequisites = {"aoc-igneous-stones-tech-1"},
 	  effects = {
       {
@@ -608,7 +608,7 @@ data:extend({{
     type = "technology",
     name = "aoc-aluminium-tech-1",
     icon_size = 32,
-    icon = "__angelssmelting_art__/graphics/icons/plate-aluminium.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/plate-aluminium.png",
     prerequisites = {"aoc-metamorphic-stones-tech-1"},
 	  effects = {
       {
@@ -695,7 +695,7 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "aoc-electrolysis-tech",
-    icon = "__angelspetrochem_art__/graphics/icons/electrolyser.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/electrolyser.png",
     icon_size = 32,
     prerequisites = {"aoc-sedimentary-stones-tech-1", "aoc-tin-tech-1", "aoc-salt-tech"},
 	  effects = {
@@ -722,7 +722,7 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "aoc-pressure-tech",
-    icon = "__angelspetrochem_art__/graphics/icons/air-filter.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/air-filter.png",
     icon_size = 32,
     prerequisites = {"aoc-electric-machines-tech"},
 	  effects = {

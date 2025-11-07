@@ -221,7 +221,7 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-paper",
-    icon = "__angelsbioprocessing_art__/graphics/icons/solid-paper.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-paper.png",
     icon_size = 32,
     subgroup = "aoc-flora-wood",
     order = "l",
@@ -266,9 +266,9 @@ data.raw['item']['copper-ore'].icons = { { icon = "__base__/graphics/icons/coppe
 data:extend({{
     type = "item",
     name = "aoc-copper-dust",
-    icons = { { icon = "__angelssmelting_art__/graphics/icons/powder-copper.png" }, { icon = "__ageofcreation__/img/items/atoms/cu.png" } },
+    icons = { { icon = "__angelssmeltinggraphics__/graphics/icons/powder-copper.png" }, { icon = "__ageofcreation__/img/items/atoms/cu.png" } },
     icon_size = 64,
-    pictures = { { filename = "__angelssmelting_art__/graphics/icons/powder-copper.png", size = 64, scale = 0.5  } },
+    pictures = { { filename = "__angelssmeltinggraphics__/graphics/icons/powder-copper.png", size = 64, scale = 0.5  } },
     subgroup = "aoc-metals-copper",
     order = "d",
     stack_size = 200
@@ -305,8 +305,8 @@ data:extend({{
 data.raw['item']['copper-cable'].subgroup = "aoc-metals-copper"
 data.raw['item']['copper-cable'].order = "h"
 data.raw['item']['copper-cable'].stack_size = 200
-data.raw['item']['copper-cable'].icons = { { icon = "__angelssmelting_art__/graphics/icons/wire-copper.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/cu.png", icon_size = 64 } }
-data.raw['item']['copper-cable'].pictures = { { filename = "__angelssmelting_art__/graphics/icons/wire-copper.png", size = 32 } }
+data.raw['item']['copper-cable'].icons = { { icon = "__angelssmeltinggraphics__/graphics/icons/wire-copper.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/cu.png", icon_size = 64 } }
+data.raw['item']['copper-cable'].pictures = { { filename = "__angelssmeltinggraphics__/graphics/icons/wire-copper.png", size = 32 } }
 
 data:extend({{
     type = "item",

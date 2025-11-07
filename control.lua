@@ -778,11 +778,11 @@ function handleMined(event, main_entities, sub_entities, sub_entities2, drop)
   local k, v
   if( drop == "assembler" ) then
 	k, v = next( ent2.get_inventory(defines.inventory.assembling_machine_output).get_contents() )
-	ent2.destroy()
+	if ent2 then ent2.destroy() end
 	return {name=k,amount=v}
   else 
-	ent2.destroy()
-	ent3.destroy()
+	if ent2 then ent2.destroy() end
+	if ent3 then ent3.destroy() end
   end
 end
 

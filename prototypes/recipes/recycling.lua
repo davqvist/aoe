@@ -7,7 +7,7 @@ local parts = {
     "aoc-steel-machine-hull",
     "engine-unit",
     "aoc-small-motor",
-	"angels-storage-tank-3",
+	"aoc-tank-small",
 	"aoc-bronze-cable",
 	"copper-cable"
 }

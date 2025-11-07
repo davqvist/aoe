@@ -26,7 +26,7 @@ data.raw['item']['steel-plate'].stack_size = 200
 data:extend({{
     type = "item",
     name = "aoc-steel-rod",
-    icon = "__angelssmelting_art__/graphics/icons/rod-steel.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/rod-steel.png",
     icon_size = 32,
     subgroup = "aoc-metals-steel",
     order = "b",
@@ -56,7 +56,7 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-heating-coil",
-    icon = "__angelssmelting_art__/graphics/icons/wire-coil-copper.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/wire-coil-copper.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-parts",
     order = "g",
@@ -66,7 +66,7 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-cooling-coil",
-    icon = "__angelssmelting_art__/graphics/icons/wire-coil-silver.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/wire-coil-silver.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-parts",
     order = "h",
@@ -86,7 +86,7 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-brick",
-    icon = "__angelssmelting_art__/graphics/icons/brick-clay-raw.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/brick-clay-raw.png",
     icon_size = 32,
     subgroup = "aoc-construction",
     order = "b",
@@ -203,8 +203,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-tin-ore",
-    icons = { { icon = "__angelssmelting_art__/graphics/icons/ore-tin.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/sn.png", icon_size = 64 } },
-    pictures = { { filename = "__angelssmelting_art__/graphics/icons/ore-tin.png", size = 32  } },
+    icons = { { icon = "__angelssmeltinggraphics__/graphics/icons/ore-tin.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/sn.png", icon_size = 64 } },
+    pictures = { { filename = "__angelssmeltinggraphics__/graphics/icons/ore-tin.png", size = 32  } },
     subgroup = "aoc-metals-tin",
     order = "a",
     stack_size = 200
@@ -213,9 +213,9 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-tin-dust",
-    icons = { { icon = "__angelssmelting_art__/graphics/icons/powder-tin.png" }, { icon = "__ageofcreation__/img/items/atoms/sn.png" } },
+    icons = { { icon = "__angelssmeltinggraphics__/graphics/icons/powder-tin.png" }, { icon = "__ageofcreation__/img/items/atoms/sn.png" } },
     icon_size = 64,
-    pictures = { { filename = "__angelssmelting_art__/graphics/icons/powder-tin.png", size = 64, scale = 0.5  } },
+    pictures = { { filename = "__angelssmeltinggraphics__/graphics/icons/powder-tin.png", size = 64, scale = 0.5  } },
     subgroup = "aoc-metals-tin",
     order = "d",
     stack_size = 200
@@ -224,8 +224,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-tin-plate",
-    icons = { { icon = "__angelssmelting_art__/graphics/icons/plate-tin.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/sn.png", icon_size = 64 } },
-    pictures = { { filename = "__angelssmelting_art__/graphics/icons/plate-tin.png", size = 32 } },
+    icons = { { icon = "__angelssmeltinggraphics__/graphics/icons/plate-tin.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/sn.png", icon_size = 64 } },
+    pictures = { { filename = "__angelssmeltinggraphics__/graphics/icons/plate-tin.png", size = 32 } },
     subgroup = "aoc-metals-tin",
     order = "e",
     stack_size = 200
@@ -256,8 +256,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-manganese-ore",
-    icons = { { icon = "__angelssmelting_art__/graphics/icons/ore-manganese.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/mn.png", icon_size = 64 } },
-    pictures = { { filename = "__angelssmelting_art__/graphics/icons/ore-manganese.png", size = 32 } },
+    icons = { { icon = "__angelssmeltinggraphics__/graphics/icons/ore-manganese.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/mn.png", icon_size = 64 } },
+    pictures = { { filename = "__angelssmeltinggraphics__/graphics/icons/ore-manganese.png", size = 32 } },
     subgroup = "aoc-metals-rest",
     order = "a",
     stack_size = 200
@@ -266,9 +266,9 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-manganese-dust",
-    icons = { { icon = "__angelssmelting_art__/graphics/icons/powder-manganese.png" }, { icon = "__ageofcreation__/img/items/atoms/mn.png" } },
+    icons = { { icon = "__angelssmeltinggraphics__/graphics/icons/powder-manganese.png" }, { icon = "__ageofcreation__/img/items/atoms/mn.png" } },
     icon_size = 64,
-    pictures = { { filename = "__angelssmelting_art__/graphics/icons/powder-manganese.png", size = 64, scale = 0.5  } },
+    pictures = { { filename = "__angelssmeltinggraphics__/graphics/icons/powder-manganese.png", size = 64, scale = 0.5  } },
     subgroup = "aoc-metals-rest",
     order = "b",
     stack_size = 200
@@ -287,8 +287,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-aluminium-ore",
-    icons = { { icon = "__angelssmelting_art__/graphics/icons/ore-bauxite.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/al.png", icon_size = 64 } },
-    pictures = { { filename = "__angelssmelting_art__/graphics/icons/ore-bauxite.png", size = 32  } },
+    icons = { { icon = "__angelssmeltinggraphics__/graphics/icons/ore-bauxite.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/al.png", icon_size = 64 } },
+    pictures = { { filename = "__angelssmeltinggraphics__/graphics/icons/ore-bauxite.png", size = 32  } },
     subgroup = "aoc-metals-aluminium",
     order = "a",
     stack_size = 200
@@ -297,9 +297,9 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-aluminium-dust",
-    icons = { { icon = "__angelssmelting_art__/graphics/icons/powder-aluminium.png" }, { icon = "__ageofcreation__/img/items/atoms/al.png" } },
+    icons = { { icon = "__angelssmeltinggraphics__/graphics/icons/powder-aluminium.png" }, { icon = "__ageofcreation__/img/items/atoms/al.png" } },
     icon_size = 64,
-    pictures = { { filename = "__angelssmelting_art__/graphics/icons/powder-aluminium.png", size = 64, scale = 0.5  } },
+    pictures = { { filename = "__angelssmeltinggraphics__/graphics/icons/powder-aluminium.png", size = 64, scale = 0.5  } },
     subgroup = "aoc-metals-aluminium",
     order = "d",
     stack_size = 200
@@ -308,8 +308,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-aluminium-plate",
-    icons = { { icon = "__angelssmelting_art__/graphics/icons/plate-aluminium.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/al.png", icon_size = 64 } },
-    pictures = { { filename = "__angelssmelting_art__/graphics/icons/plate-aluminium.png", size = 32  } },
+    icons = { { icon = "__angelssmeltinggraphics__/graphics/icons/plate-aluminium.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/al.png", icon_size = 64 } },
+    pictures = { { filename = "__angelssmeltinggraphics__/graphics/icons/plate-aluminium.png", size = 32  } },
     subgroup = "aoc-metals-aluminium",
     order = "e",
     stack_size = 200
@@ -318,8 +318,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-aluminium-rod",
-    icons = { { icon = "__angelssmelting_art__/graphics/icons/rod-aluminium.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/al.png", icon_size = 64 } },
-    pictures = { { filename = "__angelssmelting_art__/graphics/icons/rod-aluminium.png", size = 32  } },
+    icons = { { icon = "__angelssmeltinggraphics__/graphics/icons/rod-aluminium.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/al.png", icon_size = 64 } },
+    pictures = { { filename = "__angelssmeltinggraphics__/graphics/icons/rod-aluminium.png", size = 32  } },
     subgroup = "aoc-metals-aluminium",
     order = "f",
     stack_size = 200
@@ -390,7 +390,7 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-caustic-soda",
-    icon = "__angelspetrochem_art__/graphics/icons/solid-sodium-hydroxide.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/solid-sodium-hydroxide.png",
     icon_size = 32,
     subgroup = "aoc-chemicals",
     order = "b",

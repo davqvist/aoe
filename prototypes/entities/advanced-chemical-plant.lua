@@ -1,7 +1,7 @@
 data:extend({{
     type = "item",
     name = "aoc-advanced-chemical-plant",
-    icon = "__angelspetrochem_art__/graphics/icons/separator.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/separator.png",
     icon_size = 32,
     subgroup = "aoc-specific-buildings",
     order = "p",
@@ -23,7 +23,7 @@ data:extend({{
   energy_usage = "588kW",
   allowed_effects = {"speed", "productivity", "consumption", "pollution"},
   module_slots = 3,
-  icon = "__angelspetrochem_art__/graphics/icons/separator.png",
+  icon = "__angelspetrochemgraphics__/graphics/icons/separator.png",
   icon_size = 32,
   flags = { "placeable-neutral", "placeable-player", "player-creation" },
   minable = { hardness = 1, mining_time = 0.2, result = "aoc-advanced-chemical-plant" },
@@ -37,7 +37,7 @@ data:extend({{
     animation = {
       layers = {
           {
-              filename = "__angelspetrochem_art__/graphics/entity/separator/separator.png",
+              filename = "__angelspetrochemgraphics__/graphics/entity/separator/separator.png",
               width = 224,
               height = 224,
               frame_count = 1,
@@ -47,7 +47,7 @@ data:extend({{
     }
  },
   working_sound = {
-    sound = { filename = "__angelspetrochem_art__/sound/separator.ogg", volume = 0.65 },
+    sound = { filename = "__angelspetrochemgraphics__/sound/separator.ogg", volume = 0.65 },
     idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     audible_distance_modifier = 0.5,
     apparent_volume = 2.5,

@@ -61,6 +61,7 @@ data:extend({{
     },
     energy_required = 100,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-lotus-flower-seeds'], { icon = "__ageofcreation__/img/items/tier/t0.png" } ),
 	category = 'aoc-category-gene-lab',
 	research = 'aoc-kelp'
 }})
@@ -78,6 +79,8 @@ data:extend({{
     },
     energy_required = 240,
 	category = 'aoc-category-farm-reservoir-lotus',
+	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-lotus-flower'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
 	research = 'aoc-lotus-flower-seeds'
 }})
 
@@ -95,6 +98,8 @@ data:extend({{
     },
     energy_required = 360,
 	category = 'aoc-category-farm-reservoir-lotus',
+	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-lotus-flower'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
 	research = 'aoc-lotus-flower'
 }})
 
@@ -1174,7 +1179,7 @@ data:extend({{
     enabled = false,
     ingredients = {
         {type = 'item', name = 'aoc-electrum-machine-hull', amount = 12},
-		{type = 'item', name = 'angels-storage-tank-2', amount = 2},
+		{type = 'item', name = 'aoc-tank-large', amount = 2},
 		{type = 'item', name = 'tungsten-plate', amount = 40},
 		{type = 'item', name = 'aoc-obsidian', amount = 10}
     },
@@ -1182,7 +1187,7 @@ data:extend({{
         {type = 'item', name = 'aoc-thermopile', amount = 1}
     },
     energy_required = 5,
-	research = 'angels-storage-tank-2'
+	research = 'aoc-tank-large'
 }})
 
 data:extend({{

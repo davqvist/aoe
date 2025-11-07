@@ -61,7 +61,7 @@ data:extend({{
 data:extend({{
   type = "technology",
   name = "aoc-mercury-tech",
-  icon = "__angelssmelting_art__/graphics/icons/molten-silicon.png", icon_size = 64, icon_mipmaps = 4,
+  icon = "__angelssmeltinggraphics__/graphics/icons/molten-silicon.png", icon_size = 64, icon_mipmaps = 4,
   prerequisites = {"aoc-starlight-tech"},
   effects = {
     {
@@ -184,7 +184,7 @@ data:extend({{
 data:extend({{
   type = "technology",
   name = "aoc-platinum-tech",
-  icon = "__angelssmelting_art__/graphics/icons/plate-platinum.png",
+  icon = "__angelssmeltinggraphics__/graphics/icons/plate-platinum.png",
   icon_size = 32,
   prerequisites = {"aoc-alchemy-tech"},
   effects = {
@@ -211,7 +211,7 @@ data:extend({{
 data:extend({{
   type = "technology",
   name = "aoc-enderium-tech",
-  icon = "__angelssmelting_art__/graphics/icons/plate-cobalt.png",
+  icon = "__angelssmeltinggraphics__/graphics/icons/plate-cobalt.png",
   icon_size = 32,
   prerequisites = {"aoc-platinum-tech", "aoc-brewing-tech"},
   effects = {
@@ -393,7 +393,7 @@ data:extend({{
   type = "technology",
   name = "aoc-digging-tech-3",
   icon_size = 32,
-  icon = "__angelsrefining_art__/graphics/icons/liquifier.png",
+  icon = "__angelsrefininggraphics__/graphics/icons/liquifier.png",
   prerequisites = {"aoc-brewing-tech", "aoc-magic-research-tech", "aoc-digging-tech-2"},
   effects = {
     {
@@ -494,7 +494,7 @@ data:extend({{
   type = "technology",
   name = "aoc-thermal-power-tech",
   icons = {{
-      icon = "__angelsrefining_art__/graphics/icons/thermal-extractor.png",
+      icon = "__angelsrefininggraphics__/graphics/icons/thermal-extractor.png",
       icon_size = 32,
       icon_mipmaps = 1
   }},

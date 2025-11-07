@@ -193,20 +193,8 @@ data.raw['container']['steel-chest'].inventory_size = 300
 data.raw['container']['steel-chest'].collision_box = {{-1.4, -1.4}, {1.4, 1.4}}
 data.raw['container']['steel-chest'].selection_box = {{-1.5, -1.5}, {1.5, 1.5}}
 data.raw['container']['steel-chest'].fast_replaceable_group = "big-container"
-data.raw['item']['angels-storage-tank-3'].subgroup = "aoc-storage"
-data.raw['item']['angels-storage-tank-3'].order = "h"
-data.raw['storage-tank']['angels-storage-tank-3'].fluid_box.volume = 10000
 data.raw['item']['storage-tank'].subgroup = "aoc-storage"
 data.raw['item']['storage-tank'].order = "i"
-data.raw['item']['angels-storage-tank-2'].subgroup = "aoc-storage"
-data.raw['item']['angels-storage-tank-2'].order = "j"
-data.raw['storage-tank']['angels-storage-tank-2'].fluid_box.volume = 60000
-data.raw['item']['angels-storage-tank-1'].subgroup = "aoc-storage"
-data.raw['item']['angels-storage-tank-1'].order = "k"
-data.raw['storage-tank']['angels-storage-tank-1'].fluid_box.volume = 150000
-
-data.raw['item']['barreling-pump'].subgroup = "aoc-voiding-buildings"
-data.raw['item']['barreling-pump'].order = "e"
 
 data.raw['item']['transport-belt'].subgroup = "aoc-item-logistics-belts"
 data.raw['item']['transport-belt'].order = "a1"
@@ -307,6 +295,7 @@ data.raw['item']['small-lamp'].order = "b"
 
 data.raw['item']['recycler'].subgroup = "aoc-voiding-buildings"
 data.raw['item']['recycler'].order = "a"
+data.raw['furnace']['recycler'].allowed_module_categories = {'speed','efficiency'}
 data.raw['furnace']['recycler'].energy_source = { type = "void" }
 data.raw['item']['agricultural-tower'].subgroup = "aoc-flora-buildings"
 data.raw['item']['agricultural-tower'].order = "b"

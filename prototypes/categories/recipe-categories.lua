@@ -19,6 +19,10 @@ data:extend({
   },
   {
     type = "recipe-category",
+    name = "aoc-category-barreling"
+  },
+  {
+    type = "recipe-category",
     name = "aoc-category-boiling"
   },
   {

@@ -1,7 +1,7 @@
 data:extend({{
     type = "item",
     name = "aoc-slaughterhouse",
-    icon = "__angelsbioprocessing_art__/graphics/icons/bio-butchery.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-butchery.png",
     icon_size = 32,
     subgroup = "aoc-fauna-buildings",
     order = "a",
@@ -23,7 +23,7 @@ data:extend({{
 	energy_usage = "180kW",
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
 	module_slots = 3,
-  icon = "__angelsbioprocessing_art__/graphics/icons/bio-butchery.png",
+  icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-butchery.png",
   icon_size = 32,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoc-slaughterhouse" },
@@ -37,7 +37,7 @@ data:extend({{
     animation = {
       layers = {
         {
-          filename = "__angelsbioprocessing_art__/graphics/entity/bio-butchery/bio-butchery.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-butchery/bio-butchery.png",
           width = 160,
           height = 160,
           frame_count = 36,

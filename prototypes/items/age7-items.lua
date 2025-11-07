@@ -24,8 +24,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-titanium-plate",
-    icons = { { icon = "__angelssmelting_art__/graphics/icons/plate-titanium.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/ti.png", icon_size = 64 } },
-    pictures = { { filename = "__angelssmelting_art__/graphics/icons/plate-titanium.png", size = 32 } },
+    icons = { { icon = "__angelssmeltinggraphics__/graphics/icons/plate-titanium.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/ti.png", icon_size = 64 } },
+    pictures = { { filename = "__angelssmeltinggraphics__/graphics/icons/plate-titanium.png", size = 32 } },
     subgroup = "aoc-metals-rest",
     order = "h",
     stack_size = 200

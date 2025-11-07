@@ -1,7 +1,7 @@
 data:extend({{
     type = "item",
     name = "aoc-casting-unit",
-    icon = "__angelssmelting_art__/graphics/icons/induction-furnace.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/induction-furnace.png",
     icon_size = 64,
     icon_mipmaps = 4,
     scale = 0.5,
@@ -25,7 +25,7 @@ data:extend({{
 	energy_usage = "800kW",
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
 	module_slots = 3,
-  icon = "__angelssmelting_art__/graphics/icons/induction-furnace.png",
+  icon = "__angelssmeltinggraphics__/graphics/icons/induction-furnace.png",
   icon_size = 64,
   icon_mipmaps = 4,
   scale = 0.5,
@@ -41,7 +41,7 @@ data:extend({{
     animation = {
       layers = {
         {
-          filename = "__angelssmelting_art__/graphics/entity/induction-furnace/induction-furnace-base.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/induction-furnace/induction-furnace-base.png",
           priority = "high",
           width = 170,
           height = 192,
@@ -51,7 +51,7 @@ data:extend({{
           shift = util.by_pixel(0.5, -5.5)
         },
         {
-          filename = "__angelssmelting_art__/graphics/entity/induction-furnace/induction-furnace-shadow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/induction-furnace/induction-furnace-shadow.png",
           priority = "high",
           width = 216,
           height = 170,
@@ -68,7 +68,7 @@ data:extend({{
         apply_recipe_tint = "primary",
         always_draw = true,
         animation = {
-          filename = "__angelssmelting_art__/graphics/entity/induction-furnace/induction-furnace-working-recipe-tint-mask.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/induction-furnace/induction-furnace-working-recipe-tint-mask.png",
           priority = "high",
           width = 170,
           height = 192,
@@ -81,7 +81,7 @@ data:extend({{
       {
         always_draw = true,
         north_animation = {
-          filename = "__angelssmelting_art__/graphics/entity/induction-furnace/vertical-pipe-shadow-patch.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/induction-furnace/vertical-pipe-shadow-patch.png",
           priority = "high",
           width = 64,
           height = 64,
@@ -93,7 +93,7 @@ data:extend({{
       {
         always_draw = true,
         animation = {
-          filename = "__angelssmelting_art__/graphics/entity/induction-furnace/induction-furnace-working-lights.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/induction-furnace/induction-furnace-working-lights.png",
           priority = "high",
           width = 170,
           height = 192,
@@ -129,7 +129,7 @@ data:extend({{
     }
   },
   working_sound = {
-    sound = { filename = "__angelssmelting_art__/sound/induction-furnace.ogg", volume = 0.45 },
+    sound = { filename = "__angelssmeltinggraphics__/sound/induction-furnace.ogg", volume = 0.45 },
     idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     audible_distance_modifier = 0.5,
     apparent_volume = 2.5,

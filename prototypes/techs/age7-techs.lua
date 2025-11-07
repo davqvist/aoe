@@ -259,7 +259,7 @@ data:extend({{
   type = "technology",
   name = "aoc-titanium-tech",
   icon_size = 32,
-  icon = "__angelssmelting_art__/graphics/icons/plate-titanium.png",
+  icon = "__angelssmeltinggraphics__/graphics/icons/plate-titanium.png",
   prerequisites = {"aoc-asteroid-processing-tech"},
   effects = {
     {

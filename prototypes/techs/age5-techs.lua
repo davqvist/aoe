@@ -104,7 +104,7 @@ data:extend({{
     type = "technology",
     name = "aoc-electric-boiling-tech",
     icon_size = 32,
-    icon = "__angelspetrochem_art__/graphics/icons/electric-boiler.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/electric-boiler.png",
     prerequisites = {"aoc-coal-liquefaction-tech"},
     effects = {
         {
@@ -245,7 +245,7 @@ data:extend({{
     type = "technology",
     name = "aoc-rubber-tech",
     icon_size = 32,
-    icon = "__angelspetrochem_art__/graphics/icons/solid-rubber.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/solid-rubber.png",
     prerequisites = {"aoc-oil-cracking-tech-1"},
     effects = {
         {
@@ -883,7 +883,7 @@ data:extend({{
     type = "technology",
     name = "aoc-digging-tech-2",
     icon_size = 32,
-    icon = "__angelsrefining_art__/graphics/icons/liquifier.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/liquifier.png",
     prerequisites = {"aoc-phenol-tech", "aoc-digging-tech-1", "aoc-sugar-tech"},
 	  effects = {
       {

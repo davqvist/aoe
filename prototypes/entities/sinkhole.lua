@@ -1,7 +1,7 @@
 data:extend({{
     type = "item",
     name = "aoc-sinkhole",
-    icon = "__angelsrefining_art__/graphics/icons/clarifier.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/clarifier.png",
     icon_size = 64,
     icon_mipmaps = 4,
     scale = 0.5,
@@ -19,7 +19,7 @@ data:extend({{
 	energy_source = { type = "void" },
 	energy_usage = "1kW",
 	allowed_effects = nil,
-  icon = "__angelsrefining_art__/graphics/icons/clarifier.png",
+  icon = "__angelsrefininggraphics__/graphics/icons/clarifier.png",
   icon_size = 64,
   icon_mipmaps = 4,
   scale = 0.5,
@@ -37,16 +37,92 @@ data:extend({{
     animation = {
       layers = {
         {
-          filename = "__angelsrefining_art__/graphics/entity/clarifier/clarifier-base.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/clarifier/clarifier-base.png",
           priority = "extra-high",
           frame_count = 64,
           line_length = 8,
           animation_speed = 0.5,
-          width = 189,
-          height = 184,
+          width = 374,
+          height = 365,
           shift = util.by_pixel(5.7, 0.6),
-          scale = 0.6
+          scale = 0.3
         }
+      }
+    },
+    working_visualisations = {
+      {
+        always_draw = true,
+        north_animation = {
+          filename = "__angelsrefininggraphics__/graphics/entity/clarifier/clarifier-shadow.png",
+          priority = "extra-high",
+          width = 374,
+          height = 365,
+          shift = util.by_pixel(9.5, 1),
+          x = 0,
+          y = 0,
+          frame_count = 1,
+          scale = 0.3,
+          draw_as_shadow = true
+        },
+        east_animation = {
+          filename = "__angelsrefininggraphics__/graphics/entity/clarifier/clarifier-shadow.png",
+          priority = "extra-high",
+          width = 374,
+          height = 365,
+          shift = util.by_pixel(9.5, 1),
+          x = 374,
+          y = 0,
+          frame_count = 1,
+          scale = 0.3,
+          draw_as_shadow = true
+        },
+        south_animation = {
+          filename = "__angelsrefininggraphics__/graphics/entity/clarifier/clarifier-shadow.png",
+          priority = "extra-high",
+          width = 374,
+          height = 365,
+          shift = util.by_pixel(9.5, 1),
+          x = 748,
+          y = 0,
+          frame_count = 1,
+          scale = 0.3,
+          draw_as_shadow = true
+        },
+        west_animation = {
+          filename = "__angelsrefininggraphics__/graphics/entity/clarifier/clarifier-shadow.png",
+          priority = "extra-high",
+          width = 374,
+          height = 365,
+          shift = util.by_pixel(9.5, 1),
+          frame_count = 1,
+          scale = 0.3,
+          x = 1122,
+          y = 0,
+          draw_as_shadow = true
+        },
+      },
+      {
+        always_draw = true,
+        north_animation = {
+          filename = "__angelsrefininggraphics__/graphics/entity/clarifier/clarifier-pipe-connections.png",
+          priority = "extra-high",
+          width = 374,
+          height = 365,
+          shift = util.by_pixel(9.5, 1),
+          x = 0,
+          y = 0,
+          scale = 0.3
+        },
+        south_animation = {
+          filename = "__angelsrefininggraphics__/graphics/entity/clarifier/clarifier-pipe-connections.png",
+          priority = "extra-high",
+          width = 374,
+          height = 365,
+          shift = util.by_pixel(9.5, 1),
+          x = 748,
+          y = 0,
+          scale = 0.3
+        },
       }
     }
   },

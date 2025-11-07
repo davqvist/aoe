@@ -1,7 +1,7 @@
 data:extend({{
     type = "item",
     name = "aoc-electric-boiler",
-    icon = "__angelspetrochem_art__/graphics/icons/electric-boiler.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/electric-boiler.png",
     icon_size = 32,
     subgroup = "aoc-power-buildings",
     order = "c",
@@ -22,7 +22,7 @@ data:extend({{
   },
   energy_usage = "3MW",
   fixed_recipe = "aoc-boiling-steam-recipe",
-  icon = "__angelspetrochem_art__/graphics/icons/electric-boiler.png",
+  icon = "__angelspetrochemgraphics__/graphics/icons/electric-boiler.png",
   icon_size = 32,
   flags = { "placeable-neutral", "placeable-player", "player-creation" },
   minable = { hardness = 1, mining_time = 0.2, result = "aoc-electric-boiler" },
@@ -35,28 +35,28 @@ data:extend({{
   graphics_set = {
     animation = {
       north = {
-        filename = "__angelspetrochem_art__/graphics/entity/electric-boiler/boiler-north-on.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-north-on.png",
         frame_count = 1,
         width = 160,
         height = 160,
         shift = { 0, 0 }
       },
       east = {
-        filename = "__angelspetrochem_art__/graphics/entity/electric-boiler/boiler-east-on.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-east-on.png",
         frame_count = 1,
         width = 160,
         height = 160,
         shift = { 0, 0 }
       },
       south = {
-        filename = "__angelspetrochem_art__/graphics/entity/electric-boiler/boiler-south-on.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-south-on.png",
         frame_count = 1,
         width = 160,
         height = 160,
         shift = { 0, 0 }
       },
       west = {
-        filename = "__angelspetrochem_art__/graphics/entity/electric-boiler/boiler-west-on.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-west-on.png",
         frame_count = 1,
         width = 160,
         height = 160,
@@ -65,28 +65,28 @@ data:extend({{
     },
     idle_animation = {
       north = {
-        filename = "__angelspetrochem_art__/graphics/entity/electric-boiler/boiler-north-off.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-north-off.png",
         frame_count = 1,
         width = 160,
         height = 160,
         shift = { 0, 0 }
       },
       east = {
-        filename = "__angelspetrochem_art__/graphics/entity/electric-boiler/boiler-east-off.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-east-off.png",
         frame_count = 1,
         width = 160,
         height = 160,
         shift = { 0, 0 }
       },
       south = {
-        filename = "__angelspetrochem_art__/graphics/entity/electric-boiler/boiler-south-off.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-south-off.png",
         frame_count = 1,
         width = 160,
         height = 160,
         shift = { 0, 0 }
       },
       west = {
-        filename = "__angelspetrochem_art__/graphics/entity/electric-boiler/boiler-west-off.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-west-off.png",
         frame_count = 1,
         width = 160,
         height = 160,

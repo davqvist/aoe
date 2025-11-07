@@ -2,7 +2,7 @@ data:extend({{
     type = "item",
     name = "aoc-mixer",
     icons = {{
-      icon = "__angelssmelting_art__/graphics/icons/powder-mixer-ico.png",
+      icon = "__angelssmeltinggraphics__/graphics/icons/powder-mixer-ico.png",
       icon_size = 64,
       icon_mipmaps = 4,
       scale = 0.5,
@@ -28,7 +28,7 @@ data:extend({{
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
 	module_slots = 3,
 	icons = {{
-    icon = "__angelssmelting_art__/graphics/icons/powder-mixer-ico.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/powder-mixer-ico.png",
     icon_size = 64,
     icon_mipmaps = 4,
     scale = 0.5,
@@ -45,7 +45,7 @@ data:extend({{
     animation = {
       layers = {
         {
-          filename = "__angelssmelting_art__/graphics/entity/powder-mixer/hr-powder-mixer-base.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/powder-mixer/powder-mixer-base.png",
           priority = "high",
           width = 138,
           height = 170,
@@ -56,7 +56,7 @@ data:extend({{
           scale = 0.9
         },
         {
-          filename = "__angelssmelting_art__/graphics/entity/powder-mixer/hr-powder-mixer-shadow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/powder-mixer/powder-mixer-shadow.png",
           priority = "high",
           width = 183,
           height = 99,
@@ -89,7 +89,7 @@ data:extend({{
     }
   },
   working_sound = {
-    sound = { filename = "__angelssmelting_art__/sound/ore-processing-machine.ogg", volume = 0.45 },
+    sound = { filename = "__angelssmeltinggraphics__/sound/ore-processing-machine.ogg", volume = 0.45 },
     idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     audible_distance_modifier = 0.5,
     apparent_volume = 2.5,

@@ -2,7 +2,7 @@ data:extend({{
     type = "item",
     name = "aoc-melter",
     icons = {{
-      icon = "__angelssmelting_art__/graphics/icons/casting-machine.png",
+      icon = "__angelssmeltinggraphics__/graphics/icons/casting-machine.png",
       icon_size = 64,
       icon_mipmaps = 4,
       scale = 0.5,
@@ -28,7 +28,7 @@ data:extend({{
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
 	module_slots = 3,
 	icons = {{
-    icon = "__angelssmelting_art__/graphics/icons/casting-machine.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/casting-machine.png",
     icon_size = 64,
     icon_mipmaps = 4,
     scale = 0.5,
@@ -45,25 +45,27 @@ data:extend({{
     animation = {
       layers = {
         {
-          filename = "__angelssmelting_art__/graphics/entity/casting-machine/casting-machine-base.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-base.png",
           priority = "high",
-          width = 104,
-          height = 123,
+          width = 205,
+          height = 244,
           line_length = 7,
           frame_count = 49,
           animation_speed = 0.5,
-          shift = util.by_pixel(1, -2)
+          shift = util.by_pixel(1, -2),
+          scale = 0.5
         },
         {
-          filename = "__angelssmelting_art__/graphics/entity/casting-machine/casting-machine-shadow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-shadow.png",
           priority = "high",
-          width = 125,
-          height = 104,
+          width = 248,
+          height = 206,
           line_length = 7,
           frame_count = 49,
           animation_speed = 0.5,
           draw_as_shadow = true,
-          shift = util.by_pixel(12, 9)
+          shift = util.by_pixel(12, 9),
+          scale = 0.5
         }
       }
     },
@@ -71,12 +73,13 @@ data:extend({{
       {
         always_draw = true,
         animation = {
-          filename = "__angelssmelting_art__/graphics/entity/casting-machine/casting-machine-light.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-light.png",
           priority = "high",
-          width = 111,
-          height = 104,
+          width = 205,
+          height = 244,
           shift = util.by_pixel(1, -2),
-          draw_as_light = true
+          draw_as_light = true,
+          scale = 0.5
         }
       }
     }
@@ -109,7 +112,7 @@ data:extend({{
     }
   },
   working_sound = {
-    sound = { filename = "__angelssmelting_art__/sound/casting-machine.ogg", volume = 0.45 },
+    sound = { filename = "__angelssmeltinggraphics__/sound/casting-machine.ogg", volume = 0.45 },
     idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     audible_distance_modifier = 0.5,
     apparent_volume = 2.5,

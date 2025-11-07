@@ -31,6 +31,7 @@ for _, recipe in pairs(data.raw.recipe) do
   if recipe and recipe.name:find('%-barrel$') ~= nil then
     recipe.enabled = true
     recipe.hide_from_player_crafting = true
+    recipe.category = "aoc-category-barreling"
   end
 end
 

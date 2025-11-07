@@ -1,7 +1,7 @@
 data:extend({{
     type = "item",
     name = "aoc-laser-cutter",
-    icon = "__angelsrefining_art__/graphics/icons/crystallizer.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/crystallizer.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "aoc-specific-buildings",
@@ -24,7 +24,7 @@ data:extend({{
 	energy_usage = "720kW",
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
 	module_slots = 3,
-    icon = "__angelsrefining_art__/graphics/icons/crystallizer.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/crystallizer.png",
     icon_size = 64,
     icon_mipmaps = 4,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -39,36 +39,21 @@ data:extend({{
         animation = {
             layers = {
                 {
-                    filename = "__angelsrefining_art__/graphics/entity/crystallizer/crystallizer.png",
+                    filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer.png",
                     priority = "extra-high",
-                    width = 195,
-                    height = 163,
+                    width = 390,
+                    height = 326,
                     shift = util.by_pixel(15.5, -0.5),
-                    hr_version = angelsmods.trigger.enable_hq_graphics and {
-                        filename = "__angelsrefining_art__/graphics/entity/crystallizer/hr-crystallizer.png",
-                        priority = "extra-high",
-                        width = 390,
-                        height = 326,
-                        shift = util.by_pixel(16, 0),
-                        scale = 0.5,
-                    } or nil
+                    scale = 0.5
                 },
                 {
-                    filename = "__angelsrefining_art__/graphics/entity/crystallizer/crystallizer-shadow.png",
+                    filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-shadow.png",
                     priority = "extra-high",
-                    width = 195,
-                    height = 163,
+                    width = 390,
+                    height = 326,
                     shift = util.by_pixel(15.5, -0.5),
                     draw_as_shadow = true,
-                    hr_version = angelsmods.trigger.enable_hq_graphics and {
-                        filename = "__angelsrefining_art__/graphics/entity/crystallizer/hr-crystallizer-shadow.png",
-                        priority = "extra-high",
-                        width = 390,
-                        height = 326,
-                        shift = util.by_pixel(16, 0),
-                        draw_as_shadow = true,
-                        scale = 0.5,
-                    } or nil
+                    scale = 0.5
                 }
             }
         }

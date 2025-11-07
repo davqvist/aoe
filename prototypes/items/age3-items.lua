@@ -363,7 +363,7 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-soda-ash",
-    icon = "__angelspetrochem_art__/graphics/icons/solid-sodium-carbonate.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/solid-sodium-carbonate.png",
     icon_size = 32,
     subgroup = "aoc-chemicals",
     order = "e",
@@ -406,7 +406,7 @@ data.raw['item']['barrel'].order = "g"
 data:extend({{
     type = "item",
     name = "aoc-bronze-plate",
-    icon = "__angelssmelting_art__/graphics/icons/plate-bronze.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/plate-bronze.png",
     icon_size = 32,
     subgroup = "aoc-metals-alloys",
     order = "a",

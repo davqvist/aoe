@@ -34,8 +34,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-platinum-ore",
-    icons = { { icon = "__angelssmelting_art__/graphics/icons/ore-platinum.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/pt.png", icon_size = 64 } },
-    pictures = { { filename = "__angelssmelting_art__/graphics/icons/ore-platinum.png", size = 32 } },
+    icons = { { icon = "__angelssmeltinggraphics__/graphics/icons/ore-platinum.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/pt.png", icon_size = 64 } },
+    pictures = { { filename = "__angelssmeltinggraphics__/graphics/icons/ore-platinum.png", size = 32 } },
     subgroup = "aoc-magic-metals",
     order = "c",
     stack_size = 200
@@ -44,8 +44,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-platinum-plate",
-    icons = { { icon = "__angelssmelting_art__/graphics/icons/plate-platinum.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/pt.png", icon_size = 64 } },
-    pictures = { { filename = "__angelssmelting_art__/graphics/icons/plate-platinum.png", size = 32 } },
+    icons = { { icon = "__angelssmeltinggraphics__/graphics/icons/plate-platinum.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/pt.png", icon_size = 64 } },
+    pictures = { { filename = "__angelssmeltinggraphics__/graphics/icons/plate-platinum.png", size = 32 } },
     subgroup = "aoc-magic-metals",
     order = "d",
     stack_size = 200
@@ -124,7 +124,7 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-experiment-failed",
-    icons = { { icon = "__angelsbioprocessing_art__/graphics/icons/solid-paper.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/other/failed.png", icon_size = 64, scale = 0.4, shift = {4,-4} } },
+    icons = { { icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-paper.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/other/failed.png", icon_size = 64, scale = 0.4, shift = {4,-4} } },
     subgroup = "aoc-magic-brewing",
     order = "z1",
     stack_size = 500
@@ -133,7 +133,7 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-experiment-helpful",
-    icons = { { icon = "__angelsbioprocessing_art__/graphics/icons/solid-paper.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/other/helpful.png", icon_size = 64, scale = 0.4, shift = {4,-4} } },
+    icons = { { icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-paper.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/other/helpful.png", icon_size = 64, scale = 0.4, shift = {4,-4} } },
     subgroup = "aoc-magic-brewing",
     order = "z2",
     stack_size = 500
@@ -142,7 +142,7 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-experiment-good",
-    icons = { { icon = "__angelsbioprocessing_art__/graphics/icons/solid-paper.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/other/good.png", icon_size = 64, scale = 0.4, shift = {4,-4} } },
+    icons = { { icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-paper.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/other/good.png", icon_size = 64, scale = 0.4, shift = {4,-4} } },
     subgroup = "aoc-magic-brewing",
     order = "z3",
     stack_size = 500
@@ -417,8 +417,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-enderium-plate",
-    icons = { { icon = "__angelssmelting_art__/graphics/icons/plate-cobalt.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/ed.png", icon_size = 64 } },
-    pictures = { { filename = "__angelssmelting_art__/graphics/icons/plate-cobalt.png", size = 32 } },
+    icons = { { icon = "__angelssmeltinggraphics__/graphics/icons/plate-cobalt.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/ed.png", icon_size = 64 } },
+    pictures = { { filename = "__angelssmeltinggraphics__/graphics/icons/plate-cobalt.png", size = 32 } },
     subgroup = "aoc-magic-metals",
     order = "e",
     stack_size = 100

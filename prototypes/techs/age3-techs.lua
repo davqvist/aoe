@@ -707,7 +707,7 @@ data:extend({{
     type = "technology",
     name = "aoc-bronze-tech-1",
     icon_size = 32,
-    icon = "__angelssmelting_art__/graphics/icons/plate-bronze.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/plate-bronze.png",
     prerequisites = {"aoc-agriculture-science-alternate-tech","aoc-tin-tech-1"},
 	  effects = {
       {

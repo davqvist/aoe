@@ -367,7 +367,7 @@ data:extend({{
 	enabled = false,
 	ingredients = {
 		{type = 'item', name = 'pipe', amount = 5},
-		{type = 'item', name = 'angels-storage-tank-3', amount = 1},
+		{type = 'item', name = 'aoc-tank-small', amount = 1},
 		{type = 'item', name = 'electric-mining-drill', amount = 2}
 	},
 	results = {
@@ -384,7 +384,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-steel-machine-hull', amount = 5},
 		{type = 'item', name = 'aoc-glass', amount = 50},
 		{type = 'item', name = 'pipe', amount = 5},
-		{type = 'item', name = 'angels-storage-tank-3', amount = 1}
+		{type = 'item', name = 'aoc-tank-small', amount = 1}
 	},
 	results = {
         {type = 'item', name = 'aoc-gene-lab', amount = 1}
@@ -1527,6 +1527,7 @@ data:extend({{
         {type = 'item', name = 'raw-fish', amount = 2}
     },
     energy_required = 50,
+	icons = get_icons( data.raw.capsule['raw-fish'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
 	category = 'aoc-category-farm-reservoir-fish'
 }})
 
@@ -1544,6 +1545,7 @@ data:extend({{
         {type = 'item', name = 'aoc-fish-eggs', amount = 12}
     },
     energy_required = 25,
+	icons = get_icons( data.raw.item['aoc-fish-eggs'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
 	category = 'aoc-category-farm-reservoir-fish'
 }})
 

@@ -49,7 +49,7 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-rubber",
-    icon = "__angelspetrochem_art__/graphics/icons/solid-rubber.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/solid-rubber.png",
     icon_size = 32,
     subgroup = "aoc-rubber",
     order = "b",
@@ -59,7 +59,7 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-gypsum",
-    icon = "__angelspetrochem_art__/graphics/icons/solid-calcium-sulfate.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/solid-calcium-sulfate.png",
     icon_size = 32,
     subgroup = "aoc-stone",
     order = "s",
@@ -89,7 +89,7 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-epoxy-resin-solid",
-    icon = "__angelspetrochem_art__/graphics/icons/solid-resin.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/solid-resin.png",
     icon_size = 32,
     subgroup = "aoc-rubber",
     order = "d",
@@ -128,7 +128,7 @@ data:extend({{
     type = "item",
     name = "aoc-silicon-doped",
     icons = { {
-        icon = "__angelssmelting_art__/graphics/icons/plate-silicon.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/plate-silicon.png",
         icon_size = 32,
         tint = { 144, 144, 144 }
     } },
@@ -141,7 +141,7 @@ data:extend({{
     type = "item",
     name = "aoc-silicon-doped-wafer",
     icons = { {
-        icon = "__angelssmelting_art__/graphics/icons/silicon-wafer.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/silicon-wafer.png",
         icon_size = 32,
         tint = { 144, 144, 144 }
     } },
@@ -154,7 +154,7 @@ data:extend({{
     type = "item",
     name = "aoc-baking-soda",
     icons = { {
-        icon = "__angelspetrochem_art__/graphics/icons/solid-sodium-carbonate.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/solid-sodium-carbonate.png",
         icon_size = 32,
         tint = { 115, 130, 165 }
     } },
@@ -167,7 +167,7 @@ data:extend({{
     type = "item",
     name = "aoc-ammonium-bicarbonate",
     icons = { {
-        icon = "__angelspetrochem_art__/graphics/icons/solid-ammonium-perchlorate.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/solid-ammonium-perchlorate.png",
         icon_size = 32,
         tint = { 115, 130, 165 }
     } },
@@ -233,7 +233,7 @@ data.raw['item']['processing-unit'].stack_size = 200
 data:extend({{
     type = "item",
     name = "aoc-integrated-circuit",
-    icon = "__angelsindustries_art__/graphics/icons/chip.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/chip.png",
     icon_size = 32,
     subgroup = "aoc-circuits",
     order = "j",

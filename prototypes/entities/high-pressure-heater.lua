@@ -2,7 +2,7 @@ data:extend({{
     type = "item",
     name = "aoc-high-pressure-heater",
     icons = {{
-      icon = "__angelssmelting_art__/graphics/icons/sintering-oven.png",
+      icon = "__angelssmeltinggraphics__/graphics/icons/sintering-oven.png",
       icon_size = 64,
       icon_mipmaps = 4,
       scale = 0.5,
@@ -28,7 +28,7 @@ data:extend({{
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
 	module_slots = 3,
 	icons = {{
-    icon = "__angelssmelting_art__/graphics/icons/sintering-oven.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/sintering-oven.png",
     icon_size = 64,
     icon_mipmaps = 4,
     scale = 0.5,
@@ -45,19 +45,21 @@ data:extend({{
     animation = {
       layers = {
         {
-          filename = "__angelssmelting_art__/graphics/entity/sintering-oven/sintering-oven-base.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/sintering-oven-base.png",
           priority = "high",
-          width = 165,
-          height = 177,
-          shift = util.by_pixel(-1, -7)
+          width = 326,
+          height = 350,
+          shift = util.by_pixel(-1, -7),
+          scale = 0.5
         },
         {
-          filename = "__angelssmelting_art__/graphics/entity/sintering-oven/sintering-oven-shadow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/sintering-oven-shadow.png",
           priority = "high",
-          width = 213,
-          height = 115,
+          width = 424,
+          height = 227,
           shift = util.by_pixel(24, 29),
-          draw_as_shadow = true
+          draw_as_shadow = true,
+          scale = 0.5
         },
       },
     },
@@ -66,31 +68,33 @@ data:extend({{
         fadeout = true,
         effect = "uranium-glow",
         animation = {
-          filename = "__angelssmelting_art__/graphics/entity/sintering-oven/sintering-oven-glow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/sintering-oven-glow.png",
           priority = "high",
-          width = 165,
-          height = 177,
+          width = 326,
+          height = 350,
           blend_mode = "additive",
           shift = util.by_pixel(-1, -7),
-          draw_as_glow = true
+          draw_as_glow = true,
+          scale = 0.5
         }
       },
       {
         fadeout = true,
         effect = "uranium-glow",
         animation = {
-          filename = "__angelssmelting_art__/graphics/entity/sintering-oven/sintering-oven-light.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/sintering-oven-light.png",
           priority = "high",
-          width = 165,
-          height = 177,
+          width = 326,
+          height = 350,
           shift = util.by_pixel(-1, -7),
-          draw_as_light = true
+          draw_as_light = true,
+          scale = 0.5
         }
       }
     }
   },
   working_sound = {
-    sound = { filename = "__angelssmelting_art__/sound/sintering-oven.ogg", volume = 0.45 },
+    sound = { filename = "__angelssmeltinggraphics__/sound/sintering-oven.ogg", volume = 0.45 },
     idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     audible_distance_modifier = 0.5,
     apparent_volume = 2.5,

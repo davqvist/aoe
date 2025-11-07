@@ -2,7 +2,7 @@ data:extend({{
     type = "item",
     name = "aoc-thermopile",
     icons = {{
-        icon = "__angelsrefining_art__/graphics/icons/thermal-extractor.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/thermal-extractor.png",
         icon_size = 32,
         icon_mipmaps = 1
     }},
@@ -23,7 +23,7 @@ data:extend({{
 	allowed_effects = {},
 	module_slots = 0,
 	icons = {{
-        icon = "__angelsrefining_art__/graphics/icons/thermal-extractor.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/thermal-extractor.png",
         icon_size = 32,
         icon_mipmaps = 1
     }},
@@ -39,7 +39,7 @@ data:extend({{
       idle_animation = {
         layers = {
           {
-            filename = "__angelsrefining_art__/graphics/entity/thermal-extractor/thermal-extractor-animation.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/thermal-extractor/thermal-extractor-animation.png",
             width = 288,
             height = 288,
             shift = { 0, 0 }
@@ -55,7 +55,7 @@ data:extend({{
                 height = 288,
                 line_length = 4,
                 shift = { 0, 0 },
-                filename = "__angelsrefining_art__/graphics/entity/thermal-extractor/thermal-extractor-animation.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/thermal-extractor/thermal-extractor-animation.png",
                 frame_count = 16,
                 animation_speed = 0.5,
             }
@@ -77,7 +77,7 @@ data:extend({{
         }
     },
     working_sound = {
-      sound = { filename = "__angelsrefining_art__/sound/thermal-extractor.ogg" },
+      sound = { filename = "__angelsrefininggraphics__/sound/thermal-extractor.ogg" },
       apparent_volume = 1.5,
     }
 }})

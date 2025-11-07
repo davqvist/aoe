@@ -1,7 +1,7 @@
 data:extend({{
     type = "item",
     name = "aoc-greenhouse",
-    icon = "__angelsbioprocessing_art__/graphics/icons/bio-temperate-generator.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-temperate-generator.png",
     icon_size = 32,
     subgroup = "aoc-flora-buildings",
     order = "a",
@@ -18,7 +18,7 @@ data:extend({{
 	energy_usage = "1kW",
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
 	module_slots = 3,
-	icon = "__angelsbioprocessing_art__/graphics/icons/bio-temperate-generator.png",
+	icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-temperate-generator.png",
 	icon_size = 32,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoc-greenhouse" },
@@ -32,7 +32,7 @@ data:extend({{
     animation = {
       layers = {
         {
-          filename = "__angelsbioprocessing_art__/graphics/entity/trees/bio-generator-shadow.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-generator-shadow.png",
           width = 160,
           height = 160,
           line_length = 1,
@@ -40,7 +40,7 @@ data:extend({{
           shift = { 0, 0 },
         },
         {
-          filename = "__angelsbioprocessing_art__/graphics/entity/trees/bio-generator-base.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-generator-base.png",
           width = 160,
           height = 160,
           line_length = 1,
@@ -48,7 +48,7 @@ data:extend({{
           shift = { 0, 0 },
         },
         {
-          filename = "__angelsbioprocessing_art__/graphics/entity/trees/bio-generator-pipes.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-generator-pipes.png",
           width = 160,
           height = 160,
           line_length = 1,
@@ -56,7 +56,7 @@ data:extend({{
           shift = { 0, 0 },
         },
         {
-          filename = "__angelsbioprocessing_art__/graphics/entity/trees/bio-generator-1.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-generator-1.png",
           width = 160,
           height = 160,
           line_length = 1,
@@ -64,7 +64,7 @@ data:extend({{
           shift = { 0, 0 },
         },
         {
-          filename = "__angelsbioprocessing_art__/graphics/entity/trees/bio-generator-top.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-generator-top.png",
           width = 160,
           height = 160,
           line_length = 1,
@@ -76,7 +76,7 @@ data:extend({{
     working_visualisations = {
       {
         animation = {
-          filename = "__angelsbioprocessing_art__/graphics/entity/trees/bio-generator-top-on.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-generator-top-on.png",
           priority = "high",
           width = 160,
           height = 160,

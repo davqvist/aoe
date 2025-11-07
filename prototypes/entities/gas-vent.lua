@@ -1,7 +1,7 @@
 data:extend({{
     type = "item",
     name = "aoc-gas-vent",
-    icon = "__angelspetrochem_art__/graphics/icons/flare-stack.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/flare-stack.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "aoc-voiding-buildings",
@@ -18,7 +18,7 @@ data:extend({{
 	energy_source = { type = "void" },
 	energy_usage = "1kW",
 	allowed_effects = nil,
-  icon = "__angelspetrochem_art__/graphics/icons/flare-stack.png",
+  icon = "__angelspetrochemgraphics__/graphics/icons/flare-stack.png",
   icon_size = 64,
   icon_mipmaps = 4,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -36,90 +36,98 @@ data:extend({{
       north = {
         layers = {
           {
-            filename = "__angelspetrochem_art__/graphics/entity/flare-stack/flare-stack.png",
+            filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack.png",
             priority = "extra-high",
-            width = 71,
-            height = 215,
+            width = 142,
+            height = 429,
             frame_count = 1,
-            shift = util.by_pixel(-0.5, -64)
+            shift = util.by_pixel(-0.5, -64),
+            scale = 0.5
           },
           {
             draw_as_shadow = true,
-            filename = "__angelspetrochem_art__/graphics/entity/flare-stack/flare-stack-shadow.png",
+            filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack-shadow.png",
             priority = "extra-high",
-            width = 193,
-            height = 69,
+            width = 382,
+            height = 135,
             frame_count = 1,
-            shift = util.by_pixel(61.5, 10.5)
+            shift = util.by_pixel(61.5, 10.5),
+            scale = 0.5
           },
         },
       },
       east = {
         layers = {
           {
-            filename = "__angelspetrochem_art__/graphics/entity/flare-stack/flare-stack.png",
+            filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack.png",
             priority = "extra-high",
-            width = 71,
-            height = 215,
-            x = 71,
+            width = 142,
+            height = 429,
+            x = 142,
             frame_count = 1,
-            shift = util.by_pixel(-0.5, -64)
+            shift = util.by_pixel(-0.5, -64),
+            scale = 0.5
           },
           {
             draw_as_shadow = true,
-            filename = "__angelspetrochem_art__/graphics/entity/flare-stack/flare-stack-shadow.png",
+            filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack-shadow.png",
             priority = "extra-high",
-            width = 193,
-            height = 69,
-            x = 193,
+            width = 382,
+            height = 135,
+            x = 382,
             frame_count = 1,
-            shift = util.by_pixel(61.5, 10.5)
+            shift = util.by_pixel(61.5, 10.5),
+            scale = 0.5
           },
         },
       },
       south = {
         layers = {
           {
-            filename = "__angelspetrochem_art__/graphics/entity/flare-stack/flare-stack.png",
+            filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack.png",
             priority = "extra-high",
-            width = 71,
-            height = 215,
-            x = 142,
+            width = 142,
+            height = 429,
+            x = 284,
             frame_count = 1,
-            shift = util.by_pixel(-0.5, -64)
+            shift = util.by_pixel(-0.5, -64),
+            scale = 0.5
           },
           {
             draw_as_shadow = true,
-            filename = "__angelspetrochem_art__/graphics/entity/flare-stack/flare-stack-shadow.png",
+            filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack-shadow.png",
             priority = "extra-high",
-            width = 193,
-            height = 69,
-            x = 386,
+            width = 382,
+            height = 135,
+            x = 764,
             frame_count = 1,
-            shift = util.by_pixel(61.5, 10.5)
+            shift = util.by_pixel(61.5, 10.5),
+            scale = 0.5
           },
         },
       },
       west = {
         layers = {
           {
-            filename = "__angelspetrochem_art__/graphics/entity/flare-stack/flare-stack.png",
+            filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack.png",
             priority = "extra-high",
-            width = 71,
-            height = 215,
-            x = 213,
+            width = 142,
+            height = 429,
+            x = 426,
             frame_count = 1,
-            shift = util.by_pixel(-0.5, -64)
+            shift = util.by_pixel(-0.5, -64),
+            scale = 0.5
           },
           {
             draw_as_shadow = true,
-            filename = "__angelspetrochem_art__/graphics/entity/flare-stack/flare-stack-shadow.png",
+            filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack-shadow.png",
             priority = "extra-high",
-            width = 193,
-            height = 69,
-            x = 579,
+            width = 382,
+            height = 135,
+            x = 1146,
             frame_count = 1,
-            shift = util.by_pixel(61.5, 10.5)
+            shift = util.by_pixel(61.5, 10.5),
+            scale = 0.5
           },
         },
       },
@@ -135,57 +143,62 @@ data:extend({{
         animation = {
           filename = "__base__/graphics/entity/oil-refinery/oil-refinery-fire.png",
           line_length = 10,
-          width = 20,
-          height = 40,
+          width = 40,
+          height = 81,
           frame_count = 60,
           animation_speed = 0.75,
-          draw_as_glow = true
+          draw_as_glow = true,
+          scale = 0.5
         },
       },
       {
         fadeout = true,
         north_animation = {
-          filename = "__angelspetrochem_art__/graphics/entity/flare-stack/flare-stack-light.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack-light.png",
           priority = "extra-high",
-          width = 71,
-          height = 215,
+          width = 142,
+          height = 429,
           frame_count = 1,
           shift = util.by_pixel(-0.5, -64),
           blend_mode = "additive-soft",
-          draw_as_glow = true
+          draw_as_glow = true,
+          scale = 0.5
         },
         east_animation = {
-          filename = "__angelspetrochem_art__/graphics/entity/flare-stack/flare-stack-light.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack-light.png",
           priority = "extra-high",
-          width = 71,
-          height = 215,
-          x = 71,
-          frame_count = 1,
-          shift = util.by_pixel(-0.5, -64),
-          blend_mode = "additive-soft",
-          draw_as_glow = true
-        },
-        south_animation = {
-          filename = "__angelspetrochem_art__/graphics/entity/flare-stack/flare-stack-light.png",
-          priority = "extra-high",
-          width = 71,
-          height = 215,
+          width = 142,
+          height = 429,
           x = 142,
           frame_count = 1,
           shift = util.by_pixel(-0.5, -64),
           blend_mode = "additive-soft",
-          draw_as_glow = true
+          draw_as_glow = true,
+          scale = 0.5
         },
-        west_animation = {
-          filename = "__angelspetrochem_art__/graphics/entity/flare-stack/flare-stack-light.png",
+        south_animation = {
+          filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack-light.png",
           priority = "extra-high",
-          width = 71,
-          height = 215,
-          x = 213,
+          width = 142,
+          height = 429,
+          x = 284,
           frame_count = 1,
           shift = util.by_pixel(-0.5, -64),
           blend_mode = "additive-soft",
-          draw_as_glow = true
+          draw_as_glow = true,
+          scale = 0.5
+        },
+        west_animation = {
+          filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack-light.png",
+          priority = "extra-high",
+          width = 142,
+          height = 429,
+          x = 426,
+          frame_count = 1,
+          shift = util.by_pixel(-0.5, -64),
+          blend_mode = "additive-soft",
+          draw_as_glow = true,
+          scale = 0.5
         }
       }
     }

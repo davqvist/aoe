@@ -1,7 +1,7 @@
 data:extend({{
     type = "item",
     name = "aoc-forestry",
-    icon = "__angelsbioprocessing_art__/graphics/icons/bio-arboretum.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-arboretum.png",
     icon_size = 32,
     subgroup = "aoc-flora-buildings",
     order = "c",
@@ -18,7 +18,7 @@ data:extend({{
 	energy_usage = "1kW",
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
 	module_slots = 3,
-  icon = "__angelsbioprocessing_art__/graphics/icons/bio-arboretum.png",
+  icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-arboretum.png",
   icon_size = 32,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoc-forestry" },
@@ -39,7 +39,7 @@ data:extend({{
     animation = {
       layers = {
         {
-          filename = "__angelsbioprocessing_art__/graphics/entity/trees/bio-arboretum-shadow.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-arboretum-shadow.png",
           width = 224,
           height = 256,
           line_length = 1,
@@ -48,7 +48,7 @@ data:extend({{
           scale = 0.6
         },
         {
-          filename = "__angelsbioprocessing_art__/graphics/entity/trees/bio-arboretum-base.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-arboretum-base.png",
           width = 224,
           height = 256,
           line_length = 1,
@@ -57,7 +57,7 @@ data:extend({{
           scale = 0.6
         },
         {
-          filename = "__angelsbioprocessing_art__/graphics/entity/trees/bio-arboretum-pipes.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-arboretum-pipes.png",
           width = 224,
           height = 256,
           line_length = 1,
@@ -66,7 +66,7 @@ data:extend({{
           scale = 0.6
         },
         {
-          filename = "__angelsbioprocessing_art__/graphics/entity/trees/bio-arboretum-off.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-arboretum-off.png",
           width = 224,
           height = 256,
           line_length = 1,
@@ -80,7 +80,7 @@ data:extend({{
       {
         apply_recipe_tint = "primary",
         animation = {
-          filename = "__angelsbioprocessing_art__/graphics/entity/trees/bio-arboretum-on.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-arboretum-on.png",
           blend_mode = "additive",
           width = 224,
           height = 256,

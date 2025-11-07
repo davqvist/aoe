@@ -1,7 +1,7 @@
 data:extend({{
     type = "item",
     name = "aoc-electrolyzer",
-    icon = "__angelspetrochem_art__/graphics/icons/electrolyser.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/electrolyser.png",
     icon_size = 32,
     icon_mipmaps = 1,
     subgroup = "aoc-specific-buildings",
@@ -24,7 +24,7 @@ data:extend({{
 	energy_usage = "1.2MW",
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
 	module_slots = 3,
-  icon = "__angelspetrochem_art__/graphics/icons/electrolyser.png",
+  icon = "__angelspetrochemgraphics__/graphics/icons/electrolyser.png",
   icon_size = 32,
   icon_mipmaps = 1,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -38,7 +38,7 @@ data:extend({{
 	graphics_set = {
     animation = {
       north = {
-        filename = "__angelspetrochem_art__/graphics/entity/electrolyser/electrolyser-north.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/electrolyser-north.png",
         width = 224,
         height = 224,
         frame_count = 36,
@@ -48,7 +48,7 @@ data:extend({{
         scale = 1.4
       },
       east = {
-        filename = "__angelspetrochem_art__/graphics/entity/electrolyser/electrolyser-east.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/electrolyser-east.png",
         width = 224,
         height = 224,
         frame_count = 36,
@@ -58,7 +58,7 @@ data:extend({{
         scale = 1.4
       },
       south = {
-        filename = "__angelspetrochem_art__/graphics/entity/electrolyser/electrolyser-north.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/electrolyser-north.png",
         width = 224,
         height = 224,
         frame_count = 36,
@@ -68,7 +68,7 @@ data:extend({{
         scale = 1.4
       },
       west = {
-        filename = "__angelspetrochem_art__/graphics/entity/electrolyser/electrolyser-east.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/electrolyser-east.png",
         width = 224,
         height = 224,
         frame_count = 36,
@@ -100,7 +100,7 @@ data:extend({{
     }
   },
   working_sound = {
-    sound = { filename = "__angelspetrochem_art__/sound/electrolyser.ogg", volume = 0.65 },
+    sound = { filename = "__angelspetrochemgraphics__/sound/electrolyser.ogg", volume = 0.65 },
     idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     audible_distance_modifier = 0.5,
     apparent_volume = 2.5,

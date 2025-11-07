@@ -48,7 +48,9 @@ data:extend({{
     icon_size = 64,
     subgroup = "aoc-flora-wood",
     order = "g",
-    stack_size = 500
+    stack_size = 500,
+	fuel_value = "500kJ",
+	fuel_category = "chemical"
 }})
 
 data:extend({{
@@ -69,9 +71,9 @@ data.raw['item']['iron-ore'].icons = { { icon = "__base__/graphics/icons/iron-or
 data:extend({{
     type = "item",
     name = "aoc-iron-dust",
-    icons = { { icon = "__angelssmelting_art__/graphics/icons/powder-iron.png" }, { icon = "__ageofcreation__/img/items/atoms/fe.png" } },
+    icons = { { icon = "__angelssmeltinggraphics__/graphics/icons/powder-iron.png" }, { icon = "__ageofcreation__/img/items/atoms/fe.png" } },
     icon_size = 64,
-    pictures = { { filename = "__angelssmelting_art__/graphics/icons/powder-iron.png", size = 64, scale = 0.5 } },
+    pictures = { { filename = "__angelssmeltinggraphics__/graphics/icons/powder-iron.png", size = 64, scale = 0.5 } },
     subgroup = "aoc-metals-iron",
     order = "d",
     stack_size = 200
@@ -86,8 +88,8 @@ data.raw['item']['iron-plate'].pictures = { { filename = "__base__/graphics/icon
 data.raw['item']['iron-stick'].subgroup = "aoc-metals-iron"
 data.raw['item']['iron-stick'].order = "f"
 data.raw['item']['iron-stick'].stack_size = 200
-data.raw['item']['iron-stick'].icons = { { icon = "__angelssmelting_art__/graphics/icons/rod-iron.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/fe.png", icon_size = 64 } }
-data.raw['item']['iron-stick'].pictures = { { filename = "__angelssmelting_art__/graphics/icons/rod-iron.png", size = 32 } }
+data.raw['item']['iron-stick'].icons = { { icon = "__angelssmeltinggraphics__/graphics/icons/rod-iron.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/fe.png", icon_size = 64 } }
+data.raw['item']['iron-stick'].pictures = { { filename = "__angelssmeltinggraphics__/graphics/icons/rod-iron.png", size = 32 } }
 
 data.raw['item']['iron-gear-wheel'].subgroup = "aoc-metals-iron"
 data.raw['item']['iron-gear-wheel'].order = "g"

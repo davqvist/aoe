@@ -2,7 +2,7 @@ data:extend({{
     type = "item",
     name = "aoc-metallurgy-beacon",
     icons = {{
-        icon = "__angelssmelting_art__/graphics/icons/blast-furnace.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/blast-furnace.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -28,7 +28,7 @@ data:extend({{
   allowed_effects = nil,
   module_slots = 0,
   icons = {{
-    icon = "__angelssmelting_art__/graphics/icons/blast-furnace.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/blast-furnace.png",
     icon_size = 64,
     icon_mipmaps = 4,
     scale = 0.5,
@@ -52,50 +52,53 @@ data:extend({{
     animation = {
       layers = {
           {
-          filename = "__angelssmelting_art__/graphics/entity/blast-furnace/blast-furnace-base.png",
-          priority = "high",
-          width = 164,
-          height = 189,
-          shift = util.by_pixel(0, -14)
+            filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/blast-furnace-base.png",
+            priority = "high",
+            width = 328,
+            height = 376,
+            shift = util.by_pixel(0, -14),
+            scale = 0.5
           },
           {
-          filename = "__angelssmelting_art__/graphics/entity/blast-furnace/blast-furnace-shadow.png",
-          priority = "high",
-          width = 224,
-          height = 124,
-          shift = util.by_pixel(30, 20),
-          draw_as_shadow = true
+            filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/blast-furnace-shadow.png",
+            priority = "high",
+            width = 445,
+            height = 245,
+            shift = util.by_pixel(30, 20),
+            draw_as_shadow = true,
+            scale = 0.5
           }
       }
     },
     working_visualisations = {
       {
-          fadeout = true,
-          north_position = { 0, 0 },
-          east_position = { 0, 0 },
-          south_position = { 0, 0 },
-          west_position = { 0, 0 },
-          animation = {
-          filename = "__angelssmelting_art__/graphics/entity/blast-furnace/blast-furnace-fire.png",
+        fadeout = true,
+        north_position = { 0, 0 },
+        east_position = { 0, 0 },
+        south_position = { 0, 0 },
+        west_position = { 0, 0 },
+        animation = {
+          filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/blast-furnace-fire.png",
           priority = "high",
-          width = 12,
-          height = 25,
+          width = 23,
+          height = 50,
           line_length = 8,
           frame_count = 48,
           animation_speed = 0.5,
           shift = util.by_pixel(4, 29),
-          draw_as_glow = true
-          },
+          draw_as_glow = true,
+          scale = 0.5
+        },
       },
       {
-          fadeout = true,
-          north_position = { 0, 0 },
-          east_position = { 0, 0 },
-          south_position = { 0, 0 },
-          west_position = { 0, 0 },
-          effect = "flicker",
-          animation = {
-          filename = "__angelssmelting_art__/graphics/entity/blast-furnace/blast-furnace-glow.png",
+        fadeout = true,
+        north_position = { 0, 0 },
+        east_position = { 0, 0 },
+        south_position = { 0, 0 },
+        west_position = { 0, 0 },
+        effect = "flicker",
+        animation = {
+          filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/blast-furnace-glow.png",
           priority = "high",
           width = 60,
           height = 43,
@@ -103,24 +106,25 @@ data:extend({{
           shift = util.by_pixel(5, 39),
           draw_as_glow = true,
           scale = 0.75,
-          },
+        },
       },
       {
-          fadeout = true,
-          north_position = { 0, 0 },
-          east_position = { 0, 0 },
-          south_position = { 0, 0 },
-          west_position = { 0, 0 },
-          effect = "flicker",
-          animation = {
-          filename = "__angelssmelting_art__/graphics/entity/blast-furnace/blast-furnace-working-light.png",
+        fadeout = true,
+        north_position = { 0, 0 },
+        east_position = { 0, 0 },
+        south_position = { 0, 0 },
+        west_position = { 0, 0 },
+        effect = "flicker",
+        animation = {
+          filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/blast-furnace-working-light.png",
           priority = "high",
-          width = 164,
-          height = 189,
+          width = 328,
+          height = 376,
           blend_mode = "additive",
           shift = util.by_pixel(0, -14),
-          draw_as_glow = true
-          }
+          draw_as_glow = true,
+          scale = 0.5
+        }
       }
     }
   },

@@ -6,7 +6,7 @@ data:extend({{
     name = "aoc-burner-ground-bore",
     icons = {
       {
-        icon = "__angelsrefining_art__/graphics/icons/liquifier.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/liquifier.png",
         icon_size = 32
       },
       {
@@ -46,7 +46,7 @@ data:extend({{
 	allowed_effects = nil,
   icons = {
     {
-      icon = "__angelsrefining_art__/graphics/icons/liquifier.png",
+      icon = "__angelsrefininggraphics__/graphics/icons/liquifier.png",
       icon_size = 32
     },
     {
@@ -69,7 +69,7 @@ data:extend({{
     animation = {
       layers = {
         {
-          filename = "__angelsrefining_art__/graphics/entity/liquifier/liquifier.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/liquifier/liquifier.png",
           width = 160,
           height = 160,
           line_length = 10,
@@ -107,7 +107,7 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-ground-bore",
-    icon = "__angelsrefining_art__/graphics/icons/liquifier.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/liquifier.png",
     icon_size = 32,
     icon_mipmaps = 1,
     subgroup = "aoc-specific-buildings",
@@ -130,7 +130,7 @@ data:extend({{
 	energy_usage = "210kW",
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
 	module_slots = 3,
-  icon = "__angelsrefining_art__/graphics/icons/liquifier.png",
+  icon = "__angelsrefininggraphics__/graphics/icons/liquifier.png",
   icon_size = 32,
   icon_mipmaps = 1,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -146,7 +146,7 @@ data:extend({{
     animation = {
       layers = {
         {
-          filename = "__angelsrefining_art__/graphics/entity/liquifier/liquifier.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/liquifier/liquifier.png",
           width = 160,
           height = 160,
           line_length = 10,

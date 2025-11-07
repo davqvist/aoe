@@ -1,7 +1,7 @@
 data:extend({{
     type = "item",
     name = "aoc-farm-reservoir",
-    icon = "__angelsbioprocessing_art__/graphics/icons/bio-refugium-fish.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-refugium-fish.png",
     icon_size = 32,
     subgroup = "aoc-flora-farms",
     order = "a",
@@ -18,13 +18,14 @@ data:extend({{
 	energy_usage = "1kW",
 	module_slots = 4,
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-  icon = "__angelsbioprocessing_art__/graphics/icons/bio-refugium-fish.png",
+  icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-refugium-fish.png",
   icon_size = 32,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoc-farm-reservoir" },
 	circuit_wire_connection_point = circuit_connector_definitions["assembling-machine"].points,
   circuit_connector_sprites = circuit_connector_definitions["assembling-machine"].sprites,
   circuit_wire_max_distance = default_circuit_wire_max_distance,
+  match_animation_speed_to_activity = false,
   max_health = 300,
 	selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
 	collision_box = {{-6.4, -6.4}, {6.4, 6.4}},
@@ -32,7 +33,7 @@ data:extend({{
     animation = {
       layers = {
         {
-          filename = "__angelsbioprocessing_art__/graphics/entity/bio-refugium/bio-refugium-fish-shadow.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-refugium/bio-refugium-fish-shadow.png",
           width = 288,
           height = 288,
           line_length = 1,
@@ -41,7 +42,7 @@ data:extend({{
           scale = 1.86
         },
         {
-          filename = "__angelsbioprocessing_art__/graphics/entity/bio-refugium/bio-refugium-fish-off.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-refugium/bio-refugium-fish-off.png",
           width = 288,
           height = 288,
           line_length = 1,
@@ -54,7 +55,7 @@ data:extend({{
     working_visualisations = {
       {
         animation = {
-          filename = "__angelsbioprocessing_art__/graphics/entity/bio-refugium/bio-refugium-fish.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-refugium/bio-refugium-fish.png",
           width = 288,
           height = 288,
           line_length = 7,
@@ -79,7 +80,7 @@ data:extend({{
     }
   },
   working_sound = {
-    sound = { filename = "__angelsbioprocessing_art__/sound/aquarium.ogg", volume = 0.8 },
+    sound = { filename = "__angelsbioprocessinggraphics__/sound/aquarium.ogg", volume = 0.8 },
     idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     apparent_volume = 2.5,
   },

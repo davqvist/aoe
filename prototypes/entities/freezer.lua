@@ -1,7 +1,7 @@
 data:extend({{
     type = "item",
     name = "aoc-freezer",
-    icon = "__angelssmelting_art__/graphics/icons/cooling-tower.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/cooling-tower.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "aoc-specific-buildings",
@@ -24,7 +24,7 @@ data:extend({{
 	energy_usage = "280kW",
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
 	module_slots = 3,
-  icon = "__angelssmelting_art__/graphics/icons/cooling-tower.png",
+  icon = "__angelssmeltinggraphics__/graphics/icons/cooling-tower.png",
   icon_size = 64,
   icon_mipmaps = 4,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -40,108 +40,108 @@ data:extend({{
       north = {
         layers = {
           {
-            filename = "__angelssmelting_art__/graphics/entity/cooling-tower/cooling-tower.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/cooling-tower.png",
             priority = "high",
             x = 0,
             y = 0,
-            width = 108,
-            height = 157,
+            width = 213,
+            height = 309,
             frame_count = 1,
             shift = util.by_pixel(0, -31.66666),
-            scale = 1.6666
+            scale = 0.83333
           },
           {
-            filename = "__angelssmelting_art__/graphics/entity/cooling-tower/cooling-tower-shadow.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/cooling-tower-shadow.png",
             priority = "high",
             x = 0,
             y = 0,
-            width = 160,
-            height = 100,
+            width = 320,
+            height = 197,
             frame_count = 1,
             shift = util.by_pixel(46.66666, 16.66666),
             draw_as_shadow = true,
-            scale = 1.6666
+            scale = 0.83333
           },
         },
       },
       east = {
         layers = {
           {
-            filename = "__angelssmelting_art__/graphics/entity/cooling-tower/cooling-tower.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/cooling-tower.png",
             priority = "high",
-            x = 108,
+            x = 213,
             y = 0,
-            width = 108,
-            height = 157,
+            width = 213,
+            height = 309,
             frame_count = 1,
             shift = util.by_pixel(0, -31.66666),
-            scale = 1.6666,
+            scale = 0.83333,
           },
           {
-            filename = "__angelssmelting_art__/graphics/entity/cooling-tower/cooling-tower-shadow.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/cooling-tower-shadow.png",
             priority = "high",
-            x = 160,
+            x = 320,
             y = 0,
-            width = 160,
-            height = 100,
+            width = 320,
+            height = 197,
             frame_count = 1,
             shift = util.by_pixel(46.66666, 16.66666),
             draw_as_shadow = true,
-            scale = 1.6666
+            scale = 0.83333
           },
         },
       },
       south = {
         layers = {
           {
-            filename = "__angelssmelting_art__/graphics/entity/cooling-tower/cooling-tower.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/cooling-tower.png",
             priority = "high",
-            x = 216,
+            x = 426,
             y = 0,
-            width = 108,
-            height = 157,
+            width = 213,
+            height = 309,
             frame_count = 1,
             shift = util.by_pixel(0, -31.66666),
-            scale = 1.6666
+            scale = 0.83333
           },
           {
-            filename = "__angelssmelting_art__/graphics/entity/cooling-tower/cooling-tower-shadow.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/cooling-tower-shadow.png",
             priority = "high",
-            x = 320,
+            x = 640,
             y = 0,
-            width = 160,
-            height = 100,
+            width = 320,
+            height = 197,
             frame_count = 1,
             shift = util.by_pixel(46.66666, 16.66666),
             draw_as_shadow = true,
-            scale = 1.6666
+            scale = 0.83333
           },
         },
       },
       west = {
         layers = {
           {
-            filename = "__angelssmelting_art__/graphics/entity/cooling-tower/cooling-tower.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/cooling-tower.png",
             priority = "high",
-            x = 324,
+            x = 639,
             y = 0,
-            width = 108,
-            height = 157,
+            width = 213,
+            height = 309,
             frame_count = 1,
             shift = util.by_pixel(0, -31.66666),
-            scale = 1.6666
+            scale = 0.83333
           },
           {
-            filename = "__angelssmelting_art__/graphics/entity/cooling-tower/cooling-tower-shadow.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/cooling-tower-shadow.png",
             priority = "high",
-            x = 480,
+            x = 960,
             y = 0,
-            width = 160,
-            height = 100,
+            width = 320,
+            height = 197,
             frame_count = 1,
             shift = util.by_pixel(46.66666, 16.66666),
             draw_as_shadow = true,
-            scale = 1.6666
+            scale = 0.83333
           },
         },
       },
@@ -150,48 +150,48 @@ data:extend({{
       {
         always_draw = true,
         animation = {
-          filename = "__angelssmelting_art__/graphics/entity/cooling-tower/fan-animation.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/fan-animation.png",
           priority = "high",
-          width = 36,
-          height = 32,
+          width = 69,
+          height = 60,
           shift = util.by_pixel(0, -123.33333),
-          scale = 1.6666
+          scale = 0.83333
         },
       },
       {
         animation = {
-          filename = "__angelssmelting_art__/graphics/entity/cooling-tower/fan-animation.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/fan-animation.png",
           priority = "high",
-          width = 36,
-          height = 32,
+          width = 69,
+          height = 60,
           line_length = 5,
           frame_count = 25,
           animation_speed = 2.4,
           shift = util.by_pixel(0, -123.33333),
-          scale = 1.6666
+          scale = 0.83333
         },
       },
       {
         always_draw = true,
         north_animation = {
-          filename = "__angelssmelting_art__/graphics/entity/cooling-tower/vertical-pipe-shadow-patch.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/vertical-pipe-shadow-patch.png",
           priority = "high",
-          width = 64,
-          height = 64,
+          width = 128,
+          height = 128,
           repeat_count = 36,
           draw_as_shadow = true,
           shift = { 1.6666, -1.6666 },
-          scale = 1.6666
+          scale = 0.83333
         },
         south_animation = {
-          filename = "__angelssmelting_art__/graphics/entity/cooling-tower/vertical-pipe-shadow-patch.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/vertical-pipe-shadow-patch.png",
           priority = "high",
-          width = 64,
-          height = 64,
+          width = 128,
+          height = 128,
           repeat_count = 36,
           draw_as_shadow = true,
           shift = { 1.6666, -1.6666 },
-          scale = 1.6666
+          scale = 0.83333
         }
       }
     }

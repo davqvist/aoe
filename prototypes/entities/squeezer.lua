@@ -3,7 +3,7 @@ data:extend({{
     name = "aoc-burner-squeezer",
     icons = {
       {
-        icon = "__angelssmelting_art__/graphics/icons/chemical-furnace.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/chemical-furnace.png",
         icon_size = 64,
         icon_mipmaps = 4
       },
@@ -45,7 +45,7 @@ data:extend({{
 	allowed_effects = nil,
 	icons = {
     {
-      icon = "__angelssmelting_art__/graphics/icons/chemical-furnace.png",
+      icon = "__angelssmeltinggraphics__/graphics/icons/chemical-furnace.png",
       icon_size = 64,
       icon_mipmaps = 4
     },
@@ -69,7 +69,7 @@ data:extend({{
     animation = {
       layers = {
         {
-          filename = "__angelssmelting_art__/graphics/entity/chemical-furnace/chemical-furnace-base.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/chemical-furnace/chemical-furnace-base.png",
           priority = "high",
           width = 168,
           height = 189,
@@ -79,7 +79,7 @@ data:extend({{
           shift = util.by_pixel(-1, -12)
         },
         {
-          filename = "__angelssmelting_art__/graphics/entity/chemical-furnace/chemical-furnace-shadow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/chemical-furnace/chemical-furnace-shadow.png",
           priority = "high",
           width = 224,
           height = 141,
@@ -95,7 +95,7 @@ data:extend({{
       {
         always_draw = true,
         animation = {
-          filename = "__angelssmelting_art__/graphics/entity/chemical-furnace/chemical-furnace-light.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/chemical-furnace/chemical-furnace-light.png",
           priority = "high",
           width = 168,
           height = 189,
@@ -134,7 +134,7 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-squeezer",
-    icon = "__angelssmelting_art__/graphics/icons/chemical-furnace.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/chemical-furnace.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "aoc-specific-buildings",
@@ -157,7 +157,7 @@ data:extend({{
 	energy_usage = "350kW",
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
 	module_slots = 3,
-  icon = "__angelssmelting_art__/graphics/icons/chemical-furnace.png",
+  icon = "__angelssmeltinggraphics__/graphics/icons/chemical-furnace.png",
   icon_size = 64,
   icon_mipmaps = 4,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -173,7 +173,7 @@ data:extend({{
     animation = {
       layers = {
         {
-          filename = "__angelssmelting_art__/graphics/entity/chemical-furnace/chemical-furnace-base.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/chemical-furnace/chemical-furnace-base.png",
           priority = "high",
           width = 168,
           height = 189,
@@ -183,7 +183,7 @@ data:extend({{
           shift = util.by_pixel(-1, -12)
         },
         {
-          filename = "__angelssmelting_art__/graphics/entity/chemical-furnace/chemical-furnace-shadow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/chemical-furnace/chemical-furnace-shadow.png",
           priority = "high",
           width = 224,
           height = 141,
@@ -199,7 +199,7 @@ data:extend({{
       {
         always_draw = true,
         animation = {
-          filename = "__angelssmelting_art__/graphics/entity/chemical-furnace/chemical-furnace-light.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/chemical-furnace/chemical-furnace-light.png",
           priority = "high",
           width = 168,
           height = 189,

@@ -1,7 +1,7 @@
 data:extend({{
     type = "item",
     name = "aoc-fuel-burning-generator",
-    icon = "__angelspetrochem_art__/graphics/icons/advanced-chemical-plant.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/advanced-chemical-plant.png",
     icon_size = 32,
     icon_mipmaps = 1,
     subgroup = "aoc-power-buildings",
@@ -13,7 +13,7 @@ data:extend({{
 data:extend({{
   type = "generator",
   name = "aoc-fuel-burning-generator",
-  icon = "__angelspetrochem_art__/graphics/icons/advanced-chemical-plant.png",
+  icon = "__angelspetrochemgraphics__/graphics/icons/advanced-chemical-plant.png",
   icon_size = 32,
   icon_mipmaps = 1,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -43,7 +43,7 @@ data:extend({{
   horizontal_animation = {
     layers = {
       {
-        filename = "__angelspetrochem_art__/graphics/entity/advanced-chemical-plant/advanced-chemical-plant.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/advanced-chemical-plant/advanced-chemical-plant.png",
         width = 224,
         height = 224,
         frame_count = 16,
@@ -57,7 +57,7 @@ data:extend({{
   vertical_animation = {
     layers = {
       {
-        filename = "__angelspetrochem_art__/graphics/entity/advanced-chemical-plant/advanced-chemical-plant.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/advanced-chemical-plant/advanced-chemical-plant.png",
         width = 224,
         height = 224,
         frame_count = 16,
@@ -80,7 +80,7 @@ data:extend({{
     }
   },
   working_sound = {
-    sound = { filename = "__angelspetrochem_art__/sound/gas-refinery.ogg", volume = 0.45 },
+    sound = { filename = "__angelspetrochemgraphics__/sound/gas-refinery.ogg", volume = 0.45 },
     idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     audible_distance_modifier = 0.5,
     apparent_volume = 2.5,

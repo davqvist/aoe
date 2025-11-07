@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.7
+Date: 2025-11-07
+  Features:
+    - added fuel value to wood pulp
+    - added roman numerals to flora and fauna recipes depending on their tier
+    - dependancy from official Angels graphics (which means you need to download the official mods)
+  Changes:
+    - disabled reservoir animation speed scaling with modules
+    - clarified some wordings on how resin and latex tapping works
+    - lowered collision of heat sinks and fuel cells so you can walk through them
+  Bugfixes:
+    - fixed the grass icon
+    - recycler doesn't allow plant modules anymore
+    - fixed a crash when mining certain buildings
+---------------------------------------------------------------------------------------------------
 Version: 0.0.6
 Date: 2025-11-04
   Features:

@@ -55,7 +55,7 @@ data:extend({{
     minable = { hardness = 1, mining_time = 0.2, result = "aoc-reactor-fuel-cell" },
     max_health = 300,
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
-    collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
+    collision_box = {{-0.3, -0.3}, {0.3, 0.3}},
     picture =
     {
       filename = "__ageofcreation__/img/entities/reactor-fuel-cell.png",
@@ -88,7 +88,7 @@ for _, h in pairs(heatsinks) do
         minable = { hardness = 1, mining_time = 0.2, result = "aoc-reactor-sink-" .. h },
         max_health = 300,
         selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
-        collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
+        collision_box = {{-0.3, -0.3}, {0.3, 0.3}},
         picture =
         {
             filename = "__ageofcreation__/img/entities/reactor-cell-" .. h .. ".png",
@@ -101,10 +101,10 @@ for _, h in pairs(heatsinks) do
 end
 
 data:extend({{
-    type = "beacon",
-    name = "aoc-reactor-beacon",
-    energy_source = { type = 'void'},
-    energy_usage = '1W',
+  type = "beacon",
+  name = "aoc-reactor-beacon",
+  energy_source = { type = 'void'},
+  energy_usage = '1W',
 	allowed_effects = {'speed'},
 	module_slots = 200,
 	icon = "__ageofcreation__/img/entities/empty.png",
@@ -114,20 +114,20 @@ data:extend({{
 	max_health = 1,
 	selection_box = {{-0, -0}, {0, 0}},
 	collision_box = {{-0, -0}, {0, 0}},
-    supply_area_distance = 1,
-    distribution_effectivity = 1,
-    selectable_in_game = false,
+  supply_area_distance = 1,
+  distribution_effectivity = 1,
+  selectable_in_game = false,
 	animation = {
-      layers = {
-        {
-          filename = "__ageofcreation__/img/entities/empty.png",
-          width = 128,
-          height = 128,
-          frame_count = 1,
-		  scale = 0.25
-        }
+    layers = {
+      {
+        filename = "__ageofcreation__/img/entities/empty.png",
+        width = 128,
+        height = 128,
+        frame_count = 1,
+    scale = 0.25
       }
     }
+  }
 }})
 
 data:extend({{
@@ -160,7 +160,7 @@ data:extend({{
           width = 128,
           height = 128,
           frame_count = 1,
-		  scale = 0.25
+		      scale = 0.25
         }
       }
     }

@@ -67,7 +67,7 @@ data:extend({{
 		{type = 'item', name = 'pipe', amount = 10}
 	},
 	results = {
-        {type = 'item', name = 'angels-storage-tank-3', amount = 1}
+        {type = 'item', name = 'aoc-tank-small', amount = 1}
     },
 	energy_required = 3
 }})
@@ -106,7 +106,7 @@ data:extend({{
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'angels-storage-tank-3', amount = 1},
+		{type = 'item', name = 'aoc-tank-small', amount = 1},
 		{type = 'item', name = 'pipe', amount = 5},
 		{type = 'item', name = 'burner-mining-drill', amount = 2}
 	},
@@ -180,7 +180,7 @@ data:extend({{
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'angels-storage-tank-3', amount = 4},
+		{type = 'item', name = 'aoc-tank-small', amount = 4},
 		{type = 'item', name = 'pipe', amount = 10}
     },
     results = {
@@ -200,6 +200,7 @@ data:extend({{
         {type = 'item', name = 'aoc-kelp', amount = 1}
     },
     energy_required = 20,
+	icons = get_icons( data.raw.item['aoc-kelp'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
 	category = 'aoc-category-farm-reservoir-kelp'
 }})
 
@@ -255,7 +256,7 @@ data:extend({{
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'angels-storage-tank-3', amount = 1},
+		{type = 'item', name = 'aoc-tank-small', amount = 1},
 		{type = 'item', name = 'pipe', amount = 5},
 		{type = 'item', name = 'stone-brick', amount = 20},
 		{type = 'item', name = 'iron-plate', amount = 10},
@@ -362,6 +363,7 @@ data:extend({{
     },
     energy_required = 20,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-rubber-tree-seedling'], { icon = "__ageofcreation__/img/items/tier/t0.png" } ),
 	category = 'aoc-category-gene-lab'
 }})
 
@@ -522,6 +524,7 @@ data:extend({{
         {type = 'item', name = 'aoc-flax-seed', amount = 1}
     },
     energy_required = 40,
+	icons = get_icons( data.raw.item['aoc-flax-seed'], { icon = "__ageofcreation__/img/items/tier/t0.png" } ),
 	auto_recycle = false,
 	category = 'aoc-category-gene-lab'
 }})
@@ -566,6 +569,7 @@ data:extend({{
         {type = 'item', name = 'aoc-flax', amount = 2}
     },
     energy_required = 30,
+	icons = get_icons( data.raw.item['aoc-flax'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
 	auto_recycle = false,
 	category = 'aoc-category-farm-plot-flax'
 }})
@@ -621,6 +625,7 @@ data:extend({{
     },
     energy_required = 50,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-tea-seed'], { icon = "__ageofcreation__/img/items/tier/t0.png" } ),
 	category = 'aoc-category-gene-lab'
 }})
 
@@ -638,6 +643,7 @@ data:extend({{
     },
     energy_required = 50,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-coffee-beans'], { icon = "__ageofcreation__/img/items/tier/t0.png" } ),
 	category = 'aoc-category-gene-lab'
 }})
 
@@ -657,6 +663,7 @@ data:extend({{
     },
     energy_required = 20,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-tea-leaves'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
 	category = 'aoc-category-farm-plot-tea'
 }})
 
@@ -695,6 +702,7 @@ data:extend({{
     },
     energy_required = 20,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-coffee-plant'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
 	category = 'aoc-category-farm-plot-coffee'
 }})
 

@@ -1,7 +1,7 @@
 data:extend({{
     type = "item",
     name = "aoc-sedimenter",
-    icon = "__angelsrefining_art__/graphics/icons/ore-sorting-facility.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "aoc-specific-buildings",
@@ -24,7 +24,7 @@ data:extend({{
 	energy_usage = "280kW",
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
 	module_slots = 3,
-  icon = "__angelsrefining_art__/graphics/icons/ore-sorting-facility.png",
+  icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
   icon_size = 64,
   icon_mipmaps = 4,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -39,26 +39,26 @@ data:extend({{
     animation = {
       layers = {
         {
-          filename = "__angelsrefining_art__/graphics/entity/ore-sorting-facility/ore-sorting-facility-base.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-sorting-facility/ore-sorting-facility-base.png",
           priority = "extra-high",
-          width = 224,
-          height = 230,
+          width = 449,
+          height = 458,
           frame_count = 40,
           line_length = 10,
           shift = util.by_pixel(0, -2),
           animation_speed = 0.5,
-          scale = 0.714
+          scale = 0.357
         },
         {
-          filename = "__angelsrefining_art__/graphics/entity/ore-sorting-facility/ore-sorting-facility-shadow.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-sorting-facility/ore-sorting-facility-shadow.png",
           priority = "extra-high",
-          width = 265,
-          height = 179,
+          width = 528,
+          height = 356,
           repeat_count = 40,
           shift = util.by_pixel(21, 25),
           animation_speed = 0.5,
           draw_as_shadow = true,
-          scale = 0.714
+          scale = 0.357
         }
       }
     }
@@ -80,7 +80,7 @@ data:extend({{
     }
   },
   working_sound = {
-    sound = { filename = "__angelsrefining_art__/sound/ore-sorting-facility.ogg", volume = 0.5 },
+    sound = { filename = "__angelsrefininggraphics__/sound/ore-sorting-facility.ogg", volume = 0.5 },
     idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     audible_distance_modifier = 0.5,
     apparent_volume = 2.5,

@@ -47,7 +47,7 @@ data:extend({{
     {
       {
         production_type = "output",
-        pipe_picture = angelsmods.petrochem.electrolyserpictures(),
+        pipe_picture = assembler2pipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = {{ flow_direction="output", direction = defines.direction.south, position = {0, 1} }}

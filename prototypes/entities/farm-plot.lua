@@ -1,7 +1,7 @@
 data:extend({{
     type = "item",
     name = "aoc-farm-plot",
-    icon = "__angelsbioprocessing_art__/graphics/icons/basic-farm.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/basic-farm.png",
     icon_size = 32,
     subgroup = "aoc-flora-farms",
     order = "b",
@@ -18,7 +18,7 @@ data:extend({{
 	energy_usage = "1kW",
 	module_slots = 6,
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-  icon = "__angelsbioprocessing_art__/graphics/icons/basic-farm.png",
+  icon = "__angelsbioprocessinggraphics__/graphics/icons/basic-farm.png",
   icon_size = 32,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoc-farm-plot" },
@@ -32,7 +32,7 @@ data:extend({{
     animation = {
       layers = {
         {
-          filename = "__angelsbioprocessing_art__/graphics/entity/crop-farm/farm-base.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/crop-farm/farm-base.png",
           width = 224,
           height = 224,
           line_length = 1,
@@ -41,7 +41,7 @@ data:extend({{
           scale = 1.8
         },
         {
-          filename = "__angelsbioprocessing_art__/graphics/entity/crop-farm/field-basic.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/crop-farm/field-basic.png",
           width = 224,
           height = 224,
           line_length = 1,
@@ -55,7 +55,7 @@ data:extend({{
       {
         apply_recipe_tint = "primary",
         animation = {
-            filename = "__angelsbioprocessing_art__/graphics/entity/crop-farm/field-animation-1.png",
+            filename = "__angelsbioprocessinggraphics__/graphics/entity/crop-farm/field-animation-1.png",
             line_length = 6,
             frame_count = 36,
             width = 224,

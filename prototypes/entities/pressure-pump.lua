@@ -1,7 +1,7 @@
 data:extend({{
     type = "item",
     name = "aoc-pressure-pump",
-    icon = "__angelspetrochem_art__/graphics/icons/air-filter.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/air-filter.png",
     icon_size = 32,
     subgroup = "aoc-specific-buildings",
     order = "n",
@@ -23,7 +23,7 @@ data:extend({{
 	energy_usage = "80kW",
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
 	module_slots = 3,
-  icon = "__angelspetrochem_art__/graphics/icons/air-filter.png",
+  icon = "__angelspetrochemgraphics__/graphics/icons/air-filter.png",
   icon_size = 32,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoc-pressure-pump" },
@@ -35,7 +35,7 @@ data:extend({{
 	collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
 	graphics_set = {
     animation = {
-      filename = "__angelspetrochem_art__/graphics/entity/air-filter/air-filter.png",
+      filename = "__angelspetrochemgraphics__/graphics/entity/air-filter/air-filter.png",
       width = 256,
       height = 256,
       frame_count = 36,
@@ -56,7 +56,7 @@ data:extend({{
     {
       {
         production_type = "output",
-        pipe_picture = angelsmods.petrochem.electrolyserpictures(),
+        pipe_picture = assembler2pipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = {{ flow_direction="output", direction = defines.direction.south, position = {0, 1} }}

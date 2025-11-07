@@ -29,6 +29,7 @@ data:extend({{
         {type = 'item', name = 'aoc-maize-kernels', amount = 1}
     },
     energy_required = 60,
+    icons = get_icons( data.raw.item['aoc-maize-kernels'], { icon = "__ageofcreation__/img/items/tier/t0.png" } ),
     auto_recycle = false,
 	category = 'aoc-category-gene-lab'
 }})
@@ -59,6 +60,7 @@ data:extend({{
         {type = 'item', name = 'aoc-maize', amount = 3}
     },
     energy_required = 45,
+    icons = get_icons( data.raw.item['aoc-maize'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
 	auto_recycle = false,
 	category = 'aoc-category-farm-plot-maize'
 }})
@@ -75,7 +77,7 @@ data:extend({{
     results = {
         {type = 'item', name = 'aoc-maize', amount = 5}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-maize"] ), get_icons( data.raw.item["aoc-magnesium-dust"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-maize"], { icon = "__ageofcreation__/img/items/tier/t1.png", icon_size = 64 } ), get_icons( data.raw.item["aoc-magnesium-dust"] ) ),
     energy_required = 35,
 	auto_recycle = false,
 	category = 'aoc-category-farm-plot-maize'
@@ -136,6 +138,7 @@ data:extend({{
     },
     energy_required = 90,
     auto_recycle = false,
+    icons = get_icons( data.raw.item['aoc-soybean-seeds'], { icon = "__ageofcreation__/img/items/tier/t0.png" } ),
 	category = 'aoc-category-gene-lab'
 }})
 
@@ -167,6 +170,7 @@ data:extend({{
     },
     energy_required = 60,
 	auto_recycle = false,
+    icons = get_icons( data.raw.item['aoc-soybeans'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
 	category = 'aoc-category-farm-plot-soybean'
 }})
 
@@ -279,6 +283,7 @@ data:extend({{
     },
     energy_required = 60,
     auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-egg'], { icon = "__ageofcreation__/img/items/tier/t0.png" } ),
 	category = 'aoc-category-gene-lab'
 }})
 
@@ -313,6 +318,7 @@ data:extend({{
     },
     energy_required = 15,
 	main_product = 'aoc-chicken',
+	icons = get_icons( data.raw.item['aoc-chicken'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
 	category = 'aoc-category-farm-chicken-coop'
 }})
 
@@ -331,6 +337,7 @@ data:extend({{
     },
     energy_required = 15,
 	main_product = 'aoc-egg',
+	icons = get_icons( data.raw.item['aoc-egg'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
 	category = 'aoc-category-farm-chicken-coop'
 }})
 
@@ -405,6 +412,7 @@ data:extend({{
     },
     energy_required = 120,
     auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-lamb'], { icon = "__ageofcreation__/img/items/tier/t0.png" } ),
 	category = 'aoc-category-gene-lab'
 }})
 
@@ -424,6 +432,7 @@ data:extend({{
     },
     energy_required = 70,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-sheep'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
 	category = 'aoc-category-farm-barn-sheep'
 }})
 
@@ -446,6 +455,7 @@ data:extend({{
     energy_required = 10,
 	auto_recycle = false,
 	main_product = 'aoc-wool',
+	icons = get_icons( data.raw.item['aoc-wool'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
 	category = 'aoc-category-farm-barn-sheep'
 }})
 
@@ -465,6 +475,7 @@ data:extend({{
     energy_required = 35,
 	auto_recycle = false,
 	main_product = 'aoc-lamb',
+	icons = get_icons( data.raw.item['aoc-lamb'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
 	category = 'aoc-category-farm-barn-sheep'
 }})
 
@@ -540,6 +551,7 @@ data:extend({{
     },
     energy_required = 150,
     auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-calf'], { icon = "__ageofcreation__/img/items/tier/t0.png" } ),
 	category = 'aoc-category-gene-lab'
 }})
 
@@ -561,6 +573,7 @@ data:extend({{
 	main_product = 'aoc-cow',
     energy_required = 90,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-cow'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
 	category = 'aoc-category-farm-barn-cow'
 }})
 
@@ -584,6 +597,7 @@ data:extend({{
     main_product = 'aoc-milk',
 	energy_required = 16,
 	auto_recycle = false,
+	icons = get_icons( data.raw.fluid['aoc-milk'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
 	category = 'aoc-category-farm-barn-cow'
 }})
 
@@ -606,6 +620,7 @@ data:extend({{
     main_product = 'aoc-calf',
 	energy_required = 40,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-calf'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
 	category = 'aoc-category-farm-barn-cow'
 }})
 
@@ -687,6 +702,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-leather', amount = 8}
     },
 	energy_required = 6,
+	icons = get_icons( data.raw.item['aoc-leather'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
 	category = 'aoc-category-high-pressure-heating'
 }})
 
@@ -708,6 +724,7 @@ data:extend({{
 	main_product = 'aoc-apple-tree-seeds',
     energy_required = 40,
     auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-apple-tree-seeds'], { icon = "__ageofcreation__/img/items/tier/t0.png" } ),
 	category = 'aoc-category-gene-lab'
 }})
 
@@ -724,6 +741,7 @@ data:extend({{
     },
     energy_required = 10,
 	auto_recycle = false,
+    icons = get_icons( data.raw.item['aoc-spruce-tree'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
 	category = 'aoc-category-farm-plot-spruce-tree'
 }})
 
@@ -739,10 +757,10 @@ data:extend({{
     results = {
         {type = 'item', name = 'aoc-spruce-tree', amount = 1}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-spruce-tree"] ), get_icons( data.raw.item["aoc-loam"] ) ),
-    energy_required = 6,
+	energy_required = 6,
 	auto_recycle = false,
-	category = 'aoc-category-farm-plot-spruce-tree'
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-spruce-tree"], { icon = "__ageofcreation__/img/items/tier/t1.png", icon_size = 64 } ), get_icons( data.raw.item["aoc-loam"] ) ),
+    category = 'aoc-category-farm-plot-spruce-tree'
 }})
 
 data:extend({{
@@ -761,6 +779,7 @@ data:extend({{
 	main_product = 'aoc-resin',
     energy_required = 8,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-resin'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
 	category = 'aoc-category-farm-plot-spruce-tree'
 }})
 
@@ -815,6 +834,7 @@ data:extend({{
     },
     energy_required = 12,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-rubber-tree'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
 	category = 'aoc-category-farm-plot-rubber-tree'
 }})
 
@@ -872,6 +892,7 @@ data:extend({{
     },
     energy_required = 15,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-apple-tree'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
 	category = 'aoc-category-farm-plot-apple-tree'
 }})
 
@@ -889,6 +910,7 @@ data:extend({{
     },
     energy_required = 15,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-apple'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
 	category = 'aoc-category-farm-plot-apple-tree'
 }})
 
@@ -957,6 +979,7 @@ data:extend({{
     },
     energy_required = 15,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-olive-tree'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
 	category = 'aoc-category-farm-plot-olive-tree'
 }})
 
@@ -975,6 +998,7 @@ data:extend({{
     },
     energy_required = 15,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-olive'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
 	category = 'aoc-category-farm-plot-olive-tree'
 }})
 
@@ -1263,6 +1287,7 @@ data:extend({{
         {type = 'item', name = 'aoc-kelp', amount = 1}
     },
     energy_required = 14,
+    icons = get_icons( data.raw.item['aoc-kelp'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
 	category = 'aoc-category-farm-reservoir-kelp'
 }})
 
@@ -1298,6 +1323,7 @@ data:extend({{
         {type = 'item', name = 'raw-fish', amount = 3}
     },
     energy_required = 50,
+	icons = get_icons( data.raw.capsule['raw-fish'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
 	category = 'aoc-category-farm-reservoir-fish'
 }})
 
@@ -1316,6 +1342,7 @@ data:extend({{
         {type = 'item', name = 'aoc-fish-eggs', amount = 14}
     },
     energy_required = 20,
+	icons = get_icons( data.raw.item['aoc-fish-eggs'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
 	category = 'aoc-category-farm-reservoir-fish'
 }})
 
@@ -1352,6 +1379,7 @@ data:extend({{
         {type = 'item', name = 'aoc-flax', amount = 4}
     },
     energy_required = 42,
+    icons = get_icons( data.raw.item['aoc-flax'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
 	auto_recycle = false,
 	category = 'aoc-category-farm-plot-flax'
 }})
@@ -1421,7 +1449,8 @@ data:extend({{
     },
     energy_required = 20,
 	auto_recycle = false,
-	category = 'aoc-category-farm-plot-tea'
+	icons = get_icons( data.raw.item['aoc-tea-leaves'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
+    category = 'aoc-category-farm-plot-tea'
 }})
 
 data:extend({{
@@ -1461,6 +1490,7 @@ data:extend({{
     },
     energy_required = 20,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-coffee-plant'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
 	category = 'aoc-category-farm-plot-coffee'
 }})
 
@@ -1514,6 +1544,7 @@ data:extend({{
         {type = 'item', name = 'aoc-maize', amount = 7}
     },
     energy_required = 80,
+	icons = get_icons( data.raw.item['aoc-maize'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
 	auto_recycle = false,
 	category = 'aoc-category-farm-plot-maize'
 }})
@@ -1531,7 +1562,7 @@ data:extend({{
     results = {
         {type = 'item', name = 'aoc-maize', amount = 8}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-maize"] ), get_icons( data.raw.item["aoc-magnesium-dust"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-maize"], { icon = "__ageofcreation__/img/items/tier/t2.png", icon_size = 64 } ), get_icons( data.raw.item["aoc-magnesium-dust"] ) ),
     energy_required = 55,
 	auto_recycle = false,
 	category = 'aoc-category-farm-plot-maize'
@@ -1601,6 +1632,7 @@ data:extend({{
         {type = 'item', name = 'aoc-soybeans', amount = 6}
     },
     energy_required = 60,
+    icons = get_icons( data.raw.item['aoc-soybeans'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
 	auto_recycle = false,
 	category = 'aoc-category-farm-plot-soybean'
 }})
@@ -1751,7 +1783,7 @@ data:extend({{
 		{type = 'item', name = 'pipe', amount = 30}
     },
     results = {
-        {type = 'item', name = 'angels-storage-tank-2', amount = 1}
+        {type = 'item', name = 'aoc-tank-large', amount = 1}
     },
     energy_required = 3
 }})
@@ -1778,7 +1810,7 @@ data:extend({{
 		{type = 'item', name = 'pump', amount = 3}
     },
     results = {
-        {type = 'item', name = 'barreling-pump', amount = 1}
+        {type = 'item', name = 'aoc-barreling-pump', amount = 1}
     },
     energy_required = 5
 }})
@@ -1912,6 +1944,7 @@ data:extend({{
     },
     energy_required = 5,
 	auto_recycle = false,
+    icons = get_icons( data.raw.item['aoc-spruce-tree'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
 	category = 'aoc-category-farm-plot-spruce-tree'
 }})
 
@@ -1931,6 +1964,7 @@ data:extend({{
 	main_product = 'aoc-resin',
     energy_required = 7,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-resin'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
 	category = 'aoc-category-farm-plot-spruce-tree'
 }})
 
@@ -1972,6 +2006,7 @@ data:extend({{
     },
     energy_required = 10,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-rubber-tree'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
 	category = 'aoc-category-farm-plot-rubber-tree'
 }})
 
@@ -2032,6 +2067,7 @@ data:extend({{
     },
     energy_required = 12,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-apple-tree'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
 	category = 'aoc-category-farm-plot-apple-tree'
 }})
 
@@ -2050,6 +2086,7 @@ data:extend({{
     },
     energy_required = 12,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-apple'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
 	category = 'aoc-category-farm-plot-apple-tree'
 }})
 
@@ -2091,6 +2128,7 @@ data:extend({{
     },
     energy_required = 12,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-olive-tree'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
 	category = 'aoc-category-farm-plot-olive-tree'
 }})
 
@@ -2110,6 +2148,7 @@ data:extend({{
     },
     energy_required = 12,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-olive'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
 	category = 'aoc-category-farm-plot-olive-tree'
 }})
 

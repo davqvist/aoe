@@ -41,7 +41,7 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "aoc-voiding-tech",
-    icon = "__angelsrefining_art__/graphics/icons/clarifier.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/clarifier.png",
     icon_size = 64, icon_mipmaps = 4,
     prerequisites = {"aoc-recycling-tech"},
 	  effects = {
@@ -119,7 +119,7 @@ data:extend({{
     type = "technology",
     name = "aoc-digging-tech-1",
     icon_size = 32,
-    icon = "__angelsrefining_art__/graphics/icons/liquifier.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/liquifier.png",
     prerequisites = {"aoc-fluid-handling-tech-1"},
 	  effects = {
 	    {

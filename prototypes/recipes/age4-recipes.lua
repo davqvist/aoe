@@ -2826,7 +2826,7 @@ data:extend({{
 		{type = 'item', name = 'pipe', amount = 40}
     },
     results = {
-        {type = 'item', name = 'angels-storage-tank-1', amount = 1}
+        {type = 'item', name = 'aoc-tank-huge', amount = 1}
     },
     energy_required = 3
 }})
@@ -3837,6 +3837,7 @@ data:extend({{
     },
     energy_required = 12.5,
 	main_product = 'aoc-chicken',
+	icons = get_icons( data.raw.item['aoc-chicken'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
 	category = 'aoc-category-farm-chicken-coop'
 }})
 
@@ -3855,6 +3856,7 @@ data:extend({{
     },
     energy_required = 12.5,
 	main_product = 'aoc-egg',
+	icons = get_icons( data.raw.item['aoc-egg'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
 	category = 'aoc-category-farm-chicken-coop'
 }})
 
@@ -3896,6 +3898,7 @@ data:extend({{
     },
     energy_required = 60,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-sheep'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
 	category = 'aoc-category-farm-barn-sheep'
 }})
 
@@ -3919,6 +3922,7 @@ data:extend({{
     main_product = 'aoc-wool',
 	energy_required = 10,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-wool'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
 	category = 'aoc-category-farm-barn-sheep'
 }})
 
@@ -3938,6 +3942,7 @@ data:extend({{
     main_product = 'aoc-lamb',
 	energy_required = 30,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-lamb'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
 	category = 'aoc-category-farm-barn-sheep'
 }})
 
@@ -3980,6 +3985,7 @@ data:extend({{
 	main_product = 'aoc-cow',
     energy_required = 80,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-cow'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
 	category = 'aoc-category-farm-barn-cow'
 }})
 
@@ -4003,6 +4009,7 @@ data:extend({{
     main_product = 'aoc-milk',
 	energy_required = 16,
 	auto_recycle = false,
+	icons = get_icons( data.raw.fluid['aoc-milk'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
 	category = 'aoc-category-farm-barn-cow'
 }})
 
@@ -4025,6 +4032,7 @@ data:extend({{
     main_product = 'aoc-calf',
 	energy_required = 35,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-calf'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
 	category = 'aoc-category-farm-barn-cow'
 }})
 
@@ -4069,6 +4077,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-leather', amount = 10}
     },
 	energy_required = 6,
+	icons = get_icons( data.raw.item['aoc-leather'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
 	category = 'aoc-category-high-pressure-heating'
 }})
 

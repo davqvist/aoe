@@ -263,7 +263,7 @@ data:extend({{
   type = "technology",
   name = "aoc-sulfur-tech",
   icon_size = 32,
-  icon = "__angelspetrochem_art__/graphics/icons/solid-sulfur.png",
+  icon = "__angelspetrochemgraphics__/graphics/icons/solid-sulfur.png",
   prerequisites = {"aoc-electric-automation-tech-2"},
   effects = {
     {
@@ -362,7 +362,7 @@ data:extend({{
   type = "technology",
   name = "aoc-cyanide-tech",
   icon_size = 32,
-  icon = "__angelspetrochem_art__/graphics/icons/solid-sodium-cyanide.png",
+  icon = "__angelspetrochemgraphics__/graphics/icons/solid-sodium-cyanide.png",
   prerequisites = {"aoc-ammonia-tech", "aoc-basic-chemistry-tech", "aoc-flax-tech-2"},
   effects = {
     {
@@ -431,7 +431,7 @@ data:extend({{
   type = "technology",
   name = "aoc-advanced-metal-processing-tech",
   icon_size = 64, icon_mipmaps = 4,
-  icon = "__angelssmelting_art__/graphics/icons/induction-furnace.png",
+  icon = "__angelssmeltinggraphics__/graphics/icons/induction-furnace.png",
   prerequisites = {"aoc-metallurgy-age-tech"},
   effects = {
     {
@@ -536,7 +536,7 @@ data:extend({{
   type = "technology",
   name = "aoc-tin-tech-2",
   icon_size = 32,
-  icon = "__angelssmelting_art__/graphics/icons/plate-tin.png",
+  icon = "__angelssmeltinggraphics__/graphics/icons/plate-tin.png",
   prerequisites = {"aoc-advanced-metal-processing-tech", "aoc-ammonia-tech", "aoc-tin-tech-1"},
   effects = {
     {
@@ -575,7 +575,7 @@ data:extend({{
   type = "technology",
   name = "aoc-aluminium-tech-2",
   icon_size = 32,
-  icon = "__angelssmelting_art__/graphics/icons/plate-aluminium.png",
+  icon = "__angelssmeltinggraphics__/graphics/icons/plate-aluminium.png",
   prerequisites = {"aoc-advanced-metal-processing-tech", "aoc-chlorine-tech", "aoc-aluminium-tech-1"},
   effects = {
     {
@@ -614,7 +614,7 @@ data:extend({{
   type = "technology",
   name = "aoc-lead-tech",
   icon_size = 32,
-  icon = "__angelssmelting_art__/graphics/icons/plate-lead.png",
+  icon = "__angelssmeltinggraphics__/graphics/icons/plate-lead.png",
   prerequisites = {"aoc-advanced-metal-processing-tech", "aoc-chlorine-tech", "aoc-sedimentary-stones-tech-2", "aoc-fertilizer-tech-1"},
   effects = {
     {
@@ -657,7 +657,7 @@ data:extend({{
   type = "technology",
   name = "aoc-silver-tech",
   icon_size = 32,
-  icon = "__angelssmelting_art__/graphics/icons/plate-silver.png",
+  icon = "__angelssmeltinggraphics__/graphics/icons/plate-silver.png",
   prerequisites = {"aoc-advanced-metal-processing-tech", "aoc-cyanide-tech", "aoc-sedimentary-stones-tech-2"},
   effects = {
     {
@@ -700,7 +700,7 @@ data:extend({{
   type = "technology",
   name = "aoc-nickel-tech",
   icon_size = 32,
-  icon = "__angelssmelting_art__/graphics/icons/plate-nickel.png",
+  icon = "__angelssmeltinggraphics__/graphics/icons/plate-nickel.png",
   prerequisites = {"aoc-advanced-metal-processing-tech", "aoc-sulfur-tech", "aoc-sedimentary-stones-tech-2"},
   effects = {
     {
@@ -743,7 +743,7 @@ data:extend({{
   type = "technology",
   name = "aoc-gold-tech",
   icon_size = 32,
-  icon = "__angelssmelting_art__/graphics/icons/plate-gold.png",
+  icon = "__angelssmeltinggraphics__/graphics/icons/plate-gold.png",
   prerequisites = {"aoc-advanced-metal-processing-tech", "aoc-cyanide-tech", "aoc-igneous-stones-tech-2"},
   effects = {
     {
@@ -786,7 +786,7 @@ data:extend({{
   type = "technology",
   name = "aoc-zinc-tech",
   icon_size = 32,
-  icon = "__angelssmelting_art__/graphics/icons/plate-zinc.png",
+  icon = "__angelssmeltinggraphics__/graphics/icons/plate-zinc.png",
   prerequisites = {"aoc-advanced-metal-processing-tech", "aoc-sulfur-tech", "aoc-chlorine-tech", "aoc-sedimentary-stones-tech-2"},
   effects = {
     {
@@ -837,7 +837,7 @@ data:extend({{
   type = "technology",
   name = "aoc-chromium-tech",
   icon_size = 32,
-  icon = "__angelssmelting_art__/graphics/icons/plate-chrome.png",
+  icon = "__angelssmeltinggraphics__/graphics/icons/plate-chrome.png",
   prerequisites = {"aoc-advanced-metal-processing-tech", "aoc-basic-chemistry-tech", "aoc-metamorphic-stones-tech-2"},
   effects = {
     {
@@ -922,7 +922,7 @@ data:extend({{
 data:extend({{
   type = "technology",
   name = "aoc-fuel-power-tech",
-  icon = "__angelspetrochem_art__/graphics/icons/advanced-chemical-plant.png",
+  icon = "__angelspetrochemgraphics__/graphics/icons/advanced-chemical-plant.png",
   icon_size = 32,
   prerequisites = {"aoc-metallurgy-age-tech", "aoc-fermentation-tech"},
   effects = {
@@ -950,7 +950,7 @@ data:extend({{
   type = "technology",
   name = "aoc-slag-tech",
   icon_size = 32,
-  icon = "__angelsrefining_art__/graphics/icons/slag.png",
+  icon = "__angelsrefininggraphics__/graphics/icons/slag.png",
   prerequisites = {"aoc-advanced-metal-processing-tech"},
   effects = {
     {
@@ -1224,7 +1224,7 @@ data:extend({{
     type = "technology",
     name = "aoc-bronze-tech-2",
     icon_size = 32,
-    icon = "__angelssmelting_art__/graphics/icons/plate-bronze.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/plate-bronze.png",
     prerequisites = {"aoc-copper-tech-2","aoc-tin-tech-2","aoc-bronze-tech-1"},
 	  effects = {
       {
@@ -1497,7 +1497,7 @@ data:extend({{
     type = "technology",
     name = "aoc-metal-boosting-tech",
     icon_size = 64, icon_mipmaps = 4,
-    icon = "__angelssmelting_art__/graphics/icons/blast-furnace.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/blast-furnace.png",
     prerequisites = {"aoc-electronics-tech-2","aoc-radar-tech"},
 	  effects = {
       {

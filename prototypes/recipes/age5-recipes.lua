@@ -2045,6 +2045,7 @@ data:extend({{
         {type = 'item', name = 'aoc-kelp', amount = 1}
     },
     energy_required = 10,
+	icons = get_icons( data.raw.item['aoc-kelp'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
 	auto_recycle = false,
     category = 'aoc-category-farm-reservoir-kelp'
 }})
@@ -2083,6 +2084,7 @@ data:extend({{
         {type = 'item', name = 'aoc-flax', amount = 6}
     },
     energy_required = 52,
+    icons = get_icons( data.raw.item['aoc-flax'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
 	auto_recycle = false,
 	category = 'aoc-category-farm-plot-flax'
 }})
@@ -2154,7 +2156,8 @@ data:extend({{
     },
     energy_required = 20,
 	auto_recycle = false,
-	category = 'aoc-category-farm-plot-tea'
+	icons = get_icons( data.raw.item['aoc-tea-leaves'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
+    category = 'aoc-category-farm-plot-tea'
 }})
 
 data:extend({{
@@ -2194,6 +2197,7 @@ data:extend({{
     },
     energy_required = 20,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-coffee-plant'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
 	category = 'aoc-category-farm-plot-coffee'
 }})
 
@@ -2232,6 +2236,7 @@ data:extend({{
     },
     energy_required = 65,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-maize'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
 	category = 'aoc-category-farm-plot-maize'
 }})
 
@@ -2248,7 +2253,7 @@ data:extend({{
     results = {
         {type = 'item', name = 'aoc-maize', amount = 10}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-maize"] ), get_icons( data.raw.item["aoc-magnesium-dust"] ) ),
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-maize"], { icon = "__ageofcreation__/img/items/tier/t3.png", icon_size = 64 } ), get_icons( data.raw.item["aoc-magnesium-dust"] ) ),
     energy_required = 55,
 	auto_recycle = false,
 	category = 'aoc-category-farm-plot-maize'
@@ -2319,6 +2324,7 @@ data:extend({{
     },
     energy_required = 60,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-soybeans'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
 	category = 'aoc-category-farm-plot-soybean'
 }})
 
@@ -2359,6 +2365,7 @@ data:extend({{
     },
     energy_required = 4,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-spruce-tree'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
 	category = 'aoc-category-farm-plot-spruce-tree'
 }})
 
@@ -2378,6 +2385,7 @@ data:extend({{
 	main_product = 'aoc-resin',
     energy_required = 6,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-resin'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
 	category = 'aoc-category-farm-plot-spruce-tree'
 }})
 
@@ -2421,6 +2429,7 @@ data:extend({{
     },
     energy_required = 8,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-rubber-tree'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
 	category = 'aoc-category-farm-plot-rubber-tree'
 }})
 
@@ -2484,6 +2493,7 @@ data:extend({{
     },
     energy_required = 9,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-apple-tree'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
 	category = 'aoc-category-farm-plot-apple-tree'
 }})
 
@@ -2503,6 +2513,7 @@ data:extend({{
     },
     energy_required = 9,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-apple'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
 	category = 'aoc-category-farm-plot-apple-tree'
 }})
 
@@ -2546,6 +2557,7 @@ data:extend({{
     },
     energy_required = 9,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-olive-tree'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
 	category = 'aoc-category-farm-plot-olive-tree'
 }})
 
@@ -2566,6 +2578,7 @@ data:extend({{
     },
     energy_required = 9,
 	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-olive'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
 	category = 'aoc-category-farm-plot-olive-tree'
 }})
 
