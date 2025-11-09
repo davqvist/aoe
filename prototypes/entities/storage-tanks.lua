@@ -42,18 +42,20 @@ data:extend({{
             filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-gas-tank/petrochem-gas-tank.png",
             priority = "extra-high",
             frames = 1,
-            width = 167,
-            height = 192,
-            shift = util.by_pixel(-1, -7)
+            width = 334,
+            height = 387,
+            shift = util.by_pixel(-1, -7),
+            scale = 0.5
           },
           {
             filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-gas-tank/petrochem-gas-tank-shadow.png",
             priority = "extra-high",
             frames = 1,
-            width = 220,
-            height = 120,
+            width = 437,
+            height = 237,
             shift = util.by_pixel(26, 31),
-            draw_as_shadow = true
+            draw_as_shadow = true,
+            scale = 0.5
           },
         },
       },
@@ -146,18 +148,20 @@ data:extend({{
             filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-oil-tank/petrochem-oil-tank.png",
             priority = "extra-high",
             frames = 2,
-            width = 135,
-            height = 154,
-            shift = util.by_pixel(-1, -1)
+            width = 273,
+            height = 307,
+            shift = util.by_pixel(-1, -1),
+            scale = 0.5
           },
           {
             filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-oil-tank/petrochem-oil-tank-shadow.png",
             priority = "extra-high",
             frames = 2,
-            width = 167,
-            height = 165,
+            width = 335,
+            height = 328,
             shift = util.by_pixel(15, 8.5),
-            draw_as_shadow = true
+            draw_as_shadow = true,
+            scale = 0.5
           },
         },
       },
@@ -248,18 +252,20 @@ data:extend({{
             filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-inline-tank/petrochem-inline-tank.png",
             priority = "extra-high",
             frames = 4,
-            width = 71,
-            height = 102,
-            shift = util.by_pixel(-0.5, -8)
+            width = 142,
+            height = 199,
+            shift = util.by_pixel(-0.5, -8),
+            scale = 0.5
           },
           {
             filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-inline-tank/petrochem-inline-tank-shadow.png",
             priority = "extra-high",
             frames = 4,
-            width = 106,
-            height = 101,
+            width = 207,
+            height = 199,
             shift = util.by_pixel(17, 8),
-            draw_as_shadow = true
+            draw_as_shadow = true,
+            scale = 0.5
           },
         },
       },

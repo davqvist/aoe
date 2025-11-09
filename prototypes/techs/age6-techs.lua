@@ -42,8 +42,8 @@ data:extend({{
 data:extend({{
   type = "technology",
   name = "aoc-starlight-tech",
-  icon_size = 192,
-  icon = "__ageofcreation__/img/entities/lunar-panel.png",
+  icon_size = 128,
+  icon = "__ageofcreation__/img/entities/lunar-panel-icon.png",
   prerequisites = {"aoc-magic-research-tech"},
   effects = {
     {
@@ -128,6 +128,49 @@ data:extend({{
       ingredients = AOC["age_tech_table"][6],
       time = 50
   }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoc-drones-tech-3",
+    icons = {
+      {
+        icon = "__NPBees2_art__/graphics/dynamic/bee-base.png",
+        icon_size = 32
+      },{
+        icon = "__NPBees2_art__/graphics/dynamic/bee-stripes.png",
+        tint = {0, 0, 255},
+        icon_size = 32
+      }
+    },
+    prerequisites = {"aoc-drones-tech-2","aoc-lotus-flower-tech-1"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-drone-module-3-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-drone-module-3-untreated-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-drone-module-3-impregnated-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-drone-module-3-sweet-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-drone-module-3-plastic-recipe"
+      }
+    },
+    unit = {
+        count = 50,
+        ingredients = AOC["age_tech_table"][6],
+        time = 50
+    }
 }})
 
 data:extend({{

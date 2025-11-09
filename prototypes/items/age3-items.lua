@@ -55,7 +55,7 @@ data:extend({{
     type = "item",
     name = "aoc-soy-flour",
     icon = "__ageofcreation__/img/items/soy-flour.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-flora-soybeans",
     order = "c",
     stack_size = 200
@@ -384,7 +384,7 @@ data:extend({{
     type = "item",
     name = "aoc-sugar",
     icon = "__ageofcreation__/img/items/sugar.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-flora-fermentation",
     order = "b",
     stack_size = 200

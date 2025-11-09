@@ -982,6 +982,353 @@ data:extend({{
 }})
 
 data:extend({{
+    name = 'aoc-refining-lubricant-plant-oil-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoc-oxygen', amount = 120},
+		{type = 'fluid', name = 'aoc-plant-oil', amount = 60}
+    },
+    results = {
+        {type = 'fluid', name = 'lubricant', amount = 6}
+    },
+    energy_required = 2,
+	category = 'oil-processing'
+}})
+
+data:extend({{
+	name = 'aoc-mixing-animal-food-2-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-animal-food', amount = 6},
+		{type = 'item', name = 'aoc-agar', amount = 2},
+		{type = 'fluid', name = 'aoc-plant-oil', amount = 30}
+	},
+	results = {
+		{type = 'item', name = 'aoc-animal-food-2', amount = 5}
+    },
+	energy_required = 3,
+	category = 'aoc-category-mixing'
+}})
+
+data:extend({{
+    name = 'aoc-farm-chicken-coop-chicken-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-egg', amount = 1},
+		{type = 'item', name = 'aoc-bedding', amount = 1},
+		{type = 'item', name = 'aoc-animal-food-2', amount = 1},
+		{type = 'fluid', name = 'aoc-warm-air', amount = 100}
+    },
+    results = {
+        {type = 'item', name = 'aoc-chicken', amount = 1, probability = 0.575},
+		{type = 'item', name = 'aoc-bedding', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.985}
+    },
+    energy_required = 11,
+	main_product = 'aoc-chicken',
+	icons = get_icons( data.raw.item['aoc-chicken'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
+	category = 'aoc-category-farm-chicken-coop'
+}})
+
+data:extend({{
+    name = 'aoc-farm-chicken-coop-egg-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-chicken', amount = 2},
+		{type = 'item', name = 'aoc-fish-meat', amount = 2},
+		{type = 'item', name = 'aoc-animal-food-2', amount = 2}
+    },
+    results = {
+        {type = 'item', name = 'aoc-egg', amount = 9},
+		{type = 'item', name = 'aoc-chicken', amount = 2, ignored_by_stats = 2, ignored_by_productivity = 2, probability = 0.89}
+    },
+    energy_required = 11,
+	main_product = 'aoc-egg',
+	icons = get_icons( data.raw.item['aoc-egg'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
+	category = 'aoc-category-farm-chicken-coop'
+}})
+
+data:extend({{
+    name = 'aoc-farm-chicken-coop-chicken-module-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-egg', amount = 1},
+		{type = 'item', name = 'aoc-bedding', amount = 1},
+		{type = 'item', name = 'aoc-animal-food-2', amount = 2},
+		{type = 'fluid', name = 'aoc-warm-air', amount = 400}
+    },
+    results = {
+        {type = 'item', name = 'aoc-chicken-module-2', amount=1, probability = 0.05},
+        {type = 'item', name = 'aoc-chicken-module-3', amount=1, probability = 0.2},
+        {type = 'item', name = 'aoc-chicken-module-4', amount=1, probability = 0.05},
+		{type = 'item', name = 'aoc-bedding', amount=1, probability = 0.85}
+    },
+	main_product = 'aoc-chicken-module-3',
+    energy_required = 80,
+	category = 'aoc-category-farm-chicken-coop'
+}})
+
+data:extend({{
+    name = 'aoc-farm-barn-sheep-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-lamb', amount = 1},
+		{type = 'item', name = 'aoc-animal-food-2', amount = 4},
+		{type = 'item', name = 'aoc-hay-bale', amount = 4},
+		{type = 'item', name = 'aoc-salt', amount = 1},
+		{type = 'fluid', name = 'water', amount = 250}
+    },
+    results = {
+        {type = 'item', name = 'aoc-sheep', amount = 1, probability = 0.94}
+    },
+    energy_required = 52,
+	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-sheep'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
+	category = 'aoc-category-farm-barn-sheep'
+}})
+
+data:extend({{
+    name = 'aoc-farm-barn-wool-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-sheep', amount = 4},
+		{type = 'item', name = 'aoc-animal-food-2', amount = 2},
+		{type = 'item', name = 'aoc-hay-bale', amount = 2},
+		{type = 'item', name = 'aoc-salt', amount = 1},
+		{type = 'fluid', name = 'water', amount = 100}
+    },
+    results = {
+        {type = 'item', name = 'aoc-wool', amount = 3},
+		{type = 'item', name = 'aoc-sheep', amount = 3, ignored_by_stats = 3, ignored_by_productivity = 3},
+		{type = 'item', name = 'aoc-sheep', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.94}
+    },
+    main_product = 'aoc-wool',
+	energy_required = 10,
+	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-wool'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
+	category = 'aoc-category-farm-barn-sheep'
+}})
+
+data:extend({{
+    name = 'aoc-farm-barn-lamb-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-sheep', amount = 2},
+		{type = 'item', name = 'aoc-animal-food', amount = 3},
+		{type = 'item', name = 'aoc-hay-bale', amount = 3}
+    },
+    results = {
+        {type = 'item', name = 'aoc-lamb', amount = 1},
+		{type = 'item', name = 'aoc-sheep', amount = 2, ignored_by_stats = 2, ignored_by_productivity = 2, probability = 0.9}
+    },
+    main_product = 'aoc-lamb',
+	energy_required = 26,
+	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-lamb'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
+	category = 'aoc-category-farm-barn-sheep'
+}})
+
+data:extend({{
+    name = 'aoc-farm-barn-sheep-module-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-lamb', amount = 1},
+		{type = 'item', name = 'aoc-animal-food-2', amount = 6},
+		{type = 'item', name = 'aoc-hay-bale', amount = 6},
+		{type = 'fluid', name = 'aoc-brine', amount = 180}
+    },
+    results = {
+        {type = 'item', name = 'aoc-sheep-module-2', amount=1, probability = 0.075},
+        {type = 'item', name = 'aoc-sheep-module-3', amount=1, probability = 0.75},
+        {type = 'item', name = 'aoc-sheep-module-4', amount=1, probability = 0.075}
+    },
+	main_product = 'aoc-sheep-module-3',
+    energy_required = 170,
+	auto_recycle = false,
+	category = 'aoc-category-farm-barn-sheep'
+}})
+
+data:extend({{
+    name = 'aoc-farm-barn-cow-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-calf', amount = 1},
+		{type = 'item', name = 'aoc-animal-food-2', amount = 5},
+		{type = 'item', name = 'aoc-hay-bale', amount = 3},
+		{type = 'item', name = 'aoc-grass', amount = 4},
+		{type = 'fluid', name = 'aoc-milk', amount = 50}
+    },
+    results = {
+        {type = 'item', name = 'aoc-cow', amount = 1, probability = 0.52},
+		{type = 'item', name = 'aoc-ox', amount = 1, probability = 0.42}
+    },
+	main_product = 'aoc-cow',
+    energy_required = 72,
+	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-cow'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
+	category = 'aoc-category-farm-barn-cow'
+}})
+
+data:extend({{
+    name = 'aoc-farm-barn-milk-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-cow', amount = 4},
+		{type = 'item', name = 'aoc-animal-food-2', amount = 2},
+		{type = 'item', name = 'aoc-hay-bale', amount = 1},
+		{type = 'item', name = 'aoc-grass', amount = 1},
+		{type = 'item', name = 'aoc-magnesium-dust', amount = 1},
+		{type = 'fluid', name = 'water', amount = 350}
+    },
+    results = {
+        {type = 'fluid', name = 'aoc-milk', amount = 350},
+		{type = 'item', name = 'aoc-cow', amount = 3, ignored_by_stats = 3, ignored_by_productivity = 3},
+		{type = 'item', name = 'aoc-cow', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.94}
+    },
+    main_product = 'aoc-milk',
+	energy_required = 16,
+	auto_recycle = false,
+	icons = get_icons( data.raw.fluid['aoc-milk'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
+	category = 'aoc-category-farm-barn-cow'
+}})
+
+data:extend({{
+    name = 'aoc-farm-barn-calf-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-ox', amount = 1},
+		{type = 'item', name = 'aoc-cow', amount = 1},
+		{type = 'item', name = 'aoc-animal-food-2', amount = 4},
+		{type = 'item', name = 'aoc-hay-bale', amount = 2},
+		{type = 'item', name = 'aoc-grass', amount = 3}
+    },
+    results = {
+        {type = 'item', name = 'aoc-calf', amount = 1},
+		{type = 'item', name = 'aoc-ox', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.92},
+		{type = 'item', name = 'aoc-cow', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.87}
+    },
+    main_product = 'aoc-calf',
+	energy_required = 31,
+	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-calf'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
+	category = 'aoc-category-farm-barn-cow'
+}})
+
+data:extend({{
+    name = 'aoc-farm-barn-cow-module-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-calf', amount = 1},
+		{type = 'item', name = 'aoc-animal-food-2', amount = 7},
+		{type = 'item', name = 'aoc-hay-bale', amount = 4},
+		{type = 'item', name = 'aoc-grass', amount = 6},
+		{type = 'item', name = 'aoc-magnesium-dust', amount = 1},
+		{type = 'fluid', name = 'water', amount = 150}
+    },
+    results = {
+        {type = 'item', name = 'aoc-cow-module-2', amount=1, probability = 0.035},
+        {type = 'item', name = 'aoc-cow-module-3', amount=1, probability = 0.35},
+        {type = 'item', name = 'aoc-cow-module-4', amount=1, probability = 0.035},
+		{type = 'item', name = 'aoc-ox-module-2', amount=1, probability = 0.035},
+        {type = 'item', name = 'aoc-ox-module-3', amount=1, probability = 0.35},
+        {type = 'item', name = 'aoc-ox-module-4', amount=1, probability = 0.035}
+    },
+	main_product = 'aoc-cow-module-3',
+    energy_required = 210,
+	auto_recycle = false,
+	category = 'aoc-category-farm-barn-cow'
+}})
+
+data:extend({{
+	name = 'aoc-high-pressure-leather-3-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-hide', amount = 1},
+		{type = 'item', name = 'aoc-slaked-lime', amount = 4},
+		{type = 'item', name = 'aoc-wood-pulp', amount = 4},
+		{type = 'item', name = 'aoc-sodium-cyanide', amount = 2},
+		{type = 'fluid', name = 'aoc-brine', amount = 100},
+		{type = 'fluid', name = 'aoc-formic-acid', amount = 20}
+	},
+	results = {
+		{type = 'item', name = 'aoc-leather', amount = 12}
+    },
+	energy_required = 6,
+	icons = get_icons( data.raw.item['aoc-leather'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
+	category = 'aoc-category-high-pressure-heating'
+}})
+
+data:extend({{
+    name = 'aoc-farm-reservoir-fish-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-fish-eggs', amount = 9},
+		{type = 'fluid', name = 'aoc-fish-water', amount = 400},
+		{type = 'item', name = 'aoc-kelp', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'raw-fish', amount = 4}
+    },
+    energy_required = 50,
+	icons = get_icons( data.raw.capsule['raw-fish'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
+	category = 'aoc-category-farm-reservoir-fish'
+}})
+
+data:extend({{
+    name = 'aoc-farm-reservoir-fish-eggs-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'raw-fish', amount = 1},
+		{type = 'item', name = 'aoc-fish-meat', amount = 1},
+		{type = 'item', name = 'aoc-soy-flour', amount = 1},
+		{type = 'item', name = 'aoc-kelp', amount = 1},
+		{type = 'item', name = 'aoc-agar', amount = 1},
+		{type = 'fluid', name = 'aoc-fish-water', amount = 80}
+    },
+    results = {
+        {type = 'item', name = 'aoc-fish-eggs', amount = 14}
+    },
+    energy_required = 16,
+	icons = get_icons( data.raw.item['aoc-fish-eggs'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
+	category = 'aoc-category-farm-reservoir-fish'
+}})
+
+data:extend({{
+    name = 'aoc-farm-reservoir-fish-module-3-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-fish-eggs', amount = 4},
+		{type = 'item', name = 'aoc-soy-flour', amount = 1},
+		{type = 'item', name = 'aoc-agar', amount = 1},
+		{type = 'fluid', name = 'aoc-fish-water', amount = 400}
+    },
+    results = {
+        {type = 'item', name = 'aoc-fish-module-2', amount=1, probability = 0.25, ignored_by_stats = 1, ignored_by_productivity = 1},
+		{type = 'item', name = 'aoc-fish-module-3', amount=1, probability = 0.5},
+        {type = 'item', name = 'aoc-fish-module-4', amount=1, probability = 0.05}
+    },
+	main_product = 'aoc-fish-module-3',
+    energy_required = 240,
+	category = 'aoc-category-farm-reservoir-fish'
+}})
+
+data:extend({{
     name = 'aoc-mixing-drilling-fluid-recipe',
     type = 'recipe',
     enabled = false,
@@ -1786,7 +2133,7 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoc-mixing-industrial-fertilizer-recipe',
+	name = 'aoc-mixing-fertilizer-2-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
@@ -1797,7 +2144,7 @@ data:extend({{
 		{type = 'item', name = 'sulfur', amount = 2}
 	},
 	results = {
-		{type = 'item', name = 'aoc-industrial-fertilizer', amount = 5}
+		{type = 'item', name = 'aoc-fertilizer-2', amount = 5}
     },
 	energy_required = 3.5,
 	category = 'aoc-category-mixing'
@@ -2078,7 +2425,7 @@ data:extend({{
         {type = 'item', name = 'aoc-flax-seed', amount = 4},
         {type = 'item', name = 'aoc-wood-pulp', amount = 2},
         {type = 'item', name = 'aoc-leaves', amount = 2},
-        {type = 'item', name = 'aoc-industrial-fertilizer', amount = 1}
+        {type = 'item', name = 'aoc-fertilizer-2', amount = 1}
     },
     results = {
         {type = 'item', name = 'aoc-flax', amount = 6}
@@ -2098,7 +2445,7 @@ data:extend({{
         {type = 'item', name = 'aoc-flax-module-2a', amount = 2},
 		{type = 'item', name = 'aoc-wood-pulp', amount = 8},
         {type = 'item', name = 'aoc-leaves', amount = 8},
-        {type = 'item', name = 'aoc-industrial-fertilizer', amount = 1}
+        {type = 'item', name = 'aoc-fertilizer-2', amount = 1}
     },
     results = {
         {type = 'item', name = 'aoc-flax-module-3a', amount=1, probability = 0.6},
@@ -2123,7 +2470,7 @@ data:extend({{
         {type = 'item', name = 'aoc-flax-module-2b', amount = 2},
 		{type = 'item', name = 'aoc-wood-pulp', amount = 8},
         {type = 'item', name = 'aoc-leaves', amount = 8},
-        {type = 'item', name = 'aoc-industrial-fertilizer', amount = 1}
+        {type = 'item', name = 'aoc-fertilizer-2', amount = 1}
     },
     results = {
         {type = 'item', name = 'aoc-flax-module-3a', amount=1, probability = 0.4},
@@ -2147,7 +2494,7 @@ data:extend({{
         {type = 'item', name = 'aoc-tea-seed', amount = 2},
         {type = 'item', name = 'aoc-soil', amount = 6},
         {type = 'item', name = 'aoc-leaves', amount = 2},
-		{type = 'item', name = 'aoc-industrial-fertilizer', amount = 1},
+		{type = 'item', name = 'aoc-fertilizer-2', amount = 1},
         {type = 'fluid', name = 'water', amount = 100}
 		
     },
@@ -2168,7 +2515,7 @@ data:extend({{
         {type = 'fluid', name = 'water', amount = 1000},
         {type = 'item', name = 'aoc-tea-leaves-module-2', amount = 1},
 		{type = 'item', name = 'aoc-leaves', amount = 8},
-		{type = 'item', name = 'aoc-industrial-fertilizer', amount = 1}
+		{type = 'item', name = 'aoc-fertilizer-2', amount = 1}
     },
     results = {
         {type = 'item', name = 'aoc-tea-leaves-module-3', amount=1, probability = 0.5},
@@ -2189,7 +2536,7 @@ data:extend({{
         {type = 'item', name = 'aoc-coffee-beans', amount = 2},
         {type = 'item', name = 'aoc-soil', amount = 6},
         {type = 'item', name = 'aoc-charcoal', amount = 1},
-		{type = 'item', name = 'aoc-industrial-fertilizer', amount = 1},
+		{type = 'item', name = 'aoc-fertilizer-2', amount = 1},
         {type = 'fluid', name = 'water', amount = 100}
     },
     results = {
@@ -2209,7 +2556,7 @@ data:extend({{
         {type = 'fluid', name = 'water', amount = 1000},
         {type = 'item', name = 'aoc-coffee-plant-module-2', amount = 1},
 		{type = 'item', name = 'aoc-charcoal', amount = 4},
-		{type = 'item', name = 'aoc-industrial-fertilizer', amount = 1}
+		{type = 'item', name = 'aoc-fertilizer-2', amount = 1}
     },
     results = {
         {type = 'item', name = 'aoc-coffee-plant-module-3', amount=1, probability = 0.5},
@@ -2229,7 +2576,7 @@ data:extend({{
 	ingredients = {
         {type = 'item', name = 'aoc-maize-kernels', amount = 3},
         {type = 'item', name = 'aoc-loam', amount = 4},
-        {type = 'item', name = 'aoc-industrial-fertilizer', amount = 1}
+        {type = 'item', name = 'aoc-fertilizer-2', amount = 1}
     },
     results = {
         {type = 'item', name = 'aoc-maize', amount = 7}
@@ -2248,7 +2595,7 @@ data:extend({{
         {type = 'item', name = 'aoc-maize-kernels', amount = 3},
         {type = 'item', name = 'aoc-loam', amount = 6},
         {type = 'item', name = 'aoc-magnesium-dust', amount = 1},
-        {type = 'item', name = 'aoc-industrial-fertilizer', amount = 1}
+        {type = 'item', name = 'aoc-fertilizer-2', amount = 1}
     },
     results = {
         {type = 'item', name = 'aoc-maize', amount = 10}
@@ -2268,7 +2615,7 @@ data:extend({{
         {type = 'item', name = 'aoc-maize-module-2a', amount = 2},
         {type = 'item', name = 'aoc-loam', amount = 10},
         {type = 'item', name = 'aoc-magnesium-dust', amount = 3},
-        {type = 'item', name = 'aoc-industrial-fertilizer', amount = 1}
+        {type = 'item', name = 'aoc-fertilizer-2', amount = 1}
     },
     results = {
         {type = 'item', name = 'aoc-maize-module-3a', amount=1, probability = 0.6},
@@ -2293,7 +2640,7 @@ data:extend({{
         {type = 'item', name = 'aoc-maize-module-2b', amount = 2},
         {type = 'item', name = 'aoc-loam', amount = 10},
         {type = 'item', name = 'aoc-magnesium-dust', amount = 3},
-        {type = 'item', name = 'aoc-industrial-fertilizer', amount = 1}
+        {type = 'item', name = 'aoc-fertilizer-2', amount = 1}
     },
     results = {
         {type = 'item', name = 'aoc-maize-module-3a', amount=1, probability = 0.4},
@@ -2317,7 +2664,7 @@ data:extend({{
         {type = 'item', name = 'aoc-soybean-seeds', amount = 3},
 		{type = 'item', name = 'aoc-quicklime', amount = 2},
         {type = 'item', name = 'aoc-loam', amount = 3},
-        {type = 'item', name = 'aoc-industrial-fertilizer', amount = 1}
+        {type = 'item', name = 'aoc-fertilizer-2', amount = 1}
     },
     results = {
         {type = 'item', name = 'aoc-soybeans', amount = 8}
@@ -2336,7 +2683,7 @@ data:extend({{
         {type = 'item', name = 'aoc-soybeans-module-2', amount = 2},
 		{type = 'item', name = 'aoc-quicklime', amount = 4},
         {type = 'item', name = 'aoc-loam', amount = 4},
-        {type = 'item', name = 'aoc-industrial-fertilizer', amount = 1}
+        {type = 'item', name = 'aoc-fertilizer-2', amount = 1}
     },
     results = {
         {type = 'item', name = 'aoc-soybeans-module-3', amount=1},

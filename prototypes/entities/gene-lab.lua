@@ -176,14 +176,14 @@ data:extend({{
           filename = "__ageofcreation__/img/entities/genelab-animation.png",
           width = 500,
           height = 500,
-          scale = 0.32
+          scale = 0.34
         },
         {
           filename = "__ageofcreation__/img/entities/genelab-shadow.png",
           width = 800,
           height = 700,
           draw_as_shadow = true,
-          scale = 0.32,
+          scale = 0.34,
         }
       }
     },
@@ -197,7 +197,7 @@ data:extend({{
           height = 500,
           line_length = 8,
           frame_count = 60,
-          scale = 0.32,
+          scale = 0.34,
           animation_speed = 1
         }
       },
@@ -208,7 +208,7 @@ data:extend({{
           width = 800,
           height = 700,
           draw_as_shadow = true,
-          scale = 0.32
+          scale = 0.34
         }
       }
     }

@@ -244,8 +244,8 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "aoc-rubber-tech",
-    icon_size = 32,
-    icon = "__angelspetrochemgraphics__/graphics/icons/solid-rubber.png",
+    icon = "__ageofcreation__/img/items/rubber.png",
+    icon_size = 64, icon_mipmaps = 4,
     prerequisites = {"aoc-oil-cracking-tech-1"},
     effects = {
         {
@@ -406,7 +406,7 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "aoc-fertilizer-tech-2",
-    icons = get_icons( data.raw["item"]["aoc-industrial-fertilizer"] ),
+    icons = get_icons( data.raw["item"]["aoc-fertilizer-2"] ),
     prerequisites = {"aoc-phosphate-tech", "aoc-fertilizer-tech-1"},
 	  effects = {
       {
@@ -427,7 +427,7 @@ data:extend({{
       },
       {
         type = "unlock-recipe",
-        recipe = "aoc-mixing-industrial-fertilizer-recipe"
+        recipe = "aoc-mixing-fertilizer-2-recipe"
       }
     },
     unit = {
@@ -720,6 +720,10 @@ data:extend({{
       {
         type = "unlock-recipe",
         recipe = "aoc-refining-lubricant-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-refining-lubricant-plant-oil-recipe"
       }
     },
     unit = {
@@ -727,6 +731,145 @@ data:extend({{
         ingredients = AOC["age_tech_table"][5],
         time = 40
     }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-animal-food-tech-2",
+  icon_size = 64, icon_mipmaps = 4,
+  icon = "__ageofcreation__/img/items/animal-food-2.png",
+  prerequisites = {"aoc-lubricant-tech", "aoc-animal-food-tech-1"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-mixing-animal-food-2-recipe"
+    }
+  },
+  unit = {
+      count = 45,
+      ingredients = AOC["age_tech_table"][5],
+      time = 40
+  }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoc-fish-tech-3",
+    icon_size = 64, icon_mipmaps = 4,
+    icon = "__base__/graphics/icons/fish.png",
+    prerequisites = {"aoc-animal-food-tech-2", "aoc-fish-tech-2"},
+	  effects = {
+	    {
+        type = "unlock-recipe",
+        recipe = "aoc-farm-reservoir-fish-3-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-farm-reservoir-fish-eggs-3-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-farm-reservoir-fish-module-3-recipe"
+      }
+    },
+    unit = {
+        count = 50,
+        ingredients = AOC["age_tech_table"][5],
+        time = 40
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoc-chicken-tech-3",
+    icon_size = 64,
+    icon = "__ageofcreation__/img/items/chicken.png",
+    prerequisites = {"aoc-chicken-tech-2", "aoc-animal-food-tech-2"},
+	  effects = {
+	    {
+        type = "unlock-recipe",
+        recipe = "aoc-farm-chicken-coop-chicken-3-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoc-farm-chicken-coop-egg-3-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoc-farm-chicken-coop-chicken-module-3-recipe"
+      }
+    },
+    unit = {
+        count = 50,
+        ingredients = AOC["age_tech_table"][5],
+        time = 40
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoc-sheep-tech-3",
+    icon_size = 64,
+    icon = "__ageofcreation__/img/items/sheep.png",
+    prerequisites = {"aoc-sheep-tech-2", "aoc-animal-food-tech-2"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-farm-barn-sheep-3-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoc-farm-barn-wool-3-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoc-farm-barn-lamb-3-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-farm-barn-sheep-module-3-recipe"
+      }
+    },
+    unit = {
+        count = 50,
+        ingredients = AOC["age_tech_table"][5],
+        time = 40
+    }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-cow-tech-3",
+  icon_size = 64,
+  icon = "__ageofcreation__/img/items/cow.png",
+  prerequisites = {"aoc-cow-tech-2","aoc-animal-food-tech-2","aoc-cyanide-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-barn-cow-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-barn-milk-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-barn-calf-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-barn-cow-module-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-high-pressure-leather-3-recipe"
+    }
+  },
+  unit = {
+      count = 50,
+      ingredients = AOC["age_tech_table"][5],
+      time = 40
+  }
 }})
 
 data:extend({{
@@ -1053,6 +1196,49 @@ data:extend({{
 
 data:extend({{
     type = "technology",
+    name = "aoc-drones-tech-2",
+    icons = {
+      {
+        icon = "__NPBees2_art__/graphics/dynamic/bee-base.png",
+        icon_size = 32
+      },{
+        icon = "__NPBees2_art__/graphics/dynamic/bee-stripes.png",
+        tint = {0, 0, 255},
+        icon_size = 32
+      }
+    },
+    prerequisites = {"aoc-drones-tech-1","aoc-drinks-tech-3"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-drone-module-2-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-drone-module-2-untreated-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-drone-module-2-impregnated-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-drone-module-2-sweet-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-drone-module-2-plastic-recipe"
+      }
+    },
+    unit = {
+        count = 50,
+        ingredients = AOC["age_tech_table"][5],
+        time = 40
+    }
+}})
+
+data:extend({{
+    type = "technology",
     name = "aoc-frame-untreated-tech",
     icon = "__ageofcreation__/img/items/apiary-frame-untreated.png",
     icon_size = 64,
@@ -1345,7 +1531,7 @@ data:extend({{
     type = "technology",
     name = "aoc-nauvium-tech",
     icon = "__ageofcreation__/img/items/nauvium-plate.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     prerequisites = {"aoc-infusion-tech"},
 	  effects = {
       {

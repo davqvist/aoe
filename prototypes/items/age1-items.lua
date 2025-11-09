@@ -159,7 +159,7 @@ data:extend({{
     type = "item",
     name = "aoc-agar",
     icon = "__ageofcreation__/img/items/agar.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-flora-kelp",
     order = "b",
     stack_size = 200
@@ -169,7 +169,7 @@ data:extend({{
     type = "item",
     name = "aoc-petri-dish",
     icon = "__ageofcreation__/img/items/petri-dish.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-glass",
     order = "d",
     stack_size = 100
@@ -192,7 +192,7 @@ data:extend({{
     type = "item",
     name = "aoc-latex-rubber",
     icon = "__ageofcreation__/img/items/latex-rubber.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-rubber",
     order = "a",
     stack_size = 200
@@ -202,7 +202,7 @@ data:extend({{
     type = "item",
     name = "aoc-rubber-belt",
     icon = "__ageofcreation__/img/items/rubber-belt.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-rubber",
     order = "c",
     stack_size = 100
@@ -212,7 +212,7 @@ data:extend({{
     type = "item",
     name = "aoc-fiber",
     icon = "__ageofcreation__/img/items/fiber.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-flora-wood",
     order = "k",
     stack_size = 200
@@ -252,7 +252,7 @@ data:extend({{
     type = "item",
     name = "aoc-fiber-mesh",
     icon = "__ageofcreation__/img/items/fiber-mesh.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-flora-flax",
     order = "c",
     stack_size = 50
@@ -322,7 +322,7 @@ data:extend({{
     type = "item",
     name = "aoc-silt",
     icon = "__ageofcreation__/img/items/silt.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-dirt",
     order = "c",
     stack_size = 500

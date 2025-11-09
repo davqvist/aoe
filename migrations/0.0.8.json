@@ -1,0 +1,20 @@
+{
+    "item": [
+        [
+            "aoc-industrial-fertilizer",
+            "aoc-fertilizer-2"
+        ]
+    ],
+    "recipe": [
+        [
+            "aoc-mixing-industrial-fertilizer-recipe",
+            "aoc-mixing-fertilizer-2-recipe"
+        ]
+    ],
+    "technology": [
+        [
+            "aoc-animal-food-tech",
+            "aoc-animal-food-tech-1"
+        ]
+    ]
+}

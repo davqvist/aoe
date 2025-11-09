@@ -1,4 +1,28 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.8
+Date: 2025-11-09
+  Features:
+    - added tier III animal techs
+    - added tier II and III drone techs
+    - added bio oil recipe from olives
+    - added more fuel values to hydrocarbon fluids
+  Changes:
+    - renamed plant oil to bio oil
+    - fish rendering now also outputs bio oil
+    - bio oil ratio from soybeans is improved
+    - changed more than 40 icons
+    - uncommon fish module recipe now requires 4 fish eggs instead of 1 common fish module
+    - changed lunar panel assets
+    - disabled calculating raw costs from recycling recipes
+    - increased the gene lab asset size
+    - changed internal name of industrial fertilizer and its recipe
+    - made the tier III icon blue brighter
+    - increased base chance for drone recipes
+    - lowered drone dying chance
+  Bugfixes:
+    - fixed the angels tanks graphics
+    - fixed animal module dying for tier 2+ recipes
+---------------------------------------------------------------------------------------------------
 Version: 0.0.7
 Date: 2025-11-07
   Features:

@@ -392,7 +392,7 @@ data:extend({{
 data:extend({{
   type = "technology",
   name = "aoc-lime-tech-2",
-  icon_size = 64,
+  icon_size = 64, icon_mipmaps = 4,
   icon = "__ageofcreation__/img/items/quicklime.png",
   prerequisites = {"aoc-electric-automation-tech-2", "aoc-lime-tech-1"},
   effects = {
@@ -411,7 +411,7 @@ data:extend({{
 data:extend({{
   type = "technology",
   name = "aoc-lime-tech-3",
-  icon_size = 64,
+  icon_size = 64, icon_mipmaps = 4,
   icon = "__ageofcreation__/img/items/quicklime.png",
   prerequisites = {"aoc-steel-tech-3", "aoc-lime-tech-2"},
   effects = {
@@ -1114,6 +1114,7 @@ data:extend({{
     name = "aoc-brass-tech",
 	  icon = data.raw["item"]["aoc-brass"].icon,
 	  icon_size = data.raw["item"]["aoc-brass"].icon_size,
+	  icon_mipmaps = data.raw["item"]["aoc-brass"].icon_mipmaps,
     prerequisites = {"aoc-copper-tech-2", "aoc-zinc-tech"},
 	  effects = {
       {
@@ -1141,6 +1142,7 @@ data:extend({{
     name = "aoc-electrum-tech",
 	  icon = data.raw["item"]["aoc-electrum"].icon,
 	  icon_size = data.raw["item"]["aoc-electrum"].icon_size,
+	  icon_mipmaps = data.raw["item"]["aoc-electrum"].icon_mipmaps,
     prerequisites = {"aoc-gold-tech", "aoc-silver-tech"},
 	  effects = {
       {
@@ -1160,6 +1162,7 @@ data:extend({{
     name = "aoc-aluminium-bronze-tech",
 	  icon = data.raw["item"]["aoc-aluminium-bronze"].icon,
 	  icon_size = data.raw["item"]["aoc-aluminium-bronze"].icon_size,
+	  icon_mipmaps = data.raw["item"]["aoc-aluminium-bronze"].icon_mipmaps,
     prerequisites = {"aoc-copper-tech-2", "aoc-aluminium-tech-2"},
 	  effects = {
       {
@@ -1635,8 +1638,8 @@ data:extend({{
 
 data:extend({{
   type = "technology",
-  name = "aoc-animal-food-tech",
-  icon_size = 64,
+  name = "aoc-animal-food-tech-1",
+  icon_size = 64, icon_mipmaps = 4,
   icon = "__ageofcreation__/img/items/animal-food.png",
   prerequisites = {"aoc-sulfur-tech", "aoc-maize-tech-2", "aoc-soybeans-tech-2", "aoc-fermentation-tech"},
   effects = {
@@ -1661,7 +1664,7 @@ data:extend({{
     name = "aoc-chicken-tech-2",
     icon_size = 64,
     icon = "__ageofcreation__/img/items/chicken.png",
-    prerequisites = {"aoc-chicken-tech-1", "aoc-animal-food-tech"},
+    prerequisites = {"aoc-chicken-tech-1", "aoc-animal-food-tech-1"},
 	  effects = {
 	    {
         type = "unlock-recipe",
@@ -1688,7 +1691,7 @@ data:extend({{
     name = "aoc-sheep-tech-2",
     icon_size = 64,
     icon = "__ageofcreation__/img/items/sheep.png",
-    prerequisites = {"aoc-sheep-tech-1", "aoc-animal-food-tech"},
+    prerequisites = {"aoc-sheep-tech-1", "aoc-animal-food-tech-1"},
 	  effects = {
       {
         type = "unlock-recipe",
@@ -1719,7 +1722,7 @@ data:extend({{
   name = "aoc-cow-tech-2",
   icon_size = 64,
   icon = "__ageofcreation__/img/items/cow.png",
-  prerequisites = {"aoc-cow-tech-1","aoc-animal-food-tech", "aoc-basic-chemistry-tech"},
+  prerequisites = {"aoc-cow-tech-1","aoc-animal-food-tech-1", "aoc-basic-chemistry-tech"},
   effects = {
     {
       type = "unlock-recipe",

@@ -243,7 +243,7 @@ data:extend({{
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoc-soybean-seeds', amount = 10}
+		{type = 'item', name = 'aoc-soybean-seeds', amount = 8}
 	},
 	results = {
 		{type = 'fluid', name = 'aoc-plant-oil', amount = 100}
@@ -1054,6 +1054,21 @@ data:extend({{
 }})
 
 data:extend({{
+	name = 'aoc-squeezer-olive-plant-oil-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-olive', amount = 8}
+	},
+	results = {
+		{type = 'fluid', name = 'aoc-plant-oil', amount = 100}
+    },
+	icons = combine_icons_tiny( get_icons( data.raw.fluid["aoc-plant-oil"] ), get_icons( data.raw.item["aoc-olive"] ) ),
+	energy_required = 4,
+	category = 'aoc-category-squeezing'
+}})
+
+data:extend({{
     name = 'aoc-farm-plot-grass-recipe',
     type = 'recipe',
     enabled = false,
@@ -1351,7 +1366,7 @@ data:extend({{
     type = 'recipe',
     enabled = false,
 	ingredients = {
-        {type = 'item', name = 'aoc-fish-module-1', amount = 1},
+        {type = 'item', name = 'aoc-fish-eggs', amount = 4},
 		{type = 'item', name = 'aoc-kelp', amount = 1},
 		{type = 'item', name = 'aoc-soy-flour', amount = 1},
 		{type = 'fluid', name = 'aoc-fish-water', amount = 400}

@@ -218,6 +218,10 @@ data:extend({{
 	    {
         type = "unlock-recipe",
         recipe = "aoc-greenhouse-olive-tree-seeds-recipe"
+      },
+	    {
+        type = "unlock-recipe",
+        recipe = "aoc-squeezer-olive-plant-oil-recipe"
       }
     },
     unit = {
@@ -471,7 +475,7 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "aoc-better-glass-tech-2",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     icon = "__ageofcreation__/img/items/glass.png",
     prerequisites = {"aoc-fertilizer-tech-1", "aoc-better-glass-tech-1"},
 	  effects = {
@@ -675,7 +679,7 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "aoc-sugar-tech",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     icon = "__ageofcreation__/img/items/sugar.png",
     prerequisites = {"aoc-fruit-tree-cultivation-tech-1","aoc-maize-tech-2"},
 	  effects = {

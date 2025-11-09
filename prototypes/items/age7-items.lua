@@ -68,7 +68,7 @@ data:extend({{
     type = "item",
     name = "aoc-dilithium-crystal",
     icon = "__ageofcreation__/img/items/dilithium-crystal.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-metals-rest",
     order = "j",
     stack_size = 200
@@ -130,7 +130,7 @@ data:extend({{
     type = "item",
     name = "aoc-diamond-chip",
     icon = "__ageofcreation__/img/items/diamond-chip.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-modules",
     order = "a",
     stack_size = 200
@@ -1082,7 +1082,7 @@ data:extend({{
     type = "item",
     name = "aoc-alien-chitin",
     icon = "__ageofcreation__/img/items/alien-chitin.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-aliens",
     order = "e",
     stack_size = 200

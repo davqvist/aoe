@@ -1505,7 +1505,8 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'aoc-fish-meat', amount = 4},
-		{type = 'item', name = 'aoc-bones', amount = 1}
+		{type = 'item', name = 'aoc-bones', amount = 1},
+		{type = 'fluid', name = 'aoc-plant-oil', amount = 25}
     },
     energy_required = 4,
 	subgroup = 'aoc-fauna-fish',

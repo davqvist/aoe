@@ -45,7 +45,7 @@ data:extend({{
     type = "item",
     name = "aoc-wood-pulp",
     icon = "__ageofcreation__/img/items/wood-pulp.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-flora-wood",
     order = "g",
     stack_size = 500,
@@ -57,7 +57,7 @@ data:extend({{
     type = "item",
     name = "aoc-resin",
     icon = "__ageofcreation__/img/items/resin.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-flora-wood",
     order = "h",
     stack_size = 200
@@ -127,7 +127,7 @@ data:extend({{
     type = "item",
     name = "aoc-sand",
     icon = "__ageofcreation__/img/items/sand.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-stone",
     order = "c",
     stack_size = 500
@@ -137,7 +137,7 @@ data:extend({{
     type = "item",
     name = "aoc-glass",
     icon = "__ageofcreation__/img/items/glass.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-glass",
     order = "c",
     stack_size = 200
@@ -147,7 +147,7 @@ data:extend({{
     type = "item",
     name = "aoc-soil",
     icon = "__ageofcreation__/img/items/soil.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-dirt",
     order = "a",
     stack_size = 500

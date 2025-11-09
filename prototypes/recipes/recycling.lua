@@ -26,6 +26,7 @@ for _, recipe in pairs(data.raw.recipe) do
 				data.raw.recipe[recipe.results[1].name .. '-recycling'].results = {
 					{type = 'item', name = ingredient.name, amount=math.ceil(ingredient.amount/2)}
 				}
+				data.raw.recipe[recipe.results[1].name .. '-recycling'].allow_decomposition = false
 			  	flag = true
 			end
 		  end
@@ -51,6 +52,7 @@ for _, m in pairs(data.raw.module) do
 	data.raw.recipe[m.name .. '-recycling'].results = {
 		{type = 'item', name = res, amount=1}
 	}
+	data.raw.recipe[m.name .. '-recycling'].allow_decomposition = false
   end
 end
 
@@ -61,5 +63,6 @@ for _, e in pairs(AOC["to_enchant"]) do
 		data.raw.recipe[_ .. '-' .. t .. '-recycling'].results = {
 			{type = 'item', name = _ .. lower, amount=1}
 		}
+		data.raw.recipe[_ .. '-' .. t .. '-recycling'].allow_decomposition = false
 	end
 end

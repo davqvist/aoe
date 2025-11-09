@@ -117,7 +117,7 @@ data:extend({{
     type = "item",
     name = "aoc-diamond",
     icon = "__ageofcreation__/img/items/diamond.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-gems",
     order = "a",
     stack_size = 200
@@ -127,7 +127,7 @@ data:extend({{
     type = "item",
     name = "aoc-garnet",
     icon = "__ageofcreation__/img/items/garnet.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-gems",
     order = "c",
     stack_size = 200
@@ -137,7 +137,7 @@ data:extend({{
     type = "item",
     name = "aoc-lens",
     icon = "__ageofcreation__/img/items/lens.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-glass",
     order = "e",
     stack_size = 200
@@ -672,7 +672,7 @@ data:extend({{
     type = "item",
     name = "aoc-copper-sulfate",
     icon = "__ageofcreation__/img/items/copper-sulfate.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-metals-copper",
     order = "i",
     stack_size = 200
@@ -739,7 +739,7 @@ data:extend({{
     type = "item",
     name = "aoc-tailings-dust",
     icon = "__ageofcreation__/img/items/tailings-dust.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-metals-rest",
     order = "k",
     stack_size = 200
@@ -779,7 +779,7 @@ data:extend({{
     type = "item",
     name = "aoc-brass",
     icon = "__ageofcreation__/img/items/brass.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-metals-alloys",
     order = "d",
     stack_size = 200
@@ -799,7 +799,7 @@ data:extend({{
     type = "item",
     name = "aoc-electrum",
     icon = "__ageofcreation__/img/items/electrum.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-metals-alloys",
     order = "e",
     stack_size = 200
@@ -809,7 +809,7 @@ data:extend({{
     type = "item",
     name = "aoc-aluminium-bronze",
     icon = "__ageofcreation__/img/items/aluminium-bronze.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-metals-alloys",
     order = "f",
     stack_size = 200
@@ -873,7 +873,7 @@ data:extend({{
     type = "item",
     name = "aoc-diode",
     icon = "__ageofcreation__/img/items/diode.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-circuits",
     order = "f",
     stack_size = 200
@@ -903,7 +903,7 @@ data:extend({{
     type = "item",
     name = "aoc-inductor",
     icon = "__ageofcreation__/img/items/inductor.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-circuits",
     order = "i",
     stack_size = 200
@@ -1183,7 +1183,7 @@ data:extend({{
     type = "item",
     name = "aoc-animal-food",
     icon = "__ageofcreation__/img/items/animal-food.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-fauna-items",
     order = "d",
     stack_size = 200

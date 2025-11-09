@@ -94,7 +94,7 @@ function ms_data()
                 {type="fluid", name="crude-oil", quantity=1},
                 {type="item", name="aoc-rubber", quantity=1},
                 {type="fluid", name="aoc-drilling-fluid", quantity=1},
-                {type="item", name="aoc-industrial-fertilizer", quantity=1},
+                {type="item", name="aoc-fertilizer-2", quantity=1},
                 {type="item", name="bulk-inserter", quantity=1},
                 {type="item", name="fast-transport-belt", quantity=1},
                 {type="item", name="fast-transport-belt", quantity=1000, next="x10"},

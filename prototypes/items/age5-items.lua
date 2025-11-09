@@ -49,8 +49,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-rubber",
-    icon = "__angelspetrochemgraphics__/graphics/icons/solid-rubber.png",
-    icon_size = 32,
+    icon = "__ageofcreation__/img/items/rubber.png",
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-rubber",
     order = "b",
     stack_size = 200
@@ -178,11 +178,21 @@ data:extend({{
 
 data:extend({{
     type = "item",
-    name = "aoc-industrial-fertilizer",
+    name = "aoc-fertilizer-2",
     icon = "__ageofcreation__/img/items/industrial-fertilizer.png",
     icon_size = 64,
     subgroup = "aoc-flora-misc",
     order = "b",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-animal-food-2",
+    icon = "__ageofcreation__/img/items/animal-food-2.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "aoc-fauna-items",
+    order = "e",
     stack_size = 200
 }})
 
@@ -253,8 +263,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-nauvium-plate",
-    icons = { { icon = "__ageofcreation__/img/items/nauvium-plate.png", icon_size = 64 }, { icon = "__ageofcreation__/img/items/atoms/nv.png", icon_size = 64 } },
-    pictures = { { filename = "__ageofcreation__/img/items/nauvium-plate.png", size = 64, scale = 0.5  } },
+    icons = { { icon = "__ageofcreation__/img/items/nauvium-plate.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/nv.png", icon_size = 64 } },
+    pictures = { { filename = "__ageofcreation__/img/items/nauvium-plate.png", size = 64, scale = 0.5, mipmap_count = 4 } },
     subgroup = "aoc-magic-metals",
     order = "b",
     stack_size = 200
@@ -271,7 +281,7 @@ data:extend({{
     type = "item",
     name = "aoc-gunpowder",
     icon = "__ageofcreation__/img/items/gunpowder.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-petrochem",
     order = "e",
     stack_size = 200

@@ -1,8 +1,8 @@
 data:extend({{
     type = "item",
     name = "aoc-lunar-panel",
-    icon = "__ageofcreation__/img/entities/lunar-panel.png",
-    icon_size = 192,
+    icon = "__ageofcreation__/img/entities/lunar-panel-icon.png",
+    icon_size = 128,
     subgroup = "aoc-magic-buildings",
     order = "e",
     place_result = "aoc-lunar-panel",
@@ -19,8 +19,8 @@ data:extend({{
 	allowed_effects = {},
 	module_slots = 0,
   fixed_recipe = "aoc-starlight-starlight-recipe",
-  icon = "__ageofcreation__/img/entities/lunar-panel.png",
-  icon_size = 192,
+  icon = "__ageofcreation__/img/entities/lunar-panel-icon.png",
+  icon_size = 128,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoc-lunar-panel" },
 	circuit_wire_connection_point = circuit_connector_definitions["assembling-machine"].points,
@@ -31,12 +31,23 @@ data:extend({{
 	collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
 	graphics_set = {
     animation = {
-      layers = {
+      layers =
+      {
         {
           filename = "__ageofcreation__/img/entities/lunar-panel.png",
-          width = 192,
-          height = 192,
-          frame_count = 1,
+          priority = "high",
+          width = 230,
+          height = 224,
+          shift = util.by_pixel(-3, 3.5),
+          scale = 0.5
+        },
+        {
+          filename = "__base__/graphics/entity/solar-panel/solar-panel-shadow.png",
+          priority = "high",
+          width = 220,
+          height = 180,
+          shift = util.by_pixel(9.5, 6),
+          draw_as_shadow = true,
           scale = 0.5
         }
       }

@@ -148,9 +148,9 @@ data.raw['item']['coal'].icons = { { icon = "__base__/graphics/icons/coal.png", 
 data:extend({{
     type = "item",
     name = "aoc-coal-dust",
-    icons = { { icon = "__ageofcreation__/img/items/coal-dust.png" }, { icon = "__ageofcreation__/img/items/atoms/c.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/coal-dust.png", icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/c.png" } },
     icon_size = 64,
-    pictures = { { filename = "__ageofcreation__/img/items/coal-dust.png", size = 64, scale = 0.5  } },
+    pictures = { { filename = "__ageofcreation__/img/items/coal-dust.png", size = 64, scale = 0.5, mipmap_count = 4 } },
     subgroup = "aoc-coal",
     order = "b",
     stack_size = 200
@@ -159,9 +159,9 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-graphite-rod",
-    icons = { { icon = "__ageofcreation__/img/items/graphite-rod.png" }, { icon = "__ageofcreation__/img/items/atoms/c.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/graphite.png", icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/c.png" } },
     icon_size = 64,
-    pictures = { { filename = "__ageofcreation__/img/items/graphite-rod.png", size = 64, scale = 0.5  } },
+    pictures = { { filename = "__ageofcreation__/img/items/graphite.png", size = 64, scale = 0.5, mipmap_count = 4  } },
     subgroup = "aoc-coal",
     order = "c",
     stack_size = 200
@@ -170,9 +170,9 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-coke",
-    icons = { { icon = "__ageofcreation__/img/items/coke.png" }, { icon = "__ageofcreation__/img/items/atoms/c.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/coke.png", icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/c.png" } },
     icon_size = 64,
-    pictures = { { filename = "__ageofcreation__/img/items/coke.png", size = 64, scale = 0.5  } },
+    pictures = { { filename = "__ageofcreation__/img/items/coke.png", size = 64, scale = 0.5, mipmap_count = 4 } },
     subgroup = "aoc-coal",
     order = "d",
     stack_size = 200,
@@ -194,7 +194,7 @@ data:extend({{
     type = "item",
     name = "aoc-quartz-dust",
     icon = "__ageofcreation__/img/items/quartz-dust.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-glass",
     order = "b",
     stack_size = 200
@@ -339,9 +339,9 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-magnesium-dust",
-    icons = { { icon = "__ageofcreation__/img/items/magnesium-dust.png" }, { icon = "__ageofcreation__/img/items/atoms/mg.png" } },
+    icons = { { icon = "__ageofcreation__/img/items/magnesium-dust.png", icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/mg.png" } },
     icon_size = 64,
-    pictures = { { filename = "__ageofcreation__/img/items/magnesium-dust.png", size = 64, scale = 0.5  } },
+    pictures = { { filename = "__ageofcreation__/img/items/magnesium-dust.png", size = 64, scale = 0.5, mipmap_count = 4 } },
     subgroup = "aoc-metals-rest",
     order = "e",
     stack_size = 200
@@ -351,7 +351,7 @@ data:extend({{
     type = "item",
     name = "aoc-quicklime",
     icon = "__ageofcreation__/img/items/quicklime.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-stone",
     order = "p",
     stack_size = 200
@@ -361,7 +361,7 @@ data:extend({{
     type = "item",
     name = "aoc-slaked-lime",
     icon = "__ageofcreation__/img/items/slaked-lime.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-stone",
     order = "q",
     stack_size = 200
@@ -381,7 +381,7 @@ data:extend({{
     type = "item",
     name = "aoc-salt",
     icon = "__ageofcreation__/img/items/salt.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-chemicals",
     order = "a",
     stack_size = 200
@@ -424,7 +424,7 @@ data:extend({{
     type = "item",
     name = "aoc-fish-eggs",
     icon = "__ageofcreation__/img/items/fish-eggs.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-fauna-fish",
     order = "b",
     stack_size = 100
@@ -444,7 +444,7 @@ data:extend({{
     type = "item",
     name = "aoc-sensor",
     icon = "__ageofcreation__/img/items/sensor.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-parts",
     order = "i",
     stack_size = 100

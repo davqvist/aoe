@@ -595,14 +595,14 @@ script.on_event(defines.events.on_tick,
 	if storage.farms then
       for _,farm in pairs(storage.farms) do
 		if farm.valid and farm.name == "aoc-farm-reservoir" then
-			check_module_dying( farm, "aoc%-farm%-reservoir%-fish%-eggs%-recipe", 0.02 )
+			check_module_dying( farm, "aoc%-farm%-reservoir%-fish%-eggs%-?.*%-recipe", 0.02 )
 		elseif farm.valid and farm.name == "aoc-farm-chicken-coop" then
-			check_module_dying( farm, "aoc%-farm%-chicken%-coop%-egg%-recipe", 0.04 )
+			check_module_dying( farm, "aoc%-farm%-chicken%-coop%-egg%-?.*%-recipe", 0.04 )
 		elseif farm.valid and farm.name == "aoc-farm-barn" then
-			check_module_dying( farm, "aoc%-farm%-barn%-lamb%-recipe", 0.06 )
-			check_module_dying( farm, "aoc%-farm%-barn%-calf%-recipe", 0.08 )
+			check_module_dying( farm, "aoc%-farm%-barn%-lamb%-?*%-recipe", 0.06 )
+			check_module_dying( farm, "aoc%-farm%-barn%-calf%-?.*%-recipe", 0.08 )
 		elseif farm.valid and farm.name == "aoc-farm-apiary" then
-			check_module_dying( farm, "aoc%-larva%-.*%-recipe", 0.06 )
+			check_module_dying( farm, "aoc%-larva%-.*%-recipe", 0.04 )
 		else storage.farms[_]=nil
 		end
 	  end

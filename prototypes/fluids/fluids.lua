@@ -864,7 +864,8 @@ data:extend({{
 	base_color = {r=0.38, g=0.38, b=0.38},
 	flow_color = {r=0.38, g=0.38, b=0.38},
 	default_temperature = 20,
-	gas = true
+	gas = true,
+    fuel_value = "250kJ"
 }})
 
 data:extend({{
@@ -876,7 +877,8 @@ data:extend({{
 	base_color = {r=0.43, g=0.43, b=0.43},
 	flow_color = {r=0.43, g=0.43, b=0.43},
 	default_temperature = 20,
-	gas = true
+	gas = true,
+    fuel_value = "250kJ"
 }})
 
 data:extend({{
@@ -899,7 +901,8 @@ data:extend({{
 	base_color = {r=0.38, g=0.38, b=0.38},
 	flow_color = {r=0.38, g=0.38, b=0.38},
 	default_temperature = 20,
-	gas = true
+	gas = true,
+    fuel_value = "350kJ"
 }})
 
 data:extend({{
@@ -911,7 +914,8 @@ data:extend({{
 	base_color = {r=0.43, g=0.43, b=0.43},
 	flow_color = {r=0.43, g=0.43, b=0.43},
 	default_temperature = 20,
-	gas = true
+	gas = true,
+    fuel_value = "350kJ"
 }})
 
 data:extend({{
@@ -923,7 +927,8 @@ data:extend({{
 	base_color = {r=0.38, g=0.38, b=0.38},
 	flow_color = {r=0.38, g=0.38, b=0.38},
 	default_temperature = 20,
-	gas = true
+	gas = true,
+    fuel_value = "400kJ"
 }})
 
 data:extend({{
@@ -935,7 +940,8 @@ data:extend({{
 	base_color = {r=0.43, g=0.43, b=0.43},
 	flow_color = {r=0.43, g=0.43, b=0.43},
 	default_temperature = 20,
-	gas = true
+	gas = true,
+    fuel_value = "400kJ"
 }})
 
 data:extend({{
@@ -946,7 +952,8 @@ data:extend({{
     order = "n",
 	base_color = {r=0.48, g=0.48, b=0.48},
 	flow_color = {r=0.48, g=0.48, b=0.48},
-	default_temperature = 20
+	default_temperature = 20,
+    fuel_value = "400kJ"
 }})
 
 data:extend({{
@@ -958,7 +965,8 @@ data:extend({{
 	base_color = {r=0.43, g=0.43, b=0.43},
 	flow_color = {r=0.43, g=0.43, b=0.43},
 	default_temperature = 20,
-	gas = true
+	gas = true,
+    fuel_value = "450kJ"
 }})
 
 data:extend({{
@@ -970,7 +978,8 @@ data:extend({{
 	base_color = {r=0.38, g=0.38, b=0.38},
 	flow_color = {r=0.38, g=0.38, b=0.38},
 	default_temperature = 20,
-	gas = true
+	gas = true,
+    fuel_value = "200kJ"
 }})
 
 data:extend({{

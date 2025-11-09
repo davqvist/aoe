@@ -320,7 +320,7 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "aoc-salt-tech",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     icon = "__ageofcreation__/img/items/salt.png",
     prerequisites = {"aoc-advanced-smelting-tech-1"},
 	  effects = {
@@ -653,7 +653,7 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "aoc-better-glass-tech-1",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     icon = "__ageofcreation__/img/items/glass.png",
     prerequisites = {"aoc-igneous-stones-tech-1"},
 	  effects = {
@@ -672,7 +672,7 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "aoc-lime-tech-1",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     icon = "__ageofcreation__/img/items/quicklime.png",
     prerequisites = {"aoc-sedimentary-stones-tech-1"},
 	  effects = {
@@ -808,8 +808,8 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "aoc-paper-tech-2",
-    icon_size = 64,
-    icon = "__ageofcreation__/img/items/paper.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-paper.png",
+    icon_size = 32,
     prerequisites = {"aoc-electrolysis-tech"},
 	  effects = {
       {

@@ -30,7 +30,8 @@ data:extend({
     name = "aoc-magic",
 	  order = "z",
 	  icon = "__ageofcreation__/img/items/nauvium-plate.png",
-	  icon_size = 64
+	  icon_size = 64,
+    icon_mipmaps = 4
   },
   {
 	  type = "item-subgroup",

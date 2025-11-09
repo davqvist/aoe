@@ -3881,7 +3881,6 @@ data:extend({{
 	category = 'aoc-category-farm-chicken-coop'
 }})
 
-
 data:extend({{
     name = 'aoc-farm-barn-sheep-2-recipe',
     type = 'recipe',
