@@ -79,6 +79,14 @@ data:extend({{
     categories = {"armor"}
 }})
 
+data.raw["generator-equipment"]["fission-reactor-equipment"].burner = {
+  type = 'burner',
+  emissions_per_minute = {pollution = 6},
+  fuel_inventory_size = 1,
+  burnt_inventory_size = 1,
+  fuel_categories = {'nuclear'}
+}
+
 data:extend({{
     type = "inventory-bonus-equipment",
     name = "aoc-ring-equipment",

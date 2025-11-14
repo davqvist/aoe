@@ -80,7 +80,7 @@ data:extend({{
   type = "technology",
   name = "aoc-lotus-flower-tech-1",
   icon = "__ageofcreation__/img/items/lotus-flower.png",
-  icon_size = 64,
+  icon_size = 128,
   prerequisites = {"aoc-starlight-tech"},
   effects = {
     {
@@ -111,7 +111,7 @@ data:extend({{
   type = "technology",
   name = "aoc-lotus-flower-tech-2",
   icon = "__ageofcreation__/img/items/lotus-flower.png",
-  icon_size = 64,
+  icon_size = 128,
   prerequisites = {"aoc-lotus-flower-tech-1", "aoc-battery-tech"},
   effects = {
     {

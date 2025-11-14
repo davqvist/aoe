@@ -1,17 +1,18 @@
 
 data.raw.lab["lab"].inputs = {}
-for age=1,7 do
+for age=1,8 do
     table.insert(data.raw.lab["lab"].inputs, "aoc-science-" .. string.format("%02d", age) )
 end
 
 local age_tech_cost = {
-	{1},
-    {2,1},
-    {0,2,1},
-    {0,3,2,1},
-    {0,5,3,2,1},
-    {0,8,5,3,2,1},
-    {0,13,8,5,3,2,1}
+  {1},
+  {2,1},
+  {0,2,1},
+  {0,0,2,1},
+  {0,0,3,2,1},
+  {0,0,5,3,2,1},
+  {0,0,8,5,3,2,1},
+  {0,0,13,8,5,3,2,1}
 }
 
 local tiers = {"normal","uncommon","rare","epic","legendary"}
@@ -24,7 +25,8 @@ local to_enchant = {
     ["aoc-portable-boiler-equipment"] = "generator-equipment",
     ["solar-panel-equipment"] = "solar-panel-equipment",
     ["battery-equipment"] = "battery-equipment",
-    ["exoskeleton-equipment"] = "movement-bonus-equipment"
+    ["exoskeleton-equipment"] = "movement-bonus-equipment",
+    ["fission-reactor-equipment"] = "generator-equipment"
 }
 
 function table.contains(table, element)

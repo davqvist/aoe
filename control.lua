@@ -825,7 +825,7 @@ function check_players( cauldron )
 		local chance, recipe = string.match(cauldron.get_recipe().name, "^aoc%-brewing%-(%d%d)%-(.*)$")
 		if recipe then
 			if cauldron.force.recipes[recipe] then 
-				chance = chance/100
+				chance = -chance/100
 				local surface = cauldron.surface
 				local temp = surface.find_entities_filtered({type="character", area={{cauldron.position.x-8, cauldron.position.y-8}, {cauldron.position.x+8, cauldron.position.y+8}}})
 				if temp ~= nil and #temp > 0 then 
@@ -910,6 +910,9 @@ script.on_event(defines.events.on_script_trigger_effect,
 			if flag then 
 				storage.scrolltick[game.tick+3600] = p.index
 				p.remove_item{name="aoc-scroll", count=1}
+			else 
+				local message = {"", {"age-of-creation.nothing_to_research"}}
+				p.print(message)
 			end
 		end
 		if p and event.effect_id == "aoc-trigger-ender-orb" then

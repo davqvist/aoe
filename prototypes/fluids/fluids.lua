@@ -1084,6 +1084,53 @@ data:extend({{
     gas = true
 }})
 
+data:extend({{
+    type = "fluid",
+    name = "aoc-formaldehyde",
+    icons = create_gas_fluid_icon( { "__angelspetrochemgraphics__/graphics/icons/molecules/formaldehyde.png", 72 }, { { 044, 044, 044 }, { 214, 012, 012 }, { 242, 242, 242 } } ),
+    subgroup = "aoc-petrochem-fluids-2",
+    order = "h",
+	base_color = {r=0.4, g=0.8, b=0.4},
+	flow_color = {r=0.4, g=0.8, b=0.4},
+	default_temperature = 20,
+    gas = true
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoc-acetylene",
+    icons = create_gas_fluid_icon( nil, { { 044, 044, 044 }, { 044, 044, 044 }, { 242, 242, 242 } } ),
+    subgroup = "aoc-petrochem-fluids-2",
+    order = "i",
+	base_color = {r=0.4, g=0.4, b=0.45},
+	flow_color = {r=0.4, g=0.4, b=0.45},
+	default_temperature = 20,
+    gas = true
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoc-vinylchloride",
+    icons = create_gas_fluid_icon( nil, { { 044, 044, 044 }, { 243, 243, 243 }, { 075, 195, 045 } } ),
+    subgroup = "aoc-petrochem-fluids-2",
+    order = "j",
+	base_color = {r=0.4, g=0.6, b=0.4},
+	flow_color = {r=0.4, g=0.6, b=0.4},
+	default_temperature = 20,
+    gas = true
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoc-carbon-disulfide",
+    icons = create_gas_fluid_icon( nil, { { 044, 044, 044 }, { 216, 196, 017 }, { 210, 187, 030 } } ),
+    subgroup = "aoc-petrochem-fluids-2",
+    order = "k",
+	base_color = {r=0.8, g=0.8, b=0.4},
+	flow_color = {r=0.8, g=0.8, b=0.4},
+	default_temperature = 20
+}})
+
 data.raw['fluid']['lubricant'].subgroup = "aoc-petrochem-fluids-2"
 data.raw['fluid']['lubricant'].order = "f"
 
@@ -1128,6 +1175,17 @@ data:extend({{
     order = "d",
 	base_color = {r=1, g=0.8, b=0.4},
 	flow_color = {r=1, g=0.8, b=0.4},
+	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoc-polyvinylchloride",
+    icons = create_liquid_fluid_icon( { "__angelspetrochemgraphics__/graphics/icons/molecules/polyethylene_rotated.png", 72, { -10, 0 }, 32 / 72 }, { { 044, 044, 044 }, { 243, 243, 243 }, { 075, 195, 045 } } ),
+    subgroup = "aoc-fluids-rubber",
+    order = "e",
+	base_color = {r=0.68, g=0.68, b=0.68},
+	flow_color = {r=0.68, g=0.68, b=0.68},
 	default_temperature = 20
 }})
 
@@ -1220,6 +1278,18 @@ data:extend({{
     order = "d",
 	base_color = {r=0.88, g=0.43, b=0.76},
 	flow_color = {r=0.88, g=0.43, b=0.76},
+	default_temperature = 20
+}})
+
+data:extend({{
+    type = "fluid",
+    name = "aoc-magical-solvent",
+    icon = "__ageofcreation__/img/fluids/magical-solvent.png",
+    icon_size = 64,
+    subgroup = "aoc-fluids-magic-rest",
+    order = "e",
+	base_color = {r=0.27, g=0.4, b=0.4},
+	flow_color = {r=0.27, g=0.4, b=0.4},
 	default_temperature = 20
 }})
 

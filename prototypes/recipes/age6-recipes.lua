@@ -657,6 +657,37 @@ data:extend({{
 }})
 
 data:extend({{
+	name = 'aoc-brewing-15-aoc-alchemy-magical-solvent-recipe',
+	type = 'recipe',
+	enabled = true,
+	hidden = true,
+	ingredients = {
+        {type = 'fluid', name = 'aoc-solvent', amount = 50},
+		{type = 'item', name = 'aoc-lotus-flower', amount = 1}
+	},
+	results = {
+		{type = 'fluid', name = 'aoc-magical-solvent', amount = 50}
+    },
+	category = 'aoc-category-brewing',
+	energy_required = 5
+}})
+
+data:extend({{
+	name = 'aoc-alchemy-magical-solvent-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'aoc-mana', amount = 5},
+		{type = 'fluid', name = 'aoc-solvent', amount = 15}
+	},
+	results = {
+		{type = 'fluid', name = 'aoc-magical-solvent', amount = 20}
+    },
+	category = 'aoc-category-alchemy',
+	energy_required = 2
+}})
+
+data:extend({{
 	name = 'aoc-crafting-mana-battery-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -969,8 +1000,10 @@ data:extend({{
 		{type = 'item', name = 'aoc-scroll', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoc-planet-saturn', amount = 1, probability = 0.1}
+        {type = 'item', name = 'aoc-planet-saturn', amount = 1, probability = 0.1},
+        {type = 'item', name = 'aoc-planet-gleba', amount = 1, probability = 0.01}
     },
+	main_product = 'aoc-planet-saturn',	
     energy_required = 30,
 	category = 'aoc-category-stargazing',
 	research = 'aoc-lead-plate'
@@ -1054,7 +1087,7 @@ data.raw.recipe["rocket-part"].ingredients =
 }
 
 data:extend({{
-	name = 'aoc-brewing-15-aoc-alchemy-ender-fluid-recipe',
+	name = 'aoc-brewing-20-aoc-alchemy-ender-fluid-recipe',
 	type = 'recipe',
 	enabled = true,
 	hidden = true,
@@ -1207,7 +1240,7 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoc-brewing-10-aoc-gene-lab-mutagen-recipe',
+	name = 'aoc-brewing-15-aoc-gene-lab-mutagen-recipe',
 	type = 'recipe',
 	enabled = true,
 	hidden = true,

@@ -59,7 +59,7 @@ data:extend({{
     icon = "__angelssmeltinggraphics__/graphics/icons/wire-coil-copper.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-parts",
-    order = "g",
+    order = "h",
     stack_size = 25
 }})
 
@@ -69,7 +69,7 @@ data:extend({{
     icon = "__angelssmeltinggraphics__/graphics/icons/wire-coil-silver.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-parts",
-    order = "h",
+    order = "i",
     stack_size = 25
 }})
 
@@ -446,6 +446,6 @@ data:extend({{
     icon = "__ageofcreation__/img/items/sensor.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-parts",
-    order = "i",
+    order = "j",
     stack_size = 100
 }})

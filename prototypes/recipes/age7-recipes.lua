@@ -635,7 +635,8 @@ data:extend({{
 	category = 'aoc-category-spawning',
 	result_is_always_fresh = true,
 	energy_required = 30,
-	research = 'aoc-rune'
+	research = 'aoc-rune',
+	surface_conditions = {{ property = "pressure", min = 4000, max = 4000 }}
 }})
 
 data:extend({{
@@ -653,7 +654,8 @@ data:extend({{
 	category = 'aoc-category-spawning',
 	result_is_always_fresh = true,
 	energy_required = 30,
-	research = 'aoc-rune'
+	research = 'aoc-rune',
+	surface_conditions = {{ property = "pressure", min = 4000, max = 4000 }}
 }})
 
 data:extend({{
@@ -671,7 +673,8 @@ data:extend({{
 	category = 'aoc-category-spawning',
 	result_is_always_fresh = true,
 	energy_required = 30,
-	research = 'aoc-rune'
+	research = 'aoc-rune',
+	surface_conditions = {{ property = "pressure", min = 4000, max = 4000 }}
 }})
 
 data:extend({{
@@ -689,7 +692,8 @@ data:extend({{
 	category = 'aoc-category-spawning',
 	result_is_always_fresh = true,
 	energy_required = 30,
-	research = 'aoc-rune'
+	research = 'aoc-rune',
+	surface_conditions = {{ property = "pressure", min = 4000, max = 4000 }}
 }})
 
 data:extend({{
@@ -707,7 +711,8 @@ data:extend({{
 	category = 'aoc-category-spawning',
 	result_is_always_fresh = true,
 	energy_required = 25,
-	research = 'aoc-rune'
+	research = 'aoc-rune',
+	surface_conditions = {{ property = "pressure", min = 4000, max = 4000 }}
 }})
 
 data:extend({{
@@ -725,7 +730,8 @@ data:extend({{
 	category = 'aoc-category-spawning',
 	result_is_always_fresh = true,
 	energy_required = 25,
-	research = 'aoc-rune'
+	research = 'aoc-rune',
+	surface_conditions = {{ property = "pressure", min = 4000, max = 4000 }}
 }})
 
 data:extend({{
@@ -743,7 +749,8 @@ data:extend({{
 	category = 'aoc-category-spawning',
 	result_is_always_fresh = true,
 	energy_required = 25,
-	research = 'aoc-rune'
+	research = 'aoc-rune',
+	surface_conditions = {{ property = "pressure", min = 4000, max = 4000 }}
 }})
 
 data:extend({{
@@ -761,7 +768,8 @@ data:extend({{
 	category = 'aoc-category-spawning',
 	result_is_always_fresh = true,
 	energy_required = 25,
-	research = 'aoc-rune'
+	research = 'aoc-rune',
+	surface_conditions = {{ property = "pressure", min = 4000, max = 4000 }}
 }})
 
 data:extend({{
@@ -779,7 +787,8 @@ data:extend({{
 	category = 'aoc-category-spawning',
 	result_is_always_fresh = true,
 	energy_required = 20,
-	research = 'aoc-rune'
+	research = 'aoc-rune',
+	surface_conditions = {{ property = "pressure", min = 4000, max = 4000 }}
 }})
 
 data:extend({{
@@ -797,7 +806,8 @@ data:extend({{
 	category = 'aoc-category-spawning',
 	result_is_always_fresh = true,
 	energy_required = 20,
-	research = 'aoc-rune'
+	research = 'aoc-rune',
+	surface_conditions = {{ property = "pressure", min = 4000, max = 4000 }}
 }})
 
 data:extend({{
@@ -815,7 +825,8 @@ data:extend({{
 	category = 'aoc-category-spawning',
 	result_is_always_fresh = true,
 	energy_required = 20,
-	research = 'aoc-rune'
+	research = 'aoc-rune',
+	surface_conditions = {{ property = "pressure", min = 4000, max = 4000 }}
 }})
 
 data:extend({{
@@ -833,7 +844,8 @@ data:extend({{
 	category = 'aoc-category-spawning',
 	result_is_always_fresh = true,
 	energy_required = 20,
-	research = 'aoc-rune'
+	research = 'aoc-rune',
+	surface_conditions = {{ property = "pressure", min = 4000, max = 4000 }}
 }})
 
 data:extend({{
@@ -1498,6 +1510,22 @@ data:extend({{
 }})
 
 data:extend({{
+	name = 'aoc-crafting-fission-reactor-equipment-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-electrum-machine-hull', amount = 10},
+		{type = 'item', name = 'aoc-stainless-steel', amount = 100},
+		{type = 'item', name = 'aoc-lead-plate', amount = 100},
+		{type = 'item', name = 'tungsten-plate', amount = 100}
+	},
+	results = {
+		{type = 'item', name = 'fission-reactor-equipment', amount = 1}
+    },
+	energy_required = 10
+}})
+
+data:extend({{
 	name = 'aoc-crafting-reactor-fuel-cell-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1774,4 +1802,192 @@ data:extend({{
         {type = 'item', name = 'aoc-science-08', amount = 1}
     },
 	energy_required = 4
+}})
+
+data:extend({{
+	name = 'aoc-crafting-express-transport-belt-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'fast-transport-belt', amount = 4},
+        {type = 'item', name = 'electric-engine-unit', amount = 1},
+        {type = 'item', name = 'aoc-platinum-plate', amount = 1}
+	},
+	results = {
+        {type = 'item', name = 'express-transport-belt', amount = 4}
+    },
+	energy_required = 4
+}})
+
+data:extend({{
+	name = 'aoc-crafting-express-splitter-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'express-transport-belt', amount = 2},
+        {type = 'item', name = 'electric-engine-unit', amount = 1},
+	},
+	results = {
+        {type = 'item', name = 'express-splitter', amount = 1}
+    },
+	energy_required = 2
+}})
+
+data:extend({{
+	name = 'aoc-crafting-express-lane-splitter-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'express-transport-belt', amount = 4},
+		{type = 'item', name = 'express-splitter', amount = 1}
+	},
+	results = {
+        {type = 'item', name = 'express-lane-splitter', amount = 1}
+    },
+	energy_required = 1
+}})
+
+data:extend({{
+	name = 'aoc-crafting-express-underground-belt-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'express-transport-belt', amount = 15},
+		{type = 'item', name = 'iron-plate', amount = 4}
+	},
+	results = {
+        {type = 'item', name = 'express-underground-belt', amount = 2}
+    },
+	energy_required = 2
+}})
+
+data:extend({{
+	name = 'aoc-crafting-stack-inserter-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-titanium-rod', amount = 2},
+		{type = 'item', name = 'engine-unit', amount = 8},
+		{type = 'item', name = 'processing-unit', amount = 2},
+		{type = 'item', name = 'aoc-rubber', amount = 1}
+	},
+	results = {
+        {type = 'item', name = 'stack-inserter', amount = 3}
+    },
+	energy_required = 0.5
+}})
+
+data:extend({{
+	name = 'aoc-crafting-long-stack-inserter-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-titanium-rod', amount = 4},
+		{type = 'item', name = 'engine-unit', amount = 8},
+		{type = 'item', name = 'processing-unit', amount = 2},
+		{type = 'item', name = 'aoc-rubber', amount = 1}
+	},
+	results = {
+        {type = 'item', name = 'stack-long-handed-inserter', amount = 3}
+    },
+	energy_required = 0.5
+}})
+
+data:extend({{
+	name = 'aoc-crafting-rtg-uranium-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-electrum-machine-hull', amount = 1},
+		{type = 'item', name = 'aoc-lead-plate', amount = 20},
+		{type = 'item', name = 'aoc-graphite-rod', amount = 10},
+		{type = 'item', name = 'uranium-238', amount = 20}
+	},
+	results = {
+        {type = 'item', name = 'aoc-rtg-uranium', amount = 1}
+    },
+	energy_required = 5
+}})
+
+data:extend({{
+	name = 'aoc-crafting-rtg-americium-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-electrum-machine-hull', amount = 1},
+		{type = 'item', name = 'aoc-lead-plate', amount = 20},
+		{type = 'item', name = 'aoc-graphite-rod', amount = 10},
+		{type = 'item', name = 'aoc-americium-241', amount = 20}
+	},
+	results = {
+        {type = 'item', name = 'aoc-rtg-americium', amount = 1}
+    },
+	energy_required = 5
+}})
+
+data:extend({{
+	name = 'aoc-crafting-rtg-plutonium-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-electrum-machine-hull', amount = 1},
+		{type = 'item', name = 'aoc-lead-plate', amount = 20},
+		{type = 'item', name = 'aoc-graphite-rod', amount = 10},
+		{type = 'item', name = 'aoc-plutonium-238', amount = 20}
+	},
+	results = {
+        {type = 'item', name = 'aoc-rtg-plutonium', amount = 1}
+    },
+	energy_required = 5
+}})
+
+data:extend({{
+	name = 'aoc-crafting-rtg-californium-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-electrum-machine-hull', amount = 1},
+		{type = 'item', name = 'aoc-lead-plate', amount = 20},
+		{type = 'item', name = 'aoc-graphite-rod', amount = 10},
+		{type = 'item', name = 'aoc-californium-250', amount = 20}
+	},
+	results = {
+        {type = 'item', name = 'aoc-rtg-californium', amount = 1}
+    },
+	energy_required = 5
+}})
+
+data:extend({{
+	name = 'aoc-kiln-smelting-silicon-doped-dilithium-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-coke', amount = 1},
+		{type = 'item', name = 'aoc-quartz-dust', amount = 4},
+		{type = 'item', name = 'aoc-sand', amount = 1},
+		{type = 'item', name = 'aoc-phosphate', amount = 1},
+		{type = 'item', name = 'aoc-dilithium-crystal', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoc-silicon-doped-dilithium', amount = 4},
+		{type = 'fluid', name = 'aoc-carbon-dioxide', amount = 10}
+    },
+	main_product = 'aoc-silicon-doped-dilithium',
+	energy_required = 4.8,
+	category = 'aoc-category-kiln-smelting'
+}})
+
+data:extend({{
+	name = 'aoc-lasering-silicon-doped-dilithium-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-silicon-doped-dilithium', amount = 1},
+        {type = 'fluid', name = 'aoc-noble-gasses', amount = 5}
+	},
+	results = {
+		{type = 'item', name = 'aoc-silicon-doped-dilithium-wafer', amount = 6}
+    },
+	energy_required = 2,
+	category = 'aoc-category-lasering'
 }})

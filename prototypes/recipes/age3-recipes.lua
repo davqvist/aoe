@@ -383,7 +383,7 @@ data:extend({{
 	ingredients = {
         {type = 'item', name = 'aoc-egg', amount = 1},
 		{type = 'item', name = 'aoc-bedding', amount = 1},
-		{type = 'item', name = 'aoc-maize-kernels', amount = 1},
+		{type = 'item', name = 'aoc-maize-kernels', amount = 2},
 		{type = 'fluid', name = 'aoc-warm-air', amount = 200}
     },
     results = {
@@ -854,6 +854,7 @@ data:extend({{
     },
 	energy_required = 5,
 	main_product = 'aoc-latex',
+	auto_recycle = false,
 	category = 'aoc-category-harvesting',
 }})
 
@@ -1373,8 +1374,8 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'aoc-fish-module-1', amount=1, probability = 0.25, ignored_by_stats = 1, ignored_by_productivity = 1},
-		{type = 'item', name = 'aoc-fish-module-2', amount=1, probability = 0.5},
-        {type = 'item', name = 'aoc-fish-module-3', amount=1, probability = 0.05}
+		{type = 'item', name = 'aoc-fish-module-2', amount=1, probability = 0.45},
+        {type = 'item', name = 'aoc-fish-module-3', amount=1, probability = 0.045}
     },
 	main_product = 'aoc-fish-module-2',
     energy_required = 200,
@@ -1935,7 +1936,7 @@ data:extend({{
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoc-flask', amount = 1},
+		{type = 'item', name = 'aoc-science-02', amount = 3},
 		{type = 'item', name = 'aoc-bronze-gear', amount = 3}
 	},
 	results = {
@@ -2041,6 +2042,7 @@ data:extend({{
     },
 	energy_required = 5,
 	main_product = 'aoc-latex',
+	auto_recycle = false,
 	category = 'aoc-category-harvesting',
 }})
 

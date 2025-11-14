@@ -45,7 +45,7 @@ data:extend({{
     type = "item",
     name = "aoc-wood-pulp",
     icon = "__ageofcreation__/img/items/wood-pulp.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     subgroup = "aoc-flora-wood",
     order = "g",
     stack_size = 500,
@@ -57,7 +57,7 @@ data:extend({{
     type = "item",
     name = "aoc-resin",
     icon = "__ageofcreation__/img/items/resin.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     subgroup = "aoc-flora-wood",
     order = "h",
     stack_size = 200

@@ -95,7 +95,7 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "aoc-advanced-storage-tech-1",
-    icon_size = 192,
+    icon_size = 256,
     icon = "__ageofcreation__/img/entities/big-wooden-chest.png",
     prerequisites = {},
 	  effects = {

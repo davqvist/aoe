@@ -4,7 +4,7 @@ data:extend({{
     icons = {
       {
         icon = "__ageofcreation__/img/entities/sawmill-icon.png",
-        icon_size = 128
+        icon_size = 64
       },
       {
         icon = "__ageofcreation__/img/items/other/fire.png",
@@ -45,7 +45,7 @@ data:extend({{
   icons = {
     {
       icon = "__ageofcreation__/img/entities/sawmill-icon.png",
-      icon_size = 128
+      icon_size = 64
     },
     {
       icon = "__ageofcreation__/img/items/other/fire.png",
@@ -114,7 +114,7 @@ data:extend({{
     type = "item",
     name = "aoc-sawmill",
     icon = "__ageofcreation__/img/entities/sawmill-icon.png",
-    icon_size = 128,
+    icon_size = 64,
     subgroup = "aoc-flora-buildings",
     order = "e",
     place_result = "aoc-sawmill",
@@ -136,7 +136,7 @@ data:extend({{
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
 	module_slots = 3,
   icon = "__ageofcreation__/img/entities/sawmill-icon.png",
-  icon_size = 128,
+  icon_size = 64,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoc-sawmill" },
   fast_replaceable_group = "sawmill",

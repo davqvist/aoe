@@ -1,3 +1,4 @@
+require("__ageofcreation__/prototypes/recipes/age8-recipes")
 require("__ageofcreation__/prototypes/recipes/age7-recipes")
 require("__ageofcreation__/prototypes/recipes/age6-recipes")
 require("__ageofcreation__/prototypes/recipes/age5-recipes")

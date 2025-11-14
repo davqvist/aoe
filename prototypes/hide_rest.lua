@@ -51,7 +51,7 @@ for _, technology in pairs(data.raw.technology) do
 end
 
 for _, tat in pairs(data.raw['tips-and-tricks-item']) do
-  if string.sub(tat.name, 1, 4) ~= "aoc-" then
+  if string.sub(tat.name, 1, 4) ~= "aoc-" and string.sub(tat.name, 1, 3) ~= "po-" and string.sub(tat.name, 1, 6) ~= "power-" then
     data.raw['tips-and-tricks-item'][_] = nil
   end
 end

@@ -3799,7 +3799,7 @@ data:extend({{
 	results = {
 		{type = 'item', name = 'aoc-animal-food', amount = 6}
     },
-	energy_required = 3,
+	energy_required = 6,
 	category = 'aoc-category-mixing'
 }})
 
@@ -3816,7 +3816,7 @@ data:extend({{
 	results = {
 		{type = 'item', name = 'aoc-animal-food', amount = 8}
     },
-	energy_required = 4,
+	energy_required = 8,
 	icons = combine_icons_tiny( get_icons( data.raw["item"]['aoc-animal-food'] ), get_icons( data.raw["item"]["yumako-mash"] ) ),
 	category = 'aoc-category-mixing'
 }})
@@ -3872,8 +3872,8 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'aoc-chicken-module-1', amount=1, probability = 0.05},
-        {type = 'item', name = 'aoc-chicken-module-2', amount=1, probability = 0.2},
-        {type = 'item', name = 'aoc-chicken-module-3', amount=1, probability = 0.05},
+        {type = 'item', name = 'aoc-chicken-module-2', amount=1, probability = 0.18},
+        {type = 'item', name = 'aoc-chicken-module-3', amount=1, probability = 0.045},
 		{type = 'item', name = 'aoc-bedding', amount=1, probability = 0.90}
     },
 	main_product = 'aoc-chicken-module-2',
@@ -3957,8 +3957,8 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'aoc-sheep-module-1', amount=1, probability = 0.075},
-        {type = 'item', name = 'aoc-sheep-module-2', amount=1, probability = 0.75},
-        {type = 'item', name = 'aoc-sheep-module-3', amount=1, probability = 0.075}
+        {type = 'item', name = 'aoc-sheep-module-2', amount=1, probability = 0.675},
+        {type = 'item', name = 'aoc-sheep-module-3', amount=1, probability = 0.0675}
     },
 	main_product = 'aoc-sheep-module-2',
     energy_required = 140,
@@ -4049,11 +4049,11 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'aoc-cow-module-1', amount=1, probability = 0.035},
-        {type = 'item', name = 'aoc-cow-module-2', amount=1, probability = 0.35},
-        {type = 'item', name = 'aoc-cow-module-3', amount=1, probability = 0.035},
+        {type = 'item', name = 'aoc-cow-module-2', amount=1, probability = 0.315},
+        {type = 'item', name = 'aoc-cow-module-3', amount=1, probability = 0.0315},
 		{type = 'item', name = 'aoc-ox-module-1', amount=1, probability = 0.035},
-        {type = 'item', name = 'aoc-ox-module-2', amount=1, probability = 0.35},
-        {type = 'item', name = 'aoc-ox-module-3', amount=1, probability = 0.035}
+        {type = 'item', name = 'aoc-ox-module-2', amount=1, probability = 0.315},
+        {type = 'item', name = 'aoc-ox-module-3', amount=1, probability = 0.0315}
     },
 	main_product = 'aoc-cow-module-2',
     energy_required = 170,

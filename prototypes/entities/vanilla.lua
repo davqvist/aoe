@@ -156,7 +156,7 @@ data.raw['inserter']['bulk-long-handed-inserter'].extension_speed = 0.12
 data.raw['inserter']['bulk-long-handed-inserter'].pickup_position = {0, -2}
 data.raw['inserter']['bulk-long-handed-inserter'].insert_position = {0, 2.2}
 data.raw['inserter']['bulk-long-handed-inserter'].fast_replaceable_group = "long-handed-inserter"
-data.raw['inserter']['bulk-long-handed-inserter'].next_upgrade = nil
+data.raw['inserter']['bulk-long-handed-inserter'].next_upgrade = 'stack-long-handed-inserter'
 data.raw['inserter']['bulk-long-handed-inserter'].platform_picture = {
   sheet = {
     filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-platform.png",
@@ -176,6 +176,53 @@ data.raw['inserter']['bulk-long-handed-inserter'].icons = combine_icons( get_ico
     }
   }
 )
+data.raw['item']['stack-inserter'].subgroup = "aoc-inserter"
+data.raw['item']['stack-inserter'].order = "h"
+data.raw['inserter']['stack-inserter'].rotation_speed = 0.05
+data.raw['inserter']['stack-inserter'].extension_speed = 0.12
+data.raw['item']['stack-long-handed-inserter'] = table.deepcopy( data.raw['item']['stack-inserter'] )
+data.raw['item']['stack-long-handed-inserter'].name = 'stack-long-handed-inserter'
+data.raw['item']['stack-long-handed-inserter'].place_result = "stack-long-handed-inserter"
+data.raw['item']['stack-long-handed-inserter'].subgroup = "aoc-inserter"
+data.raw['item']['stack-long-handed-inserter'].order = "i"
+data.raw['item']['stack-long-handed-inserter'].icons = combine_icons( get_icons( data.raw["item"]["stack-inserter"] ),
+  {
+    {
+      icon = "__ageofcreation__/img/items/long-handed-inserter-base.png",
+      icon_size = 64,
+      icon_mipmaps = 4
+    }
+  }
+)
+data.raw['inserter']['stack-long-handed-inserter'] = table.deepcopy( data.raw['inserter']['stack-inserter'] )
+data.raw['inserter']['stack-long-handed-inserter'].name = 'stack-long-handed-inserter'
+data.raw['inserter']['stack-long-handed-inserter'].minable = { hardness = 1, mining_time = 0.2, result = "stack-long-handed-inserter" }
+data.raw['inserter']['stack-long-handed-inserter'].rotation_speed = 0.05
+data.raw['inserter']['stack-long-handed-inserter'].extension_speed = 0.12
+data.raw['inserter']['stack-long-handed-inserter'].pickup_position = {0, -2}
+data.raw['inserter']['stack-long-handed-inserter'].insert_position = {0, 2.2}
+data.raw['inserter']['stack-long-handed-inserter'].fast_replaceable_group = "long-handed-inserter"
+data.raw['inserter']['stack-long-handed-inserter'].next_upgrade = nil
+data.raw['inserter']['stack-long-handed-inserter'].platform_picture = {
+  sheet = {
+    filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-platform.png",
+    priority = "extra-high",
+    width = 105,
+    height = 79,
+    shift = util.by_pixel(1.5, 7.5-1),
+    scale = 0.5
+  }
+}
+data.raw['inserter']['stack-long-handed-inserter'].icons = combine_icons( get_icons( data.raw["item"]["stack-inserter"] ),
+  {
+    {
+      icon = "__ageofcreation__/img/items/long-handed-inserter-base.png",
+      icon_size = 64,
+      icon_mipmaps = 4
+    }
+  }
+)
+
 data.raw['item']['wooden-chest'].subgroup = "aoc-storage"
 data.raw['item']['wooden-chest'].order = "a"
 data.raw['container']['wooden-chest'].inventory_size = 15
@@ -216,8 +263,16 @@ data.raw['underground-belt']['fast-underground-belt'].max_distance = 11
 data.raw['item']['fast-splitter'].subgroup = "aoc-item-logistics-belts"
 data.raw['item']['fast-splitter'].order = "c2"
 data.raw['item']['fast-splitter'].stack_size = 50
-
+data.raw['item']['express-transport-belt'].subgroup = "aoc-item-logistics-belts"
+data.raw['item']['express-transport-belt'].order = "a3"
+data.raw['item']['express-transport-belt'].stack_size = 200
+data.raw['item']['express-underground-belt'].subgroup = "aoc-item-logistics-belts"
+data.raw['item']['express-underground-belt'].order = "b3"
+data.raw['item']['express-underground-belt'].stack_size = 50
 data.raw['underground-belt']['express-underground-belt'].max_distance = 15
+data.raw['item']['express-splitter'].subgroup = "aoc-item-logistics-belts"
+data.raw['item']['express-splitter'].order = "c3"
+data.raw['item']['express-splitter'].stack_size = 50
 
 data.raw['item']['pipe'].subgroup = "aoc-fluid-logistics"
 data.raw['item']['pipe'].order = "a"
@@ -327,11 +382,10 @@ data.raw['item']['personal-roboport-equipment'].subgroup = "aoc-equipment"
 data.raw['item']['personal-roboport-equipment'].order = "g"
 data.raw['roboport-equipment']['personal-roboport-equipment'].robot_limit = 20
 
---data.raw['assembling-machine']['captive-biter-spawner'].energy_source = { type = "void" }
---data.raw['assembling-machine']['captive-biter-spawner'].fixed_recipe = "aoc-biter-egg-recipe"
---data.raw['assembling-machine']['captive-biter-spawner'].flags = {"placeable-neutral", "placeable-player", "player-creation"}
---data.raw['assembling-machine']['captive-biter-spawner'].surface_conditions = { { property = "pressure", min = 4000, max = 4000 } }
 data.raw['unit']['small-biter'].loot = { { item = "aoc-small-biter-corpse" } }
 data.raw['unit']['medium-biter'].loot = { { item = "aoc-medium-biter-corpse" } }
 data.raw['unit']['big-biter'].loot = { { item = "aoc-big-biter-corpse" } }
 data.raw['unit']['behemoth-biter'].loot = { { item = "aoc-behemoth-biter-corpse" } }
+data.raw['unit']['small-wriggler-pentapod'].loot = { { item = "aoc-small-wriggler-corpse" } }
+data.raw['unit']['medium-wriggler-pentapod'].loot = { { item = "aoc-medium-wriggler-corpse" } }
+data.raw['unit']['big-wriggler-pentapod'].loot = { { item = "aoc-big-wriggler-corpse" } }

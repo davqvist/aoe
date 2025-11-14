@@ -4,7 +4,7 @@ data:extend({{
     icon = "__ageofcreation__/img/items/science-pack-7.png",
     icon_size = 64,
     subgroup = "aoc-science-packs",
-    order = "g",
+    order = "h",
     stack_size = 200,
     durability = 1,
     durability_description_key = "description.science-pack-remaining-amount-key",
@@ -165,7 +165,7 @@ data.raw['module']['efficiency-module-3'].order = "d3"
 data.raw['module']['efficiency-module-3'].stack_size = 50
 
 data.raw['item']['flying-robot-frame'].subgroup = "aoc-parts"
-data.raw['item']['flying-robot-frame'].order = "k"
+data.raw['item']['flying-robot-frame'].order = "l"
 data.raw['item']['flying-robot-frame'].stack_size = 200
 
 data.raw['armor']['heavy-armor'].subgroup = "aoc-armor"
@@ -174,6 +174,8 @@ data.raw['armor']['heavy-armor'].inventory_size_bonus = 20
 data.raw['armor']['heavy-armor'].equipment_grid = "medium-equipment-grid"
 data.raw['item']['exoskeleton-equipment'].subgroup = "aoc-equipment"
 data.raw['item']['exoskeleton-equipment'].order = "j"
+data.raw['item']['fission-reactor-equipment'].subgroup = "aoc-equipment"
+data.raw['item']['fission-reactor-equipment'].order = "k"
 
 data:extend({{
     type = "item",
@@ -494,7 +496,7 @@ data:extend({{
     icons = { { icon = "__ageofcreation__/img/items/fuel-cell-empty.png", icon_size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "a",
-    stack_size = 200
+    stack_size = 50
 }})
 
 data:extend({{
@@ -503,7 +505,7 @@ data:extend({{
     icons = { { icon = "__ageofcreation__/img/items/fuel-cell-2-empty.png", icon_size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "a2",
-    stack_size = 200
+    stack_size = 50
 }})
 
 data:extend({{
@@ -513,7 +515,7 @@ data:extend({{
     pictures = { { filename = "__base__/graphics/icons/uranium-fuel-cell.png", size = 64, mipmap_count = 4 } },
     subgroup = "aoc-nuclear-fuel",
     order = "b",
-    stack_size = 200,
+    stack_size = 50,
     fuel_value = "1.53GJ",
     fuel_category = "nuclear",
     burnt_result = "aoc-fuel-cell-uranium-233-depleted"
@@ -526,7 +528,7 @@ data:extend({{
     pictures = { { filename = "__base__/graphics/icons/depleted-uranium-fuel-cell.png", size = 64, mipmap_count = 4 } },
     subgroup = "aoc-nuclear-fuel",
     order = "b2",
-    stack_size = 200
+    stack_size = 50
 }})
 
 data:extend({{
@@ -536,7 +538,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-2-uranium.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "c",
-    stack_size = 200,
+    stack_size = 50,
     fuel_value = "6.13GJ",
     fuel_category = "nuclear",
     burnt_result = "aoc-fuel-cell-uranium-233-depleted-2"
@@ -549,20 +551,20 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-2-uranium-depleted.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "c2",
-    stack_size = 200
+    stack_size = 50
 }})
 
 data.raw['item']['uranium-fuel-cell'].subgroup = "aoc-nuclear-fuel"
 data.raw['item']['uranium-fuel-cell'].order = "d"
 data.raw['item']['uranium-fuel-cell'].icons = { { icon = "__base__/graphics/icons/uranium-fuel-cell.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/u.png", icon_size = 64 }, { icon = "__ageofcreation__/img/items/atoms/235.png", icon_size = 64 } }
 data.raw['item']['uranium-fuel-cell'].pictures = { { filename = "__base__/graphics/icons/uranium-fuel-cell.png", size = 64, mipmap_count = 4 } }
-data.raw['item']['uranium-fuel-cell'].stack_size = 200
+data.raw['item']['uranium-fuel-cell'].stack_size = 50
 data.raw['item']['uranium-fuel-cell'].fuel_value = "2.3GJ"
 data.raw['item']['depleted-uranium-fuel-cell'].subgroup = "aoc-nuclear-fuel"
 data.raw['item']['depleted-uranium-fuel-cell'].order = "d2"
 data.raw['item']['depleted-uranium-fuel-cell'].icons = { { icon = "__base__/graphics/icons/depleted-uranium-fuel-cell.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/u.png", icon_size = 64 }, { icon = "__ageofcreation__/img/items/atoms/235.png", icon_size = 64 } }
 data.raw['item']['depleted-uranium-fuel-cell'].pictures = { { filename = "__base__/graphics/icons/depleted-uranium-fuel-cell.png", size = 64, mipmap_count = 4 } }
-data.raw['item']['depleted-uranium-fuel-cell'].stack_size = 200
+data.raw['item']['depleted-uranium-fuel-cell'].stack_size = 50
 
 data:extend({{
     type = "item",
@@ -571,7 +573,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-2-uranium.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "e",
-    stack_size = 200,
+    stack_size = 50,
     fuel_value = "9.22GJ",
     fuel_category = "nuclear",
     burnt_result = "aoc-fuel-cell-uranium-235-depleted-2"
@@ -584,7 +586,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-2-uranium-depleted.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "e2",
-    stack_size = 200
+    stack_size = 50
 }})
 
 data:extend({{
@@ -594,7 +596,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-neptunium.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "f",
-    stack_size = 200,
+    stack_size = 50,
     fuel_value = "0.71GJ",
     fuel_category = "nuclear",
     burnt_result = "aoc-fuel-cell-neptunium-236-depleted"
@@ -607,7 +609,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-neptunium-depleted.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "f2",
-    stack_size = 200
+    stack_size = 50
 }})
 
 data:extend({{
@@ -617,7 +619,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-2-neptunium.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "g",
-    stack_size = 200,
+    stack_size = 50,
     fuel_value = "2.85GJ",
     fuel_category = "nuclear",
     burnt_result = "aoc-fuel-cell-neptunium-236-depleted-2"
@@ -630,7 +632,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-2-neptunium-depleted.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "g2",
-    stack_size = 200
+    stack_size = 50
 }})
 
 data:extend({{
@@ -640,7 +642,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-plutonium.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "h",
-    stack_size = 200,
+    stack_size = 50,
     fuel_value = "1.92GJ",
     fuel_category = "nuclear",
     burnt_result = "aoc-fuel-cell-plutonium-239-depleted"
@@ -653,7 +655,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-plutonium-depleted.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "h2",
-    stack_size = 200
+    stack_size = 50
 }})
 
 data:extend({{
@@ -663,7 +665,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-2-plutonium.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "i",
-    stack_size = 200,
+    stack_size = 50,
     fuel_value = "7.7GJ",
     fuel_category = "nuclear",
     burnt_result = "aoc-fuel-cell-plutonium-239-depleted-2"
@@ -676,7 +678,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-2-plutonium-depleted.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "i2",
-    stack_size = 200
+    stack_size = 50
 }})
 
 data:extend({{
@@ -686,7 +688,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-plutonium.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "j",
-    stack_size = 200,
+    stack_size = 50,
     fuel_value = "2.09GJ",
     fuel_category = "nuclear",
     burnt_result = "aoc-fuel-cell-plutonium-241-depleted"
@@ -699,7 +701,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-plutonium-depleted.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "j2",
-    stack_size = 200
+    stack_size = 50
 }})
 
 data:extend({{
@@ -709,7 +711,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-2-plutonium.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "k",
-    stack_size = 200,
+    stack_size = 50,
     fuel_value = "8.34GJ",
     fuel_category = "nuclear",
     burnt_result = "aoc-fuel-cell-plutonium-241-depleted-2"
@@ -722,7 +724,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-2-plutonium-depleted.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "k2",
-    stack_size = 200
+    stack_size = 50
 }})
 
 data:extend({{
@@ -732,7 +734,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-americium.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "l",
-    stack_size = 200,
+    stack_size = 50,
     fuel_value = "1.14GJ",
     fuel_category = "nuclear",
     burnt_result = "aoc-fuel-cell-americium-242-depleted"
@@ -745,7 +747,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-americium-depleted.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "l2",
-    stack_size = 200
+    stack_size = 50
 }})
 
 data:extend({{
@@ -755,7 +757,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-2-americium.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "m",
-    stack_size = 200,
+    stack_size = 50,
     fuel_value = "5.65GJ",
     fuel_category = "nuclear",
     burnt_result = "aoc-fuel-cell-americium-242-depleted-2"
@@ -768,7 +770,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-2-americium-depleted.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "m2",
-    stack_size = 200
+    stack_size = 50
 }})
 
 data:extend({{
@@ -778,7 +780,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-curium.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "n",
-    stack_size = 200,
+    stack_size = 50,
     fuel_value = "1.26GJ",
     fuel_category = "nuclear",
     burnt_result = "aoc-fuel-cell-curium-243-depleted"
@@ -791,7 +793,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-curium-depleted.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "n2",
-    stack_size = 200
+    stack_size = 50
 }})
 
 data:extend({{
@@ -801,7 +803,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-2-curium.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "o",
-    stack_size = 200,
+    stack_size = 50,
     fuel_value = "5.04GJ",
     fuel_category = "nuclear",
     burnt_result = "aoc-fuel-cell-curium-243-depleted-2"
@@ -814,7 +816,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-2-curium-depleted.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "o2",
-    stack_size = 200
+    stack_size = 50
 }})
 
 data:extend({{
@@ -824,7 +826,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-curium.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "p",
-    stack_size = 200,
+    stack_size = 50,
     fuel_value = "1.57GJ",
     fuel_category = "nuclear",
     burnt_result = "aoc-fuel-cell-curium-245-depleted"
@@ -837,7 +839,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-curium-depleted.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "p2",
-    stack_size = 200
+    stack_size = 50
 }})
 
 data:extend({{
@@ -847,7 +849,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-2-curium.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "q",
-    stack_size = 200,
+    stack_size = 50,
     fuel_value = "6.27GJ",
     fuel_category = "nuclear",
     burnt_result = "aoc-fuel-cell-curium-245-depleted-2"
@@ -860,7 +862,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-2-curium-depleted.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "q2",
-    stack_size = 200
+    stack_size = 50
 }})
 
 data:extend({{
@@ -870,7 +872,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-curium.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "r",
-    stack_size = 200,
+    stack_size = 50,
     fuel_value = "1.19GJ",
     fuel_category = "nuclear",
     burnt_result = "aoc-fuel-cell-curium-247-depleted"
@@ -883,7 +885,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-curium-depleted.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "r2",
-    stack_size = 200
+    stack_size = 50
 }})
 
 data:extend({{
@@ -893,7 +895,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-2-curium.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "s",
-    stack_size = 200,
+    stack_size = 50,
     fuel_value = "4.77GJ",
     fuel_category = "nuclear",
     burnt_result = "aoc-fuel-cell-curium-247-depleted-2"
@@ -906,7 +908,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-2-curium-depleted.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "s2",
-    stack_size = 200
+    stack_size = 50
 }})
 
 data:extend({{
@@ -916,7 +918,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-berkelium.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "t",
-    stack_size = 200,
+    stack_size = 50,
     fuel_value = "1.17GJ",
     fuel_category = "nuclear",
     burnt_result = "aoc-fuel-cell-berkelium-248-depleted"
@@ -929,7 +931,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-berkelium-depleted.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "t2",
-    stack_size = 200
+    stack_size = 50
 }})
 
 data:extend({{
@@ -939,7 +941,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-2-berkelium.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "u",
-    stack_size = 200,
+    stack_size = 50,
     fuel_value = "3.97GJ",
     fuel_category = "nuclear",
     burnt_result = "aoc-fuel-cell-berkelium-248-depleted-2"
@@ -952,7 +954,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-2-berkelium-depleted.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "u2",
-    stack_size = 200
+    stack_size = 50
 }})
 
 data:extend({{
@@ -962,7 +964,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-californium.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "v",
-    stack_size = 200,
+    stack_size = 50,
     fuel_value = "0.92GJ",
     fuel_category = "nuclear",
     burnt_result = "aoc-fuel-cell-californium-249-depleted"
@@ -975,7 +977,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-californium-depleted.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "v2",
-    stack_size = 200
+    stack_size = 50
 }})
 
 data:extend({{
@@ -985,7 +987,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-2-californium.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "w",
-    stack_size = 200,
+    stack_size = 50,
     fuel_value = "3.66GJ",
     fuel_category = "nuclear",
     burnt_result = "aoc-fuel-cell-californium-249-depleted-2"
@@ -998,7 +1000,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-2-californium-depleted.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "w2",
-    stack_size = 200
+    stack_size = 50
 }})
 
 data:extend({{
@@ -1008,7 +1010,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-californium.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "x",
-    stack_size = 200,
+    stack_size = 50,
     fuel_value = "1.8GJ",
     fuel_category = "nuclear",
     burnt_result = "aoc-fuel-cell-californium-251-depleted"
@@ -1021,7 +1023,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-californium-depleted.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "x2",
-    stack_size = 200
+    stack_size = 50
 }})
 
 data:extend({{
@@ -1031,7 +1033,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-2-californium.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "y",
-    stack_size = 200,
+    stack_size = 50,
     fuel_value = "7.2GJ",
     fuel_category = "nuclear",
     burnt_result = "aoc-fuel-cell-californium-251-depleted-2"
@@ -1044,7 +1046,7 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/fuel-cell-2-californium-depleted.png", size = 64 } },
     subgroup = "aoc-nuclear-fuel",
     order = "y2",
-    stack_size = 200
+    stack_size = 50
 }})
 
 data:extend({{
@@ -1074,7 +1076,7 @@ data:extend({{
     icon = "__ageofcreation__/img/items/alien-brain.png",
     icon_size = 64,
     subgroup = "aoc-aliens",
-    order = "d",
+    order = "f",
     stack_size = 200
 }})
 
@@ -1084,7 +1086,7 @@ data:extend({{
     icon = "__ageofcreation__/img/items/alien-chitin.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-aliens",
-    order = "e",
+    order = "g",
     stack_size = 200
 }})
 
@@ -1094,10 +1096,36 @@ data:extend({{
     icon = "__ageofcreation__/img/items/alien-gland.png",
     icon_size = 64,
     subgroup = "aoc-aliens",
-    order = "f",
+    order = "h",
     stack_size = 200
 }})
 
 data.raw['item']['laser-turret'].subgroup = "aoc-turrets"
 data.raw['item']['laser-turret'].order = "b"
 data.raw['item']['laser-turret'].stack_size = 25
+
+data:extend({{
+    type = "item"   ,
+    name = "aoc-silicon-doped-dilithium",
+    icons = { {
+        icon = "__angelssmeltinggraphics__/graphics/icons/plate-silicon.png",
+        icon_size = 32,
+        tint = { 255, 170, 155 }
+    } },
+    subgroup = "aoc-metals-alloys",
+    order = "i",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-silicon-doped-dilithium-wafer",
+    icons = { {
+        icon = "__angelssmeltinggraphics__/graphics/icons/silicon-wafer.png",
+        icon_size = 32,
+        tint = { 255, 170, 155 }
+    } },
+    subgroup = "aoc-metals-alloys",
+    order = "i1",
+    stack_size = 200
+}})

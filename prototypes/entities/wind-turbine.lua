@@ -1,8 +1,8 @@
 data:extend({{
     type = "item",
     name = "aoc-wind-turbine",
-    icon = "__ageofcreation__/img/entities/wind-turbine.png",
-    icon_size = 256,
+    icon = "__ageofcreation__/img/entities/wind-turbine-icon.png",
+    icon_size = 128,
     subgroup = "aoc-power-buildings",
     order = "g",
     place_result = "aoc-wind-turbine",
@@ -18,8 +18,8 @@ data:extend({{
 	energy_usage = "1kW",
 	allowed_effects = {},
 	module_slots = 0,
-	icon = "__ageofcreation__/img/entities/wind-turbine.png",
-	icon_size = 256,
+	icon = "__ageofcreation__/img/entities/wind-turbine-icon.png",
+	icon_size = 128,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoc-wind-turbine" },
 	circuit_wire_connection_point = circuit_connector_definitions["assembling-machine"].points,
@@ -30,15 +30,55 @@ data:extend({{
 	collision_box = {{-1.4, -0.4}, {1.4, 2.4}},
 	graphics_set = {
     animation = {
-      layers = {
-        {
-          filename = "__ageofcreation__/img/entities/wind-turbine.png",
-          width = 256,
-          height = 256,
-          frame_count = 1,
-		      scale = 0.625
-        }
-      }
+        stripes = {
+          {
+            filename = "__ageofcreation__/img/entities/wind-turbine-1.png",
+            width_in_frames = 2,
+            height_in_frames = 3
+          },
+          {
+            filename = "__ageofcreation__/img/entities/wind-turbine-2.png",
+            width_in_frames = 2,
+            height_in_frames = 3
+          },
+          {
+            filename = "__ageofcreation__/img/entities/wind-turbine-3.png",
+            width_in_frames = 2,
+            height_in_frames = 3
+          },
+          {
+            filename = "__ageofcreation__/img/entities/wind-turbine-4.png",
+            width_in_frames = 2,
+            height_in_frames = 3
+          },
+          {
+            filename = "__ageofcreation__/img/entities/wind-turbine-5.png",
+            width_in_frames = 2,
+            height_in_frames = 3
+          },
+          {
+            filename = "__ageofcreation__/img/entities/wind-turbine-6.png",
+            width_in_frames = 2,
+            height_in_frames = 3
+          },
+          {
+            filename = "__ageofcreation__/img/entities/wind-turbine-7.png",
+            width_in_frames = 2,
+            height_in_frames = 3
+          },
+          {
+            filename = "__ageofcreation__/img/entities/wind-turbine-8.png",
+            width_in_frames = 2,
+            height_in_frames = 3
+          }
+        },
+        width = 800,
+        height = 550,
+        scale = 0.4,
+        frame_count = 44,
+        shift = util.by_pixel(54, 12),
+        animation_speed = 1,
+        priority = "low"
     }
   }
 }})

@@ -1,4 +1,4 @@
-local AOC =  require("__ageofcreation__/globals")
+local AOC = require("__ageofcreation__/globals")
 
 -- ANGELS
 
@@ -33,6 +33,7 @@ data.raw['electric-pole']['po-hidden-electric-pole-out'].maximum_wire_distance =
 local loaders = {
     ['l1'] = 'aai-loader',
     ['l2'] = 'aai-fast-loader',
+    ['l3'] = 'aai-express-loader',
     ['l1_icons'] = {
         { icon = "__aai-loaders__/graphics/technology/loader-tech-icon.png", icon_size = 256 },
         { icon = "__aai-loaders__/graphics/technology/loader-tech-icon_mask.png", icon_size = 256, tint = {255, 217, 85} }
@@ -40,12 +41,16 @@ local loaders = {
     ['l2_icons'] = {
         { icon = "__aai-loaders__/graphics/technology/loader-tech-icon.png", icon_size = 256 },
         { icon = "__aai-loaders__/graphics/technology/loader-tech-icon_mask.png", icon_size = 256, tint = {255, 24, 38} }
+    },
+    ['l3_icons'] = {
+        { icon = "__aai-loaders__/graphics/technology/loader-tech-icon.png", icon_size = 256 },
+        { icon = "__aai-loaders__/graphics/technology/loader-tech-icon_mask.png", icon_size = 256, tint = {90, 190, 255} }
     }
-    -- blue: {90, 190, 255}
 }
 local loaders_mdrn = {
     ['l1'] = 'mdrn-loader',
     ['l2'] = 'fast-mdrn-loader',
+    ['l3'] = 'express-mdrn-loader',
     ['l1_icons'] = {
         { icon = "__loaders-modernized__/graphics/technology/mdrn-loader-technology-base.png", icon_size = 128 },
         { icon = "__loaders-modernized__/graphics/technology/mdrn-loader-technology-mask.png", icon_size = 128, tint = {255, 217, 85} }
@@ -53,6 +58,10 @@ local loaders_mdrn = {
     ['l2_icons'] = {
         { icon = "__loaders-modernized__/graphics/technology/mdrn-loader-technology-base.png", icon_size = 128 },
         { icon = "__loaders-modernized__/graphics/technology/mdrn-loader-technology-mask.png", icon_size = 128, tint = {255, 24, 38} }
+    },
+    ['l3_icons'] = {
+        { icon = "__loaders-modernized__/graphics/technology/mdrn-loader-technology-base.png", icon_size = 128 },
+        { icon = "__loaders-modernized__/graphics/technology/mdrn-loader-technology-mask.png", icon_size = 128, tint = {90, 190, 255} }
     }
 }
 if mods["loaders-modernized"] then
@@ -63,6 +72,8 @@ if mods["aai-loaders"] or mods["loaders-modernized"] then
     data.raw['item'][loaders.l1].order = "e1"
     data.raw['item'][loaders.l2].subgroup = "aoc-item-logistics-belts"
     data.raw['item'][loaders.l2].order = "e2"
+    data.raw['item'][loaders.l3].subgroup = "aoc-item-logistics-belts"
+    data.raw['item'][loaders.l3].order = "e3"
 
     data:extend({{
         name = 'aoc-crafting-loader-recipe',
@@ -127,6 +138,39 @@ if mods["aai-loaders"] or mods["loaders-modernized"] then
             count = 50,
             ingredients = AOC["age_tech_table"][5],
             time = 40
+        }
+    }})
+
+    data:extend({{
+        name = 'aoc-crafting-express-loader-recipe',
+        type = 'recipe',
+        enabled = false,
+        ingredients = {
+            {type = 'item', name = 'express-underground-belt', amount = 1},
+            {type = 'item', name = 'processing-unit', amount = 6},
+            {type = 'item', name = 'stack-inserter', amount = 6}
+        },
+        results = {
+            {type = 'item', name = loaders.l3, amount = 1}
+        },
+        energy_required = 2
+    }})
+
+    data:extend({{
+        type = "technology",
+        name = "aoc-express-loader-tech",
+        icons = loaders.l3_icons,
+        prerequisites = {"aoc-stack-inserters-tech","aoc-logistics-tech-3","aoc-fast-loader-tech"},
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "aoc-crafting-express-loader-recipe"
+            }
+        },
+        unit = {
+            count = 50,
+            ingredients = AOC["age_tech_table"][7],
+            time = 60
         }
     }})
 end

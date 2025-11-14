@@ -5,7 +5,7 @@ data:extend({{
     type = "item",
     name = "aoc-big-wooden-chest",
     icon = "__ageofcreation__/img/entities/big-wooden-chest.png",
-    icon_size = 192,
+    icon_size = 256,
     subgroup = "aoc-storage",
     order = "c",
     place_result = "aoc-big-wooden-chest",
@@ -16,7 +16,7 @@ data:extend({{
     type = "container",
     name = "aoc-big-wooden-chest",
     icon = "__ageofcreation__/img/entities/big-wooden-chest.png",
-    icon_size = 192,
+    icon_size = 256,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.1, result = "aoc-big-wooden-chest"},
     max_health = 100,
@@ -33,9 +33,17 @@ data:extend({{
       {
         {
           filename = "__ageofcreation__/img/entities/big-wooden-chest.png",
-          width = 192,
+          width = 256,
+          height = 256,
+		      scale = 0.375
+        },
+        {
+          filename = "__ageofcreation__/img/entities/big-wooden-chest-shadow.png",
+          draw_as_shadow = true,
+          width = 96,
           height = 192,
-		  scale = 0.5
+          shift = util.by_pixel(56, 0),
+		      scale = 0.5
         }
       }
     },

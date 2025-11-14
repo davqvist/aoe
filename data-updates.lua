@@ -8,14 +8,6 @@ local disabled_resources = {
 	"scrap",
 	"gleba_stone",
 	"lithium_brine","fluorine_vent","aquilo_crude_oil"
-	--"angels-ore1",
-	--"angels-ore2",
-	--"angels-ore3",
-	--"angels-ore4",
-	--"angels-ore5",
-	--"angels-ore6",
-	--"angels-fissure",
-	--"angels-natural-gas"
 }
 
 local noise_exp_to_remove = { 

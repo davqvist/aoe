@@ -173,8 +173,8 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "aoc-wind-power-tech-1",
-	  icon_size = 256,
-    icon = "__ageofcreation__/img/entities/wind-turbine.png",
+	  icon_size = 128,
+    icon = "__ageofcreation__/img/entities/wind-turbine-icon.png",
     prerequisites = {"aoc-electric-machines-tech"},
 	  effects = {
       {

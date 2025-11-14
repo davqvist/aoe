@@ -26,6 +26,15 @@ for _, recipe in pairs(data.raw.recipe) do
                                     end
                                 end
                             end
+                            if product.place_as_equipment_result then
+                                for _, prot in pairs(defines.prototypes.equipment) do
+                                    if data.raw[_] ~= nil then
+                                        if data.raw[_][product.place_as_equipment_result] then
+                                            table.insert(localised_name, data.raw[_][product.place_as_equipment_result].localised_name or {"equipment-name." .. product.place_as_equipment_result})
+                                        end
+                                    end
+                                end
+                            end
                         end
                     end
                 end

@@ -55,7 +55,7 @@ data:extend({{
     type = "item",
     name = "aoc-soy-flour",
     icon = "__ageofcreation__/img/items/soy-flour.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     subgroup = "aoc-flora-soybeans",
     order = "c",
     stack_size = 200
@@ -105,7 +105,7 @@ data:extend({{
     type = "item",
     name = "aoc-apple",
     icon = "__ageofcreation__/img/items/apple.png",
-    icon_size = 64,
+    icon_size = 128,
     subgroup = "aoc-flora-apple",
     order = "c",
     stack_size = 200
@@ -144,7 +144,7 @@ data:extend({{
     type = "item",
     name = "aoc-olive",
     icon = "__ageofcreation__/img/items/olive.png",
-    icon_size = 64,
+    icon_size = 128,
     subgroup = "aoc-flora-olive",
     order = "c",
     stack_size = 200
@@ -354,7 +354,7 @@ data:extend({{
     type = "item",
     name = "aoc-fertilizer",
     icon = "__ageofcreation__/img/items/fertilizer.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-flora-misc",
     order = "a",
     stack_size = 200

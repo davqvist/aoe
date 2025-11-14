@@ -119,6 +119,12 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
+    name = "aoc-flora-gleba",
+    group = "aoc-flora",
+    order = "g"
+  },
+  {
+	  type = "item-subgroup",
     name = "aoc-fauna-buildings",
     group = "aoc-fauna",
     order = "a"

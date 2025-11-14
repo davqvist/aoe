@@ -704,6 +704,7 @@ data:extend({{
 	ingredients = {
 		{type = 'item', name = 'transport-belt', amount = 2},
         {type = 'item', name = 'engine-unit', amount = 1},
+        {type = 'item', name = 'aoc-stainless-steel', amount = 1}
 	},
 	results = {
         {type = 'item', name = 'fast-transport-belt', amount = 2}
@@ -1008,7 +1009,7 @@ data:extend({{
 	results = {
 		{type = 'item', name = 'aoc-animal-food-2', amount = 5}
     },
-	energy_required = 3,
+	energy_required = 5,
 	category = 'aoc-category-mixing'
 }})
 
@@ -1063,8 +1064,8 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'aoc-chicken-module-2', amount=1, probability = 0.05},
-        {type = 'item', name = 'aoc-chicken-module-3', amount=1, probability = 0.2},
-        {type = 'item', name = 'aoc-chicken-module-4', amount=1, probability = 0.05},
+        {type = 'item', name = 'aoc-chicken-module-3', amount=1, probability = 0.16},
+        {type = 'item', name = 'aoc-chicken-module-4', amount=1, probability = 0.04},
 		{type = 'item', name = 'aoc-bedding', amount=1, probability = 0.85}
     },
 	main_product = 'aoc-chicken-module-3',
@@ -1121,7 +1122,7 @@ data:extend({{
     enabled = false,
 	ingredients = {
 		{type = 'item', name = 'aoc-sheep', amount = 2},
-		{type = 'item', name = 'aoc-animal-food', amount = 3},
+		{type = 'item', name = 'aoc-animal-food-2', amount = 3},
 		{type = 'item', name = 'aoc-hay-bale', amount = 3}
     },
     results = {
@@ -1147,8 +1148,8 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'aoc-sheep-module-2', amount=1, probability = 0.075},
-        {type = 'item', name = 'aoc-sheep-module-3', amount=1, probability = 0.75},
-        {type = 'item', name = 'aoc-sheep-module-4', amount=1, probability = 0.075}
+        {type = 'item', name = 'aoc-sheep-module-3', amount=1, probability = 0.6},
+        {type = 'item', name = 'aoc-sheep-module-4', amount=1, probability = 0.06}
     },
 	main_product = 'aoc-sheep-module-3',
     energy_required = 170,
@@ -1239,11 +1240,11 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'aoc-cow-module-2', amount=1, probability = 0.035},
-        {type = 'item', name = 'aoc-cow-module-3', amount=1, probability = 0.35},
-        {type = 'item', name = 'aoc-cow-module-4', amount=1, probability = 0.035},
+        {type = 'item', name = 'aoc-cow-module-3', amount=1, probability = 0.28},
+        {type = 'item', name = 'aoc-cow-module-4', amount=1, probability = 0.028},
 		{type = 'item', name = 'aoc-ox-module-2', amount=1, probability = 0.035},
-        {type = 'item', name = 'aoc-ox-module-3', amount=1, probability = 0.35},
-        {type = 'item', name = 'aoc-ox-module-4', amount=1, probability = 0.035}
+        {type = 'item', name = 'aoc-ox-module-3', amount=1, probability = 0.28},
+        {type = 'item', name = 'aoc-ox-module-4', amount=1, probability = 0.028}
     },
 	main_product = 'aoc-cow-module-3',
     energy_required = 210,
@@ -1301,7 +1302,7 @@ data:extend({{
 		{type = 'fluid', name = 'aoc-fish-water', amount = 80}
     },
     results = {
-        {type = 'item', name = 'aoc-fish-eggs', amount = 14}
+        {type = 'item', name = 'aoc-fish-eggs', amount = 16}
     },
     energy_required = 16,
 	icons = get_icons( data.raw.item['aoc-fish-eggs'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
@@ -1320,8 +1321,8 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'aoc-fish-module-2', amount=1, probability = 0.25, ignored_by_stats = 1, ignored_by_productivity = 1},
-		{type = 'item', name = 'aoc-fish-module-3', amount=1, probability = 0.5},
-        {type = 'item', name = 'aoc-fish-module-4', amount=1, probability = 0.05}
+		{type = 'item', name = 'aoc-fish-module-3', amount=1, probability = 0.4},
+        {type = 'item', name = 'aoc-fish-module-4', amount=1, probability = 0.04}
     },
 	main_product = 'aoc-fish-module-3',
     energy_required = 240,
@@ -2146,7 +2147,7 @@ data:extend({{
 	results = {
 		{type = 'item', name = 'aoc-fertilizer-2', amount = 5}
     },
-	energy_required = 3.5,
+	energy_required = 5,
 	category = 'aoc-category-mixing'
 }})
 
@@ -2276,7 +2277,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-epoxy-resin-solid', amount = 2},
 		{type = 'item', name = 'aoc-integrated-circuit', amount = 2},
 		{type = 'item', name = 'copper-cable', amount = 8},
-		{type = 'item', name = 'aoc-rubber', amount = 1}
+		{type = 'item', name = 'aoc-rubber', amount = 2}
 	},
 	results = {
         {type = 'item', name = 'processing-unit', amount = 2}
@@ -2797,6 +2798,7 @@ data:extend({{
     },
 	energy_required = 5,
 	main_product = 'aoc-latex',
+	auto_recycle = false,
 	category = 'aoc-category-harvesting',
 }})
 

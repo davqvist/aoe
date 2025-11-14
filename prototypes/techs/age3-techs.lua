@@ -448,7 +448,7 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "aoc-fertilizer-tech-1",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     icon = "__ageofcreation__/img/items/fertilizer.png",
     prerequisites = {"aoc-chicken-tech-1"},
 	  effects = {

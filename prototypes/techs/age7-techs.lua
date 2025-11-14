@@ -160,6 +160,27 @@ data:extend({{
 }})
 
 data:extend({{
+    type = "technology",
+    name = "aoc-gleba-discovery-tech",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__space-age__/graphics/technology/gleba.png",
+    prerequisites = {"aoc-stargazing-tech"},
+    essential = true,
+    effects = {
+      {
+        type = "unlock-space-location",
+        space_location = "gleba",
+        use_icon_overlay_constant = true
+      }
+    },
+    research_trigger =
+    {
+      type = "craft-item",
+      item = "aoc-planet-gleba"
+    }
+}})
+
+data:extend({{
   type = "technology",
   name = "aoc-vulcanus-exploration-tech",
   icon_size = 256, icon_mipmaps = 4,
@@ -541,6 +562,29 @@ data:extend({{
 
 data:extend({{
   type = "technology",
+  name = "aoc-fission-reactor-equipment-tech",
+  icon_size = 256, icon_mipmaps = 4,
+  icon = "__base__/graphics/technology/fission-reactor-equipment.png",
+  prerequisites = {"aoc-uranium-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-fission-reactor-equipment-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-fission-reactor-equipment-2-recipe"
+    }
+  },
+  unit = {
+      count = 40,
+      ingredients = AOC["age_tech_table"][7],
+      time = 60
+  }
+}})
+
+data:extend({{
+  type = "technology",
   name = "aoc-uranium-tech",
   icon_size = 64, icon_mipmaps = 4,
   icon = "__base__/graphics/icons/uranium-235.png",
@@ -581,6 +625,10 @@ data:extend({{
     {
       type = "unlock-recipe",
       recipe = "aoc-centrifuging-fuel-cell-uranium-235-depleted-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-rtg-uranium-recipe"
     }
   },
   unit = {
@@ -659,6 +707,10 @@ data:extend({{
     {
       type = "unlock-recipe",
       recipe = "aoc-centrifuging-fuel-cell-plutonium-241-depleted-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-rtg-plutonium-recipe"
     }
   },
   unit = {
@@ -690,6 +742,10 @@ data:extend({{
     {
       type = "unlock-recipe",
       recipe = "aoc-centrifuging-fuel-cell-americium-242-depleted-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-rtg-americium-recipe"
     }
   },
   unit = {
@@ -831,6 +887,10 @@ data:extend({{
     {
       type = "unlock-recipe",
       recipe = "aoc-centrifuging-fuel-cell-californium-251-depleted-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-rtg-californium-recipe"
     }
   },
   unit = {
@@ -858,6 +918,83 @@ data:extend({{
     },
     unit = {
         count = 80,
+        ingredients = AOC["age_tech_table"][7],
+        time = 60
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoc-logistics-tech-3",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/logistics-3.png",
+    prerequisites = {"aoc-space-age-tech", "aoc-logistics-tech-2"},
+    effects = {
+        {
+            type = "unlock-recipe",
+            recipe = "aoc-crafting-express-transport-belt-recipe"
+        },
+        {
+            type = "unlock-recipe",
+            recipe = "aoc-crafting-express-underground-belt-recipe"
+        },
+        {
+            type = "unlock-recipe",
+            recipe = "aoc-crafting-express-splitter-recipe"
+        },
+        {
+            type = "unlock-recipe",
+            recipe = "aoc-crafting-express-lane-splitter-recipe"
+        }
+    },
+    unit = {
+        count = 25,
+        ingredients = AOC["age_tech_table"][7],
+        time = 60
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoc-stack-inserters-tech",
+    icon_size = 256,
+    icon_mipmaps = 4,
+    icon = "__space-age__/graphics/technology/stack-inserter.png",
+    prerequisites = {"aoc-titanium-tech"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-stack-inserter-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-long-stack-inserter-recipe"
+      }
+    },
+    unit = {
+        count = 50,
+        ingredients = AOC["age_tech_table"][7],
+        time = 60
+    }
+}})
+
+data:extend({{
+    type = "technology",
+    name = "aoc-silicon-tech-3",
+    icons = get_icons( data.raw["item"]["aoc-silicon-doped-dilithium"] ),
+    prerequisites = {"aoc-silicon-tech-2", "aoc-asteroid-processing-tech"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-kiln-smelting-silicon-doped-dilithium-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-lasering-silicon-doped-dilithium-recipe"
+      }
+    },
+    unit = {
+        count = 50,
         ingredients = AOC["age_tech_table"][7],
         time = 60
     }

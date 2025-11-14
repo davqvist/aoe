@@ -4,7 +4,7 @@ data:extend({{
     icon = "__base__/graphics/icons/utility-science-pack.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-science-packs",
-    order = "e",
+    order = "f",
     stack_size = 200,
     durability = 1,
     durability_description_key = "description.science-pack-remaining-amount-key",
@@ -120,7 +120,7 @@ data:extend({{
     icon_size = 256,
     icon_mipmaps = 4,
     subgroup = "aoc-parts",
-    order = "j",
+    order = "k",
     stack_size = 100
 }})
 
@@ -133,7 +133,7 @@ data:extend({{
         tint = { 144, 144, 144 }
     } },
     subgroup = "aoc-metals-alloys",
-    order = "g",
+    order = "h",
     stack_size = 200
 }})
 
@@ -146,7 +146,7 @@ data:extend({{
         tint = { 144, 144, 144 }
     } },
     subgroup = "aoc-metals-alloys",
-    order = "g1",
+    order = "h1",
     stack_size = 200
 }})
 
@@ -179,7 +179,7 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-fertilizer-2",
-    icon = "__ageofcreation__/img/items/industrial-fertilizer.png",
+    icon = "__ageofcreation__/img/items/fertilizer-2.png",
     icon_size = 64,
     subgroup = "aoc-flora-misc",
     order = "b",
@@ -246,7 +246,7 @@ data:extend({{
     icon = "__angelsindustriesgraphics__/graphics/icons/chip.png",
     icon_size = 32,
     subgroup = "aoc-circuits",
-    order = "j",
+    order = "k",
     stack_size = 200
 }})
 

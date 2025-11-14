@@ -262,8 +262,8 @@ data:extend({{
 data:extend({{
   type = "technology",
   name = "aoc-sulfur-tech",
-  icon_size = 32,
-  icon = "__angelspetrochemgraphics__/graphics/icons/solid-sulfur.png",
+  icon_size = 256, icon_mipmaps = 4,
+  icon = "__base__/graphics/technology/sulfur-processing.png",
   prerequisites = {"aoc-electric-automation-tech-2"},
   effects = {
     {
@@ -1025,8 +1025,8 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "aoc-wind-power-tech-2",
-	  icon_size = 256,
-    icon = "__ageofcreation__/img/entities/wind-turbine.png",
+	  icon_size = 128,
+    icon = "__ageofcreation__/img/entities/wind-turbine-icon.png",
     prerequisites = {"aoc-coal-tech", "aoc-medium-voltage-tech", "aoc-wind-power-tech-1"},
 	  effects = {
       {

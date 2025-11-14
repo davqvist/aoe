@@ -30,6 +30,9 @@ local bee_globals = {
   ["aoc-zinc-ore"] = {["color"] = {92, 194, 174}, ["amount"] = 0.15, ["offspring"] = 3, ["technology"] = "aoc-bees-zinc-ore-tech", ["chance"] = 0.03, ["parents"] = {"copper-ore", "aoc-gravel"}},
   ["aoc-lead-ore"] = {["color"] = {55, 55, 55}, ["amount"] = 0.15, ["offspring"] = 3, ["technology"] = "aoc-bees-lead-ore-tech", ["chance"] = 0.03, ["parents"] = {"iron-ore", "coal"}},
   ["aoc-silver-ore"] = {["color"] = {117, 146, 146}, ["amount"] = 0.1, ["offspring"] = 3, ["technology"] = "aoc-bees-silver-ore-tech", ["chance"] = 0.02, ["parents"] = {"aoc-lead-ore", "iron-ore"}},
+  ["aoc-nauvium-ore"] = {["color"] = {210, 43, 218}, ["amount"] = 0.1, ["offspring"] = 5, ["technology"] = "aoc-bees-nauvium-ore-tech", ["chance"] = 0.02, ["parents"] = {"aoc-zinc-ore", "aoc-silver-ore"}, ["magic"] = true},
+  ["aoc-platinum-ore"] = {["color"] = {229, 201, 183}, ["amount"] = 0.05, ["offspring"] = 5, ["technology"] = "aoc-bees-platinum-ore-tech", ["chance"] = 0.015, ["parents"] = {"aoc-gold-ore", "aoc-nauvium-ore"}, ["magic"] = true},
+  ["aoc-ender-fluid"] = {["color"] = {0, 45, 35}, ["amount"] = 5, ["offspring"] = 5, ["technology"] = "aoc-bees-ender-fluid-tech", ["chance"] = 0.01, ["parents"] = {"aoc-platinum-ore", "aoc-nickel-ore"}, ["magic"] = true},
 }
 
 data.raw["item-group"]["beekeeping"].order = "y2"
@@ -864,6 +867,98 @@ data:extend({{
   category = 'aoc-category-bees-apiary'
 }})
 
+data:extend({{
+  name = 'aoc-drone-module-4-recipe',
+  type = 'recipe',
+  enabled = false,
+  ingredients = {
+    {type = 'item', name = 'aoc-bee-aoc-honey-module-3', amount = 1},
+    {type = 'item', name = 'yumako', amount = 2}
+  },
+  results = {
+    {type = 'item', name = 'aoc-bee-aoc-honey-module-4', amount = 1, probability = 0.3}
+  },
+  energy_required = 270,
+  order = 'a41',
+  category = 'aoc-category-bees-apiary'
+}})
+data:extend({{
+  name = 'aoc-drone-module-4-untreated-recipe',
+  type = 'recipe',
+  enabled = false,
+  ingredients = {
+    {type = 'item', name = 'aoc-bee-aoc-honey-module-3', amount = 1},
+    {type = 'item', name = 'yumako', amount = 2},
+    {type = 'item', name = 'aoc-frame-untreated', amount = 1}
+  },
+  results = {
+    {type = 'item', name = 'aoc-bee-aoc-honey-module-4', amount = 1, probability = 0.45},
+    {type = 'item', name = 'aoc-frame-untreated', amount = 1, probability = 0.7, ignored_by_stats = 1, ignored_by_productivity = 1 }
+  },
+  main_product = 'aoc-bee-aoc-honey-module-4',
+  icons = combine_icons_tiny( get_icons( data.raw["module"]['aoc-bee-aoc-honey-module-4'] ), get_icons( data.raw["item"]["aoc-frame-untreated"] ) ),
+  energy_required = 270,
+  order = 'a42',
+  category = 'aoc-category-bees-apiary'
+}})
+data:extend({{
+  name = 'aoc-drone-module-4-impregnated-recipe',
+  type = 'recipe',
+  enabled = false,
+  ingredients = {
+    {type = 'item', name = 'aoc-bee-aoc-honey-module-3', amount = 1},
+    {type = 'item', name = 'yumako', amount = 2},
+    {type = 'item', name = 'aoc-frame-impregnated', amount = 1}
+  },
+  results = {
+    {type = 'item', name = 'aoc-bee-aoc-honey-module-4', amount = 1, probability = 0.45},
+    {type = 'item', name = 'aoc-frame-impregnated', amount = 1, probability = 0.85, ignored_by_stats = 1, ignored_by_productivity = 1 }
+  },
+  main_product = 'aoc-bee-aoc-honey-module-4',
+  icons = combine_icons_tiny( get_icons( data.raw["module"]['aoc-bee-aoc-honey-module-4'] ), get_icons( data.raw["item"]["aoc-frame-impregnated"] ) ),
+  energy_required = 270,
+  order = 'a43',
+  category = 'aoc-category-bees-apiary'
+}})
+data:extend({{
+  name = 'aoc-drone-module-4-sweet-recipe',
+  type = 'recipe',
+  enabled = false,
+  ingredients = {
+    {type = 'item', name = 'aoc-bee-aoc-honey-module-3', amount = 1},
+    {type = 'item', name = 'yumako', amount = 2},
+    {type = 'item', name = 'aoc-frame-sweet', amount = 1}
+  },
+  results = {
+    {type = 'item', name = 'aoc-bee-aoc-honey-module-4', amount = 1, probability = 0.6},
+    {type = 'item', name = 'aoc-frame-sweet', amount = 1, probability = 0.82, ignored_by_stats = 1, ignored_by_productivity = 1 }
+  },
+  main_product = 'aoc-bee-aoc-honey-module-4',
+  icons = combine_icons_tiny( get_icons( data.raw["module"]['aoc-bee-aoc-honey-module-4'] ), get_icons( data.raw["item"]["aoc-frame-sweet"] ) ),
+  energy_required = 324,
+  order = 'a44',
+  category = 'aoc-category-bees-apiary'
+}})
+data:extend({{
+  name = 'aoc-drone-module-4-plastic-recipe',
+  type = 'recipe',
+  enabled = false,
+  ingredients = {
+    {type = 'item', name = 'aoc-bee-aoc-honey-module-3', amount = 1},
+    {type = 'item', name = 'yumako', amount = 2},
+    {type = 'item', name = 'aoc-frame-plastic', amount = 1}
+  },
+  results = {
+    {type = 'item', name = 'aoc-bee-aoc-honey-module-4', amount = 1, probability = 0.3},
+    {type = 'item', name = 'aoc-frame-plastic', amount = 1, probability = 0.85, ignored_by_stats = 1, ignored_by_productivity = 1 }
+  },
+  main_product = 'aoc-bee-aoc-honey-module-4',
+  icons = combine_icons_tiny( get_icons( data.raw["module"]['aoc-bee-aoc-honey-module-4'] ), get_icons( data.raw["item"]["aoc-frame-plastic"] ) ),
+  energy_required = 135,
+  order = 'a45',
+  category = 'aoc-category-bees-apiary'
+}})
+
 local i = 1
 for name, bee in pairs(bee_globals) do
   local localised = nil
@@ -965,6 +1060,18 @@ for name, bee in pairs(bee_globals) do
     stack_size = 10,
     localised_name = {'item-name.aoc-dna', localised }
   }})
+  local tech_unit = {
+    count = 20,
+    ingredients = AOC["age_tech_table"][5],
+    time = 40
+  }
+  if bee.magic then 
+    tech_unit = {
+      count = 20,
+      ingredients = AOC["age_tech_table"][6],
+      time = 50
+    }
+  end
   if data.raw["technology"][bee.technology] == nil and bee.chance ~= nil and bee.parents ~= nil then
     data:extend({{
         type = "technology",
@@ -972,17 +1079,19 @@ for name, bee in pairs(bee_globals) do
         icons = get_icons( data.raw["item"]["aoc-bee-" .. name] ),
         prerequisites = {},
         effects = {},
-        unit = {
-            count = 20,
-            ingredients = AOC["age_tech_table"][5],
-            time = 40
-        },
+        unit = tech_unit,
         localised_name = {'technology-name.aoc-bee-tech', localised }
     }})
     table.insert( data.raw["technology"][bee.technology].prerequisites, bee_globals[bee.parents[1]].technology )
     if bee_globals[bee.parents[1]].technology ~= bee_globals[bee.parents[2]].technology then
       table.insert( data.raw["technology"][bee.technology].prerequisites, bee_globals[bee.parents[2]].technology )
     end
+    if bee.magic then 
+      table.insert( data.raw["technology"][bee.technology].prerequisites, "aoc-brewing-tech" )
+      table.insert( data.raw["technology"][bee.technology].prerequisites, "aoc-lotus-flower-tech-1" )
+    end
+    local res_type = 'item'
+    if data.raw.fluid[name] then res_type = 'fluid' end
     data:extend({{
       name = 'aoc-gene-lab-dna-' .. name .. '-recipe',
       type = 'recipe',
@@ -990,7 +1099,7 @@ for name, bee in pairs(bee_globals) do
       ingredients = {
         {type = 'item', name = 'aoc-syringe', amount = 1},
         {type = 'fluid', name = 'aoc-bacteria', amount = 100},
-        {type = 'item', name = name, amount = bee.amount*20}
+        {type = res_type, name = name, amount = bee.amount*20}
       },
       results = {
         {type = 'item', name = 'aoc-dna-' .. name, amount = 1}
@@ -1240,13 +1349,15 @@ for name, bee in pairs(bee_globals) do
     table.insert(res, {type = 'fluid', name = name, amount = bee["amount"]})
     mp = name
   end
+  local solvent = 'aoc-solvent'
+  if bee.magic then solvent = 'aoc-magical-solvent' end
   data:extend({{
     name = 'aoc-comb-liquify-' .. name .. '-recipe',
     type = 'recipe',
     enabled = false,
     ingredients = {
       {type = 'item', name = 'aoc-comb-' .. name, amount = 1},
-      {type = 'fluid', name = 'aoc-solvent', amount = 2}
+      {type = 'fluid', name = solvent, amount = 2}
     },
     results = res,
     auto_recycle = false,

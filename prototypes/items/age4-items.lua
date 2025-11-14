@@ -6,7 +6,7 @@ data:extend({{
     icon = "__base__/graphics/icons/military-science-pack.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-science-packs",
-    order = "d",
+    order = "e",
     stack_size = 200,
     durability = 1,
     durability_description_key = "description.science-pack-remaining-amount-key",
@@ -865,7 +865,7 @@ data:extend({{
     icon = "__angelsindustriesgraphics__/graphics/icons/resistor.png",
     icon_size = 32,
     subgroup = "aoc-circuits",
-    order = "e",
+    order = "f",
     stack_size = 200
 }})
 
@@ -875,7 +875,7 @@ data:extend({{
     icon = "__ageofcreation__/img/items/diode.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-circuits",
-    order = "f",
+    order = "g",
     stack_size = 200
 }})
 
@@ -885,7 +885,7 @@ data:extend({{
     icon = "__ageofcreation__/img/items/capacitor.png",
     icon_size = 64,
     subgroup = "aoc-circuits",
-    order = "g",
+    order = "h",
     stack_size = 200
 }})
 
@@ -895,7 +895,7 @@ data:extend({{
     icon = "__angelsindustriesgraphics__/graphics/icons/transistor.png",
     icon_size = 32,
     subgroup = "aoc-circuits",
-    order = "h",
+    order = "i",
     stack_size = 200
 }})
 
@@ -905,7 +905,7 @@ data:extend({{
     icon = "__ageofcreation__/img/items/inductor.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-circuits",
-    order = "i",
+    order = "j",
     stack_size = 200
 }})
 

@@ -36,7 +36,16 @@ data:extend({{
           width = 256,
           height = 256,
           frame_count = 1,
-          scale = 1
+          scale = 1.05,
+          shift = util.by_pixel(0, -5)
+        },
+        {
+          filename = "__ageofcreation__/img/entities/barn-shadow.png",
+          draw_as_shadow = true,
+          width = 384,
+          height = 384,
+          scale = 0.9,
+          shift = util.by_pixel(96, -48)
         }
       }
     }

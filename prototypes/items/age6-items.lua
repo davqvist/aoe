@@ -4,7 +4,7 @@ data:extend({{
     icon = "__base__/graphics/icons/production-science-pack.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-science-packs",
-    order = "f",
+    order = "g",
     stack_size = 200,
     durability = 1,
     durability_description_key = "description.science-pack-remaining-amount-key",
@@ -25,7 +25,7 @@ data:extend({{
     type = "item",
     name = "aoc-lotus-flower",
     icon = "__ageofcreation__/img/items/lotus-flower.png",
-    icon_size = 64,
+    icon_size = 128,
     subgroup = "aoc-flora-lotus",
     order = "b",
     stack_size = 200
@@ -365,6 +365,17 @@ data:extend({{
     icon_mipmaps = 4,
     subgroup = "aoc-planets",
     order = "k",
+    stack_size = 10
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-planet-gleba",
+    icon = "__space-age__/graphics/icons/gleba.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "aoc-planets",
+    order = "l",
     stack_size = 10
 }})
 

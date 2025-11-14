@@ -34,7 +34,15 @@ data:extend({{
           filename = "__ageofcreation__/img/entities/medium-wooden-chest.png",
           width = 192,
           height = 192,
-		  scale = 0.33333
+		      scale = 0.33333
+        },
+        {
+          filename = "__ageofcreation__/img/entities/medium-wooden-chest-shadow.png",
+          draw_as_shadow = true,
+          width = 112,
+          height = 112,
+		      scale = 0.666,
+          shift = util.by_pixel(24, 0)
         }
       }
     },

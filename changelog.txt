@@ -1,4 +1,30 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.9
+Date: 2025-11-14
+  Features:
+    - Early Age 8 techs added up to quantum processors
+    - Medium Wooden Chest, Big Wooden Chest, Barn, Wind Turbine, Weather Station and Transmitting Station have new graphics (and some also animations)
+    - added blue belts, blue loaders and stack inserters
+    - added inserter capacity technology
+    - added RTGs
+    - added Portable Fission Reactor
+    - added 3 magical bees
+    - re-enabled the Power Overload tips and tricks
+    - output player feedback message if there is nothing left to research when consuming a research scroll
+  Changes:
+    - Age 4 science recipe now uses Age 2 science
+    - nerfed higher tier animal module chances by a bit as they don't require the previous module like plants do
+    - changed more icon textures
+    - changed sulfur tech icon to vanilla one
+    - red belts now require additionally a stainless steel plate
+    - biter spawning limited to Vulcanus
+    - reduced nuclear fuel cell stack sizes to 50
+    - changed some brewing chances
+    - chicken module 1 requires now 2 maize kernels instead of 1
+  Bugfixes:
+    - fixed showing correct localised name for equipment recipes
+    - fixed a bug regarding brewing chance
+---------------------------------------------------------------------------------------------------
 Version: 0.0.8
 Date: 2025-11-09
   Features:
