@@ -842,7 +842,7 @@ data:extend({{
     icon_size = 64,
     subgroup = "aoc-parts",
     order = "e",
-    stack_size = 200
+    stack_size = 100
 }})
 
 data.raw['item']['advanced-circuit'].subgroup = "aoc-circuits"

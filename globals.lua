@@ -26,7 +26,8 @@ local to_enchant = {
     ["solar-panel-equipment"] = "solar-panel-equipment",
     ["battery-equipment"] = "battery-equipment",
     ["exoskeleton-equipment"] = "movement-bonus-equipment",
-    ["fission-reactor-equipment"] = "generator-equipment"
+    ["fission-reactor-equipment"] = "generator-equipment",
+    ["personal-laser-defense-equipment"] = "active-defense-equipment"
 }
 
 function table.contains(table, element)

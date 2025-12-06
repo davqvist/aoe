@@ -34,6 +34,11 @@ for _, recipe in pairs(data.raw.recipe) do
 	  end
 	end
   end
+  if recipe.name:find('^aoc%-dna%-.*%-recycling$') ~= nil then
+	data.raw.recipe[recipe.name].results = {
+      {type = 'item', name = 'aoc-syringe', amount=1, probability=0.5}
+    }
+  end
 end
 
 for _, i in pairs(item_void_blacklist) do

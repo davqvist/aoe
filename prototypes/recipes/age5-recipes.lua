@@ -44,7 +44,7 @@ data:extend({{
     },
     results = {
         {type = 'fluid', name = 'crude-oil', amount = 75},
-		{type = 'item', name = 'iron-ore', amount = 1, probability = 0.9, ignored_by_stats = 1, ignored_by_productivity = 1}
+		{type = 'item', name = 'iron-ore', amount = 1, probability = 0.9, ignored_by_productivity = 1}
     },
 	main_product = 'crude-oil',
     auto_recycle = false,
@@ -95,7 +95,7 @@ data:extend({{
     },
     results = {
         {type = 'fluid', name = 'crude-oil', amount = 100},
-		{type = 'item', name = 'iron-ore', amount = 1, probability = 0.9, ignored_by_stats = 1, ignored_by_productivity = 1}
+		{type = 'item', name = 'iron-ore', amount = 1, probability = 0.9, ignored_by_productivity = 1}
     },
 	main_product = 'crude-oil',
     auto_recycle = false,
@@ -656,9 +656,9 @@ data:extend({{
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'fluid', name = 'aoc-isoprene', amount = 60},
+		{type = 'fluid', name = 'aoc-isoprene', amount = 30},
 		{type = 'fluid', name = 'aoc-latex', amount = 5},
-		{type = 'item', name = 'sulfur', amount = 2}
+		{type = 'item', name = 'sulfur', amount = 1}
     },
     results = {
         {type = 'fluid', name = 'aoc-liquid-rubber', amount = 30}
@@ -695,6 +695,20 @@ data:extend({{
     },
 	auto_recycle = false,
     energy_required = 1
+}})
+
+data:extend({{
+	name = 'aoc-crafting-flask-rubber-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-glass', amount = 4},
+        {type = 'item', name = 'aoc-rubber', amount = 1}
+	},
+	results = {
+        {type = 'item', name = 'aoc-flask', amount = 2}
+    },
+	energy_required = 4
 }})
 
 data:extend({{
@@ -1025,7 +1039,7 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'aoc-chicken', amount = 1, probability = 0.575},
-		{type = 'item', name = 'aoc-bedding', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.985}
+		{type = 'item', name = 'aoc-bedding', amount = 1, ignored_by_productivity = 1, probability = 0.985}
     },
     energy_required = 11,
 	main_product = 'aoc-chicken',
@@ -1044,7 +1058,7 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'aoc-egg', amount = 9},
-		{type = 'item', name = 'aoc-chicken', amount = 2, ignored_by_stats = 2, ignored_by_productivity = 2, probability = 0.89}
+		{type = 'item', name = 'aoc-chicken', amount = 2, ignored_by_productivity = 2, probability = 0.89}
     },
     energy_required = 11,
 	main_product = 'aoc-egg',
@@ -1106,8 +1120,8 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'aoc-wool', amount = 3},
-		{type = 'item', name = 'aoc-sheep', amount = 3, ignored_by_stats = 3, ignored_by_productivity = 3},
-		{type = 'item', name = 'aoc-sheep', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.94}
+		{type = 'item', name = 'aoc-sheep', amount = 3, ignored_by_productivity = 3},
+		{type = 'item', name = 'aoc-sheep', amount = 1, ignored_by_productivity = 1, probability = 0.94}
     },
     main_product = 'aoc-wool',
 	energy_required = 10,
@@ -1127,7 +1141,7 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'aoc-lamb', amount = 1},
-		{type = 'item', name = 'aoc-sheep', amount = 2, ignored_by_stats = 2, ignored_by_productivity = 2, probability = 0.9}
+		{type = 'item', name = 'aoc-sheep', amount = 2, ignored_by_productivity = 2, probability = 0.9}
     },
     main_product = 'aoc-lamb',
 	energy_required = 26,
@@ -1193,8 +1207,8 @@ data:extend({{
     },
     results = {
         {type = 'fluid', name = 'aoc-milk', amount = 350},
-		{type = 'item', name = 'aoc-cow', amount = 3, ignored_by_stats = 3, ignored_by_productivity = 3},
-		{type = 'item', name = 'aoc-cow', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.94}
+		{type = 'item', name = 'aoc-cow', amount = 3, ignored_by_productivity = 3},
+		{type = 'item', name = 'aoc-cow', amount = 1, ignored_by_productivity = 1, probability = 0.94}
     },
     main_product = 'aoc-milk',
 	energy_required = 16,
@@ -1216,8 +1230,8 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'aoc-calf', amount = 1},
-		{type = 'item', name = 'aoc-ox', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.92},
-		{type = 'item', name = 'aoc-cow', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.87}
+		{type = 'item', name = 'aoc-ox', amount = 1, ignored_by_productivity = 1, probability = 0.92},
+		{type = 'item', name = 'aoc-cow', amount = 1, ignored_by_productivity = 1, probability = 0.87}
     },
     main_product = 'aoc-calf',
 	energy_required = 31,
@@ -1320,7 +1334,7 @@ data:extend({{
 		{type = 'fluid', name = 'aoc-fish-water', amount = 400}
     },
     results = {
-        {type = 'item', name = 'aoc-fish-module-2', amount=1, probability = 0.25, ignored_by_stats = 1, ignored_by_productivity = 1},
+        {type = 'item', name = 'aoc-fish-module-2', amount=1, probability = 0.25},
 		{type = 'item', name = 'aoc-fish-module-3', amount=1, probability = 0.4},
         {type = 'item', name = 'aoc-fish-module-4', amount=1, probability = 0.04}
     },
@@ -1337,7 +1351,7 @@ data:extend({{
         {type = 'fluid', name = 'water', amount = 1000},
         {type = 'item', name = 'aoc-iron-dust', amount = 2},
         {type = 'item', name = 'aoc-clay', amount = 4},
-        {type = 'item', name = 'aoc-puree', amount = 2},
+        {type = 'item', name = 'aoc-puree', amount = 1},
         {type = 'item', name = 'aoc-caustic-soda', amount = 3},
         {type = 'item', name = 'aoc-mica', amount = 1}
     },
@@ -1489,6 +1503,20 @@ data:extend({{
         {type = 'item', name = 'grenade', amount = 1}
     },
     energy_required = 4
+}})
+
+data:extend({{
+    name = 'aoc-crafting-cluster-grenade-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'cliff-explosives', amount = 4},
+        {type = 'item', name = 'grenade', amount = 4}
+    },
+    results = {
+        {type = 'item', name = 'cluster-grenade', amount = 1}
+    },
+    energy_required = 8
 }})
 
 data:extend({{
@@ -1660,7 +1688,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoc-lens', amount = 1, probability = 0.9},
-		{type = 'item', name = 'aoc-saw-blade-diamond', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.99}
+		{type = 'item', name = 'aoc-saw-blade-diamond', amount = 1, ignored_by_productivity = 1, probability = 0.98}
     },
 	main_product = 'aoc-lens',
 	energy_required = 4,
@@ -1870,6 +1898,25 @@ data:extend({{
 }})
 
 data:extend({{
+	name = 'aoc-smelting-glass-4-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-quartz-dust', amount = 4},
+		{type = 'item', name = 'aoc-soda-ash', amount = 2},
+		{type = 'item', name = 'aoc-quicklime', amount = 1},
+		{type = 'item', name = 'aoc-aluminium-dust', amount = 1},
+		{type = 'fluid', name = 'aoc-epoxy-resin', amount = 10}
+	},
+	results = {
+		{type = 'item', name = 'aoc-glass', amount = 12}
+    },
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-glass"] ), get_icons( data.raw.fluid["aoc-epoxy-resin"] ) ),
+	energy_required = 9.6,
+	category = 'smelting'
+}})
+
+data:extend({{
 	name = 'aoc-crafting-laser-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1979,7 +2026,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoc-silicon-doped-wafer', amount = 4},
-		{type = 'item', name = 'aoc-saw-blade-diamond', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.99}
+		{type = 'item', name = 'aoc-saw-blade-diamond', amount = 1, ignored_by_productivity = 1, probability = 0.98}
     },
 	icons = combine_icons_tiny( get_icons( data.raw["item"]['aoc-silicon-doped-wafer'] ), get_icons( data.raw["item"]["aoc-saw-blade-diamond"] ) ),
 	main_product = 'aoc-silicon-doped-wafer',
@@ -2043,7 +2090,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'fluid', name = 'aoc-phosgene', amount = 20},
-		{type = 'item', name = 'aoc-carbon-activated', amount = 1, probability = 0.96, ignored_by_stats = 1, ignored_by_productivity = 1}
+		{type = 'item', name = 'aoc-carbon-activated', amount = 1, probability = 0.96, ignored_by_productivity = 1}
     },
     main_product = 'aoc-phosgene',
 	energy_required = 2,
@@ -2264,7 +2311,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoc-integrated-circuit', amount = 1}
     },
-	energy_required = 2,
+	energy_required = 4,
 	category = 'aoc-category-intricate-crafting'
 }})
 
@@ -2315,7 +2362,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoc-electrum-machine-hull', amount = 1}
     },
-	energy_required = 2
+	energy_required = 8
 }})
 
 data:extend({{
@@ -2374,7 +2421,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoc-nauvium-plate', amount = 6},
-		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_productivity = 1, probability = 0.8}
     },
 	main_product = 'aoc-nauvium-plate',
 	energy_required = 3,
@@ -2408,7 +2455,7 @@ data:extend({{
         {type = 'item', name = 'aoc-kelp-module-2', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoc-kelp-module-2', amount=1, probability = 0.512, ignored_by_stats = 1, ignored_by_productivity = 1},
+        {type = 'item', name = 'aoc-kelp-module-2', amount=1, probability = 0.512, ignored_by_productivity = 1},
         {type = 'item', name = 'aoc-kelp-module-3', amount=1, probability = 0.256},
         {type = 'item', name = 'aoc-kelp-module-4', amount=1, probability = 0.064},
         {type = 'item', name = 'aoc-kelp-module-5', amount=1, probability = 0.016}
@@ -2728,7 +2775,7 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'aoc-resin', amount = 2},
-		{type = 'item', name = 'aoc-spruce-tree', amount = 1, probability = 0.95, ignored_by_stats = 1, ignored_by_productivity = 1 }
+		{type = 'item', name = 'aoc-spruce-tree', amount = 1, probability = 0.95, ignored_by_productivity = 1 }
     },
 	main_product = 'aoc-resin',
     energy_required = 6,

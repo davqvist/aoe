@@ -19,6 +19,7 @@ data.raw['equipment-grid']['small-equipment-grid'].width = 6
 data.raw['equipment-grid']['small-equipment-grid'].height = 6
 data.raw['item']['solar-panel-equipment'].subgroup = "aoc-equipment"
 data.raw['item']['solar-panel-equipment'].order = "b"
+data.raw['item']['solar-panel-equipment'].stack_size = 200
 data.raw['item']['battery-equipment'].subgroup = "aoc-equipment"
 data.raw['item']['battery-equipment'].order = "c"
 data.raw['item']['belt-immunity-equipment'].subgroup = "aoc-equipment"
@@ -99,8 +100,11 @@ data:extend({{
 data.raw['capsule']['grenade'].subgroup = "aoc-combat-helpers"
 data.raw['capsule']['grenade'].order = "a"
 data.raw['capsule']['grenade'].stack_size = 100
+data.raw['capsule']['cluster-grenade'].subgroup = "aoc-combat-helpers"
+data.raw['capsule']['cluster-grenade'].order = "b"
+data.raw['capsule']['cluster-grenade'].stack_size = 100
 data.raw['item']['land-mine'].subgroup = "aoc-combat-helpers"
-data.raw['item']['land-mine'].order = "b"
+data.raw['item']['land-mine'].order = "c"
 data.raw['item']['land-mine'].stack_size = 200
 data.raw['capsule']['cliff-explosives'].subgroup = "aoc-petrochem"
 data.raw['capsule']['cliff-explosives'].order = "d"
@@ -257,7 +261,7 @@ data:extend({{
     icon_size = 64,
     subgroup = "aoc-parts",
     order = "f",
-    stack_size = 200
+    stack_size = 100
 }})
 
 data:extend({{

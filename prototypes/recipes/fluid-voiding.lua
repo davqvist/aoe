@@ -19,7 +19,8 @@ for _, fluid in pairs(data.raw.fluid) do
 				energy_required = 1,
 				category = 'aoc-category-venting',
 				subgroup = 'aoc-other',
-				icons = get_void_icon( fluid )
+				icons = get_void_icon( fluid ),
+				localised_name = {'age-of-creation.void-fluid', {'fluid-name.' .. fluid.name} }
 			}})
 		else
 			data:extend({{
@@ -37,7 +38,8 @@ for _, fluid in pairs(data.raw.fluid) do
 				energy_required = 1,
 				category = 'aoc-category-sinking',
 				subgroup = 'aoc-other',
-				icons = get_void_icon( fluid )
+				icons = get_void_icon( fluid ),
+				localised_name = {'age-of-creation.void-fluid', {'fluid-name.' .. fluid.name} }
 			}})
 		end
 	end

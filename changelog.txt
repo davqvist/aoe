@@ -1,4 +1,42 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.10
+Date: 2025-12-06
+  Features:
+    - added improved flask recipe and glass tier 4 recipe to age 5
+    - added kiln graphics and animation
+    - added lots more military stuff
+    - added Gleba Linked Chest
+    - added fuel value to coal dust
+    - added 2 more alchemy conversion recipes
+    - added cauldron description
+    - added activated carbon milestone
+  Changes:
+    - Age 8 QOL research now dependant on new military 3 research instead of gleba exploration
+    - made cleanroom assembling machine's fluid connection passthrough
+    - silicon wafer and lens sawing recipes now have a 2% chance to break the saw instead of 1%
+    - all hulls have now a stack size of 100 and have a longer craft time, the higher the hull tier
+    - inceased egg stack size from 100 to 200 and photovoltaic cell stack size from 20 to 200
+    - bee larva, integrated circuit, roasted coffee beans, battery, crushing tailings dust and slag recipes are now half as fast
+    - tea, coffee, hay and lamp recipes are now about a third as fast
+    - made isoprene rubber recipe half as expensive
+    - drilling fluid now only needs 1 puree instead of 2
+    - changed cement icon
+    - changed magical drilling fluid brewing chance
+    - cauldron and escritoire now only need 4 nauvium catalyst instead of 10
+    - drones are now twice as speedy
+    - all bee dna recycle now back into syringes (with 50% probability)
+    - starlight tech now properly requires solar power tech as requirement
+    - lotus seeds greenhouse recipe requires now seeds again, to not accidently research the module recipe first
+    - red AFH pipes are now double the length of yellow ones instead of 150%
+    - changed apple and olive tree milestone to apple and olive
+  Bugfixes:
+    - hopefully fixed production stats for catalyst recipes
+    - fixed huge storage tank not being blueprint rotatable
+    - fixed localization of fluid voiding recipes
+    - fixed power production graphs not showing wind turbine icon
+    - fixed apiary and hive module slots icons display
+    - fixed infusion table logic
+---------------------------------------------------------------------------------------------------
 Version: 0.0.9
 Date: 2025-11-14
   Features:

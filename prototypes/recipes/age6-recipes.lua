@@ -117,7 +117,7 @@ data:extend({{
     main_product = 'aoc-lotus-flower-seeds',
     energy_required = 6,
 	category = 'aoc-category-greenhouse',
-	research = 'aoc-lotus-flower'
+	research = 'aoc-lotus-flower-seeds'
 }})
 
 data:extend({{
@@ -276,6 +276,40 @@ data:extend({{
 }})
 
 data:extend({{
+	name = 'aoc-alchemy-quartz-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-apatite', amount = 10},
+        {type = 'fluid', name = 'aoc-alchemical-reducing-fluid', amount = 20}
+	},
+	results = {
+		{type = 'item', name = 'aoc-quartz-ore', amount = 10}
+    },
+	energy_required = 10,
+	auto_recycle = false,
+	category = 'aoc-category-alchemy',
+	research = 'aoc-apatite'
+}})
+
+data:extend({{
+	name = 'aoc-alchemy-aluminium-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-quartz-ore', amount = 10},
+        {type = 'fluid', name = 'aoc-alchemical-reducing-fluid', amount = 20}
+	},
+	results = {
+		{type = 'item', name = 'aoc-aluminium-ore', amount = 10}
+    },
+	energy_required = 10,
+	auto_recycle = false,
+	category = 'aoc-category-alchemy',
+	research = 'aoc-quartz-ore'
+}})
+
+data:extend({{
 	name = 'aoc-alchemy-magnesium-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -352,7 +386,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoc-platinum-plate', amount = 6},
-		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.8}
+		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_productivity = 1, probability = 0.8}
     },
 	main_product = 'aoc-platinum-plate',
 	energy_required = 3,
@@ -368,7 +402,7 @@ data:extend({{
 		{type = 'item', name = 'wood', amount = 80},
 		{type = 'item', name = 'aoc-paper', amount = 10},
 		{type = 'item', name = 'aoc-gold-plate', amount = 20},
-		{type = 'item', name = 'aoc-nauvium-catalyst', amount = 10}
+		{type = 'item', name = 'aoc-nauvium-catalyst', amount = 4}
 	},
 	results = {
 		{type = 'item', name = 'aoc-escritoire', amount = 1}
@@ -633,7 +667,7 @@ data:extend({{
 	ingredients = {
         {type = 'item', name = 'tungsten-plate', amount = 40},
         {type = 'item', name = 'pipe', amount = 10},
-        {type = 'item', name = 'aoc-nauvium-catalyst', amount = 10}
+        {type = 'item', name = 'aoc-nauvium-catalyst', amount = 4}
 	},
 	results = {
 		{type = 'item', name = 'aoc-cauldron', amount = 1}
@@ -735,7 +769,7 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoc-brewing-10-aoc-alchemy-drilling-fluid-magical-recipe',
+	name = 'aoc-brewing-00-aoc-alchemy-drilling-fluid-magical-recipe',
 	type = 'recipe',
 	enabled = true,
 	hidden = true,
@@ -1127,7 +1161,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoc-ender-orb', amount = 1},
-		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.9}
+		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_productivity = 1, probability = 0.9}
     },
 	main_product = 'aoc-ender-orb',
 	energy_required = 3,
@@ -1162,7 +1196,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoc-enderium-plate', amount = 1},
-		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.75}
+		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_productivity = 1, probability = 0.75}
     },
 	main_product = 'aoc-enderium-plate',
 	energy_required = 3,

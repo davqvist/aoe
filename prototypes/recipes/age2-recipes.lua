@@ -153,7 +153,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'small-lamp', amount = 1}
     },
-	energy_required = 0.4
+	energy_required = 1
 }})
 
 data:extend({{
@@ -649,7 +649,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-stones-igneous', amount = 1},
 		{type = 'item', name = 'aoc-stones-metamorphic', amount = 1},
 		{type = 'item', name = 'aoc-stones-sedimentary', amount = 1},
-		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.98}
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_productivity = 1, probability = 0.98}
     },
 	icon = data.raw.item["stone"].icon,
 	icon_size = data.raw.item["stone"].icon_size,
@@ -802,7 +802,7 @@ data:extend({{
 		{type = 'item', name = 'coal', amount = 3},
 		{type = 'item', name = 'iron-ore', amount = 2},
 		{type = 'item', name = 'copper-ore', amount = 1},
-		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.85}
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_productivity = 1, probability = 0.85}
     },
 	main_product = 'coal',
 	energy_required = 8,
@@ -821,7 +821,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-quartz-ore', amount = 3},
 		{type = 'item', name = 'aoc-tin-ore', amount = 2},
 		{type = 'item', name = 'aoc-manganese-ore', amount = 1},
-		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.85}
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_productivity = 1, probability = 0.85}
     },
 	main_product = 'aoc-quartz-ore',
 	energy_required = 8,
@@ -840,7 +840,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-aluminium-ore', amount = 3},
 		{type = 'item', name = 'aoc-magnesium-ore', amount = 2},
 		{type = 'item', name = 'aoc-mica', amount = 1},
-		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.85}
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_productivity = 1, probability = 0.85}
     },
 	main_product = 'aoc-aluminium-ore',
 	energy_required = 8,

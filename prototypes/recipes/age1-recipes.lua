@@ -290,7 +290,7 @@ data:extend({{
     enabled = false,
 	ingredients = {
 		{type = 'fluid', name = 'water', amount = 100},
-		{type = 'fluid', name = 'aoc-bacteria', amount = 100}
+		{type = 'fluid', name = 'aoc-bacteria', amount = 100, ignored_by_stats = 100}
     },
     results = {
         {type = 'fluid', name = 'aoc-bacteria', amount = 200, ignored_by_stats = 100, ignored_by_productivity = 100}
@@ -765,7 +765,7 @@ data:extend({{
     results = {
         {type = 'item', name = 'aoc-tea', amount = 1}
     },
-    energy_required = 2.4,
+    energy_required = 7.2,
 	category = 'smelting'
 }})
 
@@ -774,10 +774,10 @@ data:extend({{
     type = 'recipe',
     enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoc-coffee-beans', amount = 2}
+		{type = 'item', name = 'aoc-coffee-beans', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoc-coffee-beans-roasted', amount = 2}
+        {type = 'item', name = 'aoc-coffee-beans-roasted', amount = 1}
     },
     energy_required = 2.4,
 	category = 'smelting'
@@ -794,7 +794,7 @@ data:extend({{
     results = {
         {type = 'item', name = 'aoc-coffee', amount = 1}
     },
-    energy_required = 2.4,
+    energy_required = 7.2,
 	category = 'smelting'
 }})
 
@@ -837,7 +837,7 @@ data:extend({{
         {type = 'item', name = 'aoc-gravel', amount = 4},
         {type = 'item', name = 'aoc-iron-dust', amount = 2},
         {type = 'item', name = 'aoc-copper-dust', amount = 1},
-        {type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.95}
+        {type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_productivity = 1, probability = 0.95}
     },
 	main_product = 'aoc-copper-dust',
 	energy_required = 8,
@@ -1001,7 +1001,7 @@ data:extend({{
         {type = 'item', name = 'aoc-silt', amount = 3},
         {type = 'item', name = 'aoc-kelp', amount = 1, probability = 0.5},
         {type = 'item', name = 'raw-fish', amount = 1, probability = 0.05},
-        {type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.98}
+        {type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_productivity = 1, probability = 0.98}
     },
 	main_product = 'aoc-soil',
     energy_required = 16,

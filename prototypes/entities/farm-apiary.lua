@@ -20,6 +20,7 @@ data:extend({{
     module_slots = 10,
     icon = '__NPBees2_art__/graphics/icon/apiary.png',
 	  icon_size = 32,
+    icons_positioning = { {inventory_index = defines.inventory.crafter_modules, scale = 0.4, scale_for_many = 0.4, max_icons_per_row = 5} },
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { hardness = 1, mining_time = 0.2, result = "aoc-farm-apiary" },
     circuit_wire_connection_point = circuit_connector_definitions["assembling-machine"].points,

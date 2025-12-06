@@ -153,7 +153,9 @@ data:extend({{
     pictures = { { filename = "__ageofcreation__/img/items/coal-dust.png", size = 64, scale = 0.5, mipmap_count = 4 } },
     subgroup = "aoc-coal",
     order = "b",
-    stack_size = 200
+    stack_size = 200,
+    fuel_value = "1.5MJ",
+	fuel_category = "chemical"
 }})
 
 data:extend({{
@@ -400,8 +402,8 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-cement",
-    icon = "__ageofcreation__/img/items/cement.png",
-    icon_size = 64,
+    icon = "__angelssmeltinggraphics__/graphics/icons/solid-cement.png",
+    icon_size = 32,
     subgroup = "aoc-construction",
     order = "e",
     stack_size = 200

@@ -178,72 +178,7 @@ end
 -- AFH
 
 if mods["underground-pipe-pack"] then
---[[
-    data.raw['item']['check-valve'].subgroup = "aoc-fluid-logistics"
-    data.raw['item']['check-valve'].order = "d1"
-    data.raw['item']['80-overflow-valve'].subgroup = "aoc-fluid-logistics"
-    data.raw['item']['80-overflow-valve'].order = "e1"
-    data.raw['item']['80-top-up-valve'].subgroup = "aoc-fluid-logistics"
-    data.raw['item']['80-top-up-valve'].order = "f1"
 
-    data:extend({{
-        name = 'aoc-crafting-valve-return-afh-recipe',
-        type = 'recipe',
-        enabled = false,
-        ingredients = {
-            {type = 'item', name = 'pipe', amount = 5},
-            {type = 'item', name = 'electronic-circuit', amount = 1},
-            {type = 'item', name = 'aoc-aluminium-plate', amount = 3}
-        },
-        results = {
-            {type = 'item', name = 'check-valve', amount = 1}
-        },
-        energy_required = 2
-    }})
-    
-    data:extend({{
-        name = 'aoc-crafting-valve-overflow-afh-recipe',
-        type = 'recipe',
-        enabled = false,
-        ingredients = {
-            {type = 'item', name = 'pipe', amount = 5},
-            {type = 'item', name = 'electronic-circuit', amount = 1},
-            {type = 'item', name = 'aoc-aluminium-plate', amount = 3}
-        },
-        results = {
-            {type = 'item', name = '80-overflow-valve', amount = 1}
-        },
-        energy_required = 2
-    }})
-    
-    data:extend({{
-        name = 'aoc-crafting-valve-underflow-afh-recipe',
-        type = 'recipe',
-        enabled = false,
-        ingredients = {
-            {type = 'item', name = 'pipe', amount = 5},
-            {type = 'item', name = 'electronic-circuit', amount = 1},
-            {type = 'item', name = 'aoc-aluminium-plate', amount = 3}
-        },
-        results = {
-            {type = 'item', name = '80-top-up-valve', amount = 1}
-        },
-        energy_required = 2
-    }})
-
-    table.insert( data.raw["technology"]["aoc-fluid-handling-tech-2"].effects, {
-        type = "unlock-recipe",
-        recipe = "aoc-crafting-valve-return-afh-recipe"
-    } )
-    table.insert( data.raw["technology"]["aoc-fluid-handling-tech-2"].effects, {
-        type = "unlock-recipe",
-        recipe = "aoc-crafting-valve-overflow-afh-recipe"
-    } )
-    table.insert( data.raw["technology"]["aoc-fluid-handling-tech-2"].effects, {
-        type = "unlock-recipe",
-        recipe = "aoc-crafting-valve-underflow-afh-recipe"
-    } )
---]]
     data:extend({{
         name = 'aoc-crafting-swivel-joint-recipe',
         type = 'recipe',
@@ -694,10 +629,10 @@ if mods["underground-pipe-pack"] then
             if conn.max_underground_distance then conn.max_underground_distance = 16 end
         end
         for _, conn2 in pairs(data.raw['pipe-to-ground'][pipe .. "-t2-pipe"].fluid_box.pipe_connections) do
-            if conn2.max_underground_distance then conn2.max_underground_distance = 24 end
+            if conn2.max_underground_distance then conn2.max_underground_distance = 32 end
         end
         for _, conn3 in pairs(data.raw['pipe-to-ground'][pipe .. "-t3-pipe"].fluid_box.pipe_connections) do
-            if conn3.max_underground_distance then conn3.max_underground_distance = 32 end
+            if conn3.max_underground_distance then conn3.max_underground_distance = 48 end
         end
     end
 else 

@@ -16,7 +16,7 @@ data:extend({{
     icon = "__angelspetrochemgraphics__/graphics/icons/petrochem-gas-tank.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    flags = { "placeable-player", "player-creation", "not-rotatable" },
+    flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 3, result = "aoc-tank-huge" },
     max_health = 500,
     corpse = "medium-remnants",

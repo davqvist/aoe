@@ -50,6 +50,18 @@ data.raw['assembling-machine']['assembling-machine-3'].energy_source.drain = "25
 data.raw['assembling-machine']['assembling-machine-3'].crafting_speed = 2
 data.raw['assembling-machine']['assembling-machine-3'].module_slots = 3
 data.raw['assembling-machine']['assembling-machine-3'].crafting_categories = {"basic-crafting", "crafting", "advanced-crafting", "crafting-with-fluid", "aoc-category-intricate-crafting", "aoc-category-vacuum-crafting"}
+data.raw['assembling-machine']['assembling-machine-3'].fluid_boxes = {
+  {
+    production_type = "input",
+    volume = 1000,
+    pipe_picture = assembler2pipepictures(),
+    pipe_covers = pipecoverspictures(),
+    pipe_connections = {
+      { flow_direction="input-output", direction = defines.direction.west, position = {-1, 0} },
+      { flow_direction="input-output", direction = defines.direction.east, position = {1, 0} }
+    }
+  }
+}
 
 data.raw['item']['lab'].subgroup = "aoc-processing-buildings"
 data.raw['item']['lab'].order = "m"

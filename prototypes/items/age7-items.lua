@@ -90,6 +90,12 @@ data.raw['item']['promethium-asteroid-chunk'].stack_size = 1
 data.raw['ammo']['piercing-rounds-magazine'].subgroup = "aoc-ammo"
 data.raw['ammo']['piercing-rounds-magazine'].order = "c"
 data.raw['ammo']['piercing-rounds-magazine'].stack_size = 100
+data.raw['ammo']['uranium-rounds-magazine'].subgroup = "aoc-ammo"
+data.raw['ammo']['uranium-rounds-magazine'].order = "d"
+data.raw['ammo']['uranium-rounds-magazine'].stack_size = 100
+data.raw['ammo']['shotgun-shell'].subgroup = "aoc-ammo"
+data.raw['ammo']['shotgun-shell'].order = "e"
+data.raw['ammo']['shotgun-shell'].stack_size = 100
 
 data.raw['item']['rocket-silo'].subgroup = "aoc-space-buildings"
 data.raw['item']['rocket-silo'].order = "c"
@@ -122,6 +128,9 @@ data:extend({{
 data.raw['gun']['submachine-gun'].subgroup = "aoc-guns"
 data.raw['gun']['submachine-gun'].order = "b"
 data.raw['gun']['submachine-gun'].stack_size = 10
+data.raw['gun']['shotgun'].subgroup = "aoc-guns"
+data.raw['gun']['shotgun'].order = "c"
+data.raw['gun']['shotgun'].stack_size = 10
 data.raw['item']['gun-turret'].subgroup = "aoc-turrets"
 data.raw['item']['gun-turret'].order = "a"
 data.raw['item']['gun-turret'].stack_size = 25
@@ -172,10 +181,12 @@ data.raw['armor']['heavy-armor'].subgroup = "aoc-armor"
 data.raw['armor']['heavy-armor'].order = "c"
 data.raw['armor']['heavy-armor'].inventory_size_bonus = 20
 data.raw['armor']['heavy-armor'].equipment_grid = "medium-equipment-grid"
+data.raw['item']['personal-laser-defense-equipment'].subgroup = "aoc-equipment"
+data.raw['item']['personal-laser-defense-equipment'].order = "j"
 data.raw['item']['exoskeleton-equipment'].subgroup = "aoc-equipment"
-data.raw['item']['exoskeleton-equipment'].order = "j"
+data.raw['item']['exoskeleton-equipment'].order = "k"
 data.raw['item']['fission-reactor-equipment'].subgroup = "aoc-equipment"
-data.raw['item']['fission-reactor-equipment'].order = "k"
+data.raw['item']['fission-reactor-equipment'].order = "l"
 
 data:extend({{
     type = "item",

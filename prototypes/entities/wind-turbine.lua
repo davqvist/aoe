@@ -97,7 +97,7 @@ data:extend({{
 	energy_usage = "0kW",
 	allowed_effects = {},
 	module_slots = 0,
-	icon = "__ageofcreation__/img/entities/empty.png",
+	icon = "__ageofcreation__/img/entities/wind-turbine-icon.png",
 	icon_size = 128,
 	flags = { "placeable-neutral", "placeable-player", "not-on-map", "hide-alt-info" },
 	minable = nil,

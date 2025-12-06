@@ -713,3 +713,60 @@ data:extend({{
       time = 75
   }
 }})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-military-tech-3",
+  icon_size = 256, icon_mipmaps = 4,
+  icon = "__base__/graphics/technology/military.png",
+  prerequisites = {"aoc-alien-age-tech", "aoc-military-tech-2"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-combat-shotgun-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-piercing-shotgun-shell-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-rocket-launcher-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-rocket-turret-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-rocket-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-explosive-rocket-recipe"
+    }
+  },
+  unit = {
+      count = 20,
+      ingredients = AOC["age_tech_table"][8],
+      time = 75
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-gleba-logistics-tech",
+  icons = {{icon = "__base__/graphics/icons/steel-chest.png", tint = {92, 192, 92}}},
+  prerequisites = {"aoc-vulcanus-logistics-tech","aoc-gleba-exploration-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-infusing-gleba-chest-recipe"
+    }
+  },
+  unit = {
+      count = 80,
+      ingredients = AOC["age_tech_table"][8],
+      time = 75
+  }
+}})

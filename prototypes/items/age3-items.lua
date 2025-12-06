@@ -197,7 +197,7 @@ data:extend({{
     icon_size = 64,
     subgroup = "aoc-fauna-chicken",
     order = "a",
-    stack_size = 100
+    stack_size = 200
 }})
 
 data:extend({{

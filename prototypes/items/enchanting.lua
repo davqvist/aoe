@@ -28,6 +28,10 @@ for name, type in pairs( AOC["to_enchant"] ) do
             local amount, unit = string.match(equipment.power, "(%d+)(.*)$")
             equipment.power = tostring(amount+amount*(t-1)/2) .. unit
         end
+        if type == "active-defense-equipment" then
+            equipment.attack_parameters.range = equipment.attack_parameters.range + equipment.attack_parameters.range * (t-1)/5
+            equipment.attack_parameters.ammo_type.action.action_delivery.max_length = equipment.attack_parameters.ammo_type.action.action_delivery.max_length + equipment.attack_parameters.ammo_type.action.action_delivery.max_length * (t-1)/5
+        end
         data.raw[type][equipment.name] = equipment
     end
 

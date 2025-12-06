@@ -11,16 +11,18 @@ local qol = {
     { "mining-productivity", {{ icon = "__base__/graphics/technology/mining-productivity.png", icon_size = 256, icon_mipmaps = 4 }}, {{ type = "mining-drill-productivity-bonus", modifier = 0.05 }}, 2 },
     { "robot-speed", {{ icon = "__base__/graphics/technology/worker-robots-speed.png", icon_size = 256, icon_mipmaps = 4 }}, {{ type = "worker-robot-speed", modifier = 0.3 }}, 6 },
     { "robot-cargo-size", {{ icon = "__base__/graphics/technology/worker-robots-storage.png", icon_size = 256, icon_mipmaps = 4 }}, {{ type = "worker-robot-storage", modifier = 1 }}, 6 },
-    { "physical-projectile-damage", {{ icon = "__base__/graphics/technology/physical-projectile-damage-1.png", icon_size = 256, icon_mipmaps = 4 }}, 
+    { "physical-projectile-damage", {{ icon = "__base__/graphics/technology/physical-projectile-damage-1.png", icon_size = 256, icon_mipmaps = 4 }},
         {{ type = "ammo-damage", ammo_category = "bullet", modifier = 0.2 }, { type = "ammo-damage", ammo_category = "shotgun-shell", modifier = 0.2 }, { type = "turret-attack", turret_id = "gun-turret", modifier = 0.2 }}, 6 },
-    { "weapon-shooting-speed", {{ icon = "__base__/graphics/technology/weapon-shooting-speed-1.png", icon_size = 256, icon_mipmaps = 4 }}, 
+    { "weapon-shooting-speed", {{ icon = "__base__/graphics/technology/weapon-shooting-speed-1.png", icon_size = 256, icon_mipmaps = 4 }},
         {{ type = "gun-speed", ammo_category = "bullet", modifier = 0.2 }, { type = "gun-speed", ammo_category = "shotgun-shell", modifier = 0.2 }}, 6 },
-    { "stronger-explosives", {{ icon = "__base__/graphics/technology/stronger-explosives-3.png", icon_size = 256, icon_mipmaps = 4 }}, 
+    { "stronger-explosives", {{ icon = "__base__/graphics/technology/stronger-explosives-3.png", icon_size = 256, icon_mipmaps = 4 }},
         {{ type = "ammo-damage", ammo_category = "grenade", modifier = 0.1 }, { type = "ammo-damage", ammo_category = "landmine", modifier = 0.1 }, { type = "ammo-damage", ammo_category = "rocket", modifier = 0.1 }}, 6 },
-    { "inserter-capacity", {{ icon = "__base__/graphics/technology/inserter-capacity.png", icon_size = 256, icon_mipmaps = 4 }}, 
-        {{ type = "inserter-stack-size-bonus", modifier = 1 }, { type = "bulk-inserter-capacity-bonus", modifier = 2 }}, 7 }
+    { "inserter-capacity", {{ icon = "__base__/graphics/technology/inserter-capacity.png", icon_size = 256, icon_mipmaps = 4 }},
+        {{ type = "inserter-stack-size-bonus", modifier = 1 }, { type = "bulk-inserter-capacity-bonus", modifier = 2 }}, 7 },
+    { "laser-boost", {{ icon = "__base__/graphics/technology/laser-shooting-speed.png", icon_size = 256, icon_mipmaps = 4 }},
+        {{ type = "gun-speed", ammo_category = "laser", modifier = 0.3 }, { type = "ammo-damage", ammo_category = "laser", modifier = 0.4 }}, 7 }
 }
-local prereq = { "", "aoc-steel-tech-1", "aoc-tree-cultivation-tech-1", "aoc-medium-voltage-tech", "aoc-coal-liquefaction-tech", "aoc-magic-research-tech", "aoc-military-tech-2", "aoc-gleba-exploration-tech" }
+local prereq = { "", "aoc-steel-tech-1", "aoc-tree-cultivation-tech-1", "aoc-medium-voltage-tech", "aoc-coal-liquefaction-tech", "aoc-magic-research-tech", "aoc-military-tech-2", "aoc-military-tech-3" }
 
 for age=2,#prereq do
     for _, tech in pairs(qol) do

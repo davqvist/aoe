@@ -27,6 +27,48 @@ data:extend({{
 }})
 
 data:extend({{
+	name = 'aoc-crafting-shotgun-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-titanium-plate', amount = 30},
+		{type = 'item', name = 'aoc-steel-gear', amount = 8},
+	},
+	results = {
+		{type = 'item', name = 'shotgun', amount = 1}
+    },
+	energy_required = 5
+}})
+
+data:extend({{
+	name = 'aoc-crafting-shotgun-shell-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-titanium-plate', amount = 2},
+		{type = 'item', name = 'aoc-gunpowder', amount = 1},
+	},
+	results = {
+		{type = 'item', name = 'shotgun-shell', amount = 1}
+    },
+	energy_required = 3
+}})
+
+data:extend({{
+	name = 'aoc-crafting-uranium-rounds-magazine-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'piercing-rounds-magazine', amount = 1},
+		{type = 'item', name = 'uranium-238', amount = 2},
+	},
+	results = {
+		{type = 'item', name = 'uranium-rounds-magazine', amount = 1}
+    },
+	energy_required = 6
+}})
+
+data:extend({{
 	name = 'aoc-crafting-gun-turret-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -93,7 +135,7 @@ data:extend({{
 	results = {
 		{type = 'fluid', name = 'aoc-titanium-slurry', amount = 30},
 		{type = 'item', name = 'aoc-slag', amount = 1},
-		{type = 'item', name = 'aoc-magnesium-dust', amount_min = 1, amount_max = 2, ignored_by_stats = 2, ignored_by_productivity = 2}
+		{type = 'item', name = 'aoc-magnesium-dust', amount_min = 1, amount_max = 2, ignored_by_productivity = 2}
     },
 	main_product = 'aoc-titanium-slurry',
 	energy_required = 5,
@@ -126,7 +168,7 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoc-titanium-plate', amount = 6},
-		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1, probability = 0.9}
+		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_productivity = 1, probability = 0.9}
     },
 	main_product = 'aoc-titanium-plate',
 	energy_required = 3,
@@ -271,7 +313,7 @@ data:extend({{
     energy_required = 2,
     results = {
       {type = "item", name = "aoc-titanium-ore", amount = 1},
-      {type = "item", name = "metallic-asteroid-chunk", amount = 1, probability = 0.2, ignored_by_stats = 1, ignored_by_productivity = 1 }
+      {type = "item", name = "metallic-asteroid-chunk", amount = 1, probability = 0.2, ignored_by_productivity = 1 }
     },
 	surface_conditions = { { property = "gravity", min = 0, max = 0 } },
     allow_decomposition = false
@@ -293,7 +335,7 @@ data:extend({{
     results = {
       {type = "item", name = "aoc-dilithium-crystal", amount = 1},
       {type = "item", name = "carbon", amount = 1},
-      {type = "item", name = "carbonic-asteroid-chunk", amount = 1, probability = 0.2, ignored_by_stats = 1, ignored_by_productivity = 1 }
+      {type = "item", name = "carbonic-asteroid-chunk", amount = 1, probability = 0.2, ignored_by_productivity = 1 }
     },
 	surface_conditions = { { property = "gravity", min = 0, max = 0 } },
     allow_decomposition = false
@@ -314,7 +356,7 @@ data:extend({{
     energy_required = 2,
     results = {
       {type = "item", name = "ice", amount = 1},
-      {type = "item", name = "oxide-asteroid-chunk", amount = 1, probability = 0.2, ignored_by_stats = 1, ignored_by_productivity = 1 }
+      {type = "item", name = "oxide-asteroid-chunk", amount = 1, probability = 0.2, ignored_by_productivity = 1 }
     },
 	surface_conditions = { { property = "gravity", min = 0, max = 0 } },
     allow_decomposition = false
@@ -1786,6 +1828,20 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'laser-turret', amount = 1}
+    },
+	energy_required = 5
+}})
+
+data:extend({{
+	name = 'aoc-crafting-personal-laser-defense-equipment-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'laser-turret', amount = 5},
+		{type = 'item', name = 'processing-unit', amount = 10}
+	},
+	results = {
+		{type = 'item', name = 'personal-laser-defense-equipment', amount = 1}
     },
 	energy_required = 5
 }})

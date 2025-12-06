@@ -13,6 +13,14 @@ data:extend({{
     },
     {
       type = "unlock-recipe",
+      recipe = "aoc-crafting-shotgun-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-shotgun-shell-recipe"
+    },
+    {
+      type = "unlock-recipe",
       recipe = "aoc-crafting-gun-turret-recipe"
     },
     {
@@ -368,6 +376,14 @@ data:extend({{
     {
       type = "unlock-recipe",
       recipe = "aoc-crafting-laser-turret-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-personal-laser-defense-equipment-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-personal-laser-defense-equipment-2-recipe"
     }
   },
   unit = {
@@ -629,6 +645,10 @@ data:extend({{
     {
       type = "unlock-recipe",
       recipe = "aoc-crafting-rtg-uranium-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-uranium-rounds-magazine-recipe"
     }
   },
   unit = {

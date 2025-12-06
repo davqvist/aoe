@@ -4,8 +4,8 @@ local sounds = require("__base__/prototypes/entity/sounds")
 data:extend({{
     type = "item",
     name = "aoc-kiln",
-    icon = "__ageofcreation__/img/entities/kiln.png",
-    icon_size = 192,
+    icon = "__ageofcreation__/img/entities/kiln-icon.png",
+    icon_size = 128,
     subgroup = "aoc-processing-buildings",
     order = "c",
     place_result = "aoc-kiln",
@@ -15,8 +15,8 @@ data:extend({{
 data:extend({{
     type = "assembling-machine",
     name = "aoc-kiln",
-    icon = "__ageofcreation__/img/entities/kiln.png",
-	  icon_size = 192,
+    icon = "__ageofcreation__/img/entities/kiln-icon.png",
+	  icon_size = 128,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 0.2, result = "aoc-kiln"},
     circuit_wire_connection_point = circuit_connector_definitions["assembling-machine"].points,
@@ -91,9 +91,33 @@ data:extend({{
           {
             filename = "__ageofcreation__/img/entities/kiln.png",
             width = 192,
-            height = 192,
-            frame_count = 1,
-            scale = 0.5
+            height = 211,
+            scale = 0.5,
+            shift = util.by_pixel(0,-5)
+          },
+          {
+            filename = "__ageofcreation__/img/entities/kiln-shadow.png",
+            width = 192,
+            height = 211,
+            scale = 0.5,
+            draw_as_shadow = true,
+            shift = util.by_pixel(48,7)
+          }
+        }
+      },
+      working_visualisations = {
+        {
+          always_draw = true,
+          animation = {
+            filename = "__ageofcreation__/img/entities/kiln-animation.png",
+            priority = "high",
+            width = 192,
+            height = 211,
+            line_length = 6,
+            frame_count = 24,
+            scale = 0.5,
+            animation_speed = 1,
+            shift = util.by_pixel(0,-5)
           }
         }
       }
@@ -102,18 +126,18 @@ data:extend({{
 	  fluid_boxes = {
       {
         production_type = "input",
+        volume = 1000,
         pipe_picture = assembler2pipepictures(),
         pipe_covers = pipecoverspictures(),
-		    volume = 1000,
         pipe_connections = {
           { flow_direction="input-output", direction = defines.direction.west, position = {-1, 0} },
           { flow_direction="input-output", direction = defines.direction.east, position = {1, 0} }
         }
       },{
         production_type = "output",
+        volume = 1000,
         pipe_picture = assembler2pipepictures(),
         pipe_covers = pipecoverspictures(),
-		    volume = 1000,
         pipe_connections = {{ flow_direction="output", direction = defines.direction.north, position = {0, -1} }}
       }
     },

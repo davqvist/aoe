@@ -44,7 +44,7 @@ data:extend({{
   name = "aoc-starlight-tech",
   icon_size = 128,
   icon = "__ageofcreation__/img/entities/lunar-panel-icon.png",
-  prerequisites = {"aoc-magic-research-tech"},
+  prerequisites = {"aoc-magic-research-tech", "aoc-solar-power-tech"},
   effects = {
     {
       type = "unlock-recipe",

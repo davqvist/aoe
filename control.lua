@@ -8,7 +8,7 @@ remote.add_interface("ageofcreation", {
 })
 
 function init_recipes()
-	if storage.infusing == nil then storage.infusing = {} end
+	storage.infusing = {}
     for _, recipe in pairs(prototypes.get_recipe_filtered({{filter = "category", category = "aoc-category-infusing"}})) do
 		for _, ingredient in pairs(recipe.ingredients) do
 			if not storage.infusing[ingredient.name] then storage.infusing[ingredient.name] = { recipe.name }
@@ -206,6 +206,10 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 		local built = handlePlanetChestBuilt( event, "vulcanus" )
 		if not built then return end
 	end
+	if(entity.name == "aoc-gleba-chest") then
+		local built = handlePlanetChestBuilt( event, "gleba" )
+		if not built then return end
+	end
 	if(entity.name == "cargo-landing-pad") then
 		handleCargoLandingPadBuilt( event, "cargo_landing_pads" )
 	end
@@ -260,6 +264,9 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 	end
 	if(entity.name == "aoc-vulcanus-chest") then
 		handleMinedSurface(event, storage.planet_chests["vulcanus"])
+	end
+	if(entity.name == "aoc-gleba-chest") then
+		handleMinedSurface(event, storage.planet_chests["gleba"])
 	end
 	if(entity.name == "cargo-landing-pad") then
 		handleMinedSurface(event, storage.cargo_landing_pads)
@@ -437,7 +444,7 @@ script.on_nth_tick(39,
 		for unit, starlightpanel in pairs(storage.starlight_panels) do
 			if starlightpanel.valid and starlightpanel.name == "aoc-lunar-panel" then
 				local sf = storage.starlight_panels[unit].surface
-				if ( sf.name == "nauvis" and sf.daytime >= 0.45 and sf.daytime <= 0.55 ) or string.match(sf.name, "^platform") then
+				if string.match(sf.name, "^platform") or ( not string.match(sf.name, "^platform") and sf.daytime >= 0.45 and sf.daytime <= 0.55 ) then
 					storage.starlight_panels[unit].active = true
 				else 
 					storage.starlight_panels[unit].active = false
@@ -511,9 +518,9 @@ script.on_nth_tick(151,
 						end
 						if flag then
 							for i=1, 4 do
-								for j, p in pairs( storage.infusing[v[i].name] ) do
-									if not r[p] then r[p] = 1 else r[p] = r[p]+1 end
-									if r[p] == 4 then recipe = p end
+								for j, rec in pairs( storage.infusing[v[i].name] ) do
+									if not r[rec] then r[rec] = 1 else r[rec] = r[rec]+1 end
+									if r[rec] == 4 then recipe = rec end
 								end
 							end
 						end

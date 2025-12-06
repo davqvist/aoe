@@ -220,5 +220,21 @@ data:extend({{
     icon_size = 64,
     subgroup = "aoc-parts",
     order = "g",
-    stack_size = 200
+    stack_size = 100
 }})
+
+data.raw['gun']['combat-shotgun'].subgroup = "aoc-guns"
+data.raw['gun']['combat-shotgun'].order = "d"
+data.raw['gun']['combat-shotgun'].stack_size = 10
+data.raw['gun']['rocket-launcher'].subgroup = "aoc-guns"
+data.raw['gun']['rocket-launcher'].order = "e"
+data.raw['gun']['rocket-launcher'].stack_size = 10
+data.raw['ammo']['piercing-shotgun-shell'].subgroup = "aoc-ammo"
+data.raw['ammo']['piercing-shotgun-shell'].order = "f"
+data.raw['ammo']['piercing-shotgun-shell'].stack_size = 100
+data.raw['projectile']['rocket'].subgroup = "aoc-ammo"
+data.raw['projectile']['rocket'].order = "g"
+data.raw['projectile']['rocket'].stack_size = 100
+data.raw['projectile']['explosive-rocket'].subgroup = "aoc-ammo"
+data.raw['projectile']['explosive-rocket'].order = "h"
+data.raw['projectile']['explosive-rocket'].stack_size = 100

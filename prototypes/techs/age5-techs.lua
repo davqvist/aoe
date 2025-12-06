@@ -290,6 +290,25 @@ data:extend({{
 
 data:extend({{
     type = "technology",
+    name = "aoc-flask-tech",
+    icon = "__base__/graphics/icons/space-science-pack.png",
+    icon_size = 64, icon_mipmaps = 4,
+    prerequisites = {"aoc-rubber-tech"},
+    effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "aoc-crafting-flask-rubber-recipe"
+        }
+    },
+    unit = {
+        count = 50,
+        ingredients = AOC["age_tech_table"][5],
+        time = 40
+    }
+}})
+
+data:extend({{
+    type = "technology",
     name = "aoc-logistics-tech-2",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/logistics-2.png",
@@ -712,6 +731,25 @@ data:extend({{
 
 data:extend({{
     type = "technology",
+    name = "aoc-better-glass-tech-3",
+    icon_size = 64, icon_mipmaps = 4,
+    icon = "__ageofcreation__/img/items/glass.png",
+    prerequisites = {"aoc-epoxy-tech", "aoc-better-glass-tech-2"},
+	  effects = {
+	    {
+        type = "unlock-recipe",
+        recipe = "aoc-smelting-glass-4-recipe"
+      }
+    },
+    unit = {
+        count = 60,
+        ingredients = AOC["age_tech_table"][5],
+        time = 40
+    }
+}})
+
+data:extend({{
+    type = "technology",
     name = "aoc-lubricant-tech",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/lubricant.png",
@@ -1005,6 +1043,10 @@ data:extend({{
       {
         type = "unlock-recipe",
         recipe = "aoc-crafting-grenade-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-cluster-grenade-recipe"
       },
       {
         type = "unlock-recipe",
