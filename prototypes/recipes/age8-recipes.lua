@@ -1641,3 +1641,20 @@ data:extend({{
 	energy_required = 120,
 	category = 'aoc-category-infusing'
 }})
+
+data:extend({{
+	name = 'aoc-crafting-biolab-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-enderium-machine-hull', amount = 8},
+		{type = 'item', name = 'lab', amount = 4},
+		{type = 'item', name = 'aoc-alien-brain', amount = 10},
+		{type = 'item', name = 'aoc-plutonium-239', amount = 6},
+		{type = 'item', name = 'aoc-hormones', amount = 10}
+	},
+	results = {
+        {type = 'item', name = 'biolab', amount = 1}
+    },
+	energy_required = 20
+}})

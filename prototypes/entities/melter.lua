@@ -45,43 +45,56 @@ data:extend({{
     animation = {
       layers = {
         {
-          filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-base.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-animation.png",
           priority = "high",
-          width = 205,
-          height = 244,
-          line_length = 7,
           frame_count = 49,
           animation_speed = 0.5,
-          shift = util.by_pixel(1, -2),
-          scale = 0.5
+          scale = 0.5,
+          width = 206,
+          height = 244,
+          shift = util.by_pixel_hr(0.0, -5.0),
+          line_length = 7
         },
         {
-          filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-shadow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-animation-shadow.png",
           priority = "high",
-          width = 248,
-          height = 206,
-          line_length = 7,
           frame_count = 49,
           animation_speed = 0.5,
           draw_as_shadow = true,
-          shift = util.by_pixel(12, 9),
-          scale = 0.5
-        }
-      }
+          scale = 0.5,
+          width = 246,
+          height = 213,
+          shift = util.by_pixel_hr(20.0, 10.5),
+          line_length = 7
+        },
+        {
+          filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-lights.png",
+          priority = "high",
+          frame_count = 49,
+          animation_speed = 0.5,
+          draw_as_light = true,
+          scale = 0.5,
+          width = 117,
+          height = 142,
+          shift = util.by_pixel_hr(-16.5, -17.0),
+          line_length = 7
+        },
+      },
     },
     working_visualisations = {
       {
         always_draw = true,
+        render_layer = "floor",
         animation = {
-          filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-light.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-integration-patch.png",
           priority = "high",
-          width = 205,
-          height = 244,
-          shift = util.by_pixel(1, -2),
-          draw_as_light = true,
-          scale = 0.5
-        }
-      }
+          scale = 0.5,
+          width = 265,
+          height = 241,
+          shift = util.by_pixel_hr(0.5, 16.5),
+          line_length = 1
+        },
+      },
     }
   },
   fluid_boxes_off_when_no_fluid_recipe = true,

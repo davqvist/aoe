@@ -68,17 +68,25 @@ data.raw['item']['lab'].order = "m"
 data.raw['lab']['lab'].fast_replaceable_group = "lab"
 data.raw['lab']['lab'].energy_usage = "84kW"
 data.raw['lab']['lab'].allowed_module_categories = {'speed','efficiency','productivity'}
+data.raw['item']['biolab'].subgroup = "aoc-processing-buildings"
+data.raw['item']['biolab'].order = "n"
+data.raw['lab']['biolab'].energy_usage = "1MW"
+data.raw['lab']['biolab'].allowed_module_categories = {'speed','efficiency','productivity'}
+data.raw['lab']['biolab'].science_pack_drain_rate_percent = 100
+data.raw['lab']['biolab'].surface_conditions = null
 
 data.raw['item']['radar'].subgroup = "aoc-other-buildings"
 data.raw['item']['radar'].order = "a"
 data.raw['item']['chemical-plant'].subgroup = "aoc-specific-buildings"
 data.raw['item']['chemical-plant'].order = "o"
+data.raw['assembling-machine']['chemical-plant'].module_slots = 2
 data.raw['assembling-machine']['chemical-plant'].energy_usage = "420kW"
 data.raw['item']['oil-refinery'].subgroup = "aoc-specific-buildings"
 data.raw['item']['oil-refinery'].order = "q"
 data.raw['assembling-machine']['oil-refinery'].energy_usage = "750kW"
 data.raw['item']['centrifuge'].subgroup = "aoc-specific-buildings"
 data.raw['item']['centrifuge'].order = "r"
+data.raw['assembling-machine']['centrifuge'].module_slots = 3
 data.raw['assembling-machine']['centrifuge'].energy_usage = "600kW"
 data.raw['assembling-machine']['centrifuge'].crafting_categories = {"centrifuging","centrifuging-copper","centrifuging-iron","centrifuging-tin","centrifuging-aluminium","centrifuging-lead","centrifuging-silver","centrifuging-nickel","centrifuging-gold","centrifuging-zinc","centrifuging-chromium","centrifuging-tungsten"}
 

@@ -828,7 +828,7 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-silicon-wafer",
-    icon = "__angelsindustriesgraphics__/graphics/icons/silicon-wafer.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/silicon-wafer.png",
     icon_size = 32,
     subgroup = "aoc-metals-alloys",
     order = "g1",
@@ -862,7 +862,7 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-resistor",
-    icon = "__angelsindustriesgraphics__/graphics/icons/resistor.png",
+    icon = "__ageofcreation__/img/items/resistor.png",
     icon_size = 32,
     subgroup = "aoc-circuits",
     order = "f",
@@ -892,7 +892,7 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-transistor",
-    icon = "__angelsindustriesgraphics__/graphics/icons/transistor.png",
+    icon = "__ageofcreation__/img/items/transistor.png",
     icon_size = 32,
     subgroup = "aoc-circuits",
     order = "i",

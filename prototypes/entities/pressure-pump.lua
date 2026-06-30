@@ -22,7 +22,7 @@ data:extend({{
   },
 	energy_usage = "80kW",
 	allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-	module_slots = 3,
+	module_slots = 0,
   icon = "__angelspetrochemgraphics__/graphics/icons/air-filter.png",
   icon_size = 32,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },

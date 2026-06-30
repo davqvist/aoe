@@ -1299,8 +1299,8 @@ data:extend({{
     icons = { { icon = "__angelssmeltinggraphics__/graphics/icons/molten-platinum.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/pt.png", icon_size = 64 } },
     subgroup = "aoc-fluids-magic-metals",
     order = "c",
-	base_color = {r=0.68, g=0.23, b=0.76},
-	flow_color = {r=0.68, g=0.23, b=0.76},
+	base_color = {r=0.87, g=0.77, b=0.72},
+	flow_color = {r=0.87, g=0.77, b=0.72},
 	default_temperature = 20
 }})
 
@@ -1322,8 +1322,8 @@ data:extend({{
     icons = { { icon = "__angelssmeltinggraphics__/graphics/icons/molten-cobalt.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/ed.png", icon_size = 64 } },
     subgroup = "aoc-fluids-magic-metals",
     order = "d",
-	base_color = {r=0.0, g=0.17, b=0.4},
-	flow_color = {r=0.0, g=0.17, b=0.4},
+	base_color = {r=0.15, g=0.26, b=0.38},
+	flow_color = {r=0.15, g=0.26, b=0.38},
 	default_temperature = 20
 }})
 

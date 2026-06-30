@@ -1,4 +1,24 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.12
+Date: 2026-03-01
+  Features:
+    - added chicken coop graphics
+    - added nuclear cell graphics
+    - integrated biolab into age 8
+  Changes:
+    - with the changed chicken coop graphic, the fluid input spot moved
+    - 4x the oxygen requirement for rocket fuel
+    - adjusted the amount of module slots on some buildings
+  Bugfixes:
+    - fixed the platinum solution fluid color
+---------------------------------------------------------------------------------------------------
+Version: 0.0.11
+Date: 2026-01-25
+  Features:
+    - added copper chest graphics
+  Changes:
+    - Fixed for Angels for 2.0, 3 item graphics I previously used don't exist anymore, temporarily copied into AOC until I have a replacement
+---------------------------------------------------------------------------------------------------
 Version: 0.0.10
 Date: 2025-12-06
   Features:

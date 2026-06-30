@@ -6,7 +6,7 @@ data:extend({{
     icon_mipmaps = 4,
     scale = 0.5,
     subgroup = "aoc-processing-buildings",
-    order = "n",
+    order = "o",
     place_result = "aoc-casting-unit",
     stack_size = 25,
 }})
@@ -43,65 +43,133 @@ data:extend({{
         {
           filename = "__angelssmeltinggraphics__/graphics/entity/induction-furnace/induction-furnace-base.png",
           priority = "high",
-          width = 170,
-          height = 192,
-          line_length = 6,
-          frame_count = 36,
-          animation_speed = 0.5,
-          shift = util.by_pixel(0.5, -5.5)
+          width = 328,
+          height = 363,
+          shift = util.by_pixel_hr(-2.0, -14.5),
+          line_length = 1,
+          scale = 0.5
         },
         {
-          filename = "__angelssmeltinggraphics__/graphics/entity/induction-furnace/induction-furnace-shadow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/induction-furnace/induction-furnace-base-shadow.png",
           priority = "high",
-          width = 216,
-          height = 170,
-          line_length = 6,
-          frame_count = 36,
-          animation_speed = 0.5,
+          width = 383,
+          height = 301,
+          shift = util.by_pixel_hr(25.5, 16.5),
+          line_length = 1,
           draw_as_shadow = true,
-          shift = util.by_pixel(24, 9)
-        },
+          scale = 0.5
+        }
       }
     },
     working_visualisations = {
       {
+        always_draw = true,
+        render_layer = "floor",
+        animation = {
+          filename = "__angelssmeltinggraphics__/graphics/entity/induction-furnace/induction-furnace-integration-patch.png",
+          priority = "high",
+          scale = 0.5,
+          width = 389,
+          height = 345,
+          shift = util.by_pixel_hr(-1.5, 16.5),
+          line_length = 1
+        }
+      },
+      {
+        always_draw = true,
+        animation = {
+          layers = {
+            {
+              filename = "__angelssmeltinggraphics__/graphics/entity/induction-furnace/induction-furnace-idle-animation.png",
+              priority = "high",
+              frame_count = 36,
+              animation_speed = 0.5,
+              scale = 0.5,
+              width = 288,
+              height = 312,
+              shift = util.by_pixel_hr(5.0, -39.0),
+              line_length = 6
+            },
+            {
+              filename = "__angelssmeltinggraphics__/graphics/entity/induction-furnace/induction-furnace-animation-shadow.png",
+              priority = "high",
+              frame_count = 36,
+              animation_speed = 0.5,
+              draw_as_shadow = true,
+              scale = 0.5,
+              width = 296,
+              height = 183,
+              shift = util.by_pixel_hr(98.0, 37.5),
+              line_length = 6
+            }
+          }
+        }
+      },
+      {
+        fadeout = true,
+        animation = {
+          layers = {
+            {
+              filename = "__angelssmeltinggraphics__/graphics/entity/induction-furnace/induction-furnace-animation.png",
+              priority = "high",
+              frame_count = 36,
+              animation_speed = 0.5,
+              scale = 0.5,
+              width = 288,
+              height = 312,
+              shift = util.by_pixel_hr(5.0, -39.0),
+              line_length = 6
+            }
+          }
+        }
+      },
+      {
+        always_draw = true,
         apply_recipe_tint = "primary",
-        always_draw = true,
         animation = {
-          filename = "__angelssmeltinggraphics__/graphics/entity/induction-furnace/induction-furnace-working-recipe-tint-mask.png",
-          priority = "high",
-          width = 170,
-          height = 192,
-          line_length = 6,
-          frame_count = 36,
-          animation_speed = 0.5,
-          shift = util.by_pixel(0.5, -5.5)
+          layers = {
+            {
+              filename = "__angelssmeltinggraphics__/graphics/entity/induction-furnace/induction-furnace-lower-recipe-mask.png",
+              priority = "high",
+              frame_count = 36,
+              animation_speed = 0.5,
+              scale = 0.5,
+              width = 95,
+              height = 57,
+              shift = util.by_pixel_hr(55.5, -15.5),
+              line_length = 6
+            },
+            {
+              filename = "__angelssmeltinggraphics__/graphics/entity/induction-furnace/induction-furnace-upper-recipe-mask.png",
+              priority = "high",
+              frame_count = 36,
+              animation_speed = 0.5,
+              scale = 0.5,
+              width = 94,
+              height = 69,
+              shift = util.by_pixel_hr(61.0, -124.5),
+              line_length = 6
+            }
+          }
         }
       },
       {
         always_draw = true,
-        north_animation = {
-          filename = "__angelssmeltinggraphics__/graphics/entity/induction-furnace/vertical-pipe-shadow-patch.png",
-          priority = "high",
-          width = 64,
-          height = 64,
-          repeat_count = 36,
-          draw_as_shadow = true,
-          shift = { 2, -2 }
-        }
-      },
-      {
-        always_draw = true,
         animation = {
-          filename = "__angelssmeltinggraphics__/graphics/entity/induction-furnace/induction-furnace-working-lights.png",
-          priority = "high",
-          width = 170,
-          height = 192,
-          line_length = 6,
-          frame_count = 36,
-          animation_speed = 0.5,
-          shift = util.by_pixel(0.5, -5.5),
-          draw_as_light = true
+          layers = {
+            {
+              filename = "__angelssmeltinggraphics__/graphics/entity/induction-furnace/induction-furnace-lights.png",
+              priority = "high",
+              frame_count = 36,
+              animation_speed = 0.5,
+              draw_as_light = true,
+              scale = 0.5,
+              width = 243,
+              height = 239,
+              shift = util.by_pixel_hr(7.5, -70.5),
+              line_length = 6
+            }
+          }
         }
       }
     }

@@ -15,6 +15,7 @@ data:extend({{
 data:extend({{
     type = "assembling-machine",
     name = "aoc-kiln",
+    module_slots = 3,
     icon = "__ageofcreation__/img/entities/kiln-icon.png",
 	  icon_size = 128,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},

@@ -716,6 +716,25 @@ data:extend({{
 
 data:extend({{
   type = "technology",
+  name = "aoc-biolab-tech",
+  icon_size = 256, icon_mipmaps = 4,
+  icon = "__space-age__/graphics/technology/biolab.png",
+  prerequisites = {"aoc-electronics-tech-4", "aoc-uranium-tech", "aoc-animal-food-tech-3"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-biolab-recipe"
+    }
+  },
+  unit = {
+      count = 60,
+      ingredients = AOC["age_tech_table"][8],
+      time = 75
+  }
+}})
+
+data:extend({{
+  type = "technology",
   name = "aoc-military-tech-3",
   icon_size = 256, icon_mipmaps = 4,
   icon = "__base__/graphics/technology/military.png",

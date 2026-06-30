@@ -13,6 +13,7 @@ data.raw['assembling-machine']['burner-crusher'].minable = { hardness = 1, minin
 data.raw['item']['burner-crusher'].subgroup = "aoc-processing-buildings"
 data.raw['item']['burner-crusher'].order = "h"
 data.raw['assembling-machine']['burner-crusher'].crafting_speed = 0.5
+data.raw['assembling-machine']['burner-crusher'].module_slots = 0
 data.raw['assembling-machine']['burner-crusher'].surface_conditions = {{ property = "gravity", min = 0.1 }}
 data.raw['assembling-machine']['burner-crusher'].energy_usage = "100kW"
 data.raw['assembling-machine']['burner-crusher'].energy_source = {

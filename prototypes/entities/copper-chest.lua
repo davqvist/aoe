@@ -5,7 +5,7 @@ data:extend({{
     type = "item",
     name = "aoc-copper-chest",
     icon = "__ageofcreation__/img/entities/copper-chest.png",
-    icon_size = 192,
+    icon_size = 64,
     subgroup = "aoc-storage",
     order = "e",
     place_result = "aoc-copper-chest",
@@ -16,7 +16,7 @@ data:extend({{
     type = "container",
     name = "aoc-copper-chest",
 	  icon = "__ageofcreation__/img/entities/copper-chest.png",
-    icon_size = 192,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.1, result = "aoc-copper-chest"},
     max_health = 100,
@@ -33,9 +33,16 @@ data:extend({{
       {
         {
           filename = "__ageofcreation__/img/entities/copper-chest.png",
-          width = 192,
-          height = 192,
-		  scale = 0.33333
+          width = 64,
+          height = 64
+        },
+        {
+          filename = "__ageofcreation__/img/entities/copper-chest-shadow.png",
+          draw_as_shadow = true,
+          width = 128,
+          height = 130,
+          shift = util.by_pixel(32, 6),
+          scale = 0.5
         }
       }
     },

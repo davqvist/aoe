@@ -247,7 +247,7 @@ data.raw['item']['processing-unit'].stack_size = 200
 data:extend({{
     type = "item",
     name = "aoc-integrated-circuit",
-    icon = "__angelsindustriesgraphics__/graphics/icons/chip.png",
+    icon = "__ageofcreation__/img/items/chip.png",
     icon_size = 32,
     subgroup = "aoc-circuits",
     order = "k",

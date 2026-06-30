@@ -39,7 +39,7 @@ data:extend({{
     type = "item",
     name = "aoc-reactor-fuel-cell",
     icon = "__ageofcreation__/img/entities/reactor-fuel-cell.png",
-    icon_size = 256,
+    icon_size = 64,
     subgroup = "aoc-nuclearpower-buildings",
     order = "b",
     place_result = "aoc-reactor-fuel-cell",
@@ -50,7 +50,7 @@ data:extend({{
     type = "simple-entity-with-owner",
     name = "aoc-reactor-fuel-cell",
 	  icon = "__ageofcreation__/img/entities/reactor-fuel-cell.png",
-    icon_size = 256,
+    icon_size = 64,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { hardness = 1, mining_time = 0.2, result = "aoc-reactor-fuel-cell" },
     max_health = 300,
@@ -59,22 +59,44 @@ data:extend({{
     picture =
     {
       filename = "__ageofcreation__/img/entities/reactor-fuel-cell.png",
-      width = 256,
-      height = 256,
-      frame_count = 1,
-      scale = 0.125
+      width = 64,
+      height = 67,
+      scale = 0.5
     }
 }})
 
-local heatsinks = {"water","coolant","quartz","apatite","enderium","lead","aluminium-bronze","brass","bronze","copper","tin","aluminium","zinc"}
-for _, h in pairs(heatsinks) do
+local heatsinks = {
+  ["water"] = {r=0, g=0.34, b=0.6},
+  ["coolant"] = {r=0.2, g=0.68, b=0.93},
+  ["quartz"] = {r=0.9, g=0.9, b=0.9},
+  ["apatite"] = {r=0.03, g=0.57, b=0.66},
+  ["enderium"] = {r=0.15, g=0.26, b=0.38},
+  ["lead"] = {r=0.33, g=0.28, b=0.32},
+  ["aluminium-bronze"] = {r=0.97, g=0.77, b=0.16},
+  ["brass"] = {r=0.75, g=0.57, b=0.13},
+  ["bronze"] = {r=0.86, g=0.6, b=0.22},
+  ["copper"] = {r=0.56, g=0.35, b=0.29},
+  ["tin"] = {r=0.35, g=0.47, b=0.34},
+  ["aluminium"] = {r=0.64, g=0.57, b=0.31},
+  ["zinc"] = {r=0.38, g=0.60, b=0.58},
+}
+for h, c in pairs(heatsinks) do
     data:extend({{
         type = "item",
         name = "aoc-reactor-sink-" .. h,
-        icon = "__ageofcreation__/img/entities/reactor-cell-" .. h .. ".png",
-        icon_size = 256,
+        icons = {
+          {
+            icon = "__ageofcreation__/img/entities/reactor-cell-base.png",
+            icon_size = 64
+          },
+          {
+            icon = "__ageofcreation__/img/entities/reactor-cell-tint.png",
+            icon_size = 64,
+            tint = {r = c.r, b = c.b, g = c.g}
+          }
+        },
         subgroup = "aoc-nuclearpower-buildings",
-        order = "c" .. _,
+        order = "c_" .. h,
         place_result = "aoc-reactor-sink-" .. h,
         stack_size = 100,
     }})
@@ -82,20 +104,48 @@ for _, h in pairs(heatsinks) do
     data:extend({{
         type = "simple-entity-with-owner",
         name = "aoc-reactor-sink-" .. h,
-        icon = "__ageofcreation__/img/entities/reactor-cell-" .. h .. ".png",
-        icon_size = 256,
+        icons = {
+          {
+            icon = "__ageofcreation__/img/entities/reactor-cell-base.png",
+            icon_size = 64
+          },
+          {
+            icon = "__ageofcreation__/img/entities/reactor-cell-tint.png",
+            icon_size = 64,
+            tint = {r = c.r, b = c.b, g = c.g}
+          }
+        },
         flags = { "placeable-neutral", "placeable-player", "player-creation" },
         minable = { hardness = 1, mining_time = 0.2, result = "aoc-reactor-sink-" .. h },
         max_health = 300,
         selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
         collision_box = {{-0.3, -0.3}, {0.3, 0.3}},
-        picture =
-        {
-            filename = "__ageofcreation__/img/entities/reactor-cell-" .. h .. ".png",
-            width = 256,
-            height = 256,
-            frame_count = 1,
-            scale = 0.125
+        pictures = {
+          sheet = {
+            layers = {
+              {
+                filename = "__ageofcreation__/img/entities/reactor-cell-base.png",
+                width = 64,
+                height = 67,
+                scale = 0.5
+              },
+              {
+                filename = "__ageofcreation__/img/entities/reactor-cell-tint.png",
+                width = 64,
+                height = 67,
+                tint = {r = c.r, b = c.b, g = c.g},
+                scale = 0.5
+              },
+              {
+                filename = "__ageofcreation__/img/entities/reactor-cell-shadow.png",
+                width = 64,
+                height = 67,
+                scale = 0.5,
+                shift = util.by_pixel(16, 8),
+                draw_as_shadow = true
+              }
+            }
+          }
         }
     }})
 end
@@ -124,7 +174,7 @@ data:extend({{
         width = 128,
         height = 128,
         frame_count = 1,
-    scale = 0.25
+        scale = 0.25
       }
     }
   }

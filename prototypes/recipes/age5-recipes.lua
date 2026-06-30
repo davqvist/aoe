@@ -1400,7 +1400,7 @@ data:extend({{
     enabled = false,
 	ingredients = {
 		{type = 'fluid', name = 'aoc-diesel', amount = 40},
-		{type = 'fluid', name = 'aoc-oxygen', amount = 10}
+		{type = 'fluid', name = 'aoc-oxygen', amount = 40}
     },
     results = {
         {type = 'item', name = 'rocket-fuel', amount = 1}
