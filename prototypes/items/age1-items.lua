@@ -1,14 +1,11 @@
 data:extend({{
-    type = "tool",
+    type = "item",
     name = "aoc-science-01",
     icon = "__ageofcreation__/img/items/science-pack-1.png",
     icon_size = 64,
     subgroup = "aoc-science-packs",
     order = "b",
-    stack_size = 200,
-    durability = 1,
-    durability_description_key = "description.science-pack-remaining-amount-key",
-    durability_description_value = "description.science-pack-remaining-amount-value"
+    stack_size = 200
 }})
 
 data.raw['item']['landfill'].subgroup = "aoc-decoration"
@@ -23,6 +20,20 @@ data:extend({{
     subgroup = "aoc-flora-kelp",
     order = "a",
     stack_size = 200
+}})
+
+data:extend({{
+    type = "module",
+    name = "aoc-kelp-module",
+    icon = "__ageofcreation__/img/items/kelp.png",
+    icon_size = 64,
+    subgroup = "aoc-flora-kelp",
+    order = "a1",
+    stack_size = 20,
+    effect = {speed = 0.4},
+    category = "aoc-module-kelp",
+    tier = 1,
+    speed_quality_multiplier = 3.3333333
 }})
 
 data:extend({{
@@ -43,6 +54,20 @@ data:extend({{
     subgroup = "aoc-flora-drinks",
     order = "b",
     stack_size = 200
+}})
+
+data:extend({{
+    type = "module",
+    name = "aoc-tea-leaves-module",
+    icon = "__ageofcreation__/img/items/tea-leaves.png",
+    icon_size = 64,
+    subgroup = "aoc-flora-drinks",
+    order = "b1",
+    stack_size = 20,
+    effect = {speed = 0.333333},
+    category = "aoc-module-tea",
+    tier = 1,
+    speed_quality_multiplier = 1.66666667
 }})
 
 data:extend({{
@@ -113,6 +138,20 @@ data:extend({{
     subgroup = "aoc-flora-drinks",
     order = "f",
     stack_size = 200
+}})
+
+data:extend({{
+    type = "module",
+    name = "aoc-coffee-plant-module",
+    icon = "__ageofcreation__/img/items/coffee-plant.png",
+    icon_size = 64,
+    subgroup = "aoc-flora-drinks",
+    order = "f1",
+    stack_size = 20,
+    effect = {speed = 0.333333},
+    category = "aoc-module-coffee",
+    tier = 1,
+    speed_quality_multiplier = 1.66666667
 }})
 
 data:extend({{
@@ -246,6 +285,34 @@ data:extend({{
     subgroup = "aoc-flora-flax",
     order = "b",
     stack_size = 200
+}})
+
+data:extend({{
+    type = "module",
+    name = "aoc-flax-module-a",
+    icons = {{ icon = "__ageofcreation__/img/items/flax.png" }, { icon = "__ageofcreation__/img/items/quality/speed.png" }},
+    icon_size = 64,
+    subgroup = "aoc-flora-flax",
+    order = "b1",
+    stack_size = 20,
+    effect = {speed = 0.5},
+    category = "aoc-module-flax",
+    tier = 1,
+    speed_quality_multiplier = 2
+}})
+
+data:extend({{
+    type = "module",
+    name = "aoc-flax-module-b",
+    icons = {{ icon = "__ageofcreation__/img/items/flax.png" }, { icon = "__ageofcreation__/img/items/quality/production.png" }},
+    icon_size = 64,
+    subgroup = "aoc-flora-flax",
+    order = "b2",
+    stack_size = 20,
+    effect = {productivity = 0.09},
+    category = "aoc-module-flax",
+    tier = 1,
+    productivity_quality_multiplier = 1.48146666667
 }})
 
 data:extend({{

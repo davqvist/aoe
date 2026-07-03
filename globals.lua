@@ -54,7 +54,7 @@ function combine_icons_tiny( newicons, oldicons )
     local old_icons = table.deepcopy( oldicons )
     local biggest_size = 32
     for _, new in pairs(new_icons) do
-        if new.icon_size > biggest_size then biggest_size = new.icon_size end
+        if new.icon_size and new.icon_size > biggest_size then biggest_size = new.icon_size end
     end
     for _, old in pairs(old_icons) do
         local old_scale = old.scale or 1
@@ -101,6 +101,11 @@ function get_icons( thing, addition, scale )
     end
     if addition then new_icons[#new_icons + 1] = addition end
     return new_icons
+end
+
+function get_icons_quality( thing, tier )
+    local tiers = {"normal","uncommon","rare","epic","legendary"}
+    return get_icons( thing, { icon = ( tier==1 and "__base__" or "__quality__" ) .. "/graphics/icons/quality-" .. tiers[tier] .. ".png", scale = 0.2, shift = {-8,8} } )
 end
 
 function create_liquid_fluid_icon(molecule_icon, tints)

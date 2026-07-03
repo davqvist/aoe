@@ -20,7 +20,7 @@ for t, technology in pairs(research_techs) do
                     },
                     icons = combine_icons( get_icons( data.raw.capsule['aoc-scroll'] ), get_icons( data.raw.item[data.raw.recipe[recipes.recipe].research] ) ),
                     energy_required = 40,
-                    category = 'aoc-category-unlocking'
+                    categories = {'aoc-category-unlocking'}
                 }})
                 table.insert(to_remove,r)
             end
@@ -42,9 +42,9 @@ local fluid_table = {}
 local item_table = {}
 
 for _, recipe in pairs(data.raw.recipe) do
-    if recipe.category == 'aoc-category-brewing' then
+    if recipe.categories and recipe.categories[1] == 'aoc-category-brewing' then
         data.raw.recipe[_].main_product = recipe.results[1].name
-        table.insert(data.raw.recipe[_].results, {type = 'item', name = 'aoc-experiment-good', amount = 1, probability = 0.0})
+        table.insert(data.raw.recipe[_].results, {type = 'item', name = 'aoc-experiment-good', amount = 1, independent_probability = 0.0})
         if fluid_table[recipe.ingredients[1].name] == nil then fluid_table[recipe.ingredients[1].name] = {} end
         if item_table[recipe.ingredients[2].name] == nil then item_table[recipe.ingredients[2].name] = {} end
         table.insert(fluid_table[recipe.ingredients[1].name], recipe.ingredients[2].name)
@@ -68,7 +68,8 @@ for fluid, items in pairs(fluid_table) do
                     {type = 'item', name = 'aoc-experiment-helpful', amount = 1}
                 },
                 energy_required = 5,
-                category = 'aoc-category-brewing'
+                categories = {'aoc-category-brewing'},
+	            localised_name = {'age-of-creation.brewing'}
             }})
         end
     end

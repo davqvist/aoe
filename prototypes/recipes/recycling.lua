@@ -36,7 +36,7 @@ for _, recipe in pairs(data.raw.recipe) do
   end
   if recipe.name:find('^aoc%-dna%-.*%-recycling$') ~= nil then
 	data.raw.recipe[recipe.name].results = {
-      {type = 'item', name = 'aoc-syringe', amount=1, probability=0.5}
+      {type = 'item', name = 'aoc-syringe', amount=1, independent_probability=0.5}
     }
   end
 end
@@ -59,15 +59,4 @@ for _, m in pairs(data.raw.module) do
 	}
 	data.raw.recipe[m.name .. '-recycling'].allow_decomposition = false
   end
-end
-
-for _, e in pairs(AOC["to_enchant"]) do
-	for t=2,#AOC["tiers"] do 
-		local lower = ""
-		if t>2 then lower = "-" .. (t-1) end
-		data.raw.recipe[_ .. '-' .. t .. '-recycling'].results = {
-			{type = 'item', name = _ .. lower, amount=1}
-		}
-		data.raw.recipe[_ .. '-' .. t .. '-recycling'].allow_decomposition = false
-	end
 end

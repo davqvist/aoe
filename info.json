@@ -1,8 +1,8 @@
 {
   "name": "ageofcreation",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "title": "Age of Creation",
   "author": "davqvist",
-  "factorio_version": "2.0",
-  "dependencies": ["space-age", "configurable-valves", "angelsbioprocessinggraphics >= 2.0", "angelspetrochemgraphics >= 2.0", "angelsrefininggraphics >= 2.0", "angelssmeltinggraphics >= 2.0", "NPBees2_art >= 0.1", "PowerOverload >= 1.6.0"]
+  "factorio_version": "2.1",
+  "dependencies": ["space-age", "configurable-valves", "angelsbioprocessinggraphics >= 2.1", "angelspetrochemgraphics >= 2.1", "angelsrefininggraphics >= 2.1", "angelssmeltinggraphics >= 2.1", "NPBees2_art >= 0.1.1", "PowerOverload >= 1.7.0"]
 }

@@ -72,7 +72,7 @@ for _, furnace in pairs(furnaces_to_change) do
 	furnacecopy.fluid_boxes = {
       {
         production_type = "input",
-        pipe_picture = assembler2pipepictures(),
+        pipe_picture = assembler2pipepictures,
         pipe_covers = pipecoverspictures(),
 		volume = 1000,
         pipe_connections = {
@@ -81,7 +81,7 @@ for _, furnace in pairs(furnaces_to_change) do
 		}
       },{
         production_type = "output",
-        pipe_picture = assembler2pipepictures(),
+        pipe_picture = assembler2pipepictures,
         pipe_covers = pipecoverspictures(),
 		volume = 1000,
         pipe_connections = {{ flow_direction="output", direction = defines.direction.north, position = {0, -1} }}

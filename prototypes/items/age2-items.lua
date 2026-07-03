@@ -1,14 +1,11 @@
 data:extend({{
-    type = "tool",
+    type = "item",
     name = "aoc-science-02",
     icon = "__ageofcreation__/img/items/science-pack-2.png",
     icon_size = 64,
     subgroup = "aoc-science-packs",
     order = "c",
-    stack_size = 200,
-    durability = 1,
-    durability_description_key = "description.science-pack-remaining-amount-key",
-    durability_description_value = "description.science-pack-remaining-amount-value"
+    stack_size = 200
 }})
 
 data.raw['item']['engine-unit'].subgroup = "aoc-parts"
@@ -421,6 +418,20 @@ data.raw['capsule']['raw-fish'].order = "a"
 data.raw['capsule']['raw-fish'].stack_size = 200
 data.raw['capsule']['raw-fish'].spoil_result = nil
 data.raw['capsule']['raw-fish'].spoil_ticks = 0
+
+data:extend({{
+    type = "module",
+    name = "aoc-fish-module",
+    icons = get_icons( data.raw['capsule']['raw-fish'] ),
+    subgroup = "aoc-fauna-fish",
+    order = "a1",
+    stack_size = 20,
+    effect = { speed = 0.2, productivity = 0.05 },
+    category = "aoc-module-fish",
+    tier = 1,
+    speed_quality_multiplier = 1.66666667,
+    productivity_quality_multiplier = 1.66666667
+}})
 
 data:extend({{
     type = "item",

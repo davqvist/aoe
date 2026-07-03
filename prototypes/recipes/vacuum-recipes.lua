@@ -1,7 +1,7 @@
 local AOC =  require("__ageofcreation__/globals")
 
 for _, recipe in pairs(data.raw.recipe) do
-    if recipe.category == 'aoc-category-intricate-crafting' then
+    if recipe.categories and recipe.categories[1] == 'aoc-category-intricate-crafting' then
         local new_results = {}
         local icons = {}
         local main_product = ''
@@ -20,7 +20,7 @@ for _, recipe in pairs(data.raw.recipe) do
                 local new_amount = math.floor(result.amount*1.1)
                 table.insert(new_results,{type = result.type, name = result.name, amount = new_amount})
                 if result.amount*1.1-new_amount > 0 then
-                    table.insert(new_results,{type = result.type, name = result.name, amount = 1, probability = result.amount*1.1-new_amount})
+                    table.insert(new_results,{type = result.type, name = result.name, amount = 1, independent_probability = result.amount*1.1-new_amount})
                 end
             end
         end
@@ -35,7 +35,7 @@ for _, recipe in pairs(data.raw.recipe) do
             energy_required = recipe.energy_required,
             icons = icons,
             main_product = main_product,
-            category = 'aoc-category-vacuum-crafting'
+            categories = {'aoc-category-vacuum-crafting'}
         }})
     end
 end

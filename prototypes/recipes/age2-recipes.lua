@@ -69,7 +69,7 @@ data:extend({{
 		{type = 'item', name = 'steel-plate', amount = 1}
     },
 	energy_required = 2.4,
-	category = 'smelting'
+	categories = {'smelting'}
 }})
 
 data:extend({{
@@ -84,7 +84,7 @@ data:extend({{
 		{type = 'item', name = 'steel-plate', amount = 1}
     },
 	energy_required = 2.4,
-	category = 'smelting'
+	categories = {'smelting'}
 }})
 
 data:extend({{
@@ -405,7 +405,7 @@ data:extend({{
         {type = 'item', name = 'aoc-loam', amount = 4}
     },
 	energy_required = 2,
-	category = 'aoc-category-mixing'
+	categories = {'aoc-category-mixing'}
 }})
 
 data:extend({{
@@ -420,7 +420,7 @@ data:extend({{
         {type = 'item', name = 'aoc-brick', amount = 2}
     },
 	energy_required = 2.4,
-	category = 'smelting'
+	categories = {'smelting'}
 }})
 
 data:extend({{
@@ -649,7 +649,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-stones-igneous', amount = 1},
 		{type = 'item', name = 'aoc-stones-metamorphic', amount = 1},
 		{type = 'item', name = 'aoc-stones-sedimentary', amount = 1},
-		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_productivity = 1, probability = 0.98}
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_productivity = 1, independent_probability = 0.98}
     },
 	icon = data.raw.item["stone"].icon,
 	icon_size = data.raw.item["stone"].icon_size,
@@ -658,7 +658,7 @@ data:extend({{
 	order = "a1",
 	energy_required = 2,
 	allow_productivity = false,
-	category = 'aoc-category-straining'
+	categories = {'aoc-category-straining'}
 }})
 
 data:extend({{
@@ -674,7 +674,7 @@ data:extend({{
 	icons = combine_icons_tiny( get_icons( data.raw.fluid["lava"] ), get_icons( data.raw.item["stone"] ) ),
 	energy_required = 2,
 	allow_productivity = false,
-	category = 'aoc-category-melting'
+	categories = {'aoc-category-melting'}
 }})
 
 data:extend({{
@@ -690,7 +690,7 @@ data:extend({{
 	icons = combine_icons_tiny( get_icons( data.raw.fluid["lava"] ), get_icons( data.raw.item["aoc-stones-sedimentary"] ) ),
 	energy_required = 2,
 	allow_productivity = false,
-	category = 'aoc-category-melting'
+	categories = {'aoc-category-melting'}
 }})
 
 data:extend({{
@@ -706,7 +706,7 @@ data:extend({{
 	icons = combine_icons_tiny( get_icons( data.raw.fluid["lava"] ), get_icons( data.raw.item["aoc-stones-metamorphic"] ) ),
 	energy_required = 2,
 	allow_productivity = false,
-	category = 'aoc-category-melting'
+	categories = {'aoc-category-melting'}
 }})
 
 data:extend({{
@@ -723,7 +723,7 @@ data:extend({{
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-metamorphic"] ), get_icons( data.raw.item["aoc-stones-sedimentary"] ) ),
 	energy_required = 2,
 	allow_productivity = false,
-	category = 'aoc-category-high-pressure-heating'
+	categories = {'aoc-category-high-pressure-heating'}
 }})
 
 data:extend({{
@@ -740,7 +740,7 @@ data:extend({{
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-metamorphic"] ), get_icons( data.raw.item["aoc-stones-igneous"] ) ),
 	energy_required = 2,
 	allow_productivity = false,
-	category = 'aoc-category-high-pressure-heating'
+	categories = {'aoc-category-high-pressure-heating'}
 }})
 
 data:extend({{
@@ -756,7 +756,7 @@ data:extend({{
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-sedimentary"] ), get_icons( data.raw.item["aoc-stones-metamorphic"] ) ),
 	energy_required = 2,
 	allow_productivity = false,
-	category = 'aoc-category-sedimenting'
+	categories = {'aoc-category-sedimenting'}
 }})
 
 data:extend({{
@@ -772,7 +772,7 @@ data:extend({{
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-stones-sedimentary"] ), get_icons( data.raw.item["aoc-stones-igneous"] ) ),
 	energy_required = 2,
 	allow_productivity = false,
-	category = 'aoc-category-sedimenting'
+	categories = {'aoc-category-sedimenting'}
 }})
 
 data:extend({{
@@ -787,7 +787,7 @@ data:extend({{
     },
 	energy_required = 2,
 	allow_productivity = false,
-	category = 'aoc-category-freezing'
+	categories = {'aoc-category-freezing'}
 }})
 
 data:extend({{
@@ -802,11 +802,11 @@ data:extend({{
 		{type = 'item', name = 'coal', amount = 3},
 		{type = 'item', name = 'iron-ore', amount = 2},
 		{type = 'item', name = 'copper-ore', amount = 1},
-		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_productivity = 1, probability = 0.85}
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_productivity = 1, independent_probability = 0.85}
     },
 	main_product = 'coal',
 	energy_required = 8,
-	category = 'aoc-category-straining'
+	categories = {'aoc-category-straining'}
 }})
 
 data:extend({{
@@ -821,11 +821,11 @@ data:extend({{
 		{type = 'item', name = 'aoc-quartz-ore', amount = 3},
 		{type = 'item', name = 'aoc-tin-ore', amount = 2},
 		{type = 'item', name = 'aoc-manganese-ore', amount = 1},
-		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_productivity = 1, probability = 0.85}
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_productivity = 1, independent_probability = 0.85}
     },
 	main_product = 'aoc-quartz-ore',
 	energy_required = 8,
-	category = 'aoc-category-straining'
+	categories = {'aoc-category-straining'}
 }})
 
 data:extend({{
@@ -840,11 +840,11 @@ data:extend({{
 		{type = 'item', name = 'aoc-aluminium-ore', amount = 3},
 		{type = 'item', name = 'aoc-magnesium-ore', amount = 2},
 		{type = 'item', name = 'aoc-mica', amount = 1},
-		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_productivity = 1, probability = 0.85}
+		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_productivity = 1, independent_probability = 0.85}
     },
 	main_product = 'aoc-aluminium-ore',
 	energy_required = 8,
-	category = 'aoc-category-straining'
+	categories = {'aoc-category-straining'}
 }})
 
 data:extend({{
@@ -860,7 +860,7 @@ data:extend({{
     },
 	main_product = 'aoc-iron-dust',
 	energy_required = 1,
-	category = 'crushing'
+	categories = {'crushing'}
 }})
 
 data:extend({{
@@ -876,7 +876,7 @@ data:extend({{
     },
 	main_product = 'aoc-copper-dust',
 	energy_required = 1,
-	category = 'crushing'
+	categories = {'crushing'}
 }})
 
 data:extend({{
@@ -892,7 +892,7 @@ data:extend({{
     },
 	main_product = 'aoc-coal-dust',
 	energy_required = 1,
-	category = 'crushing'
+	categories = {'crushing'}
 }})
 
 data:extend({{
@@ -921,7 +921,7 @@ data:extend({{
     },
 	main_product = 'aoc-quartz-dust',
 	energy_required = 1,
-	category = 'crushing'
+	categories = {'crushing'}
 }})
 
 data:extend({{
@@ -937,7 +937,7 @@ data:extend({{
     },
 	main_product = 'aoc-tin-dust',
 	energy_required = 1,
-	category = 'crushing'
+	categories = {'crushing'}
 }})
 
 data:extend({{
@@ -952,7 +952,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-tin-plate', amount = 1}
     },
 	energy_required = 2.4,
-	category = 'smelting'
+	categories = {'smelting'}
 }})
 
 data:extend({{
@@ -1023,7 +1023,7 @@ data:extend({{
     },
 	main_product = 'aoc-manganese-dust',
 	energy_required = 1,
-	category = 'crushing'
+	categories = {'crushing'}
 }})
 
 data:extend({{
@@ -1038,7 +1038,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-glass"] ), get_icons( data.raw.item["aoc-quartz-dust"] ) ),
 	energy_required = 2.4,
-	category = 'smelting'
+	categories = {'smelting'}
 }})
 
 data:extend({{
@@ -1054,7 +1054,7 @@ data:extend({{
     },
 	main_product = 'aoc-aluminium-dust',
 	energy_required = 1,
-	category = 'crushing'
+	categories = {'crushing'}
 }})
 
 data:extend({{
@@ -1069,7 +1069,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-aluminium-plate', amount = 1}
     },
 	energy_required = 2.4,
-	category = 'smelting'
+	categories = {'smelting'}
 }})
 
 data:extend({{
@@ -1098,7 +1098,7 @@ data:extend({{
     },
 	main_product = 'aoc-magnesium-dust',
 	energy_required = 1,
-	category = 'crushing'
+	categories = {'crushing'}
 }})
 
 data:extend({{
@@ -1115,7 +1115,7 @@ data:extend({{
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-quicklime"] ), get_icons( data.raw.item["aoc-stones-sedimentary"] ) ),
 	main_product = 'aoc-quicklime',
 	energy_required = 2.4,
-	category = 'aoc-category-kiln-smelting'
+	categories = {'aoc-category-kiln-smelting'}
 }})
 
 data:extend({{
@@ -1131,7 +1131,7 @@ data:extend({{
     },
 	main_product = 'aoc-quicklime',
 	energy_required = 2.4,
-	category = 'aoc-category-kiln-smelting'
+	categories = {'aoc-category-kiln-smelting'}
 }})
 
 data:extend({{
@@ -1146,7 +1146,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-slaked-lime', amount = 4}
     },
 	energy_required = 4.8,
-	category = 'aoc-category-mixing'
+	categories = {'aoc-category-mixing'}
 }})
 
 data:extend({{
@@ -1191,7 +1191,7 @@ data:extend({{
 	energy_required = 800,
 	subgroup = 'aoc-power-buildings',
 	order = 'g1',
-	category = 'aoc-category-rotor'
+	categories = {'aoc-category-rotor'}
 }})
 
 data:extend({{
@@ -1205,7 +1205,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-salt', amount = 1}
     },
 	energy_required = 2.4,
-	category = 'smelting'
+	categories = {'smelting'}
 }})
 
 data:extend({{
@@ -1220,7 +1220,7 @@ data:extend({{
 		{type = 'fluid', name = 'aoc-brine', amount = 100}
     },
 	energy_required = 4.8,
-	category = 'aoc-category-mixing'
+	categories = {'aoc-category-mixing'}
 }})
 
 data:extend({{
@@ -1256,7 +1256,7 @@ data:extend({{
 	subgroup = 'aoc-fluids-general',
 	order = 'a1',
 	energy_required = 1,
-	category = 'aoc-category-electrolyzing'
+	categories = {'aoc-category-electrolyzing'}
 }})
 
 data:extend({{
@@ -1275,7 +1275,7 @@ data:extend({{
 	subgroup = 'aoc-fluids-general',
 	order = 'd1',
 	energy_required = 1,
-	category = 'aoc-category-electrolyzing'
+	categories = {'aoc-category-electrolyzing'}
 }})
 
 data:extend({{
@@ -1292,7 +1292,7 @@ data:extend({{
     },
 	main_product = 'aoc-coke',
 	energy_required = 2.4,
-	category = 'aoc-category-kiln-smelting'
+	categories = {'aoc-category-kiln-smelting'}
 }})
 
 data:extend({{
@@ -1334,7 +1334,7 @@ data:extend({{
         {type = 'fluid', name = 'aoc-air', amount = 100}
     },
 	energy_required = 1,
-	category = 'aoc-category-pumping',
+	categories = {'aoc-category-pumping'},
 	surface_conditions = {{ property = "gravity", min = 0.1 }}
 }})
 
@@ -1347,7 +1347,7 @@ data:extend({{
         {type = 'fluid', name = 'aoc-cold-air', amount = 25}
     },
 	energy_required = 1,
-	category = 'aoc-category-pumping',
+	categories = {'aoc-category-pumping'},
 	surface_conditions = {{ property = "gravity", min = 0.1 }}
 }})
 
@@ -1360,7 +1360,7 @@ data:extend({{
         {type = 'fluid', name = 'aoc-warm-air', amount = 25}
     },
 	energy_required = 1,
-	category = 'aoc-category-pumping',
+	categories = {'aoc-category-pumping'},
 	surface_conditions = {{ property = "gravity", min = 0.1 }}
 }})
 
@@ -1373,7 +1373,7 @@ data:extend({{
         {type = 'fluid', name = 'aoc-pressure', amount = 20}
     },
 	energy_required = 1,
-	category = 'aoc-category-pumping'
+	categories = {'aoc-category-pumping'}
 }})
 
 data:extend({{
@@ -1385,7 +1385,7 @@ data:extend({{
         {type = 'fluid', name = 'aoc-vacuum', amount = 10}
     },
 	energy_required = 1,
-	category = 'aoc-category-pumping',
+	categories = {'aoc-category-pumping'},
 	surface_conditions = {{ property = "gravity", min = 0.1 }}
 }})
 
@@ -1398,7 +1398,7 @@ data:extend({{
         {type = 'fluid', name = 'aoc-oxygen', amount = 40}
     },
 	energy_required = 1,
-	category = 'aoc-category-pumping',
+	categories = {'aoc-category-pumping'},
 	surface_conditions = {{ property = "gravity", min = 0.1 }}
 }})
 
@@ -1411,7 +1411,7 @@ data:extend({{
         {type = 'fluid', name = 'aoc-nitrogen', amount = 5}
     },
 	energy_required = 1,
-	category = 'aoc-category-pumping',
+	categories = {'aoc-category-pumping'},
 	surface_conditions = {{ property = "gravity", min = 0.1 }}
 }})
 
@@ -1431,7 +1431,7 @@ data:extend({{
     },
 	main_product = 'aoc-cement',
 	energy_required = 4.8,
-	category = 'aoc-category-kiln-smelting'
+	categories = {'aoc-category-kiln-smelting'}
 }})
 
 data:extend({{
@@ -1448,7 +1448,7 @@ data:extend({{
         {type = 'item', name = 'concrete', amount = 8}
     },
 	energy_required = 4.8,
-	category = 'aoc-category-mixing'
+	categories = {'aoc-category-mixing'}
 }})
 
 data:extend({{
@@ -1478,7 +1478,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-paper"] ), get_icons( data.raw.item["aoc-caustic-soda"] ) ),
 	energy_required = 2.4,
-	category = 'smelting'
+	categories = {'smelting'}
 }})
 
 data:extend({{
@@ -1513,7 +1513,7 @@ data:extend({{
 	order = "a1",
 	icon = data.raw.capsule["raw-fish"].icon,
 	icon_size = data.raw.capsule["raw-fish"].icon_size,
-	category = 'aoc-category-slaughtering'
+	categories = {'aoc-category-slaughtering'}
 }})
 
 data:extend({{
@@ -1529,7 +1529,7 @@ data:extend({{
     },
     energy_required = 50,
 	icons = get_icons( data.raw.capsule['raw-fish'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
-	category = 'aoc-category-farm-reservoir-fish'
+	categories = {'aoc-category-farm-reservoir-fish'}
 }})
 
 data:extend({{
@@ -1547,7 +1547,7 @@ data:extend({{
     },
     energy_required = 25,
 	icons = get_icons( data.raw.item['aoc-fish-eggs'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
-	category = 'aoc-category-farm-reservoir-fish'
+	categories = {'aoc-category-farm-reservoir-fish'}
 }})
 
 data:extend({{
@@ -1560,12 +1560,13 @@ data:extend({{
 		{type = 'fluid', name = 'aoc-brine', amount = 400}
     },
     results = {
-        {type = 'item', name = 'aoc-fish-module-1', amount=1, probability = 0.5},
-        {type = 'item', name = 'aoc-fish-module-2', amount=1, probability = 0.05}
+        {type = 'item', name = 'aoc-fish-module', amount=1, quality_min = "normal", quality_max = "normal", shared_probability = { min = 0, max = 0.5 }},
+        {type = 'item', name = 'aoc-fish-module', amount=1, quality_min = "uncommon", quality_max = "uncommon", shared_probability = { min = 0.5, max = 0.55 }}
     },
-	main_product = 'aoc-fish-module-1',
+	main_product = 'aoc-fish-module',
+    icons = get_icons_quality( data.raw.capsule["raw-fish"], 1 ),
     energy_required = 150,
-	category = 'aoc-category-farm-reservoir-fish'
+	categories = {'aoc-category-farm-reservoir-fish'}
 }})
 
 data:extend({{

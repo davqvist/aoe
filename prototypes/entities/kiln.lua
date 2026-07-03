@@ -128,7 +128,7 @@ data:extend({{
       {
         production_type = "input",
         volume = 1000,
-        pipe_picture = assembler2pipepictures(),
+        pipe_picture = assembler2pipepictures,
         pipe_covers = pipecoverspictures(),
         pipe_connections = {
           { flow_direction="input-output", direction = defines.direction.west, position = {-1, 0} },
@@ -137,7 +137,7 @@ data:extend({{
       },{
         production_type = "output",
         volume = 1000,
-        pipe_picture = assembler2pipepictures(),
+        pipe_picture = assembler2pipepictures,
         pipe_covers = pipecoverspictures(),
         pipe_connections = {{ flow_direction="output", direction = defines.direction.north, position = {0, -1} }}
       }

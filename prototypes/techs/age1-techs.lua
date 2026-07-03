@@ -23,7 +23,7 @@ data:extend({{
     type = "technology",
     name = "aoc-recycling-tech",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__quality__/graphics/technology/recycling.png",
+    icon = "__recycler__/graphics/technology/recycling.png",
     prerequisites = {},
 	  effects = {
       {

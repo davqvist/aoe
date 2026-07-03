@@ -1,14 +1,11 @@
 data:extend({{
-    type = "tool",
+    type = "item",
     name = "aoc-science-03",
     icon = "__ageofcreation__/img/items/science-pack-3.png",
     icon_size = 64,
     subgroup = "aoc-science-packs",
     order = "d",
-    stack_size = 200,
-    durability = 1,
-    durability_description_key = "description.science-pack-remaining-amount-key",
-    durability_description_value = "description.science-pack-remaining-amount-value"
+    stack_size = 200
 }})
 
 data:extend({{
@@ -32,6 +29,35 @@ data:extend({{
 }})
 
 data:extend({{
+    type = "module",
+    name = "aoc-maize-module-a",
+    icons = {{ icon = "__ageofcreation__/img/items/maize.png" }, { icon = "__ageofcreation__/img/items/quality/speed.png" }},
+    icon_size = 64,
+    subgroup = "aoc-flora-maize",
+    order = "b1",
+    stack_size = 20,
+    effect = {speed = 0.25},
+    category = "aoc-module-maize",
+    tier = 1,
+    speed_quality_multiplier = 2.666666667
+}})
+
+data:extend({{
+    type = "module",
+    name = "aoc-maize-module-b",
+    icons = {{ icon = "__ageofcreation__/img/items/maize.png" }, { icon = "__ageofcreation__/img/items/quality/production.png" }},
+    icon_size = 64,
+    subgroup = "aoc-flora-maize",
+    order = "b2",
+    stack_size = 20,
+    effect = {speed = -0.12, productivity = 0.15},
+    category = "aoc-module-maize",
+    tier = 1,
+    speed_quality_multiplier = 0,
+    productivity_quality_multiplier = 3.3333333
+}})
+
+data:extend({{
     type = "item",
     name = "aoc-soybean-seeds",
     icon = "__ageofcreation__/img/items/soybean-seeds.png",
@@ -49,6 +75,21 @@ data:extend({{
     subgroup = "aoc-flora-soybeans",
     order = "b",
     stack_size = 200
+}})
+
+data:extend({{
+    type = "module",
+    name = "aoc-soybeans-module",
+    icon = "__ageofcreation__/img/items/soybeans.png",
+    icon_size = 64,
+    subgroup = "aoc-flora-soybeans",
+    order = "b1",
+    stack_size = 20,
+    effect = { speed = 0.15, productivity = 0.03 },
+    category = "aoc-module-soybeans",
+    tier = 1,
+    speed_quality_multiplier = 2.22222222,
+    productivity_quality_multiplier = 3.33333333
 }})
 
 data:extend({{
@@ -72,6 +113,21 @@ data:extend({{
 }})
 
 data:extend({{
+    type = "module",
+    name = "aoc-spruce-tree-module",
+    icon = data.raw.tree["tree-01"].icon,
+    icon_size = data.raw.tree["tree-01"].icon_size,
+    subgroup = "aoc-flora-wood",
+    order = "b1",
+    stack_size = 20,
+    effect = { speed = 0.03, productivity = 0.03 },
+    category = "aoc-module-spruce-tree",
+    tier = 1,
+    speed_quality_multiplier = 3.33333333,
+    productivity_quality_multiplier = 3.33333333
+}})
+
+data:extend({{
     type = "item",
     name = "aoc-rubber-tree",
     icon = "__ageofcreation__/img/items/rubber-tree.png",
@@ -79,6 +135,21 @@ data:extend({{
     subgroup = "aoc-flora-rubber",
     order = "b",
     stack_size = 100
+}})
+
+data:extend({{
+    type = "module",
+    name = "aoc-rubber-tree-module",
+    icon = "__ageofcreation__/img/items/rubber-tree.png",
+    icon_size = 256,
+    subgroup = "aoc-flora-rubber",
+    order = "b1",
+    stack_size = 20,
+    effect = { speed = 0.03, productivity = 0.03 },
+    category = "aoc-module-rubber-tree",
+    tier = 1,
+    speed_quality_multiplier = 3.33333333,
+    productivity_quality_multiplier = 3.33333333
 }})
 
 data:extend({{
@@ -99,6 +170,21 @@ data:extend({{
     subgroup = "aoc-flora-apple",
     order = "b",
     stack_size = 200
+}})
+
+data:extend({{
+    type = "module",
+    name = "aoc-apple-tree-module",
+    icon = data.raw.tree["tree-05"].icon,
+    icon_size = data.raw.tree["tree-05"].icon_size,
+    subgroup = "aoc-flora-apple",
+    order = "b1",
+    stack_size = 20,
+    effect = { speed = 0.03, productivity = 0.03 },
+    category = "aoc-module-apple-tree",
+    tier = 1,
+    speed_quality_multiplier = 3.33333333,
+    productivity_quality_multiplier = 3.33333333
 }})
 
 data:extend({{
@@ -138,6 +224,21 @@ data:extend({{
     subgroup = "aoc-flora-olive",
     order = "b",
     stack_size = 200
+}})
+
+data:extend({{
+    type = "module",
+    name = "aoc-olive-tree-module",
+    icon = data.raw.tree["tree-08"].icon,
+    icon_size = data.raw.tree["tree-08"].icon_size,
+    subgroup = "aoc-flora-olive",
+    order = "b1",
+    stack_size = 20,
+    effect = { speed = 0.03, productivity = 0.03 },
+    category = "aoc-module-olive-tree",
+    tier = 1,
+    speed_quality_multiplier = 3.33333333,
+    productivity_quality_multiplier = 3.33333333
 }})
 
 data:extend({{
@@ -221,6 +322,20 @@ data:extend({{
 }})
 
 data:extend({{
+    type = "module",
+    name = "aoc-chicken-module",
+    icon = "__ageofcreation__/img/items/chicken.png",
+    icon_size = 64,
+    subgroup = "aoc-fauna-chicken",
+    order = "b1",
+    stack_size = 20,
+    effect = { productivity = 0.04 },
+    category = "aoc-module-chicken",
+    tier = 1,
+    productivity_quality_multiplier = 1.66666667
+}})
+
+data:extend({{
     type = "item",
     name = "aoc-poultry",
     icon = "__ageofcreation__/img/items/poultry.png",
@@ -281,6 +396,21 @@ data:extend({{
 }})
 
 data:extend({{
+    type = "module",
+    name = "aoc-sheep-module",
+    icon = "__ageofcreation__/img/items/sheep.png",
+    icon_size = 64,
+    subgroup = "aoc-fauna-sheep",
+    order = "b1",
+    stack_size = 20,
+    effect = { speed = -0.04, productivity = 0.06 },
+    category = "aoc-module-sheep",
+    tier = 1,
+    speed_quality_multiplier = 1.66666667,
+    productivity_quality_multiplier = 1.66666667
+}})
+
+data:extend({{
     type = "item",
     name = "aoc-meat",
     icon = "__ageofcreation__/img/items/meat.png",
@@ -321,6 +451,20 @@ data:extend({{
 }})
 
 data:extend({{
+    type = "module",
+    name = "aoc-ox-module",
+    icon = "__ageofcreation__/img/items/ox.png",
+    icon_size = 64,
+    subgroup = "aoc-fauna-cow",
+    order = "b1",
+    stack_size = 20,
+    effect = { speed = 0.02 },
+    category = "aoc-module-ox",
+    tier = 1,
+    speed_quality_multiplier = 2.5
+}})
+
+data:extend({{
     type = "item",
     name = "aoc-cow",
     icon = "__ageofcreation__/img/items/cow.png",
@@ -328,6 +472,21 @@ data:extend({{
     subgroup = "aoc-fauna-cow",
     order = "c",
     stack_size = 200
+}})
+
+data:extend({{
+    type = "module",
+    name = "aoc-cow-module",
+    icon = "__ageofcreation__/img/items/cow.png",
+    icon_size = 64,
+    subgroup = "aoc-fauna-cow",
+    order = "c1",
+    stack_size = 20,
+    effect = { speed = -0.04, productivity = 0.03 },
+    category = "aoc-module-cow",
+    tier = 1,
+    speed_quality_multiplier = 3.33333333,
+    productivity_quality_multiplier = 3.33333333
 }})
 
 data:extend({{

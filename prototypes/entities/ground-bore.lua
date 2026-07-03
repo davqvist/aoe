@@ -1,5 +1,5 @@
 require ("__base__/prototypes/entity/pipecovers")
-require ("__base__/prototypes/entity/assemblerpipes")
+require ("__base__/prototypes/entity/assembler-pictures")
 
 data:extend({{
     type = "item",

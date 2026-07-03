@@ -49,12 +49,12 @@ data.raw['assembling-machine']['assembling-machine-3'].energy_usage = "500kW"
 data.raw['assembling-machine']['assembling-machine-3'].energy_source.drain = "25kW"
 data.raw['assembling-machine']['assembling-machine-3'].crafting_speed = 2
 data.raw['assembling-machine']['assembling-machine-3'].module_slots = 3
-data.raw['assembling-machine']['assembling-machine-3'].crafting_categories = {"basic-crafting", "crafting", "advanced-crafting", "crafting-with-fluid", "aoc-category-intricate-crafting", "aoc-category-vacuum-crafting"}
+data.raw['assembling-machine']['assembling-machine-3'].crafting_categories = {"hand-crafting", "crafting", "advanced-crafting", "crafting-with-fluid", "aoc-category-intricate-crafting", "aoc-category-vacuum-crafting"}
 data.raw['assembling-machine']['assembling-machine-3'].fluid_boxes = {
   {
     production_type = "input",
     volume = 1000,
-    pipe_picture = assembler2pipepictures(),
+    pipe_picture = assembler2pipepictures,
     pipe_covers = pipecoverspictures(),
     pipe_connections = {
       { flow_direction="input-output", direction = defines.direction.west, position = {-1, 0} },
@@ -402,10 +402,10 @@ data.raw['item']['personal-roboport-equipment'].subgroup = "aoc-equipment"
 data.raw['item']['personal-roboport-equipment'].order = "g"
 data.raw['roboport-equipment']['personal-roboport-equipment'].robot_limit = 20
 
-data.raw['unit']['small-biter'].loot = { { item = "aoc-small-biter-corpse" } }
-data.raw['unit']['medium-biter'].loot = { { item = "aoc-medium-biter-corpse" } }
-data.raw['unit']['big-biter'].loot = { { item = "aoc-big-biter-corpse" } }
-data.raw['unit']['behemoth-biter'].loot = { { item = "aoc-behemoth-biter-corpse" } }
-data.raw['unit']['small-wriggler-pentapod'].loot = { { item = "aoc-small-wriggler-corpse" } }
-data.raw['unit']['medium-wriggler-pentapod'].loot = { { item = "aoc-medium-wriggler-corpse" } }
-data.raw['unit']['big-wriggler-pentapod'].loot = { { item = "aoc-big-wriggler-corpse" } }
+data.raw['unit']['small-biter'].loot = { { type = "item", name = "aoc-small-biter-corpse", amount = 1 } }
+data.raw['unit']['medium-biter'].loot = { { type = "item", name = "aoc-medium-biter-corpse", amount = 1 } }
+data.raw['unit']['big-biter'].loot = { { type = "item", name = "aoc-big-biter-corpse", amount = 1 } }
+data.raw['unit']['behemoth-biter'].loot = { { type = "item", name = "aoc-behemoth-biter-corpse", amount = 1 } }
+data.raw['unit']['small-wriggler-pentapod'].loot = { { type = "item", name = "aoc-small-wriggler-corpse", amount = 1 } }
+data.raw['unit']['medium-wriggler-pentapod'].loot = { { type = "item", name = "aoc-medium-wriggler-corpse", amount = 1 } }
+data.raw['unit']['big-wriggler-pentapod'].loot = { { type = "item", name = "aoc-big-wriggler-corpse", amount = 1 } }

@@ -1,5 +1,5 @@
 require("__base__/prototypes/entity/pipecovers")
-require("__base__/prototypes/entity/assemblerpipes")
+require("__base__/prototypes/entity/assembler-pictures")
 
 require("__ageofcreation__/globals")
 require("__ageofcreation__/prototypes/changes")
@@ -106,4 +106,5 @@ data.raw.shortcut['toggle-personal-roboport'].technology_to_unlock = 'aoc-bee-he
 data.raw.shortcut['give-copper-wire'].technology_to_unlock = 'aoc-copper-tech-1'
 data.raw.shortcut['give-red-wire'].technology_to_unlock = 'aoc-circuit-network-tech'
 data.raw.shortcut['give-green-wire'].technology_to_unlock = 'aoc-circuit-network-tech'
+data.raw.shortcut['toggle-tall-entity-visibility'].technology_to_unlock = 'aoc-trains-tech-2'
 

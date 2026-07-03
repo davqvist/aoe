@@ -17,7 +17,7 @@ for _, fluid in pairs(data.raw.fluid) do
 				},
 				results = {},
 				energy_required = 1,
-				category = 'aoc-category-venting',
+				categories = {'aoc-category-venting'},
 				subgroup = 'aoc-other',
 				icons = get_void_icon( fluid ),
 				localised_name = {'age-of-creation.void-fluid', {'fluid-name.' .. fluid.name} }
@@ -36,7 +36,7 @@ for _, fluid in pairs(data.raw.fluid) do
 				},
 				results = {},
 				energy_required = 1,
-				category = 'aoc-category-sinking',
+				categories = {'aoc-category-sinking'},
 				subgroup = 'aoc-other',
 				icons = get_void_icon( fluid ),
 				localised_name = {'age-of-creation.void-fluid', {'fluid-name.' .. fluid.name} }

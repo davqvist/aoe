@@ -49,8 +49,8 @@ local loaders = {
 }
 local loaders_mdrn = {
     ['l1'] = 'mdrn-loader',
-    ['l2'] = 'fast-mdrn-loader',
-    ['l3'] = 'express-mdrn-loader',
+    ['l2'] = 'mdrn-fast-loader',
+    ['l3'] = 'mdrn-express-loader',
     ['l1_icons'] = {
         { icon = "__loaders-modernized__/graphics/technology/mdrn-loader-technology-base.png", icon_size = 128 },
         { icon = "__loaders-modernized__/graphics/technology/mdrn-loader-technology-mask.png", icon_size = 128, tint = {255, 217, 85} }

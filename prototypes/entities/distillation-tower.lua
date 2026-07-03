@@ -132,19 +132,37 @@ data:extend({{
       {
         fadeout = true,
         constant_speed = true,
-        north_position = util.by_pixel(-89, -136.5),
-        east_position = util.by_pixel(34.5, -207.5),
-        south_position = util.by_pixel(90.5, -94),
-        west_position = util.by_pixel(-16, -35),
+        north_position = util.by_pixel(-86, -195.5),
+        east_position = util.by_pixel(34.5, -266.5),
+        south_position = util.by_pixel(92.5, -153),
+        west_position = util.by_pixel(-14, -94),
         animation = {
-          filename = "__base__/graphics/entity/oil-refinery/oil-refinery-fire.png",
-          line_length = 10,
-          width = 40,
-          height = 81,
-          frame_count = 60,
+          filename = "__base__/graphics/entity/oil-refinery/oil-refinery-fire-smoke.png",
+          line_length = 5,
+          width = 54,
+          height = 144,
+          frame_count = 20,
+          animation_speed = 0.75,
+          scale = 1
+        }
+      },
+      {
+        fadeout = true,
+        constant_speed = true,
+        north_position = util.by_pixel(-86, -161.5),
+        east_position = util.by_pixel(34.5, -232.5),
+        south_position = util.by_pixel(92.5, -119),
+        west_position = util.by_pixel(-14, -60),
+        animation = {
+          filename = "__base__/graphics/entity/oil-refinery/oil-refinery-fire-light.png",
+          line_length = 5,
+          width = 28,
+          height = 86,
+          frame_count = 20,
           animation_speed = 0.75,
           draw_as_glow = true,
-          scale = 0.5
+          blend_mode = "additive",
+          scale = 1
         }
       },
       {

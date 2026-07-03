@@ -1,16 +1,13 @@
 local AOC =  require("__ageofcreation__/globals")
 
 data:extend({{
-    type = "tool",
+    type = "item",
     name = "aoc-science-04",
     icon = "__base__/graphics/icons/military-science-pack.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-science-packs",
     order = "e",
-    stack_size = 200,
-    durability = 1,
-    durability_description_key = "description.science-pack-remaining-amount-key",
-    durability_description_value = "description.science-pack-remaining-amount-value"
+    stack_size = 200
 }})
 
 data:extend({{

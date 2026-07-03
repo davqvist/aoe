@@ -108,7 +108,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-titanium-plate', amount = 2}
     },
 	energy_required = 4.8,
-	category = 'smelting'
+	categories = {'smelting'}
 }})
 
 data:extend({{
@@ -139,7 +139,7 @@ data:extend({{
     },
 	main_product = 'aoc-titanium-slurry',
 	energy_required = 5,
-	category = 'aoc-category-mixing-titanium'
+	categories = {'aoc-category-mixing-titanium'}
 }})
 
 data:extend({{
@@ -155,7 +155,7 @@ data:extend({{
     },
 	main_product = 'aoc-titanium-molten',
 	energy_required = 3,
-	category = 'aoc-category-electrolyzing-titanium'
+	categories = {'aoc-category-electrolyzing-titanium'}
 }})
 
 data:extend({{
@@ -168,11 +168,11 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoc-titanium-plate', amount = 6},
-		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_productivity = 1, probability = 0.9}
+		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_productivity = 1, independent_probability = 0.9}
     },
 	main_product = 'aoc-titanium-plate',
 	energy_required = 3,
-	category = 'aoc-category-casting-titanium'
+	categories = {'aoc-category-casting-titanium'}
 }})
 
 data:extend({{
@@ -204,7 +204,7 @@ data:extend({{
     order = "i02",
 	energy_required = 60,
 	hide_from_player_crafting = true,
-	category = 'aoc-category-metal-boosting'
+	categories = {'aoc-category-metal-boosting'}
 }})
 
 data:extend({{
@@ -302,7 +302,7 @@ data:extend({{
     type = "recipe",
     name = "aoc-crushing-metallic-asteroid-recipe",
     icon = "__space-age__/graphics/icons/metallic-asteroid-crushing.png",
-    category = "crushing",
+    categories = {"crushing"},
     subgroup = "aoc-asteroids",
     order = "a1",
     auto_recycle = false,
@@ -313,7 +313,7 @@ data:extend({{
     energy_required = 2,
     results = {
       {type = "item", name = "aoc-titanium-ore", amount = 1},
-      {type = "item", name = "metallic-asteroid-chunk", amount = 1, probability = 0.2, ignored_by_productivity = 1 }
+      {type = "item", name = "metallic-asteroid-chunk", amount = 1, independent_probability = 0.2, ignored_by_productivity = 1 }
     },
 	surface_conditions = { { property = "gravity", min = 0, max = 0 } },
     allow_decomposition = false
@@ -323,7 +323,7 @@ data:extend({{
     type = "recipe",
     name = "aoc-crushing-carbonic-asteroid-recipe",
     icon = "__space-age__/graphics/icons/carbonic-asteroid-crushing.png",
-    category = "crushing",
+    categories = {"crushing"},
     subgroup = "aoc-asteroids",
     order = "b1",
     auto_recycle = false,
@@ -335,7 +335,7 @@ data:extend({{
     results = {
       {type = "item", name = "aoc-dilithium-crystal", amount = 1},
       {type = "item", name = "carbon", amount = 1},
-      {type = "item", name = "carbonic-asteroid-chunk", amount = 1, probability = 0.2, ignored_by_productivity = 1 }
+      {type = "item", name = "carbonic-asteroid-chunk", amount = 1, independent_probability = 0.2, ignored_by_productivity = 1 }
     },
 	surface_conditions = { { property = "gravity", min = 0, max = 0 } },
     allow_decomposition = false
@@ -345,7 +345,7 @@ data:extend({{
     type = "recipe",
     name = "aoc-crushing-oxide-asteroid-recipe",
     icon = "__space-age__/graphics/icons/oxide-asteroid-crushing.png",
-    category = "crushing",
+    categories = {"crushing"},
     subgroup="aoc-asteroids",
     order = "c1",
     auto_recycle = false,
@@ -356,7 +356,7 @@ data:extend({{
     energy_required = 2,
     results = {
       {type = "item", name = "ice", amount = 1},
-      {type = "item", name = "oxide-asteroid-chunk", amount = 1, probability = 0.2, ignored_by_productivity = 1 }
+      {type = "item", name = "oxide-asteroid-chunk", amount = 1, independent_probability = 0.2, ignored_by_productivity = 1 }
     },
 	surface_conditions = { { property = "gravity", min = 0, max = 0 } },
     allow_decomposition = false
@@ -373,7 +373,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-diamond-chip', amount = 5}
     },
 	energy_required = 10,
-	category = 'aoc-category-lasering'
+	categories = {'aoc-category-lasering'}
 }})
 
 data:extend({{
@@ -390,7 +390,7 @@ data:extend({{
     },
 	energy_required = 20,
 	allow_productivity = false,
-	category = 'aoc-category-intricate-crafting'
+	categories = {'aoc-category-intricate-crafting'}
 }})
 
 data:extend({{
@@ -407,7 +407,7 @@ data:extend({{
     },
 	energy_required = 20,
 	allow_productivity = false,
-	category = 'aoc-category-intricate-crafting'
+	categories = {'aoc-category-intricate-crafting'}
 }})
 
 data:extend({{
@@ -424,7 +424,7 @@ data:extend({{
     },
 	energy_required = 20,
 	allow_productivity = false,
-	category = 'aoc-category-intricate-crafting'
+	categories = {'aoc-category-intricate-crafting'}
 }})
 
 data:extend({{
@@ -437,7 +437,7 @@ data:extend({{
 	results = {
 		{type = 'fluid', name = 'water', amount = 50}
     },
-	category = 'aoc-category-melting',
+	categories = {'aoc-category-melting'},
 	energy_required = 2,
 	allow_productivity = false
 }})
@@ -453,7 +453,7 @@ data:extend({{
 	results = {
 		{type = 'fluid', name = 'thruster-fuel', amount = 120}
     },
-	category = 'aoc-category-melting',
+	categories = {'aoc-category-melting'},
 	energy_required = 2
 }})
 
@@ -468,7 +468,7 @@ data:extend({{
 	results = {
 		{type = 'fluid', name = 'thruster-oxidizer', amount = 120}
     },
-	category = 'aoc-category-freezing',
+	categories = {'aoc-category-freezing'},
 	energy_required = 2
 }})
 
@@ -481,7 +481,7 @@ data:extend({{
         {type = 'fluid', name = 'aoc-vacuum', amount = 100}
     },
 	energy_required = 1,
-	category = 'aoc-category-pumping',
+	categories = {'aoc-category-pumping'},
 	surface_conditions = { { property = "gravity", min = 0, max = 0 } }
 }})
 
@@ -499,7 +499,7 @@ data:extend({{
     },
 	main_product = 'aoc-basalt',
     energy_required = 4,
-	category = 'aoc-category-digging',
+	categories = {'aoc-category-digging'},
 	surface_conditions = { { property = "pressure", min = 4000, max = 4000 } }
 }})
 
@@ -517,7 +517,7 @@ data:extend({{
     },
     auto_recycle = false,
     energy_required = 6,
-	category = 'oil-processing'
+	categories = {'oil-processing'}
 }})
 
 data:extend({{
@@ -534,7 +534,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-nauvis-chest', amount = 1}
     },
 	energy_required = 120,
-	category = 'aoc-category-infusing'
+	categories = {'aoc-category-infusing'}
 }})
 
 data:extend({{
@@ -551,7 +551,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-vulcanus-chest', amount = 1}
     },
 	energy_required = 120,
-	category = 'aoc-category-infusing'
+	categories = {'aoc-category-infusing'}
 }})
 
 data:extend({{
@@ -568,7 +568,7 @@ data:extend({{
         {type = 'item', name = 'flying-robot-frame', amount = 1}
     },
 	energy_required = 20,
-	category = 'aoc-category-infusing'
+	categories = {'aoc-category-infusing'}
 }})
 
 data:extend({{
@@ -672,10 +672,9 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 2}
 	},
 	results = {
-		{type = 'item', name = 'biter-egg', amount = 1}
+		{type = 'item', name = 'biter-egg', amount = 1, result_is_always_fresh = true}
     },
-	category = 'aoc-category-spawning',
-	result_is_always_fresh = true,
+	categories = {'aoc-category-spawning'},
 	energy_required = 30,
 	research = 'aoc-rune',
 	surface_conditions = {{ property = "pressure", min = 4000, max = 4000 }}
@@ -691,10 +690,9 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 2}
 	},
 	results = {
-		{type = 'item', name = 'aoc-medium-biter-egg', amount = 1}
+		{type = 'item', name = 'aoc-medium-biter-egg', amount = 1, result_is_always_fresh = true}
     },
-	category = 'aoc-category-spawning',
-	result_is_always_fresh = true,
+	categories = {'aoc-category-spawning'},
 	energy_required = 30,
 	research = 'aoc-rune',
 	surface_conditions = {{ property = "pressure", min = 4000, max = 4000 }}
@@ -710,10 +708,9 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 2}
 	},
 	results = {
-		{type = 'item', name = 'aoc-big-biter-egg', amount = 1}
+		{type = 'item', name = 'aoc-big-biter-egg', amount = 1, result_is_always_fresh = true}
     },
-	category = 'aoc-category-spawning',
-	result_is_always_fresh = true,
+	categories = {'aoc-category-spawning'},
 	energy_required = 30,
 	research = 'aoc-rune',
 	surface_conditions = {{ property = "pressure", min = 4000, max = 4000 }}
@@ -729,10 +726,9 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 2}
 	},
 	results = {
-		{type = 'item', name = 'aoc-behemoth-biter-egg', amount = 1}
+		{type = 'item', name = 'aoc-behemoth-biter-egg', amount = 1, result_is_always_fresh = true}
     },
-	category = 'aoc-category-spawning',
-	result_is_always_fresh = true,
+	categories = {'aoc-category-spawning'},
 	energy_required = 30,
 	research = 'aoc-rune',
 	surface_conditions = {{ property = "pressure", min = 4000, max = 4000 }}
@@ -748,10 +744,9 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 4}
 	},
 	results = {
-		{type = 'item', name = 'biter-egg', amount = 1}
+		{type = 'item', name = 'biter-egg', amount = 1, result_is_always_fresh = true}
     },
-	category = 'aoc-category-spawning',
-	result_is_always_fresh = true,
+	categories = {'aoc-category-spawning'},
 	energy_required = 25,
 	research = 'aoc-rune',
 	surface_conditions = {{ property = "pressure", min = 4000, max = 4000 }}
@@ -767,10 +762,9 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 4}
 	},
 	results = {
-		{type = 'item', name = 'aoc-medium-biter-egg', amount = 1}
+		{type = 'item', name = 'aoc-medium-biter-egg', amount = 1, result_is_always_fresh = true}
     },
-	category = 'aoc-category-spawning',
-	result_is_always_fresh = true,
+	categories = {'aoc-category-spawning'},
 	energy_required = 25,
 	research = 'aoc-rune',
 	surface_conditions = {{ property = "pressure", min = 4000, max = 4000 }}
@@ -786,10 +780,9 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 4}
 	},
 	results = {
-		{type = 'item', name = 'aoc-big-biter-egg', amount = 1}
+		{type = 'item', name = 'aoc-big-biter-egg', amount = 1, result_is_always_fresh = true}
     },
-	category = 'aoc-category-spawning',
-	result_is_always_fresh = true,
+	categories = {'aoc-category-spawning'},
 	energy_required = 25,
 	research = 'aoc-rune',
 	surface_conditions = {{ property = "pressure", min = 4000, max = 4000 }}
@@ -805,10 +798,9 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 8}
 	},
 	results = {
-		{type = 'item', name = 'aoc-behemoth-biter-egg', amount = 1}
+		{type = 'item', name = 'aoc-behemoth-biter-egg', amount = 1, result_is_always_fresh = true}
     },
-	category = 'aoc-category-spawning',
-	result_is_always_fresh = true,
+	categories = {'aoc-category-spawning'},
 	energy_required = 25,
 	research = 'aoc-rune',
 	surface_conditions = {{ property = "pressure", min = 4000, max = 4000 }}
@@ -824,10 +816,9 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 8}
 	},
 	results = {
-		{type = 'item', name = 'biter-egg', amount = 1}
+		{type = 'item', name = 'biter-egg', amount = 1, result_is_always_fresh = true}
     },
-	category = 'aoc-category-spawning',
-	result_is_always_fresh = true,
+	categories = {'aoc-category-spawning'},
 	energy_required = 20,
 	research = 'aoc-rune',
 	surface_conditions = {{ property = "pressure", min = 4000, max = 4000 }}
@@ -843,10 +834,9 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 8}
 	},
 	results = {
-		{type = 'item', name = 'aoc-medium-biter-egg', amount = 1}
+		{type = 'item', name = 'aoc-medium-biter-egg', amount = 1, result_is_always_fresh = true}
     },
-	category = 'aoc-category-spawning',
-	result_is_always_fresh = true,
+	categories = {'aoc-category-spawning'},
 	energy_required = 20,
 	research = 'aoc-rune',
 	surface_conditions = {{ property = "pressure", min = 4000, max = 4000 }}
@@ -862,10 +852,9 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 8}
 	},
 	results = {
-		{type = 'item', name = 'aoc-big-biter-egg', amount = 1}
+		{type = 'item', name = 'aoc-big-biter-egg', amount = 1, result_is_always_fresh = true}
     },
-	category = 'aoc-category-spawning',
-	result_is_always_fresh = true,
+	categories = {'aoc-category-spawning'},
 	energy_required = 20,
 	research = 'aoc-rune',
 	surface_conditions = {{ property = "pressure", min = 4000, max = 4000 }}
@@ -881,10 +870,9 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 8}
 	},
 	results = {
-		{type = 'item', name = 'aoc-behemoth-biter-egg', amount = 1}
+		{type = 'item', name = 'aoc-behemoth-biter-egg', amount = 1, result_is_always_fresh = true}
     },
-	category = 'aoc-category-spawning',
-	result_is_always_fresh = true,
+	categories = {'aoc-category-spawning'},
 	energy_required = 20,
 	research = 'aoc-rune',
 	surface_conditions = {{ property = "pressure", min = 4000, max = 4000 }}
@@ -904,7 +892,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-life-catalyst', amount = 1}
     },
 	energy_required = 60,
-	category = 'aoc-category-infusing',
+	categories = {'aoc-category-infusing'},
 	research = 'aoc-small-biter-corpse'
 }})
 
@@ -936,7 +924,7 @@ data:extend({{
 	results = {
 		{type = 'item', name = "aoc-rune", amount=10}
 	},
-	category = "aoc-category-enchanting",
+	categories = {"aoc-category-enchanting"},
 	energy_required = 10,
 	research = 'aoc-basalt'
 }})
@@ -953,7 +941,7 @@ data:extend({{
 	results = {
 		{type = 'item', name = "aoc-rune-life", amount=10}
 	},
-	category = "aoc-category-enchanting",
+	categories = {"aoc-category-enchanting"},
 	energy_required = 10,
 	research = 'aoc-basalt'
 }})
@@ -970,7 +958,7 @@ data:extend({{
 	results = {
 		{type = 'item', name = "aoc-rune-speed", amount=10}
 	},
-	category = "aoc-category-enchanting",
+	categories = {"aoc-category-enchanting"},
 	energy_required = 10,
 	research = 'aoc-basalt'
 }})
@@ -983,14 +971,14 @@ data:extend({{
 		{type = "item", name = "uranium-ore", amount = 4}
 	},
 	results = {
-		{type = 'item', name = "uranium-238", amount = 1, probability = 0.88 },
-		{type = 'item', name = "uranium-235", amount = 1, probability = 0.1 },
-		{type = 'item', name = "aoc-uranium-233", amount = 1, probability = 0.02 }
+		{type = 'item', name = "uranium-238", amount = 1, shared_probability = { min = 0, max = 0.88 }},
+		{type = 'item', name = "uranium-235", amount = 1, shared_probability = { min = 0.88, max = 0.98 }},
+		{type = 'item', name = "aoc-uranium-233", amount = 1, shared_probability = { min = 0.98, max = 1 }}
 	},
 	icons = data.raw.item["uranium-ore"].icons,
 	subgroup = "aoc-metals-rest",
 	order = "f2",
-	category = "centrifuging",
+	categories = {"centrifuging"},
 	energy_required = 12
 }})
 
@@ -1004,14 +992,14 @@ data:extend({{
 	results = {
 		{type = 'item', name = "aoc-fuel-cell-empty", amount = 1},
 		{type = 'item', name = "aoc-plutonium-242", amount = 4},
-		{type = 'item', name = "aoc-plutonium-239", amount = 1, probability = 0.5},
-		{type = 'item', name = "aoc-plutonium-241", amount = 1, probability = 0.5},
+		{type = 'item', name = "aoc-plutonium-239", amount = 1, independent_probability = 0.5},
+		{type = 'item', name = "aoc-plutonium-241", amount = 1, independent_probability = 0.5},
 		{type = 'item', name = "aoc-americium-243", amount = 3}
 	},
 	icons = data.raw.item["aoc-fuel-cell-uranium-233-depleted"].icons,
 	subgroup = "aoc-nuclear-fuel",
 	order = "b3",
-	category = "centrifuging",
+	categories = {"centrifuging"},
     allow_productivity = false,
 	energy_required = 20
 }})
@@ -1033,7 +1021,7 @@ data:extend({{
 	icons = data.raw.item["aoc-fuel-cell-uranium-233-depleted-2"].icons,
 	subgroup = "aoc-nuclear-fuel",
 	order = "c3",
-	category = "centrifuging",
+	categories = {"centrifuging"},
     allow_productivity = false,
 	energy_required = 20
 }})
@@ -1055,7 +1043,7 @@ data:extend({{
 	icons = data.raw.item["depleted-uranium-fuel-cell"].icons,
 	subgroup = "aoc-nuclear-fuel",
 	order = "d3",
-	category = "centrifuging",
+	categories = {"centrifuging"},
     allow_productivity = false,
 	energy_required = 20
 }})
@@ -1077,7 +1065,7 @@ data:extend({{
 	icons = data.raw.item["aoc-fuel-cell-uranium-235-depleted-2"].icons,
 	subgroup = "aoc-nuclear-fuel",
 	order = "e3",
-	category = "centrifuging",
+	categories = {"centrifuging"},
     allow_productivity = false,
 	energy_required = 20
 }})
@@ -1099,7 +1087,7 @@ data:extend({{
 	icons = data.raw.item["aoc-fuel-cell-neptunium-236-depleted"].icons,
 	subgroup = "aoc-nuclear-fuel",
 	order = "f3",
-	category = "centrifuging",
+	categories = {"centrifuging"},
     allow_productivity = false,
 	energy_required = 20
 }})
@@ -1121,7 +1109,7 @@ data:extend({{
 	icons = data.raw.item["aoc-fuel-cell-neptunium-236-depleted-2"].icons,
 	subgroup = "aoc-nuclear-fuel",
 	order = "g3",
-	category = "centrifuging",
+	categories = {"centrifuging"},
     allow_productivity = false,
 	energy_required = 20
 }})
@@ -1143,7 +1131,7 @@ data:extend({{
 	icons = data.raw.item["aoc-fuel-cell-plutonium-239-depleted"].icons,
 	subgroup = "aoc-nuclear-fuel",
 	order = "h3",
-	category = "centrifuging",
+	categories = {"centrifuging"},
     allow_productivity = false,
 	energy_required = 20
 }})
@@ -1165,7 +1153,7 @@ data:extend({{
 	icons = data.raw.item["aoc-fuel-cell-plutonium-239-depleted-2"].icons,
 	subgroup = "aoc-nuclear-fuel",
 	order = "i3",
-	category = "centrifuging",
+	categories = {"centrifuging"},
     allow_productivity = false,
 	energy_required = 20
 }})
@@ -1186,7 +1174,7 @@ data:extend({{
 	icons = data.raw.item["aoc-fuel-cell-plutonium-241-depleted"].icons,
 	subgroup = "aoc-nuclear-fuel",
 	order = "j3",
-	category = "centrifuging",
+	categories = {"centrifuging"},
     allow_productivity = false,
 	energy_required = 20
 }})
@@ -1208,7 +1196,7 @@ data:extend({{
 	icons = data.raw.item["aoc-fuel-cell-plutonium-241-depleted-2"].icons,
 	subgroup = "aoc-nuclear-fuel",
 	order = "k3",
-	category = "centrifuging",
+	categories = {"centrifuging"},
     allow_productivity = false,
 	energy_required = 20
 }})
@@ -1230,7 +1218,7 @@ data:extend({{
 	icons = data.raw.item["aoc-fuel-cell-americium-242-depleted"].icons,
 	subgroup = "aoc-nuclear-fuel",
 	order = "l3",
-	category = "centrifuging",
+	categories = {"centrifuging"},
     allow_productivity = false,
 	energy_required = 20
 }})
@@ -1252,7 +1240,7 @@ data:extend({{
 	icons = data.raw.item["aoc-fuel-cell-americium-242-depleted-2"].icons,
 	subgroup = "aoc-nuclear-fuel",
 	order = "m3",
-	category = "centrifuging",
+	categories = {"centrifuging"},
     allow_productivity = false,
 	energy_required = 20
 }})
@@ -1274,7 +1262,7 @@ data:extend({{
 	icons = data.raw.item["aoc-fuel-cell-curium-243-depleted"].icons,
 	subgroup = "aoc-nuclear-fuel",
 	order = "n3",
-	category = "centrifuging",
+	categories = {"centrifuging"},
     allow_productivity = false,
 	energy_required = 20
 }})
@@ -1296,7 +1284,7 @@ data:extend({{
 	icons = data.raw.item["aoc-fuel-cell-curium-243-depleted-2"].icons,
 	subgroup = "aoc-nuclear-fuel",
 	order = "o3",
-	category = "centrifuging",
+	categories = {"centrifuging"},
     allow_productivity = false,
 	energy_required = 20
 }})
@@ -1318,7 +1306,7 @@ data:extend({{
 	icons = data.raw.item["aoc-fuel-cell-curium-245-depleted"].icons,
 	subgroup = "aoc-nuclear-fuel",
 	order = "p3",
-	category = "centrifuging",
+	categories = {"centrifuging"},
     allow_productivity = false,
 	energy_required = 20
 }})
@@ -1340,7 +1328,7 @@ data:extend({{
 	icons = data.raw.item["aoc-fuel-cell-curium-245-depleted-2"].icons,
 	subgroup = "aoc-nuclear-fuel",
 	order = "q3",
-	category = "centrifuging",
+	categories = {"centrifuging"},
     allow_productivity = false,
 	energy_required = 20
 }})
@@ -1362,7 +1350,7 @@ data:extend({{
 	icons = data.raw.item["aoc-fuel-cell-curium-247-depleted"].icons,
 	subgroup = "aoc-nuclear-fuel",
 	order = "r3",
-	category = "centrifuging",
+	categories = {"centrifuging"},
     allow_productivity = false,
 	energy_required = 20
 }})
@@ -1384,7 +1372,7 @@ data:extend({{
 	icons = data.raw.item["aoc-fuel-cell-curium-247-depleted-2"].icons,
 	subgroup = "aoc-nuclear-fuel",
 	order = "s3",
-	category = "centrifuging",
+	categories = {"centrifuging"},
     allow_productivity = false,
 	energy_required = 20
 }})
@@ -1405,7 +1393,7 @@ data:extend({{
 	icons = data.raw.item["aoc-fuel-cell-berkelium-248-depleted"].icons,
 	subgroup = "aoc-nuclear-fuel",
 	order = "t3",
-	category = "centrifuging",
+	categories = {"centrifuging"},
     allow_productivity = false,
 	energy_required = 20
 }})
@@ -1426,7 +1414,7 @@ data:extend({{
 	icons = data.raw.item["aoc-fuel-cell-berkelium-248-depleted-2"].icons,
 	subgroup = "aoc-nuclear-fuel",
 	order = "u3",
-	category = "centrifuging",
+	categories = {"centrifuging"},
     allow_productivity = false,
 	energy_required = 20
 }})
@@ -1448,7 +1436,7 @@ data:extend({{
 	icons = data.raw.item["aoc-fuel-cell-californium-249-depleted"].icons,
 	subgroup = "aoc-nuclear-fuel",
 	order = "v3",
-	category = "centrifuging",
+	categories = {"centrifuging"},
     allow_productivity = false,
 	energy_required = 20
 }})
@@ -1470,7 +1458,7 @@ data:extend({{
 	icons = data.raw.item["aoc-fuel-cell-californium-249-depleted-2"].icons,
 	subgroup = "aoc-nuclear-fuel",
 	order = "w3",
-	category = "centrifuging",
+	categories = {"centrifuging"},
     allow_productivity = false,
 	energy_required = 20
 }})
@@ -1491,7 +1479,7 @@ data:extend({{
 	icons = data.raw.item["aoc-fuel-cell-californium-249-depleted"].icons,
 	subgroup = "aoc-nuclear-fuel",
 	order = "x3",
-	category = "centrifuging",
+	categories = {"centrifuging"},
     allow_productivity = false,
 	energy_required = 20
 }})
@@ -1512,7 +1500,7 @@ data:extend({{
 	icons = data.raw.item["aoc-fuel-cell-californium-251-depleted-2"].icons,
 	subgroup = "aoc-nuclear-fuel",
 	order = "y3",
-	category = "centrifuging",
+	categories = {"centrifuging"},
     allow_productivity = false,
 	energy_required = 20
 }})
@@ -1528,7 +1516,7 @@ data:extend({{
 	icon = data.raw.fluid["thruster-oxidizer"].icon,
 	subgroup = "aoc-nuclearpower-buildings",
 	order = "d",
-	category = "aoc-category-nuclear",
+	categories = {"aoc-category-nuclear"},
     allow_productivity = false,
 	hide_from_player_crafting = true,
 	energy_required = 100
@@ -1593,7 +1581,7 @@ data:extend({{
 	results = {
 		{type = 'item', name = 'aoc-reactor-sink-water', amount = 1}
     },
-	category = 'crafting-with-fluid',
+	categories = {'crafting-with-fluid'},
 	energy_required = 2
 }})
 
@@ -1608,7 +1596,7 @@ data:extend({{
 	results = {
 		{type = 'item', name = 'aoc-reactor-sink-coolant', amount = 1}
     },
-	category = 'crafting-with-fluid',
+	categories = {'crafting-with-fluid'},
 	energy_required = 2
 }})
 
@@ -1813,7 +1801,7 @@ data:extend({{
 	order = "cz",
 	icon = data.raw.item["aoc-small-biter-corpse"].icon,
 	icon_size = data.raw.item["aoc-small-biter-corpse"].icon_size,
-	category = 'aoc-category-slaughtering'
+	categories = {'aoc-category-slaughtering'}
 }})
 
 data:extend({{
@@ -2030,7 +2018,7 @@ data:extend({{
     },
 	main_product = 'aoc-silicon-doped-dilithium',
 	energy_required = 4.8,
-	category = 'aoc-category-kiln-smelting'
+	categories = {'aoc-category-kiln-smelting'}
 }})
 
 data:extend({{
@@ -2045,5 +2033,5 @@ data:extend({{
 		{type = 'item', name = 'aoc-silicon-doped-dilithium-wafer', amount = 6}
     },
 	energy_required = 2,
-	category = 'aoc-category-lasering'
+	categories = {'aoc-category-lasering'}
 }})

@@ -24,7 +24,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-charcoal', amount = 1}
     },
 	energy_required = 2.4,
-	category = 'smelting'
+	categories = {'smelting'}
 }})
 
 data:extend({{
@@ -38,7 +38,7 @@ data:extend({{
 		{type = 'item', name = 'stone-brick', amount = 1}
     },
 	energy_required = 2.4,
-	category = 'smelting'
+	categories = {'smelting'}
 }})
 
 data:extend({{
@@ -52,7 +52,7 @@ data:extend({{
         {type = 'item', name = 'tree-seed', amount = 1}
     },
 	energy_required = 10,
-	category = 'aoc-category-handcrafting'
+	categories = {'aoc-category-handcrafting'}
 }})
 
 data:extend({{
@@ -97,7 +97,7 @@ data:extend({{
     },
 	main_product = 'aoc-iron-dust',
 	energy_required = 4,
-	category = 'crushing'
+	categories = {'crushing'}
 }})
 
 data:extend({{
@@ -113,7 +113,7 @@ data:extend({{
     },
 	main_product = 'aoc-sand',
 	energy_required = 4,
-	category = 'crushing'
+	categories = {'crushing'}
 }})
 
 data:extend({{
@@ -154,7 +154,7 @@ data:extend({{
 		{type = 'item', name = 'iron-plate', amount = 1}
     },
 	energy_required = 2.4,
-	category = 'smelting'
+	categories = {'smelting'}
 }})
 
 data:extend({{
@@ -225,7 +225,7 @@ data:extend({{
         {type = 'item', name = 'tree-seed', amount = 1}
     },
 	energy_required = 3,
-	category = 'aoc-category-greenhouse'
+	categories = {'aoc-category-greenhouse'}
 }})
 
 data:extend({{
@@ -239,7 +239,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-glass', amount = 1}
     },
 	energy_required = 2.4,
-	category = 'smelting'
+	categories = {'smelting'}
 }})
 
 data:extend({{
@@ -313,7 +313,7 @@ data:extend({{
     },
 	main_product = 'wood',
 	energy_required = 2,
-	category = 'aoc-category-sawing'
+	categories = {'aoc-category-sawing'}
 }})
 
 data:extend({{
@@ -328,7 +328,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-wood-pulp"] ), get_icons( data.raw.item["wood"] ) ),
 	energy_required = 1,
-	category = 'aoc-category-sawing'
+	categories = {'aoc-category-sawing'}
 }})
 
 data:extend({{
@@ -343,7 +343,7 @@ data:extend({{
     },
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-wood-pulp"] ), get_icons( data.raw.item["aoc-log"] ) ),
 	energy_required = 2.5,
-	category = 'aoc-category-sawing'
+	categories = {'aoc-category-sawing'}
 }})
 
 data:extend({{
@@ -372,7 +372,7 @@ data:extend({{
         {type = 'item', name = 'aoc-resin', amount = 4}
     },
 	energy_required = 4,
-	category = 'aoc-category-squeezing'
+	categories = {'aoc-category-squeezing'}
 }})
 
 data:extend({{
@@ -384,7 +384,7 @@ data:extend({{
         {type = 'item', name = 'aoc-soil', amount = 1}
     },
 	energy_required = 0.2,
-	category = 'aoc-category-handcrafting'
+	categories = {'aoc-category-handcrafting'}
 }})
 
 data:extend({{

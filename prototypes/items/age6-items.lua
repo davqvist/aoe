@@ -1,14 +1,11 @@
 data:extend({{
-    type = "tool",
+    type = "item",
     name = "aoc-science-06",
     icon = "__base__/graphics/icons/production-science-pack.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-science-packs",
     order = "g",
-    stack_size = 200,
-    durability = 1,
-    durability_description_key = "description.science-pack-remaining-amount-key",
-    durability_description_value = "description.science-pack-remaining-amount-value"
+    stack_size = 200
 }})
 
 data:extend({{
@@ -29,6 +26,20 @@ data:extend({{
     subgroup = "aoc-flora-lotus",
     order = "b",
     stack_size = 200
+}})
+
+data:extend({{
+    type = "module",
+    name = "aoc-lotus-flower-module",
+    icon = "__ageofcreation__/img/items/lotus-flower.png",
+    icon_size = 128,
+    subgroup = "aoc-flora-lotus",
+    order = "b1",
+    stack_size = 20,
+    effect = { productivity = 0.06 },
+    category = "aoc-module-lotus-flower",
+    tier = 1,
+    productivity_quality_multiplier = 3.33333333
 }})
 
 data:extend({{

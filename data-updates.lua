@@ -70,14 +70,16 @@ data.raw["map-settings"]["map-settings"].pollution.enabled = false
 
 for _, recipe in pairs(data.raw.recipe) do
   if recipe.allow_productivity == nil then recipe.allow_productivity = true end
-  if recipe.category then
-	local rc = data.raw['recipe-category'][recipe.category]
-	if rc and rc.modules then
-      for _, mc in pairs(rc.modules) do
-		if recipe.allowed_module_categories == nil then recipe.allowed_module_categories = {} end
-		table.insert(recipe.allowed_module_categories, mc)
-      end
-	else recipe.allowed_module_categories = {'speed','efficiency','productivity'}
+  if recipe.categories then
+	for _, cat in pairs(recipe.categories) do 
+		local rc = data.raw['recipe-category'][cat]
+		if rc and rc.modules then
+		for _, mc in pairs(rc.modules) do
+			if recipe.allowed_module_categories == nil then recipe.allowed_module_categories = {} end
+			table.insert(recipe.allowed_module_categories, mc)
+		end
+		else recipe.allowed_module_categories = {'speed','efficiency','productivity'}
+		end
 	end
   else recipe.allowed_module_categories = {'speed','efficiency','productivity'}
   end

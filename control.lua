@@ -352,17 +352,17 @@ script.on_nth_tick(157,
 					end
 				end
 				local beac = storage.reactor_beacons[unit]
-				beac.active = false
+				beac.disabled_by_script = true
 				local module_slot = beac.get_module_inventory()
 				module_slot.clear()
 					if storage.reactortiles[unit].speed>1 then
 					module_slot.insert( {name = "aoc-hidden-reactor-module", count = storage.reactortiles[unit].speed-1} )
-					beac.active = true
+					beac.disabled_by_script = false
 				end
 				storage.reactortiles[unit].formed = flag
-				reactor.active = flag
+				reactor.disabled_by_script = not flag
 				if reactor.active and storage.reactortiles[unit].heatbase * storage.reactortiles[unit].heatmult > storage.reactortiles[unit].heatsink then 
-					reactor.active = false
+					reactor.disabled_by_script = true
 				end
 				storage.reactortiles[unit].amount = #foundtiles
 				storage.reactortiles[unit].power = storage.reactortiles[unit].power * math.sqrt(#foundtiles) / 10
@@ -445,9 +445,9 @@ script.on_nth_tick(39,
 			if starlightpanel.valid and starlightpanel.name == "aoc-lunar-panel" then
 				local sf = storage.starlight_panels[unit].surface
 				if string.match(sf.name, "^platform") or ( not string.match(sf.name, "^platform") and sf.daytime >= 0.45 and sf.daytime <= 0.55 ) then
-					storage.starlight_panels[unit].active = true
+					storage.starlight_panels[unit].disabled_by_script = false
 				else 
-					storage.starlight_panels[unit].active = false
+					storage.starlight_panels[unit].disabled_by_script = true
 				end
 			else 
 				storage.starlight_panels[unit]=nil
@@ -477,12 +477,12 @@ script.on_nth_tick(97,
 		for unit, metalbeacon in pairs(storage.metal_beacons) do
 			if metalbeacon.valid and metalbeacon.name == "aoc-metallurgy-beacon" then
 				local beac = storage.metal_beacon_beacons[unit]
-				beac.active = false
+				beac.disabled_by_script = true
 				if metalbeacon.get_recipe() and recipe_to_module[metalbeacon.get_recipe().name] then
 					local module_slot = beac.get_module_inventory()
 					module_slot.clear()
 					module_slot.insert( {name = recipe_to_module[metalbeacon.get_recipe().name], count = 1} )
-					if metalbeacon.status == defines.entity_status.working then beac.active = true end
+					if metalbeacon.status == defines.entity_status.working then beac.disabled_by_script = false end
 				end
 			else 
 				storage.metal_beacons[unit]=nil
@@ -526,12 +526,12 @@ script.on_nth_tick(151,
 						end
 						if flag and recipe and itm.force.recipes[recipe].enabled then
 							itm.set_recipe( recipe )
-							local out = itm.get_inventory(defines.inventory.assembling_machine_output)
+							local out = itm.get_inventory(defines.inventory.crafter_output)
 							local tempk, tempv = next( out.get_contents() )
 							if tempv == nil or tempv.count < 2 then
 								for i, p in pairs( pedestals ) do
 									inv[i].remove( {name=v[i].name, count=1} )
-									itm.get_inventory(defines.inventory.assembling_machine_input).insert( {name=v[i].name, count=1} )
+									itm.get_inventory(defines.inventory.crafter_input).insert( {name=v[i].name, count=1} )
 								end
 							end
 						end
@@ -639,17 +639,17 @@ function check_module_dying( farm, recipename, chance )
 			local inv = farm.get_module_inventory()
 			local k, v = next( inv.get_contents() )
 			if v ~= nil then 
-				local stack, index = inv.find_item_stack(v.name)
-				inv.remove( {name=v.name, count=1} )
+				local stack, index = inv.find_item_stack({name = v.name, quality = v.quality})
+				inv.remove( {name=v.name, count=1, quality=v.quality} )
 				local irp = farm.surface.find_entity("item-request-proxy", farm.position)
 				if irp then
 					local requests = irp.insert_plan
 					if requests then
-						table.insert( requests, {id={name=v.name},items={in_inventory={{inventory=defines.inventory.assembling_machine_modules,stack=index-1,count=1}}}})
+						table.insert( requests, {id={name=v.name, quality=v.quality},items={in_inventory={{inventory=defines.inventory.crafter_modules,stack=index-1,count=1}}}})
 					end
 					irp.insert_plan = requests
 				else 
-					farm.surface.create_entity{name="item-request-proxy", position=farm.position, force=farm.force, target=farm, modules={{id={name=v.name},items={in_inventory={{inventory=defines.inventory.assembling_machine_modules,stack=index-1,count=1}}}}}}
+					farm.surface.create_entity{name="item-request-proxy", position=farm.position, force=farm.force, target=farm, modules={{id={name=v.name, quality=v.quality},items={in_inventory={{inventory=defines.inventory.crafter_modules,stack=index-1,count=1}}}}}}
 				end
 			end
 		end
@@ -680,7 +680,7 @@ function handleInfusionTableBuilt(event)
 		force = infusiontable.force
 	}
 	infusiontable.proxy_target_entity = infusiontablemachine
-	infusiontable.proxy_target_inventory = defines.inventory.assembling_machine_output
+	infusiontable.proxy_target_inventory = defines.inventory.crafter_output
 	storage.infusion_tables[infusiontable.unit_number] = infusiontable
 	storage.infusion_table_machines[infusiontable.unit_number] = infusiontablemachine
 end
@@ -721,7 +721,7 @@ end
 function handleStarlightPanelBuilt(event)
 	if not storage.starlight_panels then storage.starlight_panels={} end
 	local starlight_panel = event.entity
-	starlight_panel.active = false
+	starlight_panel.disabled_by_script = true
 	storage.starlight_panels[starlight_panel.unit_number] = starlight_panel
 end
 
@@ -784,7 +784,7 @@ function handleMined(event, main_entities, sub_entities, sub_entities2, drop)
   local ent3 = sub_entities2[ent.unit_number]
   local k, v
   if( drop == "assembler" ) then
-	k, v = next( ent2.get_inventory(defines.inventory.assembling_machine_output).get_contents() )
+	k, v = next( ent2.get_inventory(defines.inventory.crafter_output).get_contents() )
 	if ent2 then ent2.destroy() end
 	return {name=k,amount=v}
   else 
@@ -800,7 +800,7 @@ function handleMinedSurface(event, main_entities)
 end
 
 function check_research( escritoire )
-	if escritoire.get_recipe() and escritoire.get_recipe().category == "aoc-category-unlocking" and escritoire.crafting_progress >= 1-escritoire.crafting_speed/(60*escritoire.get_recipe().energy) then
+	if escritoire.get_recipe() and escritoire.get_recipe().categories and escritoire.get_recipe().categories[1] == "aoc-category-unlocking" and escritoire.crafting_progress >= 1-escritoire.crafting_speed/(60*escritoire.get_recipe().energy) then
 		local recipe = string.match(escritoire.get_recipe().name, "^aoc%-unlocking%-.*%-tech%-?%d?%-(.*)$")
 		if escritoire.force.recipes[recipe] then 
 			escritoire.force.recipes[recipe].enabled = true
@@ -817,17 +817,16 @@ end
 function check_players( cauldron )
 	local equipment = {
 		['aoc-ring-equipment'] = 0.01,
-		['aoc-ring-equipment-2'] = 0.015,
-		['aoc-ring-equipment-3'] = 0.02,
-		['aoc-ring-equipment-4'] = 0.025,
-		['aoc-ring-equipment-5'] = 0.03,
-		['aoc-necklace-equipment'] = 0.05,
-		['aoc-necklace-equipment-2'] = 0.075,
-		['aoc-necklace-equipment-3'] = 0.1,
-		['aoc-necklace-equipment-4'] = 0.125,
-		['aoc-necklace-equipment-5'] = 0.15,
+		['aoc-necklace-equipment'] = 0.05
 	}
-	if cauldron.get_recipe() and cauldron.get_recipe().category == "aoc-category-brewing" and cauldron.crafting_progress >= 1-cauldron.crafting_speed/(60*cauldron.get_recipe().energy) then
+	local qual = {
+		['normal'] = 1,
+		['uncommon'] = 2,
+		['rare'] = 3,
+		['epic'] = 4,
+		['legendary'] = 5,
+	}
+	if cauldron.get_recipe() and cauldron.get_recipe().categories and cauldron.get_recipe().categories[1] == "aoc-category-brewing" and cauldron.crafting_progress >= 1-cauldron.crafting_speed/(60*cauldron.get_recipe().energy) then
 		local flag = false
 		local chance, recipe = string.match(cauldron.get_recipe().name, "^aoc%-brewing%-(%d%d)%-(.*)$")
 		if recipe then
@@ -840,7 +839,7 @@ function check_players( cauldron )
 					if armor and #armor > 0 and armor[1].valid_for_read and armor[1].grid then
 						if armor[1].name == 'aoc-robe' then chance = chance+0.05 end
 						for k, v in pairs( armor[1].grid.get_contents() ) do
-							if equipment[v.name] then chance = chance+v.count*equipment[v.name] end
+							if equipment[v.name] then chance = chance+v.count*(equipment[v.name]+equipment[v.name]*(qual[v.quality]-1)/2) end
 						end
 						if math.random() < chance then 
 							flag = true
