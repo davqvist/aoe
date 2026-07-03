@@ -989,6 +989,10 @@ data:extend({{
       {
         type = "unlock-recipe",
         recipe = "aoc-crafting-long-stack-inserter-recipe"
+      },
+      {
+        type = "belt-stack-size-bonus",
+        modifier = 1
       }
     },
     unit = {

@@ -38,7 +38,7 @@ data:extend({ reactorcopyitem })
 data:extend({{
     type = "item",
     name = "aoc-reactor-fuel-cell",
-    icon = "__ageofcreation__/img/entities/reactor-fuel-cell.png",
+    icon = "__ageofcreation__/img/entities/reactor-fuel-cell-icon.png",
     icon_size = 64,
     subgroup = "aoc-nuclearpower-buildings",
     order = "b",
@@ -49,7 +49,7 @@ data:extend({{
 data:extend({{
     type = "simple-entity-with-owner",
     name = "aoc-reactor-fuel-cell",
-	  icon = "__ageofcreation__/img/entities/reactor-fuel-cell.png",
+	  icon = "__ageofcreation__/img/entities/reactor-fuel-cell-icon.png",
     icon_size = 64,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { hardness = 1, mining_time = 0.2, result = "aoc-reactor-fuel-cell" },
@@ -60,7 +60,7 @@ data:extend({{
     {
       filename = "__ageofcreation__/img/entities/reactor-fuel-cell.png",
       width = 64,
-      height = 67,
+      height = 92,
       scale = 0.5
     }
 }})
@@ -86,7 +86,7 @@ for h, c in pairs(heatsinks) do
         name = "aoc-reactor-sink-" .. h,
         icons = {
           {
-            icon = "__ageofcreation__/img/entities/reactor-cell-base.png",
+            icon = "__ageofcreation__/img/entities/reactor-cell-base-icon.png",
             icon_size = 64
           },
           {
@@ -106,8 +106,8 @@ for h, c in pairs(heatsinks) do
         name = "aoc-reactor-sink-" .. h,
         icons = {
           {
-            icon = "__ageofcreation__/img/entities/reactor-cell-base.png",
-            icon_size = 64
+            icon = "__ageofcreation__/img/entities/reactor-cell-base-icon.png",
+            icon_size = 64,
           },
           {
             icon = "__ageofcreation__/img/entities/reactor-cell-tint.png",
@@ -126,7 +126,7 @@ for h, c in pairs(heatsinks) do
               {
                 filename = "__ageofcreation__/img/entities/reactor-cell-base.png",
                 width = 64,
-                height = 67,
+                height = 92,
                 scale = 0.5
               },
               {

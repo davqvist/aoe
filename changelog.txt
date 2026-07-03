@@ -1,14 +1,17 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.13
-Date: 2026-07-01
+Date: 2026-07-03
   Features:
-    - added translation of brewing recipes
+    - added translation of brewing recipes and blue loader technology
   Changes:
+    - changed Reactor Fuel Cell and Reactor Heat Sink graphics
     - now works with Factorio 2.1 that includes
     - no more fake quality, every plant module, animal module or equipment is now done with real quality
     - THIS MEANS THAT UPDATING WILL DELETE EVERY FAKE QUALITY ITEM IN OLD BASES, BE AWARE!
     - shared probability everywhere, which now prevents things like calves growing both into a cow and an ox
     - science packs without durability
+  Bugfixes:
+    - added belt stacking to the stack inserter tech
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.12
 Date: 2026-03-01
