@@ -189,6 +189,27 @@ data:extend({{
 }})
 
 data:extend({{
+    type = "technology",
+    name = "aoc-fulgora-discovery-tech",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__space-age__/graphics/technology/fulgora.png",
+    prerequisites = {"aoc-stargazing-tech"},
+    essential = true,
+    effects = {
+      {
+        type = "unlock-space-location",
+        space_location = "fulgora",
+        use_icon_overlay_constant = true
+      }
+    },
+    research_trigger =
+    {
+      type = "craft-item",
+      item = "aoc-planet-fulgora"
+    }
+}})
+
+data:extend({{
   type = "technology",
   name = "aoc-vulcanus-exploration-tech",
   icon_size = 256, icon_mipmaps = 4,
@@ -502,6 +523,10 @@ data:extend({{
     },
     {
       type = "unlock-recipe",
+      recipe = "aoc-crafting-nuclear-plant-recipe"
+    },
+    {
+      type = "unlock-recipe",
       recipe = "aoc-crafting-refined-hazard-concrete-recipe"
     },
     {
@@ -567,6 +592,14 @@ data:extend({{
     {
       type = "unlock-recipe",
       recipe = "aoc-crafting-reactor-sink-zinc-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-fuel-cell-empty-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-fuel-cell-empty-2-recipe"
     }
   },
   unit = {
@@ -608,39 +641,39 @@ data:extend({{
   effects = {
     {
       type = "unlock-recipe",
-      recipe = "aoc-centrifuging-uranium-ore-recipe"
+      recipe = "aoc-nuclear-uranium-ore-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-crafting-aoc-fuel-cell-uranium-233-recipe"
+      recipe = "aoc-nuclear-aoc-fuel-cell-uranium-233-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-crafting-aoc-fuel-cell-uranium-233-2-recipe"
+      recipe = "aoc-nuclear-aoc-fuel-cell-uranium-233-2-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-crafting-uranium-fuel-cell-recipe"
+      recipe = "aoc-nuclear-uranium-fuel-cell-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-crafting-aoc-fuel-cell-uranium-235-2-recipe"
+      recipe = "aoc-nuclear-aoc-fuel-cell-uranium-235-2-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-centrifuging-fuel-cell-uranium-233-depleted-recipe"
+      recipe = "aoc-nuclear-fuel-cell-uranium-233-depleted-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-centrifuging-fuel-cell-uranium-233-depleted-2-recipe"
+      recipe = "aoc-nuclear-fuel-cell-uranium-233-depleted-2-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-centrifuging-fuel-cell-uranium-235-depleted-recipe"
+      recipe = "aoc-nuclear-fuel-cell-uranium-235-depleted-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-centrifuging-fuel-cell-uranium-235-depleted-2-recipe"
+      recipe = "aoc-nuclear-fuel-cell-uranium-235-depleted-2-recipe"
     },
     {
       type = "unlock-recipe",
@@ -667,19 +700,19 @@ data:extend({{
   effects = {
     {
       type = "unlock-recipe",
-      recipe = "aoc-crafting-aoc-fuel-cell-neptunium-236-recipe"
+      recipe = "aoc-nuclear-aoc-fuel-cell-neptunium-236-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-crafting-aoc-fuel-cell-neptunium-236-2-recipe"
+      recipe = "aoc-nuclear-aoc-fuel-cell-neptunium-236-2-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-centrifuging-fuel-cell-neptunium-236-depleted-recipe"
+      recipe = "aoc-nuclear-fuel-cell-neptunium-236-depleted-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-centrifuging-fuel-cell-neptunium-236-depleted-2-recipe"
+      recipe = "aoc-nuclear-fuel-cell-neptunium-236-depleted-2-recipe"
     }
   },
   unit = {
@@ -698,35 +731,35 @@ data:extend({{
   effects = {
     {
       type = "unlock-recipe",
-      recipe = "aoc-crafting-aoc-fuel-cell-plutonium-239-recipe"
+      recipe = "aoc-nuclear-aoc-fuel-cell-plutonium-239-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-crafting-aoc-fuel-cell-plutonium-239-2-recipe"
+      recipe = "aoc-nuclear-aoc-fuel-cell-plutonium-239-2-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-crafting-aoc-fuel-cell-plutonium-241-recipe"
+      recipe = "aoc-nuclear-aoc-fuel-cell-plutonium-241-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-crafting-aoc-fuel-cell-plutonium-241-2-recipe"
+      recipe = "aoc-nuclear-aoc-fuel-cell-plutonium-241-2-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-centrifuging-fuel-cell-plutonium-239-depleted-recipe"
+      recipe = "aoc-nuclear-fuel-cell-plutonium-239-depleted-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-centrifuging-fuel-cell-plutonium-239-depleted-2-recipe"
+      recipe = "aoc-nuclear-fuel-cell-plutonium-239-depleted-2-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-centrifuging-fuel-cell-plutonium-241-depleted-recipe"
+      recipe = "aoc-nuclear-fuel-cell-plutonium-241-depleted-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-centrifuging-fuel-cell-plutonium-241-depleted-2-recipe"
+      recipe = "aoc-nuclear-fuel-cell-plutonium-241-depleted-2-recipe"
     },
     {
       type = "unlock-recipe",
@@ -749,19 +782,19 @@ data:extend({{
   effects = {
     {
       type = "unlock-recipe",
-      recipe = "aoc-crafting-aoc-fuel-cell-americium-242-recipe"
+      recipe = "aoc-nuclear-aoc-fuel-cell-americium-242-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-crafting-aoc-fuel-cell-americium-242-2-recipe"
+      recipe = "aoc-nuclear-aoc-fuel-cell-americium-242-2-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-centrifuging-fuel-cell-americium-242-depleted-recipe"
+      recipe = "aoc-nuclear-fuel-cell-americium-242-depleted-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-centrifuging-fuel-cell-americium-242-depleted-2-recipe"
+      recipe = "aoc-nuclear-fuel-cell-americium-242-depleted-2-recipe"
     },
     {
       type = "unlock-recipe",
@@ -784,51 +817,51 @@ data:extend({{
   effects = {
     {
       type = "unlock-recipe",
-      recipe = "aoc-crafting-aoc-fuel-cell-curium-243-recipe"
+      recipe = "aoc-nuclear-aoc-fuel-cell-curium-243-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-crafting-aoc-fuel-cell-curium-243-2-recipe"
+      recipe = "aoc-nuclear-aoc-fuel-cell-curium-243-2-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-crafting-aoc-fuel-cell-curium-245-recipe"
+      recipe = "aoc-nuclear-aoc-fuel-cell-curium-245-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-crafting-aoc-fuel-cell-curium-245-2-recipe"
+      recipe = "aoc-nuclear-aoc-fuel-cell-curium-245-2-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-crafting-aoc-fuel-cell-curium-247-recipe"
+      recipe = "aoc-nuclear-aoc-fuel-cell-curium-247-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-crafting-aoc-fuel-cell-curium-247-2-recipe"
+      recipe = "aoc-nuclear-aoc-fuel-cell-curium-247-2-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-centrifuging-fuel-cell-curium-243-depleted-recipe"
+      recipe = "aoc-nuclear-fuel-cell-curium-243-depleted-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-centrifuging-fuel-cell-curium-243-depleted-2-recipe"
+      recipe = "aoc-nuclear-fuel-cell-curium-243-depleted-2-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-centrifuging-fuel-cell-curium-245-depleted-recipe"
+      recipe = "aoc-nuclear-fuel-cell-curium-245-depleted-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-centrifuging-fuel-cell-curium-245-depleted-2-recipe"
+      recipe = "aoc-nuclear-fuel-cell-curium-245-depleted-2-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-centrifuging-fuel-cell-curium-247-depleted-recipe"
+      recipe = "aoc-nuclear-fuel-cell-curium-247-depleted-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-centrifuging-fuel-cell-curium-247-depleted-2-recipe"
+      recipe = "aoc-nuclear-fuel-cell-curium-247-depleted-2-recipe"
     }
   },
   unit = {
@@ -847,19 +880,19 @@ data:extend({{
   effects = {
     {
       type = "unlock-recipe",
-      recipe = "aoc-crafting-aoc-fuel-cell-berkelium-248-recipe"
+      recipe = "aoc-nuclear-aoc-fuel-cell-berkelium-248-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-crafting-aoc-fuel-cell-berkelium-248-2-recipe"
+      recipe = "aoc-nuclear-aoc-fuel-cell-berkelium-248-2-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-centrifuging-fuel-cell-berkelium-248-depleted-recipe"
+      recipe = "aoc-nuclear-fuel-cell-berkelium-248-depleted-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-centrifuging-fuel-cell-berkelium-248-depleted-2-recipe"
+      recipe = "aoc-nuclear-fuel-cell-berkelium-248-depleted-2-recipe"
     }
   },
   unit = {
@@ -878,35 +911,35 @@ data:extend({{
   effects = {
     {
       type = "unlock-recipe",
-      recipe = "aoc-crafting-aoc-fuel-cell-californium-249-recipe"
+      recipe = "aoc-nuclear-aoc-fuel-cell-californium-249-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-crafting-aoc-fuel-cell-californium-249-2-recipe"
+      recipe = "aoc-nuclear-aoc-fuel-cell-californium-249-2-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-crafting-aoc-fuel-cell-californium-251-recipe"
+      recipe = "aoc-nuclear-aoc-fuel-cell-californium-251-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-crafting-aoc-fuel-cell-californium-251-2-recipe"
+      recipe = "aoc-nuclear-aoc-fuel-cell-californium-251-2-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-centrifuging-fuel-cell-californium-249-depleted-recipe"
+      recipe = "aoc-nuclear-fuel-cell-californium-249-depleted-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-centrifuging-fuel-cell-californium-249-depleted-2-recipe"
+      recipe = "aoc-nuclear-fuel-cell-californium-249-depleted-2-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-centrifuging-fuel-cell-californium-251-depleted-recipe"
+      recipe = "aoc-nuclear-fuel-cell-californium-251-depleted-recipe"
     },
     {
       type = "unlock-recipe",
-      recipe = "aoc-centrifuging-fuel-cell-californium-251-depleted-2-recipe"
+      recipe = "aoc-nuclear-fuel-cell-californium-251-depleted-2-recipe"
     },
     {
       type = "unlock-recipe",
@@ -915,6 +948,29 @@ data:extend({{
   },
   unit = {
       count = 75,
+      ingredients = AOC["age_tech_table"][7],
+      time = 60
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-lotus-flower-tech-3",
+  icon = "__ageofcreation__/img/items/lotus-flower.png",
+  icon_size = 128,
+  prerequisites = {"aoc-lotus-flower-tech-2", "aoc-uranium-tech", "aoc-fertilizer-tech-2"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-reservoir-lotus-flower-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-farm-reservoir-lotus-flower-module-3-recipe"
+    }
+  },
+  unit = {
+      count = 40,
       ingredients = AOC["age_tech_table"][7],
       time = 60
   }

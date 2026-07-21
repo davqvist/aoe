@@ -87,6 +87,7 @@ data:extend({{
 	gas = true,
     fuel_value = "30kJ"
 }})
+table.insert( data.raw.fluid["aoc-hydrogen"].icons, { icon = "__ageofcreation__/img/items/atoms/h.png", icon_size = 64 } )
 
 data:extend({{
     type = "fluid",
@@ -99,6 +100,7 @@ data:extend({{
 	default_temperature = 20,
 	gas = true
 }})
+table.insert( data.raw.fluid["aoc-oxygen"].icons, { icon = "__ageofcreation__/img/items/atoms/o.png", icon_size = 64 } )
 
 data:extend({{
     type = "fluid",
@@ -111,6 +113,7 @@ data:extend({{
 	default_temperature = 20,
 	gas = true
 }})
+table.insert( data.raw.fluid["aoc-nitrogen"].icons, { icon = "__ageofcreation__/img/items/atoms/n.png", icon_size = 64 } )
 
 data:extend({{
     type = "fluid",
@@ -123,6 +126,7 @@ data:extend({{
 	default_temperature = 20,
 	gas = true
 }})
+table.insert( data.raw.fluid["aoc-chlorine"].icons, { icon = "__ageofcreation__/img/items/atoms/cl.png", icon_size = 64 } )
 
 data:extend({{
     type = "fluid",
@@ -135,6 +139,7 @@ data:extend({{
 	default_temperature = 20,
 	gas = true
 }})
+table.insert( data.raw.fluid["aoc-helium"].icons, { icon = "__ageofcreation__/img/items/atoms/he.png", icon_size = 64 } )
 
 data:extend({{
     type = "fluid",
@@ -1287,7 +1292,7 @@ data:extend({{
     icon = "__ageofcreation__/img/fluids/magical-solvent.png",
     icon_size = 64,
     subgroup = "aoc-fluids-magic-rest",
-    order = "e",
+    order = "f",
 	base_color = {r=0.27, g=0.4, b=0.4},
 	flow_color = {r=0.27, g=0.4, b=0.4},
 	default_temperature = 20
@@ -1337,4 +1342,26 @@ data:extend({{
 	base_color = {r=0.2, g=0.28, b=0},
 	flow_color = {r=0.2, g=0.28, b=0},
 	default_temperature = 20
+}})
+
+data.raw['fluid']['holmium-solution'].subgroup = "aoc-fluids-fulgora"
+data.raw['fluid']['holmium-solution'].order = "a"
+data.raw['fluid']['fluoroketone-cold'].subgroup = "aoc-fluids-fusion"
+data.raw['fluid']['fluoroketone-cold'].order = "a"
+data.raw['fluid']['fluoroketone-hot'].subgroup = "aoc-fluids-fusion"
+data.raw['fluid']['fluoroketone-hot'].order = "b"
+data.raw['fluid']['fusion-plasma'].subgroup = "aoc-fluids-fusion"
+data.raw['fluid']['fusion-plasma'].order = "c"
+
+data:extend({{
+    type = "fluid",
+    name = "aoc-liquid-antifuel",
+    icon = "__ageofcreation__/img/fluids/liquid-antifuel.png",
+    icon_size = 64,
+    subgroup = "aoc-fluids-fusion",
+    order = "d",
+	base_color = {r=0, g=0, b=0},
+	flow_color = {r=0, g=0, b=0},
+	default_temperature = 20,
+    fuel_value = "3MJ"
 }})

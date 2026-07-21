@@ -68,7 +68,7 @@ data:extend({{
 	results = {
 		{type = 'item', name = 'steel-plate', amount = 1}
     },
-	energy_required = 2.4,
+	energy_required = 4.8,
 	categories = {'smelting'}
 }})
 
@@ -83,7 +83,7 @@ data:extend({{
 	results = {
 		{type = 'item', name = 'steel-plate', amount = 1}
     },
-	energy_required = 2.4,
+	energy_required = 4.8,
 	categories = {'smelting'}
 }})
 
@@ -806,6 +806,7 @@ data:extend({{
     },
 	main_product = 'coal',
 	energy_required = 8,
+	allow_decomposition = false,
 	categories = {'aoc-category-straining'}
 }})
 
@@ -825,6 +826,7 @@ data:extend({{
     },
 	main_product = 'aoc-quartz-ore',
 	energy_required = 8,
+	allow_decomposition = false,
 	categories = {'aoc-category-straining'}
 }})
 
@@ -844,6 +846,7 @@ data:extend({{
     },
 	main_product = 'aoc-aluminium-ore',
 	energy_required = 8,
+	allow_decomposition = false,
 	categories = {'aoc-category-straining'}
 }})
 
@@ -1247,8 +1250,8 @@ data:extend({{
 		{type = 'fluid', name = 'water', amount = 10}
 	},
 	results = {
-        {type = 'fluid', name = 'aoc-hydrogen', amount = 10},
-        {type = 'fluid', name = 'aoc-oxygen', amount = 20}
+        {type = 'fluid', name = 'aoc-hydrogen', amount = 20},
+        {type = 'fluid', name = 'aoc-oxygen', amount = 10}
     },
 	icon = data.raw.fluid["water"].icon,
 	icon_size = data.raw.fluid["water"].icon_size,
@@ -1511,13 +1514,13 @@ data:extend({{
     energy_required = 4,
 	subgroup = 'aoc-fauna-fish',
 	order = "a1",
-	icon = data.raw.capsule["raw-fish"].icon,
-	icon_size = data.raw.capsule["raw-fish"].icon_size,
+	icon = data.raw.item["raw-fish"].icon,
+	icon_size = data.raw.item["raw-fish"].icon_size,
 	categories = {'aoc-category-slaughtering'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-reservoir-fish-recipe',
+    name = 'aoc-farm-reservoir-fish-1-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -1528,12 +1531,12 @@ data:extend({{
         {type = 'item', name = 'raw-fish', amount = 2}
     },
     energy_required = 50,
-	icons = get_icons( data.raw.capsule['raw-fish'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
+	icons = get_icons( data.raw.item['raw-fish'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
 	categories = {'aoc-category-farm-reservoir-fish'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-reservoir-fish-eggs-recipe',
+    name = 'aoc-farm-reservoir-fish-eggs-1-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -1564,7 +1567,7 @@ data:extend({{
         {type = 'item', name = 'aoc-fish-module', amount=1, quality_min = "uncommon", quality_max = "uncommon", shared_probability = { min = 0.5, max = 0.55 }}
     },
 	main_product = 'aoc-fish-module',
-    icons = get_icons_quality( data.raw.capsule["raw-fish"], 1 ),
+    icons = get_icons_quality( data.raw.item["raw-fish"], 1 ),
     energy_required = 150,
 	categories = {'aoc-category-farm-reservoir-fish'}
 }})

@@ -18,7 +18,7 @@ data:extend({{
     type = "electric",
     emissions_per_minute = {pollution = 10},
     usage_priority = "secondary-input",
-	drain = "29kW"
+	  drain = "29kW"
   },
   energy_usage = "588kW",
   allowed_effects = {"speed", "productivity", "consumption", "pollution"},

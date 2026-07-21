@@ -22,7 +22,7 @@ local qol = {
     { "laser-boost", {{ icon = "__base__/graphics/technology/laser-shooting-speed.png", icon_size = 256, icon_mipmaps = 4 }},
         {{ type = "gun-speed", ammo_category = "laser", modifier = 0.3 }, { type = "ammo-damage", ammo_category = "laser", modifier = 0.4 }}, 7 }
 }
-local prereq = { "", "aoc-steel-tech-1", "aoc-tree-cultivation-tech-1", "aoc-medium-voltage-tech", "aoc-coal-liquefaction-tech", "aoc-magic-research-tech", "aoc-military-tech-2", "aoc-military-tech-3" }
+local prereq = { "", "aoc-steel-tech-1", "aoc-tree-cultivation-tech-1", "aoc-medium-voltage-tech", "aoc-coal-liquefaction-tech", "aoc-magic-research-tech", "aoc-military-tech-2", "aoc-military-tech-3", "aoc-super-parts-tech" }
 
 for age=2,#prereq do
     for _, tech in pairs(qol) do

@@ -1,5 +1,5 @@
 local recipes_to_keep = {['barrel'] = true, ['biter-egg'] = true, ['rocket-part'] = true, ['recipe-unknown'] = true}
-local technologies_to_keep = {['spidertron'] = 'hidden', ['exoskeleton-equipment'] = 'hidden', ['discharge-defense-equipment'] = 'hidden', ['artillery'] = 'hidden'}
+local technologies_to_keep = {['discharge-defense-equipment'] = 'hidden', ['artillery'] = 'hidden'}
 if mods["bobinserters"] then
   technologies_to_keep['bob-long-inserters-1'] = true
   technologies_to_keep['bob-long-inserters-2'] = true

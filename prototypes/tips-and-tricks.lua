@@ -112,5 +112,50 @@ data:extend({
     },
     tag = "[item=aoc-science-07]",
     --image = ""
+  },
+  {
+    type = "tips-and-tricks-item",
+    name = "aoc-tat-science-08",
+    category = "AOC",
+    order = "i",
+    indent = 1,
+    dependencies = { "aoc-tat-science-07" },
+    trigger =
+    {
+      type = "research",
+      technology = "aoc-alien-age-tech"
+    },
+    tag = "[item=aoc-science-08]",
+    --image = ""
+  },
+  {
+    type = "tips-and-tricks-item",
+    name = "aoc-tat-science-09",
+    category = "AOC",
+    order = "j",
+    indent = 1,
+    dependencies = { "aoc-tat-science-08" },
+    trigger =
+    {
+      type = "research",
+      technology = "aoc-deep-space-age-tech"
+    },
+    tag = "[item=aoc-science-09]",
+    --image = ""
+  },
+  {
+    type = "tips-and-tricks-item",
+    name = "aoc-tat-science-10",
+    category = "AOC",
+    order = "k",
+    indent = 1,
+    dependencies = { "aoc-tat-science-09" },
+    trigger =
+    {
+      type = "research",
+      technology = "aoc-infinity-age-tech"
+    },
+    tag = "[item=aoc-science-10]",
+    --image = ""
   }
 })

@@ -13,13 +13,13 @@ reactorcopy.energy_source = {
     emissions_per_minute = {pollution = 12}
 }
 reactorcopy.energy_usage = "1MW"
-reactorcopy.crafting_categories = {"aoc-category-nuclear"}
+reactorcopy.crafting_categories = {"aoc-category-nuclear-reactor"}
 reactorcopy.crafting_speed = 1
 reactorcopy.allowed_effects = {"speed","consumption"}
 reactorcopy.circuit_connector = circuit_connector_definitions["assembling-machine"]
 reactorcopy.graphics_set = {}
 reactorcopy.graphics_set.animation = reactorcopy.picture
-reactorcopy.fixed_recipe = "aoc-nuclear-coolant-recipe"
+reactorcopy.fixed_recipe = "aoc-nuclear-reactor-coolant-recipe"
 reactorcopy.minable = { hardness = 1, mining_time = 0.2, result = "aoc-nuclear-reactor" }
 reactorcopy.fluid_boxes_off_when_no_fluid_recipe = true
 reactorcopy.fluid_boxes = {
@@ -41,7 +41,7 @@ data:extend({{
     icon = "__ageofcreation__/img/entities/reactor-fuel-cell-icon.png",
     icon_size = 64,
     subgroup = "aoc-nuclearpower-buildings",
-    order = "b",
+    order = "e",
     place_result = "aoc-reactor-fuel-cell",
     stack_size = 100,
 }})
@@ -96,7 +96,7 @@ for h, c in pairs(heatsinks) do
           }
         },
         subgroup = "aoc-nuclearpower-buildings",
-        order = "c_" .. h,
+        order = "f_" .. h,
         place_result = "aoc-reactor-sink-" .. h,
         stack_size = 100,
     }})

@@ -164,6 +164,10 @@ script.on_event(defines.events.on_gui_click,
 script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_entity, defines.events.script_raised_built, defines.events.script_raised_revive, defines.events.on_space_platform_built_entity}, 
   function(event)
     local entity = event.entity
+	if(entity.name == "infinity-chest") then 
+		game.set_win_ending_info{ title={'age-of-creation.wintitle'}, message={'age-of-creation.winmsg'} }
+		game.set_game_state{ game_finished = true, player_won = true, can_continue = true }
+	end
 	if(entity.name == "aoc-forestry") then 
 		handleBuilt( event, "forestries" )
 	end
@@ -183,7 +187,8 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 		handleInfusionTableBuilt(event)
 	end
 	if(entity.name == "aoc-lunar-panel") then
-		handleStarlightPanelBuilt(event)
+		handleBuilt( event, "starlight_panels" )
+		entity.disabled_by_script = true
 	end
 	if(entity.name == "aoc-escritoire") then
 		handleBuilt( event, "escritoires" )
@@ -191,9 +196,15 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 	if(entity.name == "aoc-cauldron") then
 		handleBuilt( event, "cauldrons" )
 	end
+	if(entity.name == "aoc-enchanting-table") then
+		handleBuilt( event, "enchanting_tables" )
+	end
+	if(entity.name == "aoc-particle-accelerator") then
+		handleBuilt( event, "accelerators" )
+		entity.disabled_by_script = true
+	end
 	if(entity.name == "aoc-nuclear-reactor") then
 		handleReactorBuilt(event)
-		--handleBuilt( event, "reactors" )
 	end
 	if(entity.name == "aoc-wind-turbine") then
 		handleWindTurbineBuilt( event )
@@ -210,8 +221,22 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 		local built = handlePlanetChestBuilt( event, "gleba" )
 		if not built then return end
 	end
+	if(entity.name == "aoc-fulgora-chest") then
+		local built = handlePlanetChestBuilt( event, "fulgora" )
+		if not built then return end
+	end
 	if(entity.name == "cargo-landing-pad") then
 		handleCargoLandingPadBuilt( event, "cargo_landing_pads" )
+	end
+  end
+)
+
+script.on_event({defines.events.on_research_finished}, 
+  function(event)
+    local tech = event.research
+	if(tech.name:find('^aoc%-philstone%-tech') ~= nil) then 
+		storage.recipes['aoc-enchanting-philstone-recipe'] = true
+		storage.recipes['aoc-enchanting-philstone-recipe'] = true
 	end
   end
 )
@@ -268,6 +293,9 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 	if(entity.name == "aoc-gleba-chest") then
 		handleMinedSurface(event, storage.planet_chests["gleba"])
 	end
+	if(entity.name == "aoc-fulgora-chest") then
+		handleMinedSurface(event, storage.planet_chests["fulgora"])
+	end
 	if(entity.name == "cargo-landing-pad") then
 		handleMinedSurface(event, storage.cargo_landing_pads)
 	end
@@ -279,6 +307,45 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 	end
   end
 )
+script.on_nth_tick(137,
+  function()
+	if storage.accelerators then
+		for unit, accelerator in pairs(storage.accelerators) do
+			if accelerator.valid and accelerator.name == "aoc-particle-accelerator" then
+				if accelerator.surface.platform then
+					if accelerator.surface.platform.speed > 2.5 then 
+						accelerator.disabled_by_script = false
+						if accelerator.surface.platform.space_connection and accelerator.surface.platform.space_connection.from and accelerator.surface.platform.space_connection.to then
+							if accelerator.get_recipe().name == 'aoc-accelerating-proton-quarks-recipe' then
+								if ( accelerator.surface.platform.space_connection.from.name == "vulcanus" and accelerator.surface.platform.distance <= 0.5 )
+								 or ( accelerator.surface.platform.space_connection.to.name == "vulcanus" and accelerator.surface.platform.distance >= 0.5 ) then else
+									accelerator.disabled_by_script = true
+								end
+							end
+							if accelerator.get_recipe().name == 'aoc-accelerating-electron-quarks-recipe' then
+								if ( accelerator.surface.platform.space_connection.from.name == "gleba" and accelerator.surface.platform.distance <= 0.5 )
+								 or ( accelerator.surface.platform.space_connection.to.name == "gleba" and accelerator.surface.platform.distance >= 0.5 ) then else
+									accelerator.disabled_by_script = true
+								end
+							end
+							if accelerator.get_recipe().name == 'aoc-accelerating-quark-quarks-recipe' then
+								if ( accelerator.surface.platform.space_connection.from.name == "fulgora" and accelerator.surface.platform.distance <= 0.5 )
+								 or ( accelerator.surface.platform.space_connection.to.name == "fulgora" and accelerator.surface.platform.distance >= 0.5 ) then else
+									accelerator.disabled_by_script = true
+								end
+							end
+						end
+					else
+						accelerator.disabled_by_script = true
+					end
+				end
+			else
+				storage.accelerators[unit]=nil
+			end
+		end
+	end
+  end
+)	
 script.on_nth_tick(157,
   function()
 	if storage.reactors then
@@ -568,6 +635,11 @@ script.on_event(defines.events.on_tick,
 		end
 		storage.scrolltick[game.tick] = nil
 	end
+	if storage.enchantingtick and storage.enchantingtick[game.tick] then
+		storage.recipes['aoc-enchanting-philstone-recipe'] = false
+		storage.enchantingtick[game.tick].force.recipes['aoc-enchanting-philstone-recipe'].enabled = false
+		storage.enchantingtick = nil
+	end
 	
 	if storage.lightningtick and storage.lightningtick[game.tick] then
 		local rod = storage.lightningtick[game.tick]
@@ -614,6 +686,18 @@ script.on_event(defines.events.on_tick,
 		end
 	  end
     end
+	if storage.enchanting_tables then
+      for _,et in pairs(storage.enchanting_tables) do
+		if et.valid and et.name == "aoc-enchanting-table" then
+			if et.get_recipe() and et.get_recipe().name:find('^aoc%-enchanting%-philstone%-recipe$') ~= nil and et.crafting_progress >= 1-et.crafting_speed/(60*et.get_recipe().energy) then
+				if not storage.enchantingtick then
+					storage.enchantingtick = {}
+					storage.enchantingtick[game.tick+10] = et
+				end
+			end
+		end
+	  end
+	end
 	if storage.escritoires then
 	  for _,escritoire in pairs(storage.escritoires) do
 		if escritoire.valid then
@@ -716,13 +800,6 @@ function handleReactorBuilt(event)
 	storage.reactors[reactor.unit_number] = reactor
 	storage.reactor_beacons[reactor.unit_number] = reactorbeacon
 	storage.reactor_gens[reactor.unit_number] = reactorgen
-end
-
-function handleStarlightPanelBuilt(event)
-	if not storage.starlight_panels then storage.starlight_panels={} end
-	local starlight_panel = event.entity
-	starlight_panel.disabled_by_script = true
-	storage.starlight_panels[starlight_panel.unit_number] = starlight_panel
 end
 
 function handleWindTurbineBuilt(event)

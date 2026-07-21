@@ -80,7 +80,10 @@ data:extend({{
           name = "smoke",
           deviation = {0.1, 0.1},
           frequency = 5,
-          position = {0.0, -0.8},
+          north_position = {0.0, -1.0},
+          south_position = {0.0, -1.0},
+          west_position = {0.0, -1.0},
+          east_position = {0.0, -1.0},
           starting_vertical_speed = 0.08,
           starting_frame_deviation = 60
         }
@@ -128,7 +131,7 @@ data:extend({{
       {
         production_type = "input",
         volume = 1000,
-        pipe_picture = assembler2pipepictures,
+        pipe_picture = require("__base__/prototypes/entity/assembler-pictures").assembler2pipepictures,
         pipe_covers = pipecoverspictures(),
         pipe_connections = {
           { flow_direction="input-output", direction = defines.direction.west, position = {-1, 0} },
@@ -137,7 +140,7 @@ data:extend({{
       },{
         production_type = "output",
         volume = 1000,
-        pipe_picture = assembler2pipepictures,
+        pipe_picture = require("__base__/prototypes/entity/assembler-pictures").assembler2pipepictures,
         pipe_covers = pipecoverspictures(),
         pipe_connections = {{ flow_direction="output", direction = defines.direction.north, position = {0, -1} }}
       }

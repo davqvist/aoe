@@ -335,7 +335,7 @@ data:extend({{
 data:extend({{
   type = "technology",
   name = "aoc-chlorine-tech",
-  icons = data.raw.fluid["aoc-chlorine"].icons,
+  icons = create_gas_fluid_icon( { "__angelspetrochemgraphics__/graphics/icons/molecules/chlorine.png", 72 }, { { 031, 240, 031 }, { 057, 211, 040 }, { 075, 195, 045 } } ),
   prerequisites = {"aoc-electric-automation-tech-2","aoc-electrolysis-tech"},
   effects = {
     {

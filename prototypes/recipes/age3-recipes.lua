@@ -49,7 +49,7 @@ data:extend({{
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-maize-recipe',
+    name = 'aoc-farm-plot-maize-1-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -62,11 +62,12 @@ data:extend({{
     energy_required = 45,
     icons = get_icons( data.raw.item['aoc-maize'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 251, g = 217, b = 112}},
 	categories = {'aoc-category-farm-plot-maize'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-maize-magnesium-recipe',
+    name = 'aoc-farm-plot-maize-magnesium-1-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -80,6 +81,7 @@ data:extend({{
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-maize"], { icon = "__ageofcreation__/img/items/tier/t1.png", icon_size = 64 } ), get_icons( data.raw.item["aoc-magnesium-dust"] ) ),
     energy_required = 35,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 251, g = 217, b = 112}},
 	categories = {'aoc-category-farm-plot-maize'}
 }})
 
@@ -105,6 +107,7 @@ data:extend({{
     icons = get_icons_quality( data.raw.item["aoc-maize"], 1 ),
     energy_required = 130,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 251, g = 217, b = 112}},
 	categories = {'aoc-category-farm-plot-maize'}
 }})
 
@@ -153,12 +156,12 @@ data:extend({{
     results = {
         {type = 'item', name = 'aoc-soybean-seeds', amount = 8}
     },
-    energy_required = 3,
+    energy_required = 6,
 	categories = {'aoc-category-greenhouse'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-soybeans-recipe',
+    name = 'aoc-farm-plot-soybeans-1-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -172,6 +175,7 @@ data:extend({{
     energy_required = 60,
 	auto_recycle = false,
     icons = get_icons( data.raw.item['aoc-soybeans'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
+	crafting_machine_tint = { primary = {r = 112, g = 156, b = 9}},
 	categories = {'aoc-category-farm-plot-soybean'}
 }})
 
@@ -193,6 +197,7 @@ data:extend({{
     icons = get_icons_quality( data.raw.item["aoc-soybeans"], 1 ),
     energy_required = 150,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 112, g = 156, b = 9}},
 	categories = {'aoc-category-farm-plot-soybean'}
 }})
 
@@ -221,7 +226,7 @@ data:extend({{
 	results = {
 		{type = 'fluid', name = 'aoc-milk', amount = 100}
     },
-	energy_required = 2.4,
+	energy_required = 10,
 	categories = {'aoc-category-mixing'}
 }})
 
@@ -306,7 +311,7 @@ data:extend({{
 }})
 
 data:extend({{
-    name = 'aoc-farm-chicken-coop-chicken-recipe',
+    name = 'aoc-farm-chicken-coop-chicken-1-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -325,7 +330,7 @@ data:extend({{
 }})
 
 data:extend({{
-    name = 'aoc-farm-chicken-coop-egg-recipe',
+    name = 'aoc-farm-chicken-coop-egg-1-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -420,7 +425,7 @@ data:extend({{
 }})
 
 data:extend({{
-    name = 'aoc-farm-barn-sheep-recipe',
+    name = 'aoc-farm-barn-sheep-1-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -440,7 +445,7 @@ data:extend({{
 }})
 
 data:extend({{
-    name = 'aoc-farm-barn-wool-recipe',
+    name = 'aoc-farm-barn-wool-1-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -463,7 +468,7 @@ data:extend({{
 }})
 
 data:extend({{
-    name = 'aoc-farm-barn-lamb-recipe',
+    name = 'aoc-farm-barn-lamb-1-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -560,7 +565,7 @@ data:extend({{
 }})
 
 data:extend({{
-    name = 'aoc-farm-barn-cow-recipe',
+    name = 'aoc-farm-barn-cow-1-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -582,7 +587,7 @@ data:extend({{
 }})
 
 data:extend({{
-    name = 'aoc-farm-barn-milk-recipe',
+    name = 'aoc-farm-barn-milk-1-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -606,7 +611,7 @@ data:extend({{
 }})
 
 data:extend({{
-    name = 'aoc-farm-barn-calf-recipe',
+    name = 'aoc-farm-barn-calf-1-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -678,7 +683,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-hay-bale', amount = 4},
 		{type = 'item', name = 'aoc-grass', amount = 6},
 		{type = 'item', name = 'aoc-magnesium-dust', amount = 1},
-		{type = 'fluid', name = 'water', amount = 150}
+		{type = 'fluid', name = 'aoc-milk', amount = 150}
     },
     results = {
         {type = 'item', name = 'aoc-cow-module', amount=1, quality_min = "normal", quality_max = "normal", shared_probability = { min = 0, max = 0.35 }},
@@ -694,7 +699,7 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoc-high-pressure-leather-recipe',
+	name = 'aoc-high-pressure-leather-1-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
@@ -734,7 +739,7 @@ data:extend({{
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-spruce-tree-recipe',
+    name = 'aoc-farm-plot-spruce-tree-1-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -747,11 +752,12 @@ data:extend({{
     energy_required = 10,
 	auto_recycle = false,
     icons = get_icons( data.raw.item['aoc-spruce-tree'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-spruce-tree'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-spruce-tree-loam-recipe',
+    name = 'aoc-farm-plot-spruce-tree-1-loam-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -765,11 +771,12 @@ data:extend({{
 	energy_required = 6,
 	auto_recycle = false,
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-spruce-tree"], { icon = "__ageofcreation__/img/items/tier/t1.png", icon_size = 64 } ), get_icons( data.raw.item["aoc-loam"] ) ),
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
     categories = {'aoc-category-farm-plot-spruce-tree'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-resin-recipe',
+    name = 'aoc-farm-plot-resin-1-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -785,6 +792,7 @@ data:extend({{
     energy_required = 8,
 	auto_recycle = false,
 	icons = get_icons( data.raw.item['aoc-resin'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-spruce-tree'}
 }})
 
@@ -822,11 +830,12 @@ data:extend({{
     icons = get_icons_quality( data.raw.item["aoc-spruce-tree"], 1 ),
     energy_required = 40,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-spruce-tree'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-rubber-tree-recipe',
+    name = 'aoc-farm-plot-rubber-tree-1-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -841,11 +850,12 @@ data:extend({{
     energy_required = 12,
 	auto_recycle = false,
 	icons = get_icons( data.raw.item['aoc-rubber-tree'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-rubber-tree'}
 }})
 
 data:extend({{
-	name = 'aoc-forestry-rubber-tree-recipe',
+	name = 'aoc-forestry-rubber-tree-1-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
@@ -861,6 +871,7 @@ data:extend({{
 	energy_required = 5,
 	main_product = 'aoc-latex',
 	auto_recycle = false,
+	icons = get_icons( data.raw.fluid['aoc-latex'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
 	categories = {'aoc-category-harvesting'},
 }})
 
@@ -883,11 +894,12 @@ data:extend({{
     icons = get_icons_quality( data.raw.item["aoc-rubber-tree"], 1 ),
     energy_required = 60,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-rubber-tree'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-apple-tree-recipe',
+    name = 'aoc-farm-plot-apple-tree-1-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -901,6 +913,7 @@ data:extend({{
     energy_required = 15,
 	auto_recycle = false,
 	icons = get_icons( data.raw.item['aoc-apple-tree'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-apple-tree'}
 }})
 
@@ -919,6 +932,7 @@ data:extend({{
     energy_required = 15,
 	auto_recycle = false,
 	icons = get_icons( data.raw.item['aoc-apple'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-apple-tree'}
 }})
 
@@ -970,11 +984,12 @@ data:extend({{
     icons = get_icons_quality( data.raw.item["aoc-apple-tree"], 1 ),
     energy_required = 80,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-apple-tree'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-olive-tree-recipe',
+    name = 'aoc-farm-plot-olive-tree-1-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -989,6 +1004,7 @@ data:extend({{
     energy_required = 15,
 	auto_recycle = false,
 	icons = get_icons( data.raw.item['aoc-olive-tree'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-olive-tree'}
 }})
 
@@ -1008,6 +1024,7 @@ data:extend({{
     energy_required = 15,
 	auto_recycle = false,
 	icons = get_icons( data.raw.item['aoc-olive'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-olive-tree'}
 }})
 
@@ -1060,6 +1077,7 @@ data:extend({{
     icons = get_icons_quality( data.raw.item["aoc-olive-tree"], 1 ),
     energy_required = 100,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-olive-tree'}
 }})
 
@@ -1091,6 +1109,7 @@ data:extend({{
     },
     energy_required = 12,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 65, g = 108, b = 23}},
 	categories = {'aoc-category-farm-plot-rest'}
 }})
 
@@ -1349,7 +1368,7 @@ data:extend({{
         {type = 'item', name = 'raw-fish', amount = 3}
     },
     energy_required = 50,
-	icons = get_icons( data.raw.capsule['raw-fish'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
+	icons = get_icons( data.raw.item['raw-fish'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
 	categories = {'aoc-category-farm-reservoir-fish'}
 }})
 
@@ -1388,7 +1407,7 @@ data:extend({{
         {type = 'item', name = 'aoc-fish-module', amount=1, quality_min = "rare", quality_max = "rare", shared_probability = { min = 0.7, max = 0.745 }}
     },
 	main_product = 'aoc-fish-module',
-    icons = get_icons_quality( data.raw.capsule["raw-fish"], 2 ),
+    icons = get_icons_quality( data.raw.item["raw-fish"], 2 ),
     energy_required = 200,
 	categories = {'aoc-category-farm-reservoir-fish'}
 }})
@@ -1408,6 +1427,7 @@ data:extend({{
     energy_required = 42,
     icons = get_icons( data.raw.item['aoc-flax'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 136, g = 163, b = 211}},
 	categories = {'aoc-category-farm-plot-flax'}
 }})
 
@@ -1433,6 +1453,7 @@ data:extend({{
     icons = get_icons_quality( data.raw.item["aoc-flax"], 2 ),
     energy_required = 130,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 136, g = 163, b = 211}},
 	categories = {'aoc-category-farm-plot-flax'}
 }})
 
@@ -1458,6 +1479,7 @@ data:extend({{
     icons = get_icons_quality( data.raw.item["aoc-flax"], 2 ),
     energy_required = 130,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 136, g = 163, b = 211}},
 	categories = {'aoc-category-farm-plot-flax'}
 }})
 
@@ -1479,6 +1501,7 @@ data:extend({{
     energy_required = 20,
 	auto_recycle = false,
 	icons = get_icons( data.raw.item['aoc-tea-leaves'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
+	crafting_machine_tint = { primary = {r = 64, g = 215, b = 0}},
     categories = {'aoc-category-farm-plot-tea'}
 }})
 
@@ -1501,6 +1524,7 @@ data:extend({{
     icons = get_icons_quality( data.raw.item["aoc-tea-leaves"], 2 ),
     energy_required = 160,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 64, g = 215, b = 0}},
 	categories = {'aoc-category-farm-plot-tea'}
 }})
 
@@ -1521,6 +1545,7 @@ data:extend({{
     energy_required = 20,
 	auto_recycle = false,
 	icons = get_icons( data.raw.item['aoc-coffee-plant'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
+	crafting_machine_tint = { primary = {r = 89, g = 177, b = 71}},
 	categories = {'aoc-category-farm-plot-coffee'}
 }})
 
@@ -1543,6 +1568,7 @@ data:extend({{
     icons = get_icons_quality( data.raw.item["aoc-coffee-plant"], 2 ),
     energy_required = 160,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 89, g = 177, b = 71}},
 	categories = {'aoc-category-farm-plot-coffee'}
 }})
 
@@ -1577,6 +1603,7 @@ data:extend({{
     energy_required = 80,
 	icons = get_icons( data.raw.item['aoc-maize'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 251, g = 217, b = 112}},
 	categories = {'aoc-category-farm-plot-maize'}
 }})
 
@@ -1596,6 +1623,7 @@ data:extend({{
 	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-maize"], { icon = "__ageofcreation__/img/items/tier/t2.png", icon_size = 64 } ), get_icons( data.raw.item["aoc-magnesium-dust"] ) ),
     energy_required = 55,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 251, g = 217, b = 112}},
 	categories = {'aoc-category-farm-plot-maize'}
 }})
 
@@ -1622,6 +1650,7 @@ data:extend({{
     icons = get_icons_quality( data.raw.item["aoc-maize"], 2 ),
     energy_required = 180,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 251, g = 217, b = 112}},
 	categories = {'aoc-category-farm-plot-maize'}
 }})
 
@@ -1648,6 +1677,7 @@ data:extend({{
     icons = get_icons_quality( data.raw.item["aoc-maize"], 2 ),
     energy_required = 180,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 251, g = 217, b = 112}},
 	categories = {'aoc-category-farm-plot-maize'}
 }})
 
@@ -1667,6 +1697,7 @@ data:extend({{
     energy_required = 60,
     icons = get_icons( data.raw.item['aoc-soybeans'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 112, g = 156, b = 9}},
 	categories = {'aoc-category-farm-plot-soybean'}
 }})
 
@@ -1689,6 +1720,7 @@ data:extend({{
     icons = get_icons_quality( data.raw.item["aoc-soybeans"], 2 ),
     energy_required = 200,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 112, g = 156, b = 9}},
 	categories = {'aoc-category-farm-plot-soybean'}
 }})
 
@@ -1979,6 +2011,7 @@ data:extend({{
     energy_required = 5,
 	auto_recycle = false,
     icons = get_icons( data.raw.item['aoc-spruce-tree'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-spruce-tree'}
 }})
 
@@ -1999,6 +2032,7 @@ data:extend({{
     energy_required = 7,
 	auto_recycle = false,
 	icons = get_icons( data.raw.item['aoc-resin'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-spruce-tree'}
 }})
 
@@ -2022,6 +2056,7 @@ data:extend({{
     icons = get_icons_quality( data.raw.item["aoc-spruce-tree"], 2 ),
     energy_required = 55,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-spruce-tree'}
 }})
 
@@ -2042,6 +2077,7 @@ data:extend({{
     energy_required = 10,
 	auto_recycle = false,
 	icons = get_icons( data.raw.item['aoc-rubber-tree'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-rubber-tree'}
 }})
 
@@ -2062,6 +2098,7 @@ data:extend({{
 	energy_required = 5,
 	main_product = 'aoc-latex',
 	auto_recycle = false,
+	icons = get_icons( data.raw.fluid['aoc-latex'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
 	categories = {'aoc-category-harvesting'},
 }})
 
@@ -2086,6 +2123,7 @@ data:extend({{
     icons = get_icons_quality( data.raw.item["aoc-rubber-tree"], 2 ),
     energy_required = 85,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-rubber-tree'}
 }})
 
@@ -2105,6 +2143,7 @@ data:extend({{
     energy_required = 12,
 	auto_recycle = false,
 	icons = get_icons( data.raw.item['aoc-apple-tree'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-apple-tree'}
 }})
 
@@ -2124,6 +2163,7 @@ data:extend({{
     energy_required = 12,
 	auto_recycle = false,
 	icons = get_icons( data.raw.item['aoc-apple'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-apple-tree'}
 }})
 
@@ -2147,6 +2187,7 @@ data:extend({{
     icons = get_icons_quality( data.raw.item["aoc-apple-tree"], 2 ),
     energy_required = 110,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-apple-tree'}
 }})
 
@@ -2167,6 +2208,7 @@ data:extend({{
     energy_required = 12,
 	auto_recycle = false,
 	icons = get_icons( data.raw.item['aoc-olive-tree'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-olive-tree'}
 }})
 
@@ -2187,6 +2229,7 @@ data:extend({{
     energy_required = 12,
 	auto_recycle = false,
 	icons = get_icons( data.raw.item['aoc-olive'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-olive-tree'}
 }})
 
@@ -2211,5 +2254,6 @@ data:extend({{
     icons = get_icons_quality( data.raw.item["aoc-olive-tree"], 2 ),
     energy_required = 140,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-olive-tree'}
 }})

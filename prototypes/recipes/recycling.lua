@@ -2,9 +2,11 @@ local AOC =  require("__ageofcreation__/globals")
 local item_void_blacklist = { "aoc-slag", "aoc-tailings-dust" }
 
 local parts = {
-    "aoc-electrum-machine-hull",
+    "aoc-enderium-machine-hull",
+	"aoc-electrum-machine-hull",
 	"aoc-stainless-steel-machine-hull",
     "aoc-steel-machine-hull",
+    "electric-engine-unit",
     "engine-unit",
     "aoc-small-motor",
 	"aoc-tank-small",
@@ -33,6 +35,8 @@ for _, recipe in pairs(data.raw.recipe) do
 		end
 	  end
 	end
+  else
+	recipe.enabled = true 
   end
   if recipe.name:find('^aoc%-dna%-.*%-recycling$') ~= nil then
 	data.raw.recipe[recipe.name].results = {
@@ -48,10 +52,8 @@ end
 for _, m in pairs(data.raw.module) do
   if string.sub(m.name,1,string.len("aoc-hidden-"))~="aoc-hidden-" and string.sub(m.name,1,string.len("aoc-"))=="aoc-" then 
 	local res = m.name:gsub('%-module.*', '')
-	local i = 'item'
 	if res == 'aoc-fish' then 
 	  res = 'raw-fish'
-	  i = 'capsule'
 	end
 
 	data.raw.recipe[m.name .. '-recycling'].results = {

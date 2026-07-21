@@ -3,7 +3,7 @@ data:extend({{
     name = "aoc-pocket-hive-equipment",
     take_result = "aoc-pocket-hive-equipment",
     sprite = {
-      filename = "__NPBees2_art__/graphics/icon/logistic-hive.png",
+      filename = "__ageofcreation__/img/items/bees/logistic-hive.png",
       width = 32,
       height = 32,
       scale = 3,

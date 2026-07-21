@@ -688,6 +688,8 @@ data:extend({{
 data.raw['item']['carbon'].subgroup = "aoc-coal"
 data.raw['item']['carbon'].order = "e"
 data.raw['item']['carbon'].stack_size = 200
+data.raw['item']['carbon'].icons = { { icon = "__space-age__/graphics/icons/carbon.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/c.png" } }
+data.raw['item']['carbon'].pictures = { { filename = "__space-age__/graphics/icons/carbon.png", size = 64, mipmap_count = 4, scale = 0.5 } }
 data.raw['item']['carbon-fiber'].subgroup = "aoc-coal"
 data.raw['item']['carbon-fiber'].order = "f"
 data.raw['item']['carbon-fiber'].stack_size = 200
@@ -845,6 +847,9 @@ data:extend({{
 data.raw['item']['advanced-circuit'].subgroup = "aoc-circuits"
 data.raw['item']['advanced-circuit'].order = "b"
 data.raw['item']['advanced-circuit'].stack_size = 200
+data.raw['item']['battery'].subgroup = "aoc-parts"
+data.raw['item']['battery'].order = "k"
+data.raw['item']['battery'].stack_size = 200
 
 data:extend({{
     type = "item",
@@ -1172,6 +1177,8 @@ data:extend({{
 data.raw['item']['sulfur'].subgroup = "aoc-petrochem"
 data.raw['item']['sulfur'].order = "a"
 data.raw['item']['sulfur'].stack_size = 200
+data.raw['item']['sulfur'].icons = { { icon = "__base__/graphics/icons/sulfur.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/s.png", icon_size = 64 } }
+data.raw['item']['sulfur'].pictures = { { filename = "__base__/graphics/icons/sulfur.png", size = 64, mipmap_count = 4, scale = 0.5 } }
 data.raw['item']['plastic-bar'].subgroup = "aoc-petrochem"
 data.raw['item']['plastic-bar'].order = "b"
 data.raw['item']['plastic-bar'].stack_size = 200

@@ -134,6 +134,26 @@ data:extend({{
 
 data:extend({{
     type = "item",
+    name = "aoc-fertilizer-3",
+    icon = "__ageofcreation__/img/items/fertilizer-3.png",
+    icon_size = 64,
+    subgroup = "aoc-flora-misc",
+    order = "c",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-animal-food-3",
+    icon = "__ageofcreation__/img/items/animal-food-3.png",
+    icon_size = 64,
+    subgroup = "aoc-fauna-items",
+    order = "f",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
     name = "aoc-experiment-failed",
     icons = { { icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-paper.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/other/failed.png", icon_size = 64, scale = 0.4, shift = {4,-4} } },
     subgroup = "aoc-magic-brewing",
@@ -390,6 +410,17 @@ data:extend({{
     stack_size = 10
 }})
 
+data:extend({{
+    type = "item",
+    name = "aoc-planet-fulgora",
+    icon = "__space-age__/graphics/icons/fulgora.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "aoc-planets",
+    order = "m",
+    stack_size = 10
+}})
+
 data.raw['item']['low-density-structure'].subgroup = "aoc-space-stuff"
 data.raw['item']['low-density-structure'].order = "b"
 data.raw['item']['low-density-structure'].stack_size = 50
@@ -403,8 +434,8 @@ data:extend({{
     name = "aoc-ender-orb",
     icon = "__ageofcreation__/img/items/ender-orb.png",
     icon_size = 64,
-    subgroup = "aoc-magic-brewing",
-    order = "c",
+    subgroup = "aoc-magic-gizmos",
+    order = "a",
     stack_size = 20,
 	capsule_action =
 	{

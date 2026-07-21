@@ -186,7 +186,7 @@ data:extend({{
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoc-farm-reservoir-kelp-recipe"
+        recipe = "aoc-farm-reservoir-kelp-1-recipe"
       },
 	    {
         type = "unlock-recipe",
@@ -357,7 +357,7 @@ data:extend({{
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoc-farm-plot-flax-recipe"
+        recipe = "aoc-farm-plot-flax-1-recipe"
       },
 	    {
         type = "unlock-recipe",
@@ -396,11 +396,11 @@ data:extend({{
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoc-farm-plot-tea-leaves-recipe"
+        recipe = "aoc-farm-plot-tea-leaves-1-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoc-farm-plot-coffee-plant-recipe"
+        recipe = "aoc-farm-plot-coffee-plant-1-recipe"
       },
 	    {
         type = "unlock-recipe",

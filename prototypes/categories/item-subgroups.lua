@@ -13,6 +13,14 @@ data:extend({
   },
   {
     type = "item-group",
+    name = "aoc-nuclear",
+	  order = "c2",
+	  icon = "__base__/graphics/technology/uranium-processing.png",
+	  icon_size = 256,
+    icon_mipmaps = 4
+  },
+  {
+    type = "item-group",
     name = "aoc-flora",
 	  order = "x",
 	  icon = "__base__/graphics/icons/wood.png",
@@ -26,12 +34,19 @@ data:extend({
 	  icon_size = 64
   },
   {
+    type = 'item-group',
+    name = 'aoc-beekeeping',
+    order = 'y2',
+    icon = '__ageofcreation__/img/techs/beekeeping.png',
+    icon_size = 64,
+    inventory_order = 'f'
+  },
+  {
     type = "item-group",
     name = "aoc-magic",
 	  order = "z",
-	  icon = "__ageofcreation__/img/items/nauvium-plate.png",
-	  icon_size = 64,
-    icon_mipmaps = 4
+	  icon = "__ageofcreation__/img/items/nauvium-catalyst.png",
+	  icon_size = 64
   },
   {
 	  type = "item-subgroup",
@@ -167,45 +182,45 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-nuclearpower-buildings",
+    name = "aoc-production-tools",
     group = "production",
     order = "b"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-production-tools",
+    name = "aoc-processing-buildings",
     group = "production",
     order = "c"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-processing-buildings",
+    name = "aoc-specific-buildings",
     group = "production",
     order = "d"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-specific-buildings",
+    name = "aoc-voiding-buildings",
     group = "production",
     order = "e"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-voiding-buildings",
+    name = "aoc-other-buildings",
     group = "production",
     order = "f"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-other-buildings",
+    name = "aoc-modules",
     group = "production",
     order = "g"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-modules",
+    name = "aoc-infinity",
     group = "production",
-    order = "h"
+    order = "z"
   },
   {
 	  type = "item-subgroup",
@@ -323,13 +338,13 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-nuclear",
+    name = "aoc-subatomic",
     group = "intermediate-products",
     order = "k"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-nuclear-fuel",
+    name = "aoc-colors",
     group = "intermediate-products",
     order = "l"
   },
@@ -337,7 +352,7 @@ data:extend({
 	  type = "item-subgroup",
     name = "aoc-science-packs",
     group = "intermediate-products",
-    order = "l"
+    order = "m"
   },
   {
 	  type = "item-subgroup",
@@ -431,6 +446,12 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
+    name = "aoc-metals-fulgora",
+    group = "aoc-metals",
+    order = "p"
+  },
+  {
+	  type = "item-subgroup",
     name = "aoc-gems",
     group = "aoc-metals",
     order = "p"
@@ -515,27 +536,39 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-fluids-magic-chemicals",
+    name = "aoc-fluids-fulgora",
     group = "fluids",
     order = "n"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-fluids-magic-metals",
+    name = "aoc-fluids-magic-chemicals",
     group = "fluids",
     order = "o"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-fluids-magic-rest",
+    name = "aoc-fluids-magic-metals",
     group = "fluids",
     order = "p"
   },
   {
 	  type = "item-subgroup",
-    name = "aoc-fluids-aliens",
+    name = "aoc-fluids-magic-rest",
     group = "fluids",
     order = "q"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-fluids-aliens",
+    group = "fluids",
+    order = "r"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-fluids-fusion",
+    group = "fluids",
+    order = "s"
   },
   {
 	  type = "item-subgroup",
@@ -605,9 +638,39 @@ data:extend({
   },
   {
 	  type = "item-subgroup",
+    name = "aoc-magic-gizmos",
+    group = "aoc-magic",
+    order = "f"
+  },
+  {
+	  type = "item-subgroup",
     name = "aoc-magic-mana",
     group = "aoc-magic",
     order = "f"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-nuclearpower-buildings",
+    group = "aoc-nuclear",
+    order = "a"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-nuclear",
+    group = "aoc-nuclear",
+    order = "b"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-nuclear-fuel",
+    group = "aoc-nuclear",
+    order = "c"
+  },
+  {
+	  type = "item-subgroup",
+    name = "aoc-fusion-fuel",
+    group = "aoc-nuclear",
+    order = "d"
   },
   {
 	  type = "item-subgroup",

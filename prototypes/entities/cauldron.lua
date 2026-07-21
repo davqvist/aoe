@@ -2,7 +2,7 @@ data:extend({{
     type = "item",
     name = "aoc-cauldron",
     icon = "__ageofcreation__/img/entities/cauldron.png",
-    icon_size = 192,
+    icon_size = 176,
     subgroup = "aoc-magic-buildings",
     order = "f",
     place_result = "aoc-cauldron",
@@ -32,7 +32,10 @@ data:extend({{
           name = "smoke",
           deviation = {0.1, 0.1},
           frequency = 5,
-          position = {0.0, -0.8},
+          north_position = {0.0, -0.5},
+          south_position = {0.0, -0.5},
+          west_position = {0.0, -0.5},
+          east_position = {0.0, -0.5},
           starting_vertical_speed = 0.08,
           starting_frame_deviation = 60
         }
@@ -41,7 +44,7 @@ data:extend({{
     energy_usage = "180kW",
     allowed_effects = nil,
     icon = "__ageofcreation__/img/entities/cauldron.png",
-    icon_size = 192,
+    icon_size = 176,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { hardness = 1, mining_time = 0.2, result = "aoc-cauldron" },
     max_health = 300,
@@ -63,11 +66,40 @@ data:extend({{
       animation = {
         layers = {
           {
-            filename = "__ageofcreation__/img/entities/cauldron.png",
-            width = 192,
-            height = 192,
-            frame_count = 1,
-            scale = 0.5
+            filename = "__ageofcreation__/img/entities/cauldron-animation.png",
+            priority = "high",
+            width = 214,
+            height = 214,
+            scale = 0.58
+          }
+        }
+      },
+      working_visualisations = {
+        {
+          always_draw = true,
+          animation = {
+            filename = "__ageofcreation__/img/entities/cauldron-animation.png",
+            priority = "high",
+            width = 214,
+            height = 214,
+            line_length = 8,
+            frame_count = 64,
+            animation_speed = 0.2,
+            scale = 0.58
+          },
+        },{
+          always_draw = true,
+          animation = {
+            filename = "__ageofcreation__/img/entities/cauldron-emission.png",
+            priority = "high",
+            width = 214,
+            height = 214,
+            line_length = 8,
+            frame_count = 64,
+            animation_speed = 0.2,
+            draw_as_glow = true,
+            blend_mode = "additive-soft",
+            scale = 0.58
           }
         }
       }
@@ -75,12 +107,14 @@ data:extend({{
     fluid_boxes = {
       {
         production_type = "input",
+        pipe_picture = require("__base__/prototypes/entity/assembler-pictures").assembler2pipepictures,
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = { { flow_direction = "input", direction = defines.direction.south, position = { 0, 1 } } },
       },
       {
         production_type = "output",
+        pipe_picture = require("__base__/prototypes/entity/assembler-pictures").assembler2pipepictures,
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = { { flow_direction = "output", direction = defines.direction.north, position = { 0, -1 } } },

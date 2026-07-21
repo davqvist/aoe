@@ -30,8 +30,8 @@ data:extend({{
     pipe_covers = pipecoverspictures(),
     volume = 1000,
     pipe_connections = {
-      { flow_direction = "input-output", direction = defines.direction.south, position = {0, 3} },
-      { flow_direction = "input-output", direction = defines.direction.north, position = {0, -3} }
+      { flow_direction = "input-output", direction = defines.direction.south, position = {-2, 3} },
+      { flow_direction = "input-output", direction = defines.direction.north, position = {-2, -3} }
     }
   },
   energy_source = {
@@ -40,31 +40,38 @@ data:extend({{
   },
   max_power_output = "20MW",
   maximum_temperature = 250,
-  horizontal_animation = {
-    layers = {
-      {
-        filename = "__angelspetrochemgraphics__/graphics/entity/advanced-chemical-plant/advanced-chemical-plant.png",
-        width = 224,
-        height = 224,
-        frame_count = 16,
-        line_length = 4,
-        animation_speed = 0.5,
-        shift = { 0, 0 },
-        scale = 1.4
+  two_direction_only = true,
+  pictures = {
+    north = {
+      animation = {
+        layers = {
+          {
+            filename = "__angelspetrochemgraphics__/graphics/entity/advanced-chemical-plant/advanced-chemical-plant.png",
+            width = 224,
+            height = 224,
+            frame_count = 16,
+            line_length = 4,
+            animation_speed = 0.5,
+            shift = { 0, 0 },
+            scale = 1.4
+          }
+        }
       }
-    }
-  },
-  vertical_animation = {
-    layers = {
-      {
-        filename = "__angelspetrochemgraphics__/graphics/entity/advanced-chemical-plant/advanced-chemical-plant.png",
-        width = 224,
-        height = 224,
-        frame_count = 16,
-        line_length = 4,
-        animation_speed = 0.5,
-        shift = { 0, 0 },
-        scale = 1.4
+    },
+    east = {
+      animation = {
+        layers = {
+          {
+            filename = "__angelspetrochemgraphics__/graphics/entity/advanced-chemical-plant/advanced-chemical-plant.png",
+            width = 224,
+            height = 224,
+            frame_count = 16,
+            line_length = 4,
+            animation_speed = 0.5,
+            shift = { 0, 0 },
+            scale = 1.4
+          }
+        }
       }
     }
   },

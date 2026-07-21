@@ -1,6 +1,6 @@
 require("__ageofcreation__/globals")
 
-local research_techs = { 'aoc-starlight-tech', 'aoc-lotus-flower-tech-1', 'aoc-lotus-flower-tech-2', 'aoc-mercury-tech', 'aoc-alchemy-tech', 'aoc-platinum-tech', 'aoc-enderium-tech', 'aoc-teleportation-tech', 'aoc-jewelry-tech', 'aoc-mana-tech', 'aoc-enchanting-tech', 'aoc-digging-tech-3', 'aoc-thermal-power-tech', 'aoc-stargazing-tech', 'aoc-electronic-robots-tech', 'aoc-equipment-tech-2', 'aoc-fission-reactor-equipment-tech', 'aoc-laser-tech-2', 'aoc-alien-life-tech-1', 'aoc-alien-life-tech-2', 'aoc-alien-life-tech-3' }
+local research_techs = { 'aoc-starlight-tech', 'aoc-lotus-flower-tech-1', 'aoc-lotus-flower-tech-2', 'aoc-lotus-flower-tech-3', 'aoc-lotus-flower-tech-4', 'aoc-lotus-flower-tech-5', 'aoc-mercury-tech', 'aoc-alchemy-tech', 'aoc-fertilizer-tech-3', 'aoc-animal-food-tech-3', 'aoc-platinum-tech', 'aoc-enderium-tech', 'aoc-teleportation-tech', 'aoc-jewelry-tech', 'aoc-mana-tech', 'aoc-enchanting-tech', 'aoc-digging-tech-3', 'aoc-thermal-power-tech', 'aoc-stargazing-tech', 'aoc-electronic-robots-tech', 'aoc-equipment-tech-2', 'aoc-fission-reactor-equipment-tech', 'aoc-laser-tech-2', 'aoc-alien-life-tech-1', 'aoc-alien-life-tech-2', 'aoc-alien-life-tech-3', 'aoc-fusion-reactor-equipment-tech' }
 
 for t, technology in pairs(research_techs) do
     if data.raw.technology[technology] and data.raw.technology[technology].effects then

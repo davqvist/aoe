@@ -54,7 +54,7 @@ data.raw['assembling-machine']['assembling-machine-3'].fluid_boxes = {
   {
     production_type = "input",
     volume = 1000,
-    pipe_picture = assembler2pipepictures,
+    pipe_picture = require("__base__/prototypes/entity/assembler-pictures").assembler2pipepictures,
     pipe_covers = pipecoverspictures(),
     pipe_connections = {
       { flow_direction="input-output", direction = defines.direction.west, position = {-1, 0} },
@@ -89,6 +89,42 @@ data.raw['item']['centrifuge'].order = "r"
 data.raw['assembling-machine']['centrifuge'].module_slots = 3
 data.raw['assembling-machine']['centrifuge'].energy_usage = "600kW"
 data.raw['assembling-machine']['centrifuge'].crafting_categories = {"centrifuging","centrifuging-copper","centrifuging-iron","centrifuging-tin","centrifuging-aluminium","centrifuging-lead","centrifuging-silver","centrifuging-nickel","centrifuging-gold","centrifuging-zinc","centrifuging-chromium","centrifuging-tungsten"}
+data.raw['item']['foundry'].subgroup = "aoc-processing-buildings"
+data.raw['item']['foundry'].order = "p"
+data.raw['assembling-machine']['foundry'].crafting_speed = 2
+data.raw['assembling-machine']['foundry'].crafting_categories = {"metallurgy", "aoc-category-metallurgy-iron","aoc-category-metallurgy-copper","aoc-category-metallurgy-tin","aoc-category-metallurgy-aluminium","aoc-category-metallurgy-lead","aoc-category-metallurgy-silver","aoc-category-metallurgy-nickel","aoc-category-metallurgy-gold","aoc-category-metallurgy-zinc","aoc-category-metallurgy-chromium","aoc-category-metallurgy-tungsten","aoc-category-metallurgy-titanium"}
+data.raw['assembling-machine']['foundry'].fluid_boxes = {
+    {
+      production_type = "input",
+      --pipe_picture = require("__base__/prototypes/entity/assembler-pictures").assembler2pipepictures,
+      pipe_covers = pipecoverspictures(),
+      volume = 1000,
+      pipe_connections = {{ flow_direction="input", direction = defines.direction.east, position = {2, 0} }}
+    },{
+      production_type = "input",
+      --pipe_picture = require("__base__/prototypes/entity/assembler-pictures").assembler2pipepictures,
+      pipe_covers = pipecoverspictures(),
+      volume = 1000,
+      pipe_connections = {{ flow_direction="input", direction = defines.direction.east, position = {2, -2} }}
+    },{
+      production_type = "input",
+      --pipe_picture = require("__base__/prototypes/entity/assembler-pictures").assembler2pipepictures,
+      pipe_covers = pipecoverspictures(),
+      volume = 1000,
+      pipe_connections = {{ flow_direction="input", direction = defines.direction.east, position = {2, 2} }}
+    },{
+      production_type = "output",
+      --pipe_picture = require("__base__/prototypes/entity/assembler-pictures").assembler2pipepictures,
+      pipe_covers = pipecoverspictures(),
+      volume = 1000,
+      pipe_connections = {{ flow_direction="output", direction = defines.direction.west, position = {-2, 0} }}
+    }
+  }
+data.raw['item']['fusion-reactor'].subgroup = "aoc-nuclearpower-buildings"
+data.raw['item']['fusion-reactor'].order = "b"
+data.raw['fusion-reactor']['fusion-reactor'].burner.burnt_inventory_size = 1
+data.raw['item']['fusion-generator'].subgroup = "aoc-nuclearpower-buildings"
+data.raw['item']['fusion-generator'].order = "c"
 
 data.raw['item']['burner-inserter'].subgroup = "aoc-inserter"
 data.raw['item']['burner-inserter'].order = "a"
@@ -409,3 +445,8 @@ data.raw['unit']['behemoth-biter'].loot = { { type = "item", name = "aoc-behemot
 data.raw['unit']['small-wriggler-pentapod'].loot = { { type = "item", name = "aoc-small-wriggler-corpse", amount = 1 } }
 data.raw['unit']['medium-wriggler-pentapod'].loot = { { type = "item", name = "aoc-medium-wriggler-corpse", amount = 1 } }
 data.raw['unit']['big-wriggler-pentapod'].loot = { { type = "item", name = "aoc-big-wriggler-corpse", amount = 1 } }
+
+data.raw['tile']['oil-ocean-shallow'].fluid = 'crude-oil'
+data.raw['tile']['oil-ocean-shallow-2'].fluid = 'crude-oil'
+data.raw['tile']['oil-ocean-deep'].fluid = 'crude-oil'
+data.raw['tile']['oil-ocean-deep-2'].fluid = 'crude-oil'

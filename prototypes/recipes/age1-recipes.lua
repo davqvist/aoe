@@ -190,7 +190,7 @@ data:extend({{
 }})
 
 data:extend({{
-    name = 'aoc-farm-reservoir-kelp-recipe',
+    name = 'aoc-farm-reservoir-kelp-1-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -322,7 +322,7 @@ data:extend({{
 		{type = 'item', name = 'iron-stick', amount = 1}
 	},
 	results = {
-        {type = 'fluid', name = 'aoc-latex', amount = 10}
+        {type = 'fluid', name = 'aoc-latex', amount = 0}
     },
 	energy_required = 5,
 	icons = data.raw.fluid["aoc-latex"].icons,
@@ -559,7 +559,7 @@ data:extend({{
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-flax-recipe',
+    name = 'aoc-farm-plot-flax-1-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -572,6 +572,7 @@ data:extend({{
     energy_required = 30,
 	icons = get_icons( data.raw.item['aoc-flax'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 136, g = 163, b = 211}},
 	categories = {'aoc-category-farm-plot-flax'}
 }})
 
@@ -610,6 +611,7 @@ data:extend({{
 	icons = get_icons_quality( data.raw.item["aoc-flax"], 1 ),
     auto_recycle = false,
 	energy_required = 90,
+	crafting_machine_tint = { primary = {r = 136, g = 163, b = 211}},
 	categories = {'aoc-category-farm-plot-flax'}
 }})
 
@@ -650,7 +652,7 @@ data:extend({{
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-tea-leaves-recipe',
+    name = 'aoc-farm-plot-tea-leaves-1-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -666,6 +668,7 @@ data:extend({{
     energy_required = 20,
 	auto_recycle = false,
 	icons = get_icons( data.raw.item['aoc-tea-leaves'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
+	crafting_machine_tint = { primary = {r = 64, g = 215, b = 0}},
 	categories = {'aoc-category-farm-plot-tea'}
 }})
 
@@ -687,11 +690,12 @@ data:extend({{
     icons = get_icons_quality( data.raw.item["aoc-tea-leaves"], 1 ),
     auto_recycle = false,
 	energy_required = 120,
+	crafting_machine_tint = { primary = {r = 64, g = 215, b = 0}},
 	categories = {'aoc-category-farm-plot-tea'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-coffee-plant-recipe',
+    name = 'aoc-farm-plot-coffee-plant-1-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -706,6 +710,7 @@ data:extend({{
     energy_required = 20,
 	auto_recycle = false,
 	icons = get_icons( data.raw.item['aoc-coffee-plant'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
+	crafting_machine_tint = { primary = {r = 89, g = 177, b = 71}},
 	categories = {'aoc-category-farm-plot-coffee'}
 }})
 
@@ -727,6 +732,7 @@ data:extend({{
     icons = get_icons_quality( data.raw.item["aoc-coffee-plant"], 1 ),
     auto_recycle = false,
 	energy_required = 120,
+	crafting_machine_tint = { primary = {r = 89, g = 177, b = 71}},
 	categories = {'aoc-category-farm-plot-coffee'}
 }})
 

@@ -39,6 +39,7 @@ data:extend({{
     },
 	main_product = 'aoc-tin-ore',
 	energy_required = 8,
+	allow_decomposition = false,
 	categories = {'aoc-category-straining'}
 }})
 
@@ -58,6 +59,7 @@ data:extend({{
     },
 	main_product = 'aoc-manganese-ore',
 	energy_required = 8,
+	allow_decomposition = false,
 	categories = {'aoc-category-straining'}
 }})
 
@@ -77,6 +79,7 @@ data:extend({{
     },
 	main_product = 'aoc-quartz-ore',
 	energy_required = 8,
+	allow_decomposition = false,
 	categories = {'aoc-category-straining'}
 }})
 
@@ -218,6 +221,7 @@ data:extend({{
     },
 	main_product = 'aoc-magnesium-ore',
 	energy_required = 8,
+	allow_decomposition = false,
 	categories = {'aoc-category-straining'}
 }})
 
@@ -237,6 +241,7 @@ data:extend({{
     },
 	main_product = 'aoc-aluminium-ore',
 	energy_required = 8,
+	allow_decomposition = false,
 	categories = {'aoc-category-straining'}
 }})
 
@@ -256,6 +261,7 @@ data:extend({{
     },
 	main_product = 'aoc-chromium-ore',
 	energy_required = 8,
+	allow_decomposition = false,
 	categories = {'aoc-category-straining'}
 }})
 
@@ -394,6 +400,7 @@ data:extend({{
     },
 	main_product = 'iron-ore',
 	energy_required = 8,
+	allow_decomposition = false,
 	categories = {'aoc-category-straining'}
 }})
 
@@ -413,6 +420,7 @@ data:extend({{
     },
 	main_product = 'copper-ore',
 	energy_required = 8,
+	allow_decomposition = false,
 	categories = {'aoc-category-straining'}
 }})
 
@@ -432,6 +440,7 @@ data:extend({{
     },
 	main_product = 'coal',
 	energy_required = 8,
+	allow_decomposition = false,
 	categories = {'aoc-category-straining'}
 }})
 
@@ -3205,7 +3214,7 @@ data:extend({{
         {type = 'item', name = 'aoc-ceramic', amount = 5}
     },
 	categories = {'smelting'},
-    energy_required = 2.4
+    energy_required = 4.8
 }})
 
 data:extend({{
@@ -4047,13 +4056,13 @@ data:extend({{
 		{type = 'item', name = 'aoc-hay-bale', amount = 4},
 		{type = 'item', name = 'aoc-grass', amount = 6},
 		{type = 'item', name = 'aoc-magnesium-dust', amount = 1},
-		{type = 'fluid', name = 'water', amount = 150}
+		{type = 'fluid', name = 'aoc-milk', amount = 150}
     },
     results = {
         {type = 'item', name = 'aoc-cow-module', amount=1, quality_min = "normal", quality_max = "normal", shared_probability = { min = 0, max = 0.035 }},
         {type = 'item', name = 'aoc-cow-module', amount=1, quality_min = "uncommon", quality_max = "uncommon", shared_probability = { min = 0.035, max = 0.35 }},
         {type = 'item', name = 'aoc-cow-module', amount=1, quality_min = "rare", quality_max = "rare", shared_probability = { min = 0.35, max = 0.3815 }},
-		{type = 'item', name = 'aoc-ox-module', amount=1, quality_min = "normal", quality_max = "normal", shared_probability = { min = 0,5, max = 0.535 }},
+		{type = 'item', name = 'aoc-ox-module', amount=1, quality_min = "normal", quality_max = "normal", shared_probability = { min = 0.5, max = 0.535 }},
         {type = 'item', name = 'aoc-ox-module', amount=1, quality_min = "uncommon", quality_max = "uncommon", shared_probability = { min = 0.535, max = 0.85 }},
         {type = 'item', name = 'aoc-ox-module', amount=1, quality_min = "rare", quality_max = "rare", shared_probability = { min = 0.85, max = 0.8815 }}
     },

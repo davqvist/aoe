@@ -4,7 +4,7 @@ data:extend({{
     icon = "__ageofcreation__/img/entities/RTG-2-icon.png",
     icon_size = 128,
     subgroup = "aoc-nuclearpower-buildings",
-    order = "e1",
+    order = "h1",
     place_result = "aoc-rtg-uranium",
     stack_size = 25,
 }})
@@ -64,7 +64,7 @@ data:extend({{
     icon = "__ageofcreation__/img/entities/RTG-4-icon.png",
     icon_size = 128,
     subgroup = "aoc-nuclearpower-buildings",
-    order = "e2",
+    order = "h2",
     place_result = "aoc-rtg-americium",
     stack_size = 25,
 }})
@@ -124,7 +124,7 @@ data:extend({{
     icon = "__ageofcreation__/img/entities/RTG-3-icon.png",
     icon_size = 128,
     subgroup = "aoc-nuclearpower-buildings",
-    order = "e3",
+    order = "h3",
     place_result = "aoc-rtg-plutonium",
     stack_size = 25,
 }})
@@ -184,7 +184,7 @@ data:extend({{
     icon = "__ageofcreation__/img/entities/RTG-3-icon.png",
     icon_size = 128,
     subgroup = "aoc-nuclearpower-buildings",
-    order = "e4",
+    order = "h4",
     place_result = "aoc-rtg-californium",
     stack_size = 25,
 }})

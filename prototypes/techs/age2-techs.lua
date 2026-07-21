@@ -841,7 +841,7 @@ data:extend({{
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoc-farm-reservoir-fish-recipe"
+        recipe = "aoc-farm-reservoir-fish-1-recipe"
       },
 	    {
         type = "unlock-recipe",
@@ -849,7 +849,7 @@ data:extend({{
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoc-farm-reservoir-fish-eggs-recipe"
+        recipe = "aoc-farm-reservoir-fish-eggs-1-recipe"
       }
     },
     unit = {

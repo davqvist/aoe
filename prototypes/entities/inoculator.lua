@@ -1,7 +1,7 @@
 data:extend({{
     type = "item",
     name = "aoc-inoculator",
-    icon = '__NPBees2_art__/graphics/icon/genetic-transposer.png',
+    icon = '__ageofcreation__/img/items/bees/genetic-transposer.png',
 	icon_size = 32,
     subgroup = "aoc-bees-buildings",
     order = "c",
@@ -23,7 +23,7 @@ data:extend({{
     energy_usage = "3MW",
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     module_slots = 3,
-    icon = '__NPBees2_art__/graphics/icon/genetic-transposer.png',
+    icon = '__ageofcreation__/img/items/bees/genetic-transposer.png',
     icon_size = 32,
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoc-inoculator" },
@@ -38,7 +38,7 @@ data:extend({{
             {
                 always_draw = true,
                 animation = {
-                    filename = '__NPBees2_art__/graphics/entity/genetic-transposer.png',
+                    filename = '__ageofcreation__/img/entities/bees/genetic-transposer.png',
                     priority = 'medium',
                     width = 256, 
                     height = 256, 

@@ -25,6 +25,14 @@ for _, recipe in pairs(data.raw.recipe) do
             end
         end
         local new_ingredients = table.deepcopy(recipe.ingredients)
+        for _, ingredient in pairs(new_ingredients) do
+            if ingredient.type == "fluid" then
+                new_ingredients[_].type = "item"
+                new_ingredients[_].name = ingredient.name .. "-barrel"
+                new_ingredients[_].amount = math.ceil(ingredient.amount/50)
+                table.insert(new_results,{type = "item", name = "barrel", amount = math.ceil(ingredient.amount/50), ignored_by_productivity = 1})
+            end
+        end
         table.insert(new_ingredients, {type = 'fluid', name = 'aoc-vacuum', amount = recipe.energy_required*10})
         data:extend({{
             name = recipe.name .. '-with-vacuum',

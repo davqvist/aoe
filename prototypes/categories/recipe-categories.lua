@@ -1,6 +1,10 @@
 data:extend({
   {
     type = "recipe-category",
+    name = "aoc-category-accelerating"
+  },
+  {
+    type = "recipe-category",
     name = "aoc-category-advanced-chemistry"
   },
   {
@@ -416,6 +420,66 @@ data:extend({
   },
   {
     type = "recipe-category",
+    name = "aoc-category-metallurgy-iron",
+    modules = { "aoc-module-iron" }
+  },
+  {
+    type = "recipe-category",
+    name = "aoc-category-metallurgy-copper",
+    modules = { "aoc-module-copper" }
+  },
+  {
+    type = "recipe-category",
+    name = "aoc-category-metallurgy-tin",
+    modules = { "aoc-module-tin" }
+  },
+  {
+    type = "recipe-category",
+    name = "aoc-category-metallurgy-aluminium",
+    modules = { "aoc-module-aluminium" }
+  },
+  {
+    type = "recipe-category",
+    name = "aoc-category-metallurgy-lead",
+    modules = { "aoc-module-lead" }
+  },
+  {
+    type = "recipe-category",
+    name = "aoc-category-metallurgy-silver",
+    modules = { "aoc-module-silver" }
+  },
+  {
+    type = "recipe-category",
+    name = "aoc-category-metallurgy-nickel",
+    modules = { "aoc-module-nickel" }
+  },
+  {
+    type = "recipe-category",
+    name = "aoc-category-metallurgy-gold",
+    modules = { "aoc-module-gold" }
+  },
+  {
+    type = "recipe-category",
+    name = "aoc-category-metallurgy-zinc",
+    modules = { "aoc-module-zinc" }
+  },
+  {
+    type = "recipe-category",
+    name = "aoc-category-metallurgy-chromium",
+    modules = { "aoc-module-chromium" }
+  },
+  {
+    type = "recipe-category",
+    name = "aoc-category-metallurgy-tungsten",
+    modules = { "aoc-module-tungsten" }
+  },
+  {
+    type = "recipe-category",
+    name = "aoc-category-metallurgy-titanium",
+    modules = { "aoc-module-titanium" }
+  },
+  {
+    type = "recipe-category",
     name = "aoc-category-mixing"
   },
   {
@@ -480,7 +544,11 @@ data:extend({
   },
   {
     type = "recipe-category",
-    name = "aoc-category-nuclear",
+    name = "aoc-category-nuclear"
+  },
+  {
+    type = "recipe-category",
+    name = "aoc-category-nuclear-reactor",
     modules = { "aoc-module-nuclear-reactor" }
   },
   {
@@ -489,7 +557,15 @@ data:extend({
   },
   {
     type = "recipe-category",
+    name = "aoc-category-quantum-computing"
+  },
+  {
+    type = "recipe-category",
     name = "aoc-category-recycling"
+  },
+  {
+    type = "recipe-category",
+    name = "aoc-category-replicating"
   },
   {
     type = "recipe-category",

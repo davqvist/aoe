@@ -53,7 +53,7 @@ data:extend({{
 	fluid_boxes = {
       {
         production_type = "output",
-        pipe_picture = assembler2pipepictures,
+        pipe_picture = require("__base__/prototypes/entity/assembler-pictures").assembler2pipepictures,
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = {{ flow_direction="output", direction = defines.direction.east, position = {2, 0} }}

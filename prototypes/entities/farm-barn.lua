@@ -55,7 +55,7 @@ data:extend({{
     {
       {
         production_type = "input",
-        pipe_picture = assembler2pipepictures,
+        pipe_picture = require("__base__/prototypes/entity/assembler-pictures").assembler2pipepictures,
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = {
@@ -64,7 +64,7 @@ data:extend({{
         }
       },{
         production_type = "output",
-        pipe_picture = assembler2pipepictures,
+        pipe_picture = require("__base__/prototypes/entity/assembler-pictures").assembler2pipepictures,
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = {

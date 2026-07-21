@@ -413,16 +413,19 @@ data.raw['item']['hazard-concrete'].subgroup = "aoc-construction"
 data.raw['item']['hazard-concrete'].order = "g"
 data.raw['item']['hazard-concrete'].stack_size = 500
 
-data.raw['capsule']['raw-fish'].subgroup = "aoc-fauna-fish"
-data.raw['capsule']['raw-fish'].order = "a"
-data.raw['capsule']['raw-fish'].stack_size = 200
-data.raw['capsule']['raw-fish'].spoil_result = nil
-data.raw['capsule']['raw-fish'].spoil_ticks = 0
+data.raw['item']['raw-fish'] = table.deepcopy(data.raw['capsule']['raw-fish'])
+data.raw['item']['raw-fish'].type = "item"
+data.raw['capsule']['raw-fish'] = nil
+data.raw['item']['raw-fish'].subgroup = "aoc-fauna-fish"
+data.raw['item']['raw-fish'].order = "a"
+data.raw['item']['raw-fish'].stack_size = 200
+data.raw['item']['raw-fish'].spoil_result = nil
+data.raw['item']['raw-fish'].spoil_ticks = 0
 
 data:extend({{
     type = "module",
     name = "aoc-fish-module",
-    icons = get_icons( data.raw['capsule']['raw-fish'] ),
+    icons = get_icons( data.raw['item']['raw-fish'] ),
     subgroup = "aoc-fauna-fish",
     order = "a1",
     stack_size = 20,

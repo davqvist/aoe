@@ -27,7 +27,7 @@ for _, p in pairs(nuclear_pairing) do
         ing2 = p[1] .. "-" .. p[3]
     end
     data:extend({{
-        name = 'aoc-crafting-' .. prod1 .. '-recipe',
+        name = 'aoc-nuclear-' .. prod1 .. '-recipe',
         type = 'recipe',
         enabled = false,
         ingredients = {
@@ -39,10 +39,11 @@ for _, p in pairs(nuclear_pairing) do
             {type = 'item', name = prod1, amount = 1}
         },
         allow_productivity = false,
+        categories = {"aoc-category-nuclear"},
         energy_required = 5
     }})
     data:extend({{
-        name = 'aoc-crafting-' .. prod2 .. '-recipe',
+        name = 'aoc-nuclear-' .. prod2 .. '-recipe',
         type = 'recipe',
         enabled = false,
         ingredients = {
@@ -54,6 +55,7 @@ for _, p in pairs(nuclear_pairing) do
             {type = 'item', name = prod2, amount = 1}
         },
         allow_productivity = false,
+        categories = {"aoc-category-nuclear"},
         energy_required = 5
     }})
 end

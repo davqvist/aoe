@@ -35,6 +35,7 @@ data:extend({{
   max_health = 300,
 	selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
 	collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
+  use_mirroring = true,
 	graphics_set = {
     animation = {
       north = {

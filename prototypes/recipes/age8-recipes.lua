@@ -233,6 +233,49 @@ data:extend({{
 }})
 
 data:extend({{
+    name = 'aoc-farm-reservoir-lotus-flower-4-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'aoc-starlight', amount = 60},
+        {type = 'item', name = 'aoc-ammonium-chloride', amount = 3},
+		{type = 'item', name = 'aoc-plutonium-239', amount = 1},
+		{type = 'item', name = 'jelly', amount = 2},
+        {type = 'item', name = 'aoc-lotus-flower-seeds', amount = 3}
+    },
+    results = {
+        {type = 'item', name = 'aoc-lotus-flower', amount = 5}
+    },
+    energy_required = 400,
+	categories = {'aoc-category-farm-reservoir-lotus'},
+	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-lotus-flower'], { icon = "__ageofcreation__/img/items/tier/t4.png" } ),
+	research = 'aoc-lotus-flower'
+}})
+
+data:extend({{
+    name = 'aoc-farm-reservoir-lotus-flower-module-4-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'fluid', name = 'aoc-starlight', amount = 250},
+        {type = 'item', name = 'aoc-soil', amount = 5},
+        {type = 'item', name = 'aoc-lotus-flower-module', amount = 1, quality_min = "rare", quality_max = "rare"},
+        {type = 'item', name = 'aoc-ammonium-chloride', amount = 2},
+        {type = 'item', name = 'aoc-plutonium-239', amount = 1},
+		{type = 'item', name = 'jelly', amount = 2},
+        {type = 'item', name = 'aoc-fertilizer-3', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-lotus-flower-module', amount=1, quality_min = "epic", quality_max = "epic", independent_probability = 0.2}
+    },
+    icons = get_icons_quality( data.raw.item["aoc-lotus-flower"], 4 ),
+    energy_required = 360,
+	categories = {'aoc-category-farm-reservoir-lotus'},
+	research = 'aoc-lotus-flower'
+}})
+
+data:extend({{
 	name = 'aoc-chemistry-bioflux-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -268,18 +311,18 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoc-mixing-animal-food-3-recipe',
+	name = 'aoc-mixing-animal-food-4-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoc-animal-food-2', amount = 10},
+		{type = 'item', name = 'aoc-animal-food-3', amount = 8},
 		{type = 'item', name = 'aoc-hormones', amount = 1},
 		{type = 'item', name = 'yumako', amount = 4}
 	},
 	results = {
-		{type = 'item', name = 'aoc-animal-food-3', amount = 8}
+		{type = 'item', name = 'aoc-animal-food-4', amount = 6}
     },
-	energy_required = 8,
+	energy_required = 6,
 	categories = {'aoc-category-mixing'}
 }})
 
@@ -392,42 +435,60 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoc-mixing-fertilizer-3-recipe',
+    name = 'aoc-crafting-modular-armor-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-titanium-plate', amount = 50},
+		{type = 'item', name = 'aoc-pvc', amount = 50},
+        {type = 'item', name = 'low-density-structure', amount = 10}
+    },
+    results = {
+        {type = 'item', name = 'modular-armor', amount = 1}
+    },
+    energy_required = 5
+}})
+
+data:extend({{
+	name = 'aoc-mixing-fertilizer-4-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoc-fertilizer-2', amount = 10},
+		{type = 'item', name = 'aoc-fertilizer-3', amount = 10},
 		{type = 'item', name = 'aoc-alien-chitin', amount = 3},
 		{type = 'item', name = 'jellynut', amount = 4},
 		{type = 'item', name = 'aoc-magnesium-dust', amount = 2}
 	},
 	results = {
-		{type = 'item', name = 'aoc-fertilizer-3', amount = 8}
+		{type = 'item', name = 'aoc-fertilizer-4', amount = 8}
     },
 	energy_required = 8,
 	categories = {'aoc-category-mixing'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-reservoir-fish-4-recipe',
+    name = 'aoc-farm-reservoir-fish-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-        {type = 'item', name = 'aoc-fish-eggs', amount = 11},
-		{type = 'fluid', name = 'aoc-fish-water', amount = 500},
+        {type = 'item', name = 'aoc-fish-eggs', amount = 13},
+		{type = 'fluid', name = 'aoc-fish-water', amount = 600},
 		{type = 'item', name = 'aoc-kelp', amount = 1},
+		{type = 'item', name = 'aoc-nature-catalyst', amount = 1},
 		{type = 'item', name = 'yumako', amount = 1}
     },
     results = {
-        {type = 'item', name = 'raw-fish', amount = 5}
+        {type = 'item', name = 'raw-fish', amount = 6},
+        {type = 'item', name = 'aoc-nature-catalyst', amount = 1, independent_probability = 0.7, ignored_by_productivity = 1}
     },
+	main_product = 'raw-fish',
     energy_required = 50,
-	icons = get_icons( data.raw.capsule['raw-fish'], { icon = "__ageofcreation__/img/items/tier/t4.png" } ),
+	icons = get_icons( data.raw.item['raw-fish'], { icon = "__ageofcreation__/img/items/tier/t5.png" } ),
 	categories = {'aoc-category-farm-reservoir-fish'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-reservoir-fish-eggs-4-recipe',
+    name = 'aoc-farm-reservoir-fish-eggs-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -436,283 +497,283 @@ data:extend({{
 		{type = 'item', name = 'aoc-soy-flour', amount = 1},
 		{type = 'item', name = 'aoc-kelp', amount = 1},
 		{type = 'item', name = 'aoc-agar', amount = 1},
+		{type = 'item', name = 'aoc-nature-catalyst', amount = 1},
 		{type = 'item', name = 'yumako', amount = 1},
 		{type = 'fluid', name = 'aoc-fish-water', amount = 80}
     },
     results = {
-        {type = 'item', name = 'aoc-fish-eggs', amount = 18}
+        {type = 'item', name = 'aoc-fish-eggs', amount = 20},
+        {type = 'item', name = 'aoc-nature-catalyst', amount = 1, independent_probability = 0.7, ignored_by_productivity = 1}
     },
-    energy_required = 13,
-	icons = get_icons( data.raw.item['aoc-fish-eggs'], { icon = "__ageofcreation__/img/items/tier/t4.png" } ),
+	main_product = 'aoc-fish-eggs',
+    energy_required = 11,
+	icons = get_icons( data.raw.item['aoc-fish-eggs'], { icon = "__ageofcreation__/img/items/tier/t5.png" } ),
 	categories = {'aoc-category-farm-reservoir-fish'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-reservoir-fish-module-4-recipe',
+    name = 'aoc-farm-reservoir-fish-module-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
         {type = 'item', name = 'aoc-fish-eggs', amount = 4},
 		{type = 'item', name = 'aoc-soy-flour', amount = 1},
 		{type = 'item', name = 'aoc-agar', amount = 1},
+		{type = 'item', name = 'aoc-nature-catalyst', amount = 1},
 		{type = 'item', name = 'yumako', amount = 1},
 		{type = 'fluid', name = 'aoc-fish-water', amount = 400}
     },
     results = {
-        {type = 'item', name = 'aoc-fish-module', amount=1, quality_min = "rare", quality_max = "rare", shared_probability = { min = 0, max = 0.25 }},
-		{type = 'item', name = 'aoc-fish-module', amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0.25, max = 0.6 }},
-        {type = 'item', name = 'aoc-fish-module', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.6, max = 0.635 }}
+        {type = 'item', name = 'aoc-fish-module', amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0, max = 0.25 }},
+		{type = 'item', name = 'aoc-fish-module', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.25, max = 0.55 }}
     },
 	main_product = 'aoc-fish-module',
-    icons = get_icons_quality( data.raw.capsule["raw-fish"], 4 ),
-    energy_required = 270,
+    icons = get_icons_quality( data.raw.item["raw-fish"], 5 ),
+    energy_required = 290,
 	categories = {'aoc-category-farm-reservoir-fish'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-chicken-coop-chicken-4-recipe',
+    name = 'aoc-farm-chicken-coop-chicken-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
 		{type = 'item', name = 'aoc-egg', amount = 1},
 		{type = 'item', name = 'aoc-bedding', amount = 1},
-		{type = 'item', name = 'aoc-animal-food-3', amount = 1},
+		{type = 'item', name = 'aoc-animal-food-4', amount = 1},
 		{type = 'fluid', name = 'aoc-warm-air', amount = 100}
     },
     results = {
-        {type = 'item', name = 'aoc-chicken', amount = 1, independent_probability = 0.625},
-		{type = 'item', name = 'aoc-bedding', amount = 1, ignored_by_productivity = 1, independent_probability = 0.99}
+        {type = 'item', name = 'aoc-chicken', amount = 1, independent_probability = 0.65},
+		{type = 'item', name = 'aoc-bedding', amount = 1, ignored_by_productivity = 1, independent_probability = 0.995}
     },
-    energy_required = 10,
+    energy_required = 9.5,
 	main_product = 'aoc-chicken',
-	icons = get_icons( data.raw.item['aoc-chicken'], { icon = "__ageofcreation__/img/items/tier/t4.png" } ),
+	icons = get_icons( data.raw.item['aoc-chicken'], { icon = "__ageofcreation__/img/items/tier/t5.png" } ),
 	categories = {'aoc-category-farm-chicken-coop'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-chicken-coop-egg-4-recipe',
+    name = 'aoc-farm-chicken-coop-egg-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
 		{type = 'item', name = 'aoc-chicken', amount = 2},
 		{type = 'item', name = 'aoc-fish-meat', amount = 2},
-		{type = 'item', name = 'aoc-animal-food-3', amount = 2}
+		{type = 'item', name = 'aoc-animal-food-4', amount = 2}
     },
     results = {
-        {type = 'item', name = 'aoc-egg', amount = 10},
-		{type = 'item', name = 'aoc-chicken', amount = 2, ignored_by_productivity = 2, independent_probability = 0.9}
+        {type = 'item', name = 'aoc-egg', amount = 12},
+		{type = 'item', name = 'aoc-chicken', amount = 2, ignored_by_productivity = 2, independent_probability = 0.91}
     },
-    energy_required = 10,
+    energy_required = 9.5,
 	main_product = 'aoc-egg',
-	icons = get_icons( data.raw.item['aoc-egg'], { icon = "__ageofcreation__/img/items/tier/t4.png" } ),
+	icons = get_icons( data.raw.item['aoc-egg'], { icon = "__ageofcreation__/img/items/tier/t5.png" } ),
 	categories = {'aoc-category-farm-chicken-coop'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-chicken-coop-chicken-module-4-recipe',
+    name = 'aoc-farm-chicken-coop-chicken-module-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
         {type = 'item', name = 'aoc-egg', amount = 1},
 		{type = 'item', name = 'aoc-bedding', amount = 1},
-		{type = 'item', name = 'aoc-animal-food-3', amount = 2},
-		{type = 'fluid', name = 'aoc-warm-air', amount = 500}
+		{type = 'item', name = 'aoc-animal-food-4', amount = 2},
+		{type = 'fluid', name = 'aoc-warm-air', amount = 600}
     },
     results = {
-        {type = 'item', name = 'aoc-chicken-module', amount=1, quality_min = "rare", quality_max = "rare", shared_probability = { min = 0, max = 0.05 }},
-        {type = 'item', name = 'aoc-chicken-module', amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0.05, max = 0.19 }},
-        {type = 'item', name = 'aoc-chicken-module', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.19, max = 0.225 }},
-		{type = 'item', name = 'aoc-bedding', amount=1, independent_probability = 0.8}
+        {type = 'item', name = 'aoc-chicken-module', amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0, max = 0.05 }},
+        {type = 'item', name = 'aoc-chicken-module', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.05, max = 0.17 }},
+		{type = 'item', name = 'aoc-bedding', amount=1, independent_probability = 0.75}
     },
 	main_product = 'aoc-chicken-module',
-    icons = get_icons_quality( data.raw.item["aoc-chicken"], 4 ),
-    energy_required = 90,
+    icons = get_icons_quality( data.raw.item["aoc-chicken"], 5 ),
+    energy_required = 95,
 	categories = {'aoc-category-farm-chicken-coop'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-barn-sheep-4-recipe',
+    name = 'aoc-farm-barn-sheep-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
 		{type = 'item', name = 'aoc-lamb', amount = 1},
-		{type = 'item', name = 'aoc-animal-food-3', amount = 4},
+		{type = 'item', name = 'aoc-animal-food-4', amount = 4},
 		{type = 'item', name = 'aoc-hay-bale', amount = 4},
 		{type = 'item', name = 'aoc-salt', amount = 1},
 		{type = 'fluid', name = 'water', amount = 250}
     },
     results = {
-        {type = 'item', name = 'aoc-sheep', amount = 1, independent_probability = 0.96}
+        {type = 'item', name = 'aoc-sheep', amount = 1, independent_probability = 0.98}
     },
-    energy_required = 46,
+    energy_required = 42,
 	auto_recycle = false,
-	icons = get_icons( data.raw.item['aoc-sheep'], { icon = "__ageofcreation__/img/items/tier/t4.png" } ),
+	icons = get_icons( data.raw.item['aoc-sheep'], { icon = "__ageofcreation__/img/items/tier/t5.png" } ),
 	categories = {'aoc-category-farm-barn-sheep'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-barn-wool-4-recipe',
+    name = 'aoc-farm-barn-wool-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
 		{type = 'item', name = 'aoc-sheep', amount = 4},
-		{type = 'item', name = 'aoc-animal-food-3', amount = 2},
+		{type = 'item', name = 'aoc-animal-food-4', amount = 2},
 		{type = 'item', name = 'aoc-hay-bale', amount = 2},
 		{type = 'item', name = 'aoc-salt', amount = 1},
 		{type = 'fluid', name = 'water', amount = 100}
     },
     results = {
-        {type = 'item', name = 'aoc-wool', amount = 3},
+        {type = 'item', name = 'aoc-wool', amount = 4},
         {type = 'item', name = 'aoc-wool', amount = 1, independent_probability = 0.5},
 		{type = 'item', name = 'aoc-sheep', amount = 3, ignored_by_productivity = 3},
-		{type = 'item', name = 'aoc-sheep', amount = 1, ignored_by_productivity = 1, independent_probability = 0.96}
+		{type = 'item', name = 'aoc-sheep', amount = 1, ignored_by_productivity = 1, independent_probability = 0.98}
     },
     main_product = 'aoc-wool',
 	energy_required = 10,
 	auto_recycle = false,
-	icons = get_icons( data.raw.item['aoc-wool'], { icon = "__ageofcreation__/img/items/tier/t4.png" } ),
+	icons = get_icons( data.raw.item['aoc-wool'], { icon = "__ageofcreation__/img/items/tier/t5.png" } ),
 	categories = {'aoc-category-farm-barn-sheep'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-barn-lamb-4-recipe',
+    name = 'aoc-farm-barn-lamb-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
 		{type = 'item', name = 'aoc-sheep', amount = 2},
-		{type = 'item', name = 'aoc-animal-food-3', amount = 3},
+		{type = 'item', name = 'aoc-animal-food-4', amount = 3},
 		{type = 'item', name = 'aoc-hay-bale', amount = 3}
     },
     results = {
         {type = 'item', name = 'aoc-lamb', amount = 1},
-		{type = 'item', name = 'aoc-sheep', amount = 2, ignored_by_productivity = 2, independent_probability = 0.915}
+		{type = 'item', name = 'aoc-sheep', amount = 2, ignored_by_productivity = 2, independent_probability = 0.925}
     },
     main_product = 'aoc-lamb',
-	energy_required = 23,
+	energy_required = 21,
 	auto_recycle = false,
-	icons = get_icons( data.raw.item['aoc-lamb'], { icon = "__ageofcreation__/img/items/tier/t4.png" } ),
+	icons = get_icons( data.raw.item['aoc-lamb'], { icon = "__ageofcreation__/img/items/tier/t5.png" } ),
 	categories = {'aoc-category-farm-barn-sheep'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-barn-sheep-module-4-recipe',
+    name = 'aoc-farm-barn-sheep-module-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
         {type = 'item', name = 'aoc-lamb', amount = 1},
-		{type = 'item', name = 'aoc-animal-food-3', amount = 6},
+		{type = 'item', name = 'aoc-animal-food-4', amount = 6},
 		{type = 'item', name = 'aoc-hay-bale', amount = 6},
-		{type = 'fluid', name = 'aoc-brine', amount = 220}
+		{type = 'fluid', name = 'aoc-brine', amount = 260}
     },
     results = {
-        {type = 'item', name = 'aoc-sheep-module', amount=1, quality_min = "rare", quality_max = "rare", shared_probability = { min = 0, max = 0.075 }},
-        {type = 'item', name = 'aoc-sheep-module', amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0.075, max = 0.6 }},
-        {type = 'item', name = 'aoc-sheep-module', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.6, max = 0.6525 }}
+        {type = 'item', name = 'aoc-sheep-module', amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0, max = 0.075 }},
+        {type = 'item', name = 'aoc-sheep-module', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.075, max = 0.525 }}
     },
 	main_product = 'aoc-sheep-module',
-    icons = get_icons_quality( data.raw.item["aoc-sheep"], 4 ),
-    energy_required = 190,
+    icons = get_icons_quality( data.raw.item["aoc-sheep"], 5 ),
+    energy_required = 200,
 	auto_recycle = false,
 	categories = {'aoc-category-farm-barn-sheep'}
 }})
+
 data:extend({{
-    name = 'aoc-farm-barn-cow-4-recipe',
+    name = 'aoc-farm-barn-cow-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
 		{type = 'item', name = 'aoc-calf', amount = 1},
-		{type = 'item', name = 'aoc-animal-food-3', amount = 5},
+		{type = 'item', name = 'aoc-animal-food-4', amount = 5},
 		{type = 'item', name = 'aoc-hay-bale', amount = 3},
 		{type = 'item', name = 'aoc-grass', amount = 4},
 		{type = 'fluid', name = 'aoc-milk', amount = 50}
     },
     results = {
-        {type = 'item', name = 'aoc-cow', amount = 1, shared_probability = { min = 0, max = 0.53 }},
-		{type = 'item', name = 'aoc-ox', amount = 1, shared_probability = { min = 0.53, max = 0.96 }}
+        {type = 'item', name = 'aoc-cow', amount = 1, shared_probability = { min = 0, max = 0.55 }},
+		{type = 'item', name = 'aoc-ox', amount = 1, shared_probability = { min = 0.55, max = 1 }}
     },
 	main_product = 'aoc-cow',
-    energy_required = 66,
+    energy_required = 62,
 	auto_recycle = false,
-	icons = get_icons( data.raw.item['aoc-cow'], { icon = "__ageofcreation__/img/items/tier/t4.png" } ),
+	icons = get_icons( data.raw.item['aoc-cow'], { icon = "__ageofcreation__/img/items/tier/t5.png" } ),
 	categories = {'aoc-category-farm-barn-cow'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-barn-milk-4-recipe',
+    name = 'aoc-farm-barn-milk-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
 		{type = 'item', name = 'aoc-cow', amount = 4},
-		{type = 'item', name = 'aoc-animal-food-3', amount = 2},
+		{type = 'item', name = 'aoc-animal-food-4', amount = 2},
 		{type = 'item', name = 'aoc-hay-bale', amount = 1},
 		{type = 'item', name = 'aoc-grass', amount = 1},
 		{type = 'item', name = 'aoc-magnesium-dust', amount = 1},
-		{type = 'fluid', name = 'water', amount = 400}
+		{type = 'fluid', name = 'water', amount = 500}
     },
     results = {
-        {type = 'fluid', name = 'aoc-milk', amount = 400},
+        {type = 'fluid', name = 'aoc-milk', amount = 500},
 		{type = 'item', name = 'aoc-cow', amount = 3, ignored_by_productivity = 3},
-		{type = 'item', name = 'aoc-cow', amount = 1, ignored_by_productivity = 1, independent_probability = 0.96}
+		{type = 'item', name = 'aoc-cow', amount = 1, ignored_by_productivity = 1, independent_probability = 0.98}
     },
     main_product = 'aoc-milk',
 	energy_required = 16,
 	auto_recycle = false,
-	icons = get_icons( data.raw.fluid['aoc-milk'], { icon = "__ageofcreation__/img/items/tier/t4.png" } ),
+	icons = get_icons( data.raw.fluid['aoc-milk'], { icon = "__ageofcreation__/img/items/tier/t5.png" } ),
 	categories = {'aoc-category-farm-barn-cow'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-barn-calf-4-recipe',
+    name = 'aoc-farm-barn-calf-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
 		{type = 'item', name = 'aoc-ox', amount = 1},
 		{type = 'item', name = 'aoc-cow', amount = 1},
-		{type = 'item', name = 'aoc-animal-food-3', amount = 4},
+		{type = 'item', name = 'aoc-animal-food-4', amount = 4},
 		{type = 'item', name = 'aoc-hay-bale', amount = 2},
 		{type = 'item', name = 'aoc-grass', amount = 3}
     },
     results = {
         {type = 'item', name = 'aoc-calf', amount = 1},
-		{type = 'item', name = 'aoc-ox', amount = 1, ignored_by_productivity = 1, independent_probability = 0.93},
-		{type = 'item', name = 'aoc-cow', amount = 1, ignored_by_productivity = 1, independent_probability = 0.88}
+		{type = 'item', name = 'aoc-ox', amount = 1, ignored_by_productivity = 1, independent_probability = 0.95},
+		{type = 'item', name = 'aoc-cow', amount = 1, ignored_by_productivity = 1, independent_probability = 0.9}
     },
     main_product = 'aoc-calf',
-	energy_required = 28,
+	energy_required = 26,
 	auto_recycle = false,
-	icons = get_icons( data.raw.item['aoc-calf'], { icon = "__ageofcreation__/img/items/tier/t4.png" } ),
+	icons = get_icons( data.raw.item['aoc-calf'], { icon = "__ageofcreation__/img/items/tier/t5.png" } ),
 	categories = {'aoc-category-farm-barn-cow'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-barn-cow-module-4-recipe',
+    name = 'aoc-farm-barn-cow-module-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
         {type = 'item', name = 'aoc-calf', amount = 1},
-		{type = 'item', name = 'aoc-animal-food-3', amount = 7},
+		{type = 'item', name = 'aoc-animal-food-4', amount = 7},
 		{type = 'item', name = 'aoc-hay-bale', amount = 4},
 		{type = 'item', name = 'aoc-grass', amount = 6},
 		{type = 'item', name = 'aoc-magnesium-dust', amount = 1},
-		{type = 'fluid', name = 'water', amount = 150}
+		{type = 'fluid', name = 'aoc-milk', amount = 150}
     },
     results = {
-        {type = 'item', name = 'aoc-cow-module', amount=1, quality_min = "rare", quality_max = "rare", shared_probability = { min = 0, max = 0.035 }},
-        {type = 'item', name = 'aoc-cow-module', amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0.035, max = 0.28 }},
-        {type = 'item', name = 'aoc-cow-module', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.28, max = 0.3045 }},
-		{type = 'item', name = 'aoc-ox-module', amount=1, quality_min = "rare", quality_max = "rare", shared_probability = { min = 0.5, max = 0.535 }},
-        {type = 'item', name = 'aoc-ox-module', amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0.535, max = 0.78 }},
-        {type = 'item', name = 'aoc-ox-module', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.78, max =  0.8045 }}
+        {type = 'item', name = 'aoc-cow-module', amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0, max = 0.035 }},
+        {type = 'item', name = 'aoc-cow-module', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.035, max = 0.245 }},
+		{type = 'item', name = 'aoc-ox-module', amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0.5, max = 0.535 }},
+        {type = 'item', name = 'aoc-ox-module', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.535, max = 0.745 }}
     },
 	main_product = 'aoc-cow-module',
-    icons = get_icons_quality( data.raw.item["aoc-cow"], 4 ),
-    energy_required = 240,
+    icons = get_icons_quality( data.raw.item["aoc-cow"], 5 ),
+    energy_required = 260,
 	auto_recycle = false,
 	categories = {'aoc-category-farm-barn-cow'}
 }})
 
 data:extend({{
-	name = 'aoc-high-pressure-leather-4-recipe',
+	name = 'aoc-high-pressure-leather-5-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
@@ -720,15 +781,16 @@ data:extend({{
 		{type = 'item', name = 'aoc-slaked-lime', amount = 4},
 		{type = 'item', name = 'aoc-wood-pulp', amount = 4},
 		{type = 'item', name = 'aoc-sodium-cyanide', amount = 2},
+		{type = 'item', name = 'aoc-ichor', amount = 1},
 		{type = 'item', name = 'aoc-salt', amount = 8},
 		{type = 'fluid', name = 'aoc-formic-acid', amount = 20},
 		{type = 'fluid', name = 'aoc-alien-blood', amount = 40}
 	},
 	results = {
-		{type = 'item', name = 'aoc-leather', amount = 14}
+		{type = 'item', name = 'aoc-leather', amount = 20}
     },
 	energy_required = 6,
-	icons = get_icons( data.raw.item['aoc-leather'], { icon = "__ageofcreation__/img/items/tier/t4.png" } ),
+	icons = get_icons( data.raw.item['aoc-leather'], { icon = "__ageofcreation__/img/items/tier/t5.png" } ),
 	categories = {'aoc-category-high-pressure-heating'}
 }})
 
@@ -839,7 +901,7 @@ data:extend({{
 	ingredients = {
 		{type = 'item', name = 'aoc-zinc-plate', amount = 10},
 		{type = 'item', name = 'advanced-circuit', amount = 10},
-		{type = 'item', name = 'aoc-rayon', amount = 3},
+		{type = 'item', name = 'aoc-rayon', amount = 5},
         {type = 'item', name = 'speed-module', amount = 2}
 	},
 	results = {
@@ -857,7 +919,7 @@ data:extend({{
 	ingredients = {
 		{type = 'item', name = 'aoc-chromium-plate', amount = 10},
 		{type = 'item', name = 'advanced-circuit', amount = 10},
-		{type = 'item', name = 'aoc-rayon', amount = 3},
+		{type = 'item', name = 'aoc-rayon', amount = 5},
         {type = 'item', name = 'productivity-module', amount = 2}
 	},
 	results = {
@@ -875,7 +937,7 @@ data:extend({{
 	ingredients = {
 		{type = 'item', name = 'aoc-nickel-plate', amount = 10},
 		{type = 'item', name = 'advanced-circuit', amount = 10},
-		{type = 'item', name = 'aoc-rayon', amount = 3},
+		{type = 'item', name = 'aoc-rayon', amount = 5},
         {type = 'item', name = 'efficiency-module', amount = 2}
 	},
 	results = {
@@ -887,324 +949,329 @@ data:extend({{
 }})
 
 data:extend({{
-    name = 'aoc-farm-reservoir-kelp-4-recipe',
+    name = 'aoc-farm-reservoir-kelp-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-        {type = 'fluid', name = 'aoc-fish-water', amount = 80},
+        {type = 'fluid', name = 'aoc-fish-water', amount = 60},
         {type = 'item', name = 'aoc-gypsum', amount = 1},
-        {type = 'item', name = 'aoc-alien-chitin', amount = 1}
+        {type = 'item', name = 'aoc-alien-chitin', amount = 1},
+        {type = 'item', name = 'aoc-earth-catalyst', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoc-kelp', amount = 1}
+        {type = 'item', name = 'aoc-kelp', amount = 1},
+        {type = 'item', name = 'aoc-earth-catalyst', amount = 1, independent_probability = 0.7, ignored_by_productivity = 1}
     },
-    energy_required = 8,
-	icons = get_icons( data.raw.item['aoc-kelp'], { icon = "__ageofcreation__/img/items/tier/t4.png" } ),
+	main_product = 'aoc-kelp',
+    energy_required = 6,
+	icons = get_icons( data.raw.item['aoc-kelp'], { icon = "__ageofcreation__/img/items/tier/t5.png" } ),
 	auto_recycle = false,
     categories = {'aoc-category-farm-reservoir-kelp'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-reservoir-kelp-module-4-recipe',
+    name = 'aoc-farm-reservoir-kelp-module-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
         {type = 'fluid', name = 'aoc-fish-water', amount = 1000},
         {type = 'item', name = 'aoc-gypsum', amount = 4},
+        {type = 'item', name = 'aoc-earth-catalyst', amount = 1},
         {type = 'item', name = 'aoc-alien-chitin', amount = 4},
-        {type = 'item', name = 'aoc-kelp-module', amount = 1, quality_min = "rare", quality_max = "rare"}
+        {type = 'item', name = 'aoc-kelp-module', amount = 1, quality_min = "epic", quality_max = "epic"}
     },
     results = {
-        {type = 'item', name = 'aoc-kelp-module', amount=1, quality_min = "rare", quality_max = "rare", shared_probability = { min = 0, max = 0.512 }, ignored_by_productivity = 1},
-        {type = 'item', name = 'aoc-kelp-module', amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0.512, max = 0.768 }},
-        {type = 'item', name = 'aoc-kelp-module', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.768, max = 0.832 }}
+        {type = 'item', name = 'aoc-kelp-module', amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0, max = 0.512 }, ignored_by_productivity = 1},
+        {type = 'item', name = 'aoc-kelp-module', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.512, max = 0.768 }}
     },
 	main_product = 'aoc-kelp-module',
-	icons = get_icons_quality( data.raw.item["aoc-kelp"], 4 ),
+	icons = get_icons_quality( data.raw.item["aoc-kelp"], 5 ),
     energy_required = 120,
 	categories = {'aoc-category-farm-reservoir-kelp'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-flax-4-recipe',
+    name = 'aoc-farm-plot-flax-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-        {type = 'item', name = 'aoc-flax-seed', amount = 5},
-        {type = 'item', name = 'aoc-wood-pulp', amount = 2},
-        {type = 'item', name = 'aoc-leaves', amount = 2},
-        {type = 'item', name = 'aoc-grass', amount = 2},
-        {type = 'item', name = 'aoc-fertilizer-3', amount = 1}
+        {type = 'item', name = 'aoc-flax-seed', amount = 6},
+        {type = 'item', name = 'aoc-wood-pulp', amount = 3},
+        {type = 'item', name = 'aoc-leaves', amount = 3},
+        {type = 'item', name = 'aoc-grass', amount = 3},
+        {type = 'item', name = 'aoc-fertilizer-4', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoc-flax', amount = 8}
+        {type = 'item', name = 'aoc-flax', amount = 10}
     },
-    energy_required = 60,
-    icons = get_icons( data.raw.item['aoc-flax'], { icon = "__ageofcreation__/img/items/tier/t4.png" } ),
+    energy_required = 66,
+    icons = get_icons( data.raw.item['aoc-flax'], { icon = "__ageofcreation__/img/items/tier/t5.png" } ),
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 136, g = 163, b = 211}},
 	categories = {'aoc-category-farm-plot-flax'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-flax-module-4a-recipe',
+    name = 'aoc-farm-plot-flax-module-5a-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
         {type = 'fluid', name = 'water', amount = 1000},
-        {type = 'item', name = 'aoc-flax-module-a', amount = 2, quality_min = "rare", quality_max = "rare"},
-		{type = 'item', name = 'aoc-wood-pulp', amount = 8},
-        {type = 'item', name = 'aoc-leaves', amount = 8},
-        {type = 'item', name = 'aoc-grass', amount = 8},
-        {type = 'item', name = 'aoc-fertilizer-3', amount = 1}
+        {type = 'item', name = 'aoc-flax-module-a', amount = 2, quality_min = "epic", quality_max = "epic"},
+		{type = 'item', name = 'aoc-wood-pulp', amount = 12},
+        {type = 'item', name = 'aoc-leaves', amount = 12},
+        {type = 'item', name = 'aoc-grass', amount = 12},
+        {type = 'item', name = 'aoc-fertilizer-4', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoc-flax-module-a', amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0, max = 0.6 }},
-        {type = 'item', name = 'aoc-flax-module-b', amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0, max = 0.4 }},
-        {type = 'item', name = 'aoc-flax-module-a', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.6, max = 0.72 }},
-        {type = 'item', name = 'aoc-flax-module-b', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.4, max = 0.48 }}
+        {type = 'item', name = 'aoc-flax-module-a', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0, max = 0.6 }},
+        {type = 'item', name = 'aoc-flax-module-b', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0, max = 0.4 }}
     },
 	main_product = "aoc-flax-module-a",
-    icons = get_icons_quality( data.raw.item["aoc-flax"], 4 ),
-    energy_required = 190,
+    icons = get_icons_quality( data.raw.item["aoc-flax"], 5 ),
+    energy_required = 220,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 136, g = 163, b = 211}},
 	categories = {'aoc-category-farm-plot-flax'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-flax-module-4b-recipe',
+    name = 'aoc-farm-plot-flax-module-5b-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
         {type = 'fluid', name = 'water', amount = 1000},
-        {type = 'item', name = 'aoc-flax-module-b', amount = 2, quality_min = "rare", quality_max = "rare"},
-		{type = 'item', name = 'aoc-wood-pulp', amount = 8},
-        {type = 'item', name = 'aoc-leaves', amount = 8},
-        {type = 'item', name = 'aoc-grass', amount = 8},
-        {type = 'item', name = 'aoc-fertilizer-3', amount = 1}
+        {type = 'item', name = 'aoc-flax-module-b', amount = 2, quality_min = "epic", quality_max = "epic"},
+		{type = 'item', name = 'aoc-wood-pulp', amount = 12},
+        {type = 'item', name = 'aoc-leaves', amount = 12},
+        {type = 'item', name = 'aoc-grass', amount = 12},
+        {type = 'item', name = 'aoc-fertilizer-4', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoc-flax-module-a', amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0, max = 0.4 }},
-        {type = 'item', name = 'aoc-flax-module-b', amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0, max = 0.6 }},
-        {type = 'item', name = 'aoc-flax-module-a', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.4, max = 0.48 }},
-        {type = 'item', name = 'aoc-flax-module-b', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.6, max = 0.72 }}
+        {type = 'item', name = 'aoc-flax-module-a', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0, max = 0.4 }},
+        {type = 'item', name = 'aoc-flax-module-b', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0, max = 0.6 }}
     },
 	main_product = "aoc-flax-module-b",
-    icons = get_icons_quality( data.raw.item["aoc-flax"], 4 ),
-    energy_required = 190,
+    icons = get_icons_quality( data.raw.item["aoc-flax"], 5 ),
+    energy_required = 220,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 136, g = 163, b = 211}},
 	categories = {'aoc-category-farm-plot-flax'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-tea-leaves-4-recipe',
+    name = 'aoc-farm-plot-tea-leaves-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
         {type = 'item', name = 'aoc-tea-seed', amount = 2},
         {type = 'item', name = 'aoc-soil', amount = 6},
         {type = 'item', name = 'aoc-leaves', amount = 2},
-		{type = 'item', name = 'aoc-fertilizer-3', amount = 1},
+		{type = 'item', name = 'aoc-fertilizer-4', amount = 1},
         {type = 'fluid', name = 'water', amount = 100}
 		
     },
     results = {
-        {type = 'item', name = 'aoc-tea-leaves', amount = 5}
+        {type = 'item', name = 'aoc-tea-leaves', amount = 6}
     },
     energy_required = 20,
 	auto_recycle = false,
-	icons = get_icons( data.raw.item['aoc-tea-leaves'], { icon = "__ageofcreation__/img/items/tier/t4.png" } ),
+	icons = get_icons( data.raw.item['aoc-tea-leaves'], { icon = "__ageofcreation__/img/items/tier/t5.png" } ),
+	crafting_machine_tint = { primary = {r = 64, g = 215, b = 0}},
     categories = {'aoc-category-farm-plot-tea'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-tea-leaves-module-4-recipe',
+    name = 'aoc-farm-plot-tea-leaves-module-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
         {type = 'fluid', name = 'water', amount = 1000},
-        {type = 'item', name = 'aoc-tea-leaves-module', amount = 1, quality_min = "rare", quality_max = "rare"},
+        {type = 'item', name = 'aoc-tea-leaves-module', amount = 1, quality_min = "epic", quality_max = "epic"},
 		{type = 'item', name = 'aoc-leaves', amount = 8},
-		{type = 'item', name = 'aoc-fertilizer-3', amount = 1}
+		{type = 'item', name = 'aoc-fertilizer-4', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoc-tea-leaves-module', amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0, max = 0.5 }},
-        {type = 'item', name = 'aoc-tea-leaves-module', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.5, max = 0.6 }}
+        {type = 'item', name = 'aoc-tea-leaves-module', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0, max = 0.5 }}
 	},
 	main_product = 'aoc-tea-leaves-module',
-    icons = get_icons_quality( data.raw.item["aoc-tea-leaves"], 4 ),
-    energy_required = 210,
+    icons = get_icons_quality( data.raw.item["aoc-tea-leaves"], 5 ),
+    energy_required = 220,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 64, g = 215, b = 0}},
 	categories = {'aoc-category-farm-plot-tea'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-coffee-plant-4-recipe',
+    name = 'aoc-farm-plot-coffee-plant-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
         {type = 'item', name = 'aoc-coffee-beans', amount = 2},
         {type = 'item', name = 'aoc-soil', amount = 6},
         {type = 'item', name = 'aoc-charcoal', amount = 1},
-		{type = 'item', name = 'aoc-fertilizer-3', amount = 1},
+		{type = 'item', name = 'aoc-fertilizer-4', amount = 1},
         {type = 'fluid', name = 'water', amount = 100}
     },
     results = {
-        {type = 'item', name = 'aoc-coffee-plant', amount = 5}
+        {type = 'item', name = 'aoc-coffee-plant', amount = 6}
     },
     energy_required = 20,
 	auto_recycle = false,
-	icons = get_icons( data.raw.item['aoc-coffee-plant'], { icon = "__ageofcreation__/img/items/tier/t4.png" } ),
+	icons = get_icons( data.raw.item['aoc-coffee-plant'], { icon = "__ageofcreation__/img/items/tier/t5.png" } ),
+	crafting_machine_tint = { primary = {r = 89, g = 177, b = 71}},
 	categories = {'aoc-category-farm-plot-coffee'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-coffee-plant-module-4-recipe',
+    name = 'aoc-farm-plot-coffee-plant-module-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
         {type = 'fluid', name = 'water', amount = 1000},
-        {type = 'item', name = 'aoc-coffee-plant-module', amount = 1, quality_min = "rare", quality_max = "rare"},
+        {type = 'item', name = 'aoc-coffee-plant-module', amount = 1, quality_min = "epic", quality_max = "epic"},
 		{type = 'item', name = 'aoc-charcoal', amount = 4},
-		{type = 'item', name = 'aoc-fertilizer-3', amount = 1}
+		{type = 'item', name = 'aoc-fertilizer-4', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoc-coffee-plant-module', amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0, max = 0.5 }},
-        {type = 'item', name = 'aoc-coffee-plant-module', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.5, max = 0.6 }},
+        {type = 'item', name = 'aoc-coffee-plant-module', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0, max = 0.5 }}
 	},
 	main_product = 'aoc-coffee-plant-module',
-    icons = get_icons_quality( data.raw.item["aoc-coffee-plant"], 4 ),
-    energy_required = 210,
+    icons = get_icons_quality( data.raw.item["aoc-coffee-plant"], 5 ),
+    energy_required = 220,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 89, g = 177, b = 71}},
 	categories = {'aoc-category-farm-plot-coffee'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-maize-4-recipe',
-    type = 'recipe',
-    enabled = false,
-	ingredients = {
-        {type = 'item', name = 'aoc-maize-kernels', amount = 4},
-        {type = 'item', name = 'aoc-loam', amount = 5},
-        {type = 'item', name = 'aoc-fertilizer-3', amount = 1}
-    },
-    results = {
-        {type = 'item', name = 'aoc-maize', amount = 11}
-    },
-    energy_required = 80,
-	auto_recycle = false,
-	icons = get_icons( data.raw.item['aoc-maize'], { icon = "__ageofcreation__/img/items/tier/t4.png" } ),
-	categories = {'aoc-category-farm-plot-maize'}
-}})
-
-data:extend({{
-    name = 'aoc-farm-plot-maize-magnesium-4-recipe',
+    name = 'aoc-farm-plot-maize-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
         {type = 'item', name = 'aoc-maize-kernels', amount = 3},
-        {type = 'item', name = 'aoc-loam', amount = 6},
-        {type = 'item', name = 'aoc-magnesium-dust', amount = 1},
-        {type = 'item', name = 'aoc-fertilizer-3', amount = 1}
+        {type = 'item', name = 'aoc-loam', amount = 4},
+        {type = 'item', name = 'aoc-fertilizer-4', amount = 1}
     },
     results = {
         {type = 'item', name = 'aoc-maize', amount = 11}
     },
-	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-maize"], { icon = "__ageofcreation__/img/items/tier/t4.png", icon_size = 64 } ), get_icons( data.raw.item["aoc-magnesium-dust"] ) ),
+    energy_required = 65,
+	auto_recycle = false,
+	icons = get_icons( data.raw.item['aoc-maize'], { icon = "__ageofcreation__/img/items/tier/t5.png" } ),
+	crafting_machine_tint = { primary = {r = 251, g = 217, b = 112}},
+	categories = {'aoc-category-farm-plot-maize'}
+}})
+
+data:extend({{
+    name = 'aoc-farm-plot-maize-magnesium-5-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-maize-kernels', amount = 3},
+        {type = 'item', name = 'aoc-loam', amount = 7},
+        {type = 'item', name = 'aoc-magnesium-dust', amount = 1},
+        {type = 'item', name = 'aoc-fertilizer-4', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-maize', amount = 14}
+    },
+	icons = combine_icons_tiny( get_icons( data.raw.item["aoc-maize"], { icon = "__ageofcreation__/img/items/tier/t5.png", icon_size = 64 } ), get_icons( data.raw.item["aoc-magnesium-dust"] ) ),
     energy_required = 55,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 251, g = 217, b = 112}},
 	categories = {'aoc-category-farm-plot-maize'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-maize-module-4a-recipe',
+    name = 'aoc-farm-plot-maize-module-5a-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
         {type = 'fluid', name = 'water', amount = 1000},
-        {type = 'item', name = 'aoc-maize-module-a', amount = 2, quality_min = "rare", quality_max = "rare"},
-        {type = 'item', name = 'aoc-loam', amount = 12},
-        {type = 'item', name = 'aoc-magnesium-dust', amount = 4},
-        {type = 'item', name = 'aoc-fertilizer-3', amount = 1}
+        {type = 'item', name = 'aoc-maize-module-a', amount = 2, quality_min = "epic", quality_max = "epic"},
+        {type = 'item', name = 'aoc-loam', amount = 14},
+        {type = 'item', name = 'aoc-magnesium-dust', amount = 5},
+        {type = 'item', name = 'aoc-fertilizer-4', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoc-maize-module-a', amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0, max = 0.6 }},
-        {type = 'item', name = 'aoc-maize-module-b', amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0, max = 0.4 }},
-        {type = 'item', name = 'aoc-maize-module-a', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.6, max = 0.72 }},
-        {type = 'item', name = 'aoc-maize-module-b', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.4, max = 0.48 }}
+        {type = 'item', name = 'aoc-maize-module-a', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0, max = 0.6 }},
+        {type = 'item', name = 'aoc-maize-module-b', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0, max = 0.4 }}
     },
 	main_product = "aoc-maize-module-a",
-    icons = get_icons_quality( data.raw.item["aoc-maize"], 4 ),
-    energy_required = 250,
+    icons = get_icons_quality( data.raw.item["aoc-maize"], 5 ),
+    energy_required = 270,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 251, g = 217, b = 112}},
 	categories = {'aoc-category-farm-plot-maize'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-maize-module-4b-recipe',
+    name = 'aoc-farm-plot-maize-module-5b-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
         {type = 'fluid', name = 'water', amount = 1000},
-        {type = 'item', name = 'aoc-maize-module-b', amount = 2, quality_min = "rare", quality_max = "rare"},
-        {type = 'item', name = 'aoc-loam', amount = 12},
-        {type = 'item', name = 'aoc-magnesium-dust', amount = 4},
-        {type = 'item', name = 'aoc-fertilizer-3', amount = 1}
+        {type = 'item', name = 'aoc-maize-module-b', amount = 2, quality_min = "epic", quality_max = "epic"},
+        {type = 'item', name = 'aoc-loam', amount = 14},
+        {type = 'item', name = 'aoc-magnesium-dust', amount = 5},
+        {type = 'item', name = 'aoc-fertilizer-4', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoc-maize-module-a', amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0, max = 0.4 }},
-        {type = 'item', name = 'aoc-maize-module-b', amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0, max = 0.6 }},
-        {type = 'item', name = 'aoc-maize-module-a', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.4, max = 0.48 }},
-        {type = 'item', name = 'aoc-maize-module-b', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.6, max = 0.72 }}
+        {type = 'item', name = 'aoc-maize-module-a', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0, max = 0.4 }},
+        {type = 'item', name = 'aoc-maize-module-b', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0, max = 0.6 }}
     },
 	main_product = "aoc-maize-module-b",
-    icons = get_icons_quality( data.raw.item["aoc-maize"], 4 ),
-    energy_required = 250,
+    icons = get_icons_quality( data.raw.item["aoc-maize"], 5 ),
+    energy_required = 270,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 251, g = 217, b = 112}},
 	categories = {'aoc-category-farm-plot-maize'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-soybeans-4-recipe',
+    name = 'aoc-farm-plot-soybeans-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
         {type = 'item', name = 'aoc-soybean-seeds', amount = 3},
 		{type = 'item', name = 'aoc-quicklime', amount = 2},
         {type = 'item', name = 'aoc-loam', amount = 3},
-        {type = 'item', name = 'aoc-fertilizer-3', amount = 1}
+        {type = 'item', name = 'aoc-fertilizer-4', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoc-soybeans', amount = 10}
+        {type = 'item', name = 'aoc-soybeans', amount = 13}
     },
     energy_required = 60,
 	auto_recycle = false,
-	icons = get_icons( data.raw.item['aoc-soybeans'], { icon = "__ageofcreation__/img/items/tier/t4.png" } ),
+	icons = get_icons( data.raw.item['aoc-soybeans'], { icon = "__ageofcreation__/img/items/tier/t5.png" } ),
+	crafting_machine_tint = { primary = {r = 112, g = 156, b = 9}},
 	categories = {'aoc-category-farm-plot-soybean'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-soybeans-module-4-recipe',
+    name = 'aoc-farm-plot-soybeans-module-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-        {type = 'item', name = 'aoc-soybeans-module', amount = 2, quality_min = "rare", quality_max = "rare"},
+        {type = 'item', name = 'aoc-soybeans-module', amount = 2, quality_min = "epic", quality_max = "epic"},
 		{type = 'item', name = 'aoc-quicklime', amount = 4},
-        {type = 'item', name = 'aoc-loam', amount = 3},
-        {type = 'item', name = 'aoc-fertilizer-3', amount = 1}
+        {type = 'item', name = 'aoc-loam', amount = 2},
+        {type = 'item', name = 'aoc-fertilizer-4', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoc-soybeans-module', amount=1, quality_min = "epic", quality_max = "epic"},
-        {type = 'item', name = 'aoc-soybeans-module', amount=1, quality_min = "legendary", quality_max = "legendary", independent_probability = 0.1}
+        {type = 'item', name = 'aoc-soybeans-module', amount=1, quality_min = "legendary", quality_max = "legendary"}
     },
 	main_product = "aoc-soybeans-module",
-    icons = get_icons_quality( data.raw.item["aoc-soybeans"], 4 ),
-    energy_required = 270,
+    icons = get_icons_quality( data.raw.item["aoc-soybeans"], 5 ),
+    energy_required = 290,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 112, g = 156, b = 9}},
 	categories = {'aoc-category-farm-plot-soybean'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-spruce-tree-4-recipe',
+    name = 'aoc-farm-plot-spruce-tree-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -1212,20 +1279,24 @@ data:extend({{
         {type = 'item', name = 'aoc-loam', amount = 1},
         {type = 'item', name = 'aoc-bone-meal', amount = 1},
         {type = 'item', name = 'aoc-phosphate', amount = 1},
+        {type = 'item', name = 'aoc-earth-catalyst', amount = 1},
         {type = 'item', name = 'aoc-alien-chitin', amount = 1},
         {type = 'fluid', name = 'water', amount = 200}
     },
     results = {
-        {type = 'item', name = 'aoc-spruce-tree', amount = 1}
+        {type = 'item', name = 'aoc-spruce-tree', amount = 1},
+        {type = 'item', name = 'aoc-earth-catalyst', amount = 1, independent_probability = 0.7, ignored_by_productivity = 1}
     },
-    energy_required = 3,
+	main_product = 'aoc-spruce-tree',
+    energy_required = 2,
 	auto_recycle = false,
-	icons = get_icons( data.raw.item['aoc-spruce-tree'], { icon = "__ageofcreation__/img/items/tier/t4.png" } ),
+	icons = get_icons( data.raw.item['aoc-spruce-tree'], { icon = "__ageofcreation__/img/items/tier/t5.png" } ),
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-spruce-tree'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-resin-4-recipe',
+    name = 'aoc-farm-plot-resin-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -1235,42 +1306,44 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'aoc-resin', amount = 2},
-		{type = 'item', name = 'aoc-spruce-tree', amount = 1, independent_probability = 0.975, ignored_by_productivity = 1 }
+		{type = 'item', name = 'aoc-spruce-tree', amount = 1, independent_probability = 0.9875, ignored_by_productivity = 1 }
     },
 	main_product = 'aoc-resin',
-    energy_required = 5,
+    energy_required = 4,
 	auto_recycle = false,
-	icons = get_icons( data.raw.item['aoc-resin'], { icon = "__ageofcreation__/img/items/tier/t4.png" } ),
+	icons = get_icons( data.raw.item['aoc-resin'], { icon = "__ageofcreation__/img/items/tier/t5.png" } ),
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-spruce-tree'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-spruce-tree-module-4-recipe',
+    name = 'aoc-farm-plot-spruce-tree-module-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-        {type = 'fluid', name = 'water', amount = 2500},
-        {type = 'item', name = 'aoc-spruce-tree-module', amount = 1, quality_min = "rare", quality_max = "rare"},
+        {type = 'fluid', name = 'water', amount = 3000},
+        {type = 'item', name = 'aoc-spruce-tree-module', amount = 1, quality_min = "epic", quality_max = "epic"},
         {type = 'item', name = 'tree-seed', amount = 1},
         {type = 'item', name = 'aoc-loam', amount = 4},
         {type = 'item', name = 'aoc-bone-meal', amount = 1},
         {type = 'item', name = 'aoc-phosphate', amount = 1},
+        {type = 'item', name = 'aoc-earth-catalyst', amount = 1},
         {type = 'item', name = 'aoc-alien-chitin', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoc-spruce-tree-module', amount=1, quality_min = "rare", quality_max = "rare", shared_probability = { min = 0, max = 0.06 }},
-        {type = 'item', name = 'aoc-spruce-tree-module', amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0.06, max = 0.72 }},
-        {type = 'item', name = 'aoc-spruce-tree-module', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.72, max = 0.78 }}
+        {type = 'item', name = 'aoc-spruce-tree-module', amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0, max = 0.06 }},
+        {type = 'item', name = 'aoc-spruce-tree-module', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.06, max = 0.72 }}
     },
 	main_product = "aoc-spruce-tree-module",
-    icons = get_icons_quality( data.raw.item["aoc-spruce-tree"], 4 ),
-    energy_required = 90,
+    icons = get_icons_quality( data.raw.item["aoc-spruce-tree"], 5 ),
+    energy_required = 110,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-spruce-tree'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-rubber-tree-4-recipe',
+    name = 'aoc-farm-plot-rubber-tree-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -1278,21 +1351,25 @@ data:extend({{
         {type = 'item', name = 'aoc-loam', amount = 1},
         {type = 'item', name = 'aoc-bone-meal', amount = 1},
         {type = 'item', name = 'aoc-phosphate', amount = 1},
+		{type = 'item', name = 'aoc-earth-catalyst', amount = 1},
         {type = 'item', name = 'aoc-alien-chitin', amount = 1},
         {type = 'item', name = 'aoc-slaked-lime', amount = 1},
         {type = 'fluid', name = 'water', amount = 200}
     },
     results = {
-        {type = 'item', name = 'aoc-rubber-tree', amount = 1}
+        {type = 'item', name = 'aoc-rubber-tree', amount = 1},
+		{type = 'item', name = 'aoc-earth-catalyst', amount = 1, independent_probability = 0.7, ignored_by_productivity = 1}
     },
-    energy_required = 6,
+	main_product = 'aoc-rubber-tree',
+    energy_required = 4,
 	auto_recycle = false,
-	icons = get_icons( data.raw.item['aoc-rubber-tree'], { icon = "__ageofcreation__/img/items/tier/t4.png" } ),
+	icons = get_icons( data.raw.item['aoc-rubber-tree'], { icon = "__ageofcreation__/img/items/tier/t5.png" } ),
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-rubber-tree'}
 }})
 
 data:extend({{
-	name = 'aoc-forestry-rubber-tree-4-recipe',
+	name = 'aoc-forestry-rubber-tree-5-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
@@ -1303,43 +1380,45 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoc-log', amount = 1},
 		{type = 'item', name = 'aoc-rubber-tree-seedling', amount = 1},
-		{type = 'item', name = 'aoc-rubber-tree-seedling', amount = 1, independent_probability = 0.05},
-        {type = 'fluid', name = 'aoc-latex', amount = 140}
+		{type = 'item', name = 'aoc-rubber-tree-seedling', amount = 1, independent_probability = 0.025},
+        {type = 'fluid', name = 'aoc-latex', amount = 170}
     },
 	energy_required = 5,
 	main_product = 'aoc-latex',
 	auto_recycle = false,
+	icons = get_icons( data.raw.fluid['aoc-latex'], { icon = "__ageofcreation__/img/items/tier/t5.png" } ),
 	categories = {'aoc-category-harvesting'},
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-rubber-tree-module-4-recipe',
+    name = 'aoc-farm-plot-rubber-tree-module-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-        {type = 'fluid', name = 'water', amount = 2500},
-        {type = 'item', name = 'aoc-rubber-tree-module', amount = 1, quality_min = "rare", quality_max = "rare"},
+        {type = 'fluid', name = 'water', amount = 3000},
+        {type = 'item', name = 'aoc-rubber-tree-module', amount = 1, quality_min = "epic", quality_max = "epic"},
         {type = 'item', name = 'aoc-rubber-tree-seedling', amount = 1},
         {type = 'item', name = 'aoc-slaked-lime', amount = 2},
         {type = 'item', name = 'aoc-loam', amount = 4},
         {type = 'item', name = 'aoc-bone-meal', amount = 1},
         {type = 'item', name = 'aoc-phosphate', amount = 1},
+		{type = 'item', name = 'aoc-earth-catalyst', amount = 1},
         {type = 'item', name = 'aoc-alien-chitin', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoc-rubber-tree-module', amount=1, quality_min = "rare", quality_max = "rare", shared_probability = { min = 0, max = 0.06 }},
-        {type = 'item', name = 'aoc-rubber-tree-module', amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0.06, max = 0.72 }},
-        {type = 'item', name = 'aoc-rubber-tree-module', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.72, max = 0.78 }}
+        {type = 'item', name = 'aoc-rubber-tree-module', amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0, max = 0.06 }},
+        {type = 'item', name = 'aoc-rubber-tree-module', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.06, max = 0.72 }}
     },
 	main_product = "aoc-rubber-tree-module",
-    icons = get_icons_quality( data.raw.item["aoc-rubber-tree"], 4 ),
-    energy_required = 135,
+    icons = get_icons_quality( data.raw.item["aoc-rubber-tree"], 5 ),
+    energy_required = 160,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-rubber-tree'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-apple-tree-4-recipe',
+    name = 'aoc-farm-plot-apple-tree-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -1347,20 +1426,24 @@ data:extend({{
         {type = 'item', name = 'aoc-loam', amount = 2},
         {type = 'item', name = 'aoc-bone-meal', amount = 1},
         {type = 'item', name = 'aoc-phosphate', amount = 1},
+        {type = 'item', name = 'aoc-earth-catalyst', amount = 1},
         {type = 'item', name = 'aoc-alien-chitin', amount = 1},
         {type = 'fluid', name = 'water', amount = 200}
     },
     results = {
-        {type = 'item', name = 'aoc-apple-tree', amount = 1}
+        {type = 'item', name = 'aoc-apple-tree', amount = 1},
+        {type = 'item', name = 'aoc-earth-catalyst', amount = 1, independent_probability = 0.7, ignored_by_productivity = 1}
     },
-    energy_required = 7,
+	main_product = 'aoc-apple-tree',
+    energy_required = 5,
 	auto_recycle = false,
-	icons = get_icons( data.raw.item['aoc-apple-tree'], { icon = "__ageofcreation__/img/items/tier/t4.png" } ),
+	icons = get_icons( data.raw.item['aoc-apple-tree'], { icon = "__ageofcreation__/img/items/tier/t5.png" } ),
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-apple-tree'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-apple-4-recipe',
+    name = 'aoc-farm-plot-apple-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -1368,45 +1451,50 @@ data:extend({{
         {type = 'item', name = 'aoc-loam', amount = 2},
         {type = 'item', name = 'aoc-bone-meal', amount = 1},
         {type = 'item', name = 'aoc-phosphate', amount = 1},
+        {type = 'item', name = 'aoc-earth-catalyst', amount = 1},
         {type = 'item', name = 'aoc-alien-chitin', amount = 1},
         {type = 'fluid', name = 'water', amount = 200}
     },
     results = {
-        {type = 'item', name = 'aoc-apple', amount = 4}
+        {type = 'item', name = 'aoc-apple', amount = 4},
+        {type = 'item', name = 'aoc-earth-catalyst', amount = 1, independent_probability = 0.7, ignored_by_productivity = 1}
     },
-    energy_required = 7,
+	main_product = 'aoc-apple',
+    energy_required = 5,
 	auto_recycle = false,
-	icons = get_icons( data.raw.item['aoc-apple'], { icon = "__ageofcreation__/img/items/tier/t4.png" } ),
+	icons = get_icons( data.raw.item['aoc-apple'], { icon = "__ageofcreation__/img/items/tier/t5.png" } ),
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-apple-tree'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-apple-tree-module-4-recipe',
+    name = 'aoc-farm-plot-apple-tree-module-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-        {type = 'fluid', name = 'water', amount = 2500},
-        {type = 'item', name = 'aoc-apple-tree-module', amount = 1, quality_min = "rare", quality_max = "rare"},
+        {type = 'fluid', name = 'water', amount = 3000},
+        {type = 'item', name = 'aoc-apple-tree-module', amount = 1, quality_min = "epic", quality_max = "epic"},
         {type = 'item', name = 'aoc-apple-tree-seeds', amount = 1},
         {type = 'item', name = 'aoc-loam', amount = 4},
         {type = 'item', name = 'aoc-bone-meal', amount = 1},
         {type = 'item', name = 'aoc-phosphate', amount = 1},
+        {type = 'item', name = 'aoc-earth-catalyst', amount = 1},
         {type = 'item', name = 'aoc-alien-chitin', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoc-apple-tree-module', amount=1, quality_min = "rare", quality_max = "rare", shared_probability = { min = 0, max = 0.06 }},
-        {type = 'item', name = 'aoc-apple-tree-module', amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0.06, max = 0.72 }},
-        {type = 'item', name = 'aoc-apple-tree-module', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.72, max = 0.78 }}
+        {type = 'item', name = 'aoc-apple-tree-module', amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0, max = 0.06 }},
+        {type = 'item', name = 'aoc-apple-tree-module', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.06, max = 0.72 }}
     },
 	main_product = "aoc-apple-tree-module",
-    icons = get_icons_quality( data.raw.item["aoc-apple-tree"], 4 ),
-    energy_required = 155,
+    icons = get_icons_quality( data.raw.item["aoc-apple-tree"], 5 ),
+    energy_required = 170,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-apple-tree'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-olive-tree-4-recipe',
+    name = 'aoc-farm-plot-olive-tree-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -1415,20 +1503,24 @@ data:extend({{
         {type = 'item', name = 'aoc-wood-pulp', amount = 2},
         {type = 'item', name = 'aoc-bone-meal', amount = 1},
         {type = 'item', name = 'aoc-phosphate', amount = 1},
+        {type = 'item', name = 'aoc-earth-catalyst', amount = 1},
         {type = 'item', name = 'aoc-alien-chitin', amount = 1},
         {type = 'fluid', name = 'water', amount = 200}
     },
     results = {
-        {type = 'item', name = 'aoc-olive-tree', amount = 1}
+        {type = 'item', name = 'aoc-olive-tree', amount = 1},
+        {type = 'item', name = 'aoc-earth-catalyst', amount = 1, independent_probability = 0.7, ignored_by_productivity = 1}
     },
-    energy_required = 7,
+	main_product = 'aoc-olive-tree',
+    energy_required = 5,
 	auto_recycle = false,
-	icons = get_icons( data.raw.item['aoc-olive-tree'], { icon = "__ageofcreation__/img/items/tier/t4.png" } ),
+	icons = get_icons( data.raw.item['aoc-olive-tree'], { icon = "__ageofcreation__/img/items/tier/t5.png" } ),
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-olive-tree'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-olive-4-recipe',
+    name = 'aoc-farm-plot-olive-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
@@ -1445,33 +1537,35 @@ data:extend({{
     },
     energy_required = 7,
 	auto_recycle = false,
-	icons = get_icons( data.raw.item['aoc-olive'], { icon = "__ageofcreation__/img/items/tier/t4.png" } ),
+	icons = get_icons( data.raw.item['aoc-olive'], { icon = "__ageofcreation__/img/items/tier/t5.png" } ),
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-olive-tree'}
 }})
 
 data:extend({{
-    name = 'aoc-farm-plot-olive-tree-module-4-recipe',
+    name = 'aoc-farm-plot-olive-tree-module-5-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
-        {type = 'fluid', name = 'water', amount = 2500},
-        {type = 'item', name = 'aoc-olive-tree-module', amount = 1, quality_min = "rare", quality_max = "rare"},
+        {type = 'fluid', name = 'water', amount = 3000},
+        {type = 'item', name = 'aoc-olive-tree-module', amount = 1, quality_min = "epic", quality_max = "epic"},
         {type = 'item', name = 'aoc-olive-tree-seeds', amount = 1},
         {type = 'item', name = 'aoc-loam', amount = 4},
         {type = 'item', name = 'aoc-wood-pulp', amount = 4},
         {type = 'item', name = 'aoc-bone-meal', amount = 1},
         {type = 'item', name = 'aoc-phosphate', amount = 1},
+        {type = 'item', name = 'aoc-earth-catalyst', amount = 1},
         {type = 'item', name = 'aoc-alien-chitin', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoc-olive-tree-module', amount=1, quality_min = "rare", quality_max = "rare", shared_probability = { min = 0, max = 0.06 }},
-        {type = 'item', name = 'aoc-olive-tree-module', amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0.06, max = 0.72 }},
-        {type = 'item', name = 'aoc-olive-tree-module', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.72, max = 0.78 }}
+        {type = 'item', name = 'aoc-olive-tree-module', amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0, max = 0.06 }},
+        {type = 'item', name = 'aoc-olive-tree-module', amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.06, max = 0.72 }}
     },
 	main_product = "aoc-olive-tree-module",
-    icons = get_icons_quality( data.raw.item["aoc-olive-tree"], 4 ),
-    energy_required = 205,
+    icons = get_icons_quality( data.raw.item["aoc-olive-tree"], 5 ),
+    energy_required = 230,
 	auto_recycle = false,
+	crafting_machine_tint = { primary = {r = 53, g = 97, b = 48}},
 	categories = {'aoc-category-farm-plot-olive-tree'}
 }})
 
@@ -1650,13 +1744,46 @@ data:extend({{
 }})
 
 data:extend({{
+	name = 'aoc-crafting-brain-jar-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-flask', amount = 1},
+		{type = 'item', name = 'aoc-alien-brain', amount = 10},
+		{type = 'item', name = 'quantum-processor', amount = 10}
+	},
+	results = {
+        {type = 'item', name = 'aoc-brain-jar', amount = 1}
+    },
+	categories = {'aoc-category-intricate-crafting'},
+	energy_required = 30
+}})
+
+data:extend({{
+	name = 'aoc-crafting-spidertron-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-brain-jar', amount = 1},
+		{type = 'item', name = 'exoskeleton-equipment', amount = 4},
+		{type = 'item', name = 'radar', amount = 4},
+		{type = 'item', name = 'fission-reactor-equipment', amount = 1},
+		{type = 'item', name = 'low-density-structure', amount = 50}
+	},
+	results = {
+        {type = 'item', name = 'spidertron', amount = 1}
+    },
+	energy_required = 60
+}})
+
+data:extend({{
 	name = 'aoc-crafting-biolab-recipe',
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
 		{type = 'item', name = 'aoc-enderium-machine-hull', amount = 8},
 		{type = 'item', name = 'lab', amount = 4},
-		{type = 'item', name = 'aoc-alien-brain', amount = 10},
+		{type = 'item', name = 'aoc-brain-jar', amount = 1},
 		{type = 'item', name = 'aoc-plutonium-239', amount = 6},
 		{type = 'item', name = 'aoc-hormones', amount = 10}
 	},
@@ -1664,4 +1791,119 @@ data:extend({{
         {type = 'item', name = 'biolab', amount = 1}
     },
 	energy_required = 20
+}})
+
+data:extend({{
+    name = 'aoc-crafting-foundry-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-enderium-machine-hull', amount = 12},
+		{type = 'item', name = 'aoc-cooling-coil', amount = 8},
+		{type = 'item', name = 'concrete', amount = 16},
+		{type = 'item', name = 'aoc-bronze-plate', amount = 20}
+    },
+    results = {
+        {type = 'item', name = 'foundry', amount = 1}
+    },
+    energy_required = 5
+}})
+
+data:extend({{
+    name = 'aoc-ground-bore-clay-recipe',
+    type = 'recipe',
+    enabled = false,
+    allow_decomposition = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-graphite-rod', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-clay', amount = 4},
+        {type = 'item', name = 'aoc-mica', amount = 1}
+    },
+	main_product = 'aoc-clay',
+    energy_required = 4,
+	categories = {'aoc-category-digging'},
+	surface_conditions = { { property = "pressure", min = 800, max = 800 } }
+}})
+
+data:extend({{
+	name = 'aoc-refining-coal-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'crude-oil', amount = 100},
+		{type = 'fluid', name = 'aoc-oxygen', amount = 120}
+	},
+	results = {
+		{type = 'item', name = 'aoc-coal-dust', amount = 2},
+        {type = 'fluid', name = 'aoc-syngas', amount = 30}
+    },
+    main_product = "aoc-coal-dust",
+	energy_required = 6,
+	categories = {'oil-processing'}
+}})
+
+data:extend({{
+	name = 'aoc-metallurgy-holmium-solution-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'sulfuric-acid', amount = 25},
+		{type = 'item', name = 'holmium-ore', amount = 1}
+	},
+	results = {
+        {type = 'fluid', name = 'holmium-solution', amount = 25}
+    },
+	energy_required = 10,
+	categories = {'metallurgy'}
+}})
+
+data:extend({{
+	name = 'aoc-metallurgy-holmium-plate-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'fluid', name = 'holmium-solution', amount = 25},
+		{type = 'item', name = 'aoc-mold', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'holmium-plate', amount = 8, shared_probability = { min = 0, max = 0.1 }},
+		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_productivity = 1, shared_probability = { min = 0.02, max = 1 }}
+    },
+	main_product = 'holmium-plate',
+	energy_required = 6,
+	categories = {'metallurgy'}
+}})
+
+data:extend({{
+	name = 'aoc-metallurgy-neodymium-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-neodymium-ore', amount = 1},
+		{type = 'item', name = 'aoc-mold', amount = 1}
+	},
+	results = {
+		{type = 'item', name = 'aoc-neodymium', amount = 8, shared_probability = { min = 0, max = 0.1 }},
+		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_productivity = 1, shared_probability = { min = 0.02, max = 1 }}
+    },
+	main_product = 'aoc-neodymium',
+	energy_required = 6,
+	categories = {'metallurgy'}
+}})
+
+data:extend({{
+	name = 'aoc-crafting-science-09-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-flask', amount = 1},
+		{type = 'item', name = 'holmium-plate', amount = 4},
+		{type = 'item', name = 'promethium-asteroid-chunk', amount = 1}
+	},
+	results = {
+        {type = 'item', name = 'aoc-science-09', amount = 1}
+    },
+	energy_required = 4
 }})

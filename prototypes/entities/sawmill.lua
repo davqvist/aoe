@@ -85,12 +85,16 @@ data:extend({{
       {
         always_draw = true,
         animation = {
-          filename = "__ageofcreation__/img/entities/sawmill-animation-1.png",
+          filenames = {
+            "__ageofcreation__/img/entities/sawmill-animation-1.png",
+            "__ageofcreation__/img/entities/sawmill-animation-2.png"
+          },
           priority = "high",
           width = 460,
           height = 500,
           line_length = 8,
-          frame_count = 64,
+          lines_per_file = 8,
+          frame_count = 80,
           scale = 0.285,
           animation_speed = 1
         }
@@ -168,12 +172,16 @@ data:extend({{
       {
         always_draw = true,
         animation = {
-          filename = "__ageofcreation__/img/entities/sawmill-animation-1.png",
+          filenames = {
+            "__ageofcreation__/img/entities/sawmill-animation-1.png",
+            "__ageofcreation__/img/entities/sawmill-animation-2.png"
+          },
           priority = "high",
           width = 460,
           height = 500,
           line_length = 8,
-          frame_count = 64,
+          lines_per_file = 8,
+          frame_count = 80,
           scale = 0.285,
           animation_speed = 1
         }

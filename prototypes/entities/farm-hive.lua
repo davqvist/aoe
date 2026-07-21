@@ -1,7 +1,7 @@
 data:extend({{
     type = "item",
     name = "aoc-farm-hive",
-    icon = '__NPBees2_art__/graphics/icon/hive-1.png',
+    icon = '__ageofcreation__/img/items/bees/hive-1.png',
 	icon_size = 32,
     subgroup = "aoc-bees-buildings",
     order = "b",
@@ -18,7 +18,7 @@ data:extend({{
 	energy_usage = "1kW",
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     module_slots = 10,
-    icon = '__NPBees2_art__/graphics/icon/hive-1.png',
+    icon = '__ageofcreation__/img/items/bees/hive-1.png',
 	icon_size = 32,
     icons_positioning = { {inventory_index = defines.inventory.crafter_modules, max_icons_per_row = 5} },
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -31,7 +31,7 @@ data:extend({{
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     graphics_set = {
         animation= {
-            filename = '__NPBees2_art__/graphics/entity/hive-1.png',
+            filename = '__ageofcreation__/img/entities/bees/hive-1.png',
             priority = 'extra-high',
             width = 192,
             height = 192,
@@ -42,7 +42,7 @@ data:extend({{
     },
     working_sound = {
         sound = {
-            filename = '__NPBees2_art__/sound/bee-machine.ogg'
+            filename = '__ageofcreation__/sound/bee-machine.ogg'
         },
         audible_distance_modifier = 0.5
     },

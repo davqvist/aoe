@@ -1092,10 +1092,10 @@ data:extend({{
     name = "aoc-bees-tech",
     icons = {
       {
-        icon = "__NPBees2_art__/graphics/dynamic/bee-base.png",
+        icon = "__ageofcreation__/img/items/bees/bee-base.png",
         icon_size = 32
       },{
-        icon = "__NPBees2_art__/graphics/dynamic/bee-stripes.png",
+        icon = "__ageofcreation__/img/items/bees/bee-stripes.png",
         tint = {255, 255, 0},
         icon_size = 32
       }
@@ -1138,7 +1138,7 @@ data:extend({{
 data:extend({{
   type = "technology",
   name = "aoc-bee-helpers-tech",
-  icons = get_icons( data.raw["item"]["bee-construction"] ),
+  icons = get_icons( data.raw["item"]["aoc-bee-construction"] ),
   prerequisites = {"aoc-bees-tech", "aoc-advanced-storage-tech-2"},
   effects = {
     {
@@ -1198,10 +1198,10 @@ data:extend({{
     name = "aoc-drones-tech-1",
     icons = {
       { 
-        icon = "__NPBees2_art__/graphics/dynamic/bee-base.png",
+        icon = "__ageofcreation__/img/items/bees/bee-base.png",
         icon_size = 32
       },{
-        icon = "__NPBees2_art__/graphics/dynamic/bee-stripes.png",
+        icon = "__ageofcreation__/img/items/bees/bee-stripes.png",
         tint = {0, 0, 255},
         icon_size = 32
       }
@@ -1241,10 +1241,10 @@ data:extend({{
     name = "aoc-drones-tech-2",
     icons = {
       {
-        icon = "__NPBees2_art__/graphics/dynamic/bee-base.png",
+        icon = "__ageofcreation__/img/items/bees/bee-base.png",
         icon_size = 32
       },{
-        icon = "__NPBees2_art__/graphics/dynamic/bee-stripes.png",
+        icon = "__ageofcreation__/img/items/bees/bee-stripes.png",
         tint = {0, 0, 255},
         icon_size = 32
       }

@@ -1,7 +1,7 @@
 data:extend({{
     type = "item",
     name = "aoc-farm-apiary",
-    icon = '__NPBees2_art__/graphics/icon/apiary.png',
+    icon = '__ageofcreation__/img/items/bees/apiary.png',
 	  icon_size = 32,
     subgroup = "aoc-bees-buildings",
     order = "a",
@@ -18,7 +18,7 @@ data:extend({{
 	  energy_usage = "1kW",
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     module_slots = 10,
-    icon = '__NPBees2_art__/graphics/icon/apiary.png',
+    icon = '__ageofcreation__/img/items/bees/apiary.png',
 	  icon_size = 32,
     icons_positioning = { {inventory_index = defines.inventory.crafter_modules, scale = 0.4, scale_for_many = 0.4, max_icons_per_row = 5} },
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -32,7 +32,7 @@ data:extend({{
     graphics_set = {
       animation =	{
         north = {
-          filename = '__NPBees2_art__/graphics/entity/apiary-v2.png',
+          filename = '__ageofcreation__/img/entities/bees/apiary-v2.png',
           width = 192,
           height = 192,
           frame_count = 1,
@@ -40,7 +40,7 @@ data:extend({{
           scale = 0.5
         },
         east = {
-          filename = '__NPBees2_art__/graphics/entity/apiary-h.png',
+          filename = '__ageofcreation__/img/entities/bees/apiary-h.png',
           width = 192,
           height = 192,
           frame_count = 1,
@@ -48,7 +48,7 @@ data:extend({{
           scale = 0.5
         },
         south = {
-          filename = '__NPBees2_art__/graphics/entity/apiary-v2.png',
+          filename = '__ageofcreation__/img/entities/bees/apiary-v2.png',
           width = 192,
           height = 192,
           frame_count = 1,
@@ -56,7 +56,7 @@ data:extend({{
           scale = 0.5
         },
         west = {
-          filename = '__NPBees2_art__/graphics/entity/apiary-h.png',
+          filename = '__ageofcreation__/img/entities/bees/apiary-h.png',
           width = 192,
           height = 192,
           frame_count = 1,
@@ -81,7 +81,7 @@ data:extend({{
     },
     working_sound = {
 		sound = {
-			filename = '__NPBees2_art__/sound/bee-machine.ogg'
+			filename = '__ageofcreation__/sound/bee-machine.ogg'
 		},
 		audible_distance_modifier = 0.5,
     surface_conditions = {{ property = "gravity", min = 0.1 }}

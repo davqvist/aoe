@@ -1,6 +1,6 @@
 
 data.raw.lab["lab"].inputs = {}
-for age=1,8 do
+for age=1,10 do
     table.insert(data.raw.lab["lab"].inputs, "aoc-science-" .. string.format("%02d", age) )
 end
 
@@ -12,7 +12,9 @@ local age_tech_cost = {
   {0,0,3,2,1},
   {0,0,5,3,2,1},
   {0,0,8,5,3,2,1},
-  {0,0,13,8,5,3,2,1}
+  {0,0,13,8,5,3,2,1},
+  {0,0,21,13,8,5,3,2,1},
+  {0,0,34,21,13,8,5,3,2,1}
 }
 
 local tiers = {"normal","uncommon","rare","epic","legendary"}
@@ -27,6 +29,7 @@ local to_enchant = {
     ["battery-equipment"] = "battery-equipment",
     ["exoskeleton-equipment"] = "movement-bonus-equipment",
     ["fission-reactor-equipment"] = "generator-equipment",
+    ["fusion-reactor-equipment"] = "generator-equipment",
     ["personal-laser-defense-equipment"] = "active-defense-equipment"
 }
 
@@ -52,17 +55,13 @@ end
 function combine_icons_tiny( newicons, oldicons )
     local new_icons = table.deepcopy( newicons )
     local old_icons = table.deepcopy( oldicons )
-    local biggest_size = 32
-    for _, new in pairs(new_icons) do
-        if new.icon_size and new.icon_size > biggest_size then biggest_size = new.icon_size end
-    end
     for _, old in pairs(old_icons) do
         local old_scale = old.scale or 1
-        old.scale = old_scale*math.min(0.4, biggest_size*0.4/old.icon_size)
-		old.shift = {8,8}
+        old.scale = old_scale*math.max(0.4, 0.4*64/old.icon_size)
+		    old.shift = {8,8}
         table.insert( new_icons, old )
     end
-    return new_icons
+    return new_icons  
 end
 
 function get_void_icon( thing )
@@ -85,13 +84,9 @@ function get_icons( thing, addition, scale )
             if thing.icon_size and not ic.icon_size then
                 ic.icon_size = thing.icon_size
             end
-        end
-        for _, ic in pairs(new_icons) do
             if thing.icon_mipmaps and not ic.icon_mipmaps then
                 ic.icon_mipmaps = thing.icon_mipmaps
             end
-        end
-        for _, ic in pairs(new_icons) do
             if thing.scale and not ic.scale then
                 ic.scale = thing.scale
             end

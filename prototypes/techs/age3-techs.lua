@@ -52,11 +52,11 @@ data:extend({{
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoc-farm-plot-maize-recipe"
+        recipe = "aoc-farm-plot-maize-1-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoc-farm-plot-maize-magnesium-recipe"
+        recipe = "aoc-farm-plot-maize-magnesium-1-recipe"
       },
 	    {
         type = "unlock-recipe",
@@ -91,7 +91,7 @@ data:extend({{
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoc-farm-plot-soybeans-recipe"
+        recipe = "aoc-farm-plot-soybeans-1-recipe"
       },
 	    {
         type = "unlock-recipe",
@@ -130,15 +130,15 @@ data:extend({{
 	  effects = {
       {
         type = "unlock-recipe",
-        recipe = "aoc-farm-plot-spruce-tree-recipe"
+        recipe = "aoc-farm-plot-spruce-tree-1-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoc-farm-plot-spruce-tree-loam-recipe"
+        recipe = "aoc-farm-plot-spruce-tree-1-loam-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoc-farm-plot-resin-recipe"
+        recipe = "aoc-farm-plot-resin-1-recipe"
       },
 	    {
         type = "unlock-recipe",
@@ -150,7 +150,7 @@ data:extend({{
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoc-farm-plot-rubber-tree-recipe"
+        recipe = "aoc-farm-plot-rubber-tree-1-recipe"
       },
 	    {
         type = "unlock-recipe",
@@ -158,7 +158,7 @@ data:extend({{
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoc-forestry-rubber-tree-recipe"
+        recipe = "aoc-forestry-rubber-tree-1-recipe"
       }
     },
     unit = {
@@ -181,7 +181,7 @@ data:extend({{
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoc-farm-plot-apple-tree-recipe"
+        recipe = "aoc-farm-plot-apple-tree-1-recipe"
       },
 	    {
         type = "unlock-recipe",
@@ -201,7 +201,7 @@ data:extend({{
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoc-farm-plot-olive-tree-recipe"
+        recipe = "aoc-farm-plot-olive-tree-1-recipe"
       },
 	    {
         type = "unlock-recipe",
@@ -333,11 +333,11 @@ data:extend({{
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoc-farm-chicken-coop-chicken-recipe"
+        recipe = "aoc-farm-chicken-coop-chicken-1-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoc-farm-chicken-coop-egg-recipe"
+        recipe = "aoc-farm-chicken-coop-egg-1-recipe"
       },
 	    {
         type = "unlock-recipe",
@@ -372,15 +372,15 @@ data:extend({{
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoc-farm-barn-sheep-recipe"
+        recipe = "aoc-farm-barn-sheep-1-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoc-farm-barn-wool-recipe"
+        recipe = "aoc-farm-barn-wool-1-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoc-farm-barn-lamb-recipe"
+        recipe = "aoc-farm-barn-lamb-1-recipe"
       },
 	    {
         type = "unlock-recipe",
@@ -411,15 +411,15 @@ data:extend({{
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoc-farm-barn-cow-recipe"
+        recipe = "aoc-farm-barn-cow-1-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoc-farm-barn-milk-recipe"
+        recipe = "aoc-farm-barn-milk-1-recipe"
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoc-farm-barn-calf-recipe"
+        recipe = "aoc-farm-barn-calf-1-recipe"
       },
 	    {
         type = "unlock-recipe",
@@ -435,7 +435,7 @@ data:extend({{
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoc-high-pressure-leather-recipe"
+        recipe = "aoc-high-pressure-leather-1-recipe"
       }
     },
     unit = {

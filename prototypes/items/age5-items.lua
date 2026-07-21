@@ -121,7 +121,7 @@ data:extend({{
     icon_size = 256,
     icon_mipmaps = 4,
     subgroup = "aoc-parts",
-    order = "k",
+    order = "l",
     stack_size = 100
 }})
 
@@ -181,7 +181,7 @@ data:extend({{
     type = "item",
     name = "aoc-fertilizer-2",
     icon = "__ageofcreation__/img/items/fertilizer-2.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-flora-misc",
     order = "b",
     stack_size = 200

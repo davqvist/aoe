@@ -147,11 +147,20 @@ data:extend({{
 
 data:extend({{
     type = "item",
-    name = "aoc-animal-food-3",
-    icon = "__ageofcreation__/img/items/animal-food-3.png",
+    name = "aoc-brain-jar",
+    icons = combine_icons( get_icons( data.raw["item"]["aoc-flask"] ), { { icon = "__ageofcreation__/img/items/alien-brain.png", icon_size = 64, scale = 0.2, shift = { 0, 5 } } } ),
+    subgroup = "aoc-aliens",
+    order = "k",
+    stack_size = 10
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-animal-food-4",
+    icon = "__ageofcreation__/img/items/animal-food-4.png",
     icon_size = 64,
     subgroup = "aoc-fauna-items",
-    order = "f",
+    order = "g",
     stack_size = 200
 }})
 
@@ -176,13 +185,18 @@ data:extend({{
     stack_size = 200
 }})
 
+data.raw['armor']['modular-armor'].subgroup = "aoc-armor"
+data.raw['armor']['modular-armor'].order = "d"
+data.raw['armor']['modular-armor'].inventory_size_bonus = 30
+data.raw['armor']['modular-armor'].equipment_grid = "large-equipment-grid"
+
 data:extend({{
     type = "item",
-    name = "aoc-fertilizer-3",
-    icon = "__ageofcreation__/img/items/fertilizer-3.png",
+    name = "aoc-fertilizer-4",
+    icon = "__ageofcreation__/img/items/fertilizer-4.png",
     icon_size = 64,
     subgroup = "aoc-flora-misc",
-    order = "c",
+    order = "d",
     stack_size = 200
 }})
 
@@ -235,3 +249,34 @@ data.raw['projectile']['rocket'].stack_size = 100
 data.raw['projectile']['explosive-rocket'].subgroup = "aoc-ammo"
 data.raw['projectile']['explosive-rocket'].order = "h"
 data.raw['projectile']['explosive-rocket'].stack_size = 100
+
+data.raw['item']['holmium-ore'].subgroup = "aoc-metals-fulgora"
+data.raw['item']['holmium-ore'].order = "a"
+data.raw['item']['holmium-ore'].stack_size = 200
+data.raw['item']['holmium-ore'].icons = { { icon = "__space-age__/graphics/icons/holmium-ore.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/ho.png", icon_size = 64 } }
+data.raw['item']['holmium-ore'].pictures = { { filename = "__space-age__/graphics/icons/holmium-ore.png", size = 64, mipmap_count = 4, scale = 0.5 } }
+data.raw['item']['holmium-plate'].subgroup = "aoc-metals-fulgora"
+data.raw['item']['holmium-plate'].order = "b"
+data.raw['item']['holmium-plate'].stack_size = 200
+data.raw['item']['holmium-plate'].icons = { { icon = "__space-age__/graphics/icons/holmium-plate.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/ho.png", icon_size = 64 } }
+data.raw['item']['holmium-plate'].pictures = { { filename = "__space-age__/graphics/icons/holmium-plate.png", size = 64, mipmap_count = 4, scale = 0.5 } }
+
+data:extend({{
+    type = "item",
+    name = "aoc-neodymium-ore",
+    icons = { { icon = "__angelssmeltinggraphics__/graphics/icons/ore-stone.png", icon_size = 32 }, { icon = "__ageofcreation__/img/items/atoms/nd.png", icon_size = 64 } },
+    pictures = { { filename = "__angelssmeltinggraphics__/graphics/icons/ore-stone.png", size = 32  } },
+    subgroup = "aoc-metals-fulgora",
+    order = "c",
+    stack_size = 200
+}})
+
+data:extend({{
+    type = "item",
+    name = "aoc-neodymium",
+    icons = { { icon = "__angelssmeltinggraphics__/graphics/icons/silicon-seed.png", icon_size = 32, tint = { r = 0.4, g = 0.4, b = 0.3 } }, { icon = "__ageofcreation__/img/items/atoms/nd.png", icon_size = 64 } },
+    pictures = { { filename = "__angelssmeltinggraphics__/graphics/icons/silicon-seed.png", size = 32, tint = { r = 0.4, g = 0.4, b = 0.3 }  } },
+    subgroup = "aoc-metals-fulgora",
+    order = "d",
+    stack_size = 200
+}})

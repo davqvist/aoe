@@ -73,16 +73,18 @@ data:extend({{
 
 data.raw['item']['metallic-asteroid-chunk'].subgroup = "aoc-asteroids"
 data.raw['item']['metallic-asteroid-chunk'].order = "a"
-data.raw['item']['metallic-asteroid-chunk'].stack_size = 1
+data.raw['item']['metallic-asteroid-chunk'].stack_size = 10
 data.raw['item']['carbonic-asteroid-chunk'].subgroup = "aoc-asteroids"
 data.raw['item']['carbonic-asteroid-chunk'].order = "b"
-data.raw['item']['carbonic-asteroid-chunk'].stack_size = 1
+data.raw['item']['carbonic-asteroid-chunk'].stack_size = 10
 data.raw['item']['oxide-asteroid-chunk'].subgroup = "aoc-asteroids"
 data.raw['item']['oxide-asteroid-chunk'].order = "c"
-data.raw['item']['oxide-asteroid-chunk'].stack_size = 1
+data.raw['item']['oxide-asteroid-chunk'].stack_size = 10
 data.raw['item']['promethium-asteroid-chunk'].subgroup = "aoc-asteroids"
 data.raw['item']['promethium-asteroid-chunk'].order = "d"
-data.raw['item']['promethium-asteroid-chunk'].stack_size = 1
+data.raw['item']['promethium-asteroid-chunk'].stack_size = 10
+data.raw['item']['promethium-asteroid-chunk'].icons = { { icon = "__space-age__/graphics/icons/promethium-asteroid-chunk.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/pm.png", icon_size = 64 } }
+data.raw['item']['promethium-asteroid-chunk'].pictures = { { filename = "__space-age__/graphics/icons/promethium-asteroid-chunk.png", size = 64, mipmap_count = 4, scale = 0.5 } }
 
 data.raw['ammo']['piercing-rounds-magazine'].subgroup = "aoc-ammo"
 data.raw['ammo']['piercing-rounds-magazine'].order = "c"
@@ -171,7 +173,7 @@ data.raw['module']['efficiency-module-3'].order = "d3"
 data.raw['module']['efficiency-module-3'].stack_size = 50
 
 data.raw['item']['flying-robot-frame'].subgroup = "aoc-parts"
-data.raw['item']['flying-robot-frame'].order = "l"
+data.raw['item']['flying-robot-frame'].order = "m"
 data.raw['item']['flying-robot-frame'].stack_size = 200
 
 data.raw['armor']['heavy-armor'].subgroup = "aoc-armor"
@@ -184,6 +186,8 @@ data.raw['item']['exoskeleton-equipment'].subgroup = "aoc-equipment"
 data.raw['item']['exoskeleton-equipment'].order = "k"
 data.raw['item']['fission-reactor-equipment'].subgroup = "aoc-equipment"
 data.raw['item']['fission-reactor-equipment'].order = "l"
+data.raw['item']['fusion-reactor-equipment'].subgroup = "aoc-equipment"
+data.raw['item']['fusion-reactor-equipment'].order = "m"
 
 data:extend({{
     type = "item",

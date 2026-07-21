@@ -1,4 +1,26 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.14
+Date: 2026-07-05
+  Features:
+    - added rest of progression, game is now completable
+    - added more atom symbols
+    - added Nuclear Plant building
+    - added missing empty fuel cell Mk1 and Mk2 recipes
+    - added T5 for animals, plants and drones
+    - added T3-5 for lotus flowers
+    - added farm plot recipe tints
+  Changes:
+    - moved nuclear buildings and items to new nuclear item group
+    - moved some recipes to new Nuclear Plant building
+    - made T2 modules require more rayon
+    - renamed some animal and plant recipes (NOT ADDING MIGRATION as noone is testing right now)
+    - as Beekeeping mod won't get updated and license allows it, I integrated it into main mod (NOT ADDING MIGRATION for bee bots either)
+    - made steel and ceramic smelting as well as soybean seeds and soy flour milk recipes slower
+    - changed cauldron texture
+    - water is H2O not HO2 lol, so electrolysis of water recipe was wrong the whole time, but is now finally fixed
+  Bugfixes:
+    - hopefully finally improved combined icons     
+---------------------------------------------------------------------------------------------------
 Version: 0.0.13
 Date: 2026-07-03
   Features:

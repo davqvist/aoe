@@ -1,27 +1,5 @@
 local AOC = require("__ageofcreation__/globals")
 
--- ANGELS
-
-data.raw['item']['wood'].subgroup = "aoc-flora-wood"
-data.raw['item']['wood'].order = "e"
-data.raw['capsule']['raw-fish'].subgroup = "aoc-fauna-fish"
-data.raw['capsule']['raw-fish'].order = "a"
-
-data.raw['item']['steel-plate'].icon = "__base__/graphics/icons/steel-plate.png"
-data.raw['item']['steel-plate'].icon_size = 64
-data.raw['item']['steel-plate'].icon_mipmaps = 4
-
---data.raw.lab['aoc-burner-lab'].inputs[#data.raw.lab['aoc-burner-lab'].inputs] = nil
---data.raw.lab['lab'].inputs[#data.raw.lab['lab']] = nil
-
---data.raw['fish']['alien-fish-1'].autoplace = nil
---data.raw['fish']['alien-fish-2'].autoplace = nil
---data.raw['fish']['alien-fish-3'].autoplace = nil
-
-data.raw['fluid']['light-oil'].hidden = false
-data.raw['fluid']['heavy-oil'].hidden = false
-data.raw['fluid']['petroleum-gas'].hidden = false
-
 -- Power Overload
 
 data.raw['electric-pole']['po-huge-electric-pole'].supply_area_distance = 2.5
@@ -1123,11 +1101,6 @@ table.insert( data.raw["technology"]["aoc-fluid-handling-tech-2"].effects, {
     type = "unlock-recipe",
     recipe = "aoc-crafting-configurable-valve-recipe"
 } )
-
--- Beekeeping 
-
-beekeeping.override = true
-beekeeping.problem_in_data_updates = false
 
 -- YAFC
 

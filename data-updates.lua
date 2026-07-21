@@ -1,11 +1,11 @@
 require("__ageofcreation__/prototypes/hide_rest")
 require("__ageofcreation__/prototypes/mods_override")
 require("__ageofcreation__/prototypes/recipes/research")
+require("__ageofcreation__/prototypes/recipes/replicating")
 
 local disabled_resources = {
 	"coal","crude-oil","iron-ore","copper-ore","uranium-ore",
     "vulcanus_coal","tungsten_ore",
-	"scrap",
 	"gleba_stone",
 	"lithium_brine","fluorine_vent","aquilo_crude_oil"
 }
