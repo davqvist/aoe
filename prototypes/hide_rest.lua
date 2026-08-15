@@ -11,8 +11,6 @@ if mods["blueprint-shotgun"] then
   technologies_to_keep["blueprint-shotgun-upgrade-1"] = true
   technologies_to_keep["blueprint-shotgun-upgrade-2"] = true
 end
-local item_has_recipe = {}
-local fluid_has_recipe = {}
 
 data.raw.recipe["scrap-recycling"] = nil
 

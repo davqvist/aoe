@@ -1,42 +1,6 @@
 
 local AOC = require("__ageofcreation__/globals")
-
-local bee_globals = {
-	["aoc-honey"] = {["color"] = {255, 255, 0}, ["amount"] = 8, ["offspring"] = 5, ["technology"] = "aoc-bees-tech", ["chance"] = nil, ["parents"] = nil},
-  ["aoc-royal-jelly"] = {["color"] = {255, 200, 25}, ["amount"] = 32, ["offspring"] = 5, ["technology"] = "aoc-bees-tech", ["chance"] = nil, ["parents"] = nil},
-  ["aoc-soil"] = {["color"] = {71, 57, 52}, ["amount"] = 1, ["offspring"] = 4, ["technology"] = "aoc-bees-soil-tech", ["chance"] = 0.15, ["parents"] = {"aoc-honey", "aoc-royal-jelly"}},
-  ["aoc-gravel"] = {["color"] = {144, 144, 144}, ["amount"] = 1, ["offspring"] = 4, ["technology"] = "aoc-bees-gravel-tech", ["chance"] = 0.1, ["parents"] = {"aoc-honey", "aoc-soil"}},
-  ["aoc-sand"] = {["color"] = {213, 166, 67}, ["amount"] = 1, ["offspring"] = 4, ["technology"] = "aoc-bees-sand-tech", ["chance"] = 0.1, ["parents"] = {"aoc-honey", "aoc-soil"}},
-  ["aoc-clay"] = {["color"] = {227, 205, 172}, ["amount"] = 1, ["offspring"] = 4, ["technology"] = "aoc-bees-clay-tech", ["chance"] = 0.1, ["parents"] = {"aoc-soil", "aoc-royal-jelly"}},
-  ["aoc-silt"] = {["color"] = {171, 133, 82}, ["amount"] = 1, ["offspring"] = 4, ["technology"] = "aoc-bees-silt-tech", ["chance"] = 0.1, ["parents"] = {"aoc-sand", "aoc-soil"}},
-  ["stone"] = {["color"] = {176, 156, 109}, ["amount"] = 1, ["offspring"] = 4, ["technology"] = "aoc-bees-stone-tech", ["chance"] = 0.08, ["parents"] = {"aoc-sand", "aoc-silt"}},
-  ["iron-ore"] = {["color"] = {106, 134, 148}, ["amount"] = 0.3, ["offspring"] = 3, ["technology"] = "aoc-bees-iron-ore-tech", ["chance"] = 0.05, ["parents"] = {"stone", "aoc-gravel"}},
-  ["copper-ore"] = {["color"] = {212, 99, 55}, ["amount"] = 0.3, ["offspring"] = 3, ["technology"] = "aoc-bees-copper-ore-tech", ["chance"] = 0.05, ["parents"] = {"stone", "aoc-sand"}},
-  ["coal"] = {["color"] = {20, 20, 20}, ["amount"] = 0.3, ["offspring"] = 3, ["technology"] = "aoc-bees-coal-tech", ["chance"] = 0.05, ["parents"] = {"stone", "aoc-soil"}},
-  ["aoc-quartz-ore"] = {["color"] = {224, 235, 235}, ["amount"] = 0.3, ["offspring"] = 3, ["technology"] = "aoc-bees-quartz-ore-tech", ["chance"] = 0.05, ["parents"] = {"copper-ore", "aoc-sand"}},
-  ["aoc-tin-ore"] = {["color"] = {101, 134, 108}, ["amount"] = 0.3, ["offspring"] = 3, ["technology"] = "aoc-bees-tin-ore-tech", ["chance"] = 0.05, ["parents"] = {"aoc-quartz-ore", "iron-ore"}},
-  ["aoc-manganese-ore"] = {["color"] = {207, 83, 83}, ["amount"] = 0.2, ["offspring"] = 3, ["technology"] = "aoc-bees-manganese-ore-tech", ["chance"] = 0.04, ["parents"] = {"aoc-tin-ore", "iron-ore"}},
-  ["aoc-aluminium-ore"] = {["color"] = {196, 175, 78}, ["amount"] = 0.3, ["offspring"] = 3, ["technology"] = "aoc-bees-aluminium-ore-tech", ["chance"] = 0.05, ["parents"] = {"copper-ore", "aoc-clay"}},
-  ["aoc-magnesium-ore"] = {["color"] = {174, 169, 158}, ["amount"] = 0.3, ["offspring"] = 3, ["technology"] = "aoc-bees-magnesium-ore-tech", ["chance"] = 0.05, ["parents"] = {"aoc-aluminium-ore", "aoc-silt"}},
-  ["aoc-mica"] = {["color"] = {218, 210, 199}, ["amount"] = 0.2, ["offspring"] = 3, ["technology"] = "aoc-bees-mica-tech", ["chance"] = 0.04, ["parents"] = {"aoc-magnesium-ore", "aoc-quartz-ore"}},
-  ["tungsten-ore"] = {["color"] = {143, 133, 169}, ["amount"] = 0.15, ["offspring"] = 3, ["technology"] = "aoc-bees-tungsten-ore-tech", ["chance"] = 0.03, ["parents"] = {"aoc-tin-ore", "aoc-gravel"}},
-  ["aoc-gold-ore"] = {["color"] = {255, 215, 95}, ["amount"] = 0.15, ["offspring"] = 3, ["technology"] = "aoc-bees-gold-ore-tech", ["chance"] = 0.03, ["parents"] = {"aoc-manganese-ore", "copper-ore"}},
-  ["aoc-diamond"] = {["color"] = {52, 204, 230}, ["amount"] = 0.1, ["offspring"] = 3, ["technology"] = "aoc-bees-diamond-tech", ["chance"] = 0.02, ["parents"] = {"aoc-gold-ore", "coal"}},
-  ["uranium-ore"] = {["color"] = {0, 179, 0}, ["amount"] = 0.1, ["offspring"] = 3, ["technology"] = "aoc-bees-uranium-ore-tech", ["chance"] = 0.02, ["parents"] = {"aoc-quartz-ore", "aoc-tin-ore"}},
-  ["aoc-apatite"] = {["color"] = {13, 115, 146}, ["amount"] = 0.15, ["offspring"] = 3, ["technology"] = "aoc-bees-apatite-ore-tech", ["chance"] = 0.03, ["parents"] = {"aoc-magnesium-ore", "coal"}},
-  ["aoc-garnet"] = {["color"] = {170, 23, 23}, ["amount"] = 0.1, ["offspring"] = 3, ["technology"] = "aoc-bees-garnet-tech", ["chance"] = 0.02, ["parents"] = {"aoc-apatite", "aoc-aluminium-ore"}},
-  ["aoc-chromium-ore"] = {["color"] = {159, 148, 196}, ["amount"] = 0.2, ["offspring"] = 3, ["technology"] = "aoc-bees-chromium-ore-tech", ["chance"] = 0.04, ["parents"] = {"aoc-aluminium-ore", "aoc-magnesium-ore"}},
-  ["aoc-nickel-ore"] = {["color"] = {96, 142, 130}, ["amount"] = 0.15, ["offspring"] = 3, ["technology"] = "aoc-bees-nickel-ore-tech", ["chance"] = 0.03, ["parents"] = {"iron-ore", "aoc-gravel"}},
-  ["aoc-zinc-ore"] = {["color"] = {92, 194, 174}, ["amount"] = 0.15, ["offspring"] = 3, ["technology"] = "aoc-bees-zinc-ore-tech", ["chance"] = 0.03, ["parents"] = {"copper-ore", "aoc-gravel"}},
-  ["aoc-lead-ore"] = {["color"] = {55, 55, 55}, ["amount"] = 0.15, ["offspring"] = 3, ["technology"] = "aoc-bees-lead-ore-tech", ["chance"] = 0.03, ["parents"] = {"iron-ore", "coal"}},
-  ["aoc-silver-ore"] = {["color"] = {117, 146, 146}, ["amount"] = 0.1, ["offspring"] = 3, ["technology"] = "aoc-bees-silver-ore-tech", ["chance"] = 0.02, ["parents"] = {"aoc-lead-ore", "iron-ore"}},
-  ["aoc-nauvium-ore"] = {["color"] = {210, 43, 218}, ["amount"] = 0.1, ["offspring"] = 5, ["technology"] = "aoc-bees-nauvium-ore-tech", ["chance"] = 0.02, ["parents"] = {"aoc-zinc-ore", "aoc-silver-ore"}, ["magic"] = true},
-  ["aoc-platinum-ore"] = {["color"] = {229, 201, 183}, ["amount"] = 0.05, ["offspring"] = 5, ["technology"] = "aoc-bees-platinum-ore-tech", ["chance"] = 0.015, ["parents"] = {"aoc-gold-ore", "aoc-nauvium-ore"}, ["magic"] = true},
-  ["aoc-ender-fluid"] = {["color"] = {0, 45, 35}, ["amount"] = 5, ["offspring"] = 5, ["technology"] = "aoc-bees-ender-fluid-tech", ["chance"] = 0.01, ["parents"] = {"aoc-platinum-ore", "aoc-nickel-ore"}, ["magic"] = true},
-  ["holmium-ore"] = {["color"] = {221, 181, 191}, ["amount"] = 0.25, ["offspring"] = 3, ["technology"] = "aoc-bees-holmium-ore-tech", ["chance"] = 0.04, ["parents"] = {"coal", "aoc-clay"}, ["rare"] = true},
-  ["aoc-neodymium-ore"] = {["color"] = {102, 102, 77}, ["amount"] = 0.15, ["offspring"] = 3, ["technology"] = "aoc-bees-neodymium-ore-tech", ["chance"] = 0.03, ["parents"] = {"holmium-ore", "coal"}, ["rare"] = true},
-  ["promethium-asteroid-chunk"] = {["color"] = {115, 20, 30}, ["amount"] = 0.05, ["offspring"] = 3, ["technology"] = "aoc-bees-promethium-ore-tech", ["chance"] = 0.02, ["parents"] = {"aoc-neodymium-ore", "holmium-ore"}, ["rare"] = true},
-}
+local BEE_DATA = require("__ageofcreation__/bee_globals")
 
 data:extend({
   {
@@ -73,7 +37,7 @@ data:extend({{
   icons = {
     {
       icon = "__ageofcreation__/img/items/bees/syringe-fluid.png",
-      tint = bee_globals["aoc-royal-jelly"].color,
+      tint = BEE_DATA["bee_globals"]["aoc-royal-jelly"].color,
       icon_size = 32
     },{
       icon = "__ageofcreation__/img/items/bees/syringe-base.png",
@@ -90,7 +54,7 @@ data:extend({{
   icons = {
     {
       icon = "__ageofcreation__/img/items/bees/syringe-fluid.png",
-      tint = bee_globals["aoc-honey"].color,
+      tint = BEE_DATA["bee_globals"]["aoc-honey"].color,
       icon_size = 32
     },{
       icon = "__ageofcreation__/img/items/bees/syringe-base.png",
@@ -315,7 +279,7 @@ data:extend({{
   results = {
     {type = 'item', name = 'aoc-syringe', amount = 1}
   },
-  energy_required = 1
+  energy_required = 2
 }})
 data:extend({{
   name = 'aoc-crafting-hive-paraffin-recipe',
@@ -940,7 +904,7 @@ data:extend({{
 }})
 
 local i = 1
-for name, bee in pairs(bee_globals) do
+for name, bee in pairs(BEE_DATA["bee_globals"]) do
   local localised = nil
   if data.raw.item[name] then localised = {'item-name.' .. name} 
   elseif data.raw.fluid[name] then localised = {'fluid-name.' .. name}
@@ -1069,9 +1033,9 @@ for name, bee in pairs(bee_globals) do
         unit = tech_unit,
         localised_name = {'technology-name.aoc-bee-tech', localised }
     }})
-    table.insert( data.raw["technology"][bee.technology].prerequisites, bee_globals[bee.parents[1]].technology )
-    if bee_globals[bee.parents[1]].technology ~= bee_globals[bee.parents[2]].technology then
-      table.insert( data.raw["technology"][bee.technology].prerequisites, bee_globals[bee.parents[2]].technology )
+    table.insert( data.raw["technology"][bee.technology].prerequisites, BEE_DATA["bee_globals"][bee.parents[1]].technology )
+    if BEE_DATA["bee_globals"][bee.parents[1]].technology ~= BEE_DATA["bee_globals"][bee.parents[2]].technology then
+      table.insert( data.raw["technology"][bee.technology].prerequisites, BEE_DATA["bee_globals"][bee.parents[2]].technology )
     end
     if bee.magic then 
       table.insert( data.raw["technology"][bee.technology].prerequisites, "aoc-brewing-tech" )
@@ -1195,7 +1159,8 @@ for name, bee in pairs(bee_globals) do
     energy_required =  10,
     auto_recycle = false,
     categories = {'aoc-category-bees-apiary'},
-    localised_description = {"", {"recipe-description.aoc-farm-chicken-coop-egg-recipe"} }
+	  raise_on_crafted = true,
+    localised_description = {"", {"recipe-description.aoc-farm-chicken-coop-egg-1-recipe"} }
   }})
   table.insert( data.raw["technology"][bee.technology].effects, { type = "unlock-recipe", recipe = 'aoc-larva-' .. name .. '-recipe' } )
   data:extend({{

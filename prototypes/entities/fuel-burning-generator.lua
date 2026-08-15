@@ -78,8 +78,10 @@ data:extend({{
   smoke = {
     {
       name = "light-smoke",
-      north_position = {0.9, 0.0},
-      east_position = {-2.0, -2.0},
+      north_position = {0.0, -1.0},
+      south_position = {0.0, -1.0},
+      west_position = {0.0, -1.0},
+      east_position = {0.0, -1.0},
       frequency = 10 / 32,
       starting_vertical_speed = 0.08,
       slow_down_factor = 1,

@@ -1184,6 +1184,11 @@ data:extend({{
     {
       type = "character-logistic-trash-slots",
       modifier = 30
+    },
+    {
+      type = "unlock-logistic-network",
+      modifier = true,
+      hidden = true
     }
   },
   unit = {

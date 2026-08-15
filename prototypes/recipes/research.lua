@@ -15,12 +15,13 @@ for t, technology in pairs(research_techs) do
                     ingredients = {
                         	{type = 'item', name = data.raw.recipe[recipes.recipe].research, amount = 1}
                     },
-                    results = {
-                        {type = 'item', name = 'aoc-scroll', amount = 1}
-                    },
+                    results = {},
                     icons = combine_icons( get_icons( data.raw.capsule['aoc-scroll'] ), get_icons( data.raw.item[data.raw.recipe[recipes.recipe].research] ) ),
                     energy_required = 40,
-                    categories = {'aoc-category-unlocking'}
+                    raise_on_crafted = true,
+                    auto_recycle = false,
+                    categories = {'aoc-category-unlocking'},
+	                localised_name = {'age-of-creation.researching'}
                 }})
                 table.insert(to_remove,r)
             end
@@ -40,6 +41,8 @@ end
 
 local fluid_table = {}
 local item_table = {}
+local fake_fluid_table = {'aoc-brine','crude-oil','aoc-carbon-dioxide','aoc-starlight','aoc-nitric-acid','aoc-milk','aoc-syrup'}
+local fake_item_table = {'aoc-soil','aoc-loam','plastic-bar','aoc-resin','wood','aoc-egg','aoc-wool','aoc-bone-meal'}
 
 for _, recipe in pairs(data.raw.recipe) do
     if recipe.categories and recipe.categories[1] == 'aoc-category-brewing' then
@@ -75,3 +78,64 @@ for fluid, items in pairs(fluid_table) do
     end
 end
 
+for fluid, items in pairs(fluid_table) do
+    for _, item in pairs(fake_item_table) do
+        data:extend({{
+            name = 'aoc-brewing-helpful-' .. fluid .. '-'.. item .. '-recipe',
+            type = 'recipe',
+            enabled = true,
+            hidden = true,
+            ingredients = {
+                {type = 'fluid', name = fluid, amount = 50},
+                {type = 'item', name = item, amount = 1}
+            },
+            results = {
+                {type = 'item', name = 'aoc-experiment-helpful', amount = 1}
+            },
+            energy_required = 5,
+            categories = {'aoc-category-brewing'},
+            localised_name = {'age-of-creation.brewing'}
+        }})
+    end
+end
+
+for _, fluid in pairs(fake_fluid_table) do
+    for item, fluids in pairs(item_table) do
+        data:extend({{
+            name = 'aoc-brewing-helpful-' .. fluid .. '-'.. item .. '-recipe',
+            type = 'recipe',
+            enabled = true,
+            hidden = true,
+            ingredients = {
+                {type = 'fluid', name = fluid, amount = 50},
+                {type = 'item', name = item, amount = 1}
+            },
+            results = {
+                {type = 'item', name = 'aoc-experiment-helpful', amount = 1}
+            },
+            energy_required = 5,
+            categories = {'aoc-category-brewing'},
+            localised_name = {'age-of-creation.brewing'}
+        }})
+    end
+end
+for _, fluid in pairs(fake_fluid_table) do
+    for _, item in pairs(fake_item_table) do
+        data:extend({{
+            name = 'aoc-brewing-failed-' .. fluid .. '-'.. item .. '-recipe',
+            type = 'recipe',
+            enabled = true,
+            hidden = true,
+            ingredients = {
+                {type = 'fluid', name = fluid, amount = 50},
+                {type = 'item', name = item, amount = 1}
+            },
+            results = {
+                {type = 'item', name = 'aoc-experiment-failed', amount = 1}
+            },
+            energy_required = 5,
+            categories = {'aoc-category-brewing'},
+            localised_name = {'age-of-creation.brewing'}
+        }})
+    end
+end

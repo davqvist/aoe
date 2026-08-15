@@ -77,6 +77,29 @@ data:extend({{
 
 data:extend({{
   type = "technology",
+  name = "aoc-cargo-expansion-tech",
+  icon_size = 256, icon_mipmaps = 4,
+  icon = "__space-age__/graphics/technology/space-platform.png",
+  prerequisites = {"aoc-space-platform-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-cargo-bay-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-unloading-bay-recipe"
+    }
+  },
+  unit = {
+      count = 40,
+      ingredients = AOC["age_tech_table"][7],
+      time = 60
+  }
+}})
+
+data:extend({{
+  type = "technology",
   name = "aoc-asteroid-processing-tech",
   icon_size = 64, icon_mipmaps = 4,
   icon = "__space-age__/graphics/icons/asteroid-collector.png",
@@ -158,6 +181,10 @@ data:extend({{
         type = "unlock-space-location",
         space_location = "vulcanus",
         use_icon_overlay_constant = true
+      },
+      {
+        type = "unlock-travel-to-space-platforms",
+        modifier = true
       }
     },
     research_trigger =
@@ -219,6 +246,10 @@ data:extend({{
     {
       type = "mining-with-fluid",
       modifier = true
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-pumpjack-recipe"
     },
     {
       type = "unlock-recipe",
@@ -286,7 +317,10 @@ data:extend({{
 data:extend({{
   type = "technology",
   name = "aoc-vulcanus-logistics-tech",
-  icons = {{icon = "__base__/graphics/icons/steel-chest.png", tint = {255, 128, 0}}},
+  icons = {
+      {icon = "__ageofcreation__/img/entities/planet-chest.png"},
+      {icon = "__ageofcreation__/img/entities/planet-chest-mask.png", tint = {255, 128, 0}},
+  },
   prerequisites = {"aoc-vulcanus-exploration-tech","aoc-teleportation-tech"},
   effects = {
     {

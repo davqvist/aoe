@@ -59,6 +59,7 @@ data:extend({{
 	flags = { "placeable-neutral", "placeable-player", "player-creation" },
 	minable = { hardness = 1, mining_time = 0.2, result = "aoc-burner-squeezer" },
   fast_replaceable_group = "squeezer",
+  next_upgrade = "aoc-squeezer",
 	circuit_wire_connection_point = circuit_connector_definitions["assembling-machine"].points,
   circuit_connector_sprites = circuit_connector_definitions["assembling-machine"].sprites,
   circuit_wire_max_distance = default_circuit_wire_max_distance,

@@ -125,6 +125,8 @@ function ms_data()
                 {type="item", name="aoc-platinum-plate", quantity=1},
                 {type="item", name="aoc-enderium-plate", quantity=1},
                 {type="item", name="aoc-teleportation-core", quantity=1},
+                {type="item", name="aoc-mutagen", quantity=1},
+                {type="item", name="aoc-philstone", quantity=1},
                 {type="item", name="aoc-planet-space", quantity=1},
 
                 {type="group", name= "Space Age (Age 7)"},
@@ -152,6 +154,7 @@ function ms_data()
                 {type="item", name="bioflux", quantity=1},
                 {type="item", name="aoc-bakelite", quantity=1},
                 {type="item", name="aoc-rayon", quantity=1},
+                {type="item", name="aoc-pvc", quantity=1},
                 {type="item", name="productivity-module-2", quantity=1},
                 {type="item", name="speed-module-2", quantity=1},
                 {type="item", name="modular-armor", quantity=1},

@@ -13,7 +13,7 @@ data.raw['item']['superconductor'].order = "n"
 data.raw['item']['superconductor'].stack_size = 200
 data.raw['item']['supercapacitor'].subgroup = "aoc-parts"
 data.raw['item']['supercapacitor'].order = "o"
-data.raw['item']['supercapacitor'].stack_size = 200
+data.raw['item']['supercapacitor'].stack_size = 100
 
 data:extend({{
     type = "item",
@@ -628,7 +628,7 @@ data:extend({{
     type = "item",
     name = "aoc-proton",
     icons = { { icon = "__ageofcreation__/img/items/proton.png", icon_size = 64 }, { icon = "__ageofcreation__/img/items/atoms/p+.png", icon_size = 64 } },
-    pictures = { { filename = "__ageofcreation__/img/items/proton.png", size = 64  } },
+    pictures = { { filename = "__ageofcreation__/img/items/proton.png", size = 64, scale = 0.5 } },
     subgroup = "aoc-subatomic",
     order = "a",
     stack_size = 1000
@@ -638,7 +638,7 @@ data:extend({{
     type = "item",
     name = "aoc-electron",
     icons = { { icon = "__ageofcreation__/img/items/electron.png", icon_size = 64 }, { icon = "__ageofcreation__/img/items/atoms/e-.png", icon_size = 64 } },
-    pictures = { { filename = "__ageofcreation__/img/items/electron.png", size = 64  } },
+    pictures = { { filename = "__ageofcreation__/img/items/electron.png", size = 64, scale = 0.5 } },
     subgroup = "aoc-subatomic",
     order = "b",
     stack_size = 1000
@@ -647,7 +647,7 @@ data:extend({{
     type = "item",
     name = "aoc-antiproton",
     icons = { { icon = "__ageofcreation__/img/items/antiproton.png", icon_size = 64 }, { icon = "__ageofcreation__/img/items/atoms/p-.png", icon_size = 64 } },
-    pictures = { { filename = "__ageofcreation__/img/items/antiproton.png", size = 64  } },
+    pictures = { { filename = "__ageofcreation__/img/items/antiproton.png", size = 64, scale = 0.5 } },
     subgroup = "aoc-subatomic",
     order = "c",
     stack_size = 10
@@ -657,7 +657,7 @@ data:extend({{
     type = "item",
     name = "aoc-positron",
     icons = { { icon = "__ageofcreation__/img/items/positron.png", icon_size = 64 }, { icon = "__ageofcreation__/img/items/atoms/e+.png", icon_size = 64 } },
-    pictures = { { filename = "__ageofcreation__/img/items/positron.png", size = 64  } },
+    pictures = { { filename = "__ageofcreation__/img/items/positron.png", size = 64, scale = 0.5 } },
     subgroup = "aoc-subatomic",
     order = "d",
     stack_size = 10

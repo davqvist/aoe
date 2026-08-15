@@ -452,10 +452,11 @@ data:extend({{
 		{type = 'fluid', name = 'steam', amount = 50, minimum_temperature = 160}
     },
     results = {
-        {type = 'fluid', name = 'aoc-propane', amount = 25},
-        {type = 'fluid', name = 'aoc-ethane', amount = 25},
-        {type = 'fluid', name = 'aoc-ethylene', amount = 25},
-        {type = 'fluid', name = 'aoc-methane', amount = 25}
+        {type = 'fluid', name = 'aoc-propane', amount = 20},
+        {type = 'fluid', name = 'aoc-propylene', amount = 20},
+        {type = 'fluid', name = 'aoc-ethane', amount = 20},
+        {type = 'fluid', name = 'aoc-ethylene', amount = 20},
+        {type = 'fluid', name = 'aoc-methane', amount = 20}
     },
 	icons = combine_icons_tiny( get_icons( data.raw["fluid"]['aoc-butane'] ), get_icons( data.raw["fluid"]["steam"] ) ),
     subgroup = "aoc-petrochem-fluids",
@@ -702,13 +703,13 @@ data:extend({{
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'aoc-glass', amount = 4},
+		{type = 'item', name = 'aoc-glass', amount = 6},
         {type = 'item', name = 'aoc-rubber', amount = 1}
 	},
 	results = {
-        {type = 'item', name = 'aoc-flask', amount = 2}
+        {type = 'item', name = 'aoc-flask', amount = 3}
     },
-	energy_required = 4
+	energy_required = 6
 }})
 
 data:extend({{
@@ -1063,6 +1064,7 @@ data:extend({{
     energy_required = 11,
 	main_product = 'aoc-egg',
 	icons = get_icons( data.raw.item['aoc-egg'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
+	raise_on_crafted = true,
 	categories = {'aoc-category-farm-chicken-coop'}
 }})
 
@@ -1148,6 +1150,7 @@ data:extend({{
 	energy_required = 26,
 	auto_recycle = false,
 	icons = get_icons( data.raw.item['aoc-lamb'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
+	raise_on_crafted = true,
 	categories = {'aoc-category-farm-barn-sheep'}
 }})
 
@@ -1239,6 +1242,7 @@ data:extend({{
 	energy_required = 31,
 	auto_recycle = false,
 	icons = get_icons( data.raw.item['aoc-calf'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
+	raise_on_crafted = true,
 	categories = {'aoc-category-farm-barn-cow'}
 }})
 
@@ -1323,6 +1327,7 @@ data:extend({{
     },
     energy_required = 16,
 	icons = get_icons( data.raw.item['aoc-fish-eggs'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
+	raise_on_crafted = true,
 	categories = {'aoc-category-farm-reservoir-fish'}
 }})
 
@@ -1352,7 +1357,7 @@ data:extend({{
     type = 'recipe',
     enabled = false,
     ingredients = {
-        {type = 'fluid', name = 'water', amount = 1000},
+        {type = 'fluid', name = 'water', amount = 2000},
         {type = 'item', name = 'aoc-iron-dust', amount = 2},
         {type = 'item', name = 'aoc-clay', amount = 4},
         {type = 'item', name = 'aoc-puree', amount = 1},
@@ -1360,9 +1365,9 @@ data:extend({{
         {type = 'item', name = 'aoc-mica', amount = 1}
     },
     results = {
-        {type = 'fluid', name = 'aoc-drilling-fluid', amount = 1000}
+        {type = 'fluid', name = 'aoc-drilling-fluid', amount = 2000}
     },
-    energy_required = 4,
+    energy_required = 8,
 	categories = {'aoc-category-mixing'}
 }})
 
@@ -2247,6 +2252,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-earth-catalyst', amount = 1}
     },
 	energy_required = 60,
+    raise_on_crafted = true,
 	categories = {'aoc-category-infusing'}
 }})
 
@@ -2264,6 +2270,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-nature-catalyst', amount = 1}
     },
 	energy_required = 60,
+    raise_on_crafted = true,
 	categories = {'aoc-category-infusing'}
 }})
 
@@ -2281,6 +2288,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-metal-catalyst', amount = 1}
     },
 	energy_required = 60,
+    raise_on_crafted = true,
 	categories = {'aoc-category-infusing'}
 }})
 
@@ -2298,6 +2306,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-nauvium-catalyst', amount = 1}
     },
 	energy_required = 60,
+    raise_on_crafted = true,
 	categories = {'aoc-category-infusing'}
 }})
 
@@ -2315,7 +2324,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoc-integrated-circuit', amount = 1}
     },
-	energy_required = 4,
+	energy_required = 8,
 	categories = {'aoc-category-intricate-crafting'}
 }})
 
@@ -2437,12 +2446,14 @@ data:extend({{
     type = 'recipe',
     enabled = false,
 	ingredients = {
-        {type = 'fluid', name = 'aoc-fish-water', amount = 100},
+        {type = 'fluid', name = 'aoc-fish-water', amount = 80},
         {type = 'item', name = 'aoc-gypsum', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoc-kelp', amount = 1}
+        {type = 'item', name = 'aoc-kelp', amount = 1},
+        {type = 'item', name = 'aoc-kelp', amount = 1, independent_probability = 0.4}
     },
+    main_product = 'aoc-kelp',
     energy_required = 10,
 	icons = get_icons( data.raw.item['aoc-kelp'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
 	auto_recycle = false,

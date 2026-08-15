@@ -16,7 +16,6 @@ data:extend({{
   icon_size = 32,
   flags = { "placeable-neutral", "player-creation" },
   minable = { mining_time = 1, result = "aoc-barreling-pump" },
-  fast_replaceable_group = "barreling-pump",
   max_health = 300,
   corpse = "big-remnants",
   dying_explosion = "medium-explosion",

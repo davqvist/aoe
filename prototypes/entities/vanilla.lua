@@ -19,6 +19,8 @@ data.raw['mining-drill']['electric-mining-drill'].mining_speed = 1
 data.raw['mining-drill']['electric-mining-drill'].energy_usage = "140kW"
 data.raw['mining-drill']['electric-mining-drill'].allowed_module_categories = {'speed','efficiency','productivity'}
 data.raw['mining-drill']['big-mining-drill'].allowed_module_categories = {'speed','efficiency','productivity'}
+data.raw['item']['pumpjack'].subgroup = "aoc-processing-buildings"
+data.raw['item']['pumpjack'].order = "g"
 data.raw['item']['assembling-machine-1'].subgroup = "aoc-processing-buildings"
 data.raw['item']['assembling-machine-1'].order = "i"
 data.raw['assembling-machine']['assembling-machine-1'].energy_source = {
@@ -72,7 +74,7 @@ data.raw['item']['biolab'].subgroup = "aoc-processing-buildings"
 data.raw['item']['biolab'].order = "n"
 data.raw['lab']['biolab'].energy_usage = "1MW"
 data.raw['lab']['biolab'].allowed_module_categories = {'speed','efficiency','productivity'}
-data.raw['lab']['biolab'].science_pack_drain_rate_percent = 100
+data.raw['lab']['biolab'].science_pack_drain_rate_percent = 80
 data.raw['lab']['biolab'].surface_conditions = null
 
 data.raw['item']['radar'].subgroup = "aoc-other-buildings"
@@ -93,6 +95,7 @@ data.raw['item']['foundry'].subgroup = "aoc-processing-buildings"
 data.raw['item']['foundry'].order = "p"
 data.raw['assembling-machine']['foundry'].crafting_speed = 2
 data.raw['assembling-machine']['foundry'].crafting_categories = {"metallurgy", "aoc-category-metallurgy-iron","aoc-category-metallurgy-copper","aoc-category-metallurgy-tin","aoc-category-metallurgy-aluminium","aoc-category-metallurgy-lead","aoc-category-metallurgy-silver","aoc-category-metallurgy-nickel","aoc-category-metallurgy-gold","aoc-category-metallurgy-zinc","aoc-category-metallurgy-chromium","aoc-category-metallurgy-tungsten","aoc-category-metallurgy-titanium"}
+data.raw['assembling-machine']['foundry'].effect_receiver = nil
 data.raw['assembling-machine']['foundry'].fluid_boxes = {
     {
       production_type = "input",
@@ -140,6 +143,7 @@ data.raw['item']['long-handed-inserter'].order = "c"
 data.raw['inserter']['long-handed-inserter'].rotation_speed = 0.0166667
 data.raw['inserter']['long-handed-inserter'].extension_speed = 0.04
 data.raw['inserter']['long-handed-inserter'].fast_replaceable_group = "long-handed-inserter"
+data.raw['inserter']['long-handed-inserter'].next_upgrade = 'fast-long-handed-inserter'
 data.raw['item']['fast-inserter'].subgroup = "aoc-inserter"
 data.raw['item']['fast-inserter'].order = "d"
 data.raw['inserter']['fast-inserter'].rotation_speed = 0.0333333
@@ -284,6 +288,7 @@ data.raw['item']['wooden-chest'].order = "a"
 data.raw['container']['wooden-chest'].inventory_size = 15
 data.raw['item']['iron-chest'].subgroup = "aoc-storage"
 data.raw['item']['iron-chest'].order = "d"
+data.raw['item']['iron-chest'].stack_size = 50
 data.raw['container']['iron-chest'].inventory_size = 40
 data.raw['logistic-container']['storage-chest'].inventory_size = 40
 data.raw['logistic-container']['passive-provider-chest'].inventory_size = 40
@@ -292,6 +297,7 @@ data.raw['logistic-container']['requester-chest'].inventory_size = 40
 data.raw['logistic-container']['buffer-chest'].inventory_size = 40
 data.raw['item']['steel-chest'].subgroup = "aoc-storage"
 data.raw['item']['steel-chest'].order = "f"
+data.raw['item']['steel-chest'].stack_size = 50
 data.raw['container']['steel-chest'].inventory_size = 300
 data.raw['container']['steel-chest'].collision_box = {{-1.4, -1.4}, {1.4, 1.4}}
 data.raw['container']['steel-chest'].selection_box = {{-1.5, -1.5}, {1.5, 1.5}}
@@ -415,18 +421,6 @@ data.raw['agricultural-tower']['agricultural-tower'].energy_source = { type = "v
 data.raw['resource']['calcite'].minable.result = "aoc-limestone"
 data.raw['resource']['calcite'].minable.fluid_amount = 40
 data.raw['resource']['calcite'].minable.required_fluid = "aoc-phosphoric-acid"
-
-local silocopy = table.deepcopy( data.raw['rocket-silo']['rocket-silo'] )
-silocopy.name = "aoc-rocket-silo-simple"
-silocopy.launch_to_space_platforms = false
-silocopy.minable.result = "aoc-rocket-silo-simple"
-data:extend({ silocopy })
-local silocopy2 = table.deepcopy( data.raw.item['rocket-silo'] )
-silocopy2.name = "aoc-rocket-silo-simple"
-silocopy2.place_result = "aoc-rocket-silo-simple"
-silocopy2.subgroup = "aoc-space-buildings"
-silocopy2.order = "b"
-data:extend({ silocopy2 })
 
 data.raw['item']['logistic-robot'].stack_size = 20
 data.raw['item']['construction-robot'].stack_size = 20

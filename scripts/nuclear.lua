@@ -53,7 +53,7 @@ function sink_data()
         ["tin"] = {
             connected = {"aoc-reactor-sink-tin"},
             connected_amount = {4},
-            heat = 110
+            heat = 90
         },
         ["aluminium"] = {
             connected = {"aoc-reactor-sink-water",{"stone-wall","gate"}},
@@ -99,7 +99,7 @@ function heat_data()
         ["aoc-fuel-cell-plutonium-241-2"] = 420,
         ["aoc-fuel-cell-uranium-233"] = 60,
         ["aoc-fuel-cell-uranium-233-2"] = 360,
-        ["aoc-fuel-cell-uranium-235"] = 50,
+        ["uranium-fuel-cell"] = 50,
         ["aoc-fuel-cell-uranium-235-2"] = 300
     }
 end

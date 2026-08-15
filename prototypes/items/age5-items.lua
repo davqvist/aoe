@@ -277,6 +277,7 @@ data.raw['gun']['pistol'].stack_size = 10
 data.raw['ammo']['firearm-magazine'].subgroup = "aoc-ammo"
 data.raw['ammo']['firearm-magazine'].order = "a"
 data.raw['ammo']['firearm-magazine'].stack_size = 200
+data.raw['ammo']['firearm-magazine'].weight = 5 * kg
 
 data:extend({{
     type = "item",

@@ -3,7 +3,10 @@ local sounds = require("__base__/prototypes/entity/sounds")
 data:extend({{
     type = "item",
     name = "aoc-nauvis-chest",
-    icons = {{icon = "__base__/graphics/icons/steel-chest.png", tint = {0, 196, 0}}},
+    icons = {
+      {icon = "__ageofcreation__/img/entities/planet-chest.png"},
+      {icon = "__ageofcreation__/img/entities/planet-chest-mask.png", tint = {0, 196, 0}},
+    },
     subgroup = "aoc-planet-chests",
     order = "a",
     place_result = "aoc-nauvis-chest",
@@ -13,7 +16,10 @@ data:extend({{
 data:extend({{
     type = "proxy-container",
     name = "aoc-nauvis-chest",
-    icons = {{icon = "__base__/graphics/icons/steel-chest.png", tint = {0, 196, 0}}},
+    icons = {
+      {icon = "__ageofcreation__/img/entities/planet-chest.png"},
+      {icon = "__ageofcreation__/img/entities/planet-chest-mask.png", tint = {0, 196, 0}},
+    },
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.1, result = "aoc-nauvis-chest"},
     max_health = 100,
@@ -27,11 +33,17 @@ data:extend({{
       layers =
       {
         {
-          filename = "__base__/graphics/entity/steel-chest/steel-chest.png",
+          filename = "__ageofcreation__/img/entities/planet-chest.png",
           priority = "extra-high",
           width = 64,
-          height = 80,
-          shift = util.by_pixel(-0.25, -0.5),
+          height = 64,
+          scale = 2
+        },
+        {
+          filename = "__ageofcreation__/img/entities/planet-chest-mask.png",
+          priority = "extra-high",
+          width = 64,
+          height = 64,
           scale = 2,
           tint = {0, 196, 0}
         },
@@ -40,7 +52,7 @@ data:extend({{
           priority = "extra-high",
           width = 110,
           height = 46,
-          shift = util.by_pixel(44.25, 8),
+          shift = {1.5, 0.75},
           draw_as_shadow = true,
           scale = 2
         }
@@ -54,7 +66,10 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-vulcanus-chest",
-    icons = {{icon = "__base__/graphics/icons/steel-chest.png", tint = {255, 128, 0}}},
+    icons = {
+      {icon = "__ageofcreation__/img/entities/planet-chest.png"},
+      {icon = "__ageofcreation__/img/entities/planet-chest-mask.png", tint = {255, 128, 0}},
+    },
     subgroup = "aoc-planet-chests",
     order = "b",
     place_result = "aoc-vulcanus-chest",
@@ -64,7 +79,10 @@ data:extend({{
 data:extend({{
     type = "proxy-container",
     name = "aoc-vulcanus-chest",
-    icons = {{icon = "__base__/graphics/icons/steel-chest.png", tint = {255, 128, 0}}},
+    icons = {
+      {icon = "__ageofcreation__/img/entities/planet-chest.png"},
+      {icon = "__ageofcreation__/img/entities/planet-chest-mask.png", tint = {255, 128, 0}},
+    },
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.1, result = "aoc-vulcanus-chest"},
     max_health = 100,
@@ -78,11 +96,17 @@ data:extend({{
       layers =
       {
         {
-          filename = "__base__/graphics/entity/steel-chest/steel-chest.png",
+          filename = "__ageofcreation__/img/entities/planet-chest.png",
           priority = "extra-high",
           width = 64,
-          height = 80,
-          shift = util.by_pixel(-0.25, -0.5),
+          height = 64,
+          scale = 2
+        },
+        {
+          filename = "__ageofcreation__/img/entities/planet-chest-mask.png",
+          priority = "extra-high",
+          width = 64,
+          height = 64,
           scale = 2,
           tint = {255, 128, 0}
         },
@@ -91,7 +115,7 @@ data:extend({{
           priority = "extra-high",
           width = 110,
           height = 46,
-          shift = util.by_pixel(44.25, 8),
+          shift = {1.5, 0.75},
           draw_as_shadow = true,
           scale = 2
         }
@@ -105,7 +129,10 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-gleba-chest",
-    icons = {{icon = "__base__/graphics/icons/steel-chest.png", tint = {92, 196, 92}}},
+    icons = {
+      {icon = "__ageofcreation__/img/entities/planet-chest.png"},
+      {icon = "__ageofcreation__/img/entities/planet-chest-mask.png", tint = {135, 82, 0}},
+    },
     subgroup = "aoc-planet-chests",
     order = "c",
     place_result = "aoc-gleba-chest",
@@ -115,7 +142,10 @@ data:extend({{
 data:extend({{
     type = "proxy-container",
     name = "aoc-gleba-chest",
-    icons = {{icon = "__base__/graphics/icons/steel-chest.png", tint = {92, 196, 92}}},
+    icons = {
+      {icon = "__ageofcreation__/img/entities/planet-chest.png"},
+      {icon = "__ageofcreation__/img/entities/planet-chest-mask.png", tint = {135, 82, 0}},
+    },
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.1, result = "aoc-gleba-chest"},
     max_health = 100,
@@ -129,20 +159,26 @@ data:extend({{
       layers =
       {
         {
-          filename = "__base__/graphics/entity/steel-chest/steel-chest.png",
+          filename = "__ageofcreation__/img/entities/planet-chest.png",
           priority = "extra-high",
           width = 64,
-          height = 80,
-          shift = util.by_pixel(-0.25, -0.5),
+          height = 64,
+          scale = 2
+        },
+        {
+          filename = "__ageofcreation__/img/entities/planet-chest-mask.png",
+          priority = "extra-high",
+          width = 64,
+          height = 64,
           scale = 2,
-          tint = {92, 196, 92}
+          tint = {135, 82, 0}
         },
         {
           filename = "__base__/graphics/entity/steel-chest/steel-chest-shadow.png",
           priority = "extra-high",
           width = 110,
           height = 46,
-          shift = util.by_pixel(44.25, 8),
+          shift = {1.5, 0.75},
           draw_as_shadow = true,
           scale = 2
         }
@@ -156,7 +192,10 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-fulgora-chest",
-    icons = {{icon = "__base__/graphics/icons/steel-chest.png", tint = {180, 80, 80}}},
+    icons = {
+      {icon = "__ageofcreation__/img/entities/planet-chest.png"},
+      {icon = "__ageofcreation__/img/entities/planet-chest-mask.png", tint = {180, 80, 80}},
+    },
     subgroup = "aoc-planet-chests",
     order = "d",
     place_result = "aoc-fulgora-chest",
@@ -166,7 +205,10 @@ data:extend({{
 data:extend({{
     type = "proxy-container",
     name = "aoc-fulgora-chest",
-    icons = {{icon = "__base__/graphics/icons/steel-chest.png", tint = {180, 80, 80}}},
+    icons = {
+      {icon = "__ageofcreation__/img/entities/planet-chest.png"},
+      {icon = "__ageofcreation__/img/entities/planet-chest-mask.png", tint = {180, 80, 80}},
+    },
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.1, result = "aoc-fulgora-chest"},
     max_health = 100,
@@ -180,11 +222,17 @@ data:extend({{
       layers =
       {
         {
-          filename = "__base__/graphics/entity/steel-chest/steel-chest.png",
+          filename = "__ageofcreation__/img/entities/planet-chest.png",
           priority = "extra-high",
           width = 64,
-          height = 80,
-          shift = util.by_pixel(-0.25, -0.5),
+          height = 64,
+          scale = 2
+        },
+        {
+          filename = "__ageofcreation__/img/entities/planet-chest-mask.png",
+          priority = "extra-high",
+          width = 64,
+          height = 64,
           scale = 2,
           tint = {180, 80, 80}
         },
@@ -193,7 +241,7 @@ data:extend({{
           priority = "extra-high",
           width = 110,
           height = 46,
-          shift = util.by_pixel(44.25, 8),
+          shift = {1.5, 0.75},
           draw_as_shadow = true,
           scale = 2
         }

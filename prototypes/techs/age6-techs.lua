@@ -215,6 +215,14 @@ data:extend({{
     {
       type = "unlock-recipe",
       recipe = "aoc-alchemy-gold-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-alchemy-aluminium-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-alchemy-quartz-recipe"
     }
   },
   unit = {
@@ -315,7 +323,7 @@ data:extend({{
     }
   },
   unit = {
-      count_formula = "2^L*50",
+      count_formula = "1.5^L*50",
       ingredients = AOC["age_tech_table"][6],
       time = 50
   }
@@ -891,11 +899,8 @@ data:extend({{
 data:extend({{
   type = "technology",
   name = "aoc-thermal-power-tech",
-  icons = {{
-      icon = "__angelsrefininggraphics__/graphics/icons/thermal-extractor.png",
-      icon_size = 32,
-      icon_mipmaps = 1
-  }},
+  icon = "__ageofcreation__/img/entities/thermal-plant-icon-big.png",
+  icon_size = 640,
   prerequisites = {"aoc-brewing-tech", "aoc-magic-research-tech"},
   effects = {
     {

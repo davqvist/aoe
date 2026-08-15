@@ -744,10 +744,6 @@ data:extend({{
       },
 	    {
         type = "unlock-recipe",
-        recipe = "aoc-pumping-air-recipe"
-      },
-	    {
-        type = "unlock-recipe",
         recipe = "aoc-pumping-cold-air-recipe"
       },
 	    {
@@ -862,8 +858,8 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "aoc-agriculture-age-tech",
-    icon_size = 64,
-    icon = "__ageofcreation__/img/items/science-pack-3.png",
+    icon = "__base__/graphics/icons/logistic-science-pack.png",
+    icon_size = 64, icon_mipmaps = 4,
     prerequisites = {"aoc-fish-tech-1"},
 	  effects = {
       {

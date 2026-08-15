@@ -599,6 +599,29 @@ data:extend({{
 
 data:extend({{
   type = "technology",
+  name = "aoc-gleba-soil-tech-2",
+  icon_size = 256, icon_mipmaps = 4,
+  icon = "__space-age__/graphics/technology/overgrowth-soil.png",
+  prerequisites = {"aoc-gleba-soil-tech-1", "aoc-fertilizer-tech-3"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-overgrowth-jellynut-soil-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-crafting-overgrowth-yumako-soil-recipe"
+    }
+  },
+  unit = {
+      count = 50,
+      ingredients = AOC["age_tech_table"][8],
+      time = 75
+  }
+}})
+
+data:extend({{
+  type = "technology",
   name = "aoc-animal-food-tech-4",
   icon_size = 64,
   icon = "__ageofcreation__/img/items/animal-food-4.png",
@@ -862,6 +885,27 @@ data:extend({{
 
 data:extend({{
   type = "technology",
+  name = "aoc-fulgora-logistics-tech",
+  icons = {
+      {icon = "__ageofcreation__/img/entities/planet-chest.png"},
+      {icon = "__ageofcreation__/img/entities/planet-chest-mask.png", tint = {180, 80, 80}},
+  },
+  prerequisites = {"aoc-gleba-logistics-tech","aoc-fulgora-exploration-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-infusing-fulgora-chest-recipe"
+    }
+  },
+  unit = {
+      count = 80,
+      ingredients = AOC["age_tech_table"][8],
+      time = 75
+  }
+}})
+
+data:extend({{
+  type = "technology",
   name = "aoc-rare-metals-tech",
   icon_size = 256, icon_mipmaps = 4,
   icon = "__space-age__/graphics/technology/holmium-processing.png",
@@ -929,7 +973,10 @@ data:extend({{
 data:extend({{
   type = "technology",
   name = "aoc-gleba-logistics-tech",
-  icons = {{icon = "__base__/graphics/icons/steel-chest.png", tint = {92, 192, 92}}},
+  icons = {
+      {icon = "__ageofcreation__/img/entities/planet-chest.png"},
+      {icon = "__ageofcreation__/img/entities/planet-chest-mask.png", tint = {135, 82, 0}},
+  },
   prerequisites = {"aoc-vulcanus-logistics-tech","aoc-gleba-exploration-tech"},
   effects = {
     {
@@ -938,7 +985,7 @@ data:extend({{
     }
   },
   unit = {
-      count = 80,
+      count = 30,
       ingredients = AOC["age_tech_table"][8],
       time = 75
   }

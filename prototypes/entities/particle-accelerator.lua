@@ -3,7 +3,7 @@ data:extend({{
     name = "aoc-particle-accelerator",
     icon = "__ageofcreation__/img/entities/particle-accelerator-icon.png",
     icon_size = 64,
-    subgroup = "aoc-space-buildings",
+    subgroup = "aoc-space-platform",
     order = "e",
     place_result = "aoc-particle-accelerator",
     stack_size = 25,

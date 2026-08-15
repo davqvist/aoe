@@ -404,15 +404,15 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoc-crafting-torch-recipe',
+	name = 'aoc-crafting-brazier-recipe',
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
-		{type = 'item', name = 'wood', amount = 1},
+		{type = 'item', name = 'stone-brick', amount = 1},
 		{type = 'item', name = 'aoc-charcoal', amount = 1}
 	},
 	results = {
-        {type = 'item', name = 'aoc-torch', amount = 1}
+        {type = 'item', name = 'aoc-brazier', amount = 1}
     },
 	energy_required = 0.5
 }})

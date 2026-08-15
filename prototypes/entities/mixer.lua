@@ -41,6 +41,7 @@ data:extend({{
   max_health = 300,
 	selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
 	collision_box = {{-1.9, -1.9}, {1.9, 1.9}},
+  use_mirroring = true,
 	graphics_set = {
     animation = {
       layers = {
@@ -73,16 +74,19 @@ data:extend({{
 	fluid_boxes = {
     {
       production_type = "input",
+      pipe_picture = remove_north(require("__base__/prototypes/entity/assembler-pictures").assembler2pipepictures),
       pipe_covers = pipecoverspictures(),
       volume = 1000,
       pipe_connections = {{ flow_direction="input", direction = defines.direction.west, position = {-1.5, -1.5} }}
     },{
       production_type = "input",
+      pipe_picture = remove_north(require("__base__/prototypes/entity/assembler-pictures").assembler2pipepictures),
       pipe_covers = pipecoverspictures(),
       volume = 1000,
       pipe_connections = {{ flow_direction="input", direction = defines.direction.west, position = {-1.5, 1.5} }}
     },{
       production_type = "output",
+      pipe_picture = remove_north(require("__base__/prototypes/entity/assembler-pictures").assembler2pipepictures),
       pipe_covers = pipecoverspictures(),
       volume = 1000,
       pipe_connections = {{ flow_direction="output", direction = defines.direction.east, position = {1.5, 0.5} }}

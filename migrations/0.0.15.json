@@ -1,0 +1,14 @@
+{
+    "entity": [
+        [
+            "aoc-torch",
+            "aoc-brazier"
+        ]
+    ],
+    "recipe": [
+        [
+            "aoc-crafting-torch-recipe",
+            "aoc-crafting-brazier-recipe"
+        ]
+    ]
+}

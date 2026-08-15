@@ -12,6 +12,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-fulgora-chest', amount = 1}
     },
 	energy_required = 120,
+    raise_on_crafted = true,
 	categories = {'aoc-category-infusing'}
 }})
 
@@ -1661,7 +1662,7 @@ data:extend({{
         {type = 'item', name = 'aoc-philstone', amount = 1, ignored_by_productivity = 1}
     },
 	main_product = "aoc-proton",
-	energy_required = 20,
+	energy_required = 5,
 	categories = {'aoc-category-accelerating'}
 }})
 
@@ -1674,7 +1675,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-philstone', amount = 1}
 	},
 	results = {
-        {type = 'item', name = 'aoc-antiproton', amount = 1, independent_probability = 0.01},
+        {type = 'item', name = 'aoc-antiproton', amount = 1, independent_probability = 0.04},
         {type = 'item', name = 'aoc-philstone', amount = 1, ignored_by_productivity = 1}
     },
 	main_product = "aoc-antiproton",
@@ -1691,7 +1692,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-philstone', amount = 1}
 	},
 	results = {
-        {type = 'item', name = 'aoc-positron', amount = 1, independent_probability = 0.01},
+        {type = 'item', name = 'aoc-positron', amount = 1, independent_probability = 0.04},
         {type = 'item', name = 'aoc-philstone', amount = 1, ignored_by_productivity = 1}
     },
 	main_product = "aoc-positron",
@@ -1726,7 +1727,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-antimatter', amount = 1}
 	},
 	results = {
-        {type = 'item', name = 'aoc-antiproton', amount = 1, independent_probability = 0.05},
+        {type = 'item', name = 'aoc-antiproton', amount = 1, independent_probability = 0.1},
         {type = 'item', name = 'aoc-antimatter', amount = 1, ignored_by_productivity = 1}
     },
 	main_product = "aoc-antiproton",
@@ -1743,7 +1744,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-antimatter', amount = 1}
 	},
 	results = {
-        {type = 'item', name = 'aoc-positron', amount = 1, independent_probability = 0.05},
+        {type = 'item', name = 'aoc-positron', amount = 1, independent_probability = 0.1},
         {type = 'item', name = 'aoc-antimatter', amount = 1, ignored_by_productivity = 1}
     },
 	main_product = "aoc-positron",
@@ -1794,15 +1795,15 @@ data:extend({{
 	ingredients = {
         {type = 'fluid', name = 'aoc-starlight', amount = 60},
         {type = 'item', name = 'aoc-ammonium-chloride', amount = 3},
-		{type = 'item', name = 'aoc-plutonium-239', amount = 1},
+		{type = 'item', name = 'aoc-plutonium-242', amount = 1},
 		{type = 'item', name = 'jelly', amount = 2},
 		{type = 'item', name = 'aoc-antimatter', amount = 1},
         {type = 'item', name = 'aoc-lotus-flower-seeds', amount = 3}
     },
     results = {
-        {type = 'item', name = 'aoc-lotus-flower', amount = 6}
+        {type = 'item', name = 'aoc-lotus-flower', amount = 8}
     },
-    energy_required = 420,
+    energy_required = 320,
 	categories = {'aoc-category-farm-reservoir-lotus'},
 	auto_recycle = false,
 	icons = get_icons( data.raw.item['aoc-lotus-flower'], { icon = "__ageofcreation__/img/items/tier/t5.png" } ),
@@ -1818,7 +1819,7 @@ data:extend({{
         {type = 'item', name = 'aoc-soil', amount = 6},
         {type = 'item', name = 'aoc-lotus-flower-module', amount = 1, quality_min = "epic", quality_max = "epic"},
         {type = 'item', name = 'aoc-ammonium-chloride', amount = 2},
-        {type = 'item', name = 'aoc-plutonium-239', amount = 1},
+        {type = 'item', name = 'aoc-plutonium-242', amount = 1},
 		{type = 'item', name = 'jelly', amount = 2},
 		{type = 'item', name = 'aoc-antimatter', amount = 1},
         {type = 'item', name = 'aoc-fertilizer-4', amount = 1}

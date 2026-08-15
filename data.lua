@@ -1,7 +1,7 @@
 require("__base__/prototypes/entity/pipecovers")
 require("__base__/prototypes/entity/assembler-pictures")
-
 require("__ageofcreation__/globals")
+
 require("__ageofcreation__/prototypes/changes")
 require("__ageofcreation__/prototypes/tips-and-tricks")
 

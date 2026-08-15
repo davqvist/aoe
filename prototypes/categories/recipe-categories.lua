@@ -40,62 +40,62 @@ data:extend({
   {
     type = "recipe-category",
     name = "aoc-category-casting-iron",
-    modules = { "aoc-module-iron" }
+    modules = { "aoc-module-iron", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-casting-copper",
-    modules = { "aoc-module-copper" }
+    modules = { "aoc-module-copper", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-casting-tin",
-    modules = { "aoc-module-tin" }
+    modules = { "aoc-module-tin", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-casting-aluminium",
-    modules = { "aoc-module-aluminium" }
+    modules = { "aoc-module-aluminium", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-casting-lead",
-    modules = { "aoc-module-lead" }
+    modules = { "aoc-module-lead", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-casting-silver",
-    modules = { "aoc-module-silver" }
+    modules = { "aoc-module-silver", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-casting-nickel",
-    modules = { "aoc-module-nickel" }
+    modules = { "aoc-module-nickel", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-casting-gold",
-    modules = { "aoc-module-gold" }
+    modules = { "aoc-module-gold", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-casting-zinc",
-    modules = { "aoc-module-zinc" }
+    modules = { "aoc-module-zinc", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-casting-chromium",
-    modules = { "aoc-module-chromium" }
+    modules = { "aoc-module-chromium", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-casting-tungsten",
-    modules = { "aoc-module-tungsten" }
+    modules = { "aoc-module-tungsten", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-casting-titanium",
-    modules = { "aoc-module-titanium" }
+    modules = { "aoc-module-titanium", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
@@ -104,57 +104,57 @@ data:extend({
   {
     type = "recipe-category",
     name = "crushing-iron",
-    modules = { "aoc-module-iron" }
+    modules = { "aoc-module-iron", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "crushing-copper",
-    modules = { "aoc-module-copper" }
+    modules = { "aoc-module-copper", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "crushing-tin",
-    modules = { "aoc-module-tin" }
+    modules = { "aoc-module-tin", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "crushing-aluminium",
-    modules = { "aoc-module-aluminium" }
+    modules = { "aoc-module-aluminium", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "crushing-lead",
-    modules = { "aoc-module-lead" }
+    modules = { "aoc-module-lead", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "crushing-silver",
-    modules = { "aoc-module-silver" }
+    modules = { "aoc-module-silver", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "crushing-nickel",
-    modules = { "aoc-module-nickel" }
+    modules = { "aoc-module-nickel", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "crushing-gold",
-    modules = { "aoc-module-gold" }
+    modules = { "aoc-module-gold", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "crushing-zinc",
-    modules = { "aoc-module-zinc" }
+    modules = { "aoc-module-zinc", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "crushing-chromium",
-    modules = { "aoc-module-chromium" }
+    modules = { "aoc-module-chromium", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "crushing-tungsten",
-    modules = { "aoc-module-tungsten" }
+    modules = { "aoc-module-tungsten", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
@@ -167,62 +167,62 @@ data:extend({
   {
     type = "recipe-category",
     name = "aoc-category-electrolyzing-iron",
-    modules = { "aoc-module-iron" }
+    modules = { "aoc-module-iron", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-electrolyzing-copper",
-    modules = { "aoc-module-copper" }
+    modules = { "aoc-module-copper", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-electrolyzing-tin",
-    modules = { "aoc-module-tin" }
+    modules = { "aoc-module-tin", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-electrolyzing-aluminium",
-    modules = { "aoc-module-aluminium" }
+    modules = { "aoc-module-aluminium", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-electrolyzing-lead",
-    modules = { "aoc-module-lead" }
+    modules = { "aoc-module-lead", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-electrolyzing-silver",
-    modules = { "aoc-module-silver" }
+    modules = { "aoc-module-silver", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-electrolyzing-nickel",
-    modules = { "aoc-module-nickel" }
+    modules = { "aoc-module-nickel", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-electrolyzing-gold",
-    modules = { "aoc-module-gold" }
+    modules = { "aoc-module-gold", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-electrolyzing-zinc",
-    modules = { "aoc-module-zinc" }
+    modules = { "aoc-module-zinc", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-electrolyzing-chromium",
-    modules = { "aoc-module-chromium" }
+    modules = { "aoc-module-chromium", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-electrolyzing-tungsten",
-    modules = { "aoc-module-tungsten" }
+    modules = { "aoc-module-tungsten", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-electrolyzing-titanium",
-    modules = { "aoc-module-titanium" }
+    modules = { "aoc-module-titanium", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
@@ -354,57 +354,57 @@ data:extend({
   {
     type = "recipe-category",
     name = "aoc-category-kiln-smelting-iron",
-    modules = { "aoc-module-iron" }
+    modules = { "aoc-module-iron", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-kiln-smelting-copper",
-    modules = { "aoc-module-copper" }
+    modules = { "aoc-module-copper", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-kiln-smelting-tin",
-    modules = { "aoc-module-tin" }
+    modules = { "aoc-module-tin", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-kiln-smelting-aluminium",
-    modules = { "aoc-module-aluminium" }
+    modules = { "aoc-module-aluminium", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-kiln-smelting-lead",
-    modules = { "aoc-module-lead" }
+    modules = { "aoc-module-lead", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-kiln-smelting-silver",
-    modules = { "aoc-module-silver" }
+    modules = { "aoc-module-silver", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-kiln-smelting-nickel",
-    modules = { "aoc-module-nickel" }
+    modules = { "aoc-module-nickel", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-kiln-smelting-gold",
-    modules = { "aoc-module-gold" }
+    modules = { "aoc-module-gold", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-kiln-smelting-zinc",
-    modules = { "aoc-module-zinc" }
+    modules = { "aoc-module-zinc", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-kiln-smelting-chromium",
-    modules = { "aoc-module-chromium" }
+    modules = { "aoc-module-chromium", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-kiln-smelting-tungsten",
-    modules = { "aoc-module-tungsten" }
+    modules = { "aoc-module-tungsten", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
@@ -421,62 +421,62 @@ data:extend({
   {
     type = "recipe-category",
     name = "aoc-category-metallurgy-iron",
-    modules = { "aoc-module-iron" }
+    modules = { "aoc-module-iron", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-metallurgy-copper",
-    modules = { "aoc-module-copper" }
+    modules = { "aoc-module-copper", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-metallurgy-tin",
-    modules = { "aoc-module-tin" }
+    modules = { "aoc-module-tin", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-metallurgy-aluminium",
-    modules = { "aoc-module-aluminium" }
+    modules = { "aoc-module-aluminium", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-metallurgy-lead",
-    modules = { "aoc-module-lead" }
+    modules = { "aoc-module-lead", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-metallurgy-silver",
-    modules = { "aoc-module-silver" }
+    modules = { "aoc-module-silver", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-metallurgy-nickel",
-    modules = { "aoc-module-nickel" }
+    modules = { "aoc-module-nickel", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-metallurgy-gold",
-    modules = { "aoc-module-gold" }
+    modules = { "aoc-module-gold", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-metallurgy-zinc",
-    modules = { "aoc-module-zinc" }
+    modules = { "aoc-module-zinc", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-metallurgy-chromium",
-    modules = { "aoc-module-chromium" }
+    modules = { "aoc-module-chromium", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-metallurgy-tungsten",
-    modules = { "aoc-module-tungsten" }
+    modules = { "aoc-module-tungsten", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-metallurgy-titanium",
-    modules = { "aoc-module-titanium" }
+    modules = { "aoc-module-titanium", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
@@ -485,62 +485,62 @@ data:extend({
   {
     type = "recipe-category",
     name = "aoc-category-mixing-iron",
-    modules = { "aoc-module-iron" }
+    modules = { "aoc-module-iron", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-mixing-copper",
-    modules = { "aoc-module-copper" }
+    modules = { "aoc-module-copper", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-mixing-tin",
-    modules = { "aoc-module-tin" }
+    modules = { "aoc-module-tin", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-mixing-aluminium",
-    modules = { "aoc-module-aluminium" }
+    modules = { "aoc-module-aluminium", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-mixing-lead",
-    modules = { "aoc-module-lead" }
+    modules = { "aoc-module-lead", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-mixing-silver",
-    modules = { "aoc-module-silver" }
+    modules = { "aoc-module-silver", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-mixing-nickel",
-    modules = { "aoc-module-nickel" }
+    modules = { "aoc-module-nickel", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-mixing-gold",
-    modules = { "aoc-module-gold" }
+    modules = { "aoc-module-gold", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-mixing-zinc",
-    modules = { "aoc-module-zinc" }
+    modules = { "aoc-module-zinc", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-mixing-chromium",
-    modules = { "aoc-module-chromium" }
+    modules = { "aoc-module-chromium", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-mixing-tungsten",
-    modules = { "aoc-module-tungsten" }
+    modules = { "aoc-module-tungsten", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "aoc-category-mixing-titanium",
-    modules = { "aoc-module-titanium" }
+    modules = { "aoc-module-titanium", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
@@ -630,57 +630,57 @@ data:extend({
   {
     type = "recipe-category",
     name = "centrifuging-iron",
-    modules = { "aoc-module-iron" }
+    modules = { "aoc-module-iron", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "centrifuging-copper",
-    modules = { "aoc-module-copper" }
+    modules = { "aoc-module-copper", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "centrifuging-tin",
-    modules = { "aoc-module-tin" }
+    modules = { "aoc-module-tin", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "centrifuging-aluminium",
-    modules = { "aoc-module-aluminium" }
+    modules = { "aoc-module-aluminium", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "centrifuging-lead",
-    modules = { "aoc-module-lead" }
+    modules = { "aoc-module-lead", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "centrifuging-silver",
-    modules = { "aoc-module-silver" }
+    modules = { "aoc-module-silver", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "centrifuging-nickel",
-    modules = { "aoc-module-nickel" }
+    modules = { "aoc-module-nickel", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "centrifuging-gold",
-    modules = { "aoc-module-gold" }
+    modules = { "aoc-module-gold", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "centrifuging-zinc",
-    modules = { "aoc-module-zinc" }
+    modules = { "aoc-module-zinc", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "centrifuging-chromium",
-    modules = { "aoc-module-chromium" }
+    modules = { "aoc-module-chromium", "speed", "efficiency", "productivity" }
   },
   {
     type = "recipe-category",
     name = "centrifuging-tungsten",
-    modules = { "aoc-module-tungsten" }
+    modules = { "aoc-module-tungsten", "speed", "efficiency", "productivity" }
   }
 })
 

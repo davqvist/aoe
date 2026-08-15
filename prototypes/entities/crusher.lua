@@ -1,5 +1,5 @@
 data.raw['item']['crusher'].subgroup = "aoc-processing-buildings"
-data.raw['item']['crusher'].order = "g"
+data.raw['item']['crusher'].order = "h"
 data.raw['assembling-machine']['crusher'].crafting_categories = {"crushing","crushing-iron","crushing-copper","crushing-tin","crushing-aluminium","crushing-lead","crushing-silver","crushing-nickel","crushing-gold","crushing-zinc","crushing-chromium","crushing-tungsten"}
 data.raw['assembling-machine']['crusher'].surface_conditions = nil
 data.raw['assembling-machine']['crusher'].energy_usage = "140kW"
@@ -11,7 +11,7 @@ data.raw['assembling-machine']['burner-crusher'] = table.deepcopy( data.raw['ass
 data.raw['assembling-machine']['burner-crusher'].name = 'burner-crusher'
 data.raw['assembling-machine']['burner-crusher'].minable = { hardness = 1, mining_time = 0.2, result = "burner-crusher" }
 data.raw['item']['burner-crusher'].subgroup = "aoc-processing-buildings"
-data.raw['item']['burner-crusher'].order = "h"
+data.raw['item']['burner-crusher'].order = "h2"
 data.raw['assembling-machine']['burner-crusher'].crafting_speed = 0.5
 data.raw['assembling-machine']['burner-crusher'].module_slots = 0
 data.raw['assembling-machine']['burner-crusher'].surface_conditions = {{ property = "gravity", min = 0.1 }}

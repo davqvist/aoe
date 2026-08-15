@@ -1,5 +1,6 @@
 require("__ageofcreation__/scripts/milestones")
 require("__ageofcreation__/scripts/nuclear")
+require("__ageofcreation__/scripts/recipe_events")
 
 remote.add_interface("ageofcreation", {
 	milestones_presets = function()
@@ -23,7 +24,10 @@ function init_recipes()
     else
 		for _, player in pairs(game.players) do 
 			for recipe, value in pairs(storage.recipes) do 
-				if player.force.recipes[recipe] then player.force.recipes[recipe].enabled = value else storage.recipes[recipe] = nil end
+				if player.force.recipes[recipe] then 
+					player.force.recipes[recipe].enabled = value
+					player.clear_recipe_notification(recipe)
+				else storage.recipes[recipe] = nil end
 			end
 		end
 	end	
@@ -53,7 +57,6 @@ script.on_event(defines.events.on_player_created,
 	player.remove_item{name = "wood", count = 1}
 	player.remove_item{name = "stone-furnace", count = 1}
 	player.remove_item{name = "iron-plate", count = 8}
-	--player.remove_item{name = "burner-ore-crusher", count = 1}
   end
 )
 
@@ -154,6 +157,74 @@ script.on_event(defines.events.on_gui_closed,
   end
 )
 
+script.on_event(prototypes.recipe["aoc-forestry-latex-recipe"].on_crafted_event, 
+  function(event)
+	local success = tapTree(event.entity, "name", "aoc-rubber-tree-plant")
+	if success then 
+		event.entity.insert_fluid({name="aoc-latex", amount=10})
+	end
+  end
+)
+
+script.on_event(prototypes.recipe["aoc-forestry-resin-recipe"].on_crafted_event, 
+  function(event)
+	local success = tapTree(event.entity, "name", "tree-plant")
+	if success then 
+		local inv = event.entity.get_inventory(defines.inventory.crafter_output)
+		inv.insert({name="aoc-resin", count=1})
+	end
+  end
+)
+
+script.on_event(prototypes.recipe["aoc-enchanting-philstone-recipe"].on_crafted_event,
+  function(event)
+	storage.recipes['aoc-enchanting-philstone-recipe'] = false
+	event.entity.force.recipes['aoc-enchanting-philstone-recipe'].enabled = false
+  end
+)
+
+script.on_event({prototypes.recipe["aoc-farm-barn-calf-1-recipe"].on_crafted_event, prototypes.recipe["aoc-farm-barn-calf-2-recipe"].on_crafted_event, prototypes.recipe["aoc-farm-barn-calf-3-recipe"].on_crafted_event, prototypes.recipe["aoc-farm-barn-calf-4-recipe"].on_crafted_event, prototypes.recipe["aoc-farm-barn-calf-5-recipe"].on_crafted_event},
+  function(event)	
+	check_module_dying( event.entity, 0.08 )
+  end
+)
+script.on_event({prototypes.recipe["aoc-farm-barn-lamb-1-recipe"].on_crafted_event, prototypes.recipe["aoc-farm-barn-lamb-2-recipe"].on_crafted_event, prototypes.recipe["aoc-farm-barn-lamb-3-recipe"].on_crafted_event, prototypes.recipe["aoc-farm-barn-lamb-4-recipe"].on_crafted_event, prototypes.recipe["aoc-farm-barn-lamb-5-recipe"].on_crafted_event},
+  function(event)	
+	check_module_dying( event.entity, 0.06 )
+  end
+)
+script.on_event({prototypes.recipe["aoc-farm-chicken-coop-egg-1-recipe"].on_crafted_event, prototypes.recipe["aoc-farm-chicken-coop-egg-2-recipe"].on_crafted_event, prototypes.recipe["aoc-farm-chicken-coop-egg-3-recipe"].on_crafted_event, prototypes.recipe["aoc-farm-chicken-coop-egg-4-recipe"].on_crafted_event, prototypes.recipe["aoc-farm-chicken-coop-egg-5-recipe"].on_crafted_event},
+  function(event)	
+	check_module_dying( event.entity, 0.04 )
+  end
+)
+script.on_event({prototypes.recipe["aoc-farm-reservoir-fish-eggs-1-recipe"].on_crafted_event, prototypes.recipe["aoc-farm-reservoir-fish-eggs-2-recipe"].on_crafted_event, prototypes.recipe["aoc-farm-reservoir-fish-eggs-3-recipe"].on_crafted_event, prototypes.recipe["aoc-farm-reservoir-fish-eggs-4-recipe"].on_crafted_event, prototypes.recipe["aoc-farm-reservoir-fish-eggs-5-recipe"].on_crafted_event},
+  function(event)	
+	check_module_dying( event.entity, 0.02 )
+  end
+)
+script.on_event(bee_script(),
+  function(event)	
+	check_module_dying( event.entity, 0.04 )
+  end
+)
+
+script.on_event(get_recipes_events_for("aoc-category-unlocking"),
+  function(event)	
+	check_research( event.entity )
+  end
+)
+script.on_event(get_recipes_events_for("aoc-category-brewing"),
+  function(event)
+	check_players( event.entity )
+  end
+)
+script.on_event(get_recipes_events_for("aoc-category-infusing"),
+  function(event)
+	check_infusion( event.entity )
+  end
+)
+
 script.on_event(defines.events.on_gui_click,
   function(event)
     local action = event.element.tags.action
@@ -167,12 +238,6 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 	if(entity.name == "infinity-chest") then 
 		game.set_win_ending_info{ title={'age-of-creation.wintitle'}, message={'age-of-creation.winmsg'} }
 		game.set_game_state{ game_finished = true, player_won = true, can_continue = true }
-	end
-	if(entity.name == "aoc-forestry") then 
-		handleBuilt( event, "forestries" )
-	end
-	if(string.sub(entity.name,1,string.len("aoc-farm"))=="aoc-farm") then 
-		handleBuilt( event, "farms" )
 	end
 	if(entity.name == "aoc-lightning-rod") then
 		if storage.lightningtick == nil then storage.lightningtick = {} end
@@ -189,15 +254,6 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 	if(entity.name == "aoc-lunar-panel") then
 		handleBuilt( event, "starlight_panels" )
 		entity.disabled_by_script = true
-	end
-	if(entity.name == "aoc-escritoire") then
-		handleBuilt( event, "escritoires" )
-	end
-	if(entity.name == "aoc-cauldron") then
-		handleBuilt( event, "cauldrons" )
-	end
-	if(entity.name == "aoc-enchanting-table") then
-		handleBuilt( event, "enchanting_tables" )
 	end
 	if(entity.name == "aoc-particle-accelerator") then
 		handleBuilt( event, "accelerators" )
@@ -235,7 +291,6 @@ script.on_event({defines.events.on_research_finished},
   function(event)
     local tech = event.research
 	if(tech.name:find('^aoc%-philstone%-tech') ~= nil) then 
-		storage.recipes['aoc-enchanting-philstone-recipe'] = true
 		storage.recipes['aoc-enchanting-philstone-recipe'] = true
 	end
   end
@@ -313,7 +368,7 @@ script.on_nth_tick(137,
 		for unit, accelerator in pairs(storage.accelerators) do
 			if accelerator.valid and accelerator.name == "aoc-particle-accelerator" then
 				if accelerator.surface.platform then
-					if accelerator.surface.platform.speed > 2.5 then 
+					if accelerator.surface.platform.speed > 2 then 
 						accelerator.disabled_by_script = false
 						if accelerator.surface.platform.space_connection and accelerator.surface.platform.space_connection.from and accelerator.surface.platform.space_connection.to then
 							if accelerator.get_recipe().name == 'aoc-accelerating-proton-quarks-recipe' then
@@ -559,52 +614,15 @@ script.on_nth_tick(97,
 	end
   end
 )
-script.on_nth_tick(151,
+
+script.on_nth_tick(191,
   function()
 	if storage.infusion_tables then
 		for unit, infusiontable in pairs(storage.infusion_tables) do
 			if infusiontable.valid and infusiontable.name == "aoc-infusion-table" then
 				local itm = storage.infusion_table_machines[unit]
 				if itm.valid and itm.name == "aoc-infusion-table-machine" and itm.crafting_progress == 0 then
-					local pedestals = {}
-					pedestals[1] = infusiontable.surface.find_entity("aoc-infusion-pedestal", {infusiontable.position.x-5, infusiontable.position.y})
-					pedestals[2] = infusiontable.surface.find_entity("aoc-infusion-pedestal", {infusiontable.position.x+5, infusiontable.position.y})
-					pedestals[3] = infusiontable.surface.find_entity("aoc-infusion-pedestal", {infusiontable.position.x, infusiontable.position.y-5})
-					pedestals[4] = infusiontable.surface.find_entity("aoc-infusion-pedestal", {infusiontable.position.x, infusiontable.position.y+5})
-					if pedestals[1] ~= nil and pedestals[2] ~= nil and pedestals[3] ~= nil and pedestals[4] ~= nil then
-						local inv = {}
-						local k = {}
-						local v = {}
-						local r = {}
-						local recipe = null
-						local flag = true
-						for i, p in pairs( pedestals ) do
-							inv[i] = p.get_inventory(defines.inventory.chest)
-							k[i], v[i] = next( inv[i].get_contents() )
-							if v[i] == nil or storage.infusing[v[i].name] == nil then flag = false break end
-						end
-						if flag then
-							for i=1, 4 do
-								for j, rec in pairs( storage.infusing[v[i].name] ) do
-									if not r[rec] then r[rec] = 1 else r[rec] = r[rec]+1 end
-									if r[rec] == 4 then recipe = rec end
-								end
-							end
-						end
-						if flag and recipe and itm.force.recipes[recipe].enabled then
-							itm.set_recipe( recipe )
-							local out = itm.get_inventory(defines.inventory.crafter_output)
-							local tempk, tempv = next( out.get_contents() )
-							if tempv == nil or tempv.count < 2 then
-								for i, p in pairs( pedestals ) do
-									inv[i].remove( {name=v[i].name, count=1} )
-									itm.get_inventory(defines.inventory.crafter_input).insert( {name=v[i].name, count=1} )
-								end
-							end
-						end
-					else
-						itm.set_recipe( nil )
-					end
+					check_infusion( itm )
 				end
 			else
 				storage.infusion_tables[unit]=nil
@@ -635,12 +653,6 @@ script.on_event(defines.events.on_tick,
 		end
 		storage.scrolltick[game.tick] = nil
 	end
-	if storage.enchantingtick and storage.enchantingtick[game.tick] then
-		storage.recipes['aoc-enchanting-philstone-recipe'] = false
-		storage.enchantingtick[game.tick].force.recipes['aoc-enchanting-philstone-recipe'].enabled = false
-		storage.enchantingtick = nil
-	end
-	
 	if storage.lightningtick and storage.lightningtick[game.tick] then
 		local rod = storage.lightningtick[game.tick]
 		if rod and rod.valid then
@@ -658,83 +670,25 @@ script.on_event(defines.events.on_tick,
 		end
 		storage.lightningtick[game.tick-600] = nil
 	end
-	if storage.forestries then
-      for _,forestry in pairs(storage.forestries) do
-  		if forestry.valid and forestry.name == "aoc-forestry" then
-		  if forestry.get_recipe() and forestry.get_recipe().name == "aoc-forestry-latex-recipe" and forestry.crafting_progress >= 1-forestry.crafting_speed/(60*forestry.get_recipe().energy) then
-			tapTree(forestry, "name", "aoc-rubber-tree-plant")
-		  end
-		  if forestry.get_recipe() and forestry.get_recipe().name == "aoc-forestry-resin-recipe" and forestry.crafting_progress >= 1-forestry.crafting_speed/(60*forestry.get_recipe().energy) then
-			tapTree(forestry, "name", "tree-plant")
-		  end
-		else storage.forestries[_]=nil
-		end
-	  end
-    end
-	if storage.farms then
-      for _,farm in pairs(storage.farms) do
-		if farm.valid and farm.name == "aoc-farm-reservoir" then
-			check_module_dying( farm, "aoc%-farm%-reservoir%-fish%-eggs%-?.*%-recipe", 0.02 )
-		elseif farm.valid and farm.name == "aoc-farm-chicken-coop" then
-			check_module_dying( farm, "aoc%-farm%-chicken%-coop%-egg%-?.*%-recipe", 0.04 )
-		elseif farm.valid and farm.name == "aoc-farm-barn" then
-			check_module_dying( farm, "aoc%-farm%-barn%-lamb%-?*%-recipe", 0.06 )
-			check_module_dying( farm, "aoc%-farm%-barn%-calf%-?.*%-recipe", 0.08 )
-		elseif farm.valid and farm.name == "aoc-farm-apiary" then
-			check_module_dying( farm, "aoc%-larva%-.*%-recipe", 0.04 )
-		else storage.farms[_]=nil
-		end
-	  end
-    end
-	if storage.enchanting_tables then
-      for _,et in pairs(storage.enchanting_tables) do
-		if et.valid and et.name == "aoc-enchanting-table" then
-			if et.get_recipe() and et.get_recipe().name:find('^aoc%-enchanting%-philstone%-recipe$') ~= nil and et.crafting_progress >= 1-et.crafting_speed/(60*et.get_recipe().energy) then
-				if not storage.enchantingtick then
-					storage.enchantingtick = {}
-					storage.enchantingtick[game.tick+10] = et
-				end
-			end
-		end
-	  end
-	end
-	if storage.escritoires then
-	  for _,escritoire in pairs(storage.escritoires) do
-		if escritoire.valid then
-			check_research(escritoire)
-		else storage.escritoires[_]=nil
-		end
-	  end
-	end
-	if storage.cauldrons then
-	  for _,cauldron in pairs(storage.cauldrons) do
-		if cauldron.valid then
-			check_players(cauldron)
-		else storage.cauldrons[_]=nil
-		end
-	  end
-	end
   end
 )
 
-function check_module_dying( farm, recipename, chance )
-	if farm.get_recipe() and farm.get_recipe().name:find('^' .. recipename .. '$') ~= nil and farm.crafting_progress >= 1-farm.crafting_speed/(60*farm.get_recipe().energy) then
-		if( math.random()<=chance ) then
-			local inv = farm.get_module_inventory()
-			local k, v = next( inv.get_contents() )
-			if v ~= nil then 
-				local stack, index = inv.find_item_stack({name = v.name, quality = v.quality})
-				inv.remove( {name=v.name, count=1, quality=v.quality} )
-				local irp = farm.surface.find_entity("item-request-proxy", farm.position)
-				if irp then
-					local requests = irp.insert_plan
-					if requests then
-						table.insert( requests, {id={name=v.name, quality=v.quality},items={in_inventory={{inventory=defines.inventory.crafter_modules,stack=index-1,count=1}}}})
-					end
-					irp.insert_plan = requests
-				else 
-					farm.surface.create_entity{name="item-request-proxy", position=farm.position, force=farm.force, target=farm, modules={{id={name=v.name, quality=v.quality},items={in_inventory={{inventory=defines.inventory.crafter_modules,stack=index-1,count=1}}}}}}
+function check_module_dying( farm, chance )
+	if( math.random()<=chance ) then
+		local inv = farm.get_module_inventory()
+		local k, v = next( inv.get_contents() )
+		if v ~= nil then 
+			local stack, index = inv.find_item_stack({name = v.name, quality = v.quality})
+			inv.remove( {name=v.name, count=1, quality=v.quality} )
+			local irp = farm.surface.find_entity("item-request-proxy", farm.position)
+			if irp then
+				local requests = irp.insert_plan
+				if requests then
+					table.insert( requests, {id={name=v.name, quality=v.quality},items={in_inventory={{inventory=defines.inventory.crafter_modules,stack=index-1,count=1}}}})
 				end
+				irp.insert_plan = requests
+			else 
+				farm.surface.create_entity{name="item-request-proxy", position=farm.position, force=farm.force, target=farm, modules={{id={name=v.name, quality=v.quality},items={in_inventory={{inventory=defines.inventory.crafter_modules,stack=index-1,count=1}}}}}}
 			end
 		end
 	end
@@ -819,7 +773,7 @@ function handlePlanetChestBuilt(event, planet)
   if not storage.planet_chests then storage.planet_chests={} end
   if not storage.planet_chests[planet] then storage.planet_chests[planet]={} end
   local planetchest = event.entity
-  if storage.planet_chests[planet][planetchest.surface.index] ~= nil or planetchest.surface.index == game.get_surface(planet).index then
+  if storage.planet_chests[planet][planetchest.surface.index] ~= nil or ( game.get_surface(planet) and planetchest.surface.index == game.get_surface(planet).index ) then
 	if event.player_index then
 	  game.get_player(event.player_index).create_local_flying_text{
 		text = {"age-of-creation.once-per-surface"},
@@ -831,7 +785,7 @@ function handlePlanetChestBuilt(event, planet)
 	return false
   else
     storage.planet_chests[planet][planetchest.surface.index] = planetchest
-	if storage.cargo_landing_pads and storage.cargo_landing_pads[game.get_surface(planet).index] ~= nil then
+	if game.get_surface(planet) and storage.cargo_landing_pads and storage.cargo_landing_pads[game.get_surface(planet).index] ~= nil then
   	  planetchest.proxy_target_entity = storage.cargo_landing_pads[game.get_surface(planet).index]
   	  planetchest.proxy_target_inventory = defines.inventory.cargo_landing_pad_main
 	end
@@ -877,16 +831,13 @@ function handleMinedSurface(event, main_entities)
 end
 
 function check_research( escritoire )
-	if escritoire.get_recipe() and escritoire.get_recipe().categories and escritoire.get_recipe().categories[1] == "aoc-category-unlocking" and escritoire.crafting_progress >= 1-escritoire.crafting_speed/(60*escritoire.get_recipe().energy) then
-		local recipe = string.match(escritoire.get_recipe().name, "^aoc%-unlocking%-.*%-tech%-?%d?%-(.*)$")
-		if escritoire.force.recipes[recipe] then 
-			escritoire.force.recipes[recipe].enabled = true
-			storage.recipes[recipe] = true
-			local message = {"", {"age-of-creation.message_researched", prototypes.recipe[recipe].localised_name}}
-			for _, player in pairs(escritoire.force.players) do
-				player.print(message)
-			end
-			escritoire.crafting_progress = 0
+	local recipe = string.match(escritoire.get_recipe().name, "^aoc%-unlocking%-.*%-tech%-?%d?%-(.*)$")
+	if escritoire.force.recipes[recipe] then 
+		escritoire.force.recipes[recipe].enabled = true
+		storage.recipes[recipe] = true
+		local message = {"", {"age-of-creation.message_researched", prototypes.recipe[recipe].localised_name}}
+		for _, player in pairs(escritoire.force.players) do
+			player.print(message)
 		end
 	end
 end
@@ -903,43 +854,91 @@ function check_players( cauldron )
 		['epic'] = 4,
 		['legendary'] = 5,
 	}
-	if cauldron.get_recipe() and cauldron.get_recipe().categories and cauldron.get_recipe().categories[1] == "aoc-category-brewing" and cauldron.crafting_progress >= 1-cauldron.crafting_speed/(60*cauldron.get_recipe().energy) then
-		local flag = false
-		local chance, recipe = string.match(cauldron.get_recipe().name, "^aoc%-brewing%-(%d%d)%-(.*)$")
-		if recipe then
-			if cauldron.force.recipes[recipe] then 
-				chance = -chance/100
-				local surface = cauldron.surface
-				local temp = surface.find_entities_filtered({type="character", area={{cauldron.position.x-8, cauldron.position.y-8}, {cauldron.position.x+8, cauldron.position.y+8}}})
-				if temp ~= nil and #temp > 0 then 
-					local armor = temp[1].get_inventory(defines.inventory.character_armor)
-					if armor and #armor > 0 and armor[1].valid_for_read and armor[1].grid then
-						if armor[1].name == 'aoc-robe' then chance = chance+0.05 end
-						for k, v in pairs( armor[1].grid.get_contents() ) do
-							if equipment[v.name] then chance = chance+v.count*(equipment[v.name]+equipment[v.name]*(qual[v.quality]-1)/2) end
-						end
-						if math.random() < chance then 
-							flag = true
-							cauldron.force.recipes[recipe].enabled = true
-							storage.recipes[recipe] = true
-							cauldron.force.recipes[cauldron.get_recipe().name].enabled = false
-							storage.recipes[cauldron.get_recipe().name] = false
+	local flag = false
+	local chance, recipe = string.match(cauldron.get_recipe().name, "^aoc%-brewing%-(%d%d)%-(.*)$")
+	if recipe then
+		if cauldron.force.recipes[recipe] then 
+			chance = -chance/100
+			local surface = cauldron.surface
+			local temp = surface.find_entities_filtered({type="character", area={{cauldron.position.x-8, cauldron.position.y-8}, {cauldron.position.x+8, cauldron.position.y+8}}})
+			if temp ~= nil and #temp > 0 then 
+				local armor = temp[1].get_inventory(defines.inventory.character_armor)
+				if armor and #armor > 0 and armor[1].valid_for_read and armor[1].grid then
+					if armor[1].name == 'aoc-robe' then chance = chance+0.05 end
+					for k, v in pairs( armor[1].grid.get_contents() ) do
+						if equipment[v.name] then chance = chance+v.count*(equipment[v.name]+equipment[v.name]*(qual[v.quality]-1)/2) end
+					end
+					if math.random() < chance then 
+						flag = true
+						cauldron.force.recipes[recipe].enabled = true
+						storage.recipes[recipe] = true
+						if cauldron.force.recipes[cauldron.get_recipe().name].enabled then
 							local message = {"", {"age-of-creation.message_researched", prototypes.recipe[recipe].localised_name}}
 							for _, player in pairs(cauldron.force.players) do
 								player.print(message)
 							end
 						end
+						cauldron.force.recipes[cauldron.get_recipe().name].enabled = false
+						storage.recipes[cauldron.get_recipe().name] = false
 					end
 				end
 			end
-			if not flag then
-				cauldron.crafting_progress = 0
-				cauldron.get_output_inventory().insert({name = "aoc-experiment-good", count = 1})
-			end
-		else
-			cauldron.crafting_progress = 0
-			cauldron.get_output_inventory().insert({name = "aoc-experiment-helpful", count = 1})
 		end
+		if not flag then
+			local inv = cauldron.get_inventory(defines.inventory.crafter_output)
+			inv.insert({name = "aoc-experiment-good", count = 1})
+		end
+	else
+		local inv = cauldron.get_inventory(defines.inventory.crafter_output)
+		inv.insert({name = "aoc-experiment-helpful", count = 1})
+	end
+end
+
+function check_infusion( infusiontable )
+	local pedestals = {}
+	pedestals[1] = infusiontable.surface.find_entity("aoc-infusion-pedestal", {infusiontable.position.x-5, infusiontable.position.y})
+	pedestals[2] = infusiontable.surface.find_entity("aoc-infusion-pedestal", {infusiontable.position.x+5, infusiontable.position.y})
+	pedestals[3] = infusiontable.surface.find_entity("aoc-infusion-pedestal", {infusiontable.position.x, infusiontable.position.y-5})
+	pedestals[4] = infusiontable.surface.find_entity("aoc-infusion-pedestal", {infusiontable.position.x, infusiontable.position.y+5})
+	if pedestals[1] ~= nil and pedestals[2] ~= nil and pedestals[3] ~= nil and pedestals[4] ~= nil then
+		local inv = {}
+		local k = {}
+		local v = {}
+		local r = {}
+		local recipe = null
+		local flag = true
+		for i, p in pairs( pedestals ) do
+			inv[i] = p.get_inventory(defines.inventory.chest)
+			k[i], v[i] = next( inv[i].get_contents() )
+			if v[i] == nil or storage.infusing[v[i].name] == nil then flag = false break end
+		end
+		if flag then
+			for i=1, 4 do
+				for j, rec in pairs( storage.infusing[v[i].name] ) do
+					if not r[rec] then r[rec] = 1 else r[rec] = r[rec]+1 end
+					if r[rec] == 4 then recipe = rec end
+				end
+			end
+		end
+		if flag and recipe and infusiontable.force.recipes[recipe].enabled then
+			local out = infusiontable.get_inventory(defines.inventory.crafter_output)
+			local tempk, tempv = next( out.get_contents() )
+			local wants_to_change = false
+			if infusiontable.get_recipe() and infusiontable.get_recipe().name ~= recipe then
+				wants_to_change = true
+			end
+			if tempv == nil then
+				infusiontable.set_recipe( recipe )
+			end
+			if tempv == nil or ( tempv.count < 2 and not wants_to_change ) then
+				for i, p in pairs( pedestals ) do
+					inv[i].remove( {name=v[i].name, count=1} )
+					infusiontable.get_inventory(defines.inventory.crafter_input).insert( {name=v[i].name, count=1} )
+				end
+			end
+		end
+	else
+		infusiontable.set_recipe( nil )
 	end
 end
 
@@ -955,7 +954,10 @@ function tapTree(forestry, what, tree)
 	temp = surface.find_entities_filtered({position={x,y}, type="tree", radius=2.5})
 	if temp ~= nil then entity = temp[1] end
   end
-  if entity == nil or ( entity.type ~= "tree" and game.tick < entity.tick_grown ) then forestry.crafting_progress = 0 end
+  if entity ~= nil and ( entity.type == "tree" or game.tick >= entity.tick_grown ) then
+	return true
+  end
+  return false
 end
 
 script.on_event(defines.events.on_script_trigger_effect,

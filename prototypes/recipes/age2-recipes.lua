@@ -1329,19 +1329,6 @@ data:extend({{
 }})
 
 data:extend({{
-	name = 'aoc-pumping-air-recipe',
-	type = 'recipe',
-	enabled = false,
-	ingredients = {},
-	results = {
-        {type = 'fluid', name = 'aoc-air', amount = 100}
-    },
-	energy_required = 1,
-	categories = {'aoc-category-pumping'},
-	surface_conditions = {{ property = "gravity", min = 0.1 }}
-}})
-
-data:extend({{
 	name = 'aoc-pumping-cold-air-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1550,6 +1537,7 @@ data:extend({{
     },
     energy_required = 25,
 	icons = get_icons( data.raw.item['aoc-fish-eggs'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
+	raise_on_crafted = true,
 	categories = {'aoc-category-farm-reservoir-fish'}
 }})
 

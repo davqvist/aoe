@@ -28,7 +28,7 @@ data:extend({{
         filter = "aoc-mana"
       }
     },
-    energy_usage = "400kW",
+    energy_usage = "1.6MW",
     allowed_effects = nil,
     icon = "__ageofcreation__/img/entities/enchanting-table.png",
     icon_size = 192,

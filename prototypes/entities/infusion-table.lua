@@ -108,10 +108,10 @@ data:extend({{
         idle_animation = {
             layers = {
                 {
-                    filename = "__ageofcreation__/img/entities/infusion-pedestal.png",
-                    width = 192,
-                    height = 192,
-                    scale = 0.1666667
+                    filename = "__ageofcreation__/img/entities/infusion-table.png",
+                    width = 256,
+                    height = 256,
+                    scale = 0.625
                 }
             }
         },

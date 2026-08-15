@@ -10,6 +10,7 @@ reactorcopy.energy_source = {
     fuel_categories = {"nuclear"},
     effectivity = 1,
     fuel_inventory_size = 1,
+    burnt_inventory_size = 1,
     emissions_per_minute = {pollution = 12}
 }
 reactorcopy.energy_usage = "1MW"
@@ -194,8 +195,9 @@ data:extend({{
   energy_usage = "0kW",
   allowed_effects = {},
   module_slots = 0,
-  icon = "__ageofcreation__/img/entities/empty.png",
-  icon_size = 128,
+  icon = "__base__/graphics/icons/nuclear-reactor.png",
+  icon_size = 64,
+  icon_mipmaps = 4,
   flags = { "placeable-neutral", "placeable-player", "not-on-map", "hide-alt-info" },
   minable = nil,
   max_health = 1,

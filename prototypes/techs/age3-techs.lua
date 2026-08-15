@@ -606,8 +606,8 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "aoc-agriculture-science-alternate-tech",
-    icon_size = 64,
-    icon = "__ageofcreation__/img/items/science-pack-3.png",
+    icon = "__base__/graphics/icons/logistic-science-pack.png",
+    icon_size = 64, icon_mipmaps = 4,
     prerequisites = {"aoc-cow-tech-1"},
 	  effects = {
       {

@@ -1,8 +1,8 @@
 data:extend({{
     type = "item",
     name = "aoc-science-03",
-    icon = "__ageofcreation__/img/items/science-pack-3.png",
-    icon_size = 64,
+    icon = "__base__/graphics/icons/logistic-science-pack.png",
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "aoc-science-packs",
     order = "d",
     stack_size = 200

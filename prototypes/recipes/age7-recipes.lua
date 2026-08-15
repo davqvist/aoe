@@ -135,7 +135,7 @@ data:extend({{
 	results = {
 		{type = 'fluid', name = 'aoc-titanium-slurry', amount = 30},
 		{type = 'item', name = 'aoc-slag', amount = 1},
-		{type = 'item', name = 'aoc-magnesium-dust', amount_min = 1, amount_max = 2, ignored_by_productivity = 2}
+		{type = 'item', name = 'aoc-magnesium-dust', amount_min = 0, amount_max = 2, ignored_by_productivity = 2}
     },
 	main_product = 'aoc-titanium-slurry',
 	energy_required = 5,
@@ -296,6 +296,37 @@ data:extend({{
         {type = 'item', name = 'space-platform-starter-pack', amount = 1}
     },
     energy_required = 10
+}})
+
+data:extend({{
+    name = 'aoc-crafting-cargo-bay-recipe',
+    type = 'recipe',
+    enabled = false,
+    ingredients = {
+        {type = 'item', name = 'aoc-stainless-steel', amount = 10},
+		{type = 'item', name = 'refined-concrete', amount = 100},
+		{type = 'item', name = 'processing-unit', amount = 5}
+    },
+    results = {
+        {type = 'item', name = 'cargo-bay', amount = 1}
+    },
+    energy_required = 5
+}})
+
+data:extend({{
+    name = 'aoc-crafting-unloading-bay-recipe',
+    type = 'recipe',
+    enabled = false,
+    ingredients = {
+        {type = 'item', name = 'aoc-stainless-steel', amount = 50},
+		{type = 'item', name = 'refined-concrete', amount = 300},
+		{type = 'item', name = 'processing-unit', amount = 25},
+		{type = 'item', name = 'electric-engine-unit', amount = 25}
+    },
+    results = {
+        {type = 'item', name = 'landing-pad-unloading-bay', amount = 1}
+    },
+    energy_required = 5
 }})
 
 data:extend({{
@@ -521,6 +552,23 @@ data:extend({{
 }})
 
 data:extend({{
+	name = 'aoc-crafting-pumpjack-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'aoc-steel-machine-hull', amount = 3},
+		{type = 'item', name = 'aoc-steel-rod', amount = 10},
+		{type = 'item', name = 'stone-wall', amount = 6},
+		{type = 'item', name = 'engine-unit', amount = 2},
+		{type = 'item', name = 'pipe', amount = 10}
+	},
+	results = {
+        {type = 'item', name = 'pumpjack', amount = 1}
+    },
+	energy_required = 5
+}})
+
+data:extend({{
 	name = 'aoc-infusing-nauvis-chest-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -534,6 +582,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-nauvis-chest', amount = 1}
     },
 	energy_required = 120,
+    raise_on_crafted = true,
 	categories = {'aoc-category-infusing'}
 }})
 
@@ -551,6 +600,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-vulcanus-chest', amount = 1}
     },
 	energy_required = 120,
+    raise_on_crafted = true,
 	categories = {'aoc-category-infusing'}
 }})
 
@@ -568,6 +618,7 @@ data:extend({{
         {type = 'item', name = 'flying-robot-frame', amount = 1}
     },
 	energy_required = 20,
+    raise_on_crafted = true,
 	categories = {'aoc-category-infusing'}
 }})
 
@@ -672,7 +723,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 2}
 	},
 	results = {
-		{type = 'item', name = 'biter-egg', amount = 1, result_is_always_fresh = true}
+		{type = 'item', name = 'biter-egg', amount = 1, always_fresh = true}
     },
 	categories = {'aoc-category-spawning'},
 	energy_required = 30,
@@ -690,7 +741,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 2}
 	},
 	results = {
-		{type = 'item', name = 'aoc-medium-biter-egg', amount = 1, result_is_always_fresh = true}
+		{type = 'item', name = 'aoc-medium-biter-egg', amount = 1, always_fresh = true}
     },
 	categories = {'aoc-category-spawning'},
 	energy_required = 30,
@@ -708,7 +759,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 2}
 	},
 	results = {
-		{type = 'item', name = 'aoc-big-biter-egg', amount = 1, result_is_always_fresh = true}
+		{type = 'item', name = 'aoc-big-biter-egg', amount = 1, always_fresh = true}
     },
 	categories = {'aoc-category-spawning'},
 	energy_required = 30,
@@ -726,7 +777,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 2}
 	},
 	results = {
-		{type = 'item', name = 'aoc-behemoth-biter-egg', amount = 1, result_is_always_fresh = true}
+		{type = 'item', name = 'aoc-behemoth-biter-egg', amount = 1, always_fresh = true}
     },
 	categories = {'aoc-category-spawning'},
 	energy_required = 30,
@@ -744,7 +795,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 4}
 	},
 	results = {
-		{type = 'item', name = 'biter-egg', amount = 1, result_is_always_fresh = true}
+		{type = 'item', name = 'biter-egg', amount = 1, always_fresh = true}
     },
 	categories = {'aoc-category-spawning'},
 	energy_required = 25,
@@ -762,7 +813,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 4}
 	},
 	results = {
-		{type = 'item', name = 'aoc-medium-biter-egg', amount = 1, result_is_always_fresh = true}
+		{type = 'item', name = 'aoc-medium-biter-egg', amount = 1, always_fresh = true}
     },
 	categories = {'aoc-category-spawning'},
 	energy_required = 25,
@@ -780,7 +831,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 4}
 	},
 	results = {
-		{type = 'item', name = 'aoc-big-biter-egg', amount = 1, result_is_always_fresh = true}
+		{type = 'item', name = 'aoc-big-biter-egg', amount = 1, always_fresh = true}
     },
 	categories = {'aoc-category-spawning'},
 	energy_required = 25,
@@ -795,10 +846,10 @@ data:extend({{
 	ingredients = {
         {type = 'item', name = 'aoc-rune', amount = 2},
 		{type = 'item', name = 'aoc-rune-life', amount = 5},
-		{type = 'item', name = 'aoc-rune-speed', amount = 8}
+		{type = 'item', name = 'aoc-rune-speed', amount = 4}
 	},
 	results = {
-		{type = 'item', name = 'aoc-behemoth-biter-egg', amount = 1, result_is_always_fresh = true}
+		{type = 'item', name = 'aoc-behemoth-biter-egg', amount = 1, always_fresh = true}
     },
 	categories = {'aoc-category-spawning'},
 	energy_required = 25,
@@ -816,7 +867,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 8}
 	},
 	results = {
-		{type = 'item', name = 'biter-egg', amount = 1, result_is_always_fresh = true}
+		{type = 'item', name = 'biter-egg', amount = 1, always_fresh = true}
     },
 	categories = {'aoc-category-spawning'},
 	energy_required = 20,
@@ -834,7 +885,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 8}
 	},
 	results = {
-		{type = 'item', name = 'aoc-medium-biter-egg', amount = 1, result_is_always_fresh = true}
+		{type = 'item', name = 'aoc-medium-biter-egg', amount = 1, always_fresh = true}
     },
 	categories = {'aoc-category-spawning'},
 	energy_required = 20,
@@ -852,7 +903,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 8}
 	},
 	results = {
-		{type = 'item', name = 'aoc-big-biter-egg', amount = 1, result_is_always_fresh = true}
+		{type = 'item', name = 'aoc-big-biter-egg', amount = 1, always_fresh = true}
     },
 	categories = {'aoc-category-spawning'},
 	energy_required = 20,
@@ -870,7 +921,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 8}
 	},
 	results = {
-		{type = 'item', name = 'aoc-behemoth-biter-egg', amount = 1, result_is_always_fresh = true}
+		{type = 'item', name = 'aoc-behemoth-biter-egg', amount = 1, always_fresh = true}
     },
 	categories = {'aoc-category-spawning'},
 	energy_required = 20,
@@ -892,6 +943,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-life-catalyst', amount = 1}
     },
 	energy_required = 60,
+    raise_on_crafted = true,
 	categories = {'aoc-category-infusing'},
 	research = 'aoc-small-biter-corpse'
 }})
@@ -1536,7 +1588,7 @@ data:extend({{
 	type = 'recipe',
 	enabled = true,
 	ingredients = {
-		{type = "fluid", name = "thruster-oxidizer", amount = 100}
+		{type = "fluid", name = "thruster-oxidizer", amount = 1000}
 	},
 	results = {},
 	icon = data.raw.fluid["thruster-oxidizer"].icon,
@@ -1554,7 +1606,7 @@ data:extend({{
 	enabled = false,
 	ingredients = {
 		{type = 'item', name = 'aoc-electrum-machine-hull', amount = 15},
-		{type = 'item', name = 'engine-unit', amount = 5},
+		{type = 'item', name = 'electric-engine-unit', amount = 5},
 		{type = 'item', name = 'concrete', amount = 25},
 		{type = 'item', name = 'processing-unit', amount = 10},
 		{type = 'item', name = 'aoc-lead-plate', amount = 40}
@@ -2051,13 +2103,13 @@ data:extend({{
 	ingredients = {
         {type = 'fluid', name = 'aoc-starlight', amount = 60},
         {type = 'item', name = 'aoc-ammonium-chloride', amount = 3},
-		{type = 'item', name = 'aoc-plutonium-239', amount = 1},
+		{type = 'item', name = 'aoc-plutonium-242', amount = 1},
         {type = 'item', name = 'aoc-lotus-flower-seeds', amount = 3}
     },
     results = {
-        {type = 'item', name = 'aoc-lotus-flower', amount = 4}
+        {type = 'item', name = 'aoc-lotus-flower', amount = 5}
     },
-    energy_required = 360,
+    energy_required = 270,
 	categories = {'aoc-category-farm-reservoir-lotus'},
 	auto_recycle = false,
 	icons = get_icons( data.raw.item['aoc-lotus-flower'], { icon = "__ageofcreation__/img/items/tier/t3.png" } ),
@@ -2073,11 +2125,11 @@ data:extend({{
         {type = 'item', name = 'aoc-soil', amount = 4},
         {type = 'item', name = 'aoc-lotus-flower-module', amount = 1, quality_min = "uncommon", quality_max = "uncommon"},
         {type = 'item', name = 'aoc-ammonium-chloride', amount = 2},
-        {type = 'item', name = 'aoc-plutonium-239', amount = 1},
+        {type = 'item', name = 'aoc-plutonium-242', amount = 1},
         {type = 'item', name = 'aoc-fertilizer-2', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoc-lotus-flower-module', amount=1, quality_min = "rare", quality_max = "rare", independent_probability = 0.2}
+        {type = 'item', name = 'aoc-lotus-flower-module', amount=1, quality_min = "rare", quality_max = "rare", independent_probability = 0.4}
     },
     icons = get_icons_quality( data.raw.item["aoc-lotus-flower"], 3 ),
     energy_required = 300,

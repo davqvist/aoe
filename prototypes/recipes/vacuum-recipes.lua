@@ -29,8 +29,8 @@ for _, recipe in pairs(data.raw.recipe) do
             if ingredient.type == "fluid" then
                 new_ingredients[_].type = "item"
                 new_ingredients[_].name = ingredient.name .. "-barrel"
-                new_ingredients[_].amount = math.ceil(ingredient.amount/50)
-                table.insert(new_results,{type = "item", name = "barrel", amount = math.ceil(ingredient.amount/50), ignored_by_productivity = 1})
+                new_ingredients[_].amount = ingredient.amount/50
+                table.insert(new_results,{type = "item", name = "barrel", amount = new_ingredients[_].amount, ignored_by_productivity = new_ingredients[_].amount})
             end
         end
         table.insert(new_ingredients, {type = 'fluid', name = 'aoc-vacuum', amount = recipe.energy_required*10})

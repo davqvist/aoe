@@ -33,6 +33,7 @@ data:extend({{
   circuit_wire_max_distance = default_circuit_wire_max_distance,
   selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
   collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
+  use_mirroring = true,
   graphics_set = {
     animation = {
       layers = {

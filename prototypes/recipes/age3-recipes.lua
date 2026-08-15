@@ -345,6 +345,7 @@ data:extend({{
     energy_required = 15,
 	main_product = 'aoc-egg',
 	icons = get_icons( data.raw.item['aoc-egg'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
+	raise_on_crafted = true,
 	categories = {'aoc-category-farm-chicken-coop'}
 }})
 
@@ -484,6 +485,7 @@ data:extend({{
 	auto_recycle = false,
 	main_product = 'aoc-lamb',
 	icons = get_icons( data.raw.item['aoc-lamb'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
+	raise_on_crafted = true,
 	categories = {'aoc-category-farm-barn-sheep'}
 }})
 
@@ -630,6 +632,7 @@ data:extend({{
 	energy_required = 40,
 	auto_recycle = false,
 	icons = get_icons( data.raw.item['aoc-calf'], { icon = "__ageofcreation__/img/items/tier/t1.png" } ),
+	raise_on_crafted = true,
 	categories = {'aoc-category-farm-barn-cow'}
 }})
 
@@ -1278,7 +1281,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-quicklime', amount = 6},
 		{type = 'item', name = 'aoc-soda-ash', amount = 5},
 		{type = 'item', name = 'aoc-bone-meal', amount = 7},
-		{type = 'item', name = 'aoc-magnesium-dust', amount = 1}
+		{type = 'item', name = 'aoc-magnesium-dust', amount = 3}
 	},
 	results = {
 		{type = 'item', name = 'aoc-fertilizer', amount = 7}
@@ -1325,11 +1328,13 @@ data:extend({{
     type = 'recipe',
     enabled = false,
 	ingredients = {
-        {type = 'fluid', name = 'aoc-fish-water', amount = 120}
+        {type = 'fluid', name = 'aoc-fish-water', amount = 100}
     },
     results = {
-        {type = 'item', name = 'aoc-kelp', amount = 1}
+        {type = 'item', name = 'aoc-kelp', amount = 1},
+        {type = 'item', name = 'aoc-kelp', amount = 1, independent_probability = 0.2}
     },
+    main_product = 'aoc-kelp',
     energy_required = 14,
     icons = get_icons( data.raw.item['aoc-kelp'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
 	categories = {'aoc-category-farm-reservoir-kelp'}
@@ -1388,6 +1393,7 @@ data:extend({{
     },
     energy_required = 20,
 	icons = get_icons( data.raw.item['aoc-fish-eggs'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
+	raise_on_crafted = true,
 	categories = {'aoc-category-farm-reservoir-fish'}
 }})
 
@@ -1977,6 +1983,7 @@ data:extend({{
         {type = 'item', name = 'yumako-mash', amount = 2}
     },
 	main_product = 'aoc-ethanol',
+    auto_recycle = false,
     energy_required = 5,
 	categories = {'chemistry'}
 }})

@@ -602,7 +602,6 @@ if mods["underground-pipe-pack"] then
     }
 
     for _, pipe in pairs(pipes) do
-        log( pipe )
         for _, conn in pairs(data.raw['pipe-to-ground'][pipe .. "-pipe"].fluid_box.pipe_connections) do
             if conn.max_underground_distance then conn.max_underground_distance = 16 end
         end
@@ -634,7 +633,7 @@ if mods["cybersyn"] then
         results = {
             {type = 'item', name = 'cybersyn-combinator', amount = 1}
         },
-        energy_required = 2
+        energy_required = 1
     }})
 
     data:extend({{
@@ -657,6 +656,176 @@ if mods["cybersyn"] then
     }})
 
     if data.raw['shortcut']['cybersyn-toggle-gui'] then data.raw['shortcut']['cybersyn-toggle-gui'].technology_to_unlock = "aoc-cybersyn-tech" end
+end
+
+-- LTN 
+
+if mods["LogisticTrainNetwork"] then
+    data.raw['item']['logistic-train-stop'].subgroup = "aoc-trains"
+    data.raw['item']['logistic-train-stop'].order = "d1"
+
+    data:extend({{
+        name = 'aoc-logistic-train-stop-recipe',
+        type = 'recipe',
+        enabled = false,
+        ingredients = {
+            {type = 'item', name = 'train-stop', amount = 1},
+            {type = 'item', name = 'small-lamp', amount = 1},
+            {type = 'item', name = 'constant-combinator', amount = 1}
+        },
+        results = {
+            {type = 'item', name = 'logistic-train-stop', amount = 1}
+        },
+        energy_required = 2
+    }})
+
+    data:extend({{
+        type = "technology",
+        name = "aoc-logistic-train-network-tech",
+        icon = '__LogisticTrainNetwork__/graphics/technology/ltn_technology.png',
+        icon_size = 256,
+        prerequisites = {"aoc-trains-tech-1", "aoc-circuit-network-tech"},
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "aoc-logistic-train-stop-recipe"
+            }
+        },
+        unit = {
+            count = 40,
+            ingredients = AOC["age_tech_table"][4],
+            time = 35
+        }
+    }})
+end
+
+-- LTN Combinator
+
+if mods["LogisticTrainNetwork"] and mods["LTN_Combinator_Modernized"] then
+    data.raw['item']['ltn-combinator'].subgroup = "aoc-logic"
+    data.raw['item']['ltn-combinator'].order = "d3"
+
+    data:extend({{
+        name = 'aoc-crafting-ltn-combinator-recipe',
+        type = 'recipe',
+        enabled = false,
+        ingredients = {
+            {type = 'item', name = 'electronic-circuit', amount = 2},
+            {type = 'item', name = 'copper-cable', amount = 5}
+        },
+        results = {
+            {type = 'item', name = 'ltn-combinator', amount = 1}
+        },
+        energy_required = 1
+    }})
+
+    table.insert( data.raw["technology"]["aoc-logistic-train-network-tech"].effects,{
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-ltn-combinator-recipe"
+    })
+end
+
+-- Text Plates
+
+if mods["textplates"] then
+    local plate_types = {
+        ['concrete'] = {["item"] = "concrete", ["tech_req"] = "aoc-concrete-tech-1"},
+        ['copper'] = {["item"] = "copper-plate", ["tech_req"] = "aoc-copper-tech-1"},
+        ['glass'] = {["item"] = "aoc-glass"},
+        ['gold'] = {["item"] = "aoc-gold-plate", ["tech_req"] = "aoc-gold-tech"},
+        ['iron'] = {["item"] = "iron-plate"},
+        ['plastic'] = {["item"] = "plastic-bar", ["tech_req"] = "aoc-plastic-tech-1"},
+        ['steel'] = {["item"] = "steel-plate", ["tech_req"] = "aoc-steel-tech-1"},
+        ['stone'] = {["item"] = "stone-brick"},
+        ['uranium'] = {["item"] = "uranium-238", ["tech_req"] = "aoc-uranium-tech"},
+    }
+    for type, info in pairs(plate_types) do
+        local new_tech = ( info["tech_req"] ~= nil )
+        data:extend({{
+            name = 'aoc-crafting-textplate-small-' .. type .. '-recipe',
+            type = 'recipe',
+            enabled = not new_tech,
+            ingredients = {
+                {type = 'item', name = info["item"], amount = 1}
+            },
+            results = {
+                {type = 'item', name = 'textplate-small-' .. type, amount = 1}
+            },
+            energy_required = 0.25
+        }})
+        data:extend({{
+            name = 'aoc-crafting-textplate-large-' .. type .. '-recipe',
+            type = 'recipe',
+            enabled = not new_tech,
+            ingredients = {
+                {type = 'item', name = info["item"], amount = 4}
+            },
+            results = {
+                {type = 'item', name = 'textplate-large-' .. type, amount = 1}
+            },
+            energy_required = 0.5
+        }})
+        if new_tech then
+            data:extend({{
+                type = "technology",
+                name = "aoc-textplate-" .. type .. "-tech",
+                icon = "__textplates__/graphics/entity/" .. type .. "/t.png",
+                icon_size = 128,
+                prerequisites = {info["tech_req"]},
+                effects = {
+                    {
+                        type = "unlock-recipe",
+                        recipe = 'aoc-crafting-textplate-small-' .. type .. '-recipe'
+                    },
+                    {
+                        type = "unlock-recipe",
+                        recipe = 'aoc-crafting-textplate-large-' .. type .. '-recipe'
+                    }
+                },
+                unit = {
+                    count = 25,
+                    ingredients = AOC["age_tech_table"][1],
+                    time = 20
+                }
+            }})
+        end
+    end
+end
+
+-- Waterfill
+
+if mods["Waterfill_v17"] then
+    data:extend({{
+        name = 'aoc-crafting-waterfill-recipe',
+        type = 'recipe',
+        enabled = false,
+        ingredients = {
+            {type = 'fluid', name = 'water', amount = 200}
+        },
+        results = {
+            {type = 'item', name = 'waterfill', amount = 1}
+        },
+        categories = {'advanced-crafting'},
+        energy_required = 1
+    }})
+    data:extend({{
+        type = "technology",
+        name = "aoc-waterfill-tech",
+        icon_size = 128,
+        icon = "__Waterfill_v17__/water.png",
+        prerequisites = {"aoc-landfill-tech", "aoc-electric-automation-tech-1"},
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "aoc-crafting-waterfill-recipe"
+            }
+        },
+        unit = {
+            count = 50,
+            ingredients = AOC["age_tech_table"][2],
+            time = 25
+        }
+    }})
 end
 
 -- BP Shotgun 
@@ -1093,6 +1262,439 @@ if mods["bobinserters"] then
             time = 40
         }
     end
+end
+
+-- Holographic Signs
+
+if mods["holographic_signs"] then
+    data.raw['item']['hs_holo_sign'].subgroup = "aoc-decoration"
+    data.raw['item']['hs_holo_sign'].order = "b1"
+
+    data:extend({{
+        name = 'aoc-crafting-holo-sign-recipe',
+        type = 'recipe',
+        enabled = false,
+        ingredients = {
+            {type = 'item', name = 'iron-plate', amount = 4},
+            {type = 'item', name = 'small-lamp', amount = 1},
+            {type = 'item', name = 'electronic-circuit', amount = 1}
+        },
+        results = {
+            {type = 'item', name = 'hs_holo_sign', amount = 1}
+        },
+        energy_required = 2
+    }})
+    table.insert( data.raw["technology"]["aoc-optics-tech"].effects, {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-holo-sign-recipe"
+    } )
+    table.insert( data.raw["technology"]["aoc-optics-tech"].prerequisites, "aoc-electronics-tech-1" )
+end
+
+-- Robot Replacer
+
+if mods["botReplacer"] then
+    data:extend({{
+        name = 'aoc-crafting-chest-robot-replacer-recipe',
+        type = 'recipe',
+        enabled = false,
+        ingredients = {
+            {type = 'item', name = 'iron-chest', amount = 1},
+            {type = 'item', name = 'processing-unit', amount = 30}
+        },
+        results = {
+            {type = 'item', name = 'logistic-chest-botUpgrader', amount = 1}
+        },
+        energy_required = 1
+    }})
+    table.insert( data.raw["technology"]["aoc-electronic-robots-tech"].effects, {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-chest-robot-replacer-recipe"
+    } )
+end
+
+-- AAI Containers 
+
+if mods["aai-containers"] then
+    data:extend({{
+        name = 'aoc-crafting-strongbox-recipe',
+        type = 'recipe',
+        enabled = false,
+        ingredients = {
+            {type = 'item', name = 'aoc-copper-chest', amount = 1},
+            {type = 'item', name = 'steel-plate', amount = 20}
+        },
+        results = {
+            {type = 'item', name = 'aai-strongbox', amount = 1}
+        },
+        energy_required = 0.5
+    }})
+    data:extend({{
+        name = 'aoc-crafting-strongbox-storage-recipe',
+        type = 'recipe',
+        enabled = false,
+        ingredients = {
+            {type = 'item', name = 'aai-strongbox', amount = 1},
+            {type = 'item', name = 'electronic-circuit', amount = 10}
+        },
+        results = {
+            {type = 'item', name = 'aai-strongbox-storage', amount = 1}
+        },
+        energy_required = 0.5
+    }})
+    data:extend({{
+        name = 'aoc-crafting-strongbox-passive-provider-recipe',
+        type = 'recipe',
+        enabled = false,
+        ingredients = {
+            {type = 'item', name = 'aai-strongbox', amount = 1},
+            {type = 'item', name = 'advanced-circuit', amount = 10}
+        },
+        results = {
+            {type = 'item', name = 'aai-strongbox-passive-provider', amount = 1}
+        },
+        energy_required = 0.5
+    }})
+    data:extend({{
+        name = 'aoc-crafting-strongbox-active-provider-recipe',
+        type = 'recipe',
+        enabled = false,
+        ingredients = {
+            {type = 'item', name = 'aai-strongbox', amount = 1},
+            {type = 'item', name = 'advanced-circuit', amount = 10}
+        },
+        results = {
+            {type = 'item', name = 'aai-strongbox-active-provider', amount = 1}
+        },
+        energy_required = 0.5
+    }})
+    data:extend({{
+        name = 'aoc-crafting-strongbox-requester-recipe',
+        type = 'recipe',
+        enabled = false,
+        ingredients = {
+            {type = 'item', name = 'aai-strongbox', amount = 1},
+            {type = 'item', name = 'processing-unit', amount = 10}
+        },
+        results = {
+            {type = 'item', name = 'aai-strongbox-requester', amount = 1}
+        },
+        energy_required = 0.5
+    }})
+    data:extend({{
+        name = 'aoc-crafting-strongbox-buffer-recipe',
+        type = 'recipe',
+        enabled = false,
+        ingredients = {
+            {type = 'item', name = 'aai-strongbox', amount = 1},
+            {type = 'item', name = 'processing-unit', amount = 10}
+        },
+        results = {
+            {type = 'item', name = 'aai-strongbox-buffer', amount = 1}
+        },
+        energy_required = 0.5
+    }})
+    data:extend({{
+        name = 'aoc-crafting-storehouse-recipe',
+        type = 'recipe',
+        enabled = false,
+        ingredients = {
+            {type = 'item', name = 'aoc-stainless-steel', amount = 200}
+        },
+        results = {
+            {type = 'item', name = 'aai-storehouse', amount = 1}
+        },
+        energy_required = 0.5
+    }})
+    data:extend({{
+        name = 'aoc-crafting-storehouse-storage-recipe',
+        type = 'recipe',
+        enabled = false,
+        ingredients = {
+            {type = 'item', name = 'aai-storehouse', amount = 1},
+            {type = 'item', name = 'electronic-circuit', amount = 20}
+        },
+        results = {
+            {type = 'item', name = 'aai-storehouse-storage', amount = 1}
+        },
+        energy_required = 0.5
+    }})
+    data:extend({{
+        name = 'aoc-crafting-storehouse-passive-provider-recipe',
+        type = 'recipe',
+        enabled = false,
+        ingredients = {
+            {type = 'item', name = 'aai-storehouse', amount = 1},
+            {type = 'item', name = 'advanced-circuit', amount = 20}
+        },
+        results = {
+            {type = 'item', name = 'aai-storehouse-passive-provider', amount = 1}
+        },
+        energy_required = 0.5
+    }})
+    data:extend({{
+        name = 'aoc-crafting-storehouse-active-provider-recipe',
+        type = 'recipe',
+        enabled = false,
+        ingredients = {
+            {type = 'item', name = 'aai-storehouse', amount = 1},
+            {type = 'item', name = 'advanced-circuit', amount = 20}
+        },
+        results = {
+            {type = 'item', name = 'aai-storehouse-active-provider', amount = 1}
+        },
+        energy_required = 0.5
+    }})
+    data:extend({{
+        name = 'aoc-crafting-storehouse-requester-recipe',
+        type = 'recipe',
+        enabled = false,
+        ingredients = {
+            {type = 'item', name = 'aai-storehouse', amount = 1},
+            {type = 'item', name = 'processing-unit', amount = 20}
+        },
+        results = {
+            {type = 'item', name = 'aai-storehouse-requester', amount = 1}
+        },
+        energy_required = 0.5
+    }})
+    data:extend({{
+        name = 'aoc-crafting-storehouse-buffer-recipe',
+        type = 'recipe',
+        enabled = false,
+        ingredients = {
+            {type = 'item', name = 'aai-storehouse', amount = 1},
+            {type = 'item', name = 'processing-unit', amount = 20}
+        },
+        results = {
+            {type = 'item', name = 'aai-storehouse-buffer', amount = 1}
+        },
+        energy_required = 0.5
+    }})
+    data:extend({{
+        name = 'aoc-crafting-warehouse-recipe',
+        type = 'recipe',
+        enabled = false,
+        ingredients = {
+            {type = 'item', name = 'tungsten-plate', amount = 400}
+        },
+        results = {
+            {type = 'item', name = 'aai-warehouse', amount = 1}
+        },
+        energy_required = 0.5
+    }})
+    data:extend({{
+        name = 'aoc-crafting-warehouse-storage-recipe',
+        type = 'recipe',
+        enabled = false,
+        ingredients = {
+            {type = 'item', name = 'aai-warehouse', amount = 1},
+            {type = 'item', name = 'electronic-circuit', amount = 40}
+        },
+        results = {
+            {type = 'item', name = 'aai-warehouse-storage', amount = 1}
+        },
+        energy_required = 0.5
+    }})
+    data:extend({{
+        name = 'aoc-crafting-warehouse-passive-provider-recipe',
+        type = 'recipe',
+        enabled = false,
+        ingredients = {
+            {type = 'item', name = 'aai-warehouse', amount = 1},
+            {type = 'item', name = 'advanced-circuit', amount = 40}
+        },
+        results = {
+            {type = 'item', name = 'aai-warehouse-passive-provider', amount = 1}
+        },
+        energy_required = 0.5
+    }})
+    data:extend({{
+        name = 'aoc-crafting-warehouse-active-provider-recipe',
+        type = 'recipe',
+        enabled = false,
+        ingredients = {
+            {type = 'item', name = 'aai-warehouse', amount = 1},
+            {type = 'item', name = 'advanced-circuit', amount = 40}
+        },
+        results = {
+            {type = 'item', name = 'aai-warehouse-active-provider', amount = 1}
+        },
+        energy_required = 0.5
+    }})
+    data:extend({{
+        name = 'aoc-crafting-warehouse-requester-recipe',
+        type = 'recipe',
+        enabled = false,
+        ingredients = {
+            {type = 'item', name = 'aai-warehouse', amount = 1},
+            {type = 'item', name = 'processing-unit', amount = 40}
+        },
+        results = {
+            {type = 'item', name = 'aai-warehouse-requester', amount = 1}
+        },
+        energy_required = 0.5
+    }})
+    data:extend({{
+        name = 'aoc-crafting-warehouse-buffer-recipe',
+        type = 'recipe',
+        enabled = false,
+        ingredients = {
+            {type = 'item', name = 'aai-warehouse', amount = 1},
+            {type = 'item', name = 'processing-unit', amount = 40}
+        },
+        results = {
+            {type = 'item', name = 'aai-warehouse-buffer', amount = 1}
+        },
+        energy_required = 0.5
+    }})
+
+    table.insert( data.raw["technology"]["aoc-advanced-storage-tech-2"].effects, {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-strongbox-recipe"
+    })
+    data:extend({{
+        type = "technology",
+        name = "aoc-advanced-storage-tech-3",
+        icons = { { icon = "__aai-containers__/graphics/technology/container-4-base.png", icon_size = 128 } },
+        prerequisites = {"aoc-advanced-storage-tech-2", "aoc-steel-tech-3"},
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "aoc-crafting-storehouse-recipe"
+            }
+        },
+        unit = {
+            count = 40,
+            ingredients = AOC["age_tech_table"][4],
+            time = 35
+        }
+    }})
+    data:extend({{
+        type = "technology",
+        name = "aoc-advanced-storage-tech-4",
+        icons = { { icon = "__aai-containers__/graphics/technology/container-4-base.png", icon_size = 128 } },
+        prerequisites = {"aoc-advanced-storage-tech-3", "aoc-tungsten-tech"},
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "aoc-crafting-warehouse-recipe"
+            }
+        },
+        unit = {
+            count = 60,
+            ingredients = AOC["age_tech_table"][4],
+            time = 35
+        }
+    }})
+    data:extend({{
+        type = "technology",
+        name = "aoc-logistic-chests-tech-1",
+        icons = {
+            { icon = "__aai-containers__/graphics/technology/container-2-base.png", icon_size = 128 },
+            { icon = "__aai-containers__/graphics/technology/container-2-mask.png", icon_size = 128, tint = {r=80,g=160,b=220} }
+        },
+        prerequisites = {"aoc-advanced-storage-tech-2", "aoc-logistic-system-tech"},
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "aoc-crafting-strongbox-storage-recipe"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "aoc-crafting-strongbox-passive-provider-recipe"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "aoc-crafting-strongbox-active-provider-recipe"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "aoc-crafting-strongbox-requester-recipe"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "aoc-crafting-strongbox-buffer-recipe"
+            }
+        },
+        unit = {
+            count = 50,
+            ingredients = AOC["age_tech_table"][5],
+            time = 40
+        }
+    }})
+    data:extend({{
+        type = "technology",
+        name = "aoc-logistic-chests-tech-2",
+        icons = {
+            { icon = "__aai-containers__/graphics/technology/container-4-base.png", icon_size = 128 },
+            { icon = "__aai-containers__/graphics/technology/container-4-mask.png", icon_size = 128, tint = {r=80,g=160,b=220} }
+        },
+        prerequisites = {"aoc-advanced-storage-tech-3", "aoc-logistic-chests-tech-1"},
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "aoc-crafting-storehouse-storage-recipe"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "aoc-crafting-storehouse-passive-provider-recipe"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "aoc-crafting-storehouse-active-provider-recipe"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "aoc-crafting-storehouse-requester-recipe"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "aoc-crafting-storehouse-buffer-recipe"
+            }
+        },
+        unit = {
+            count = 55,
+            ingredients = AOC["age_tech_table"][5],
+            time = 40
+        }
+    }})
+    data:extend({{
+        type = "technology",
+        name = "aoc-logistic-chests-tech-3",
+        icons = {
+            { icon = "__aai-containers__/graphics/technology/container-6-base.png", icon_size = 128 },
+            { icon = "__aai-containers__/graphics/technology/container-6-mask.png", icon_size = 128, tint = {r=80,g=160,b=220} }
+        },
+        prerequisites = {"aoc-advanced-storage-tech-4", "aoc-logistic-chests-tech-2"},
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "aoc-crafting-warehouse-storage-recipe"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "aoc-crafting-warehouse-passive-provider-recipe"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "aoc-crafting-warehouse-active-provider-recipe"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "aoc-crafting-warehouse-requester-recipe"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "aoc-crafting-warehouse-buffer-recipe"
+            }
+        },
+        unit = {
+            count = 60,
+            ingredients = AOC["age_tech_table"][5],
+            time = 40
+        }
+    }})
 end
 
 -- Configurable Valves

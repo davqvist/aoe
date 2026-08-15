@@ -26,7 +26,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 2}
 	},
 	results = {
-		{type = 'item', name = 'pentapod-egg', amount = 1, result_is_always_fresh = true}
+		{type = 'item', name = 'pentapod-egg', amount = 1, always_fresh = true}
     },
 	categories = {'aoc-category-spawning'},
 	energy_required = 30,
@@ -44,7 +44,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 2}
 	},
 	results = {
-		{type = 'item', name = 'aoc-medium-pentapod-egg', amount = 1, result_is_always_fresh = true}
+		{type = 'item', name = 'aoc-medium-pentapod-egg', amount = 1, always_fresh = true}
     },
 	categories = {'aoc-category-spawning'},
 	energy_required = 30,
@@ -62,7 +62,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 2}
 	},
 	results = {
-		{type = 'item', name = 'aoc-big-pentapod-egg', amount = 1, result_is_always_fresh = true}
+		{type = 'item', name = 'aoc-big-pentapod-egg', amount = 1, always_fresh = true}
     },
 	categories = {'aoc-category-spawning'},
 	energy_required = 30,
@@ -80,7 +80,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 4}
 	},
 	results = {
-		{type = 'item', name = 'pentapod-egg', amount = 1, result_is_always_fresh = true}
+		{type = 'item', name = 'pentapod-egg', amount = 1, always_fresh = true}
     },
 	categories = {'aoc-category-spawning'},
 	energy_required = 25,
@@ -98,7 +98,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 4}
 	},
 	results = {
-		{type = 'item', name = 'aoc-medium-pentapod-egg', amount = 1, result_is_always_fresh = true}
+		{type = 'item', name = 'aoc-medium-pentapod-egg', amount = 1, always_fresh = true}
     },
 	categories = {'aoc-category-spawning'},
 	energy_required = 25,
@@ -116,7 +116,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 4}
 	},
 	results = {
-		{type = 'item', name = 'aoc-big-pentapod-egg', amount = 1, result_is_always_fresh = true}
+		{type = 'item', name = 'aoc-big-pentapod-egg', amount = 1, always_fresh = true}
     },
 	categories = {'aoc-category-spawning'},
 	energy_required = 25,
@@ -134,7 +134,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 8}
 	},
 	results = {
-		{type = 'item', name = 'pentapod-egg', amount = 1, result_is_always_fresh = true}
+		{type = 'item', name = 'pentapod-egg', amount = 1, always_fresh = true}
     },
 	categories = {'aoc-category-spawning'},
 	energy_required = 20,
@@ -152,7 +152,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 8}
 	},
 	results = {
-		{type = 'item', name = 'aoc-medium-pentapod-egg', amount = 1, result_is_always_fresh = true}
+		{type = 'item', name = 'aoc-medium-pentapod-egg', amount = 1, always_fresh = true}
     },
 	categories = {'aoc-category-spawning'},
 	energy_required = 20,
@@ -170,7 +170,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-rune-speed', amount = 8}
 	},
 	results = {
-		{type = 'item', name = 'aoc-big-pentapod-egg', amount = 1, result_is_always_fresh = true}
+		{type = 'item', name = 'aoc-big-pentapod-egg', amount = 1, always_fresh = true}
     },
 	categories = {'aoc-category-spawning'},
 	energy_required = 20,
@@ -233,20 +233,52 @@ data:extend({{
 }})
 
 data:extend({{
+	name = 'aoc-crafting-overgrowth-jellynut-soil-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'artificial-jellynut-soil', amount = 2},
+		{type = 'item', name = 'aoc-alien-chitin', amount = 2},
+        {type = 'item', name = 'aoc-fertilizer-3', amount = 5},
+        {type = 'item', name = 'jellynut-seed', amount = 5}
+	},
+	results = {
+        {type = 'item', name = 'overgrowth-jellynut-soil', amount = 1}
+    },
+    energy_required = 10
+}})
+
+data:extend({{
+	name = 'aoc-crafting-overgrowth-yumako-soil-recipe',
+	type = 'recipe',
+	enabled = false,
+	ingredients = {
+		{type = 'item', name = 'artificial-yumako-soil', amount = 2},
+		{type = 'item', name = 'aoc-alien-chitin', amount = 2},
+        {type = 'item', name = 'aoc-fertilizer-3', amount = 5},
+        {type = 'item', name = 'yumako-seed', amount = 5}
+	},
+	results = {
+        {type = 'item', name = 'overgrowth-yumako-soil', amount = 1}
+    },
+    energy_required = 10
+}})
+
+data:extend({{
     name = 'aoc-farm-reservoir-lotus-flower-4-recipe',
     type = 'recipe',
     enabled = false,
 	ingredients = {
         {type = 'fluid', name = 'aoc-starlight', amount = 60},
         {type = 'item', name = 'aoc-ammonium-chloride', amount = 3},
-		{type = 'item', name = 'aoc-plutonium-239', amount = 1},
+		{type = 'item', name = 'aoc-plutonium-242', amount = 1},
 		{type = 'item', name = 'jelly', amount = 2},
         {type = 'item', name = 'aoc-lotus-flower-seeds', amount = 3}
     },
     results = {
-        {type = 'item', name = 'aoc-lotus-flower', amount = 5}
+        {type = 'item', name = 'aoc-lotus-flower', amount = 6}
     },
-    energy_required = 400,
+    energy_required = 300,
 	categories = {'aoc-category-farm-reservoir-lotus'},
 	auto_recycle = false,
 	icons = get_icons( data.raw.item['aoc-lotus-flower'], { icon = "__ageofcreation__/img/items/tier/t4.png" } ),
@@ -262,12 +294,12 @@ data:extend({{
         {type = 'item', name = 'aoc-soil', amount = 5},
         {type = 'item', name = 'aoc-lotus-flower-module', amount = 1, quality_min = "rare", quality_max = "rare"},
         {type = 'item', name = 'aoc-ammonium-chloride', amount = 2},
-        {type = 'item', name = 'aoc-plutonium-239', amount = 1},
+        {type = 'item', name = 'aoc-plutonium-242', amount = 1},
 		{type = 'item', name = 'jelly', amount = 2},
         {type = 'item', name = 'aoc-fertilizer-3', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoc-lotus-flower-module', amount=1, quality_min = "epic", quality_max = "epic", independent_probability = 0.2}
+        {type = 'item', name = 'aoc-lotus-flower-module', amount=1, quality_min = "epic", quality_max = "epic", independent_probability = 0.3}
     },
     icons = get_icons_quality( data.raw.item["aoc-lotus-flower"], 4 ),
     energy_required = 360,
@@ -287,7 +319,7 @@ data:extend({{
         {type = 'fluid', name = 'aoc-acetic-acid', amount = 25}
 	},
 	results = {
-        {type = 'item', name = 'bioflux', amount = 1}
+        {type = 'item', name = 'bioflux', amount = 1, always_fresh = true}
     },
     categories = {'chemistry'},
     energy_required = 20
@@ -301,12 +333,12 @@ data:extend({{
 		{type = 'item', name = 'aoc-alien-gland', amount = 1},
 		{type = 'item', name = 'aoc-agar', amount = 1},
 		{type = 'item', name = 'aoc-petri-dish', amount = 1},
-		{type = 'fluid', name = 'aoc-bacteria', amount = 100}
+		{type = 'fluid', name = 'aoc-bacteria', amount = 50}
     },
     results = {
-        {type = 'item', name = 'aoc-hormones', amount = 1, independent_probability = 0.2}
+        {type = 'item', name = 'aoc-hormones', amount = 1, independent_probability = 0.5}
     },
-    energy_required = 30,
+    energy_required = 10,
 	categories = {'aoc-category-gene-lab'}
 }})
 
@@ -417,6 +449,7 @@ data:extend({{
     },
 	energy_required = 10,
 	main_product = 'aoc-polyvinylchloride',
+    auto_recycle = false,
 	categories = {'aoc-category-advanced-chemistry'}
 }})
 
@@ -479,7 +512,7 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'raw-fish', amount = 6},
-        {type = 'item', name = 'aoc-nature-catalyst', amount = 1, independent_probability = 0.7, ignored_by_productivity = 1}
+        {type = 'item', name = 'aoc-nature-catalyst', amount = 1, independent_probability = 0.95, ignored_by_productivity = 1}
     },
 	main_product = 'raw-fish',
     energy_required = 50,
@@ -503,11 +536,12 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'aoc-fish-eggs', amount = 20},
-        {type = 'item', name = 'aoc-nature-catalyst', amount = 1, independent_probability = 0.7, ignored_by_productivity = 1}
+        {type = 'item', name = 'aoc-nature-catalyst', amount = 1, independent_probability = 0.95, ignored_by_productivity = 1}
     },
 	main_product = 'aoc-fish-eggs',
     energy_required = 11,
 	icons = get_icons( data.raw.item['aoc-fish-eggs'], { icon = "__ageofcreation__/img/items/tier/t5.png" } ),
+	raise_on_crafted = true,
 	categories = {'aoc-category-farm-reservoir-fish'}
 }})
 
@@ -569,6 +603,7 @@ data:extend({{
     energy_required = 9.5,
 	main_product = 'aoc-egg',
 	icons = get_icons( data.raw.item['aoc-egg'], { icon = "__ageofcreation__/img/items/tier/t5.png" } ),
+	raise_on_crafted = true,
 	categories = {'aoc-category-farm-chicken-coop'}
 }})
 
@@ -654,6 +689,7 @@ data:extend({{
 	energy_required = 21,
 	auto_recycle = false,
 	icons = get_icons( data.raw.item['aoc-lamb'], { icon = "__ageofcreation__/img/items/tier/t5.png" } ),
+	raise_on_crafted = true,
 	categories = {'aoc-category-farm-barn-sheep'}
 }})
 
@@ -744,6 +780,7 @@ data:extend({{
 	energy_required = 26,
 	auto_recycle = false,
 	icons = get_icons( data.raw.item['aoc-calf'], { icon = "__ageofcreation__/img/items/tier/t5.png" } ),
+	raise_on_crafted = true,
 	categories = {'aoc-category-farm-barn-cow'}
 }})
 
@@ -953,14 +990,14 @@ data:extend({{
     type = 'recipe',
     enabled = false,
 	ingredients = {
-        {type = 'fluid', name = 'aoc-fish-water', amount = 60},
+        {type = 'fluid', name = 'aoc-fish-water', amount = 40},
         {type = 'item', name = 'aoc-gypsum', amount = 1},
         {type = 'item', name = 'aoc-alien-chitin', amount = 1},
         {type = 'item', name = 'aoc-earth-catalyst', amount = 1}
     },
     results = {
-        {type = 'item', name = 'aoc-kelp', amount = 1},
-        {type = 'item', name = 'aoc-earth-catalyst', amount = 1, independent_probability = 0.7, ignored_by_productivity = 1}
+        {type = 'item', name = 'aoc-kelp', amount = 2},
+        {type = 'item', name = 'aoc-earth-catalyst', amount = 1, independent_probability = 0.95, ignored_by_productivity = 1}
     },
 	main_product = 'aoc-kelp',
     energy_required = 6,
@@ -1285,7 +1322,7 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'aoc-spruce-tree', amount = 1},
-        {type = 'item', name = 'aoc-earth-catalyst', amount = 1, independent_probability = 0.7, ignored_by_productivity = 1}
+        {type = 'item', name = 'aoc-earth-catalyst', amount = 1, independent_probability = 0.95, ignored_by_productivity = 1}
     },
 	main_product = 'aoc-spruce-tree',
     energy_required = 2,
@@ -1358,7 +1395,7 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'aoc-rubber-tree', amount = 1},
-		{type = 'item', name = 'aoc-earth-catalyst', amount = 1, independent_probability = 0.7, ignored_by_productivity = 1}
+		{type = 'item', name = 'aoc-earth-catalyst', amount = 1, independent_probability = 0.95, ignored_by_productivity = 1}
     },
 	main_product = 'aoc-rubber-tree',
     energy_required = 4,
@@ -1432,7 +1469,7 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'aoc-apple-tree', amount = 1},
-        {type = 'item', name = 'aoc-earth-catalyst', amount = 1, independent_probability = 0.7, ignored_by_productivity = 1}
+        {type = 'item', name = 'aoc-earth-catalyst', amount = 1, independent_probability = 0.95, ignored_by_productivity = 1}
     },
 	main_product = 'aoc-apple-tree',
     energy_required = 5,
@@ -1457,7 +1494,7 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'aoc-apple', amount = 4},
-        {type = 'item', name = 'aoc-earth-catalyst', amount = 1, independent_probability = 0.7, ignored_by_productivity = 1}
+        {type = 'item', name = 'aoc-earth-catalyst', amount = 1, independent_probability = 0.95, ignored_by_productivity = 1}
     },
 	main_product = 'aoc-apple',
     energy_required = 5,
@@ -1509,7 +1546,7 @@ data:extend({{
     },
     results = {
         {type = 'item', name = 'aoc-olive-tree', amount = 1},
-        {type = 'item', name = 'aoc-earth-catalyst', amount = 1, independent_probability = 0.7, ignored_by_productivity = 1}
+        {type = 'item', name = 'aoc-earth-catalyst', amount = 1, independent_probability = 0.95, ignored_by_productivity = 1}
     },
 	main_product = 'aoc-olive-tree',
     energy_required = 5,
@@ -1740,6 +1777,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-gleba-chest', amount = 1}
     },
 	energy_required = 120,
+    raise_on_crafted = true,
 	categories = {'aoc-category-infusing'}
 }})
 
@@ -1855,7 +1893,7 @@ data:extend({{
 	results = {
         {type = 'fluid', name = 'holmium-solution', amount = 25}
     },
-	energy_required = 10,
+	energy_required = 5,
 	categories = {'metallurgy'}
 }})
 
@@ -1872,7 +1910,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-mold', amount = 1, ignored_by_productivity = 1, shared_probability = { min = 0.02, max = 1 }}
     },
 	main_product = 'holmium-plate',
-	energy_required = 6,
+	energy_required = 3,
 	categories = {'metallurgy'}
 }})
 

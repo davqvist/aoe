@@ -371,7 +371,7 @@ data:extend({{
     icon_size = 64,
     subgroup = "aoc-planets",
     order = "i",
-    stack_size = 10,
+    stack_size = 1,
     weight = 1 * tons,
     rocket_launch_products = {{type = "item", name = "aoc-science-07", amount = 200}},
     send_to_orbit_mode = "automated"

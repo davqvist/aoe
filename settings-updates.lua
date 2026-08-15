@@ -51,30 +51,18 @@ if data.raw["string-setting"]["power-overload-max-power-po-huge-electric-fuse"] 
     data.raw["string-setting"]["power-overload-max-power-po-huge-electric-fuse"].allowed_values = {"5GW"}
 end
 
--- Angels
-
-if data.raw["bool-setting"]["angels-enable-industries"] then
-    data.raw["bool-setting"]["angels-enable-industries"].hidden = true
-    data.raw["bool-setting"]["angels-enable-industries"].forced_value = false
-end
-if data.raw["bool-setting"]["angels-enable-components"] then
-    data.raw["bool-setting"]["angels-enable-components"].hidden = true
-    data.raw["bool-setting"]["angels-enable-components"].forced_value = false
-end
-if data.raw["bool-setting"]["angels-enable-tech"] then
-    data.raw["bool-setting"]["angels-enable-tech"].hidden = true
-    data.raw["bool-setting"]["angels-enable-tech"].forced_value = false
-end
-if data.raw["string-setting"]["angels-enable-auto-barreling"] then
-    data.raw["string-setting"]["angels-enable-auto-barreling"].hidden = true
-    data.raw["string-setting"]["angels-enable-auto-barreling"].default_value = "Enabled+Hidden"
-    data.raw["string-setting"]["angels-enable-auto-barreling"].allowed_values = {"Enabled+Hidden"}
-end
-
--- AAI Loaderss
+-- AAI Loaders
 
 if data.raw["string-setting"]["aai-loaders-mode"] then
     data.raw["string-setting"]["aai-loaders-mode"].hidden = true
     data.raw["string-setting"]["aai-loaders-mode"].default_value = "expensive"
     data.raw["string-setting"]["aai-loaders-mode"].allowed_values = {"expensive"}
+end
+
+-- AAI Containers
+
+if data.raw["string-setting"]["aai-containers-progression"] then
+    data.raw["string-setting"]["aai-containers-progression"].hidden = true
+    data.raw["string-setting"]["aai-containers-progression"].default_value = "High"
+    data.raw["string-setting"]["aai-containers-progression"].allowed_values = {"High"}
 end

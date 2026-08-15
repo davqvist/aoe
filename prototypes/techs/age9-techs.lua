@@ -2,24 +2,6 @@ local AOC = require("__ageofcreation__/globals")
 
 data:extend({{
   type = "technology",
-  name = "aoc-fulgora-logistics-tech",
-  icons = {{icon = "__base__/graphics/icons/steel-chest.png", tint = {180, 80, 80}}},
-  prerequisites = {"aoc-gleba-logistics-tech","aoc-deep-space-age-tech"},
-  effects = {
-    {
-      type = "unlock-recipe",
-      recipe = "aoc-infusing-fulgora-chest-recipe"
-    }
-  },
-  unit = {
-      count = 20,
-      ingredients = AOC["age_tech_table"][9],
-      time = 90
-  }
-}})
-
-data:extend({{
-  type = "technology",
   name = "aoc-foundry-metals-tech",
   icon_size = 256, icon_mipmaps = 4,
   icon = "__space-age__/graphics/technology/foundry.png",
@@ -758,7 +740,7 @@ data:extend({{
   name = "aoc-particle-accelerator-tech",
   icon_size = 320,
   icon = "__ageofcreation__/img/entities/particle-accelerator-icon-big.png",
-  prerequisites = {"aoc-duranium-tech", "aoc-philstone-tech"},
+  prerequisites = {"aoc-duranium-tech"},
   effects = {
     {
       type = "unlock-recipe",
@@ -922,7 +904,7 @@ data:extend({{
     }
   },
   unit = {
-      count_formula = "2^L*50",
+      count_formula = "1.5^L*50",
       ingredients = AOC["age_tech_table"][9],
       time = 90
   }

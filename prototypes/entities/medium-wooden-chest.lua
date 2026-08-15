@@ -21,6 +21,7 @@ data:extend({{
     max_health = 100,
     collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
     fast_replaceable_group = "medium-container",
+    next_upgrade = "aoc-copper-chest",
     selection_box = {{-1.0, -1.0}, {1.0, 1.0}},
     inventory_size = 50,
     open_sound = { filename = "__base__/sound/wooden-chest-open.ogg", volume = 0.6 },

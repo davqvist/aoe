@@ -54,22 +54,10 @@ data:extend({{
 
 data:extend({{
     type = "fluid",
-    name = "aoc-wastewater",
-    icon = "__ageofcreation__/img/fluids/wastewater.png",
-    icon_size = 64,
-    subgroup = "aoc-fluids-general",
-    order = "g",
-	base_color = {r=0.25, g=0.33, b=0.35},
-    flow_color = {r=0.25, g=0.33, b=0.35},
-	default_temperature = 20
-}})
-
-data:extend({{
-    type = "fluid",
     name = "aoc-drilling-fluid",
     icons = create_liquid_fluid_icon( nil, { { 255, 170, 83 }, { 255, 190, 103 }, { 255, 210, 123 } } ),
     subgroup = "aoc-fluids-general",
-    order = "h",
+    order = "g",
 	base_color = {r=1, g=0.67, b=0.32},
 	flow_color = {r=1, g=0.67, b=0.32},
 	default_temperature = 20
@@ -333,22 +321,10 @@ data:extend({{
 
 data:extend({{
     type = "fluid",
-    name = "aoc-air",
-    icons = create_gas_fluid_icon( nil, { { 100, 100, 220 }, { 80, 80, 190 }, { 60, 60, 180 } } ),
-    subgroup = "aoc-air-gasses",
-    order = "a",
-	base_color = {r=0.08, g=0.45, b=0.58},
-	flow_color = {r=0.08, g=0.45, b=0.58},
-	default_temperature = 20,
-	gas = true
-}})
-
-data:extend({{
-    type = "fluid",
     name = "aoc-cold-air",
     icons = create_gas_fluid_icon( nil, { { 60, 180, 220 }, { 40, 150, 190 }, { 20, 120, 180 } } ),
     subgroup = "aoc-air-gasses",
-    order = "b",
+    order = "a",
 	base_color = {r=0.15, g=0.7, b=0.83},
 	flow_color = {r=0.15, g=0.7, b=0.83},
 	default_temperature = 0,
@@ -360,7 +336,7 @@ data:extend({{
     name = "aoc-warm-air",
     icons = create_gas_fluid_icon( nil, { { 180, 60, 80 }, { 150, 40, 60 }, { 120, 20, 40 } } ),
     subgroup = "aoc-air-gasses",
-    order = "c",
+    order = "b",
 	base_color = {r=0.45, g=0.05, b=0.11},
 	flow_color = {r=0.45, g=0.05, b=0.11},
 	default_temperature = 50,
@@ -384,7 +360,7 @@ data:extend({{
     name = "aoc-vacuum",
     icons = create_gas_fluid_icon( nil, { { 90, 90, 110 }, { 75, 75, 95 }, { 60, 60, 80 } } ),
     subgroup = "aoc-air-gasses",
-    order = "c",
+    order = "d",
 	base_color = {r=0.09, g=0.09, b=0.09},
 	flow_color = {r=0.09, g=0.09, b=0.09},
 	default_temperature = 20,

@@ -33,8 +33,8 @@ data:extend({{
 	},
 	results = {
 		{type = 'item', name = 'aoc-tin-ore', amount = 4},
-		{type = 'item', name = 'tungsten-ore', amount = 3},
-		{type = 'item', name = 'aoc-quartz-ore', amount = 2},
+		{type = 'item', name = 'aoc-quartz-ore', amount = 3},
+		{type = 'item', name = 'tungsten-ore', amount = 2},
 		{type = 'item', name = 'aoc-fiber-mesh', amount = 1, ignored_by_productivity = 1, independent_probability = 0.85}
     },
 	main_product = 'aoc-tin-ore',
@@ -2438,14 +2438,14 @@ data:extend({{
 		{type = 'item', name = 'aoc-slag', amount = 6}
 	},
 	results = {
-		{type = 'item', name = 'coal', amount = 1, shared_probability = { min = 0, max = 0.06 }},
-        {type = 'item', name = 'aoc-aluminium-ore', amount = 1, shared_probability = { min = 0.06, max = 0.12 }},
-        {type = 'item', name = 'aoc-quartz-ore', amount = 1, shared_probability = { min = 0.12, max = 0.18 }},
-        {type = 'item', name = 'iron-ore', amount = 1, shared_probability = { min = 0.18, max = 0.22 }},
-        {type = 'item', name = 'aoc-tin-ore', amount = 1, shared_probability = { min = 0.22, max = 0.26 }},
-        {type = 'item', name = 'aoc-magnesium-ore', amount = 1, shared_probability = { min = 0.26, max = 0.3 }},
-        {type = 'item', name = 'aoc-manganese-ore', amount = 1, shared_probability = { min = 0.3, max = 0.32 }},
-        {type = 'item', name = 'copper-ore', amount = 1, shared_probability = { min = 0.32, max = 0.34 }}
+		{type = 'item', name = 'coal', amount = 1, shared_probability = { min = 0, max = 0.12 }},
+        {type = 'item', name = 'aoc-aluminium-ore', amount = 1, shared_probability = { min = 0.12, max = 0.24 }},
+        {type = 'item', name = 'aoc-quartz-ore', amount = 1, shared_probability = { min = 0.24, max = 0.36 }},
+        {type = 'item', name = 'iron-ore', amount = 1, shared_probability = { min = 0.36, max = 0.44 }},
+        {type = 'item', name = 'aoc-tin-ore', amount = 1, shared_probability = { min = 0.44, max = 0.52 }},
+        {type = 'item', name = 'aoc-magnesium-ore', amount = 1, shared_probability = { min = 0.52, max = 0.6 }},
+        {type = 'item', name = 'aoc-manganese-ore', amount = 1, shared_probability = { min = 0.6, max = 0.64 }},
+        {type = 'item', name = 'copper-ore', amount = 1, shared_probability = { min = 0.64, max = 0.68 }}
     },
 	icon = data.raw.item["aoc-slag"].icon,
 	icon_size = data.raw.item["aoc-slag"].icon_size,
@@ -2649,7 +2649,6 @@ data:extend({{
 		{type = 'item', name = 'aoc-carbon-activated', amount = 1}
 	},
 	results = {
-		{type = 'fluid', name = 'aoc-wastewater', amount = 200},
 		{type = 'item', name = 'aoc-tailings-dust', amount = 2},
 		{type = 'item', name = 'aoc-carbon-activated', amount = 1, independent_probability = 0.96, ignored_by_productivity = 1}
     },
@@ -2666,14 +2665,14 @@ data:extend({{
 		{type = 'item', name = 'aoc-tailings-dust', amount = 6}
 	},
 	results = {
-		{type = 'item', name = 'aoc-lead-ore', amount = 1, shared_probability = { min = 0, max = 0.04 }},
-        {type = 'item', name = 'aoc-silver-ore', amount = 1, shared_probability = { min = 0.04, max = 0.08 }},
-        {type = 'item', name = 'aoc-nickel-ore', amount = 1, shared_probability = { min = 0.08, max = 0.12 }},
-        {type = 'item', name = 'aoc-gold-ore', amount = 1, shared_probability = { min = 0.12, max = 0.16 }},
-        {type = 'item', name = 'aoc-zinc-ore', amount = 1, shared_probability = { min = 0.16, max = 0.2 }},
-        {type = 'item', name = 'aoc-chromium-ore', amount = 1, shared_probability = { min = 0.2, max = 0.24 }},
-        {type = 'item', name = 'tungsten-ore', amount = 1, shared_probability = { min = 0.24, max = 0.28 }},
-        {type = 'item', name = 'aoc-nauvium-ore', amount = 1, shared_probability = { min = 0.28, max = 0.3 }}
+		{type = 'item', name = 'aoc-lead-ore', amount = 1, shared_probability = { min = 0, max = 0.08 }},
+        {type = 'item', name = 'aoc-silver-ore', amount = 1, shared_probability = { min = 0.08, max = 0.16 }},
+        {type = 'item', name = 'aoc-nickel-ore', amount = 1, shared_probability = { min = 0.16, max = 0.24 }},
+        {type = 'item', name = 'aoc-gold-ore', amount = 1, shared_probability = { min = 0.24, max = 0.32 }},
+        {type = 'item', name = 'aoc-zinc-ore', amount = 1, shared_probability = { min = 0.32, max = 0.4 }},
+        {type = 'item', name = 'aoc-chromium-ore', amount = 1, shared_probability = { min = 0.4, max = 0.48 }},
+        {type = 'item', name = 'tungsten-ore', amount = 1, shared_probability = { min = 0.48, max = 0.56 }},
+        {type = 'item', name = 'aoc-nauvium-ore', amount = 1, shared_probability = { min = 0.56, max = 0.6 }}
     },
 	icon = data.raw.item["aoc-tailings-dust"].icon,
 	icon_size = data.raw.item["aoc-tailings-dust"].icon_size,
@@ -3765,6 +3764,7 @@ data:extend({{
     },
 	energy_required = 10,
 	main_product = 'aoc-polyethylene',
+    auto_recycle = false,
 	categories = {'aoc-category-advanced-chemistry'}
 }})
 
@@ -3866,6 +3866,7 @@ data:extend({{
     energy_required = 12.5,
 	main_product = 'aoc-egg',
 	icons = get_icons( data.raw.item['aoc-egg'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
+	raise_on_crafted = true,
 	categories = {'aoc-category-farm-chicken-coop'}
 }})
 
@@ -3952,6 +3953,7 @@ data:extend({{
 	energy_required = 30,
 	auto_recycle = false,
 	icons = get_icons( data.raw.item['aoc-lamb'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
+	raise_on_crafted = true,
 	categories = {'aoc-category-farm-barn-sheep'}
 }})
 
@@ -4043,6 +4045,7 @@ data:extend({{
 	energy_required = 35,
 	auto_recycle = false,
 	icons = get_icons( data.raw.item['aoc-calf'], { icon = "__ageofcreation__/img/items/tier/t2.png" } ),
+	raise_on_crafted = true,
 	categories = {'aoc-category-farm-barn-cow'}
 }})
 
@@ -4106,6 +4109,6 @@ data:extend({{
 	results = {
         {type = 'item', name = 'refined-concrete', amount = 4}
     },
-	energy_required = 2.4,
+	energy_required = 4.8,
 	categories = {'aoc-category-mixing'}
 }})

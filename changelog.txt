@@ -1,6 +1,50 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.15
+Date: 2026-08-15
+  Features:
+    - added support for Waterfill, Text Plates, Holographic Signs, Robot Replacer, AAI Containers, LTN and LTN Combinator Modernized
+    - added cargo bay and unloading bay recipes and a new technology to unlock them
+    - added translation into German (except tech descriptions and tips and tricks)
+    - added Gleba overgrowth soil tech and recipes
+    - added decoy ingredients to brewing
+    - added entity description to RTGs
+  Changes:
+    - used new vanilla event to remove hacky script event triggers which significantly improves performance
+    - made refined concrete, integrated circuit and syringe recipes slower
+    - re-balancing and generally buffing higher tier lotus flower recipes
+    - made drilling fluid recipe output double as much
+    - buffed t2-t5 kelp, rubber flask, hormones, slag crushing and tailings dust crushing recipes
+    - steam cracking butane recipe now also outputs propylene
+    - changed simple rocket silo: making it smaller, and giving it a distinctive tint
+    - removed air and wastewater which had no uses
+    - switched tungsten and quartz ore outputs from basalt straining
+    - allowing modules on metal processes
+    - adjusted some item weights for rocket cargo
+    - made burner machines upgradeable
+    - new planet chests textures
+    - new textures for alien brain and small motor items and thermopile building
+    - made thermopile recipe require less ice
+    - lowered life catalyst stack size
+    - some adjustments and fixes to Gleba spoiling
+    - drastically increased coolant usage of nuclear reactor
+    - changed earth and nature catalyst recipes in tier IV and V recipes to return 95% of the time (instead of 70%)
+    - made fertilizer recipe require more magnesium
+    - changed age 1&3 science pack icon textures
+    - quadrupled enchanting table running energy (mana) cost
+    - changed infinite researches to 150% (instead of 200%) multiplier
+  Bugfixes:
+    - fixed infusion table bugs that could appear in edge cases
+    - made rocket launches with 2.1 work, that sadly meant having to change stack sizes to 1 of both launch items
+    - made biter and pentapod egg spawning work again
+    - fixed crash when planet chest was placed but planet wasn't visited yet
+    - fixed some nuclear reactor bugs
+    - now combined icons seem to be really fixed
+    - fixed meissner sphere barrel return amount
+    - fixed biolab to allow proper science packs
+    - fixed mash recycling
+---------------------------------------------------------------------------------------------------
 Version: 0.0.14
-Date: 2026-07-05
+Date: 2026-07-21
   Features:
     - added rest of progression, game is now completable
     - added more atom symbols

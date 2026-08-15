@@ -100,15 +100,16 @@ data:extend({{
 data.raw['capsule']['jelly'].subgroup = "aoc-aliens"
 data.raw['capsule']['jelly'].order = "i"
 data.raw['capsule']['jelly'].stack_size = 200
+data.raw['capsule']['jelly'].spoil_ticks = 0
 data.raw['capsule']['jelly'].spoil_result = nil
 
 data.raw['item']['jellynut-seed'].subgroup = "aoc-flora-gleba"
 data.raw['item']['jellynut-seed'].order = "a1"
-data.raw['item']['jellynut-seed'].stack_size = 200
+data.raw['item']['jellynut-seed'].stack_size = 20
 data.raw['capsule']['jellynut'].subgroup = "aoc-flora-gleba"
 data.raw['capsule']['jellynut'].order = "a2"
 data.raw['capsule']['jellynut'].stack_size = 200
-data.raw['capsule']['jellynut'].spoil_result = nil
+data.raw['capsule']['jellynut'].spoil_result = "yumako-mash"
 data.raw['item']['artificial-jellynut-soil'].subgroup = "aoc-flora-gleba"
 data.raw['item']['artificial-jellynut-soil'].order = "a3"
 data.raw['item']['artificial-jellynut-soil'].stack_size = 50
@@ -117,11 +118,11 @@ data.raw['item']['overgrowth-jellynut-soil'].order = "a4"
 data.raw['item']['overgrowth-jellynut-soil'].stack_size = 50
 data.raw['item']['yumako-seed'].subgroup = "aoc-flora-gleba"
 data.raw['item']['yumako-seed'].order = "b1"
-data.raw['item']['yumako-seed'].stack_size = 200
+data.raw['item']['yumako-seed'].stack_size = 20
 data.raw['capsule']['yumako'].subgroup = "aoc-flora-gleba"
 data.raw['capsule']['yumako'].order = "b2"
 data.raw['capsule']['yumako'].stack_size = 200
-data.raw['capsule']['yumako'].spoil_result = nil
+data.raw['capsule']['yumako'].spoil_result = "yumako-mash"
 data.raw['item']['artificial-yumako-soil'].subgroup = "aoc-flora-gleba"
 data.raw['item']['artificial-yumako-soil'].order = "b3"
 data.raw['item']['artificial-yumako-soil'].stack_size = 50
@@ -148,7 +149,7 @@ data:extend({{
 data:extend({{
     type = "item",
     name = "aoc-brain-jar",
-    icons = combine_icons( get_icons( data.raw["item"]["aoc-flask"] ), { { icon = "__ageofcreation__/img/items/alien-brain.png", icon_size = 64, scale = 0.2, shift = { 0, 5 } } } ),
+    icons = combine_icons( get_icons( data.raw["item"]["aoc-flask"] ), { { icon = "__ageofcreation__/img/items/alien-brain.png", icon_size = 64, scale = 0.28, shift = { 0, 5 } } } ),
     subgroup = "aoc-aliens",
     order = "k",
     stack_size = 10
@@ -243,12 +244,14 @@ data.raw['gun']['rocket-launcher'].stack_size = 10
 data.raw['ammo']['piercing-shotgun-shell'].subgroup = "aoc-ammo"
 data.raw['ammo']['piercing-shotgun-shell'].order = "f"
 data.raw['ammo']['piercing-shotgun-shell'].stack_size = 100
-data.raw['projectile']['rocket'].subgroup = "aoc-ammo"
-data.raw['projectile']['rocket'].order = "g"
-data.raw['projectile']['rocket'].stack_size = 100
-data.raw['projectile']['explosive-rocket'].subgroup = "aoc-ammo"
-data.raw['projectile']['explosive-rocket'].order = "h"
-data.raw['projectile']['explosive-rocket'].stack_size = 100
+data.raw['ammo']['rocket'].subgroup = "aoc-ammo"
+data.raw['ammo']['rocket'].order = "g"
+data.raw['ammo']['rocket'].stack_size = 100
+data.raw['ammo']['rocket'].weight = 10 * kg
+data.raw['ammo']['explosive-rocket'].subgroup = "aoc-ammo"
+data.raw['ammo']['explosive-rocket'].order = "h"
+data.raw['ammo']['explosive-rocket'].stack_size = 100
+data.raw['ammo']['explosive-rocket'].weight = 10 * kg
 
 data.raw['item']['holmium-ore'].subgroup = "aoc-metals-fulgora"
 data.raw['item']['holmium-ore'].order = "a"

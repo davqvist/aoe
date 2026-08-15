@@ -88,10 +88,12 @@ data.raw['item']['promethium-asteroid-chunk'].pictures = { { filename = "__space
 
 data.raw['ammo']['piercing-rounds-magazine'].subgroup = "aoc-ammo"
 data.raw['ammo']['piercing-rounds-magazine'].order = "c"
-data.raw['ammo']['piercing-rounds-magazine'].stack_size = 100
+data.raw['ammo']['piercing-rounds-magazine'].stack_size = 200
+data.raw['ammo']['piercing-rounds-magazine'].weight = 5 * kg
 data.raw['ammo']['uranium-rounds-magazine'].subgroup = "aoc-ammo"
 data.raw['ammo']['uranium-rounds-magazine'].order = "d"
 data.raw['ammo']['uranium-rounds-magazine'].stack_size = 100
+data.raw['ammo']['uranium-rounds-magazine'].weight = 10 * kg
 data.raw['ammo']['shotgun-shell'].subgroup = "aoc-ammo"
 data.raw['ammo']['shotgun-shell'].order = "e"
 data.raw['ammo']['shotgun-shell'].stack_size = 100
@@ -99,15 +101,24 @@ data.raw['ammo']['shotgun-shell'].stack_size = 100
 data.raw['item']['rocket-silo'].subgroup = "aoc-space-buildings"
 data.raw['item']['rocket-silo'].order = "c"
 data.raw['item']['rocket-silo'].stack_size = 1
+data.raw['item']['cargo-bay'].subgroup = "aoc-space-buildings"
+data.raw['item']['cargo-bay'].order = "e"
+data.raw['item']['cargo-bay'].stack_size = 10
+data.raw['item']['landing-pad-unloading-bay'].subgroup = "aoc-space-buildings"
+data.raw['item']['landing-pad-unloading-bay'].order = "f"
+data.raw['item']['landing-pad-unloading-bay'].stack_size = 10
 
+data.raw['space-platform-hub']['space-platform-hub'].subgroup = "aoc-space-platform"
+data.raw['space-platform-hub']['space-platform-hub'].order = "a"
 data.raw['item']['space-platform-foundation'].subgroup = "aoc-space-platform"
-data.raw['item']['space-platform-foundation'].order = "a"
+data.raw['item']['space-platform-foundation'].order = "b"
 data.raw['item']['space-platform-foundation'].stack_size = 200
+data.raw['item']['space-platform-foundation'].weight = 5 * kg
 data.raw['item']['asteroid-collector'].subgroup = "aoc-space-platform"
-data.raw['item']['asteroid-collector'].order = "b"
+data.raw['item']['asteroid-collector'].order = "c"
 data.raw['item']['asteroid-collector'].stack_size = 25
 data.raw['item']['thruster'].subgroup = "aoc-space-platform"
-data.raw['item']['thruster'].order = "c"
+data.raw['item']['thruster'].order = "d"
 data.raw['item']['thruster'].stack_size = 25
 data.raw['space-platform-starter-pack']['space-platform-starter-pack'].subgroup = "aoc-space-stuff"
 data.raw['space-platform-starter-pack']['space-platform-starter-pack'].order = "c"
@@ -119,7 +130,7 @@ data:extend({{
     icons = combine_icons( get_icons( data.raw.item['wooden-chest'] ), get_icons( data.raw.ammo['firearm-magazine'] ) ),                
     subgroup = "aoc-ammo",
     order = "b",
-    stack_size = 10,
+    stack_size = 1,
     weight = 1 * tons,
     rocket_launch_products = {{type = "item", name = "aoc-titanium-plate", amount = 200}},
     send_to_orbit_mode = "automated"
@@ -174,7 +185,7 @@ data.raw['module']['efficiency-module-3'].stack_size = 50
 
 data.raw['item']['flying-robot-frame'].subgroup = "aoc-parts"
 data.raw['item']['flying-robot-frame'].order = "m"
-data.raw['item']['flying-robot-frame'].stack_size = 200
+data.raw['item']['flying-robot-frame'].stack_size = 50
 
 data.raw['armor']['heavy-armor'].subgroup = "aoc-armor"
 data.raw['armor']['heavy-armor'].order = "c"
@@ -242,7 +253,7 @@ data:extend({{
     icon_size = 64,
     subgroup = "aoc-magic-catalysts",
     order = "e",
-    stack_size = 200,
+    stack_size = 20,
 	fuel_value = "100MJ",
 	fuel_category = "aoc-life"
 }})
@@ -262,14 +273,14 @@ data:extend({{
 data.raw['item']['uranium-235'].subgroup = "aoc-nuclear"
 data.raw['item']['uranium-235'].order = "b"
 data.raw['item']['uranium-235'].icons = { { icon = "__base__/graphics/icons/uranium-235.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/u.png", icon_size = 64 }, { icon = "__ageofcreation__/img/items/atoms/235.png", icon_size = 64 } }
-data.raw['item']['uranium-235'].pictures = { { filename = "__base__/graphics/icons/uranium-235.png", size = 64, mipmap_count = 4 } }
+data.raw['item']['uranium-235'].pictures = { { filename = "__base__/graphics/icons/uranium-235.png", size = 64, mipmap_count = 4, scale = 0.5 } }
 data.raw['item']['uranium-235'].stack_size = 200
 data.raw['item']['uranium-235'].spoil_ticks = 60 * 60 * 60 * 56.5
 data.raw['item']['uranium-235'].spoil_result = 'aoc-lead-dust'
 data.raw['item']['uranium-238'].subgroup = "aoc-nuclear"
 data.raw['item']['uranium-238'].order = "c"
 data.raw['item']['uranium-238'].icons = { { icon = "__base__/graphics/icons/uranium-238.png", icon_size = 64, icon_mipmaps = 4 }, { icon = "__ageofcreation__/img/items/atoms/u.png", icon_size = 64 }, { icon = "__ageofcreation__/img/items/atoms/238.png", icon_size = 64 } }
-data.raw['item']['uranium-238'].pictures = { { filename = "__base__/graphics/icons/uranium-238.png", size = 64, mipmap_count = 4 } }
+data.raw['item']['uranium-238'].pictures = { { filename = "__base__/graphics/icons/uranium-238.png", size = 64, mipmap_count = 4, scale = 0.5 } }
 data.raw['item']['uranium-238'].stack_size = 200
 data.raw['item']['uranium-238'].spoil_ticks = 60 * 60 * 60 * 74.5
 data.raw['item']['uranium-238'].spoil_result = 'aoc-plutonium-238'

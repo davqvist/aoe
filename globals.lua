@@ -1,7 +1,9 @@
 
 data.raw.lab["lab"].inputs = {}
+data.raw.lab["biolab"].inputs = {}
 for age=1,10 do
     table.insert(data.raw.lab["lab"].inputs, "aoc-science-" .. string.format("%02d", age) )
+    if age > 2 then table.insert(data.raw.lab["biolab"].inputs, "aoc-science-" .. string.format("%02d", age) ) end
 end
 
 local age_tech_cost = {
@@ -56,12 +58,15 @@ function combine_icons_tiny( newicons, oldicons )
     local new_icons = table.deepcopy( newicons )
     local old_icons = table.deepcopy( oldicons )
     for _, old in pairs(old_icons) do
-        local old_scale = old.scale or 1
-        old.scale = old_scale*math.max(0.4, 0.4*64/old.icon_size)
-		    old.shift = {8,8}
-        table.insert( new_icons, old )
+        if not old.icon:find("^__ageofcreation__/img/items/atoms") then
+          local old_scale = old.scale or 1
+          old.scale = old_scale*0.4*64/old.icon_size
+          old.draw_background = true
+          old.shift = {8,8}
+          table.insert( new_icons, old )
+        end
     end
-    return new_icons  
+    return new_icons
 end
 
 function get_void_icon( thing )
@@ -101,6 +106,12 @@ end
 function get_icons_quality( thing, tier )
     local tiers = {"normal","uncommon","rare","epic","legendary"}
     return get_icons( thing, { icon = ( tier==1 and "__base__" or "__quality__" ) .. "/graphics/icons/quality-" .. tiers[tier] .. ".png", scale = 0.2, shift = {-8,8} } )
+end
+
+function remove_north( pipepictures )
+  local pipepicturescopy = table.deepcopy( pipepictures )
+  pipepicturescopy.north.filename = "__ageofcreation__/img/entities/empty.png"
+  return pipepicturescopy
 end
 
 function create_liquid_fluid_icon(molecule_icon, tints)
@@ -150,28 +161,28 @@ function create_liquid_fluid_icon(molecule_icon, tints)
       -- base layer required for background shadow
       icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-item-base.png",
       icon_size = 330,
-      scale = 32 / 330,
+      --scale = 32 / 330,
       tint = { r = 0.25, g = 0.25, b = 0.25, a = 0.7 },
       shift = molecule_icon and { 3.5, 0 } or nil,
     },
     {
       icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-item-top.png",
       icon_size = 330,
-      scale = 32 / 330,
+      --scale = 32 / 330,
       tint = tints.top,
       shift = molecule_icon and { 3.5, 0 } or nil,
     },
     {
       icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-item-mid.png",
       icon_size = 330,
-      scale = 32 / 330,
+      --scale = 32 / 330,
       tint = tints.mid,
       shift = molecule_icon and { 3.5, 0 } or nil,
     },
     {
       icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-item-bot.png",
       icon_size = 330,
-      scale = 32 / 330,
+      --scale = 32 / 330,
       tint = tints.bot,
       shift = molecule_icon and { 3.5, 0 } or nil,
     },
@@ -241,7 +252,7 @@ function create_viscous_liquid_fluid_icon(molecule_icon, tints)
           -- base layer required for background shadow
           icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-viscous-item-base.png",
           icon_size = 256,
-          scale = 32 / 256,
+          --scale = 32 / 256,
           tint = { r = 0.25, g = 0.25, b = 0.25, a = 0.7 },
           shift = molecule_icon and { 3.5, 0 } or nil,
         }
@@ -249,42 +260,42 @@ function create_viscous_liquid_fluid_icon(molecule_icon, tints)
     tints.bot and {
       icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-viscous-item-bot.png",
       icon_size = 256,
-      scale = 32 / 256,
+      --scale = 32 / 256,
       tint = tints.bot,
       shift = molecule_icon and { 3.5, 0 } or nil,
     } or nil,
     tints.bot_left and {
       icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-viscous-item-bot-left.png",
       icon_size = 256,
-      scale = 32 / 256,
+      --scale = 32 / 256,
       tint = tints.bot_left,
       shift = molecule_icon and { 3.5, 0 } or nil,
     } or nil,
     tints.bot_left and {
       icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-viscous-item-bot-right.png",
       icon_size = 256,
-      scale = 32 / 256,
+      --scale = 32 / 256,
       tint = tints.bot_right,
       shift = molecule_icon and { 3.5, 0 } or nil,
     } or nil,
     tints.bot_mask and {
       icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-viscous-item-bot-mask.png",
       icon_size = 256,
-      scale = 32 / 256,
+      --scale = 32 / 256,
       tint = tints.bot_mask,
       shift = molecule_icon and { 3.5, 0 } or nil,
     } or nil,
     {
       icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-viscous-item-top.png",
       icon_size = 256,
-      scale = 32 / 256,
+      --scale = 32 / 256,
       tint = tints.top,
       shift = molecule_icon and { 3.5, 0 } or nil,
     },
     tints.top_mask and {
       icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-viscous-item-top-mask.png",
       icon_size = 256,
-      scale = 32 / 256,
+      --scale = 32 / 256,
       tint = tints.top_mask,
       shift = molecule_icon and { 3.5, 0 } or nil,
     } or nil,
@@ -337,28 +348,28 @@ function create_gas_fluid_icon(molecule_icon, tints)
       -- base layer required for background shadow
       icon = "__angelsrefininggraphics__/graphics/icons/angels-gas/gas-item-base.png",
       icon_size = 596,
-      scale = 32 / 596,
+      --scale = 32 / 596,
       tint = { r = 0.25, g = 0.25, b = 0.25, a = 0.7 },
       shift = not molecule_icon and { -3.5, 0 } or nil,
     },
     {
       icon = "__angelsrefininggraphics__/graphics/icons/angels-gas/gas-item-top.png",
       icon_size = 596,
-      scale = 32 / 596,
+      --scale = 32 / 596,
       tint = tints.top,
       shift = not molecule_icon and { -3.5, 0 } or nil,
     },
     {
       icon = "__angelsrefininggraphics__/graphics/icons/angels-gas/gas-item-mid.png",
       icon_size = 596,
-      scale = 32 / 596,
+      --scale = 32 / 596,
       tint = tints.mid,
       shift = not molecule_icon and { -3.5, 0 } or nil,
     },
     {
       icon = "__angelsrefininggraphics__/graphics/icons/angels-gas/gas-item-bot.png",
       icon_size = 596,
-      scale = 32 / 596,
+      --scale = 32 / 596,
       tint = tints.bot,
       shift = not molecule_icon and { -3.5, 0 } or nil,
     },
