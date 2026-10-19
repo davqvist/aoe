@@ -12,6 +12,7 @@ local loaders = {
     ['l1'] = 'aai-loader',
     ['l2'] = 'aai-fast-loader',
     ['l3'] = 'aai-express-loader',
+    ['l4'] = 'aai-turbo-loader',
     ['l1_icons'] = {
         { icon = "__aai-loaders__/graphics/technology/loader-tech-icon.png", icon_size = 256 },
         { icon = "__aai-loaders__/graphics/technology/loader-tech-icon_mask.png", icon_size = 256, tint = {255, 217, 85} }
@@ -23,12 +24,17 @@ local loaders = {
     ['l3_icons'] = {
         { icon = "__aai-loaders__/graphics/technology/loader-tech-icon.png", icon_size = 256 },
         { icon = "__aai-loaders__/graphics/technology/loader-tech-icon_mask.png", icon_size = 256, tint = {90, 190, 255} }
+    },
+    ['l4_icons'] = {
+        { icon = "__aai-loaders__/graphics/technology/loader-tech-icon.png", icon_size = 256 },
+        { icon = "__aai-loaders__/graphics/technology/loader-tech-icon_mask.png", icon_size = 256, tint = {155, 182, 0} }
     }
 }
 local loaders_mdrn = {
     ['l1'] = 'mdrn-loader',
     ['l2'] = 'mdrn-fast-loader',
     ['l3'] = 'mdrn-express-loader',
+    ['l4'] = 'mdrn-turbo-loader',
     ['l1_icons'] = {
         { icon = "__loaders-modernized__/graphics/technology/mdrn-loader-technology-base.png", icon_size = 128 },
         { icon = "__loaders-modernized__/graphics/technology/mdrn-loader-technology-mask.png", icon_size = 128, tint = {255, 217, 85} }
@@ -40,8 +46,13 @@ local loaders_mdrn = {
     ['l3_icons'] = {
         { icon = "__loaders-modernized__/graphics/technology/mdrn-loader-technology-base.png", icon_size = 128 },
         { icon = "__loaders-modernized__/graphics/technology/mdrn-loader-technology-mask.png", icon_size = 128, tint = {90, 190, 255} }
+    },
+    ['l4_icons'] = {
+        { icon = "__loaders-modernized__/graphics/technology/mdrn-loader-technology-base.png", icon_size = 128 },
+        { icon = "__loaders-modernized__/graphics/technology/mdrn-loader-technology-mask.png", icon_size = 128, tint = {155, 182, 0} }
     }
 }
+
 if mods["loaders-modernized"] then
     loaders = loaders_mdrn
 end
@@ -52,6 +63,8 @@ if mods["aai-loaders"] or mods["loaders-modernized"] then
     data.raw['item'][loaders.l2].order = "e2"
     data.raw['item'][loaders.l3].subgroup = "aoc-item-logistics-belts"
     data.raw['item'][loaders.l3].order = "e3"
+    data.raw['item'][loaders.l4].subgroup = "aoc-item-logistics-belts"
+    data.raw['item'][loaders.l4].order = "e4"
 
     data:extend({{
         name = 'aoc-crafting-loader-recipe',
@@ -149,6 +162,39 @@ if mods["aai-loaders"] or mods["loaders-modernized"] then
             count = 50,
             ingredients = AOC["age_tech_table"][7],
             time = 60
+        }
+    }})
+
+    data:extend({{
+        name = 'aoc-crafting-turbo-loader-recipe',
+        type = 'recipe',
+        enabled = false,
+        ingredients = {
+            {type = 'item', name = 'turbo-underground-belt', amount = 1},
+            {type = 'item', name = 'quantum-processor', amount = 6},
+            {type = 'item', name = 'stack-inserter', amount = 6}
+        },
+        results = {
+            {type = 'item', name = loaders.l4, amount = 1}
+        },
+        energy_required = 2
+    }})
+
+    data:extend({{
+        type = "technology",
+        name = "aoc-turbo-loader-tech",
+        icons = loaders.l4_icons,
+        prerequisites = {"aoc-logistics-tech-4","aoc-express-loader-tech"},
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "aoc-crafting-turbo-loader-recipe"
+            }
+        },
+        unit = {
+            count = 60,
+            ingredients = AOC["age_tech_table"][9],
+            time = 90
         }
     }})
 end

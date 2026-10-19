@@ -272,7 +272,7 @@ data:extend({{
   name = "aoc-alien-life-tech-2",
   icon_size = 64, icon_mipmaps = 4,
   icon = "__base__/graphics/icons/big-biter.png",
-  prerequisites = {"aoc-vulcanus-exploration-tech","aoc-alien-life-tech-1","aoc-enchanting-tech"},
+  prerequisites = {"aoc-vulcanus-exploration-tech","aoc-alien-life-tech-1","aoc-enchanting-tech-1"},
   effects = {
     {
       type = "unlock-recipe",
@@ -305,6 +305,61 @@ data:extend({{
     {
       type = "unlock-recipe",
       recipe = "aoc-spawning-biter-egg-3-recipe"
+    }
+  },
+  unit = {
+      count = 70,
+      ingredients = AOC["age_tech_table"][7],
+      time = 60
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-enchanting-tech-2",
+  icon = "__ageofcreation__/img/entities/enchanting-table.png",
+  icon_size = 192,
+  prerequisites = {"aoc-enchanting-tech-1","aoc-vulcanus-exploration-tech","aoc-electronic-robots-tech","aoc-laser-tech-2","aoc-equipment-tech-2","aoc-fission-reactor-equipment-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-aoc-ring-equipment-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-aoc-necklace-equipment-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-aoc-pocket-hive-equipment-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-personal-roboport-equipment-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-aoc-portable-boiler-equipment-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-solar-panel-equipment-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-battery-equipment-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-exoskeleton-equipment-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-fission-reactor-equipment-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-personal-laser-defense-equipment-3-recipe"
     }
   },
   unit = {
@@ -383,7 +438,7 @@ data:extend({{
   name = "aoc-electronic-robots-tech",
   icon = "__base__/graphics/technology/robotics.png",
   icon_size = 256, icon_mipmaps = 4,
-  prerequisites = {"aoc-titanium-tech", "aoc-bee-helpers-tech", "aoc-enchanting-tech"},
+  prerequisites = {"aoc-titanium-tech", "aoc-bee-helpers-tech",},
   effects = {
     {
       type = "unlock-recipe",

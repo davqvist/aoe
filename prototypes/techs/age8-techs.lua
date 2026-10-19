@@ -332,7 +332,7 @@ data:extend({{
   type = "technology",
   name = "aoc-alien-life-tech-3",
   icon_size = 64, icon_mipmaps = 4,
-  icon = "__space-age__/graphics/icons/big-wriggler.png",
+  icon = "__space-age__/graphics/icons/small-wriggler.png",
   prerequisites = {"aoc-gleba-exploration-tech","aoc-alien-life-tech-2"},
   effects = {
     {
@@ -350,6 +350,22 @@ data:extend({{
     {
       type = "unlock-recipe",
       recipe = "aoc-slaughterhouse-small-wriggler-corpse-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-spawning-medium-biter-egg-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-spawning-medium-biter-egg-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-spawning-medium-biter-egg-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-slaughterhouse-medium-biter-corpse-recipe"
     }
   },
   unit = {
@@ -878,6 +894,53 @@ data:extend({{
   },
   unit = {
       count = 75,
+      ingredients = AOC["age_tech_table"][8],
+      time = 75
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-alien-life-tech-4",
+  icon_size = 64, icon_mipmaps = 4,
+  icon = "__space-age__/graphics/icons/medium-wriggler.png",
+  prerequisites = {"aoc-fulgora-exploration-tech","aoc-alien-life-tech-3"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-spawning-medium-pentapod-egg-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-spawning-medium-pentapod-egg-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-spawning-medium-pentapod-egg-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-slaughterhouse-medium-wriggler-corpse-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-spawning-big-biter-egg-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-spawning-big-biter-egg-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-spawning-big-biter-egg-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-slaughterhouse-big-biter-corpse-recipe"
+    }
+  },
+  unit = {
+      count = 80,
       ingredients = AOC["age_tech_table"][8],
       time = 75
   }

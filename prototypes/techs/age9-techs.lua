@@ -178,6 +178,53 @@ data:extend({{
 
 data:extend({{
   type = "technology",
+  name = "aoc-alien-life-tech-5",
+  icon_size = 64, icon_mipmaps = 4,
+  icon = "__space-age__/graphics/icons/big-wriggler.png",
+  prerequisites = {"aoc-deep-space-age-tech","aoc-alien-life-tech-4"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-spawning-big-pentapod-egg-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-spawning-big-pentapod-egg-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-spawning-big-pentapod-egg-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-slaughterhouse-big-wriggler-corpse-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-spawning-behemoth-biter-egg-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-spawning-behemoth-biter-egg-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-spawning-behemoth-biter-egg-3-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-slaughterhouse-behemoth-biter-corpse-recipe"
+    }
+  },
+  unit = {
+      count = 30,
+      ingredients = AOC["age_tech_table"][9],
+      time = 90
+  }
+}})
+
+data:extend({{
+  type = "technology",
   name = "aoc-fusion-power-tech",
   icon_size = 256, icon_mipmaps = 4,
   icon = "__space-age__/graphics/technology/fusion-reactor.png",
@@ -582,6 +629,37 @@ data:extend({{
 }})
 
 data:extend({{
+    type = "technology",
+    name = "aoc-logistics-tech-4",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__space-age__/graphics/technology/turbo-transport-belt.png",
+    prerequisites = {"aoc-duranium-tech", "aoc-logistics-tech-3"},
+    effects = {
+        {
+            type = "unlock-recipe",
+            recipe = "aoc-crafting-turbo-transport-belt-recipe"
+        },
+        {
+            type = "unlock-recipe",
+            recipe = "aoc-crafting-turbo-underground-belt-recipe"
+        },
+        {
+            type = "unlock-recipe",
+            recipe = "aoc-crafting-turbo-splitter-recipe"
+        },
+        {
+            type = "unlock-recipe",
+            recipe = "aoc-crafting-turbo-lane-splitter-recipe"
+        }
+    },
+    unit = {
+        count = 50,
+        ingredients = AOC["age_tech_table"][9],
+        time = 90
+    }
+}})
+
+data:extend({{
   type = "technology",
   name = "aoc-neutronium-tech",
   icon = "__ageofcreation__/img/items/neutronium.png",
@@ -657,10 +735,73 @@ data:extend({{
     {
       type = "unlock-recipe",
       recipe = "aoc-enchanting-fusion-reactor-equipment-2-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-fusion-reactor-equipment-3-recipe"
     }
   },
   unit = {
       count = 40,
+      ingredients = AOC["age_tech_table"][9],
+      time = 90
+  }
+}})
+
+data:extend({{
+  type = "technology",
+  name = "aoc-enchanting-tech-3",
+  icon = "__ageofcreation__/img/entities/enchanting-table.png",
+  icon_size = 192,
+  prerequisites = {"aoc-enchanting-tech-2","aoc-fusion-reactor-equipment-tech"},
+  effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-aoc-ring-equipment-4-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-aoc-necklace-equipment-4-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-aoc-pocket-hive-equipment-4-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-personal-roboport-equipment-4-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-aoc-portable-boiler-equipment-4-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-solar-panel-equipment-4-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-battery-equipment-4-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-exoskeleton-equipment-4-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-fission-reactor-equipment-4-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-personal-laser-defense-equipment-4-recipe"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "aoc-enchanting-fusion-reactor-equipment-4-recipe"
+    }
+  },
+  unit = {
+      count = 50,
       ingredients = AOC["age_tech_table"][9],
       time = 90
   }
@@ -912,9 +1053,32 @@ data:extend({{
 
 data:extend({{
     type = "technology",
+    name = "aoc-beacon-tech",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/effect-transmission.png",
+    prerequisites = {"aoc-neutronium-tech"},
+	  effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-lasering-nanites-recipe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "aoc-crafting-quantum-beacon-recipe"
+      }
+    },
+    unit = {
+        count = 60,
+        ingredients = AOC["age_tech_table"][9],
+        time = 90
+    }
+}})
+
+data:extend({{
+    type = "technology",
     name = "aoc-infinity-age-tech",
     icon = "__ageofcreation__/img/items/science-pack-10.png",
-    prerequisites = {"aoc-antimatter-tech"},
+    prerequisites = {"aoc-antimatter-tech", "aoc-beacon-tech"},
 	  effects = {
       {
         type = "unlock-recipe",

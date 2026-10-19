@@ -1,4 +1,30 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.17
+Date: 2026-10-19
+  Changes:
+    - changed replicating recipes icons to distinguish better from "main recipe"
+    - at the start of the game you now start with 50 transport belts
+    - latex and resin tapping recipes are now properly sorted again as its own category was confusing
+    - made collision box of brazier smaller
+    - burner gene lab's building graphic is now slightly bigger to appropriately match the electric one
+  Bugfixes:
+    - fixed Power Overload's adjusted power threshold settings for the poles not applying properly
+---------------------------------------------------------------------------------------------------
+Version: 0.0.16
+Date: 2026-10-17
+  Features:
+    - added quantum beacon and nanites, beacon with nanites needs to be running in range of a quantum computer to turn it on
+    - added medium, big and behemoth biter and wriggler spawning and rendering
+    - added green belts
+    - added tier 2-4 enchanting
+  Changes:
+    - a bunch of end game recipe changes
+    - changed QOL tech icons
+    - changed telescope texture and animation, fluid ports moved too
+    - changed infusion table size and spacing
+  Bugfixes:
+    - fixed replicator shadow
+---------------------------------------------------------------------------------------------------
 Version: 0.0.15
 Date: 2026-08-15
   Features:

@@ -17,6 +17,7 @@ for type, def in pairs(defines.prototypes.item) do
                     },
                     energy_required = 4,
                     categories = {'aoc-category-replicating'},
+                    icons = get_icons( data.raw[type][item.name], { icon = "__ageofcreation__/img/items/other/replicating.png" } ),
 				    localised_name = {'age-of-creation.replicating', {'item-name.' .. item.name} }
                 }})
             end
@@ -41,6 +42,7 @@ for _, fluid in pairs(data.raw.fluid) do
         },
         energy_required = 4,
         categories = {'aoc-category-replicating'},
+        icons = get_icons( data.raw['fluid'][fluid.name], { icon = "__ageofcreation__/img/items/other/replicating.png" } ),
         localised_name = {'age-of-creation.replicating', {'fluid-name.' .. fluid.name} }
     }})
 end

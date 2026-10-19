@@ -97,8 +97,8 @@ data:extend({{
           shift = util.by_pixel(0, -16)
         }
       },{
+        always_draw = true,
         animation = {
-          always_draw = true,
           filename = "__ageofcreation__/img/entities/quantum-computer-shadow.png",
           width = 1200,
           height = 700,

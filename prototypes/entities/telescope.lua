@@ -2,7 +2,7 @@ data:extend({{
     type = "item",
     name = "aoc-telescope",
     icon = "__ageofcreation__/img/entities/telescope.png",
-    icon_size = 192,
+    icon_size = 170,
     subgroup = "aoc-space-buildings",
     order = "a",
     place_result = "aoc-telescope",
@@ -24,7 +24,7 @@ data:extend({{
   allowed_effects = {"speed", "productivity", "consumption", "pollution"},
   module_slots = 3,
   icon = "__ageofcreation__/img/entities/telescope.png",
-  icon_size = 192,
+  icon_size = 170,
   flags = { "placeable-neutral", "placeable-player", "player-creation" },
   minable = { hardness = 1, mining_time = 0.2, result = "aoc-telescope" },
   circuit_wire_connection_point = circuit_connector_definitions["assembling-machine"].points,
@@ -34,13 +34,51 @@ data:extend({{
   selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
   collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
   graphics_set = {
-    animation = {
+    idle_animation = {
       layers = {
         {
-          filename = "__ageofcreation__/img/entities/telescope.png",
-          width = 192,
-          height = 192,
-          scale = 0.83333
+          filename = "__ageofcreation__/img/entities/telescope-animation.png",
+          priority = "high",
+          width = 170,
+          height = 170,
+          scale = 1,
+          shift = util.by_pixel(0, 4)
+        },{
+          filename = "__ageofcreation__/img/entities/telescope-shadow.png",
+          width = 170,
+          height = 170,
+          draw_as_shadow = true,
+          scale = 1,
+          shift = util.by_pixel(56, 8)
+        }
+      }
+    },
+    working_visualisations = {
+      {
+        always_draw = true,
+        animation = {
+          filename = "__ageofcreation__/img/entities/telescope-animation.png",
+          priority = "high",
+          width = 170,
+          height = 170,
+          line_length = 12,
+          frame_count = 144,
+          animation_speed = 1,
+          scale = 1,
+          shift = util.by_pixel(0, 4)
+        }
+      },{
+        always_draw = true,
+        animation = {
+          filename = "__ageofcreation__/img/entities/telescope-shadow.png",
+          width = 170,
+          height = 170,
+          draw_as_shadow = true,
+          line_length = 12,
+          frame_count = 144,
+          animation_speed = 1,
+          scale = 1,
+          shift = util.by_pixel(56, 8)
         }
       }
     }
@@ -49,14 +87,16 @@ data:extend({{
   fluid_boxes = {
     {
       production_type = "input",
+      pipe_picture = require("__base__/prototypes/entity/assembler-pictures").assembler2pipepictures,
       pipe_covers = pipecoverspictures(),
       volume = 1000,
-      pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { -1, -2 } } },
+      pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 0, -2 } } },
     },{
       production_type = "input",
+      pipe_picture = require("__base__/prototypes/entity/assembler-pictures").assembler2pipepictures,
       pipe_covers = pipecoverspictures(),
       volume = 1000,
-      pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 1, -2 } } },
+      pipe_connections = { { flow_direction = "input", direction = defines.direction.south, position = { 0, 2 } } },
     }
   }
 }})

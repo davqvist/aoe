@@ -17,7 +17,7 @@ data:extend({{
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.1, result = "aoc-brazier"},
     max_health = 100,
-    collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
+    collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     energy_source = { type = "void" },
     energy_usage_per_tick = "1kW",

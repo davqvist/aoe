@@ -335,6 +335,16 @@ data.raw['underground-belt']['express-underground-belt'].max_distance = 15
 data.raw['item']['express-splitter'].subgroup = "aoc-item-logistics-belts"
 data.raw['item']['express-splitter'].order = "c3"
 data.raw['item']['express-splitter'].stack_size = 50
+data.raw['item']['turbo-transport-belt'].subgroup = "aoc-item-logistics-belts"
+data.raw['item']['turbo-transport-belt'].order = "a4"
+data.raw['item']['turbo-transport-belt'].stack_size = 200
+data.raw['item']['turbo-underground-belt'].subgroup = "aoc-item-logistics-belts"
+data.raw['item']['turbo-underground-belt'].order = "b4"
+data.raw['item']['turbo-underground-belt'].stack_size = 50
+data.raw['underground-belt']['turbo-underground-belt'].max_distance = 21
+data.raw['item']['turbo-splitter'].subgroup = "aoc-item-logistics-belts"
+data.raw['item']['turbo-splitter'].order = "c4"
+data.raw['item']['turbo-splitter'].stack_size = 50
 
 data.raw['item']['pipe'].subgroup = "aoc-fluid-logistics"
 data.raw['item']['pipe'].order = "a"

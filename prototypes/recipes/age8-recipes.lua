@@ -201,6 +201,50 @@ data:extend({{
 }})
 
 data:extend({{
+    name = 'aoc-slaughterhouse-medium-wriggler-corpse-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-medium-wriggler-corpse', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-alien-brain', amount = 1, independent_probability = 0.6},
+		{type = 'item', name = 'jelly', amount = 3},
+		{type = 'item', name = 'aoc-alien-chitin', amount = 1},
+		{type = 'item', name = 'aoc-alien-gland', amount = 6},
+		{type = 'fluid', name = 'aoc-alien-blood', amount = 50}
+    },
+    energy_required = 4,
+	subgroup = 'aoc-aliens',
+	order = "e2z",
+	icon = data.raw.item["aoc-medium-wriggler-corpse"].icon,
+	icon_size = data.raw.item["aoc-medium-wriggler-corpse"].icon_size,
+	categories = {'aoc-category-slaughtering'}
+}})
+
+data:extend({{
+    name = 'aoc-slaughterhouse-big-wriggler-corpse-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-big-wriggler-corpse', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-alien-brain', amount = 1, independent_probability = 0.8},
+		{type = 'item', name = 'jelly', amount = 5},
+		{type = 'item', name = 'aoc-alien-chitin', amount = 2},
+		{type = 'item', name = 'aoc-alien-gland', amount = 7},
+		{type = 'fluid', name = 'aoc-alien-blood', amount = 70}
+    },
+    energy_required = 4,
+	subgroup = 'aoc-aliens',
+	order = "e3z",
+	icon = data.raw.item["aoc-big-wriggler-corpse"].icon,
+	icon_size = data.raw.item["aoc-big-wriggler-corpse"].icon_size,
+	categories = {'aoc-category-slaughtering'}
+}})
+
+data:extend({{
 	name = 'aoc-crafting-artificial-jellynut-soil-recipe',
 	type = 'recipe',
 	enabled = false,
@@ -1744,9 +1788,9 @@ data:extend({{
 		{type = 'item', name = 'tungsten-plate', amount = 4},
 	},
 	results = {
-		{type = 'item', name = 'rocket', amount = 1}
+		{type = 'item', name = 'rocket', amount = 2}
     },
-	energy_required = 4
+	energy_required = 8
 }})
 
 data:extend({{
@@ -1754,7 +1798,7 @@ data:extend({{
 	type = 'recipe',
 	enabled = false,
 	ingredients = {
-		{type = 'item', name = 'cliff-explosives', amount = 2},
+		{type = 'item', name = 'cliff-explosives', amount = 1},
 		{type = 'item', name = 'rocket', amount = 1},
 	},
 	results = {

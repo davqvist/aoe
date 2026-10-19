@@ -77,6 +77,7 @@ data:extend({{
 	results = {
         {type = 'item', name = 'aoc-quark-charm', amount = 2},
 		{type = 'item', name = 'aoc-quark-strange', amount = 1},
+		{type = 'item', name = 'aoc-positron', amount = 1, independent_probability = 0.9, ignored_by_productivity = 1},
         {type = 'item', name = 'aoc-philstone', amount = 1, ignored_by_productivity = 1}
     },
 	main_product = "aoc-quark-charm",
@@ -273,7 +274,7 @@ data:extend({{
 	ingredients = {
 		{type = 'item', name = 'aoc-antimatter', amount = 100},
 		{type = 'item', name = 'aoc-infinity', amount = 100},
-		{type = 'item', name = 'aoc-neutronium', amount = 1000}
+		{type = 'item', name = 'aoc-neutronium', amount = 500}
 	},
 	results = {
         {type = 'item', name = 'aoc-black-hole', amount = 1}
@@ -290,7 +291,7 @@ data:extend({{
 		{type = 'item', name = 'aoc-life-catalyst', amount = 100},
 		{type = 'item', name = 'aoc-nauvium-catalyst', amount = 100},
 		{type = 'item', name = 'aoc-teleportation-core', amount = 100},
-		{type = 'item', name = 'aoc-enderium-plate', amount = 1000}
+		{type = 'item', name = 'aoc-enderium-plate', amount = 500}
 	},
 	results = {
         {type = 'item', name = 'aoc-ethereal-core', amount = 1}

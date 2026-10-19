@@ -54,6 +54,7 @@ script.on_event(defines.events.on_player_created,
     local player = game.players[event.player_index]
     player.insert{name = "burner-mining-drill", count = 1}
     player.insert{name = "burner-crusher", count = 2}
+    player.insert{name = "transport-belt", count = 50}
 	player.remove_item{name = "wood", count = 1}
 	player.remove_item{name = "stone-furnace", count = 1}
 	player.remove_item{name = "iron-plate", count = 8}
@@ -236,7 +237,7 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
   function(event)
     local entity = event.entity
 	if(entity.name == "infinity-chest") then 
-		game.set_win_ending_info{ title={'age-of-creation.wintitle'}, message={'age-of-creation.winmsg'} }
+		game.set_win_ending_info{ title={'age-of-creation.wintitle'}, message={'age-of-creation.winmsg'}, final_message={'age-of-creation.winfinal'}, image_path="__base__/script/freeplay/victory-space-age.png" }
 		game.set_game_state{ game_finished = true, player_won = true, can_continue = true }
 	end
 	if(entity.name == "aoc-lightning-rod") then
@@ -257,6 +258,10 @@ script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_e
 	end
 	if(entity.name == "aoc-particle-accelerator") then
 		handleBuilt( event, "accelerators" )
+		entity.disabled_by_script = true
+	end
+	if(entity.name == "aoc-quantum-computer") then
+		handleBuilt( event, "computers" )
 		entity.disabled_by_script = true
 	end
 	if(entity.name == "aoc-nuclear-reactor") then
@@ -362,6 +367,28 @@ script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_
 	end
   end
 )
+script.on_nth_tick(167,
+  function()
+	if storage.computers then
+		for unit, computer in pairs(storage.computers) do
+			if computer.valid and computer.name == "aoc-quantum-computer" then
+				local surface = computer.surface
+				local found_beacons = surface.find_entities_filtered({name="aoc-quantum-beacon", area={{computer.position.x-8, computer.position.y-8}, {computer.position.x+8, computer.position.y+8}}})
+				local active = false
+				if found_beacons ~= nil and #found_beacons>0 then
+					print(serpent.dump(found_beacons))
+					for _, beacon in pairs(found_beacons) do
+						if beacon.crafting_progress > 0 then active = true end
+					end
+				end
+				computer.disabled_by_script = not active
+			else
+				storage.computers[unit]=nil
+			end
+		end	
+	end
+  end
+)	
 script.on_nth_tick(137,
   function()
 	if storage.accelerators then
@@ -370,26 +397,6 @@ script.on_nth_tick(137,
 				if accelerator.surface.platform then
 					if accelerator.surface.platform.speed > 2 then 
 						accelerator.disabled_by_script = false
-						if accelerator.surface.platform.space_connection and accelerator.surface.platform.space_connection.from and accelerator.surface.platform.space_connection.to then
-							if accelerator.get_recipe().name == 'aoc-accelerating-proton-quarks-recipe' then
-								if ( accelerator.surface.platform.space_connection.from.name == "vulcanus" and accelerator.surface.platform.distance <= 0.5 )
-								 or ( accelerator.surface.platform.space_connection.to.name == "vulcanus" and accelerator.surface.platform.distance >= 0.5 ) then else
-									accelerator.disabled_by_script = true
-								end
-							end
-							if accelerator.get_recipe().name == 'aoc-accelerating-electron-quarks-recipe' then
-								if ( accelerator.surface.platform.space_connection.from.name == "gleba" and accelerator.surface.platform.distance <= 0.5 )
-								 or ( accelerator.surface.platform.space_connection.to.name == "gleba" and accelerator.surface.platform.distance >= 0.5 ) then else
-									accelerator.disabled_by_script = true
-								end
-							end
-							if accelerator.get_recipe().name == 'aoc-accelerating-quark-quarks-recipe' then
-								if ( accelerator.surface.platform.space_connection.from.name == "fulgora" and accelerator.surface.platform.distance <= 0.5 )
-								 or ( accelerator.surface.platform.space_connection.to.name == "fulgora" and accelerator.surface.platform.distance >= 0.5 ) then else
-									accelerator.disabled_by_script = true
-								end
-							end
-						end
 					else
 						accelerator.disabled_by_script = true
 					end
@@ -896,10 +903,10 @@ end
 
 function check_infusion( infusiontable )
 	local pedestals = {}
-	pedestals[1] = infusiontable.surface.find_entity("aoc-infusion-pedestal", {infusiontable.position.x-5, infusiontable.position.y})
-	pedestals[2] = infusiontable.surface.find_entity("aoc-infusion-pedestal", {infusiontable.position.x+5, infusiontable.position.y})
-	pedestals[3] = infusiontable.surface.find_entity("aoc-infusion-pedestal", {infusiontable.position.x, infusiontable.position.y-5})
-	pedestals[4] = infusiontable.surface.find_entity("aoc-infusion-pedestal", {infusiontable.position.x, infusiontable.position.y+5})
+	pedestals[1] = infusiontable.surface.find_entity("aoc-infusion-pedestal", {infusiontable.position.x-6, infusiontable.position.y})
+	pedestals[2] = infusiontable.surface.find_entity("aoc-infusion-pedestal", {infusiontable.position.x+6, infusiontable.position.y})
+	pedestals[3] = infusiontable.surface.find_entity("aoc-infusion-pedestal", {infusiontable.position.x, infusiontable.position.y-6})
+	pedestals[4] = infusiontable.surface.find_entity("aoc-infusion-pedestal", {infusiontable.position.x, infusiontable.position.y+6})
 	if pedestals[1] ~= nil and pedestals[2] ~= nil and pedestals[3] ~= nil and pedestals[4] ~= nil then
 		local inv = {}
 		local k = {}

@@ -326,10 +326,9 @@ data:extend({{
     },
 	energy_required = 5,
 	icons = data.raw.fluid["aoc-latex"].icons,
-	main_product = "",
+	main_product = "aoc-latex",
 	categories = {'aoc-category-harvesting'},
-	raise_on_crafted = true,
-	subgroup = 'aoc-other'
+	raise_on_crafted = true
 }})
 
 data:extend({{
@@ -345,10 +344,9 @@ data:extend({{
 	energy_required = 5,
 	icon = data.raw.item["aoc-resin"].icon,
 	icon_size = data.raw.item["aoc-resin"].icon_size,
-	main_product = "",
+	main_product = "aoc-resin",
 	categories = {'aoc-category-harvesting'},
-	raise_on_crafted = true,
-	subgroup = 'aoc-other'
+	raise_on_crafted = true
 }})
 
 data:extend({{

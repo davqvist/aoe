@@ -29,4 +29,43 @@ for name, type in pairs( AOC["to_enchant"] ) do
         energy_required = 60,
 	    research = name
     }})
+    data:extend({{
+        name = 'aoc-enchanting-' .. name .. '-3-recipe',
+        type = 'recipe',
+        enabled = false,
+        ingredients = {
+            {type = 'item', name = name, amount = 2, quality_min = "uncommon", quality_max = "uncommon"},
+            {type = 'item', name = 'aoc-book', amount = 1},
+            {type = 'item', name = 'aoc-nauvium-catalyst', amount = 2}
+        },
+        results = {
+            {type = 'item', name = name, amount=1, quality_min = "rare", quality_max = "rare", shared_probability = { min = 0, max = 0.512 }},
+            {type = 'item', name = name, amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0.512, max = 0.64 }},
+            {type = 'item', name = name, amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.64, max = 0.672 }}
+        },
+        --icons = get_icons_quality( data.raw[type][name], 2 ),
+        main_product = name,
+        categories = {"aoc-category-enchanting"},
+        energy_required = 60,
+	    research = name
+    }})
+    data:extend({{
+        name = 'aoc-enchanting-' .. name .. '-4-recipe',
+        type = 'recipe',
+        enabled = false,
+        ingredients = {
+            {type = 'item', name = name, amount = 2, quality_min = "rare", quality_max = "rare"},
+            {type = 'item', name = 'aoc-book', amount = 1},
+            {type = 'item', name = 'aoc-nauvium-catalyst', amount = 3}
+        },
+        results = {
+            {type = 'item', name = name, amount=1, quality_min = "epic", quality_max = "epic", shared_probability = { min = 0, max = 0.512 }},
+            {type = 'item', name = name, amount=1, quality_min = "legendary", quality_max = "legendary", shared_probability = { min = 0.512, max = 0.64 }}
+        },
+        --icons = get_icons_quality( data.raw[type][name], 2 ),
+        main_product = name,
+        categories = {"aoc-category-enchanting"},
+        energy_required = 60,
+	    research = name
+    }})
 end

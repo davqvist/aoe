@@ -36,6 +36,13 @@ data:extend({{
                 height = 128,
                 frame_count = 1,
                 scale = 0.5
+            },{
+                filename = "__ageofcreation__/img/entities/escritoire_shadow.png",
+                width = 128,
+                height = 64,
+                draw_as_shadow = true,
+                scale = 0.5,
+                shift = util.by_pixel(60, 20)
             }
         }
     }

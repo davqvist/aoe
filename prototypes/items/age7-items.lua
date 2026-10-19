@@ -255,7 +255,7 @@ data:extend({{
     order = "e",
     stack_size = 20,
 	fuel_value = "100MJ",
-	fuel_category = "aoc-life"
+	fuel_categories = {"aoc-life"}
 }})
 
 data:extend({{
@@ -540,7 +540,7 @@ data:extend({{
     order = "b",
     stack_size = 50,
     fuel_value = "1.53GJ",
-    fuel_category = "nuclear",
+    fuel_categories = {"nuclear"},
     burnt_result = "aoc-fuel-cell-uranium-233-depleted"
 }})
 
@@ -563,7 +563,7 @@ data:extend({{
     order = "c",
     stack_size = 50,
     fuel_value = "6.13GJ",
-    fuel_category = "nuclear",
+    fuel_categories = {"nuclear"},
     burnt_result = "aoc-fuel-cell-uranium-233-depleted-2"
 }})
 
@@ -598,7 +598,7 @@ data:extend({{
     order = "e",
     stack_size = 50,
     fuel_value = "9.22GJ",
-    fuel_category = "nuclear",
+    fuel_categories = {"nuclear"},
     burnt_result = "aoc-fuel-cell-uranium-235-depleted-2"
 }})
 
@@ -621,7 +621,7 @@ data:extend({{
     order = "f",
     stack_size = 50,
     fuel_value = "0.71GJ",
-    fuel_category = "nuclear",
+    fuel_categories = {"nuclear"},
     burnt_result = "aoc-fuel-cell-neptunium-236-depleted"
 }})
 
@@ -644,7 +644,7 @@ data:extend({{
     order = "g",
     stack_size = 50,
     fuel_value = "2.85GJ",
-    fuel_category = "nuclear",
+    fuel_categories = {"nuclear"},
     burnt_result = "aoc-fuel-cell-neptunium-236-depleted-2"
 }})
 
@@ -667,7 +667,7 @@ data:extend({{
     order = "h",
     stack_size = 50,
     fuel_value = "1.92GJ",
-    fuel_category = "nuclear",
+    fuel_categories = {"nuclear"},
     burnt_result = "aoc-fuel-cell-plutonium-239-depleted"
 }})
 
@@ -690,7 +690,7 @@ data:extend({{
     order = "i",
     stack_size = 50,
     fuel_value = "7.7GJ",
-    fuel_category = "nuclear",
+    fuel_categories = {"nuclear"},
     burnt_result = "aoc-fuel-cell-plutonium-239-depleted-2"
 }})
 
@@ -713,7 +713,7 @@ data:extend({{
     order = "j",
     stack_size = 50,
     fuel_value = "2.09GJ",
-    fuel_category = "nuclear",
+    fuel_categories = {"nuclear"},
     burnt_result = "aoc-fuel-cell-plutonium-241-depleted"
 }})
 
@@ -736,7 +736,7 @@ data:extend({{
     order = "k",
     stack_size = 50,
     fuel_value = "8.34GJ",
-    fuel_category = "nuclear",
+    fuel_categories = {"nuclear"},
     burnt_result = "aoc-fuel-cell-plutonium-241-depleted-2"
 }})
 
@@ -759,7 +759,7 @@ data:extend({{
     order = "l",
     stack_size = 50,
     fuel_value = "1.14GJ",
-    fuel_category = "nuclear",
+    fuel_categories = {"nuclear"},
     burnt_result = "aoc-fuel-cell-americium-242-depleted"
 }})
 
@@ -782,7 +782,7 @@ data:extend({{
     order = "m",
     stack_size = 50,
     fuel_value = "5.65GJ",
-    fuel_category = "nuclear",
+    fuel_categories = {"nuclear"},
     burnt_result = "aoc-fuel-cell-americium-242-depleted-2"
 }})
 
@@ -805,7 +805,7 @@ data:extend({{
     order = "n",
     stack_size = 50,
     fuel_value = "1.26GJ",
-    fuel_category = "nuclear",
+    fuel_categories = {"nuclear"},
     burnt_result = "aoc-fuel-cell-curium-243-depleted"
 }})
 
@@ -828,7 +828,7 @@ data:extend({{
     order = "o",
     stack_size = 50,
     fuel_value = "5.04GJ",
-    fuel_category = "nuclear",
+    fuel_categories = {"nuclear"},
     burnt_result = "aoc-fuel-cell-curium-243-depleted-2"
 }})
 
@@ -851,7 +851,7 @@ data:extend({{
     order = "p",
     stack_size = 50,
     fuel_value = "1.57GJ",
-    fuel_category = "nuclear",
+    fuel_categories = {"nuclear"},
     burnt_result = "aoc-fuel-cell-curium-245-depleted"
 }})
 
@@ -874,7 +874,7 @@ data:extend({{
     order = "q",
     stack_size = 50,
     fuel_value = "6.27GJ",
-    fuel_category = "nuclear",
+    fuel_categories = {"nuclear"},
     burnt_result = "aoc-fuel-cell-curium-245-depleted-2"
 }})
 
@@ -897,7 +897,7 @@ data:extend({{
     order = "r",
     stack_size = 50,
     fuel_value = "1.19GJ",
-    fuel_category = "nuclear",
+    fuel_categories = {"nuclear"},
     burnt_result = "aoc-fuel-cell-curium-247-depleted"
 }})
 
@@ -920,7 +920,7 @@ data:extend({{
     order = "s",
     stack_size = 50,
     fuel_value = "4.77GJ",
-    fuel_category = "nuclear",
+    fuel_categories = {"nuclear"},
     burnt_result = "aoc-fuel-cell-curium-247-depleted-2"
 }})
 
@@ -943,7 +943,7 @@ data:extend({{
     order = "t",
     stack_size = 50,
     fuel_value = "1.17GJ",
-    fuel_category = "nuclear",
+    fuel_categories = {"nuclear"},
     burnt_result = "aoc-fuel-cell-berkelium-248-depleted"
 }})
 
@@ -966,7 +966,7 @@ data:extend({{
     order = "u",
     stack_size = 50,
     fuel_value = "3.97GJ",
-    fuel_category = "nuclear",
+    fuel_categories = {"nuclear"},
     burnt_result = "aoc-fuel-cell-berkelium-248-depleted-2"
 }})
 
@@ -989,7 +989,7 @@ data:extend({{
     order = "v",
     stack_size = 50,
     fuel_value = "0.92GJ",
-    fuel_category = "nuclear",
+    fuel_categories = {"nuclear"},
     burnt_result = "aoc-fuel-cell-californium-249-depleted"
 }})
 
@@ -1012,7 +1012,7 @@ data:extend({{
     order = "w",
     stack_size = 50,
     fuel_value = "3.66GJ",
-    fuel_category = "nuclear",
+    fuel_categories = {"nuclear"},
     burnt_result = "aoc-fuel-cell-californium-249-depleted-2"
 }})
 
@@ -1035,7 +1035,7 @@ data:extend({{
     order = "x",
     stack_size = 50,
     fuel_value = "1.8GJ",
-    fuel_category = "nuclear",
+    fuel_categories = {"nuclear"},
     burnt_result = "aoc-fuel-cell-californium-251-depleted"
 }})
 
@@ -1058,7 +1058,7 @@ data:extend({{
     order = "y",
     stack_size = 50,
     fuel_value = "7.2GJ",
-    fuel_category = "nuclear",
+    fuel_categories = {"nuclear"},
     burnt_result = "aoc-fuel-cell-californium-251-depleted-2"
 }})
 

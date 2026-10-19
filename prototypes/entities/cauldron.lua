@@ -68,9 +68,17 @@ data:extend({{
           {
             filename = "__ageofcreation__/img/entities/cauldron-animation.png",
             priority = "high",
-            width = 214,
-            height = 214,
-            scale = 0.58
+            width = 204,
+            height = 204,
+            scale = 0.5
+          },{
+            filename = "__ageofcreation__/img/entities/cauldron-shadow.png",
+            priority = "high",
+            width = 204,
+            height = 102,
+            draw_as_shadow = true,
+            scale = 0.5,
+            shift = util.by_pixel(17, 26)
           }
         }
       },
@@ -80,26 +88,40 @@ data:extend({{
           animation = {
             filename = "__ageofcreation__/img/entities/cauldron-animation.png",
             priority = "high",
-            width = 214,
-            height = 214,
-            line_length = 8,
-            frame_count = 64,
-            animation_speed = 0.2,
-            scale = 0.58
+            width = 204,
+            height = 204,
+            line_length = 10,
+            frame_count = 96,
+            animation_speed = 0.4,
+            scale = 0.5
           },
         },{
           always_draw = true,
           animation = {
             filename = "__ageofcreation__/img/entities/cauldron-emission.png",
             priority = "high",
-            width = 214,
-            height = 214,
-            line_length = 8,
-            frame_count = 64,
-            animation_speed = 0.2,
+            width = 204,
+            height = 204,
+            line_length = 10,
+            frame_count = 96,
+            animation_speed = 0.4,
             draw_as_glow = true,
             blend_mode = "additive-soft",
-            scale = 0.58
+            scale = 0.5
+          }
+        },{
+          always_draw = true,
+          animation = {
+            filename = "__ageofcreation__/img/entities/cauldron-shadow.png",
+            priority = "high",
+            width = 204,
+            height = 102,
+            line_length = 10,
+            frame_count = 96,
+            animation_speed = 0.4,
+            draw_as_shadow = true,
+            scale = 0.5,
+            shift = util.by_pixel(17, 26)
           }
         }
       }

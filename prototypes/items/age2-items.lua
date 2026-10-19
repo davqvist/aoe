@@ -152,7 +152,7 @@ data:extend({{
     order = "b",
     stack_size = 200,
     fuel_value = "1.5MJ",
-	fuel_category = "chemical"
+	fuel_categories = {"chemical"}
 }})
 
 data:extend({{
@@ -176,7 +176,7 @@ data:extend({{
     order = "d",
     stack_size = 200,
 	fuel_value = "6MJ",
-	fuel_category = "chemical"
+	fuel_categories = {"chemical"}
 }})
 
 data:extend({{

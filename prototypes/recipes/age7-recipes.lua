@@ -1900,6 +1900,72 @@ data:extend({{
 }})
 
 data:extend({{
+    name = 'aoc-slaughterhouse-medium-biter-corpse-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-medium-biter-corpse', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-alien-brain', amount = 1},
+		{type = 'item', name = 'aoc-bones', amount = 2},
+		{type = 'item', name = 'aoc-alien-chitin', amount = 2},
+		{type = 'item', name = 'aoc-alien-gland', amount = 5},
+		{type = 'fluid', name = 'aoc-alien-blood', amount = 50}
+    },
+    energy_required = 4,
+	subgroup = 'aoc-aliens',
+	order = "c2z",
+	icon = data.raw.item["aoc-medium-biter-corpse"].icon,
+	icon_size = data.raw.item["aoc-medium-biter-corpse"].icon_size,
+	categories = {'aoc-category-slaughtering'}
+}})
+
+data:extend({{
+    name = 'aoc-slaughterhouse-big-biter-corpse-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-big-biter-corpse', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-alien-brain', amount = 1},
+		{type = 'item', name = 'aoc-bones', amount = 3},
+		{type = 'item', name = 'aoc-alien-chitin', amount = 3},
+		{type = 'item', name = 'aoc-alien-gland', amount = 6},
+		{type = 'fluid', name = 'aoc-alien-blood', amount = 60}
+    },
+    energy_required = 4,
+	subgroup = 'aoc-aliens',
+	order = "c3z",
+	icon = data.raw.item["aoc-big-biter-corpse"].icon,
+	icon_size = data.raw.item["aoc-big-biter-corpse"].icon_size,
+	categories = {'aoc-category-slaughtering'}
+}})
+
+data:extend({{
+    name = 'aoc-slaughterhouse-behemoth-biter-corpse-recipe',
+    type = 'recipe',
+    enabled = false,
+	ingredients = {
+        {type = 'item', name = 'aoc-behemoth-biter-corpse', amount = 1}
+    },
+    results = {
+        {type = 'item', name = 'aoc-alien-brain', amount = 2},
+		{type = 'item', name = 'aoc-bones', amount = 4},
+		{type = 'item', name = 'aoc-alien-chitin', amount = 4},
+		{type = 'item', name = 'aoc-alien-gland', amount = 8},
+		{type = 'fluid', name = 'aoc-alien-blood', amount = 80}
+    },
+    energy_required = 4,
+	subgroup = 'aoc-aliens',
+	order = "c4z",
+	icon = data.raw.item["aoc-behemoth-biter-corpse"].icon,
+	icon_size = data.raw.item["aoc-behemoth-biter-corpse"].icon_size,
+	categories = {'aoc-category-slaughtering'}
+}})
+
+data:extend({{
 	name = 'aoc-crafting-laser-turret-recipe',
 	type = 'recipe',
 	enabled = false,

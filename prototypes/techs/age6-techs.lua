@@ -310,7 +310,7 @@ data:extend({{
   name = "aoc-philstone-tech",
   icon = "__ageofcreation__/img/items/philstone.png",
   icon_size = 64,
-  prerequisites = {"aoc-teleportation-tech", "aoc-enchanting-tech"},
+  prerequisites = {"aoc-teleportation-tech", "aoc-enchanting-tech-1"},
   max_level = "infinite",
   effects = {
     {
@@ -750,7 +750,7 @@ data:extend({{
 
 data:extend({{
   type = "technology",
-  name = "aoc-enchanting-tech",
+  name = "aoc-enchanting-tech-1",
   icon = "__ageofcreation__/img/entities/enchanting-table.png",
   icon_size = 192,
   prerequisites = {"aoc-mana-tech", "aoc-jewelry-tech"},
@@ -818,7 +818,7 @@ data:extend({{
   type = "technology",
   name = "aoc-stargazing-tech",
   icon = "__ageofcreation__/img/entities/telescope.png",
-  icon_size = 192,
+  icon_size = 170,
   prerequisites = {"aoc-platinum-tech"},
   effects = {
     {

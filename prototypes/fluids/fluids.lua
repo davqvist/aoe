@@ -1341,3 +1341,43 @@ data:extend({{
 	default_temperature = 20,
     fuel_value = "3MJ"
 }})
+
+data:extend({{
+    type = "fluid",
+    name = "aoc-nanites",
+    icons = {
+        { 
+            icon = "__base__/graphics/icons/construction-robot.png",
+            icon_size = 64,
+            icon_mipmaps = 4,
+            scale = 0.1,
+            shift = {4,7}
+        },
+        { 
+            icon = "__base__/graphics/icons/logistic-robot.png",
+            icon_size = 64,
+            icon_mipmaps = 4,
+            scale = 0.1,
+            shift = {6,-3}
+        },
+        { 
+            icon = "__base__/graphics/icons/construction-robot.png",
+            icon_size = 64,
+            icon_mipmaps = 4,
+            scale = 0.1,
+            shift = {-4,-2}
+        },
+        { 
+            icon = "__base__/graphics/icons/logistic-robot.png",
+            icon_size = 64,
+            icon_mipmaps = 4,
+            scale = 0.1,
+            shift = {-2,5}
+        }
+    },
+    subgroup = "aoc-fluids-fusion",
+    order = "e",
+	base_color = {r=0.3, g=0, b=0.3},
+	flow_color = {r=0.3, g=0, b=0.3},
+	default_temperature = 20
+}})

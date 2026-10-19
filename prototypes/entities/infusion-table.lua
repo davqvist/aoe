@@ -56,8 +56,8 @@ data:extend({{
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.1, result = "aoc-infusion-table"},
     max_health = 100,
-	selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
-	collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
+	selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+	collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
     inventory_size = 1,
     picture =
     {
@@ -67,7 +67,7 @@ data:extend({{
           filename = "__ageofcreation__/img/entities/infusion-table.png",
           width = 256,
           height = 256,
-		  scale = 0.625
+		  scale = 0.875
         }
       }
     },
@@ -76,7 +76,7 @@ data:extend({{
               filename = "__base__/graphics/entity/pumpjack/pumpjack-radius-visualization.png", 
               size = 12
           },
-        distance = 5.5
+        distance = 6.5
     },
     circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
     circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
@@ -111,7 +111,7 @@ data:extend({{
                     filename = "__ageofcreation__/img/entities/infusion-table.png",
                     width = 256,
                     height = 256,
-                    scale = 0.625
+                    scale = 0.875
                 }
             }
         },
@@ -121,7 +121,7 @@ data:extend({{
                     filename = "__ageofcreation__/img/entities/infusion-table-laser-vertical.png",
                     width = 12,
                     height = 33,
-                    shift = util.by_pixel(3, -96),
+                    shift = util.by_pixel(3, -128),
                     scale = 6,
                     draw_as_glow = true,
                     tint = {255, 0, 0}
@@ -131,7 +131,7 @@ data:extend({{
                     filename = "__ageofcreation__/img/entities/infusion-table-laser-vertical.png",
                     width = 12,
                     height = 33,
-                    shift = util.by_pixel(3, 96),
+                    shift = util.by_pixel(3, 144),
                     scale = 6,
                     draw_as_glow = true,
                     tint = {255, 0, 0}
@@ -141,7 +141,7 @@ data:extend({{
                     filename = "__ageofcreation__/img/entities/infusion-table-laser-horizontal.png",
                     width = 33,
                     height = 12,
-                    shift = util.by_pixel(-96, 3),
+                    shift = util.by_pixel(-144, 3),
                     scale = 6,
                     draw_as_glow = true,
                     tint = {255, 0, 0}
@@ -151,7 +151,7 @@ data:extend({{
                     filename = "__ageofcreation__/img/entities/infusion-table-laser-horizontal.png",
                     width = 33,
                     height = 12,
-                    shift = util.by_pixel(96, 3),
+                    shift = util.by_pixel(128, 3),
                     scale = 6,
                     draw_as_glow = true,
                     tint = {255, 0, 0}

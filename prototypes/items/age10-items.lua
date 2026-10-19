@@ -182,7 +182,7 @@ data:extend({{
     icon_size = 64,
     subgroup = "aoc-infinity",
     order = "a",
-    stack_size = 100
+    stack_size = 10
 }})
 
 data:extend({{
@@ -192,7 +192,7 @@ data:extend({{
     icon_size = 64,
     subgroup = "aoc-infinity",
     order = "b",
-    stack_size = 100
+    stack_size = 10
 }})
 
 data:extend({{
@@ -202,7 +202,7 @@ data:extend({{
     icon_size = 64,
     subgroup = "aoc-infinity",
     order = "c",
-    stack_size = 100
+    stack_size = 10
 }})
 
 data.raw['item']['infinity-pipe'].subgroup = "aoc-infinity"

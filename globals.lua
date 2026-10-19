@@ -58,7 +58,7 @@ function combine_icons_tiny( newicons, oldicons )
     local new_icons = table.deepcopy( newicons )
     local old_icons = table.deepcopy( oldicons )
     for _, old in pairs(old_icons) do
-        if not old.icon:find("^__ageofcreation__/img/items/atoms") then
+        if old.icon and not old.icon:find("^__ageofcreation__/img/items/atoms") then
           local old_scale = old.scale or 1
           old.scale = old_scale*0.4*64/old.icon_size
           old.draw_background = true

@@ -41,7 +41,7 @@ data:extend({{
     order = "b",
     stack_size = 20,
     fuel_value = "10GJ",
-    fuel_category = "fusion",
+    fuel_categories = {"fusion"},
     burnt_result = "aoc-fuel-cell-fusion-helium-depleted"
 }})
 
@@ -62,7 +62,7 @@ data:extend({{
     order = "c",
     stack_size = 20,
     fuel_value = "10GJ",
-    fuel_category = "fusion",
+    fuel_categories = {"fusion"},
     burnt_result = "aoc-fuel-cell-fusion-nitrogen-depleted"
 }})
 
@@ -83,7 +83,7 @@ data:extend({{
     order = "d",
     stack_size = 20,
     fuel_value = "10GJ",
-    fuel_category = "fusion",
+    fuel_categories = {"fusion"},
     burnt_result = "aoc-fuel-cell-fusion-oxygen-depleted"
 }})
 
@@ -104,7 +104,7 @@ data:extend({{
     order = "e",
     stack_size = 20,
     fuel_value = "10GJ",
-    fuel_category = "fusion",
+    fuel_categories = {"fusion"},
     burnt_result = "aoc-fuel-cell-fusion-magnesium-depleted"
 }})
 
@@ -125,7 +125,7 @@ data:extend({{
     order = "f",
     stack_size = 20,
     fuel_value = "10GJ",
-    fuel_category = "fusion",
+    fuel_categories = {"fusion"},
     burnt_result = "aoc-fuel-cell-fusion-aluminium-depleted"
 }})
 
@@ -146,7 +146,7 @@ data:extend({{
     order = "g",
     stack_size = 20,
     fuel_value = "10GJ",
-    fuel_category = "fusion",
+    fuel_categories = {"fusion"},
     burnt_result = "aoc-fuel-cell-fusion-sulfur-depleted"
 }})
 
@@ -167,7 +167,7 @@ data:extend({{
     order = "h",
     stack_size = 20,
     fuel_value = "10GJ",
-    fuel_category = "fusion",
+    fuel_categories = {"fusion"},
     burnt_result = "aoc-fuel-cell-fusion-chlorine-depleted"
 }})
 
@@ -188,7 +188,7 @@ data:extend({{
     order = "i",
     stack_size = 20,
     fuel_value = "10GJ",
-    fuel_category = "fusion",
+    fuel_categories = {"fusion"},
     burnt_result = "aoc-fuel-cell-fusion-titanium-depleted"
 }})
 
@@ -209,7 +209,7 @@ data:extend({{
     order = "j",
     stack_size = 20,
     fuel_value = "10GJ",
-    fuel_category = "fusion",
+    fuel_categories = {"fusion"},
     burnt_result = "aoc-fuel-cell-fusion-chromium-depleted"
 }})
 
@@ -230,7 +230,7 @@ data:extend({{
     order = "k",
     stack_size = 20,
     fuel_value = "10GJ",
-    fuel_category = "fusion",
+    fuel_categories = {"fusion"},
     burnt_result = "aoc-fuel-cell-fusion-manganese-depleted"
 }})
 
@@ -251,7 +251,7 @@ data:extend({{
     order = "l",
     stack_size = 20,
     fuel_value = "10GJ",
-    fuel_category = "fusion",
+    fuel_categories = {"fusion"},
     burnt_result = "aoc-fuel-cell-fusion-iron-depleted"
 }})
 
@@ -272,7 +272,7 @@ data:extend({{
     order = "m",
     stack_size = 20,
     fuel_value = "10GJ",
-    fuel_category = "fusion",
+    fuel_categories = {"fusion"},
     burnt_result = "aoc-fuel-cell-fusion-nickel-depleted"
 }})
 
@@ -293,7 +293,7 @@ data:extend({{
     order = "n",
     stack_size = 20,
     fuel_value = "10GJ",
-    fuel_category = "fusion",
+    fuel_categories = {"fusion"},
     burnt_result = "aoc-fuel-cell-fusion-copper-depleted"
 }})
 
@@ -314,7 +314,7 @@ data:extend({{
     order = "o",
     stack_size = 20,
     fuel_value = "10GJ",
-    fuel_category = "fusion",
+    fuel_categories = {"fusion"},
     burnt_result = "aoc-fuel-cell-fusion-zinc-depleted"
 }})
 
@@ -335,7 +335,7 @@ data:extend({{
     order = "p",
     stack_size = 20,
     fuel_value = "10GJ",
-    fuel_category = "fusion",
+    fuel_categories = {"fusion"},
     burnt_result = "aoc-fuel-cell-fusion-silver-depleted"
 }})
 
@@ -356,7 +356,7 @@ data:extend({{
     order = "q",
     stack_size = 20,
     fuel_value = "10GJ",
-    fuel_category = "fusion",
+    fuel_categories = {"fusion"},
     burnt_result = "aoc-fuel-cell-fusion-tin-depleted"
 }})
 
@@ -377,7 +377,7 @@ data:extend({{
     order = "r",
     stack_size = 20,
     fuel_value = "10GJ",
-    fuel_category = "fusion",
+    fuel_categories = {"fusion"},
     burnt_result = "aoc-fuel-cell-fusion-neodymium-depleted"
 }})
 
@@ -398,7 +398,7 @@ data:extend({{
     order = "s",
     stack_size = 20,
     fuel_value = "10GJ",
-    fuel_category = "fusion",
+    fuel_categories = {"fusion"},
     burnt_result = "aoc-fuel-cell-fusion-promethium-depleted"
 }})
 
@@ -419,7 +419,7 @@ data:extend({{
     order = "t",
     stack_size = 20,
     fuel_value = "10GJ",
-    fuel_category = "fusion",
+    fuel_categories = {"fusion"},
     burnt_result = "aoc-fuel-cell-fusion-holmium-depleted"
 }})
 
@@ -440,7 +440,7 @@ data:extend({{
     order = "u",
     stack_size = 20,
     fuel_value = "10GJ",
-    fuel_category = "fusion",
+    fuel_categories = {"fusion"},
     burnt_result = "aoc-fuel-cell-fusion-tungsten-depleted"
 }})
 
@@ -461,7 +461,7 @@ data:extend({{
     order = "u",
     stack_size = 20,
     fuel_value = "10GJ",
-    fuel_category = "fusion",
+    fuel_categories = {"fusion"},
     burnt_result = "aoc-fuel-cell-fusion-platinum-depleted"
 }})
 
@@ -482,7 +482,7 @@ data:extend({{
     order = "v",
     stack_size = 20,
     fuel_value = "10GJ",
-    fuel_category = "fusion",
+    fuel_categories = {"fusion"},
     burnt_result = "aoc-fuel-cell-fusion-gold-depleted"
 }})
 
@@ -503,7 +503,7 @@ data:extend({{
     order = "w",
     stack_size = 20,
     fuel_value = "10GJ",
-    fuel_category = "fusion",
+    fuel_categories = {"fusion"},
     burnt_result = "aoc-fuel-cell-fusion-mercury-depleted"
 }})
 
@@ -524,7 +524,7 @@ data:extend({{
     order = "x",
     stack_size = 20,
     fuel_value = "10GJ",
-    fuel_category = "fusion",
+    fuel_categories = {"fusion"},
     burnt_result = "aoc-fuel-cell-fusion-lead-depleted"
 }})
 
@@ -555,7 +555,7 @@ data:extend({{
     order = "y",
     stack_size = 20,
     fuel_value = "10GJ",
-    fuel_category = "fusion",
+    fuel_categories = {"fusion"},
     burnt_result = "aoc-fuel-cell-fusion-duranium-depleted"
 }})
 
@@ -586,7 +586,7 @@ data:extend({{
     order = "z",
     stack_size = 20,
     fuel_value = "10GJ",
-    fuel_category = "fusion",
+    fuel_categories = {"fusion"},
     burnt_result = "aoc-fuel-cell-fusion-neutronium-depleted"
 }})
 

@@ -270,7 +270,7 @@ data:extend({{
     order = "a",
     stack_size = 50,
     fuel_value = "8MJ",
-    fuel_category = "aoc-mana",
+    fuel_categories = {"aoc-mana"},
     burnt_result = "battery"
 }})
 

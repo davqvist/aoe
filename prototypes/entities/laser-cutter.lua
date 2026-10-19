@@ -63,7 +63,12 @@ data:extend({{
         {
           production_type = "input",
           volume = 1000,
-          pipe_connections = {{ tyflow_directionpe="input", direction = defines.direction.south, position = {0, 2} }}
+          pipe_connections = {{ flow_direction="input", direction = defines.direction.south, position = {0, 2} }}
+        },
+        {
+          production_type = "output",
+          volume = 1000,
+          pipe_connections = {{ flow_direction="output", direction = defines.direction.north, position = {0, -2} }}
         }
     }
 }})

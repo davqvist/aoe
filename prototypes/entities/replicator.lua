@@ -4,7 +4,7 @@ data:extend({{
     icon = "__ageofcreation__/img/entities/replicator-icon.png",
     icon_size = 64,
     subgroup = "aoc-specific-buildings",
-    order = "w",
+    order = "x",
     place_result = "aoc-replicator",
     stack_size = 25,
 }})
@@ -27,7 +27,7 @@ data:extend({{
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { hardness = 1, mining_time = 0.2, result = "aoc-replicator" },
     max_health = 300,
-	circuit_wire_connection_point = circuit_connector_definitions["electric-furnace"].points,
+	  circuit_wire_connection_point = circuit_connector_definitions["electric-furnace"].points,
     circuit_connector_sprites = circuit_connector_definitions["electric-furnace"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
@@ -39,11 +39,13 @@ data:extend({{
       layers = {
         {
           filename = "__ageofcreation__/img/entities/replicator-animation-1.png",
+          priority = "high",
           width = 410,
           height = 410,
           scale = 0.5
         },{
           filename = "__ageofcreation__/img/entities/replicator-shadow.png",
+          priority = "high",
           width = 900,
           height = 420,
           draw_as_shadow = true,
@@ -87,8 +89,8 @@ data:extend({{
           scale = 0.5
         }
       },{
+        always_draw = true,
         animation = {
-          always_draw = true,
           filename = "__ageofcreation__/img/entities/replicator-shadow.png",
           width = 900,
           height = 420,
